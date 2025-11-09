@@ -1,7 +1,9 @@
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BlogCard } from "@/components/blog-card"
 import { Newspaper } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -127,6 +129,15 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-50/50 via-blue-50/30 to-background dark:from-cyan-950/20 dark:via-blue-950/10 dark:to-background" />
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center lg:justify-start mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-2 text-sm font-medium text-foreground shadow-sm transition hover:-translate-y-0.5"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back home
+            </Link>
+          </div>
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-cyan-500/20 text-sm font-medium">
               <Newspaper className="h-4 w-4 text-cyan-500" />
