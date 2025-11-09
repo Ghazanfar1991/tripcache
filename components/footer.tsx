@@ -1,0 +1,102 @@
+import Link from "next/link"
+import Image from "next/image"
+import { Twitter, Github, Linkedin } from "lucide-react"
+import { SectionContainer } from "./section-container"
+
+export function Footer() {
+  return (
+    <footer className="relative border-t border-border/50 glass">
+      <SectionContainer className="py-12 lg:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+          <div className="col-span-2 md:col-span-1 space-y-4">
+            <Link href="/" className="flex items-center gap-3 group">
+              <Image
+                src="/app-icon.png"
+                alt="TripCache"
+                width={40}
+                height={40}
+                className="rounded-xl group-hover:scale-110 transition-transform"
+              />
+              <span className="text-lg font-bold">TripCache</span>
+            </Link>
+            <p className="text-sm text-muted-foreground text-pretty">
+              The modern way to manage your flight itineraries and travel plans.
+            </p>
+          </div>
+
+          {/* Product */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Product</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="#features" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link href="#how-it-works" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  How It Works
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Company</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/about" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Terms
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold">Connect</h3>
+            <div className="flex gap-3">
+              <a
+                href="#"
+                className="p-2 rounded-lg glass hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-blue-500/20 transition-all"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-lg glass hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-blue-500/20 transition-all"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-lg glass hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-blue-500/20 transition-all"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} TripCache. All rights reserved.</p>
+        </div>
+      </SectionContainer>
+    </footer>
+  )
+}
