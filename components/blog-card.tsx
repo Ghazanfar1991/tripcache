@@ -2,19 +2,9 @@ import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import type { BlogSummary } from "@/types/blog"
 
-interface BlogPost {
-  slug: string
-  title: string
-  excerpt: string
-  date: string
-  author: string
-  readTime: string
-  category: string
-  image: string
-}
-
-export function BlogCard({ post }: { post: BlogPost }) {
+export function BlogCard({ post }: { post: BlogSummary }) {
   return (
     <Link href={`/blog/${post.slug}`}>
       <Card className="group overflow-hidden border-border hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 h-full flex flex-col">

@@ -48,7 +48,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-xl lg:max-w-2xl">
+      <DialogContent className="max-h-[90vh] overflow-y-auto rounded-3xl border border-border/60 bg-background/95 p-6 shadow-2xl backdrop-blur-sm sm:max-w-xl lg:max-w-2xl">
         <DialogHeader className="space-y-2">
           <DialogTitle className="text-2xl sm:text-3xl font-semibold">Join the TripCache waitlist</DialogTitle>
           <DialogDescription className="text-sm sm:text-base">
@@ -110,15 +110,16 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
           </div>
         </form>
 
-        <div className="space-y-4 pt-2">
-          <h3 className="text-base font-semibold">Mobile apps are coming soon</h3>
-          <p className="text-sm text-muted-foreground">
-            Prefer the native experience? Be the first to download TripCache on iOS and Android when the beta drops.
-          </p>
+        <div className="space-y-3 rounded-2xl border border-dashed border-border/60 bg-muted/20 p-4">
+          <div>
+            <h3 className="text-base font-semibold">Mobile apps are coming soon</h3>
+            <p className="text-sm text-muted-foreground">
+              Prefer the native experience? Be the first to download TripCache on iOS and Android when the beta drops.
+            </p>
+          </div>
           <AppStoreButtons variant="light" showQr />
         </div>
       </DialogContent>
     </Dialog>
   )
 }
-

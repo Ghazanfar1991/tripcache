@@ -1,24 +1,12 @@
 import type { MetadataRoute } from "next"
+import { getBlogSummaries } from "@/lib/blog"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://tripcache.app"
 
-  // Blog posts
-  const blogPosts = [
-    "tripcase-alternative-2025",
-    "getting-started-with-tripcache",
-    "email-to-trip-automation",
-    "travel-expense-tracking",
-    "digital-nomad-organization",
-    "privacy-and-security",
-    "frequent-flyer-tips",
-    "tripcase-shutdown-what-now",
-    "best-travel-apps-2025",
-  ]
-
-  const blogUrls = blogPosts.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
+  const blogUrls = getBlogSummaries().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }))

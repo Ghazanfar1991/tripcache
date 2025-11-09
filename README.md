@@ -78,14 +78,11 @@ To enable email capture functionality:
 │   └── api/
 │       └── subscribe/
 │           └── route.ts      # Mailchimp API endpoint
-├── components/
-│   ├── navigation.tsx        # Header navigation
-│   ├── hero-section.tsx      # Hero section
-│   ├── features-section.tsx  # Features grid
-│   ├── how-it-works-section.tsx
-│   ├── cta-section.tsx       # Email capture form
-│   ├── footer.tsx            # Footer
-│   └── blog-card.tsx         # Blog post card
+├── components/               # UI components
+├── content/
+│   └── blog/                 # Markdown (TS) sources for every blog post
+├── lib/
+│   └── blog.tsx              # Blog helpers + data access layer
 └── public/                   # Static assets
 \`\`\`
 
@@ -113,12 +110,13 @@ import { Inter, Geist_Mono } from 'next/font/google'
 
 ### Blog Posts
 
-Blog posts are currently stored as data objects in the page files. To add a new blog post:
+Each article now lives in `content/blog/<slug>.ts`. Every file exports a strongly typed `metadata` object (slug, title, excerpt, dates, etc.) and a `body` template literal that contains the Markdown content. The helper in `lib/blog.tsx` automatically registers every post so both the listing page and individual routes share the same source of truth.
 
-1. Add the post metadata to the `blogPosts` array in `app/blog/page.tsx`
-2. Add the full post content to the `blogPosts` object in `app/blog/[slug]/page.tsx`
+To publish a new article:
 
-For a production site, consider using MDX files or a headless CMS.
+1. Duplicate one of the files in `content/blog/` and update its `metadata` block plus the `body` string (feel free to keep using Markdown syntax inside the template literal).
+2. (Optional) Adjust the hero image in `public/` and reference it from the metadata `image` field.
+3. Commit the file—no additional wiring is required; the sitemap, listing page, and dynamic route will pick it up automatically.
 
 ## Deployment
 
