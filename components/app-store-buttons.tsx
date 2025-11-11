@@ -19,7 +19,10 @@ export function AppStoreButtons({
     variant === "light" ? "text-foreground" : "text-foreground",
   )
 
-  const imageClass = cn("select-none h-auto", compact ? "w-[140px]" : "w-[230px] sm:w-[260px] lg:w-[300px]")
+  const imageClass = cn(
+    "select-none h-auto",
+    compact ? "w-[130px] sm:w-[150px]" : "w-[230px] sm:w-[260px] lg:w-[300px]",
+  )
 
   const buttons = [
     {

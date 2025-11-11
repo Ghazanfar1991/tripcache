@@ -38,7 +38,7 @@ export function TestimonialsSection() {
   const marqueeTestimonials = [...testimonials, ...testimonials]
 
   return (
-    <section className="relative py-2 lg:py-10 overflow-hidden bg-gradient-to-b from-background via-muted/10 to-background">
+    <section className="relative py-2 lg:py-2 overflow-hidden bg-gradient-to-b from-background via-muted/10 to-background">
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-transparent via-background/40 to-transparent" />
       <SectionContainer>
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
