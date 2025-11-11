@@ -4,15 +4,22 @@ import { cn } from "@/lib/utils"
 interface AppStoreButtonsProps {
   variant?: "dark" | "light"
   showQr?: boolean
+  compact?: boolean
+  className?: string
 }
 
-export function AppStoreButtons({ variant = "dark", showQr = false }: AppStoreButtonsProps) {
+export function AppStoreButtons({
+  variant = "dark",
+  showQr = false,
+  compact = false,
+  className,
+}: AppStoreButtonsProps) {
   const buttonClass = cn(
     "inline-flex items-center justify-center transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2",
     variant === "light" ? "text-foreground" : "text-foreground",
   )
 
-  const imageClass = "w-[230px] sm:w-[260px] lg:w-[300px] h-auto select-none"
+  const imageClass = cn("select-none h-auto", compact ? "w-[140px]" : "w-[230px] sm:w-[260px] lg:w-[300px]")
 
   const buttons = [
     {
@@ -31,7 +38,7 @@ export function AppStoreButtons({ variant = "dark", showQr = false }: AppStoreBu
 
   if (showQr) {
     return (
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className={cn("grid gap-6 md:grid-cols-2", className)}>
         {buttons.map((button) => (
           <div key={button.key} className="flex flex-col items-center gap-4">
             <a
@@ -63,7 +70,7 @@ export function AppStoreButtons({ variant = "dark", showQr = false }: AppStoreBu
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+    <div className={cn("flex flex-wrap items-center justify-center gap-2 sm:gap-4", className)}>
       {buttons.map((button) => (
         <a
           key={button.key}

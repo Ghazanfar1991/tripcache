@@ -103,9 +103,7 @@ export function HeroSection() {
               </button>
             </form>
 
-            <div className="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start -mt-2">
-              <AppStoreButtons />
-            </div>
+            <AppStoreButtons compact className="-mt-2 justify-center lg:justify-start" />
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
