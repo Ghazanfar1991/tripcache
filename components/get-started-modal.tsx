@@ -117,7 +117,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
               Prefer the native experience? Be the first to download TripCache on iOS and Android when the beta drops.
             </p>
           </div>
-          <AppStoreButtons variant="light" showQr />
+          <AppStoreButtons variant="light" compact className="justify-start md:justify-center" />
         </div>
       </DialogContent>
     </Dialog>
