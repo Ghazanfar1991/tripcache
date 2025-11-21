@@ -10,8 +10,14 @@ import * as PrivacyAndSecurity from "@/content/blog/privacy-and-security"
 import * as TravelExpenseTracking from "@/content/blog/travel-expense-tracking"
 import * as TripcaseAlternative from "@/content/blog/tripcase-alternative-2025"
 import * as TripcaseShutdown from "@/content/blog/tripcase-shutdown-what-now"
+import * as TripitComparison from "@/content/blog/tripit-vs-tripcache-comparison-2025"
+import * as TravelDocumentOrganization from "@/content/blog/travel-document-organization-guide-2025"
+import * as AutomaticFlightTracking from "@/content/blog/how-to-automatically-track-flights-2025"
 
 const rawPosts = [
+  TravelDocumentOrganization,
+  AutomaticFlightTracking,
+  TripitComparison,
   TripcaseAlternative,
   TripcaseShutdown,
   BestTravelApps,

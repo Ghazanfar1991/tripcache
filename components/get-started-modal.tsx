@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { AppStoreButtons } from "./app-store-buttons"
+import Image from "next/image"
 import { useMailchimpWaitlist } from "@/hooks/use-mailchimp-waitlist"
 import { AlertCircle, CheckCircle2 } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -117,7 +117,34 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
               Prefer the native experience? Be the first to download TripCache on iOS and Android when the beta drops.
             </p>
           </div>
-          <AppStoreButtons variant="light" compact className="justify-start md:justify-center" />
+          {/* Coming Soon App Store Buttons */}
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col items-center gap-1">
+              <div className="relative opacity-40 hover:opacity-50 transition-opacity cursor-not-allowed">
+                <Image
+                  src="/app-store.svg"
+                  alt="App Store"
+                  width={185}
+                  height={95}
+                  className="select-none w-[140px] sm:w-[185px] h-auto"
+                />
+              </div>
+              <span className="text-[11px] font-medium -mt-15 text-muted-foreground">Coming Soon</span>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="relative opacity-40 hover:opacity-50 transition-opacity cursor-not-allowed">
+                <Image
+                  src="/play-store.svg"
+                  alt="Google Play"
+                  width={185}
+                  height={95}
+                  className="select-none w-[140px] sm:w-[185px] h-auto"
+                />
+              </div>
+              <span className="text-[11px] font-medium -mt-15 text-muted-foreground">Coming Soon</span>
+            </div>
+          </div>
+
         </div>
       </DialogContent>
     </Dialog>

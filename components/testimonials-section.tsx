@@ -1,108 +1,143 @@
 "use client"
-import { Star } from "lucide-react"
+
+import { motion } from "framer-motion"
+import { Star, Quote } from "lucide-react"
 import Image from "next/image"
 import { SectionContainer } from "./section-container"
 
 const testimonials = [
   {
     name: "Sarah Chen",
-    username: "@sarahchen",
+    role: "Product Manager",
     avatar: "/professional-woman-smiling.png",
     text: "TripCache has completely transformed how I manage my business travel. The email-to-trip feature is pure magic!",
     rating: 5,
   },
   {
     name: "Michael Rodriguez",
-    username: "@mrodriguez",
+    role: "Digital Nomad",
     avatar: "/professional-man-smiling.png",
     text: "As a frequent traveler, having all my trips organized in one place is invaluable. The CSV export saves me hours every month.",
     rating: 5,
   },
   {
     name: "Emma Thompson",
-    username: "@emmathompson",
+    role: "Travel Blogger",
     avatar: "/smiling-woman-glasses.png",
     text: "Finally, an app that makes travel management effortless. The document storage feature is a lifesaver at airports.",
     rating: 5,
   },
   {
     name: "David Kim",
-    username: "@davidkim",
+    role: "Consultant",
     avatar: "/asian-man-smiling.png",
     text: "The best travel app I've ever used. Clean interface, powerful features, and it just works. Highly recommended!",
+    rating: 5,
+  },
+  {
+    name: "Priya Patel",
+    role: "Operations Lead",
+    avatar: "/professional-woman-smiling.png",
+    text: "Email-to-trip plus CSV exports keep finance and travel in sync—no more Sunday night expense marathons.",
+    rating: 5,
+  },
+  {
+    name: "Jason Lee",
+    role: "Founder",
+    avatar: "/professional-man-smiling.png",
+    text: "We switched the team to TripCache and never looked back. The offline doc vault has already saved us twice.",
+    rating: 5,
+  },
+  {
+    name: "Olivia Martinez",
+    role: "Travel Coordinator",
+    avatar: "/smiling-woman-glasses.png",
+    text: "Gate changes synced everywhere and shared trips keep our execs calm. The UI feels premium and fast.",
     rating: 5,
   },
 ]
 
 export function TestimonialsSection() {
-  const marqueeTestimonials = [...testimonials, ...testimonials]
-
   return (
-    <section className="relative py-2 lg:py-2 overflow-hidden bg-gradient-to-b from-background via-muted/10 to-background">
-      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-transparent via-background/40 to-transparent" />
+    <section id="testimonials" className="relative py-12 overflow-hidden scroll-mt-24">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
       <SectionContainer>
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance">
-            Real People.{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-              Real Results.
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground">Thousands trust TripCache for their travel needs weekly.</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold tracking-tight"
+          >
+            Loved by
+            <span className="text-gradient-primary"> Travelers.</span>
+          </motion.h2>
+          <p className="text-lg text-muted-foreground">
+            Join thousands of users who trust TripCache for their journey.
+          </p>
         </div>
 
-        <div className="relative mx-auto max-w-6xl overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background via-background/80 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background via-background/80 to-transparent" />
-
-          <div className="testimonial-track flex w-max gap-6 py-2">
-            {marqueeTestimonials.map((testimonial, index) => (
-              <article
-                key={`${testimonial.username}-${index}`}
-                className="w-[260px] sm:w-[320px] lg:w-[360px] shrink-0 rounded-2xl border border-border/60 bg-card/90 p-6 shadow-lg shadow-black/5 backdrop-blur hover:-translate-y-1 transition-transform"
+        <div className="relative mask-gradient-x group">
+          <div className="flex gap-6 animate-marquee group-hover:[animation-play-state:paused] hover:[animation-play-state:paused]">
+            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, i) => (
+              <div
+                key={i}
+                className="group/card relative w-[340px] sm:w-[360px] shrink-0"
               >
-                <header className="flex items-center gap-4">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gradient-to-br from-cyan-400 to-blue-500">
-                    <Image
-                      src={testimonial.avatar || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/25 via-primary/5 to-purple-500/20 opacity-0 blur-xl transition duration-500 group-hover/card:opacity-100" />
+                <div className="relative h-full p-6 rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,0.12)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-500 dark:bg-white/5 dark:border-white/10 dark:hover:border-primary/30">
+                  <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary/90 text-primary" />
+                    ))}
                   </div>
-                  <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.username}</p>
+
+                  <p className="relative mb-6 text-muted-foreground leading-relaxed">
+                    <Quote className="absolute -top-2 -left-2 w-8 h-8 text-primary/10 -z-10" />
+                    "{testimonial.text}"
+                  </p>
+
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-11 h-11 rounded-full overflow-hidden ring-2 ring-primary/20">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                    </div>
                   </div>
-                </header>
-                <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">{testimonial.text}</p>
-                <div className="mt-4 flex gap-1">
-                  {Array.from({ length: testimonial.rating }).map((_, starIndex) => (
-                    <Star key={starIndex} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>
       </SectionContainer>
 
-      <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-background" />
-
-      <style jsx>{`
-        @keyframes testimonial-marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+      <style jsx global>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        .testimonial-track {
-          animation: testimonial-marquee 38s linear infinite;
+        .animate-marquee {
+          animation: marquee 34s linear infinite;
+          animation-play-state: running;
         }
-        .testimonial-track:hover {
-          animation-play-state: paused;
+        .mask-gradient-x:hover .animate-marquee,
+        .animate-marquee:hover {
+          animation-play-state: paused !important;
+        }
+        .mask-gradient-x {
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
       `}</style>
     </section>

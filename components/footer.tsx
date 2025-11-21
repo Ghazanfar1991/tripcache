@@ -5,7 +5,7 @@ import { SectionContainer } from "./section-container"
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border/50 glass">
+    <footer className="relative border-t border-border/50 glass dark:bg-background">
       <SectionContainer className="py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-1 space-y-4">
@@ -68,30 +68,8 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="font-semibold">Connect</h3>
-            <div className="flex gap-3">
-              <a
-                href="#"
-                className="p-2 rounded-lg glass hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-blue-500/20 transition-all"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-lg glass hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-blue-500/20 transition-all"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-lg glass hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-blue-500/20 transition-all"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-        </div>
+         </div>
+         
 
         <div className="mt-12 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} TripCache. All rights reserved.</p>

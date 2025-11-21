@@ -46,7 +46,7 @@ export function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
-      className="relative py-2 lg:py-10 overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background"
+      className="relative py-2 lg:py-10 overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background scroll-mt-24"
     >
       <SectionContainer>
         {/* Section Header */}

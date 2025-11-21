@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Geist_Mono } from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
+import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tripcache.app"),
@@ -16,18 +16,23 @@ export const metadata: Metadata = {
     template: "%s | TripCache",
   },
   description:
-    "The best TripCase alternative for 2025. Effortlessly manage travel itineraries with email-to-trip automation, CSV reports, and document storage. Free forever.",
+    "Free travel itinerary manager & best TripCase alternative 2025. Organize trips, track flights, store documents. Start free, upgrade to Pro ($9.99/month) for email-to-trip automation & flight updates.",
   keywords: [
     "TripCase alternative",
-    "travel itinerary manager",
-    "flight tracker",
+    "free travel itinerary manager",
+    "flight tracker app",
     "trip organizer",
     "travel planner app",
-    "email to trip",
-    "travel document storage",
-    "expense tracking",
-    "business travel",
-    "TripIt alternative",
+    "email to trip automation",
+    "travel document organizer",
+    "business travel expense tracking",
+    "TripIt alternative free",
+    "automatic flight tracking",
+    "email flight parser",
+    "travel itinerary app",
+    "trip management software",
+    "digital nomad tools",
+    "flight booking organizer",
   ],
   authors: [{ name: "TripCache Team" }],
   creator: "TripCache",
@@ -61,6 +66,11 @@ export const metadata: Metadata = {
     images: ["/app-screenshot-home.jpg"],
     creator: "@tripcache",
   },
+  icons: {
+    icon: "/app-icon.png",
+    shortcut: "/app-icon.png",
+    apple: "/app-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -73,9 +83,9 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "google-site-verification=PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE",
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -130,9 +140,14 @@ export default function RootLayout({
           }}
         />
         <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0891b2" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className={`${inter.className} font-sans antialiased`}>
+      <body className={`${jakarta.className} font-sans antialiased`}>
         <ThemeProvider defaultTheme="dark">
+          <Navigation />
           {children}
           <Analytics />
         </ThemeProvider>
