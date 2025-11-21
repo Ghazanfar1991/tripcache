@@ -29,7 +29,7 @@ export function HeroSection() {
   }, [screenshots.length])
 
   return (
-    <section className="relative flex items-center pt-24 pb-16 overflow-hidden">
+    <section className="relative flex items-center pt-25 pb-12 overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-background">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/20 rounded-full blur-[120px] opacity-50 animate-glow" />
@@ -44,7 +44,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center lg:text-left space-y-6"
+            className="text-center lg:text-left space-y-5"
           >
             {/* Badge */}
             <motion.div
@@ -58,7 +58,7 @@ export function HeroSection() {
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-foreground">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] text-foreground">
               Travel Management App<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-accent animate-gradient bg-[length:200%_auto]">
                 Manage Trips Like a Pro.
@@ -66,7 +66,7 @@ export function HeroSection() {
             </h1>
 
             {/* Description */}
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed dark:text-gray-200">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed dark:text-gray-200">
               The best TripCase alternative. Forward booking emails, automatically organize flight itineraries, and export travel expenses.
             </p>
 
