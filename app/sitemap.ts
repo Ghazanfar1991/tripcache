@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { getBlogSummaries } from "@/lib/blog"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://tripcache.app"
+  const baseUrl = "https://trip-cache.com"
 
   const blogUrls = getBlogSummaries().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

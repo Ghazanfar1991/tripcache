@@ -125,7 +125,7 @@ You receive push notifications or emails about any changes.
 - ✅ No ads
 
 **How it works:**
-1. Sign up at tripcache.app (30 seconds)
+1. Sign up at trip-cache.com (30 seconds)
 2. Get your unique email: trips-abc123@tripcache.app
 3. Forward any flight confirmation
 4. Flight auto-appears with all details
@@ -229,7 +229,7 @@ Unlike other trackers, TripCache also tracks:
 ### Method 1: TripCache (Easiest)
 
 **Step 1: Create Account (30 seconds)**
-1. Visit tripcache.app
+1. Visit trip-cache.com
 2. Click "Join Waitlist" or "Sign Up"
 3. Enter your email
 4. Verify email
@@ -641,7 +641,7 @@ Automatic flight tracking via email forwarding is the smartest way to manage tra
 
 **Once you experience automated flight tracking, you'll never go back to manual entry.**
 
-**Get started now:** [tripcache.app](https://tripcache.app)
+**Get started now:** [trip-cache.com](https://trip-cache.com)
 
 ---
 

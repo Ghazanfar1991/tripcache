@@ -49,7 +49,7 @@ export function TrustSection() {
 
         {/* Phone Mockups Row */}
         <div className="flex justify-center gap-4 mt-16 overflow-hidden">
-          {["/app-screenshot-home.jpg", "/app-screenshot-trip-detail.jpg", "/app-screenshot-history.jpg"].map(
+          {["/app-screenshot-home.webp", "/app-screenshot-trip-detail.webp", "/app-screenshot-history.webp"].map(
             (screenshot, index) => (
               <div key={index} className="relative w-48 flex-shrink-0">
                 <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2rem] p-2 shadow-xl">
@@ -60,6 +60,7 @@ export function TrustSection() {
                       alt="TripCache App"
                       fill
                       className="object-cover object-top"
+                      sizes="192px"
                     />
                   </div>
                 </div>

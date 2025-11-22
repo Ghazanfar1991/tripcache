@@ -96,7 +96,7 @@ Folio Wallet is a newer alternative but has drawbacks:
 Making the switch is incredibly easy:
 
 **Step 1: Sign Up**
-Create your free TripCache account at tripcache.app
+Create your free TripCache account at trip-cache.com
 
 **Step 2: Get Your Email**
 You'll receive a unique forwarding email address
@@ -137,7 +137,7 @@ We're constantly improving TripCache based on user feedback. Here's what's comin
 
 Ready to make the switch? Here's how to get started:
 
-1. Visit **tripcache.app**
+1. Visit **trip-cache.com**
 2. Sign up with your email (takes 30 seconds)
 3. Get your unique forwarding email
 4. Start forwarding booking confirmations

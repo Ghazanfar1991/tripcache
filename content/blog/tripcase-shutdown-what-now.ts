@@ -80,7 +80,7 @@ Store all files in a dedicated folder on your computer
 
 ### Phase 2: Set Up Your TripCache Account
 
-**1. Visit tripcache.app**
+**1. Visit trip-cache.com**
 Click "Get Started" to begin the signup process
 
 **2. Create your account**
@@ -114,7 +114,7 @@ For upcoming trips and important historical data:
 
 **Option C: CSV Import (Coming Soon)**
 
-We're building a direct CSV import tool for bulk migration. Sign up for early access at tripcache.app/import
+We're building a direct CSV import tool for bulk migration. Sign up for early access at trip-cache.com/import
 
 ### Phase 4: Update Your Email Filters
 
@@ -193,7 +193,7 @@ Double-check that all documents are accessible
 **Solution:** We're here to help:
 
 - Email support@tripcache.app for personal assistance
-- Watch our video tutorials at tripcache.app/help
+- Watch our video tutorials at trip-cache.com/help
 - Join our community forum for peer support
 - Schedule a free onboarding call
 
@@ -310,7 +310,7 @@ A: No! As long as you export your TripCase data before the deadline and follow o
 A: Yes! We're committed to keeping TripCache free for all users. No hidden fees, no premium tiers.
 
 **Q: What if I need help?**
-A: Email us at support@tripcache.app or visit our help center at tripcache.app/help. We're here to assist you every step of the way.
+A: Email us at support@tripcache.app or visit our help center at trip-cache.com/help. We're here to assist you every step of the way.
 
 **Q: Can I use TripCache on my phone?**
 A: TripCache works perfectly on mobile browsers, and native iOS/Android apps are coming soon.
@@ -319,7 +319,7 @@ A: TripCache works perfectly on mobile browsers, and native iOS/Android apps are
 
 Don't wait until the last minute. Start your migration to TripCache today:
 
-1. **Sign up** at tripcache.app
+1. **Sign up** at trip-cache.com
 2. **Export** your TripCase data (if you haven't already)
 3. **Follow** this migration guide step by step
 4. **Enjoy** stress-free travel organization

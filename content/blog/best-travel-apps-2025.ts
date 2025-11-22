@@ -291,7 +291,7 @@ Choose **Wanderlog** if you:
 
 Ready to try the best travel app of 2025?
 
-1. Visit **tripcache.app**
+1. Visit **trip-cache.com**
 2. Sign up for free (30 seconds)
 3. Get your unique email address
 4. Forward a booking confirmation
@@ -303,5 +303,5 @@ Ready to try the best travel app of 2025?
 
 ---
 
-*Still have questions? Compare features in detail at tripcache.app/compare or email us at hello@tripcache.app*
+*Still have questions? Compare features in detail at trip-cache.com/compare or email us at hello@tripcache.app*
 `

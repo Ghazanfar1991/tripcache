@@ -10,54 +10,54 @@ const features = [
     icon: Mail,
     title: "Email-to-Trip Magic",
     description: "Forward emails, get trips. Our AI parses flight details instantly.",
-    image: "/app-screenshot-import.jpg",
+    image: "/app-screenshot-import.webp",
     gradient: "from-cyan-500 via-blue-500 to-purple-500",
   },
   {
     icon: Plane,
     title: "Visual Timeline",
     description: "Your entire journey in one stunning, interactive timeline.",
-    image: "/app-screenshot-trip-detail.jpg",
+    image: "/app-screenshot-trip-detail.webp",
     gradient: "from-purple-500 via-pink-500 to-red-500",
   },
   {
     icon: FileSpreadsheet,
     title: "Smart Exports",
     description: "Generate detailed CSV reports for expenses and tax purposes.",
-    image: "/app-screenshot-export.jpg",
+    image: "/app-screenshot-export.webp",
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
   },
   {
     icon: Cloud,
     title: "Document Hub",
     description: "Secure offline access to all your travel documents.",
-    image: "/app-screenshot-documents.jpg",
+    image: "/app-screenshot-documents.webp",
     gradient: "from-orange-500 via-red-500 to-pink-500",
   },
   {
     icon: Zap,
     title: "Instant Sync",
     description: "Real-time updates across all your devices, always in sync.",
-    image: "/app-screenshot-flight-detail.jpg",
+    image: "/app-screenshot-flight-detail.webp",
     gradient: "from-yellow-500 via-orange-500 to-red-500",
   },
   {
     icon: Shield,
     title: "Travel Analytics",
     description: "Track your journey with beautiful visualizations and insights.",
-    image: "/app-screenshot-history.jpg",
+    image: "/app-screenshot-history.webp",
     gradient: "from-blue-500 via-indigo-500 to-purple-500",
   },
 ]
 
 const mobileScreens = [
-  { src: "/app-screenshot-import.jpg", alt: "Import preview" },
-  { src: "/app-screenshot-trip-detail.jpg", alt: "Trip overview" },
-  { src: "/app-screenshot-flight-detail.jpg", alt: "Flight detail" },
-  { src: "/app-screenshot-home.jpg", alt: "Dashboard" },
-  { src: "/app-screenshot-documents.jpg", alt: "Documents hub" },
-  { src: "/app-screenshot-history.jpg", alt: "Travel history" },
-  { src: "/app-screenshot-export.jpg", alt: "Export report" },
+  { src: "/app-screenshot-import.webp", alt: "Import preview" },
+  { src: "/app-screenshot-trip-detail.webp", alt: "Trip overview" },
+  { src: "/app-screenshot-flight-detail.webp", alt: "Flight detail" },
+  { src: "/app-screenshot-home.webp", alt: "Dashboard" },
+  { src: "/app-screenshot-documents.webp", alt: "Documents hub" },
+  { src: "/app-screenshot-history.webp", alt: "Travel history" },
+  { src: "/app-screenshot-export.webp", alt: "Export report" },
 ]
 
 const phoneLayout = [
@@ -90,7 +90,13 @@ function PhoneStack() {
               <div className="relative rounded-[2.2rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 shadow-[0_24px_50px_rgba(15,23,42,0.35)] ring-1 ring-white/10">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-16 rounded-b-3xl bg-black/80" />
                 <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.9rem]">
-                  <Image src={screen.src || "/placeholder.svg"} alt={screen.alt} fill className="object-cover object-top" />
+                  <Image
+                    src={screen.src || "/placeholder.svg"}
+                    alt={screen.alt}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 180px, (max-width: 1024px) 200px, 220px"
+                  />
                 </div>
               </div>
             </div>
@@ -153,8 +159,12 @@ export function FeaturesSection() {
               className="group relative"
             >
               <div className="relative h-full rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 dark:border-white/5 dark:bg-white/5 dark:hover:border-primary/20">
-                {/* Image container with consistent aspect ratio */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-br from-muted/50 to-muted/20">
+                {/* Image container with consistent aspect ratio and top accent frame */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-muted/50 to-muted/20 ring-1 ring-white/5">
+                  <div
+                    className={`pointer-events-none absolute -inset-[1px] rounded-[1.2rem] bg-gradient-to-br ${feature.gradient} opacity-15 blur-xl transition-opacity duration-500 group-hover:opacity-35`}
+                  />
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl border border-white/10 mix-blend-screen" />
                   <Image
                     src={feature.image}
                     alt={feature.title}

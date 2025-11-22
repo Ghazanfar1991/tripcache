@@ -11,7 +11,7 @@ import { BlogShareButton } from "@/components/blog-share-button"
 import { ReadingProgress } from "@/components/reading-progress"
 import { getBlogPostBySlug, getBlogSlugs, getBlogSummaries } from "@/lib/blog"
 
-const BASE_URL = "https://tripcache.app"
+const BASE_URL = "https://trip-cache.com"
 
 export async function generateStaticParams() {
   return getBlogSlugs().map((slug) => ({ slug }))

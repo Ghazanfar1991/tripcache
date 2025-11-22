@@ -35,11 +35,11 @@ const features = [
 ]
 
 const galleryScreens = [
-  { src: "/app-screenshot-home.jpg", alt: "TripCache Home" },
-  { src: "/app-screenshot-trip-detail.jpg", alt: "TripCache Trip Detail" },
-  { src: "/app-screenshot-history.jpg", alt: "TripCache Travel History" },
-  { src: "/app-screenshot-flight-detail.jpg", alt: "TripCache Flight Detail" },
-  { src: "/app-screenshot-documents.jpg", alt: "TripCache Documents" },
+  { src: "/app-screenshot-home.webp", alt: "TripCache Home" },
+  { src: "/app-screenshot-trip-detail.webp", alt: "TripCache Trip Detail" },
+  { src: "/app-screenshot-history.webp", alt: "TripCache Travel History" },
+  { src: "/app-screenshot-flight-detail.webp", alt: "TripCache Flight Detail" },
+  { src: "/app-screenshot-documents.webp", alt: "TripCache Documents" },
 ]
 
 export function HowItWorksSection() {
@@ -98,7 +98,13 @@ export function HowItWorksSection() {
                   <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2rem] p-2 shadow-2xl">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-b-2xl z-10" />
                     <div className="relative bg-black rounded-[1.6rem] overflow-hidden aspect-[9/19.5]">
-                      <Image src={screen.src} alt={screen.alt} fill className="object-cover object-top" />
+                      <Image
+                        src={screen.src}
+                        alt={screen.alt}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 120px, 160px"
+                      />
                     </div>
                   </div>
                 </div>

@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Premium Light Theme (Clean, High Contrast) */
   --background: oklch(0.98 0.01 220);
@@ -104,6 +112,7 @@
   }
 
   body {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
   }
 

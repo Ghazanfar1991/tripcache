@@ -307,7 +307,7 @@ A: Yes, this is our commitment. Core travel organization features will always be
 
 If you're tired of paying for TripIt Pro or frustrated by TripIt Free's limitations, give TripCache a try:
 
-1. **Sign up at tripcache.app** (takes 30 seconds)
+1. **Sign up at trip-cache.com** (takes 30 seconds)
 2. **Get your forwarding email**
 3. **Forward your next booking** and see it work
 4. **Export a CSV** if you need expense reports
@@ -316,5 +316,5 @@ If you're tired of paying for TripIt Pro or frustrated by TripIt Free's limitati
 
 ---
 
-*Last updated: January 2025. Feature comparison based on current offerings. TripCache features are expanding rapidly - check tripcache.app for latest updates.*
+*Last updated: January 2025. Feature comparison based on current offerings. TripCache features are expanding rapidly - check trip-cache.com for latest updates.*
 `

@@ -6,9 +6,11 @@ import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import { GetStartedModal } from "./get-started-modal"
+import { Menu, X } from "lucide-react"
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === "/"
 
@@ -23,10 +25,15 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    // Close mobile menu on route change to avoid stale open state
+    setMobileMenuOpen(false)
+  }, [pathname])
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 px-4">
       <nav
-        className={`w-full max-w-6xl transition-all duration-500 rounded-2xl ${scrolled
+        className={`relative w-full max-w-6xl transition-all duration-500 rounded-2xl ${scrolled
           ? "bg-background/90 backdrop-blur-xl border border-primary/10 shadow-xl shadow-primary/5"
           : "bg-background/70 backdrop-blur-lg border border-border/20"
           }`}
@@ -37,11 +44,11 @@ export function Navigation() {
       >
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-18">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="relative">
+            <Link href="/" className="flex items-center gap-1 sm:gap-2.5 group">
+              <div className="relative hidden sm:block">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Image
-                  src="/app-icon.png"
+                  src="/app-icon.webp"
                   alt="TripCache"
                   width={36}
                   height={36}
@@ -84,9 +91,37 @@ export function Navigation() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen((open) => !open)}
+                className="md:hidden inline-flex items-center justify-center rounded-xl bg-background/70 px-3 py-2 text-sm font-medium text-foreground hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition"
+                aria-expanded={mobileMenuOpen}
+                aria-label="Toggle navigation menu"
+              >
+                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </button>
               <ThemeToggle />
               <GetStartedModal />
+            </div>
+          </div>
+          {/* Mobile menu */}
+          <div
+            className={`md:hidden transition-all duration-200 origin-top ${mobileMenuOpen ? "opacity-100 scale-100" : "pointer-events-none opacity-0 scale-95"
+              }`}
+          >
+            <div className="absolute left-3 right-3 mt-2 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg shadow-primary/5">
+              <div className="flex flex-col divide-y divide-border/60">
+                {[{ href: featuresHref, label: "Features" }, { href: testimonialsHref, label: "Testimonials" }, { href: "/pricing", label: "Pricing" }, { href: "/blog", label: "Blog" }].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

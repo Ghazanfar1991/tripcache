@@ -74,7 +74,7 @@ TripCache is specifically designed for travel document organization:
 - Free forever
 
 **How to use:**
-1. Sign up at tripcache.app
+1. Sign up at trip-cache.com
 2. Forward booking emails (auto-imports)
 3. Upload additional documents (passport, visa, insurance)
 4. Access from any device
@@ -599,7 +599,7 @@ While traditional document organization methods work, they require constant manu
 **Ongoing effort:** Zero (automatic)
 **Cost:** Free forever
 
-**Get started at tripcache.app**
+**Get started at trip-cache.com**
 
 ## Frequently Asked Questions
 
@@ -625,5 +625,5 @@ A: No! Many border officials require unlaminated documents. Use protective sleev
 
 **Ready for stress-free travel?** Set up your document organization system today. Future-you will thank present-you!
 
-*Start with TripCache for automated organization: [Get Started →](https://tripcache.app)*
+*Start with TripCache for automated organization: [Get Started →](https://trip-cache.com)*
 `

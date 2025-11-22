@@ -40,7 +40,8 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
         <Button
           size="sm"
           className={cn(
-            "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full text-sm font-medium shadow-lg shadow-cyan-500/25",
+            "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg shadow-cyan-500/25",
+            "px-3 py-1.5 text-xs font-semibold sm:px-4 sm:py-2 sm:text-sm",
             triggerClassName,
           )}
         >
@@ -118,7 +119,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             </p>
           </div>
           {/* Coming Soon App Store Buttons */}
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 lg:-mt-15 lg:ml-5 -mt-10">
             <div className="flex flex-col items-center gap-1">
               <div className="relative opacity-40 hover:opacity-50 transition-opacity cursor-not-allowed">
                 <Image
@@ -129,7 +130,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
                   className="select-none w-[140px] sm:w-[185px] h-auto"
                 />
               </div>
-              <span className="text-[11px] font-medium -mt-15 text-muted-foreground">Coming Soon</span>
+              <span className="text-[11px] font-medium lg:-mt-15 -mt-10 text-muted-foreground">Coming Soon</span>
             </div>
             <div className="flex flex-col items-center gap-1">
               <div className="relative opacity-40 hover:opacity-50 transition-opacity cursor-not-allowed">
@@ -141,7 +142,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
                   className="select-none w-[140px] sm:w-[185px] h-auto"
                 />
               </div>
-              <span className="text-[11px] font-medium -mt-15 text-muted-foreground">Coming Soon</span>
+              <span className="text-[11px] font-medium lg:-mt-15 -mt-10 text-muted-foreground">Coming Soon</span>
             </div>
           </div>
 

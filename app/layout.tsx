@@ -1,16 +1,17 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Plus_Jakarta_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] })
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tripcache.app"),
+  metadataBase: new URL("https://trip-cache.com"),
   title: {
     default: "TripCache - Smart Flight & Trip Itinerary Manager | TripCase Alternative",
     template: "%s | TripCache",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tripcache.app",
+    url: "https://trip-cache.com",
     title: "TripCache - Smart Flight & Trip Itinerary Manager",
     description:
       "The best TripCase alternative. Manage travel itineraries with email automation and CSV reports. Free forever.",
@@ -83,7 +84,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification=PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE",
+    google: GOOGLE_SITE_VERIFICATION,
   },
   generator: 'v0.app'
 }
@@ -104,8 +105,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "TripCache",
-              url: "https://tripcache.app",
-              logo: "https://tripcache.app/app-icon.png",
+              url: "https://trip-cache.com",
+              logo: "https://trip-cache.com/app-icon.png",
               description: "Smart flight and trip itinerary manager",
               sameAs: [
                 "https://twitter.com/tripcache",
@@ -123,7 +124,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "TripCache",
-              url: "https://tripcache.app",
+              url: "https://trip-cache.com",
               applicationCategory: "TravelApplication",
               operatingSystem: "iOS, Android, Web",
               offers: {
@@ -139,17 +140,35 @@ export default function RootLayout({
             }),
           }}
         />
-        <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0891b2" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className={`${jakarta.className} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         <ThemeProvider defaultTheme="dark">
           <Navigation />
           {children}
           <Analytics />
+          <SpeedInsights />
+          {GA_MEASUREMENT_ID ? (
+            <>
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script id="ga-init" strategy="afterInteractive">
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `}
+              </Script>
+            </>
+          ) : null}
         </ThemeProvider>
       </body>
     </html>

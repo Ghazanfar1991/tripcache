@@ -51,13 +51,13 @@ const featurePoints = [
 ]
 
 const mobileScreens = [
-  { src: "/app-screenshot-import.jpg", alt: "Import preview" },
-  { src: "/app-screenshot-trip-detail.jpg", alt: "Trip overview" },
-  { src: "/app-screenshot-flight-detail.jpg", alt: "Flight detail" },
-  { src: "/app-screenshot-home.jpg", alt: "Dashboard" },
-  { src: "/app-screenshot-documents.jpg", alt: "Documents hub" },
-  { src: "/app-screenshot-history.jpg", alt: "Travel history" },
-  { src: "/app-screenshot-export.jpg", alt: "Export report" },
+  { src: "/app-screenshot-import.webp", alt: "Import preview" },
+  { src: "/app-screenshot-trip-detail.webp", alt: "Trip overview" },
+  { src: "/app-screenshot-flight-detail.webp", alt: "Flight detail" },
+  { src: "/app-screenshot-home.webp", alt: "Dashboard" },
+  { src: "/app-screenshot-documents.webp", alt: "Documents hub" },
+  { src: "/app-screenshot-history.webp", alt: "Travel history" },
+  { src: "/app-screenshot-export.webp", alt: "Export report" },
 ]
 
 const phoneLayout = [
@@ -90,7 +90,13 @@ function PhoneStack() {
               <div className="relative rounded-[2.2rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 shadow-[0_24px_50px_rgba(15,23,42,0.35)] ring-1 ring-white/10">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-16 rounded-b-3xl bg-black/80" />
                 <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.9rem]">
-                  <Image src={screen.src || "/placeholder.svg"} alt={screen.alt} fill className="object-cover object-top" />
+                  <Image
+                    src={screen.src || "/placeholder.svg"}
+                    alt={screen.alt}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 180px, (max-width: 1024px) 200px, 220px"
+                  />
                 </div>
               </div>
             </div>
