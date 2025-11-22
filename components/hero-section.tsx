@@ -2,33 +2,32 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { AlertCircle, CheckCircle2, ArrowRight, Sparkles } from "lucide-react"
 import { useMailchimpWaitlist } from "@/hooks/use-mailchimp-waitlist"
 import { SectionContainer } from "./section-container"
 
 export function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const { email, setEmail, status, message, handleSubmit, reset } = useMailchimpWaitlist()
-  const { scrollY } = useScroll()
-  
-  // Parallax effect (kept mostly for desktop, subtle on mobile)
-  const y1 = useTransform(scrollY, [0, 500], [0, 150])
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [paused, setPaused] = useState(false)
 
   const screenshots = [
-    "/app-screenshot-home.webp",
-    "/app-screenshot-trip-detail.webp",
-    "/app-screenshot-history.webp",
-    "/app-screenshot-flight-detail.webp",
-    "/app-screenshot-documents.webp",
+    "/app-screenshot-home.webp", // 1: Home
+    "/app-screenshot-trip-detail.webp", // 2: Trip details
+    "/app-screenshot-flight-detail.webp", // 3: Flight details
+    "/app-screenshot-history.webp", // 4: History
+    "/app-screenshot-documents.webp", // 5: Documents
+    "/app-screenshot-drafts.webp", // 6: Drafts
   ]
 
   useEffect(() => {
+    if (paused) return
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % screenshots.length)
     }, 4000)
     return () => clearInterval(timer)
-  }, [screenshots.length])
+  }, [screenshots.length, paused])
 
   return (
     // OPTIMIZED: Adjusted pt-20 to pt-24 for better mobile clearing of navbars
@@ -141,10 +140,14 @@ export function HeroSection() {
           </motion.div>
 
           {/* Right Visual - Enhanced with Smooth Transitions */}
-          <div className="relative perspective-1000 w-full flex justify-center">
-            <motion.div style={{ y: y1 }} className="relative z-20">
-              {/* OPTIMIZED: Width scaling (w-[220px]) ensures it fits on iPhone SE/small Androids */}
-              <div className="relative mx-auto w-[220px] xs:w-[240px] sm:w-[280px] aspect-[9/19] group">
+          <div className="relative perspective-1000 w-full flex flex-col items-center justify-center gap-4">
+            <motion.div
+              className="relative z-20"
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+            >
+              {/* OPTIMIZED: Keep mobile widths original; desktop preview scaled down ~16% from original (with +5% vs prior change) */}
+              <div className="relative mx-auto w-[220px] xs:w-[240px] sm:w-[236px] aspect-[9/19] group">
                 {/* Phone Frame */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2rem] sm:rounded-[2.5rem] border-[6px] border-gray-900 shadow-2xl overflow-hidden">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-5 sm:h-6 bg-black rounded-b-xl sm:rounded-b-2xl z-20" />
@@ -166,7 +169,7 @@ export function HeroSection() {
                           className="object-cover"
                           priority
                           fetchPriority="high"
-                          sizes="(max-width: 480px) 78vw, (max-width: 768px) 52vw, (max-width: 1280px) 36vw, 280px"
+                          sizes="(max-width: 480px) 220px, (max-width: 768px) 240px, 236px"
                           quality={50}
                         />
                       </motion.div>
@@ -176,9 +179,28 @@ export function HeroSection() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
                 </div>
                 {/* Enhanced Glow Behind Phone */}
-                <div className="absolute -inset-10 bg-gradient-to-br from-primary/30 via-purple-500/20 to-accent/30 blur-[60px] -z-10 group-hover:blur-[80px] transition-all duration-500" />
+                <div className="absolute -inset-10 bg-gradient-to-br from-primary/30 via-purple-500/20 to-accent/30 blur-[60px] -z-10 group-hover:blur-[80px] transition-all duration-500 pointer-events-none" />
               </div>
             </motion.div>
+            {/* Slide Dots: clickable and pause on hover */}
+            <div className="flex items-center justify-center gap-2 relative z-30">
+              {screenshots.map((_, idx) => {
+                const isActive = idx === currentSlide
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCurrentSlide(idx)}
+                    onMouseEnter={() => setPaused(true)}
+                    onMouseLeave={() => setPaused(false)}
+                    className={`h-2.5 w-2.5 rounded-full transition-all ${
+                      isActive ? "bg-primary scale-110" : "bg-muted-foreground/40 hover:bg-primary/70"
+                    }`}
+                    aria-label={`View app screenshot ${idx + 1}`}
+                  />
+                )
+              })}
+            </div>
           </div>
         </div>
       </SectionContainer>
