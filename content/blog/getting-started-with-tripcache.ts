@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Sarah Johnson",
   readTime: "5 min read",
   category: "Tutorial",
-  image: "/travel-planning-dashboard.jpg",
+  image: "/travel-planning-dashboard.webp",
   keywords: [
     "TripCache tutorial",
     "how to use TripCache",

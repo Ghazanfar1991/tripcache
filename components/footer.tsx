@@ -11,7 +11,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-3 group">
               <Image
-                src="/app-icon.png"
+                src="/app-icon.webp"
                 alt="TripCache"
                 width={40}
                 height={40}

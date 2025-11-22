@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Emily Rodriguez",
   readTime: "12 min read",
   category: "Comparison",
-  image: "/blog-app-comparison.jpg",
+  image: "/blog-app-comparison.webp",
   keywords: [
     "best travel apps 2025",
     "TripIt vs TripCache",

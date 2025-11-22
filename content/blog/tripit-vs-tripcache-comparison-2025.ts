@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
     author: "Michael Chen",
     readTime: "7 min read",
     category: "Comparison",
-    image: "/blog-tripit-comparison.jpg",
+    image: "/blog-tripit-comparison.webp",
     keywords: [
         "TripIt alternative",
         "TripIt vs TripCache",

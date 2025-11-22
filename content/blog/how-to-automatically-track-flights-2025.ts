@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
     author: "David Park",
     readTime: "8 min read",
     category: "Tutorial",
-    image: "/blog-flight-tracking.jpg",
+    image: "/blog-flight-tracking.webp",
     keywords: [
         "automatic flight tracking",
         "how to track flights automatically",

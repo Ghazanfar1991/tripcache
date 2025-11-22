@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
     author: "Emma Rodriguez",
     readTime: "9 min read",
     category: "Guide",
-    image: "/blog-document-organization.jpg",
+    image: "/blog-document-organization.webp",
     keywords: [
         "travel document organizer",
         "how to organize travel documents",

@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               name: "TripCache",
               logo: {
                 "@type": "ImageObject",
-                url: `${BASE_URL}/app-icon.png`,
+                url: `${BASE_URL}/app-icon.webp`,
               },
             },
             description: metadata.description || metadata.excerpt,

@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Michael Chen",
   readTime: "10 min read",
   category: "Migration",
-  image: "/blog-migration-guide.jpg",
+  image: "/blog-migration-guide.webp",
   keywords: [
     "TripCase migration",
     "switch from TripCase",

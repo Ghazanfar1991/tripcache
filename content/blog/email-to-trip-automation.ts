@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Michael Chen",
   readTime: "4 min read",
   category: "Technology",
-  image: "/email-automation-technology.jpg",
+  image: "/email-automation-technology.webp",
   keywords: [
     "email to trip automation",
     "travel itinerary automation",

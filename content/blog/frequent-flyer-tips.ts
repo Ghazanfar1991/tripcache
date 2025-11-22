@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Sarah Johnson",
   readTime: "8 min read",
   category: "Tips",
-  image: "/airplane-frequent-flyer.jpg",
+  image: "/airplane-frequent-flyer.webp",
   keywords: [
     "frequent flyer tips",
     "business travel hacks",

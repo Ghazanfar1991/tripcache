@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Emily Rodriguez",
   readTime: "6 min read",
   category: "Business",
-  image: "/business-expense-spreadsheet.jpg",
+  image: "/business-expense-spreadsheet.webp",
   keywords: [
     "travel expense tracking",
     "business travel reporting",

@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "David Park",
   readTime: "5 min read",
   category: "Security",
-  image: "/data-security-encryption.jpg",
+  image: "/data-security-encryption.webp",
   keywords: [
     "travel data security",
     "TripCache privacy",

@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     siteName: "TripCache",
     images: [
       {
-        url: "/app-screenshot-home.jpg",
-        width: 1200,
-        height: 630,
+        url: "/app-screenshot-home.webp",
+        width: 1080,
+        height: 2340,
         alt: "TripCache App Dashboard",
       },
     ],
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TripCache - Smart Flight & Trip Itinerary Manager",
     description: "The best TripCase alternative. Manage travel itineraries with email automation and CSV reports.",
-    images: ["/app-screenshot-home.jpg"],
+    images: ["/app-screenshot-home.webp"],
     creator: "@tripcache",
   },
   icons: {
-    icon: "/app-icon.png",
-    shortcut: "/app-icon.png",
-    apple: "/app-icon.png",
+    icon: "/app-icon.webp",
+    shortcut: "/app-icon.webp",
+    apple: "/app-icon.webp",
   },
   robots: {
     index: true,
@@ -106,7 +106,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "TripCache",
               url: "https://trip-cache.com",
-              logo: "https://trip-cache.com/app-icon.png",
+              logo: "https://trip-cache.com/app-icon.webp",
               description: "Smart flight and trip itinerary manager",
               sameAs: [
                 "https://twitter.com/tripcache",

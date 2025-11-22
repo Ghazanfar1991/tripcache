@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Alex Thompson",
   readTime: "7 min read",
   category: "Lifestyle",
-  image: "/digital-nomad-working-remotely.jpg",
+  image: "/digital-nomad-working-remotely.webp",
   keywords: [
     "digital nomad organization",
     "remote work travel tips",
