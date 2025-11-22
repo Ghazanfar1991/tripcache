@@ -166,7 +166,8 @@ export function HeroSection() {
                           className="object-cover"
                           priority
                           fetchPriority="high"
-                          sizes="(max-width: 640px) 70vw, (max-width: 1280px) 45vw, 420px"
+                          sizes="(max-width: 480px) 78vw, (max-width: 768px) 52vw, (max-width: 1280px) 36vw, 280px"
+                          quality={50}
                         />
                       </motion.div>
                     </AnimatePresence>

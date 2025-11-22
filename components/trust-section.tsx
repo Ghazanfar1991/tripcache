@@ -60,7 +60,8 @@ export function TrustSection() {
                       alt="TripCache App"
                       fill
                       className="object-cover object-top"
-                      sizes="192px"
+                      sizes="176px"
+                      quality={55}
                     />
                   </div>
                 </div>

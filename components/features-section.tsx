@@ -95,7 +95,8 @@ function PhoneStack() {
                     alt={screen.alt}
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 640px) 180px, (max-width: 1024px) 200px, 220px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 180px, 200px"
+                    quality={55}
                   />
                 </div>
               </div>
@@ -170,7 +171,8 @@ export function FeaturesSection() {
                     alt={feature.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 80vw, (max-width: 1024px) 45vw, 30vw"
+                    quality={55}
                   />
                   {/* Gradient overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />

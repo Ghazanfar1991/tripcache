@@ -141,6 +141,8 @@ export default function RootLayout({
           }}
         />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
         <meta name="theme-color" content="#0891b2" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -155,9 +157,9 @@ export default function RootLayout({
             <>
               <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-                strategy="afterInteractive"
+                strategy="lazyOnload"
               />
-              <Script id="ga-init" strategy="afterInteractive">
+              <Script id="ga-init" strategy="lazyOnload">
                 {`
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}

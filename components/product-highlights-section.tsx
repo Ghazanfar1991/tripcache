@@ -95,7 +95,8 @@ function PhoneStack() {
                     alt={screen.alt}
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 640px) 180px, (max-width: 1024px) 200px, 220px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 180px, 200px"
+                    quality={55}
                   />
                 </div>
               </div>

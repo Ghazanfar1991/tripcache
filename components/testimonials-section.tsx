@@ -135,7 +135,8 @@ export function TestimonialsSection() {
                           alt={testimonial.name}
                           fill
                           className="object-cover"
-                          sizes="44px"
+                          sizes="40px"
+                          quality={60}
                         />
                       </div>
                       <div>
@@ -179,7 +180,8 @@ export function TestimonialsSection() {
                         alt={testimonial.name}
                         fill
                         className="object-cover"
-                        sizes="44px"
+                        sizes="40px"
+                        quality={60}
                       />
                     </div>
                     <div>

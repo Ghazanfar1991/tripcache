@@ -103,7 +103,8 @@ export function HowItWorksSection() {
                         alt={screen.alt}
                         fill
                         className="object-cover object-top"
-                        sizes="(max-width: 768px) 120px, 160px"
+                        sizes="(max-width: 768px) 120px, 150px"
+                        quality={55}
                       />
                     </div>
                   </div>
