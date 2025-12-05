@@ -1,7 +1,6 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
-import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
 import Image from "next/image"
 import { SectionContainer } from "./section-container"
@@ -91,15 +90,12 @@ export function TestimonialsSection() {
 
       <SectionContainer>
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-4xl md:text-5xl font-bold tracking-tight"
           >
             Loved by
             <span className="text-gradient-primary"> Travelers.</span>
-          </motion.h2>
+          </h2>
           <p className="text-lg text-muted-foreground">
             Join thousands of users who trust TripCache for their journey.
           </p>

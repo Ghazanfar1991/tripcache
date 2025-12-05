@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Mail, FileSpreadsheet, Plane, Zap, Shield, Cloud } from "lucide-react"
 import Image from "next/image"
 import { SectionContainer } from "./section-container"
@@ -117,47 +116,32 @@ export function FeaturesSection() {
 
       <SectionContainer className="relative z-10">
         <div className="mb-16 text-center max-w-3xl mx-auto space-y-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium"
           >
             <Zap className="w-4 h-4" />
             <span>Everything You Need</span>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          <h2
             className="text-4xl md:text-5xl font-bold tracking-tight"
           >
             Powerfully Simple.
             <br />
             <span className="text-gradient-primary">Simply Powerful.</span>
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          <p
             className="text-lg text-muted-foreground"
           >
             Everything you need to manage your travels, beautifully designed.
-          </motion.p>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group relative"
             >
               <div className="relative h-full rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 dark:border-white/5 dark:bg-white/5 dark:hover:border-primary/20">
@@ -203,7 +187,7 @@ export function FeaturesSection() {
                 {/* Gradient border effect on hover */}
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`} />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
