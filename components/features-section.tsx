@@ -73,7 +73,7 @@ const phoneLayout = [
 function PhoneStack() {
   return (
     <div className="relative mx-auto mt-16 h-[340px] w-full max-w-5xl pb-15">
-      <div className="absolute inset-x-6  bottom-8 h-24 rounded-[55%] bg-gradient-to-r from-cyan-500/15 via-purple-500/15 to-amber-400/15 blur-3xl" />
+      <div className="absolute inset-x-6  bottom-8 h-24 rounded-[55%] bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-amber-400/10 blur-xl" />
       {mobileScreens.map((screen, index) => {
         const layout = phoneLayout[index] || phoneLayout[phoneLayout.length - 1]
         return (
@@ -86,8 +86,8 @@ function PhoneStack() {
             }}
           >
             <div className="relative w-[150px] sm:w-[180px] lg:w-[200px]">
-              <div className="absolute inset-0 -z-10 rounded-[2.4rem] bg-gradient-to-br from-white/35 to-white/10 blur-2xl" />
-              <div className="relative rounded-[2.2rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 shadow-[0_24px_50px_rgba(15,23,42,0.35)] ring-1 ring-white/10">
+              <div className="absolute inset-0 -z-10 rounded-[2.4rem] bg-gradient-to-br from-white/25 to-white/5 blur-lg" />
+              <div className="relative rounded-[2.2rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 shadow-[0_20px_40px_rgba(15,23,42,0.25)] ring-1 ring-white/10">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-16 rounded-b-3xl bg-black/80" />
                 <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.9rem]">
                   <Image

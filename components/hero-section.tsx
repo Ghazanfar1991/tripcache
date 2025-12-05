@@ -33,35 +33,28 @@ export function HeroSection() {
     // OPTIMIZED: Adjusted pt-20 to pt-24 for better mobile clearing of navbars
     // Added overflow-x-hidden to strictly prevent horizontal scroll
     <section className="relative flex items-center pt-24 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 overflow-hidden">
-      
-      {/* Enhanced Background Effects */}
+
+      {/* Enhanced Background Effects - Reduced blur for performance */}
       <div className="absolute inset-0 bg-background">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/20 rounded-full blur-[120px] opacity-50 animate-glow" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-accent/10 rounded-full blur-[100px] opacity-30" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/15 rounded-full blur-[80px] opacity-40" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-accent/8 rounded-full blur-[60px] opacity-25" />
       </div>
 
       <SectionContainer className="relative z-10 w-full flex flex-col items-center px-4 sm:px-6">
         {/* OPTIMIZED: Changed gap-10 to gap-12 for better vertical breathing room on mobile */}
         <div className="w-full max-w-6xl grid items-center justify-items-center lg:justify-items-start gap-12 lg:grid-cols-2 lg:gap-16">
-          
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+
+          {/* Left Content - Simplified animation for better LCP */}
+          <div
             className="w-full max-w-xl mx-auto text-center lg:text-left space-y-5 sm:space-y-6"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
+            {/* Badge - Static for LCP */}
+            <div
               className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20 text-xs sm:text-sm font-medium text-primary"
             >
               <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               <span className="font-semibold">The Future of Trip Management</span>
-            </motion.div>
+            </div>
 
             {/* Headline */}
             {/* OPTIMIZED: Adjusted leading and font sizes for mobile readability */}
@@ -109,14 +102,12 @@ export function HeroSection() {
 
             {/* Message */}
             {message && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
+              <div
                 className={`flex items-center justify-center lg:justify-start gap-2 text-sm font-medium ${status === "success" ? "text-emerald-500" : "text-red-500"}`}
               >
                 {status === "success" ? <CheckCircle2 className="w-4 h-4" /> : <AlertCircle className="w-4 h-4" />}
                 {message}
-              </motion.div>
+              </div>
             )}
 
             {/* Coming Soon App Store Buttons */}
@@ -137,7 +128,7 @@ export function HeroSection() {
                 <span className="text-[10px] sm:text-[11px] font-medium lg:-mt-15 -mt-10 text-muted-foreground uppercase tracking-wide">Coming Soon</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Visual - Enhanced with Smooth Transitions */}
           <div className="relative perspective-1000 w-full flex flex-col items-center justify-center gap-4">
@@ -178,8 +169,8 @@ export function HeroSection() {
                   {/* Screen Glare */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
                 </div>
-                {/* Enhanced Glow Behind Phone */}
-                <div className="absolute -inset-10 bg-gradient-to-br from-primary/30 via-purple-500/20 to-accent/30 blur-[60px] -z-10 group-hover:blur-[80px] transition-all duration-500 pointer-events-none" />
+                {/* Reduced Glow Behind Phone for performance */}
+                <div className="absolute -inset-8 bg-gradient-to-br from-primary/20 via-purple-500/15 to-accent/20 blur-[40px] -z-10 pointer-events-none" />
               </div>
             </motion.div>
             {/* Slide Dots: clickable and pause on hover */}
@@ -193,9 +184,8 @@ export function HeroSection() {
                     onClick={() => setCurrentSlide(idx)}
                     onMouseEnter={() => setPaused(true)}
                     onMouseLeave={() => setPaused(false)}
-                    className={`h-2.5 w-2.5 rounded-full transition-all ${
-                      isActive ? "bg-primary scale-110" : "bg-muted-foreground/40 hover:bg-primary/70"
-                    }`}
+                    className={`h-2.5 w-2.5 rounded-full transition-all ${isActive ? "bg-primary scale-110" : "bg-muted-foreground/40 hover:bg-primary/70"
+                      }`}
                     aria-label={`View app screenshot ${idx + 1}`}
                   />
                 )
