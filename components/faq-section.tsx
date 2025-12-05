@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Plus, Minus } from "lucide-react"
 import { useState } from "react"
 import { SectionContainer } from "./section-container"
@@ -45,7 +44,7 @@ const faqs: FAQItem[] = [
 
     {
         question: "What airlines and booking sites are supported?",
-        answer: "TripCache’s AI can automatically extract flight details from almost all airline confirmation emails and PDF tickets. Even if a booking format is unusual or some information is missing, you can review and manually add or edit the details before accepting the draft. This ensures every flight itinerary can be captured accurately."
+        answer: "TripCache's AI can automatically extract flight details from almost all airline confirmation emails and PDF tickets. Even if a booking format is unusual or some information is missing, you can review and manually add or edit the details before accepting the draft. This ensures every flight itinerary can be captured accurately."
     }
 
 ]
@@ -75,6 +74,7 @@ export function FAQSection() {
             <Script
                 id="faq-schema"
                 type="application/ld+json"
+                strategy="afterInteractive"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
 
@@ -84,46 +84,31 @@ export function FAQSection() {
                 <SectionContainer className="relative z-10">
                     <div className="max-w-3xl mx-auto">
                         <div className="text-center mb-12 space-y-4">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                            <div
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium"
                             >
                                 <span>Got Questions?</span>
-                            </motion.div>
+                            </div>
 
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
+                            <h2
                                 className="text-4xl md:text-5xl font-bold tracking-tight"
                             >
                                 Frequently Asked
                                 <br />
                                 <span className="text-gradient-primary">Questions</span>
-                            </motion.h2>
+                            </h2>
 
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
+                            <p
                                 className="text-lg text-muted-foreground"
                             >
                                 Everything you need to know about TripCache
-                            </motion.p>
+                            </p>
                         </div>
 
                         <div className="space-y-4">
                             {faqs.map((faq, index) => (
-                                <motion.div
+                                <div
                                     key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.05 }}
                                     className="group"
                                 >
                                     <div className="rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg dark:border-white/5 dark:bg-white/5">
@@ -144,28 +129,20 @@ export function FAQSection() {
                                             </div>
                                         </button>
 
-                                        <motion.div
-                                            initial={false}
-                                            animate={{
-                                                height: openIndex === index ? "auto" : 0,
-                                                opacity: openIndex === index ? 1 : 0
-                                            }}
-                                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                                            className="overflow-hidden"
+                                        <div
+                                            className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                                                }`}
                                         >
                                             <div className="px-6 pb-6 text-muted-foreground leading-relaxed dark:text-gray-400">
                                                 {faq.answer}
                                             </div>
-                                        </motion.div>
+                                        </div>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                        <div
                             className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20"
                         >
                             <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
@@ -178,7 +155,7 @@ export function FAQSection() {
                             >
                                 Contact Support
                             </a>
-                        </motion.div>
+                        </div>
                     </div>
                 </SectionContainer>
             </section>
