@@ -22,8 +22,9 @@ const faqs: FAQItem[] = [
     },
     {
         question: "How does the email forwarding work?",
-        answer: "With TripCache Pro ($9.99/month), you'll receive a unique email address like 'trips-abc123@tripcache.app'. Simply forward any booking confirmation to this address, and our AI-powered parser automatically extracts flight details, hotel reservations, and creates your trip itinerary. It works with all major airlines and booking platforms."
+        answer: "With TripCache Pro ($9.99/month), you receive your own unique email address (e.g., trips-abc123@tripcache.app). Simply forward any booking or flight confirmation email to this address. Our AI automatically reads the email, extracts your flight details and creates a flight draft. You'll receive a notification to review and accept the draft. Once accepted, the trip and its related flights are added to your Trips section. You can also view or manage all pending drafts anytime in the Drafts section of the app."
     },
+
     {
         question: "What happened to TripCase?",
         answer: "TripCase officially shut down on April 1, 2025, as part of Sabre Corporation's strategic restructuring. Millions of users were left searching for alternatives. TripCache was built specifically to fill this gap, offering all the features TripCase users loved, plus modern improvements at an affordable price."
@@ -34,16 +35,19 @@ const faqs: FAQItem[] = [
     },
     {
         question: "Is my data secure and private?",
-        answer: "Your privacy is our top priority. TripCache uses end-to-end encryption for all data transmission and storage. We never sell your data to third parties, and you maintain full ownership of your travel information. Our servers are hosted on secure, SOC 2 compliant infrastructure."
+        answer: "Yes. We take data security and privacy very seriously. All your information is stored in a private, secure database that only you can access through your account. We never share or sell your data to any third party. If you choose to delete your account, all your data is permanently removed from our database. Your travel information always remains fully under your control."
     },
+
     {
         question: "Does TripCache work on mobile devices?",
-        answer: "Yes! TripCache is fully responsive and works beautifully on all devices. We're currently in beta testing for native iOS and Android apps, which will be available soon. In the meantime, you can access TripCache from any mobile browser with full functionality."
+        answer: "Yes. TripCache is designed as a mobile-first app. We're currently offering early access for users, and the full Android and iOS apps will be available soon on the app stores. You can register now to secure early access and be among the first to try the app when it launches."
     },
+
     {
         question: "What airlines and booking sites are supported?",
-        answer: "TripCache supports virtually all major airlines. Our AI parser is constantly learning and improving to support new booking formats."
+        answer: "TripCache’s AI can automatically extract flight details from almost all airline confirmation emails and PDF tickets. Even if a booking format is unusual or some information is missing, you can review and manually add or edit the details before accepting the draft. This ensures every flight itinerary can be captured accurately."
     }
+
 ]
 
 export function FAQSection() {

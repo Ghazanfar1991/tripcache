@@ -15,7 +15,7 @@ const plans = [
     badge: "Free forever",
     highlight: false,
     features: ["Manual trip entry", "View itineraries", "Basic organization"],
-    cta: { href: "/signup", label: "Start for free" },
+
     meta: "No credit card needed. Upgrade any time.",
   },
   {
@@ -33,7 +33,7 @@ const plans = [
       "Calendar integration & trip sharing",
       "Priority support",
     ],
-    cta: { href: "/checkout", label: "Upgrade to Pro" },
+
     meta: "Cancel anytime. Keep all your exports.",
   },
 ]
@@ -112,11 +112,10 @@ export default function PricingPage() {
             <motion.article
               key={plan.name}
               whileHover={{ y: -6 }}
-              className={`relative h-full overflow-hidden rounded-3xl border backdrop-blur-sm p-8 sm:p-10 transition-all duration-500 ${
-                plan.highlight
-                  ? "border-primary/40 bg-gradient-to-br from-primary/15 via-background/90 to-purple-500/10 shadow-xl shadow-primary/15"
-                  : "border-border/60 bg-card/70"
-              }`}
+              className={`relative h-full overflow-hidden rounded-3xl border backdrop-blur-sm p-8 sm:p-10 transition-all duration-500 ${plan.highlight
+                ? "border-primary/40 bg-gradient-to-br from-primary/15 via-background/90 to-purple-500/10 shadow-xl shadow-primary/15"
+                : "border-border/60 bg-card/70"
+                }`}
             >
               <div className="absolute inset-x-6 top-6 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 <span>{plan.badge}</span>
@@ -151,19 +150,7 @@ export default function PricingPage() {
                   ))}
                 </div>
 
-                <div className="pt-2">
-                  <Link
-                    href={plan.cta.href}
-                    className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all ${
-                      plan.highlight
-                        ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30 hover:scale-[1.01]"
-                        : "border border-border/70 bg-background text-foreground hover:-translate-y-0.5"
-                    }`}
-                  >
-                    {plan.cta.label}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
+
               </div>
             </motion.article>
           ))}
@@ -238,13 +225,7 @@ export default function PricingPage() {
                     Contact Support
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <Link
-                    href="mailto:hello@tripcache.com?subject=TripCache%20for%20teams"
-                    className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5"
-                  >
-                    Schedule a walkthrough
-                    <MessageCircle className="h-4 w-4" />
-                  </Link>
+
                 </div>
               </div>
 

@@ -24,7 +24,7 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                             priority
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
 
                         {/* Featured Badge */}
                         <div className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-purple-500 text-white text-sm font-semibold shadow-lg">
@@ -34,21 +34,43 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
 
                         {/* Category Badge */}
                         <div className="absolute top-6 right-6">
-                            <span className="px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 text-sm font-medium">
+                            <span className="px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-sm font-medium">
                                 {post.category}
                             </span>
                         </div>
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-4 group-hover:text-primary transition-colors">
-                            {post.title}
-                        </h2>
 
-                        {/* Excerpt */}
-                        <p className="text-lg text-muted-foreground mb-6 line-clamp-2">{post.excerpt}</p>
+                        {/* Content Overlay */}
+                        <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
+                            {/* Meta Info */}
+                            <div className="flex items-center gap-4 text-sm text-gray-300 mb-3">
+                                <div className="flex items-center gap-1.5">
+                                    <Calendar className="h-4 w-4" />
+                                    <span>
+                                        {new Date(post.date).toLocaleDateString("en-US", {
+                                            month: "short",
+                                            day: "numeric",
+                                            year: "numeric",
+                                        })}
+                                    </span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                    <Clock className="h-4 w-4" />
+                                    <span>{post.readTime}</span>
+                                </div>
+                            </div>
 
-                        {/* Read More */}
-                        <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">
-                            <span>Read Full Article</span>
-                            <ArrowRight className="h-5 w-5" />
+                            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 text-white leading-tight">
+                                {post.title}
+                            </h2>
+
+                            {/* Excerpt */}
+                            <p className="text-base sm:text-lg text-gray-200 mb-6 line-clamp-2 max-w-3xl">{post.excerpt}</p>
+
+                            {/* Read More */}
+                            <div className="flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
+                                <span>Read Full Article</span>
+                                <ArrowRight className="h-5 w-5" />
+                            </div>
                         </div>
                     </div>
 

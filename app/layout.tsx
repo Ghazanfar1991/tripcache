@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     siteName: "TripCache",
     images: [
       {
-        url: "/app-screenshot-home.webp",
-        width: 1080,
-        height: 2340,
+        url: "/app-screenshot-home.jpg",
+        width: 1200,
+        height: 630,
         alt: "TripCache App Dashboard",
       },
     ],
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TripCache - Smart Flight & Trip Itinerary Manager",
     description: "The best TripCase alternative. Manage travel itineraries with email automation and CSV reports.",
-    images: ["/app-screenshot-home.webp"],
+    images: ["/app-screenshot-home.jpg"],
     creator: "@tripcache",
   },
   icons: {
-    icon: "/app-icon.webp",
-    shortcut: "/app-icon.webp",
-    apple: "/app-icon.webp",
+    icon: "/app-icon.png",
+    shortcut: "/app-icon.png",
+    apple: "/app-icon.png",
   },
   robots: {
     index: true,
@@ -97,16 +97,32 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Resource Hints for Performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://vercel.live" />
+        <link rel="dns-prefetch" href="https://vercel.live" />
+
+        {/* Preload Critical Font */}
+        <link
+          rel="preload"
+          href="/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+
         <Script
           id="organization-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "TripCache",
               url: "https://trip-cache.com",
-              logo: "https://trip-cache.com/app-icon.webp",
+              logo: "https://trip-cache.com/app-icon.png",
               description: "Smart flight and trip itinerary manager",
               sameAs: [
                 "https://twitter.com/tripcache",
@@ -119,6 +135,7 @@ export default function RootLayout({
         <Script
           id="webapp-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -141,8 +158,6 @@ export default function RootLayout({
           }}
         />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
         <meta name="theme-color" content="#0891b2" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -157,9 +172,9 @@ export default function RootLayout({
             <>
               <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-                strategy="lazyOnload"
+                strategy="afterInteractive"
               />
-              <Script id="ga-init" strategy="lazyOnload">
+              <Script id="ga-init" strategy="afterInteractive">
                 {`
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}

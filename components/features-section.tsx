@@ -95,8 +95,9 @@ function PhoneStack() {
                     alt={screen.alt}
                     fill
                     className="object-cover object-top"
+                    loading="lazy"
                     sizes="(max-width: 640px) 160px, (max-width: 1024px) 180px, 200px"
-                    quality={55}
+                    quality={50}
                   />
                 </div>
               </div>
@@ -171,6 +172,7 @@ export function FeaturesSection() {
                     alt={feature.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
                     sizes="(max-width: 768px) 80vw, (max-width: 1024px) 45vw, 30vw"
                     quality={55}
                   />
