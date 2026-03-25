@@ -1,128 +1,159 @@
-import { Mail, Sparkles, Download, FileText } from "lucide-react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { SectionContainer } from "./section-container"
+"use client"
 
-const features = [
+import { Mail, Sparkles, Download } from "lucide-react"
+import Image from "next/image"
+import { motion } from "framer-motion"
+import { SectionContainer } from "./section-container"
+import {
+  PHONE_SCREEN_IMAGE_HEIGHT,
+  PHONE_SCREEN_IMAGE_WIDTH,
+  PHONE_SCREEN_SIZES,
+  PHONE_SCREEN_WIDTH,
+} from "@/components/ui/phone-screen-size"
+
+const steps = [
   {
     icon: Mail,
-    title: "Easy Trip Import",
-    description:
-      "Forward booking confirmations to your unique email address. We'll automatically parse and organize everything.",
-    link: "Learn More →",
+    title: "Forward Your Bookings",
+    description: "Simply forward any flight, hotel, or car rental confirmation to your TripCache email address.",
+    image: "/app-screenshot-import.webp",
+    gradient: "from-cyan-500 to-blue-600",
+    glow: "bg-cyan-500/20",
+    textGradient: "from-cyan-400 to-cyan-200"
   },
   {
     icon: Sparkles,
-    title: "Smart Organization",
-    description:
-      "All your trips, flights, and documents organized beautifully in one place with intelligent categorization.",
-    link: "Learn More →",
+    title: "AI Works Its Magic",
+    description: "Our intelligent parser instantly extracts every detail and builds a beautiful, interactive itinerary.",
+    image: "/app-screenshot-drafts.webp",
+    gradient: "from-purple-500 to-fuchsia-600",
+    glow: "bg-purple-500/20",
+    textGradient: "from-purple-400 to-fuchsia-200"
   },
   {
     icon: Download,
-    title: "Instant CSV Export",
-    description:
-      "Generate detailed travel reports with a single tap. Perfect for expense tracking and business reporting.",
-    link: "Learn More →",
-  },
-  {
-    icon: FileText,
-    title: "Document Storage",
-    description:
-      "Store passports, visas, and boarding passes securely. Access everything offline when you need it most.",
-    link: "Learn More →",
-  },
-]
-
-const galleryScreens = [
-  { src: "/app-screenshot-home.webp", alt: "TripCache Home" },
-  { src: "/app-screenshot-trip-detail.webp", alt: "TripCache Trip Detail" },
-  { src: "/app-screenshot-history.webp", alt: "TripCache Travel History" },
-  { src: "/app-screenshot-flight-detail.webp", alt: "TripCache Flight Detail" },
-  { src: "/app-screenshot-documents.webp", alt: "TripCache Documents" },
+    title: "Ready When You Are",
+    description: "Access everything offline, track live flight updates, and export expense reports with a tap.",
+    image: "/app-screenshot-home.webp",
+    gradient: "from-emerald-500 to-teal-600",
+    glow: "bg-emerald-500/20",
+    textGradient: "from-emerald-400 to-teal-200"
+  }
 ]
 
 export function HowItWorksSection() {
   return (
-    <section
-      id="how-it-works"
-      className="relative py-2 lg:py-10 overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background scroll-mt-24"
-    >
-      <SectionContainer>
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance">
-            Everything You Need.
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-              Nothing You Don't.
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-            Comprehensive trip management designed with simplicity and security in mind.
-          </p>
+    <section id="how-it-works" className="relative overflow-hidden bg-background py-6 dark:bg-slate-950 sm:py-12">
+      {/* Background Decor */}
+      <div className="pointer-events-none absolute right-[-10%] top-[20%] h-[600px] w-[600px] rounded-full bg-cyan-500/10 blur-[120px] dark:bg-cyan-900/10" />
+      <div className="pointer-events-none absolute bottom-[10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-500/10 blur-[120px] dark:bg-purple-900/10" />
+
+      <SectionContainer className="relative z-10">
+
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+          >
+            How It Works
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl dark:text-white"
+          >
+            The Travel <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pipeline.</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground dark:text-slate-400"
+          >
+            Three simple steps to transform messy confirmation emails into a master itinerary.
+          </motion.p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
-          {features.map((feature, index) => (
-            <div key={index} className="space-y-4 text-center md:text-left">
-              {/* Icon */}
-              <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 shadow-lg">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
+        {/* The Pipeline Steps */}
+        <div className="relative max-w-5xl mx-auto">
 
-              {/* Content */}
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
-                <button className="text-sm font-medium text-cyan-600 dark:text-cyan-400 hover:underline">
-                  {feature.link}
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+          {/* Connecting Line (Desktop) */}
+          <div className="absolute bottom-24 left-1/2 top-24 hidden w-0.5 -translate-x-1/2 bg-gradient-to-b from-transparent via-border/90 to-transparent dark:via-white/10 lg:block" />
 
-        {/* Screens Row */}
-        <div className="relative mt-16">
-          <div className="absolute inset-x-0 -top-12 bottom-12 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-500/10 blur-3xl -z-10" />
-          <div className="flex items-end justify-center gap-4 sm:gap-6 lg:gap-8 overflow-x-auto pb-4 lg:pb-6">
-            {galleryScreens.map((screen, index) => {
-              const tilt = index % 2 === 0 ? "-rotate-3" : "rotate-3"
+          <div className="space-y-12 lg:space-y-20">
+            {steps.map((step, index) => {
+              const isEven = index % 2 === 0
               return (
-                <div
-                  key={screen.alt}
-                  className={`relative w-28 sm:w-32 lg:w-36 xl:w-40 ${tilt} transition-transform hover:rotate-0`}
-                >
-                  <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2rem] p-2 shadow-2xl">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-b-2xl z-10" />
-                    <div className="relative bg-black rounded-[1.6rem] overflow-hidden aspect-[9/19.5]">
-                      <Image
-                        src={screen.src}
-                        alt={screen.alt}
-                        fill
-                        className="object-cover object-top"
-                        sizes="(max-width: 768px) 120px, 150px"
-                        quality={55}
-                      />
+                <div key={step.title} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-24 relative`}>
+
+                  {/* Text Content */}
+                  <motion.div
+                    initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className={`flex-1 text-center ${isEven ? 'lg:text-right' : 'lg:text-left'} space-y-6 lg:max-w-md z-10`}
+                  >
+                    <div className={`inline-flex items-center justify-center p-4 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-2xl shadow-black/50 mb-4`}>
+                      <step.icon className="w-8 h-8 text-white" />
                     </div>
+                    <div>
+                      <h3 className="mb-2 text-sm font-bold uppercase tracking-widest text-muted-foreground dark:text-slate-500">Step 0{index + 1}</h3>
+                      <h4 className={`text-3xl sm:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${step.textGradient}`}>
+                        {step.title}
+                      </h4>
+                      <p className="text-lg leading-relaxed text-muted-foreground dark:text-slate-400">
+                        {step.description}
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Node connecting marker (Desktop) */}
+                  <div className="absolute left-1/2 top-1/2 z-20 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-border bg-background dark:border-white/20 dark:bg-slate-950 lg:block">
+                    <div className={`absolute inset-0 rounded-full bg-gradient-to-tr ${step.gradient} blur-sm opacity-50`} />
                   </div>
+
+                  {/* Image Presentation */}
+                  <motion.div
+                    initial={{ opacity: 0, x: isEven ? 50 : -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                    className="relative z-10 flex-1 w-full perspective-1000"
+                  >
+                    {/* Glow behind image */}
+                    <div className={`absolute inset-0 ${step.glow} blur-[80px] rounded-full -z-10 bg-opacity-40`} />
+
+                    <motion.div
+                      whileHover={{ scale: 1.05, rotateY: isEven ? -5 : 5 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      className="relative mx-auto origin-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                      style={{ width: PHONE_SCREEN_WIDTH }}
+                    >
+                      {/* Image direct rendering, no mock borders needed per user feedback */}
+                      <Image
+                        src={step.image}
+                        alt={step.title}
+                        width={PHONE_SCREEN_IMAGE_WIDTH}
+                        height={PHONE_SCREEN_IMAGE_HEIGHT}
+                        sizes={PHONE_SCREEN_SIZES}
+                        className="w-full h-auto object-contain"
+                      />
+                    </motion.div>
+                  </motion.div>
+
                 </div>
               )
             })}
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center mt-12">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-8 shadow-lg"
-          >
-            Explore Full Features →
-          </Button>
-        </div>
       </SectionContainer>
     </section>
   )

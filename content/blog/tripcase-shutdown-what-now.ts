@@ -241,13 +241,13 @@ We listened to TripCase users' complaints:
 - **Beautiful aesthetics** - Gradient design that's easy on the eyes
 - **Accessibility** - Works for users with disabilities
 
-### 3. Completely Free
+### 3. Affordable for Everyone
 
-Unlike TripCase's premium tiers:
+With a generous Free plan and Pro at $9.99/month:
 
-- **No subscription fees** - Ever
-- **All features included** - No paywalls
-- **Unlimited storage** - No artificial limits
+- **Free plan for basic trip management** - No credit card required
+- **Pro at $9.99/month** - Email automation, CSV exports, unlimited docs
+- **80% cheaper than TripIt Pro** - More features, less cost
 - **No ads** - Clean, distraction-free experience
 
 ### 4. Better Support
@@ -307,7 +307,7 @@ A: Most users complete the basic migration in 30-60 minutes. Full historical dat
 A: No! As long as you export your TripCase data before the deadline and follow our migration guide, you won't lose anything.
 
 **Q: Is TripCache really free forever?**
-A: Yes! We're committed to keeping TripCache free for all users. No hidden fees, no premium tiers.
+A: TripCache offers a generous Free plan for basic trip management. Pro features like email automation and CSV exports are available at $9.99/month — still 80% cheaper than TripIt Pro.
 
 **Q: What if I need help?**
 A: Email us at support@tripcache.app or visit our help center at trip-cache.com/help. We're here to assist you every step of the way.
@@ -326,7 +326,7 @@ Don't wait until the last minute. Start your migration to TripCache today:
 
 The TripCase shutdown doesn't have to be a disaster. With TripCache, you're getting an even better travel companion - one that's faster, more beautiful, and completely free.
 
-**Ready to make the switch?** [Start your migration now →](#)
+**Ready to make the switch?** [Start your migration now →](https://trip-cache.com)
 
 ---
 

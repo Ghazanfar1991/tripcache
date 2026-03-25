@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { Star, Quote } from "lucide-react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 import { SectionContainer } from "./section-container"
 
 const testimonials = [
@@ -10,28 +11,28 @@ const testimonials = [
     name: "Sarah Chen",
     role: "Product Manager",
     avatar: "/professional-woman-smiling.webp",
-    text: "TripCache has completely transformed how I manage my business travel. The email-to-trip feature is pure magic!",
+    text: "TripCache has completely transformed how I manage my business travel. The email-to-trip feature is pure magic, saving me hours every month.",
     rating: 5,
   },
   {
     name: "Michael Rodriguez",
     role: "Digital Nomad",
     avatar: "/professional-man-smiling.webp",
-    text: "As a frequent traveler, having all my trips organized in one place is invaluable. The CSV export saves me hours every month.",
+    text: "As a frequent traveler, having all my trips organized in one place is invaluable. The CSV export is perfect for my expense tracking.",
     rating: 5,
   },
   {
     name: "Emma Thompson",
     role: "Travel Blogger",
     avatar: "/smiling-woman-glasses.webp",
-    text: "Finally, an app that makes travel management effortless. The document storage feature is a lifesaver at airports.",
+    text: "Finally, an app that makes travel management effortless. The document storage feature is an absolute lifesaver at busy airports.",
     rating: 5,
   },
   {
     name: "David Kim",
     role: "Consultant",
     avatar: "/asian-man-smiling.webp",
-    text: "The best travel app I've ever used. Clean interface, powerful features, and it just works. Highly recommended!",
+    text: "The best travel app I've ever used. Clean dark mode interface, powerful features, and it just works seamlessly across devices.",
     rating: 5,
   },
   {
@@ -45,144 +46,97 @@ const testimonials = [
     name: "Jason Lee",
     role: "Founder",
     avatar: "/professional-man-smiling.webp",
-    text: "We switched the team to TripCache and never looked back. The offline doc vault has already saved us twice.",
-    rating: 5,
-  },
-  {
-    name: "Olivia Martinez",
-    role: "Travel Coordinator",
-    avatar: "/smiling-woman-glasses.webp",
-    text: "Gate changes synced everywhere and shared trips keep our execs calm. The UI feels premium and fast.",
+    text: "We switched the entire team to TripCache and never looked back. The offline document vault has already saved us twice when traveling abroad.",
     rating: 5,
   },
 ]
 
 export function TestimonialsSection() {
-  const [isPointerDown, setIsPointerDown] = useState(false)
-  const scrollResumeTimeout = useRef<NodeJS.Timeout | null>(null)
-
-  const pauseAndAutoResume = () => {
-    setIsPointerDown(true)
-    if (scrollResumeTimeout.current) clearTimeout(scrollResumeTimeout.current)
-    scrollResumeTimeout.current = setTimeout(() => setIsPointerDown(false), 1200)
-  }
-
-  useEffect(() => {
-    return () => {
-      if (scrollResumeTimeout.current) clearTimeout(scrollResumeTimeout.current)
-    }
-  }, [])
-
-  const marqueePauseHandlers = {
-    onPointerDown: () => setIsPointerDown(true),
-    onPointerUp: () => setIsPointerDown(false),
-    onPointerLeave: () => setIsPointerDown(false),
-    onTouchStart: () => setIsPointerDown(true),
-    onTouchEnd: () => setIsPointerDown(false),
-  }
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section id="testimonials" className="relative py-12 overflow-hidden scroll-mt-24">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+    <section id="testimonials" className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 lg:py-16">
+      {/* Cinematic Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-[20%] w-[500px] h-[500px] bg-gradient-to-l from-indigo-600/10 to-transparent blur-[120px] rounded-full" />
+        <div className="absolute bottom-[10%] left-[10%] w-[600px] h-[400px] bg-gradient-to-tr from-cyan-600/10 to-transparent blur-[120px] rounded-full" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(2,6,23,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(2,6,23,0.04)_1px,transparent_1px)] bg-[size:64px_64px] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" />
+      </div>
 
-      <SectionContainer>
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2
-            className="text-4xl md:text-5xl font-bold tracking-tight"
+      <SectionContainer className="relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-indigo-500 shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-indigo-400"
+          >
+            Social Proof
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl"
           >
             Loved by
-            <span className="text-gradient-primary"> Travelers.</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Join thousands of users who trust TripCache for their journey.
-          </p>
-        </div>
-
-        {/* Mobile: animated marquee that pauses on touch, still scrollable by swipe */}
-        <div className="-mx-4 px-4 md:hidden">
-          <div
-            className="relative overflow-x-auto overflow-y-visible pb-2 touch-pan-x"
-            {...marqueePauseHandlers}
-            onScroll={pauseAndAutoResume}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400"> Travelers.</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg leading-relaxed text-muted-foreground dark:text-slate-400"
           >
-            <div className={`flex gap-4 animate-marquee ${isPointerDown ? "animation-paused" : ""} snap-x snap-mandatory`}>
-              {[...testimonials, ...testimonials].map((testimonial, i) => (
-                <div
-                  key={`mobile-${testimonial.name}-${i}`}
-                  className="group/card relative w-[270px] shrink-0 snap-center"
-                >
-                  <div className="relative h-full p-5 rounded-2xl border border-border/40 bg-card/80 backdrop-blur-lg shadow-[0_12px_45px_rgba(0,0,0,0.08)] dark:bg-white/5 dark:border-white/10">
-                    <div className="flex gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-primary/90 text-primary" />
-                      ))}
-                    </div>
-                    <p className="relative mb-5 text-sm text-muted-foreground leading-relaxed">
-                      <Quote className="absolute -top-2 -left-2 w-7 h-7 text-primary/10 -z-10" />
-                      "{testimonial.text}"
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary/20">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                          sizes="40px"
-                          quality={60}
-                        />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-sm">{testimonial.name}</p>
-                        <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+            Join thousands of users who trust TripCache for their journey.
+          </motion.p>
         </div>
 
-        {/* Desktop: marquee animation that pauses on hover and touch */}
-        <div className="relative mask-gradient-x group hidden md:block" {...marqueePauseHandlers}>
-          <div className={`flex gap-6 animate-marquee group-hover:[animation-play-state:paused] hover:[animation-play-state:paused] ${isPointerDown ? "animation-paused" : ""}`}>
+        {/* Marquee Container */}
+        <div 
+          className="relative flex overflow-hidden mask-gradient-x py-10"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className={`flex gap-6 animate-marquee ${isHovered ? 'animation-paused' : ''} whitespace-nowrap`}>
+            {/* Render 3 sets of testimonials to ensure flawless infinite scrolling */}
             {[...testimonials, ...testimonials, ...testimonials].map((testimonial, i) => (
               <div
-                key={i}
-                className="group/card relative w-[340px] sm:w-[360px] shrink-0"
+                key={`testimonial-${i}`}
+                className="group relative w-[320px] sm:w-[380px] shrink-0"
               >
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/25 via-primary/5 to-purple-500/20 opacity-0 blur-xl transition duration-500 group-hover/card:opacity-100" />
-                <div className="relative h-full p-6 rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,0.12)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-500 dark:bg-white/5 dark:border-white/10 dark:hover:border-primary/30">
-                  <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary/90 text-primary" />
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-indigo-500/0 to-purple-500/0 opacity-0 group-hover:opacity-100 group-hover:from-cyan-500/20 group-hover:via-indigo-500/20 group-hover:to-purple-500/20 blur-xl transition-opacity duration-500 rounded-3xl -z-10" />
+                
+                <div className="relative flex h-full flex-col whitespace-normal rounded-3xl border border-border/70 bg-card/70 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 dark:border-white/10 dark:bg-slate-900/60 dark:hover:border-white/20">
+                  <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent dark:via-white/20" />
+                  
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(5)].map((_, idx) => (
+                      <Star key={idx} className="w-4 h-4 fill-cyan-400 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
                     ))}
                   </div>
 
-                  <p className="relative mb-6 text-muted-foreground leading-relaxed">
-                    <Quote className="absolute -top-2 -left-2 w-8 h-8 text-primary/10 -z-10" />
+                  <p className="relative mb-8 flex-1 leading-relaxed text-muted-foreground dark:text-slate-300">
+                    <Quote className="absolute -top-3 -left-3 -z-10 h-8 w-8 rotate-180 text-foreground/10 dark:text-white/5" />
                     "{testimonial.text}"
                   </p>
 
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-11 h-11 rounded-full overflow-hidden ring-2 ring-primary/20">
+                  <div className="flex items-center gap-4 mt-auto">
+                    <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-border/70 shadow-lg dark:border-white/10">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
                         fill
                         className="object-cover"
-                        sizes="40px"
-                        quality={60}
+                        sizes="48px"
                       />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">{testimonial.name}</p>
-                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                      <p className="text-sm font-bold text-foreground dark:text-white">{testimonial.name}</p>
+                      <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-indigo-500 dark:text-indigo-400">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
@@ -195,17 +149,12 @@ export function TestimonialsSection() {
       <style jsx global>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(calc(-50% - 1.5rem)); }
         }
         .animate-marquee {
-          animation: marquee 34s linear infinite;
-          animation-play-state: running;
+          animation: marquee 40s linear infinite;
         }
         .animation-paused {
-          animation-play-state: paused !important;
-        }
-        .mask-gradient-x:hover .animate-marquee,
-        .animate-marquee:hover {
           animation-play-state: paused !important;
         }
         .mask-gradient-x {

@@ -1,5 +1,23 @@
 import type { ReactNode } from "react"
 
+type RenderMarkdownOptions = {
+  skipFirstH1?: boolean
+}
+
+const APP_DOWNLOAD_PATH = "/download"
+
+function isTripCacheUrl(url: string): boolean {
+  return /^https?:\/\/(www\.)?trip-cache\.com(\/.*)?$/i.test(url)
+}
+
+function normalizeBlogCtaLink(rawLabel: string, rawUrl: string): { label: string; url: string } {
+  if (isTripCacheUrl(rawUrl)) {
+    return { label: "Download the app", url: APP_DOWNLOAD_PATH }
+  }
+
+  return { label: rawLabel, url: rawUrl }
+}
+
 function escapeHtmlSegment(segment: string): string {
   return segment.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
 }
@@ -69,12 +87,24 @@ function formatInline(text: string): string {
       const closeParen = text.indexOf(")", openParen)
 
       if (closeBracket !== -1 && openParen === closeBracket + 1 && closeParen !== -1) {
-        const label = formatInline(text.slice(i + 1, closeBracket))
-        const url = escapeHtmlSegment(text.slice(openParen + 1, closeParen).trim())
-        result += `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-cyan-500 underline decoration-cyan-500/50 hover:decoration-cyan-500">${label}</a>`
+        const rawLabel = text.slice(i + 1, closeBracket).trim()
+        const rawUrl = text.slice(openParen + 1, closeParen).trim()
+        const normalized = normalizeBlogCtaLink(rawLabel, rawUrl)
+        const label = formatInline(normalized.label)
+        const url = escapeHtmlSegment(normalized.url)
+        const isInternal = normalized.url.startsWith("/")
+        const targetAttrs = isInternal ? "" : ` target="_blank" rel="noopener noreferrer"`
+        result += `<a href="${url}"${targetAttrs} class="text-cyan-500 underline decoration-cyan-500/50 hover:decoration-cyan-500">${label}</a>`
         i = closeParen + 1
         continue
       }
+    }
+
+    const bareTripCacheMatch = text.slice(i).match(/^(https?:\/\/)?(www\.)?trip-cache\.com(\/[^\s)]*)?/i)
+    if (bareTripCacheMatch) {
+      result += `<a href="${APP_DOWNLOAD_PATH}" class="text-cyan-500 underline decoration-cyan-500/50 hover:decoration-cyan-500">Download the app</a>`
+      i += bareTripCacheMatch[0].length
+      continue
     }
 
     appendEscaped(text[i])
@@ -84,12 +114,15 @@ function formatInline(text: string): string {
   return result
 }
 
-export function renderMarkdown(markdown: string): ReactNode[] {
+export function renderMarkdown(markdown: string, options: RenderMarkdownOptions = {}): ReactNode[] {
+  const { skipFirstH1 = false } = options
   const lines = markdown.replace(/\r\n/g, "\n").split("\n")
   const elements: ReactNode[] = []
   let keyIndex = 0
   let listBuffer: { ordered: boolean; items: string[] } | null = null
   let quoteBuffer: string[] = []
+  let tableBuffer: string[] = []
+  let firstH1Skipped = false
 
   const nextKey = () => `md-${keyIndex++}`
 
@@ -130,6 +163,78 @@ export function renderMarkdown(markdown: string): ReactNode[] {
     quoteBuffer = []
   }
 
+  const isSeparatorCell = (cell: string) => /^:?-{3,}:?$/.test(cell)
+
+  const getAlignmentClass = (cell: string) => {
+    const hasLeft = cell.startsWith(":")
+    const hasRight = cell.endsWith(":")
+    if (hasLeft && hasRight) return "text-center"
+    if (hasRight) return "text-right"
+    return "text-left"
+  }
+
+  const flushTable = () => {
+    if (!tableBuffer.length) return
+
+    const rows = tableBuffer.map((line) =>
+      line
+        .trim()
+        .replace(/^\|/, "")
+        .replace(/\|$/, "")
+        .split("|")
+        .map((cell) => cell.trim()),
+    )
+
+    const hasTableShape =
+      rows.length >= 2 &&
+      rows[0].length > 1 &&
+      rows[1].length === rows[0].length &&
+      rows[1].every((cell) => isSeparatorCell(cell))
+
+    if (!hasTableShape) {
+      tableBuffer.forEach((line) => pushParagraph(line))
+      tableBuffer = []
+      return
+    }
+
+    const headers = rows[0]
+    const separator = rows[1]
+    const bodyRows = rows.slice(2)
+
+    elements.push(
+      <div key={nextKey()} className="mb-8 overflow-x-auto rounded-2xl border border-border/60">
+        <table className="w-full min-w-[680px] border-collapse text-sm">
+          <thead className="bg-primary/10">
+            <tr>
+              {headers.map((header, colIndex) => (
+                <th
+                  key={nextKey()}
+                  className={`border-b border-border/70 px-4 py-3 font-semibold text-foreground ${getAlignmentClass(separator[colIndex] || "---")}`}
+                  dangerouslySetInnerHTML={{ __html: formatInline(header) }}
+                />
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {bodyRows.map((row) => (
+              <tr key={nextKey()} className="odd:bg-background even:bg-muted/30">
+                {headers.map((_, colIndex) => (
+                  <td
+                    key={nextKey()}
+                    className={`border-b border-border/40 px-4 py-3 align-top text-muted-foreground ${getAlignmentClass(separator[colIndex] || "---")}`}
+                    dangerouslySetInnerHTML={{ __html: formatInline(row[colIndex] || "") }}
+                  />
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>,
+    )
+
+    tableBuffer = []
+  }
+
   const pushParagraph = (text: string) => {
     elements.push(
       <p
@@ -147,8 +252,18 @@ export function renderMarkdown(markdown: string): ReactNode[] {
     if (!trimmed) {
       flushList()
       flushQuote()
+      flushTable()
       continue
     }
+
+    if (/^\|.*\|$/.test(trimmed)) {
+      flushList()
+      flushQuote()
+      tableBuffer.push(trimmed)
+      continue
+    }
+
+    flushTable()
 
     if (/^#{1,3}\s+/.test(trimmed)) {
       flushList()
@@ -156,6 +271,12 @@ export function renderMarkdown(markdown: string): ReactNode[] {
       const level = trimmed.match(/^#{1,3}/)?.[0].length ?? 1
       const content = trimmed.replace(/^#{1,3}\s+/, "")
       const tag = `h${level}` as const
+
+      if (level === 1 && skipFirstH1 && !firstH1Skipped) {
+        firstH1Skipped = true
+        continue
+      }
+
       const className =
         level === 1
           ? "mt-10 mb-6 text-3xl font-bold text-foreground"
@@ -213,6 +334,7 @@ export function renderMarkdown(markdown: string): ReactNode[] {
 
   flushList()
   flushQuote()
+  flushTable()
 
   return elements
 }

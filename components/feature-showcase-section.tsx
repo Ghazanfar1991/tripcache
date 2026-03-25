@@ -1,0 +1,169 @@
+"use client"
+
+import { Bell, Map, Clock } from "lucide-react"
+import Image from "next/image"
+import { motion } from "framer-motion"
+import { SectionContainer } from "./section-container"
+import {
+  PHONE_SCREEN_IMAGE_HEIGHT,
+  PHONE_SCREEN_IMAGE_WIDTH,
+  PHONE_SCREEN_SIZES,
+  PHONE_SCREEN_WIDTH,
+} from "@/components/ui/phone-screen-size"
+
+const showcases = [
+  {
+    id: "live-updates",
+    icon: Bell,
+    title: "Real-time Flight Tracking",
+    subtitle: "Stay Ahead of Schedule",
+    description: "Get instant push notifications for gate changes, delays, and boarding times. TripCache monitors your flights 24/7 so you never have to refresh a page again.",
+    image: "/app-screenshot-flight-detail.webp",
+    color: "from-amber-400 to-orange-500",
+    bgAccent: "bg-orange-500/10",
+  },
+  {
+    id: "trip-progress",
+    icon: Clock,
+    title: "Live Trip Progress",
+    subtitle: "Your Journey at a Glance",
+    description: "Beautiful live tracking shows exactly where you are in your journey. See precise flight progress, layover times, and what's coming up next—all from your home screen.",
+    image: "/app-screenshot-home-flight-progress.webp",
+    color: "from-cyan-400 to-blue-500",
+    bgAccent: "bg-cyan-500/10",
+  },
+  {
+    id: "flight-details",
+    icon: Map,
+    title: "Every Detail Organized",
+    subtitle: "No More Digging Through Emails",
+    description: "Terminal maps, confirmation numbers, baggage allowances, and seat assignments are intelligently parsed and presented exactly when you need them.",
+    image: "/app-screenshot-trip-detail.webp",
+    color: "from-purple-400 to-fuchsia-500",
+    bgAccent: "bg-purple-500/10",
+  }
+]
+
+export function FeatureShowcaseSection() {
+  return (
+    <section className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+      
+      <SectionContainer className="relative z-10">
+        
+        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-32 space-y-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl"
+          >
+            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Peace of Mind.</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xl leading-relaxed text-muted-foreground dark:text-slate-400"
+          >
+            Dive deeper into the details that make TripCache the ultimate travel companion.
+          </motion.p>
+        </div>
+
+        <div className="space-y-32 lg:space-y-48">
+          {showcases.map((item, index) => {
+            const isEven = index % 2 === 0
+            
+            return (
+              <div 
+                key={item.id} 
+                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20 relative`}
+              >
+                
+                {/* Background Glow */}
+                <div className={`absolute top-1/2 ${isEven ? 'right-0' : 'left-0'} -translate-y-1/2 w-[800px] h-[600px] ${item.bgAccent} blur-[120px] rounded-full pointer-events-none -z-10`} />
+
+                {/* Text Content */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  className="flex-1 space-y-8"
+                >
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center gap-2">
+                      <item.icon className={`w-5 h-5 text-transparent bg-clip-text bg-gradient-to-r ${item.color} [&>path]:stroke-[url(#gradient-${item.id})]`} />
+                      <span className={`text-sm font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r ${item.color}`}>
+                        {item.subtitle}
+                      </span>
+                    </div>
+                    <h3 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground dark:text-white lg:text-5xl">
+                      {item.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-xl leading-relaxed text-muted-foreground dark:text-slate-400">
+                    {item.description}
+                  </p>
+
+                  <div className={`h-1 w-24 bg-gradient-to-r ${item.color} rounded-full`} />
+                </motion.div>
+
+                {/* Image Showcase */}
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.9, rotateY: isEven ? -10 : 10 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="relative flex-1 w-full perspective-1000"
+                >
+                  <div
+                    className="relative z-20 mx-auto origin-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                    style={{ width: PHONE_SCREEN_WIDTH }}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={PHONE_SCREEN_IMAGE_WIDTH}
+                      height={PHONE_SCREEN_IMAGE_HEIGHT}
+                      sizes={PHONE_SCREEN_SIZES}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            )
+          })}
+        </div>
+
+      </SectionContainer>
+      
+      {/* SVG Definitions for Icon Gradients */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          {showcases.map(item => (
+            <linearGradient key={`gradient-${item.id}`} id={`gradient-${item.id}`} x1="0%" y1="0%" x2="100%" y2="0%">
+              {item.color.includes('amber') ? (
+                <>
+                  <stop offset="0%" stopColor="#fbbf24" />
+                  <stop offset="100%" stopColor="#f97316" />
+                </>
+              ) : item.color.includes('cyan') ? (
+                <>
+                  <stop offset="0%" stopColor="#22d3ee" />
+                  <stop offset="100%" stopColor="#3b82f6" />
+                </>
+              ) : (
+                <>
+                  <stop offset="0%" stopColor="#c084fc" />
+                  <stop offset="100%" stopColor="#d946ef" />
+                </>
+              )}
+            </linearGradient>
+          ))}
+        </defs>
+      </svg>
+    </section>
+  )
+}

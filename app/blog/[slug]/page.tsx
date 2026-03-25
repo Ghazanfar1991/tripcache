@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Calendar, Clock, ArrowLeft, Share2, Twitter, Linkedin, Facebook } from "lucide-react"
+import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
@@ -10,6 +10,7 @@ import { notFound } from "next/navigation"
 import { BlogShareButton } from "@/components/blog-share-button"
 import { ReadingProgress } from "@/components/reading-progress"
 import { getBlogPostBySlug, getBlogSlugs, getBlogSummaries } from "@/lib/blog"
+import { SectionContainer } from "@/components/section-container"
 
 const BASE_URL = "https://trip-cache.com"
 
@@ -113,28 +114,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <ReadingProgress />
       <Navigation />
 
-      {/* Hero Image - Full Width */}
-      <div className="relative h-[50vh] lg:h-[60vh] overflow-hidden">
-        <Image
-          src={metadata.image || "/placeholder.svg"}
-          alt={metadata.title}
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
+      {/* Hero Image */}
+      <SectionContainer>
+        <div className="relative h-[50vh] lg:h-[60vh] overflow-hidden rounded-[2rem]">
+          <Image
+            src={metadata.image || "/placeholder.svg"}
+            alt={metadata.title}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
 
-        {/* Category Badge */}
-        <div className="absolute top-8 left-8">
-          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-primary to-purple-500 text-white text-sm font-semibold shadow-lg">
-            {metadata.category}
-          </span>
+          {/* Category Badge */}
+          <div className="absolute top-8 left-8">
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-primary to-purple-500 text-white text-sm font-semibold shadow-lg">
+              {metadata.category}
+            </span>
+          </div>
         </div>
-      </div>
+      </SectionContainer>
 
       {/* Article Content */}
       <article className="relative -mt-32 pb-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionContainer>
           <div className="max-w-4xl mx-auto">
             {/* Back Button */}
             <div className="flex mb-8">
@@ -151,7 +154,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 lg:p-12 shadow-2xl mb-0">
               <div className="space-y-6">
                 {/* Title */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance leading-tight">
                   {metadata.title}
                 </h1>
 
@@ -214,22 +217,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     adventures. With years of experience in travel planning, they share insights and tips to make your
                     journeys smoother and more enjoyable.
                   </p>
-                  <div className="flex gap-4">
-                    <Link
-                      href="#"
-                      className="text-primary hover:text-primary/80 transition-colors"
-                      aria-label="Twitter"
-                    >
-                      <Twitter className="h-5 w-5" />
-                    </Link>
-                    <Link
-                      href="#"
-                      className="text-primary hover:text-primary/80 transition-colors"
-                      aria-label="LinkedIn"
-                    >
-                      <Linkedin className="h-5 w-5" />
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
@@ -286,7 +273,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
             </div>
           </div>
-        </div>
+        </SectionContainer>
       </article>
 
       <Footer />

@@ -2,6 +2,8 @@
 
 import { Mail, FileSpreadsheet, Plane, Zap, Shield, Cloud } from "lucide-react"
 import Image from "next/image"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 import { SectionContainer } from "./section-container"
 
 const features = [
@@ -9,43 +11,43 @@ const features = [
     icon: Mail,
     title: "Email-to-Trip Magic",
     description: "Forward emails, get trips. Our AI parses flight details instantly.",
-    image: "/app-screenshot-import.webp",
-    gradient: "from-cyan-500 via-blue-500 to-purple-500",
+    images: ["/app-screenshot-import.webp", "/app-screenshot-drafts.webp"],
+    gradient: "from-cyan-500 via-blue-500 to-indigo-500",
   },
   {
     icon: Plane,
     title: "Visual Timeline",
     description: "Your entire journey in one stunning, interactive timeline.",
-    image: "/app-screenshot-trip-detail.webp",
-    gradient: "from-purple-500 via-pink-500 to-red-500",
+    images: ["/app-screenshot-trip-detail.webp"],
+    gradient: "from-fuchsia-500 via-pink-500 to-rose-500",
   },
   {
     icon: FileSpreadsheet,
     title: "Smart Exports",
     description: "Generate detailed CSV reports for expenses and tax purposes.",
-    image: "/app-screenshot-export.webp",
+    images: ["/app-screenshot-export.webp"],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
   },
   {
     icon: Cloud,
     title: "Document Hub",
     description: "Secure offline access to all your travel documents.",
-    image: "/app-screenshot-documents.webp",
+    images: ["/app-screenshot-documents.webp"],
     gradient: "from-orange-500 via-red-500 to-pink-500",
   },
   {
-    icon: Zap,
-    title: "Instant Sync",
-    description: "Real-time updates across all your devices, always in sync.",
-    image: "/app-screenshot-flight-detail.webp",
-    gradient: "from-yellow-500 via-orange-500 to-red-500",
+icon: Zap,
+title: "Live Trip Tracking",
+description: "Stay on top of every journey with real-time flight status, live progress, and all your travel details in one view.",
+images: ["/app-screenshot-flight-detail.webp"],
+gradient: "from-yellow-500 via-amber-500 to-orange-500",
   },
   {
     icon: Shield,
-    title: "Travel Analytics",
-    description: "Track your journey with beautiful visualizations and insights.",
-    image: "/app-screenshot-history.webp",
-    gradient: "from-blue-500 via-indigo-500 to-purple-500",
+    title: "Travel History",
+description: "Your complete travel history, beautifully organized and easy to explore.",
+    images: ["/app-screenshot-history.webp"],
+    gradient: "from-indigo-500 via-purple-500 to-fuchsia-500",
   },
 ]
 
@@ -59,49 +61,65 @@ const mobileScreens = [
   { src: "/app-screenshot-export.webp", alt: "Export report" },
 ]
 
-const phoneLayout = [
-  { offset: -240, scale: 0.74, rotation: -10, translateY: 26, zIndex: 8 },
-  { offset: -160, scale: 0.88, rotation: -6, translateY: 18, zIndex: 14 },
-  { offset: -95, scale: 1.02, rotation: -3, translateY: 10, zIndex: 22 },
-  { offset: 0, scale: 1.2, rotation: 0, translateY: 0, zIndex: 40 },
-  { offset: 95, scale: 1.02, rotation: 3, translateY: 10, zIndex: 22 },
-  { offset: 160, scale: 0.88, rotation: 6, translateY: 18, zIndex: 14 },
-  { offset: 240, scale: 0.74, rotation: 10, translateY: 26, zIndex: 8 },
-]
-
 function PhoneStack() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  })
+
+  // We map the scroll progress to the fanning out of the phones.
+  // 0 -> completely stacked, 0.5 -> fully fanned out, 1 -> stacked again.
+  const fanOutProgress = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [0, 1, 0])
+
   return (
-    <div className="relative mx-auto mt-16 h-[340px] w-full max-w-5xl pb-15">
-      <div className="absolute inset-x-6  bottom-8 h-24 rounded-[55%] bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-amber-400/10 blur-xl" />
+    <div ref={containerRef} className="relative mx-auto mt-24 h-[400px] w-full max-w-5xl overflow-hidden hidden md:block">
+      <div className="absolute inset-x-0 bottom-[-50px] h-[300px] rounded-full bg-cyan-500/10 blur-[80px]" />
+      
       {mobileScreens.map((screen, index) => {
-        const layout = phoneLayout[index] || phoneLayout[phoneLayout.length - 1]
+        // Calculate offsets based on index
+        const centerIndex = Math.floor(mobileScreens.length / 2)
+        const offsetIndex = index - centerIndex
+        
+        // Final fan out values
+        const finalX = offsetIndex * 110 // pixels to separate
+        const finalRotate = offsetIndex * 6 // degrees to rotate
+        const finalY = Math.abs(offsetIndex) * 15 // pixels down to create an arc
+        
+        // Transform based on scroll
+        const x = useTransform(fanOutProgress, [0, 1], [0, finalX])
+        const rotate = useTransform(fanOutProgress, [0, 1], [0, finalRotate])
+        const y = useTransform(fanOutProgress, [0, 1], [0, finalY])
+        const scale = useTransform(fanOutProgress, [0, 1], [1, 1 - Math.abs(offsetIndex) * 0.05])
+        
+        // Z-index calculation (center is highest)
+        const zIndex = 20 - Math.abs(offsetIndex)
+
         return (
-          <div
-            key={`${screen.alt}-${index}`}
-            className="absolute left-1/2 top-1/2 transition-transform duration-500"
-            style={{
-              transform: `translate(-50%, -50%) translateX(${layout.offset}px) translateY(${layout.translateY}px) rotate(${layout.rotation}deg) scale(${layout.scale})`,
-              zIndex: layout.zIndex,
+          <motion.div
+            key={screen.alt}
+            className="absolute left-1/2 top-10 origin-bottom"
+            style={{ 
+              x, 
+              y, 
+              rotate, 
+              scale,
+              zIndex,
+              translateX: "-50%" 
             }}
           >
-            <div className="relative w-[150px] sm:w-[180px] lg:w-[200px]">
-              <div className="absolute inset-0 -z-10 rounded-[2.4rem] bg-gradient-to-br from-white/25 to-white/5 blur-lg" />
-              <div className="relative rounded-[2.2rem] bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 shadow-[0_20px_40px_rgba(15,23,42,0.25)] ring-1 ring-white/10">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 h-4 w-16 rounded-b-3xl bg-black/80" />
-                <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.9rem]">
-                  <Image
-                    src={screen.src || "/placeholder.svg"}
-                    alt={screen.alt}
-                    fill
-                    className="object-cover object-top"
-                    loading="lazy"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 180px, 200px"
-                    quality={50}
-                  />
-                </div>
-              </div>
+            <div className="relative w-[180px] shadow-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+              {/* Note: since screenshots are already framed, we just render them directly. No mock phone border needed. */}
+              <Image
+                src={screen.src || "/placeholder.svg"}
+                alt={screen.alt}
+                width={180}
+                height={390}
+                className="w-full h-auto object-contain drop-shadow-2xl"
+                priority={index === centerIndex}
+              />
             </div>
-          </div>
+          </motion.div>
         )
       })}
     </div>
@@ -110,96 +128,133 @@ function PhoneStack() {
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="relative py-12 pb-24 lg:pb-28 overflow-hidden scroll-mt-24">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+    <section id="features" className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+      
+      {/* Background decorations */}
+      <div className="pointer-events-none absolute right-0 top-0 h-[800px] w-[800px] rounded-full bg-gradient-to-b from-cyan-500/10 to-transparent blur-[120px] dark:from-cyan-900/10" />
 
       <SectionContainer className="relative z-10">
-        <div className="mb-16 text-center max-w-3xl mx-auto space-y-4">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium"
+        <div className="mb-20 text-center max-w-4xl mx-auto space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-primary shadow-lg shadow-primary/5 backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-cyan-400"
           >
             <Zap className="w-4 h-4" />
             <span>Everything You Need</span>
-          </div>
+          </motion.div>
 
-          <h2
-            className="text-4xl md:text-5xl font-bold tracking-tight"
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mb-6 text-5xl font-extrabold tracking-tight text-foreground dark:text-white md:text-6xl"
           >
             Powerfully Simple.
             <br />
-            <span className="text-gradient-primary">Simply Powerful.</span>
-          </h2>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Simply Powerful.</span>
+          </motion.h2>
 
-          <p
-            className="text-lg text-muted-foreground"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-muted-foreground dark:text-slate-300"
           >
-            Everything you need to manage your travels, beautifully designed.
-          </p>
+            Master your itineraries with pro-level tools wrapped in an elegant interface.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {features.map((feature, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               key={feature.title}
-              className="group relative"
+              className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-border/70 bg-card/60 backdrop-blur-xl transition-colors duration-500 hover:bg-card/80 dark:border-white/10 dark:bg-slate-900/50 dark:hover:bg-slate-800/50"
             >
-              <div className="relative h-full rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 dark:border-white/5 dark:bg-white/5 dark:hover:border-primary/20">
-                {/* Image container with consistent aspect ratio and top accent frame */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-muted/50 to-muted/20 ring-1 ring-white/5">
-                  <div
-                    className={`pointer-events-none absolute -inset-[1px] rounded-[1.2rem] bg-gradient-to-br ${feature.gradient} opacity-15 blur-xl transition-opacity duration-500 group-hover:opacity-35`}
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl border border-white/10 mix-blend-screen" />
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 80vw, (max-width: 1024px) 45vw, 30vw"
-                    quality={55}
-                  />
-                  {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  {/* Dark overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                </div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none`} />
 
-                {/* Content */}
-                <div className="p-6 space-y-3">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed dark:text-gray-400">
-                    {feature.description}
-                  </p>
-
-                  {/* Hover indicator */}
-                  <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-sm font-medium">Learn more</span>
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+              {/* Composition container */}
+              <div className="relative w-full h-56 mt-6 px-6 overflow-hidden flex justify-center items-end">
+                {/* Glowing orb behind images */}
+                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-r ${feature.gradient} blur-[60px] opacity-20 group-hover:opacity-60 transition-opacity duration-700`} />
+                
+                {feature.images.length === 2 ? (
+                  <div className="relative w-full h-full flex justify-center items-start pt-6 perspective-1000">
+                    <Image
+                      src={feature.images[0]}
+                      alt="Screenshot"
+                      width={150}
+                      height={325}
+                      className="absolute left-2 top-4 rotate-[-4deg] origin-bottom drop-shadow-2xl transition-transform duration-700 group-hover:rotate-[-4deg] group-hover:-translate-y-4"
+                    />
+                    <Image
+                      src={feature.images[1]}
+                      alt="Screenshot"
+                      width={150}
+                      height={325}
+                      className="absolute right-2 top-4 rotate-[4deg] origin-bottom drop-shadow-2xl transition-transform duration-700 group-hover:rotate-[4deg] group-hover:-translate-y-4 z-10"
+                    />
                   </div>
-                </div>
-
-                {/* Gradient border effect on hover */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`} />
+                ) : (
+                  <div className="relative w-full h-full flex justify-center items-start pt-6">
+                    <Image
+                      src={feature.images[0]}
+                      alt="Screenshot"
+                      width={160}
+                      height={346}
+                      className="absolute top-4 drop-shadow-[0_0_30px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:-translate-y-6"
+                    />
+                  </div>
+                )}
               </div>
-            </div>
+
+              {/* Text content */}
+              <div className="relative z-10 mt-auto bg-gradient-to-t from-background via-background/85 to-transparent p-8 pt-6 dark:from-slate-900 dark:via-slate-900/80">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-border/70 bg-background/70 shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5">
+                  <feature.icon className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="mb-3 text-2xl font-bold tracking-tight text-foreground dark:text-white">
+                  {feature.title}
+                </h3>
+                <p className="text-balance leading-relaxed text-muted-foreground dark:text-slate-400">
+                  {feature.description}
+                </p>
+
+                {/* Hover indicator line */}
+                <div className={`h-1 w-0 bg-gradient-to-r ${feature.gradient} rounded-full mt-6 transition-all duration-500 group-hover:w-full opacity-50`} />
+              </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-6 text-center md:mt-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border/40 bg-background/80 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground backdrop-blur">
-            App Screens
-          </div>
-          <p className="mt-4 pb-10 text-sm text-muted-foreground">
-            See TripCache’s core workflows stacked together—import, organize, and share in one place.
-          </p>
+        {/* Dynamic Phones Spread */}
+        <div className="mt-32 text-center hidden md:block">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-6 py-2 text-xs font-bold uppercase tracking-[0.3em] text-primary shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-cyan-400"
+          >
+            The Complete Picture
+          </motion.div>
+          <motion.h3 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-4 text-3xl font-bold text-foreground dark:text-white"
+          >
+            All Your Workflows in One Hub
+          </motion.h3>
+          <PhoneStack />
         </div>
-        <PhoneStack />
       </SectionContainer>
     </section>
   )

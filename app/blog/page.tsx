@@ -2,10 +2,10 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BlogCardPremium } from "@/components/blog-card-premium"
-import { Newspaper, Search } from "lucide-react"
-import { ArrowLeft } from "lucide-react"
+import { Newspaper, Search, ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 import { getBlogSummaries } from "@/lib/blog"
+import { SectionContainer } from "@/components/section-container"
 
 export const metadata: Metadata = {
   title: "Travel Tips & Guides Blog",
@@ -31,7 +31,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-purple-500/5 to-background" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionContainer className="relative z-10">
           <div className="flex justify-center lg:justify-start mb-6">
             <Link
               href="/"
@@ -68,21 +68,21 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
-        </div>
+        </SectionContainer>
       </section>
 
       {/* Featured Post */}
       {featuredPost && (
         <section className="py-2 lg:py-2">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionContainer>
             <BlogCardPremium post={featuredPost} featured={true} />
-          </div>
+          </SectionContainer>
         </section>
       )}
 
       {/* Recent Posts Grid */}
       <section className="py-12 lg:py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionContainer>
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-3xl font-bold">Recent Articles</h2>
 
@@ -108,12 +108,12 @@ export default function BlogPage() {
               <BlogCardPremium key={post.slug} post={post} />
             ))}
           </div>
-        </div>
+        </SectionContainer>
       </section>
 
       {/* Newsletter CTA */}
       <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionContainer>
           <div className="max-w-4xl mx-auto text-center p-12 rounded-3xl bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Never Miss an Update
@@ -132,7 +132,7 @@ export default function BlogPage() {
               </button>
             </div>
           </div>
-        </div>
+        </SectionContainer>
       </section>
 
       <Footer />

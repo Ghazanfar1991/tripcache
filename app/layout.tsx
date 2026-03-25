@@ -5,7 +5,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import { Navigation } from "@/components/navigation"
+import { Outfit } from "next/font/google"
 import "./globals.css"
+
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" })
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE"
@@ -103,14 +106,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://vercel.live" />
         <link rel="dns-prefetch" href="https://vercel.live" />
 
-        {/* Preload Critical Font */}
-        <link
-          rel="preload"
-          href="/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
+        {/* Fallback preconnects */}
 
         <Script
           id="organization-schema"
@@ -149,11 +145,6 @@ export default function RootLayout({
                 price: "0",
                 priceCurrency: "USD",
               },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.8",
-                ratingCount: "1250",
-              },
             }),
           }}
         />
@@ -162,7 +153,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className="font-sans antialiased">
+      <body suppressHydrationWarning className={`${outfit.variable} font-sans antialiased`}>
         <ThemeProvider defaultTheme="dark">
           <Navigation />
           {children}

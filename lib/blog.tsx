@@ -13,8 +13,18 @@ import * as TripcaseShutdown from "@/content/blog/tripcase-shutdown-what-now"
 import * as TripitComparison from "@/content/blog/tripit-vs-tripcache-comparison-2025"
 import * as TravelDocumentOrganization from "@/content/blog/travel-document-organization-guide-2025"
 import * as AutomaticFlightTracking from "@/content/blog/how-to-automatically-track-flights-2025"
+import * as AiTripPlanner from "@/content/blog/ai-trip-planner-2026"
+import * as BusinessTravelManagement from "@/content/blog/business-travel-management-guide-2026"
+import * as TravelItineraryTemplate from "@/content/blog/travel-itinerary-template-2026"
+import * as FlightyComparison from "@/content/blog/flighty-vs-tripcache-2026"
+import * as GoogleTravelAlternative from "@/content/blog/google-travel-alternative-2026"
 
 const rawPosts = [
+  AiTripPlanner,
+  BusinessTravelManagement,
+  TravelItineraryTemplate,
+  FlightyComparison,
+  GoogleTravelAlternative,
   TravelDocumentOrganization,
   AutomaticFlightTracking,
   TripitComparison,
@@ -31,7 +41,7 @@ const rawPosts = [
 
 const posts: BlogPost[] = rawPosts.map((source) => {
   const slug = source.metadata.slug
-  const contentNodes = renderMarkdown(source.body)
+  const contentNodes = renderMarkdown(source.body, { skipFirstH1: true })
 
   return {
     slug,

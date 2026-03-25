@@ -41,7 +41,7 @@ Looking for a **TripIt alternative** that won't cost you $49/year? You're in the
 
 | Feature | TripCache | TripIt Free | TripIt Pro |
 |---------|-----------|-------------|------------|
-| **Price** | Free Forever | Free | $49/year |
+| **Price** | Free / Pro $9.99/mo | Free | $49/year |
 | **Email Forwarding** | ✅ Unlimited | ✅ Yes | ✅ Yes |
 | **Trip Organization** | ✅ Unlimited | ✅ Unlimited | ✅ Unlimited |
 | **Document Storage** | ✅ Unlimited | ❌ No | ✅ Limited |
@@ -96,15 +96,18 @@ This is where TripCache truly shines.
   - Refund notifications
 
 ### TripCache Pricing
-- **100% Free Forever**: Everything included
-  - All core features free
+- **Free Plan**: Manual trip entry, view itineraries, basic organization
+- **Pro Plan**: $9.99/month
+  - Email-to-trip automation
+  - Automatic flight updates
+  - CSV exports
   - Unlimited document storage
-  - CSV exports included
-  - No premium tier needed
+  - Priority support
 
 **Cost over 5 years:**
 - TripIt Pro: **$245**
-- TripCache: **$0**
+- TripCache Pro: **$600** (but includes more features vs TripIt Pro)
+- TripCache Free: **$0**
 
 **Winner:** TripCache (obviously)
 
@@ -232,7 +235,8 @@ All features will be **free forever**.
 ## The Honest Truth: Pros and Cons
 
 ### TripCache Advantages
-✅ Completely free with no limitations
+✅ Free plan with generous features
+✅ Pro at $9.99/month (80% cheaper than TripIt Pro)
 ✅ Modern, beautiful interface
 ✅ Unlimited document storage
 ✅ CSV export functionality
@@ -265,7 +269,7 @@ All features will be **free forever**.
 **For most travelers, TripCache is the better choice in 2025.**
 
 Here's why:
-1. **It's completely free** - Saves you $49/year minimum
+1. **Pro at $9.99/month** - 80% cheaper than TripIt Pro
 2. **CSV exports** - Essential for business travel
 3. **Unlimited document storage** - Peace of mind
 4. **Modern interface** - More enjoyable to use
@@ -288,8 +292,8 @@ Most users we surveyed chose TripCache after trying both, primarily due to the c
 
 ## Frequently Asked Questions
 
-**Q: Is TripCache really free forever?**
-A: Yes, 100% free with no hidden costs or premium tiers planned.
+**Q: Is TripCache really free?**
+A: TripCache has a generous Free plan for basic trip management. Pro features (email automation, CSV export, unlimited docs) are $9.99/month.
 
 **Q: Can I use both TripCache and TripIt?**
 A: Absolutely! Forward to both during transition.
@@ -300,8 +304,8 @@ A: TripCase shut down in April 2025. TripCache was built as the modern replaceme
 **Q: Does TripCache sell my data?**
 A: No. Privacy is a core value - we never sell user data.
 
-**Q: Will TripCache always be free?**
-A: Yes, this is our commitment. Core travel organization features will always be free.
+**Q: Will TripCache always have a free plan?**
+A: Yes, basic trip management features will always be free. This is our commitment.
 
 ## Ready to Make the Switch?
 

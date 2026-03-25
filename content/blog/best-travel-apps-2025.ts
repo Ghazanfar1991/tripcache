@@ -35,13 +35,13 @@ Let's dive deep into each one.
 
 ## TripCache: The Best Overall Choice
 
-**Price:** Free forever
+**Price:** Free plan / Pro at $9.99/month
 **Best for:** All travelers (business and leisure)
 **Platforms:** Web, iOS (coming soon), Android (coming soon)
 
 ### Pros
 
-✅ **Completely free** - No premium tiers or hidden costs
+✅ **Generous free plan** - Pro at $9.99/month for automation features
 ✅ **Email-to-trip automation** - Forward confirmations for automatic parsing
 ✅ **Unlimited document storage** - Store boarding passes, visas, passports
 ✅ **CSV export** - Perfect for expense reporting
@@ -210,7 +210,7 @@ Generate comprehensive CSV reports with:
 ### Price Value
 
 **Winner: TripCache**
-- TripCache: ⭐⭐⭐⭐⭐ (Free forever)
+- TripCache: ⭐⭐⭐⭐⭐ (Free plan + $9.99/mo Pro)
 - TripIt: ⭐⭐ ($49/year for Pro)
 - Wanderlog: ⭐⭐⭐ ($49/year for Pro)
 
@@ -299,7 +299,7 @@ Ready to try the best travel app of 2025?
 
 **No credit card required. No premium tiers. Just simple, elegant travel management.**
 
-[Start using TripCache today →](#)
+[Start using TripCache today →](https://trip-cache.com)
 
 ---
 

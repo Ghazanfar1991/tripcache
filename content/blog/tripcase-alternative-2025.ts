@@ -41,7 +41,7 @@ Before we dive into alternatives, let's understand what made TripCase so valuabl
 
 ## Introducing TripCache: The Modern TripCase Alternative
 
-TripCache was built specifically to address the gap left by TripCase's closure. We've taken everything users loved about TripCase and made it better, faster, and completely free.
+TripCache was built specifically to address the gap left by TripCase's closure. We've taken everything users loved about TripCase and made it better, faster, and more affordable — with a generous free plan and a Pro tier at just $9.99/month.
 
 ### Key Features That Make TripCache Stand Out
 
@@ -61,9 +61,9 @@ Generate detailed CSV reports of your travel history - perfect for expense reimb
 
 TripCache features a stunning gradient-based design with dark and light modes. The interface is cleaner and more intuitive than TripCase's dated design.
 
-**5. Completely Free Forever**
+**5. Affordable Pro Plan**
 
-Unlike TripCase, which had premium tiers, TripCache is 100% free with no hidden costs or premium features locked behind paywalls.
+TripCache offers a generous Free plan for basic trip management. The Pro plan at $9.99/month unlocks email-to-trip automation, automatic flight updates, CSV exports, and unlimited document storage — still 80% cheaper than TripIt Pro.
 
 ## How TripCache Compares to Other Alternatives
 
@@ -71,7 +71,7 @@ Unlike TripCase, which had premium tiers, TripCache is 100% free with no hidden 
 
 While TripIt is the most popular TripCase alternative, it has limitations:
 
-- **TripIt Pro costs $49/year** - TripCache is free
+- **TripIt Pro costs $49/year** - TripCache Pro is $9.99/month with a free tier
 - **Limited document storage** - TripCache offers unlimited storage
 - **No CSV exports** - TripCache includes comprehensive reporting
 
@@ -115,13 +115,13 @@ Manually add important upcoming trips or let them populate naturally as you trav
 
 *"The email forwarding works flawlessly. I don't even think about it anymore - my trips just appear automatically."* - David K., Sales Executive
 
-## Why TripCache is Free (And Will Stay Free)
+## Why TripCache is So Affordable
 
-You might be wondering: how can TripCache offer all these features for free?
+You might be wondering: how can TripCache offer so much at such a low price?
 
-Our mission is simple: **travel organization should be accessible to everyone**. We believe that managing your trips shouldn't cost money. TripCache is funded by a passionate team that believes in this vision.
+Our mission is simple: **travel organization should be accessible to everyone**. The Free plan covers basic trip management, while Pro at $9.99/month unlocks automation and advanced features. TripCache is built by a passionate team committed to keeping travel tools affordable.
 
-We'll never charge for core features. Ever.
+Core trip viewing and manual entry will always be free.
 
 ## Advanced Features Coming Soon
 
@@ -149,7 +149,7 @@ TripCase's shutdown was unfortunate, but it opened the door for better alternati
 
 Join thousands of former TripCase users who've already made the switch. Your future self will thank you.
 
-**Ready to experience stress-free travel management?** [Get started with TripCache today →](#)
+**Ready to experience stress-free travel management?** [Get started with TripCache today →](https://trip-cache.com)
 
 ---
 

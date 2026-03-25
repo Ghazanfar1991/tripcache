@@ -28,6 +28,7 @@ const plans = [
     features: [
       "Email-to-trip automation",
       "Automatic flight status updates",
+      "Live Flight Tracking & Alerts",
       "CSV expense export",
       "Unlimited document storage",
       "Calendar integration & trip sharing",
