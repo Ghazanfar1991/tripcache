@@ -129,10 +129,6 @@ export default function Hero() {
   const { theme } = useTheme()
   const isDark = !mounted || theme === "dark"
 
-  const heroGradient = isDark
-    ? "radial-gradient(1200px 700px at 15% 20%, rgba(6,182,212,0.38), transparent 55%), radial-gradient(900px 600px at 82% 10%, rgba(249,115,22,0.28), transparent 60%), radial-gradient(1000px 700px at 60% 80%, rgba(8,145,178,0.22), transparent 62%), linear-gradient(160deg, #020617 0%, #032f39 45%, #0a0f1d 100%)"
-    : "radial-gradient(1100px 660px at 15% 22%, rgba(56,189,248,0.28), transparent 58%), radial-gradient(900px 560px at 84% 8%, rgba(251,146,60,0.22), transparent 62%), radial-gradient(980px 700px at 60% 82%, rgba(45,212,191,0.18), transparent 64%), linear-gradient(160deg, #f8fafc 0%, #ecfeff 45%, #fff7ed 100%)"
-
   useEffect(() => {
     const handleMouseEnter = () => setIsActive(true)
     const handleMouseLeave = () => setIsActive(false)
@@ -174,17 +170,12 @@ export default function Hero() {
         </defs>
       </svg>
 
-      <div className="absolute inset-0" style={{ background: heroGradient }} />
-      <div
-        className={`absolute inset-0 ${isDark ? "opacity-40" : "opacity-28"}`}
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-      />
-
-      <div className={`absolute inset-0 ${isDark ? "bg-gradient-to-b from-black/40 via-black/30 to-black/60" : "bg-gradient-to-b from-white/40 via-white/15 to-white/55"}`} />
+      <div className={`tripcache-hero-sky ${isDark ? "tripcache-hero-sky-dark" : "tripcache-hero-sky-light"}`} />
+      <div className="tripcache-hero-aurora" />
+      <div className="tripcache-hero-routes" />
+      <div className="tripcache-hero-grid" />
+      <div className="tripcache-hero-grain" />
+      <div className={`absolute inset-0 ${isDark ? "bg-gradient-to-b from-black/28 via-black/18 to-black/58" : "bg-gradient-to-b from-white/42 via-white/18 to-white/60"}`} />
       <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-background dark:to-slate-950" />
 
       <div className="relative z-20 mx-auto w-full max-w-6xl px-4 pb-10 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-32">
@@ -243,8 +234,7 @@ export default function Hero() {
 
           <div className="relative flex w-full items-center justify-center overflow-visible py-2 md:justify-end">
             <div className="relative w-full" style={{ maxWidth: "420px" }}>
-              <div className="absolute inset-x-10 top-12 h-[220px] rounded-full bg-cyan-400/20 blur-[110px]" />
-              <div className="absolute right-2 top-3 h-[170px] w-[170px] rounded-full bg-orange-400/12 blur-[90px]" />
+              <div className="tripcache-phone-backlight" />
 
               <div className="pointer-events-none absolute left-2 top-8 z-30 hidden w-[132px] rounded-xl border border-border/70 bg-background/80 px-2.5 py-2 text-left shadow-lg backdrop-blur-xl dark:border-white/20 dark:bg-black/38 xl:block">
                 <div className="text-[9px] font-semibold uppercase tracking-[0.16em] text-primary">{activeSlide.leftBadge.label}</div>

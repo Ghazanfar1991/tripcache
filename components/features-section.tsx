@@ -18,21 +18,21 @@ const features = [
     icon: Hotel,
     title: "Add Everything",
     description: "Keep flights, hotels, rental cars, transport, activities, tickets, restaurants, parking, notes, and custom items in one trip.",
-    images: ["/app-feature-add-everything.png"],
+    images: ["/app-feature-add-everything.webp"],
     gradient: "from-fuchsia-500 via-pink-500 to-rose-500",
   },
   {
     icon: BellRing,
     title: "Cancellation Reminders",
     description: "Save free-cancellation deadlines and get reminded before hotels, cars, tours, or tickets become non-refundable.",
-    images: ["/app-feature-cancellation-reminder.png"],
+    images: ["/app-feature-cancellation-reminder.webp"],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
   },
   {
     icon: Shield,
     title: "Secure Document Vault",
     description: "Store passports, boarding passes, tickets, visas, and confirmations with PIN-protected access.",
-    images: ["/app-feature-secure-documents.png"],
+    images: ["/app-feature-secure-documents.webp"],
     gradient: "from-orange-500 via-red-500 to-pink-500",
   },
   {
@@ -54,11 +54,11 @@ const features = [
 const mobileScreens = [
   { src: "/app-screenshot-import.webp", alt: "Import preview" },
   { src: "/app-screenshot-trip-detail.webp", alt: "Trip overview" },
-  { src: "/app-feature-add-everything.png", alt: "Add everything to trip" },
-  { src: "/app-feature-cancellation-reminder.png", alt: "Cancellation reminder" },
+  { src: "/app-feature-add-everything.webp", alt: "Add everything to trip" },
+  { src: "/app-feature-cancellation-reminder.webp", alt: "Cancellation reminder" },
   { src: "/app-screenshot-flight-detail.webp", alt: "Flight detail" },
   { src: "/app-screenshot-home.webp", alt: "Dashboard" },
-  { src: "/app-feature-secure-documents.png", alt: "Secure documents hub" },
+  { src: "/app-feature-secure-documents.webp", alt: "Secure documents hub" },
   { src: "/app-screenshot-history.webp", alt: "Travel history" },
   { src: "/app-screenshot-export.webp", alt: "Export report" },
 ]
@@ -77,23 +77,23 @@ function PhoneStack() {
   return (
     <div ref={containerRef} className="relative mx-auto mt-24 h-[400px] w-full max-w-5xl overflow-hidden hidden md:block">
       <div className="absolute inset-x-0 bottom-[-50px] h-[300px] rounded-full bg-cyan-500/10 blur-[80px]" />
-      
+
       {mobileScreens.map((screen, index) => {
         // Calculate offsets based on index
         const centerIndex = Math.floor(mobileScreens.length / 2)
         const offsetIndex = index - centerIndex
-        
+
         // Final fan out values
         const finalX = offsetIndex * 110 // pixels to separate
         const finalRotate = offsetIndex * 6 // degrees to rotate
         const finalY = Math.abs(offsetIndex) * 15 // pixels down to create an arc
-        
+
         // Transform based on scroll
         const x = useTransform(fanOutProgress, [0, 1], [0, finalX])
         const rotate = useTransform(fanOutProgress, [0, 1], [0, finalRotate])
         const y = useTransform(fanOutProgress, [0, 1], [0, finalY])
         const scale = useTransform(fanOutProgress, [0, 1], [1, 1 - Math.abs(offsetIndex) * 0.05])
-        
+
         // Z-index calculation (center is highest)
         const zIndex = 20 - Math.abs(offsetIndex)
 
@@ -101,13 +101,13 @@ function PhoneStack() {
           <motion.div
             key={screen.alt}
             className="absolute left-1/2 top-10 origin-bottom"
-            style={{ 
-              x, 
-              y, 
-              rotate, 
+            style={{
+              x,
+              y,
+              rotate,
               scale,
               zIndex,
-              translateX: "-50%" 
+              translateX: "-50%"
             }}
           >
             <div className="relative w-[180px] shadow-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
@@ -130,10 +130,10 @@ function PhoneStack() {
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
-      
+    <section id="features" className="tripcache-section-backdrop relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+
       {/* Background decorations */}
-      <div className="pointer-events-none absolute right-0 top-0 h-[800px] w-[800px] rounded-full bg-gradient-to-b from-cyan-500/10 to-transparent blur-[120px] dark:from-cyan-900/10" />
+      <div className="tripcache-section-routes" />
 
       <SectionContainer className="relative z-10">
         <div className="mb-20 text-center max-w-4xl mx-auto space-y-6">
@@ -187,7 +187,7 @@ export function FeaturesSection() {
               <div className="relative w-full h-56 mt-6 px-6 overflow-hidden flex justify-center items-end">
                 {/* Glowing orb behind images */}
                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-r ${feature.gradient} blur-[60px] opacity-20 group-hover:opacity-60 transition-opacity duration-700`} />
-                
+
                 {feature.images.length === 2 ? (
                   <div className="relative w-full h-full flex justify-center items-start pt-6 perspective-1000">
                     <Image
@@ -239,7 +239,7 @@ export function FeaturesSection() {
 
         {/* Dynamic Phones Spread */}
         <div className="mt-32 text-center hidden md:block">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -247,7 +247,7 @@ export function FeaturesSection() {
           >
             The Complete Picture
           </motion.div>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

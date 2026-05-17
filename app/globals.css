@@ -134,6 +134,107 @@
   .mask-gradient-b {
     mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
   }
+
+  .tripcache-hero-sky {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .tripcache-hero-sky-dark {
+    background:
+      linear-gradient(135deg, rgba(3, 7, 18, 0.98) 0%, rgba(6, 28, 44, 0.96) 34%, rgba(19, 12, 44, 0.95) 64%, rgba(8, 9, 22, 0.98) 100%),
+      linear-gradient(115deg, transparent 0 18%, rgba(14, 165, 233, 0.3) 26%, transparent 38% 50%, rgba(168, 85, 247, 0.24) 62%, transparent 76%),
+      linear-gradient(70deg, rgba(251, 146, 60, 0.18), transparent 38% 68%, rgba(45, 212, 191, 0.2));
+  }
+
+  .tripcache-hero-sky-light {
+    background:
+      linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(236, 254, 255, 0.96) 36%, rgba(255, 247, 237, 0.94) 68%, rgba(241, 245, 249, 1) 100%),
+      linear-gradient(115deg, transparent 0 16%, rgba(14, 165, 233, 0.24) 28%, transparent 42% 52%, rgba(168, 85, 247, 0.16) 64%, transparent 78%),
+      linear-gradient(70deg, rgba(251, 146, 60, 0.18), transparent 40% 66%, rgba(20, 184, 166, 0.15));
+  }
+
+  .tripcache-hero-aurora {
+    position: absolute;
+    inset: -18% -12%;
+    background:
+      linear-gradient(118deg, transparent 0 12%, rgba(56, 189, 248, 0.34) 22%, transparent 34% 44%, rgba(168, 85, 247, 0.26) 54%, transparent 68%),
+      linear-gradient(63deg, transparent 6%, rgba(20, 184, 166, 0.2) 22%, transparent 36% 58%, rgba(251, 146, 60, 0.18) 74%, transparent 88%),
+      conic-gradient(from 212deg at 62% 42%, transparent 0deg, rgba(14, 165, 233, 0.18) 56deg, transparent 122deg, rgba(217, 70, 239, 0.16) 196deg, transparent 292deg);
+    filter: saturate(1.15) blur(26px);
+    opacity: 0.9;
+    transform: translate3d(0, 0, 0);
+    animation: hero-aurora-drift 18s ease-in-out infinite alternate;
+  }
+
+  .tripcache-hero-routes,
+  .tripcache-section-routes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(120deg, transparent 0 29%, rgba(255, 255, 255, 0.22) 29.15%, transparent 29.45% 59%, rgba(34, 211, 238, 0.16) 59.15%, transparent 59.45%),
+      linear-gradient(36deg, transparent 0 22%, rgba(251, 146, 60, 0.12) 22.1%, transparent 22.35% 72%, rgba(168, 85, 247, 0.13) 72.1%, transparent 72.35%),
+      repeating-linear-gradient(96deg, transparent 0 74px, rgba(255, 255, 255, 0.045) 75px 76px, transparent 77px 148px);
+    background-size: 1300px 820px, 1180px 760px, 310px 310px;
+    mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
+    opacity: 0.58;
+    animation: hero-routes-pan 28s linear infinite;
+  }
+
+  .tripcache-hero-grid {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(0deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 82%);
+    opacity: 0.42;
+  }
+
+  .tripcache-hero-grain {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(115deg, rgba(255, 255, 255, 0.05), transparent 38%),
+      radial-gradient(circle at 30% 32%, rgba(255, 255, 255, 0.13) 0 1px, transparent 1.5px),
+      radial-gradient(circle at 78% 21%, rgba(255, 255, 255, 0.1) 0 1px, transparent 1.5px),
+      radial-gradient(circle at 62% 76%, rgba(255, 255, 255, 0.08) 0 1px, transparent 1.5px);
+    background-size: auto, 190px 170px, 230px 190px, 260px 240px;
+    mix-blend-mode: screen;
+    opacity: 0.35;
+  }
+
+  .tripcache-phone-backlight {
+    position: absolute;
+    inset: 0 -18% 6% -18%;
+    background:
+      linear-gradient(118deg, transparent 8%, rgba(34, 211, 238, 0.2) 34%, transparent 58%),
+      linear-gradient(62deg, transparent 12%, rgba(251, 146, 60, 0.18) 42%, transparent 70%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 55%);
+    filter: blur(58px);
+    opacity: 0.86;
+    transform: translate3d(0, 0, 0);
+    animation: hero-phone-sheen 9s ease-in-out infinite alternate;
+  }
+
+  .tripcache-section-backdrop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(118deg, transparent 0 18%, rgba(14, 165, 233, 0.08) 34%, transparent 50% 64%, rgba(168, 85, 247, 0.07) 80%, transparent 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
+    opacity: 0.85;
+  }
+
+  .tripcache-section-routes {
+    opacity: 0.18;
+    mask-image: linear-gradient(to bottom, transparent, black 25%, black 74%, transparent);
+  }
 }
 
 /* Animations */
@@ -186,6 +287,57 @@
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes hero-aurora-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+    background-position: 0% 50%, 60% 50%, 50% 50%;
+  }
+
+  50% {
+    transform: translate3d(2%, 1.5%, 0) scale(1.04);
+    background-position: 50% 48%, 30% 52%, 62% 42%;
+  }
+
+  100% {
+    transform: translate3d(3%, -1%, 0) scale(1.02);
+    background-position: 100% 52%, 0% 48%, 44% 58%;
+  }
+}
+
+@keyframes hero-routes-pan {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 1300px -820px, -1180px 760px, 310px 310px;
+  }
+}
+
+@keyframes hero-phone-sheen {
+  0% {
+    opacity: 0.58;
+    transform: translate3d(-2%, 2%, 0) rotate(-1deg);
+  }
+
+  100% {
+    opacity: 0.92;
+    transform: translate3d(2%, -1%, 0) rotate(1deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tripcache-hero-aurora,
+  .tripcache-hero-routes,
+  .tripcache-section-routes,
+  .tripcache-phone-backlight,
+  .animate-gradient,
+  .animate-float,
+  .animate-glow {
+    animation: none !important;
   }
 }
 

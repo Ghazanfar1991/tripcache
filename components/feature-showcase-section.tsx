@@ -18,7 +18,7 @@ const showcases = [
     title: "Add More Than Flights",
     subtitle: "Complete Trip Building",
     description: "Build a real itinerary with flights, hotels, rental cars, transport, activities, tickets, restaurants, meetings, parking, documents, notes, and custom items.",
-    image: "/app-feature-add-everything.png",
+    image: "/app-feature-add-everything.webp",
     color: "from-amber-400 to-orange-500",
     bgAccent: "bg-orange-500/10",
   },
@@ -28,7 +28,7 @@ const showcases = [
     title: "Never Miss Free Cancellation",
     subtitle: "Booking Deadline Alerts",
     description: "Set cancellation deadlines for hotels, rental cars, tours, tickets, and other reservations. Choose reminders two days before, one day before, day of deadline, or a custom time.",
-    image: "/app-feature-cancellation-reminder.png",
+    image: "/app-feature-cancellation-reminder.webp",
     color: "from-cyan-400 to-blue-500",
     bgAccent: "bg-cyan-500/10",
   },
@@ -38,7 +38,7 @@ const showcases = [
     title: "Securely Save Your Documents",
     subtitle: "Travel Vault",
     description: "Keep passports, boarding passes, flight tickets, visas, confirmations, and travel documents in one protected place connected to your trips.",
-    image: "/app-feature-secure-documents.png",
+    image: "/app-feature-secure-documents.webp",
     color: "from-purple-400 to-fuchsia-500",
     bgAccent: "bg-purple-500/10",
   },
@@ -56,10 +56,11 @@ const showcases = [
 
 export function FeatureShowcaseSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
-      
+    <section className="tripcache-section-backdrop relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+      <div className="tripcache-section-routes" />
+
       <SectionContainer className="relative z-10">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-32 space-y-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -83,18 +84,18 @@ export function FeatureShowcaseSection() {
         <div className="space-y-32 lg:space-y-48">
           {showcases.map((item, index) => {
             const isEven = index % 2 === 0
-            
+
             return (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20 relative`}
               >
-                
+
                 {/* Background Glow */}
                 <div className={`absolute top-1/2 ${isEven ? 'right-0' : 'left-0'} -translate-y-1/2 w-[800px] h-[600px] ${item.bgAccent} blur-[120px] rounded-full pointer-events-none -z-10`} />
 
                 {/* Text Content */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -112,7 +113,7 @@ export function FeatureShowcaseSection() {
                       {item.title}
                     </h3>
                   </div>
-                  
+
                   <p className="text-xl leading-relaxed text-muted-foreground dark:text-slate-400">
                     {item.description}
                   </p>
@@ -121,7 +122,7 @@ export function FeatureShowcaseSection() {
                 </motion.div>
 
                 {/* Image Showcase */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9, rotateY: isEven ? -10 : 10 }}
                   whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -148,7 +149,7 @@ export function FeatureShowcaseSection() {
         </div>
 
       </SectionContainer>
-      
+
       {/* SVG Definitions for Icon Gradients */}
       <svg width="0" height="0" className="absolute">
         <defs>
