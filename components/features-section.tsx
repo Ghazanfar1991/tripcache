@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, FileSpreadsheet, Plane, Zap, Shield, Cloud } from "lucide-react"
+import { BellRing, FileSpreadsheet, Hotel, Mail, Plane, Shield, Zap } from "lucide-react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
@@ -10,43 +10,43 @@ const features = [
   {
     icon: Mail,
     title: "Email-to-Trip Magic",
-    description: "Forward emails, get trips. Our AI parses flight details instantly.",
+    description: "Forward booking emails and TripCache turns confirmations into organized trip drafts.",
     images: ["/app-screenshot-import.webp", "/app-screenshot-drafts.webp"],
     gradient: "from-cyan-500 via-blue-500 to-indigo-500",
   },
   {
-    icon: Plane,
-    title: "Visual Timeline",
-    description: "Your entire journey in one stunning, interactive timeline.",
-    images: ["/app-screenshot-trip-detail.webp"],
+    icon: Hotel,
+    title: "Add Everything",
+    description: "Keep flights, hotels, rental cars, transport, activities, tickets, restaurants, parking, notes, and custom items in one trip.",
+    images: ["/app-feature-add-everything.png"],
     gradient: "from-fuchsia-500 via-pink-500 to-rose-500",
+  },
+  {
+    icon: BellRing,
+    title: "Cancellation Reminders",
+    description: "Save free-cancellation deadlines and get reminded before hotels, cars, tours, or tickets become non-refundable.",
+    images: ["/app-feature-cancellation-reminder.png"],
+    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+  },
+  {
+    icon: Shield,
+    title: "Secure Document Vault",
+    description: "Store passports, boarding passes, tickets, visas, and confirmations with PIN-protected access.",
+    images: ["/app-feature-secure-documents.png"],
+    gradient: "from-orange-500 via-red-500 to-pink-500",
+  },
+  {
+    icon: Plane,
+    title: "Live Trip Tracking",
+    description: "Stay on top of every journey with flight status, live progress, and your travel details in one view.",
+    images: ["/app-screenshot-flight-detail.webp"],
+    gradient: "from-yellow-500 via-amber-500 to-orange-500",
   },
   {
     icon: FileSpreadsheet,
     title: "Smart Exports",
-    description: "Generate detailed CSV reports for expenses and tax purposes.",
+    description: "Generate detailed CSV reports for expenses, tax records, reimbursements, and travel reviews.",
     images: ["/app-screenshot-export.webp"],
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-  },
-  {
-    icon: Cloud,
-    title: "Document Hub",
-    description: "Secure offline access to all your travel documents.",
-    images: ["/app-screenshot-documents.webp"],
-    gradient: "from-orange-500 via-red-500 to-pink-500",
-  },
-  {
-icon: Zap,
-title: "Live Trip Tracking",
-description: "Stay on top of every journey with real-time flight status, live progress, and all your travel details in one view.",
-images: ["/app-screenshot-flight-detail.webp"],
-gradient: "from-yellow-500 via-amber-500 to-orange-500",
-  },
-  {
-    icon: Shield,
-    title: "Travel History",
-description: "Your complete travel history, beautifully organized and easy to explore.",
-    images: ["/app-screenshot-history.webp"],
     gradient: "from-indigo-500 via-purple-500 to-fuchsia-500",
   },
 ]
@@ -54,9 +54,11 @@ description: "Your complete travel history, beautifully organized and easy to ex
 const mobileScreens = [
   { src: "/app-screenshot-import.webp", alt: "Import preview" },
   { src: "/app-screenshot-trip-detail.webp", alt: "Trip overview" },
+  { src: "/app-feature-add-everything.png", alt: "Add everything to trip" },
+  { src: "/app-feature-cancellation-reminder.png", alt: "Cancellation reminder" },
   { src: "/app-screenshot-flight-detail.webp", alt: "Flight detail" },
   { src: "/app-screenshot-home.webp", alt: "Dashboard" },
-  { src: "/app-screenshot-documents.webp", alt: "Documents hub" },
+  { src: "/app-feature-secure-documents.png", alt: "Secure documents hub" },
   { src: "/app-screenshot-history.webp", alt: "Travel history" },
   { src: "/app-screenshot-export.webp", alt: "Export report" },
 ]
@@ -164,7 +166,7 @@ export function FeaturesSection() {
             transition={{ delay: 0.2 }}
             className="text-xl text-muted-foreground dark:text-slate-300"
           >
-            Master your itineraries with pro-level tools wrapped in an elegant interface.
+            Master every booking in your itinerary, from flights and stays to cancellation deadlines and secure documents.
           </motion.p>
         </div>
 

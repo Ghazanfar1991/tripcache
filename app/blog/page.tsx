@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { BlogCardPremium } from "@/components/blog-card-premium"
 import { Newspaper, Search, ArrowLeft } from "lucide-react"
@@ -10,10 +9,14 @@ import { SectionContainer } from "@/components/section-container"
 export const metadata: Metadata = {
   title: "Travel Tips & Guides Blog",
   description:
-    "Expert travel tips, itinerary management guides, and insights on organizing your trips. Learn about TripCase alternatives and modern travel planning.",
+    "Travel itinerary, document organization, booking cancellation reminder, and trip planning guides for modern travelers using TripCache.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "TripCache Blog - Travel Tips & Guides",
-    description: "Expert travel tips and itinerary management guides",
+    description: "Expert travel tips, booking reminder workflows, and itinerary management guides.",
+    url: "https://trip-cache.com/blog",
     type: "website",
   },
 }
@@ -24,8 +27,6 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen">
-      <Navigation />
-
       {/* Hero Section - Enhanced */}
       <section className="relative pt-20 pb-12 lg:pt-28 lg:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-purple-500/5 to-background" />

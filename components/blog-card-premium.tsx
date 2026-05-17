@@ -7,6 +7,11 @@ import { motion } from "framer-motion"
 import { Calendar, Clock, ArrowRight, TrendingUp } from "lucide-react"
 
 export function BlogCardPremium({ post, featured = false }: { post: BlogSummary; featured?: boolean }) {
+    const displayDate = new Date(post.updatedAt ?? post.date).toLocaleDateString("en-US", {
+        month: "short",
+        year: "numeric",
+    })
+
     if (featured) {
         return (
             <Link href={`/blog/${post.slug}`}>
@@ -46,11 +51,7 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
                                 <div className="flex items-center gap-1.5">
                                     <Calendar className="h-4 w-4" />
                                     <span>
-                                        {new Date(post.date).toLocaleDateString("en-US", {
-                                            month: "short",
-                                            day: "numeric",
-                                            year: "numeric",
-                                        })}
+                                        Updated {displayDate}
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-1.5">
@@ -113,11 +114,7 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
                         <div className="flex items-center gap-1.5">
                             <Calendar className="h-3.5 w-3.5" />
                             <span>
-                                {new Date(post.date).toLocaleDateString("en-US", {
-                                    month: "short",
-                                    day: "numeric",
-                                    year: "numeric",
-                                })}
+                                Updated {displayDate}
                             </span>
                         </div>
                         <div className="flex items-center gap-1.5">

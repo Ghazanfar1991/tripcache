@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Image from "next/image"
@@ -31,17 +30,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { metadata } = post
   const description = metadata.description || metadata.excerpt
   const ogImage = `${BASE_URL}${metadata.image}`
+  const modifiedDate = metadata.updatedAt ?? metadata.date
 
   return {
     title: metadata.title,
     description,
     keywords: metadata.keywords,
     authors: [{ name: metadata.author }],
+    alternates: {
+      canonical: `/blog/${metadata.slug}`,
+    },
     openGraph: {
       title: metadata.title,
       description,
+      url: `${BASE_URL}/blog/${metadata.slug}`,
       type: "article",
       publishedTime: metadata.date,
+      modifiedTime: modifiedDate,
       authors: [metadata.author],
       images: [
         {
@@ -71,6 +76,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const { metadata, Content } = post
   const shareUrl = `${BASE_URL}/blog/${slug}`
+  const modifiedDate = metadata.updatedAt ?? metadata.date
+  const displayDate = new Date(modifiedDate).toLocaleDateString("en-US", { month: "long", year: "numeric" })
 
   // Get related posts (simple: just get 3 other posts)
   const allPosts = getBlogSummaries()
@@ -88,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             headline: metadata.title,
             image: `${BASE_URL}${metadata.image}`,
             datePublished: metadata.date,
-            dateModified: metadata.date,
+            dateModified: modifiedDate,
             author: {
               "@type": "Person",
               name: metadata.author,
@@ -98,7 +105,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               name: "TripCache",
               logo: {
                 "@type": "ImageObject",
-                url: `${BASE_URL}/app-icon.webp`,
+                url: `${BASE_URL}/app-icon.png`,
               },
             },
             description: metadata.description || metadata.excerpt,
@@ -112,7 +119,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
 
       <ReadingProgress />
-      <Navigation />
 
       {/* Hero Image */}
       <SectionContainer>
@@ -171,7 +177,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
-                    <span>{new Date(metadata.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+                    <span>Updated {displayDate}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="h-4 w-4" />

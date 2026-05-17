@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "David Park",
   readTime: "8 min read",
   category: "Comparison",
-  image: "/blog-app-comparison.webp",
+  image: "/app-screen-live-updates.webp",
   keywords: [
     "Flighty alternative",
     "Flighty vs TripCache",

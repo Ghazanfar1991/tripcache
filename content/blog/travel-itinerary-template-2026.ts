@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Emma Rodriguez",
   readTime: "9 min read",
   category: "Guide",
-  image: "/blog-document-organization.webp",
+  image: "/app-screenshot-trip-detail.webp",
   keywords: [
     "travel itinerary template",
     "trip planner template free",

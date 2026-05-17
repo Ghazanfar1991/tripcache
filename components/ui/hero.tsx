@@ -15,6 +15,48 @@ import {
 
 const slides = [
   {
+    src: "/app-feature-add-everything.png",
+    alt: "TripCache add flights hotels cars activities and tickets screen",
+    leftBadge: {
+      label: "Trip items",
+      title: "Add every booking",
+      description: "Hotels, cars, tickets, notes, and more.",
+    },
+    rightBadge: {
+      label: "One itinerary",
+      title: "Everything stays together",
+      description: "A complete trip view beyond flights.",
+    },
+  },
+  {
+    src: "/app-feature-cancellation-reminder.png",
+    alt: "TripCache cancellation reminder screen",
+    leftBadge: {
+      label: "Reminders",
+      title: "Protect free cancellation",
+      description: "Deadlines stay visible before they pass.",
+    },
+    rightBadge: {
+      label: "Flexible bookings",
+      title: "Cancel in time",
+      description: "Get reminded before hotel or car windows close.",
+    },
+  },
+  {
+    src: "/app-feature-secure-documents.png",
+    alt: "TripCache secure travel document vault screen",
+    leftBadge: {
+      label: "Documents",
+      title: "Secure travel vault",
+      description: "Passports, tickets, and passes stay organized.",
+    },
+    rightBadge: {
+      label: "PIN access",
+      title: "Private by design",
+      description: "Sensitive travel files stay easy to reach.",
+    },
+  },
+  {
     src: "/app-screenshot-home.webp",
     alt: "TripCache home screen",
     leftBadge: {
@@ -73,9 +115,9 @@ const slides = [
 ]
 
 const points = [
-  "Email-to-trip automation",
-  "Live flight updates",
-  "Offline document access",
+  "Flights, hotels, cars, tickets",
+  "Free-cancellation reminders",
+  "Secure document vault",
 ]
 
 export default function Hero() {
@@ -161,8 +203,8 @@ export default function Hero() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg px-2 text-base leading-relaxed text-muted-foreground dark:text-gray-200 sm:px-0 sm:text-lg md:mx-0">
-              The best TripCase alternative. Forward booking emails, automatically organize flight itineraries, and
-              export travel expenses.
+              Organize flights, hotels, rental cars, tickets, documents, and free-cancellation reminders in one
+              travel itinerary app.
             </p>
 
             <motion.div

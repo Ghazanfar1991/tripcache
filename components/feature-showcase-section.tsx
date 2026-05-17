@@ -1,6 +1,6 @@
 "use client"
 
-import { Bell, Map, Clock } from "lucide-react"
+import { Bell, CalendarClock, FileLock2, Grid2x2Plus } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { SectionContainer } from "./section-container"
@@ -13,35 +13,45 @@ import {
 
 const showcases = [
   {
-    id: "live-updates",
-    icon: Bell,
-    title: "Real-time Flight Tracking",
-    subtitle: "Stay Ahead of Schedule",
-    description: "Get instant push notifications for gate changes, delays, and boarding times. TripCache monitors your flights 24/7 so you never have to refresh a page again.",
-    image: "/app-screenshot-flight-detail.webp",
+    id: "add-everything",
+    icon: Grid2x2Plus,
+    title: "Add More Than Flights",
+    subtitle: "Complete Trip Building",
+    description: "Build a real itinerary with flights, hotels, rental cars, transport, activities, tickets, restaurants, meetings, parking, documents, notes, and custom items.",
+    image: "/app-feature-add-everything.png",
     color: "from-amber-400 to-orange-500",
     bgAccent: "bg-orange-500/10",
   },
   {
-    id: "trip-progress",
-    icon: Clock,
-    title: "Live Trip Progress",
-    subtitle: "Your Journey at a Glance",
-    description: "Beautiful live tracking shows exactly where you are in your journey. See precise flight progress, layover times, and what's coming up next—all from your home screen.",
-    image: "/app-screenshot-home-flight-progress.webp",
+    id: "cancellation-reminders",
+    icon: CalendarClock,
+    title: "Never Miss Free Cancellation",
+    subtitle: "Booking Deadline Alerts",
+    description: "Set cancellation deadlines for hotels, rental cars, tours, tickets, and other reservations. Choose reminders two days before, one day before, day of deadline, or a custom time.",
+    image: "/app-feature-cancellation-reminder.png",
     color: "from-cyan-400 to-blue-500",
     bgAccent: "bg-cyan-500/10",
   },
   {
-    id: "flight-details",
-    icon: Map,
-    title: "Every Detail Organized",
-    subtitle: "No More Digging Through Emails",
-    description: "Terminal maps, confirmation numbers, baggage allowances, and seat assignments are intelligently parsed and presented exactly when you need them.",
-    image: "/app-screenshot-trip-detail.webp",
+    id: "secure-documents",
+    icon: FileLock2,
+    title: "Securely Save Your Documents",
+    subtitle: "Travel Vault",
+    description: "Keep passports, boarding passes, flight tickets, visas, confirmations, and travel documents in one protected place connected to your trips.",
+    image: "/app-feature-secure-documents.png",
     color: "from-purple-400 to-fuchsia-500",
     bgAccent: "bg-purple-500/10",
-  }
+  },
+  {
+    id: "live-updates",
+    icon: Bell,
+    title: "Real-time Flight Tracking",
+    subtitle: "Stay Ahead of Schedule",
+    description: "Get instant push notifications for gate changes, delays, and boarding times. TripCache monitors your flights so you do not have to refresh a page again.",
+    image: "/app-screenshot-flight-detail.webp",
+    color: "from-amber-400 to-orange-500",
+    bgAccent: "bg-orange-500/10",
+  },
 ]
 
 export function FeatureShowcaseSection() {
@@ -66,7 +76,7 @@ export function FeatureShowcaseSection() {
             transition={{ delay: 0.1 }}
             className="text-xl leading-relaxed text-muted-foreground dark:text-slate-400"
           >
-            Dive deeper into the details that make TripCache the ultimate travel companion.
+            Dive deeper into the trip details that usually get lost across inboxes, screenshots, and booking apps.
           </motion.p>
         </div>
 

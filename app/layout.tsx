@@ -12,15 +12,16 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" })
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE"
+const SITE_URL = "https://trip-cache.com"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://trip-cache.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "TripCache - Smart Flight & Trip Itinerary Manager | TripCase Alternative",
+    default: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
     template: "%s | TripCache",
   },
   description:
-    "Free travel itinerary manager & best TripCase alternative 2025. Organize trips, track flights, store documents. Start free, upgrade to Pro ($9.99/month) for email-to-trip automation & flight updates.",
+    "Organize flights, hotels, rental cars, tickets, travel documents, and free-cancellation reminders in one trip itinerary app. Start free with TripCache.",
   keywords: [
     "TripCase alternative",
     "free travel itinerary manager",
@@ -34,6 +35,9 @@ export const metadata: Metadata = {
     "automatic flight tracking",
     "email flight parser",
     "travel itinerary app",
+    "booking cancellation reminder",
+    "hotel cancellation reminder app",
+    "travel document organizer app",
     "trip management software",
     "digital nomad tools",
     "flight booking organizer",
@@ -49,14 +53,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://trip-cache.com",
-    title: "TripCache - Smart Flight & Trip Itinerary Manager",
+    url: SITE_URL,
+    title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
     description:
-      "The best TripCase alternative. Manage travel itineraries with email automation and CSV reports. Free forever.",
+      "Manage flights, stays, rental cars, tickets, documents, reminders, and email-to-trip automation in one travel app.",
     siteName: "TripCache",
     images: [
       {
-        url: "/app-screenshot-home.jpg",
+        url: "/app-feature-add-everything.png",
         width: 1200,
         height: 630,
         alt: "TripCache App Dashboard",
@@ -65,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TripCache - Smart Flight & Trip Itinerary Manager",
-    description: "The best TripCase alternative. Manage travel itineraries with email automation and CSV reports.",
-    images: ["/app-screenshot-home.jpg"],
+    title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
+    description: "Organize flights, hotels, cars, tickets, documents, and cancellation reminders in one travel app.",
+    images: ["/app-feature-add-everything.png"],
     creator: "@tripcache",
   },
   icons: {

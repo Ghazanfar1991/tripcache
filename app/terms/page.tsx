@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { SectionContainer } from "@/components/section-container"
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
@@ -8,6 +7,9 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "TripCache Terms of Service outlining acceptable use, payments, and legal responsibilities.",
+  alternates: {
+    canonical: "/terms",
+  },
 }
 
 const terms = [
@@ -57,7 +59,6 @@ const terms = [
 export default function TermsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
-      <Navigation />
       <SectionContainer className="space-y-14 pb-16 pt-24">
         <div className="flex justify-center lg:justify-start">
           <Link

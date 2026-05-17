@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { SectionContainer } from "@/components/section-container"
-import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
@@ -8,6 +7,9 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Understand how TripCache collects, stores, and protects your travel data.",
+  alternates: {
+    canonical: "/privacy",
+  },
 }
 
 const sections = [
@@ -50,7 +52,6 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
-      <Navigation />
       <SectionContainer className="space-y-16 pb-16 pt-24">
         <div className="flex justify-center lg:justify-start">
           <Link

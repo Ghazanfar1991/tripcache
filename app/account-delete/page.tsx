@@ -2,13 +2,15 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { ArrowLeft, Mail, Smartphone, Trash2 } from "lucide-react"
 import { Footer } from "@/components/footer"
-import { Navigation } from "@/components/navigation"
 import { SectionContainer } from "@/components/section-container"
 
 export const metadata: Metadata = {
   title: "Delete Your Account",
   description:
     "Learn how to delete your TripCache account directly from the app or contact support for account deletion help.",
+  alternates: {
+    canonical: "/account-delete",
+  },
 }
 
 const steps = [
@@ -20,7 +22,6 @@ const steps = [
 export default function AccountDeletePage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
-      <Navigation />
       <SectionContainer className="space-y-14 pb-16 pt-24">
         <div className="flex justify-center lg:justify-start">
           <Link

@@ -6,6 +6,7 @@ export interface BlogFrontmatter {
   excerpt: string
   description: string
   date: string
+  updatedAt?: string
   author: string
   readTime: string
   category: string

@@ -18,8 +18,20 @@ import * as BusinessTravelManagement from "@/content/blog/business-travel-manage
 import * as TravelItineraryTemplate from "@/content/blog/travel-itinerary-template-2026"
 import * as FlightyComparison from "@/content/blog/flighty-vs-tripcache-2026"
 import * as GoogleTravelAlternative from "@/content/blog/google-travel-alternative-2026"
+import * as CancellationReminder from "@/content/blog/free-cancellation-reminder-travel-bookings-2026"
+import * as TravelBookingOrganizer from "@/content/blog/travel-booking-organizer-app-2026"
+import * as TravelDocumentOrganizer from "@/content/blog/best-travel-document-organizer-app-2026"
+import * as ConfirmationEmailOrganizer from "@/content/blog/organize-travel-confirmation-emails-2026"
+import * as BusinessTravelExpenseReporting from "@/content/blog/business-travel-expense-reporting-app-2026"
+import * as TripitAlternativeReminders from "@/content/blog/tripit-alternative-cancellation-reminders-documents-2026"
 
 const rawPosts = [
+  TravelBookingOrganizer,
+  TravelDocumentOrganizer,
+  ConfirmationEmailOrganizer,
+  BusinessTravelExpenseReporting,
+  TripitAlternativeReminders,
+  CancellationReminder,
   AiTripPlanner,
   BusinessTravelManagement,
   TravelItineraryTemplate,

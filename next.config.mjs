@@ -14,6 +14,41 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // Performance headers
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.trip-cache.com',
+          },
+        ],
+        destination: 'https://trip-cache.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-travel-apps-2026',
+        destination: '/blog/best-travel-apps-2025',
+        permanent: true,
+      },
+      {
+        source: '/blog/tripcase-shutdown-legacy-migration',
+        destination: '/blog/tripcase-shutdown-what-now',
+        permanent: true,
+      },
+      {
+        source: '/blog/tripit-vs-tripcache-comparison-2026',
+        destination: '/blog/tripit-vs-tripcache-comparison-2025',
+        permanent: true,
+      },
+      {
+        source: '/blog/travel-document-organization-guide-2026',
+        destination: '/blog/travel-document-organization-guide-2025',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
