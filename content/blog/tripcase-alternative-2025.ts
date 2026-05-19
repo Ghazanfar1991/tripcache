@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   author: "Sarah Johnson",
   readTime: "8 min read",
   category: "Guide",
-  image: "/blog-tripcase-alternative.webp",
+  image: "/blog_tripcase_alternative_1763732127838.webp",
   keywords: [
     "TripCase alternative",
     "TripCase shutdown",

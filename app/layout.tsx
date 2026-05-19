@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     siteName: "TripCache",
     images: [
       {
-        url: "/app-feature-add-everything.png",
+        url: "/app-feature-add-everything.webp",
         width: 1200,
         height: 630,
         alt: "TripCache App Dashboard",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
     description: "Organize flights, hotels, cars, tickets, documents, and cancellation reminders in one travel app.",
-    images: ["/app-feature-add-everything.png"],
+    images: ["/app-feature-add-everything.webp"],
     creator: "@tripcache",
   },
   icons: {

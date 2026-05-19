@@ -11,7 +11,7 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Team",
   readTime: "10 min read",
   category: "Business Travel",
-  image: "/app-screenshot-export.webp",
+  image: "/blog-cover-business-expense-reporting.webp",
   keywords: [
     "business travel expense reporting app",
     "travel expense report app",

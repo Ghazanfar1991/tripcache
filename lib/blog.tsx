@@ -24,8 +24,16 @@ import * as TravelDocumentOrganizer from "@/content/blog/best-travel-document-or
 import * as ConfirmationEmailOrganizer from "@/content/blog/organize-travel-confirmation-emails-2026"
 import * as BusinessTravelExpenseReporting from "@/content/blog/business-travel-expense-reporting-app-2026"
 import * as TripitAlternativeReminders from "@/content/blog/tripit-alternative-cancellation-reminders-documents-2026"
+import * as HotelCancellationReminder from "@/content/blog/hotel-cancellation-reminder-app-2026"
+import * as RentalCarCancellationReminder from "@/content/blog/rental-car-cancellation-reminder-app-2026"
+import * as TripExpenseManagement from "@/content/blog/trip-expense-management-app-2026"
+import * as TripMapItineraryPlanner from "@/content/blog/trip-map-itinerary-planner-app-2026"
 
 const rawPosts = [
+  HotelCancellationReminder,
+  RentalCarCancellationReminder,
+  TripExpenseManagement,
+  TripMapItineraryPlanner,
   TravelBookingOrganizer,
   TravelDocumentOrganizer,
   ConfirmationEmailOrganizer,

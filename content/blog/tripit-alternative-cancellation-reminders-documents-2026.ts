@@ -11,7 +11,7 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Team",
   readTime: "9 min read",
   category: "Comparison",
-  image: "/app-screenshot-documents.webp",
+  image: "/blog-cover-tripit-alternative-documents-reminders.webp",
   keywords: [
     "TripIt alternative",
     "TripIt alternative with documents",

@@ -1,6 +1,6 @@
 "use client"
 
-import { Bell, CalendarClock, FileLock2, Grid2x2Plus } from "lucide-react"
+import { Bell, CalendarClock, FileLock2, Grid2x2Plus, MapPinned, ReceiptText } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { SectionContainer } from "./section-container"
@@ -41,6 +41,26 @@ const showcases = [
     image: "/app-feature-secure-documents.webp",
     color: "from-purple-400 to-fuchsia-500",
     bgAccent: "bg-purple-500/10",
+  },
+  {
+    id: "trip-map",
+    icon: MapPinned,
+    title: "Navigate the Trip Visually",
+    subtitle: "Map View",
+    description: "Use the trip map to understand where your stays, activities, and travel details sit in relation to each other before you arrive.",
+    image: "/app-screen-trip-map.webp",
+    color: "from-sky-400 to-cyan-500",
+    bgAccent: "bg-sky-500/10",
+  },
+  {
+    id: "expense-management",
+    icon: ReceiptText,
+    title: "Keep Expenses Under Control",
+    subtitle: "Receipts and Costs",
+    description: "Track travel spending, attach receipts, and keep expense context tied to the trip instead of scattered across email and notes.",
+    image: "/app-screen-expense-management.webp",
+    color: "from-emerald-400 to-teal-500",
+    bgAccent: "bg-emerald-500/10",
   },
   {
     id: "live-updates",

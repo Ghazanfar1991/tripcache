@@ -1,6 +1,6 @@
 "use client"
 
-import { BellRing, FileSpreadsheet, Hotel, Mail, Plane, Shield, Zap } from "lucide-react"
+import { BellRing, FileSpreadsheet, Hotel, Mail, MapPinned, Plane, ReceiptText, Shield, Zap } from "lucide-react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
@@ -43,25 +43,42 @@ const features = [
     gradient: "from-yellow-500 via-amber-500 to-orange-500",
   },
   {
+    icon: MapPinned,
+    title: "Trip Map View",
+    description: "Visualize your destination, stays, activities, and travel context on a map built for trip days.",
+    images: ["/app-screen-trip-map.webp"],
+    gradient: "from-blue-500 via-cyan-500 to-teal-500",
+  },
+  {
+    icon: ReceiptText,
+    title: "Expense Management",
+    description: "Track trip costs, save receipts, and keep cleaner records for reimbursement or personal budgets.",
+    images: ["/app-screen-expense-management.webp"],
+    gradient: "from-indigo-500 via-purple-500 to-fuchsia-500",
+  },
+  {
     icon: FileSpreadsheet,
     title: "Smart Exports",
-    description: "Generate detailed CSV reports for expenses, tax records, reimbursements, and travel reviews.",
+    description: "Generate detailed CSV reports for tax records, reimbursements, and travel reviews.",
     images: ["/app-screenshot-export.webp"],
-    gradient: "from-indigo-500 via-purple-500 to-fuchsia-500",
+    gradient: "from-sky-500 via-blue-500 to-indigo-500",
   },
 ]
 
 const mobileScreens = [
-  { src: "/app-screenshot-import.webp", alt: "Import preview" },
-  { src: "/app-screenshot-trip-detail.webp", alt: "Trip overview" },
+  { src: "/app-screen-expense-management.webp", alt: "Expense management" },
   { src: "/app-feature-add-everything.webp", alt: "Add everything to trip" },
-  { src: "/app-feature-cancellation-reminder.webp", alt: "Cancellation reminder" },
-  { src: "/app-screenshot-flight-detail.webp", alt: "Flight detail" },
-  { src: "/app-screenshot-home.webp", alt: "Dashboard" },
-  { src: "/app-feature-secure-documents.webp", alt: "Secure documents hub" },
-  { src: "/app-screenshot-history.webp", alt: "Travel history" },
   { src: "/app-screenshot-export.webp", alt: "Export report" },
+  { src: "/app-feature-secure-documents.webp", alt: "Secure documents hub" },
+  { src: "/app-screenshot-trip-detail.webp", alt: "Trip overview" },
+  { src: "/app-screenshot-home.webp", alt: "Dashboard" },
+  { src: "/app-screenshot-flight-detail.webp", alt: "Flight detail" },
+  { src: "/app-screenshot-history.webp", alt: "Travel history" },
+  { src: "/app-screenshot-import.webp", alt: "Import preview" },
+  { src: "/app-screen-trip-map.webp", alt: "Trip map" },
+  { src: "/app-feature-cancellation-reminder.webp", alt: "Cancellation reminder" },
 ]
+
 
 function PhoneStack() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -166,7 +183,7 @@ export function FeaturesSection() {
             transition={{ delay: 0.2 }}
             className="text-xl text-muted-foreground dark:text-slate-300"
           >
-            Master every booking in your itinerary, from flights and stays to cancellation deadlines and secure documents.
+            Master every booking in your itinerary, from flights and stays to maps, expenses, cancellation deadlines, and secure documents.
           </motion.p>
         </div>
 

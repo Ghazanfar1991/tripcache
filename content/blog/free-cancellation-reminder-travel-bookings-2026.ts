@@ -11,7 +11,7 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Team",
   readTime: "9 min read",
   category: "Guide",
-  image: "/app-feature-cancellation-reminder.png",
+  image: "/blog-cover-free-cancellation-reminders.webp",
   keywords: [
     "free cancellation reminder app",
     "hotel cancellation reminder",

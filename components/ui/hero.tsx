@@ -15,7 +15,7 @@ import {
 
 const slides = [
   {
-    src: "/app-feature-add-everything.png",
+    src: "/app-feature-add-everything.webp",
     alt: "TripCache add flights hotels cars activities and tickets screen",
     leftBadge: {
       label: "Trip items",
@@ -29,7 +29,7 @@ const slides = [
     },
   },
   {
-    src: "/app-feature-cancellation-reminder.png",
+    src: "/app-feature-cancellation-reminder.webp",
     alt: "TripCache cancellation reminder screen",
     leftBadge: {
       label: "Reminders",
@@ -43,7 +43,7 @@ const slides = [
     },
   },
   {
-    src: "/app-feature-secure-documents.png",
+    src: "/app-feature-secure-documents.webp",
     alt: "TripCache secure travel document vault screen",
     leftBadge: {
       label: "Documents",
@@ -112,11 +112,40 @@ const slides = [
       description: "A cleaner record helps with reimbursement.",
     },
   },
+  {
+    src: "/app-screen-trip-map.webp",
+    alt: "TripCache trip map screen",
+    leftBadge: {
+      label: "Trip map",
+      title: "See the journey visually",
+      description: "Destinations and trip context stay easy to scan.",
+    },
+    rightBadge: {
+      label: "Location aware",
+      title: "Know what is nearby",
+      description: "Map-based context helps on travel days.",
+    },
+  },
+  {
+    src: "/app-screen-expense-management.webp",
+    alt: "TripCache expense management screen",
+    leftBadge: {
+      label: "Expenses",
+      title: "Track trip spending",
+      description: "Receipts and costs stay tied to each trip.",
+    },
+    rightBadge: {
+      label: "Reports",
+      title: "Cleaner reimbursements",
+      description: "Expense records are easier to review.",
+    },
+  },
 ]
 
 const points = [
   "Flights, hotels, cars, tickets",
   "Free-cancellation reminders",
+  "Trip maps and expenses",
   "Secure document vault",
 ]
 

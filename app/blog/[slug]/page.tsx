@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <ReadingProgress />
 
       {/* Hero Image */}
-      <SectionContainer>
+      <SectionContainer className="pt-24 lg:pt-28">
         <div className="relative h-[50vh] lg:h-[60vh] overflow-hidden rounded-[2rem]">
           <Image
             src={metadata.image || "/placeholder.svg"}

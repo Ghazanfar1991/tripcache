@@ -11,7 +11,7 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Team",
   readTime: "9 min read",
   category: "Guide",
-  image: "/app-feature-secure-documents.png",
+  image: "/blog-cover-travel-document-organizer.webp",
   keywords: [
     "travel document organizer app",
     "passport organizer app",
