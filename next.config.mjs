@@ -25,7 +25,7 @@ const nextConfig = {
           },
         ],
         destination: 'https://trip-cache.com/:path*',
-        permanent: true,
+        statusCode: 308,
       },
       {
         source: '/blog/best-travel-apps-2026',
