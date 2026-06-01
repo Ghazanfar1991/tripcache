@@ -47,6 +47,26 @@ const nextConfig = {
         destination: '/blog/travel-document-organization-guide-2025',
         permanent: true,
       },
+      {
+        source: '/blog/tripit-alternatives',
+        destination: '/blog/best-tripit-alternatives-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-tripit-alternatives',
+        destination: '/blog/best-tripit-alternatives-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-travel-organizer',
+        destination: '/blog/ai-travel-organizer-app-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/email-to-itinerary-app',
+        destination: '/blog/ai-travel-organizer-app-2026',
+        permanent: true,
+      },
     ]
   },
   async headers() {

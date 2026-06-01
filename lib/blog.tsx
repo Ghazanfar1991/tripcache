@@ -28,8 +28,12 @@ import * as HotelCancellationReminder from "@/content/blog/hotel-cancellation-re
 import * as RentalCarCancellationReminder from "@/content/blog/rental-car-cancellation-reminder-app-2026"
 import * as TripExpenseManagement from "@/content/blog/trip-expense-management-app-2026"
 import * as TripMapItineraryPlanner from "@/content/blog/trip-map-itinerary-planner-app-2026"
+import * as BestTripitAlternatives from "@/content/blog/best-tripit-alternatives-2026"
+import * as AiTravelOrganizer from "@/content/blog/ai-travel-organizer-app-2026"
 
 const rawPosts = [
+  BestTripitAlternatives,
+  AiTravelOrganizer,
   HotelCancellationReminder,
   RentalCarCancellationReminder,
   TripExpenseManagement,
