@@ -12,6 +12,7 @@ const features = [
     title: "Email-to-Trip Magic",
     description: "Forward booking emails and TripCache turns confirmations into organized trip drafts.",
     images: ["/app-screenshot-import.webp", "/app-screenshot-drafts.webp"],
+    imageAlts: ["TripCache email import screen for booking confirmations", "TripCache draft itinerary review screen"],
     gradient: "from-cyan-500 via-blue-500 to-indigo-500",
   },
   {
@@ -19,6 +20,7 @@ const features = [
     title: "Add Everything",
     description: "Keep flights, hotels, rental cars, transport, activities, tickets, restaurants, parking, notes, and custom items in one trip.",
     images: ["/app-feature-add-everything.webp"],
+    imageAlts: ["TripCache screen for adding flights hotels rental cars tickets notes and custom trip items"],
     gradient: "from-fuchsia-500 via-pink-500 to-rose-500",
   },
   {
@@ -26,6 +28,7 @@ const features = [
     title: "Cancellation Reminders",
     description: "Save free-cancellation deadlines and get reminded before hotels, cars, tours, or tickets become non-refundable.",
     images: ["/app-feature-cancellation-reminder.webp"],
+    imageAlts: ["TripCache free cancellation reminder screen for refundable travel bookings"],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
   },
   {
@@ -33,6 +36,7 @@ const features = [
     title: "Secure Document Vault",
     description: "Store passports, boarding passes, tickets, visas, and confirmations with PIN-protected access.",
     images: ["/app-feature-secure-documents.webp"],
+    imageAlts: ["TripCache secure travel document vault for passports boarding passes tickets and visas"],
     gradient: "from-orange-500 via-red-500 to-pink-500",
   },
   {
@@ -40,6 +44,7 @@ const features = [
     title: "Live Trip Tracking",
     description: "Stay on top of every journey with flight status, live progress, and your travel details in one view.",
     images: ["/app-screenshot-flight-detail.webp"],
+    imageAlts: ["TripCache live flight tracking screen with status and travel details"],
     gradient: "from-yellow-500 via-amber-500 to-orange-500",
   },
   {
@@ -47,6 +52,7 @@ const features = [
     title: "Trip Map View",
     description: "Visualize your destination, stays, activities, and travel context on a map built for trip days.",
     images: ["/app-screen-trip-map.webp"],
+    imageAlts: ["TripCache trip map screen showing destinations stays and activities"],
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
   },
   {
@@ -54,6 +60,7 @@ const features = [
     title: "Expense Management",
     description: "Track trip costs, save receipts, and keep cleaner records for reimbursement or personal budgets.",
     images: ["/app-screen-expense-management.webp"],
+    imageAlts: ["TripCache expense management screen for receipts costs and travel budgets"],
     gradient: "from-indigo-500 via-purple-500 to-fuchsia-500",
   },
   {
@@ -61,6 +68,7 @@ const features = [
     title: "Smart Exports",
     description: "Generate detailed CSV reports for tax records, reimbursements, and travel reviews.",
     images: ["/app-screenshot-export.webp"],
+    imageAlts: ["TripCache CSV export screen for travel expense reports"],
     gradient: "from-sky-500 via-blue-500 to-indigo-500",
   },
 ]
@@ -209,14 +217,14 @@ export function FeaturesSection() {
                   <div className="relative w-full h-full flex justify-center items-start pt-6 perspective-1000">
                     <Image
                       src={feature.images[0]}
-                      alt="Screenshot"
+                      alt={feature.imageAlts[0]}
                       width={150}
                       height={325}
                       className="absolute left-2 top-4 rotate-[-4deg] origin-bottom drop-shadow-2xl transition-transform duration-700 group-hover:rotate-[-4deg] group-hover:-translate-y-4"
                     />
                     <Image
                       src={feature.images[1]}
-                      alt="Screenshot"
+                      alt={feature.imageAlts[1]}
                       width={150}
                       height={325}
                       className="absolute right-2 top-4 rotate-[4deg] origin-bottom drop-shadow-2xl transition-transform duration-700 group-hover:rotate-[4deg] group-hover:-translate-y-4 z-10"
@@ -226,7 +234,7 @@ export function FeaturesSection() {
                   <div className="relative w-full h-full flex justify-center items-start pt-6">
                     <Image
                       src={feature.images[0]}
-                      alt="Screenshot"
+                      alt={feature.imageAlts[0]}
                       width={160}
                       height={346}
                       className="absolute top-4 drop-shadow-[0_0_30px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:-translate-y-6"

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | TripCache",
   },
   description:
-    "Organize flights, hotels, rental cars, tickets, travel documents, and free-cancellation reminders in one trip itinerary app. Start free with TripCache.",
+    "Organize travel confirmation emails, flights, hotels, rental cars, tickets, secure documents, free-cancellation reminders, trip maps, and expenses in one itinerary app.",
   keywords: [
     "TripCase alternative",
     "free travel itinerary manager",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
     description:
-      "Manage flights, stays, rental cars, tickets, documents, reminders, and email-to-trip automation in one travel app.",
+      "Manage confirmation emails, flights, stays, rental cars, tickets, documents, reminders, maps, and expenses in one travel app.",
     siteName: "TripCache",
     images: [
       {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
-    description: "Organize flights, hotels, cars, tickets, documents, and cancellation reminders in one travel app.",
+    description: "Organize confirmation emails, trips, documents, flight updates, expenses, and cancellation reminders.",
     images: ["/app-feature-add-everything.webp"],
     creator: "@tripcache",
   },
@@ -115,7 +115,7 @@ export default function RootLayout({
         <Script
           id="organization-schema"
           type="application/ld+json"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -123,7 +123,8 @@ export default function RootLayout({
               name: "TripCache",
               url: "https://trip-cache.com",
               logo: "https://trip-cache.com/app-icon.png",
-              description: "Smart flight and trip itinerary manager",
+              description:
+                "TripCache helps travelers organize confirmation emails, itineraries, cancellation reminders, secure documents, maps, and expenses.",
               sameAs: [
                 "https://twitter.com/tripcache",
                 "https://github.com/tripcache",
@@ -133,21 +134,20 @@ export default function RootLayout({
           }}
         />
         <Script
-          id="webapp-schema"
+          id="website-schema"
           type="application/ld+json"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebApplication",
+              "@type": "WebSite",
               name: "TripCache",
               url: "https://trip-cache.com",
-              applicationCategory: "TravelApplication",
-              operatingSystem: "iOS, Android, Web",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
+              description:
+                "Travel organization guides and app information for TripCache, a travel itinerary app for confirmation emails, documents, reminders, maps, and expenses.",
+              publisher: {
+                "@type": "Organization",
+                name: "TripCache",
               },
             }),
           }}
