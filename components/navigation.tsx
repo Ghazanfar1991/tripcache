@@ -1,42 +1,42 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { useState, useEffect } from "react"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { usePathname } from "next/navigation"
-import { GetStartedModal } from "./get-started-modal"
-import { Menu, X } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export function Navigation() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
-  const isHomePage = pathname === "/"
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
-  const featuresHref = isHomePage ? "#features" : "/#features"
-  const testimonialsHref = isHomePage ? "#testimonials" : "/#testimonials"
+  const featuresHref = isHomePage ? "#features" : "/#features";
+  const testimonialsHref = isHomePage ? "#testimonials" : "/#testimonials";
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     // Close mobile menu on route change to avoid stale open state
-    setMobileMenuOpen(false)
-  }, [pathname])
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 px-4">
       <nav
-        className={`relative w-full max-w-6xl transition-all duration-500 rounded-2xl ${scrolled
-          ? "bg-background/90 backdrop-blur-xl border border-primary/10 shadow-xl shadow-primary/5"
-          : "bg-background/70 backdrop-blur-lg border border-border/20"
-          }`}
+        className={`relative w-full max-w-6xl transition-all duration-500 rounded-2xl ${
+          scrolled
+            ? "bg-background/90 backdrop-blur-xl border border-primary/10 shadow-xl shadow-primary/5"
+            : "bg-background/70 backdrop-blur-lg border border-border/20"
+        }`}
         style={{
           backdropFilter: "blur(24px) saturate(180%)",
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
@@ -99,20 +99,37 @@ export function Navigation() {
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle navigation menu"
               >
-                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {mobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
               </button>
               <ThemeToggle />
-              <GetStartedModal />
+              <Link
+                href="/download"
+                className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-3 py-1.5 text-xs font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:from-cyan-600 hover:to-blue-700 sm:px-4 sm:py-2 sm:text-sm"
+              >
+                Get Started
+              </Link>
             </div>
           </div>
           {/* Mobile menu */}
           <div
-            className={`md:hidden transition-all duration-200 origin-top ${mobileMenuOpen ? "opacity-100 scale-100" : "pointer-events-none opacity-0 scale-95"
-              }`}
+            className={`md:hidden transition-all duration-200 origin-top ${
+              mobileMenuOpen
+                ? "opacity-100 scale-100"
+                : "pointer-events-none opacity-0 scale-95"
+            }`}
           >
             <div className="absolute left-3 right-3 mt-2 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg shadow-primary/5">
               <div className="flex flex-col divide-y divide-border/60">
-                {[{ href: featuresHref, label: "Features" }, { href: testimonialsHref, label: "Testimonials" }, { href: "/pricing", label: "Pricing" }, { href: "/blog", label: "Blog" }].map((link) => (
+                {[
+                  { href: featuresHref, label: "Features" },
+                  { href: testimonialsHref, label: "Testimonials" },
+                  { href: "/pricing", label: "Pricing" },
+                  { href: "/blog", label: "Blog" },
+                ].map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -127,5 +144,5 @@ export function Navigation() {
         </div>
       </nav>
     </div>
-  )
+  );
 }

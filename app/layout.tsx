@@ -1,23 +1,23 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { ThemeProvider } from "@/components/theme-provider"
-import Script from "next/script"
-import { Navigation } from "@/components/navigation"
-import { Outfit } from "next/font/google"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
+import { Navigation } from "@/components/navigation";
+import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" })
-
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE"
-const SITE_URL = "https://trip-cache.com"
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GOOGLE_SITE_VERIFICATION =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ??
+  "PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE";
+const SITE_URL = "https://trip-cache.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
+    default:
+      "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
     template: "%s | TripCache",
   },
   description:
@@ -70,7 +70,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
-    description: "Organize confirmation emails, trips, documents, flight updates, expenses, and cancellation reminders.",
+    description:
+      "Organize confirmation emails, trips, documents, flight updates, expenses, and cancellation reminders.",
     images: ["/app-feature-add-everything.webp"],
     creator: "@tripcache",
   },
@@ -93,29 +94,20 @@ export const metadata: Metadata = {
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
   },
-  generator: 'v0.app'
-}
+  generator: "v0.app",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Resource Hints for Performance */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://vercel.live" />
-        <link rel="dns-prefetch" href="https://vercel.live" />
-
-        {/* Fallback preconnects */}
-
-        <Script
+        <script
           id="organization-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -133,10 +125,9 @@ export default function RootLayout({
             }),
           }}
         />
-        <Script
+        <script
           id="website-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -157,7 +148,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body suppressHydrationWarning className={`${outfit.variable} font-sans antialiased`}>
+      <body suppressHydrationWarning className="font-sans antialiased">
         <ThemeProvider defaultTheme="dark">
           <Navigation />
           {children}
@@ -184,5 +175,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

@@ -1,10 +1,6 @@
-"use client"
-
-import { useRef, useState, useEffect } from "react"
-import { Star, Quote } from "lucide-react"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { SectionContainer } from "./section-container"
+import { Star, Quote } from "lucide-react";
+import Image from "next/image";
+import { SectionContainer } from "./section-container";
 
 const testimonials = [
   {
@@ -49,13 +45,14 @@ const testimonials = [
     text: "We switched the entire team to TripCache and never looked back. The offline document vault has already saved us twice when traveling abroad.",
     rating: 5,
   },
-]
+];
 
 export function TestimonialsSection() {
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 lg:py-16">
+    <section
+      id="testimonials"
+      className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 lg:py-16"
+    >
       {/* Cinematic Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-[20%] w-[500px] h-[500px] bg-gradient-to-l from-indigo-600/10 to-transparent blur-[120px] rounded-full" />
@@ -65,91 +62,86 @@ export function TestimonialsSection() {
 
       <SectionContainer className="relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-indigo-500 shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-indigo-400"
-          >
+          <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-indigo-500 shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-indigo-400">
             Social Proof
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl"
-          >
+          </div>
+          <h2 className="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl">
             Loved by
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400"> Travelers.</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg leading-relaxed text-muted-foreground dark:text-slate-400"
-          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+              {" "}
+              Travelers.
+            </span>
+          </h2>
+          <p className="text-lg leading-relaxed text-muted-foreground dark:text-slate-400">
             Join thousands of users who trust TripCache for their journey.
-          </motion.p>
+          </p>
         </div>
 
         {/* Marquee Container */}
-        <div 
-          className="relative flex overflow-hidden mask-gradient-x py-10"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <div className={`flex gap-6 animate-marquee ${isHovered ? 'animation-paused' : ''} whitespace-nowrap`}>
+        <div className="group/marquee relative flex overflow-hidden mask-gradient-x py-10">
+          <div className="flex gap-6 animate-marquee whitespace-nowrap group-hover/marquee:[animation-play-state:paused]">
             {/* Render 3 sets of testimonials to ensure flawless infinite scrolling */}
-            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, i) => (
-              <div
-                key={`testimonial-${i}`}
-                className="group relative w-[320px] sm:w-[380px] shrink-0"
-              >
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-indigo-500/0 to-purple-500/0 opacity-0 group-hover:opacity-100 group-hover:from-cyan-500/20 group-hover:via-indigo-500/20 group-hover:to-purple-500/20 blur-xl transition-opacity duration-500 rounded-3xl -z-10" />
-                
-                <div className="relative flex h-full flex-col whitespace-normal rounded-3xl border border-border/70 bg-card/70 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 dark:border-white/10 dark:bg-slate-900/60 dark:hover:border-white/20">
-                  <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent dark:via-white/20" />
-                  
-                  <div className="flex gap-1 mb-6">
-                    {[...Array(5)].map((_, idx) => (
-                      <Star key={idx} className="w-4 h-4 fill-cyan-400 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
-                    ))}
-                  </div>
+            {[...testimonials, ...testimonials, ...testimonials].map(
+              (testimonial, i) => (
+                <div
+                  key={`testimonial-${i}`}
+                  className="group relative w-[320px] sm:w-[380px] shrink-0"
+                >
+                  {/* Glow effect on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-indigo-500/0 to-purple-500/0 opacity-0 group-hover:opacity-100 group-hover:from-cyan-500/20 group-hover:via-indigo-500/20 group-hover:to-purple-500/20 blur-xl transition-opacity duration-500 rounded-3xl -z-10" />
 
-                  <p className="relative mb-8 flex-1 leading-relaxed text-muted-foreground dark:text-slate-300">
-                    <Quote className="absolute -top-3 -left-3 -z-10 h-8 w-8 rotate-180 text-foreground/10 dark:text-white/5" />
-                    "{testimonial.text}"
-                  </p>
+                  <div className="relative flex h-full flex-col whitespace-normal rounded-3xl border border-border/70 bg-card/70 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 dark:border-white/10 dark:bg-slate-900/60 dark:hover:border-white/20">
+                    <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent dark:via-white/20" />
 
-                  <div className="flex items-center gap-4 mt-auto">
-                    <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-border/70 shadow-lg dark:border-white/10">
-                      <Image
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                        sizes="48px"
-                      />
+                    <div className="flex gap-1 mb-6">
+                      {[...Array(5)].map((_, idx) => (
+                        <Star
+                          key={idx}
+                          className="w-4 h-4 fill-cyan-400 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+                        />
+                      ))}
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-foreground dark:text-white">{testimonial.name}</p>
-                      <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-indigo-500 dark:text-indigo-400">{testimonial.role}</p>
+
+                    <p className="relative mb-8 flex-1 leading-relaxed text-muted-foreground dark:text-slate-300">
+                      <Quote className="absolute -top-3 -left-3 -z-10 h-8 w-8 rotate-180 text-foreground/10 dark:text-white/5" />
+                      "{testimonial.text}"
+                    </p>
+
+                    <div className="flex items-center gap-4 mt-auto">
+                      <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-border/70 shadow-lg dark:border-white/10">
+                        <Image
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          fill
+                          className="object-cover"
+                          sizes="48px"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-foreground dark:text-white">
+                          {testimonial.name}
+                        </p>
+                        <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-indigo-500 dark:text-indigo-400">
+                          {testimonial.role}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </SectionContainer>
 
-      <style jsx global>{`
+      <style>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 1.5rem)); }
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-50% - 1.5rem));
+          }
         }
         .animate-marquee {
           animation: marquee 40s linear infinite;
@@ -158,9 +150,15 @@ export function TestimonialsSection() {
           animation-play-state: paused !important;
         }
         .mask-gradient-x {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent
+          );
         }
       `}</style>
     </section>
-  )
+  );
 }

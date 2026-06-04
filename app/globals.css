@@ -3,7 +3,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   /* Premium Light Theme (Clean, High Contrast) */
   --background: oklch(0.98 0.01 220);
   --foreground: oklch(0.1 0.02 240);
