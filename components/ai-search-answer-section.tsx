@@ -107,7 +107,7 @@ const jsonLd = {
 
 export function AISearchAnswerSection() {
   return (
-    <section id="travel-organizer-guide" className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+    <section id="travel-organizer-guide" className="content-auto-section relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -176,6 +176,7 @@ export function AISearchAnswerSection() {
                 <Link
                   key={guide.href}
                   href={guide.href}
+                  prefetch={false}
                   className="rounded-lg border border-border/60 bg-background/70 p-4 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary dark:border-white/10 dark:bg-slate-950/50"
                 >
                   {guide.title}

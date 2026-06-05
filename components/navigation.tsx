@@ -44,7 +44,7 @@ export function Navigation() {
       >
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-18">
-            <Link href="/" className="flex items-center gap-1 sm:gap-2.5 group">
+            <Link href="/" prefetch={false} className="flex items-center gap-1 sm:gap-2.5 group">
               <div className="relative hidden sm:block">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Image
@@ -63,6 +63,7 @@ export function Navigation() {
             <div className="hidden md:flex items-center gap-1">
               <Link
                 href={featuresHref}
+                prefetch={false}
                 className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
               >
                 <span className="relative z-10">Features</span>
@@ -70,6 +71,7 @@ export function Navigation() {
               </Link>
               <Link
                 href={testimonialsHref}
+                prefetch={false}
                 className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
               >
                 <span className="relative z-10">Testimonials</span>
@@ -77,6 +79,7 @@ export function Navigation() {
               </Link>
               <Link
                 href="/pricing"
+                prefetch={false}
                 className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
               >
                 <span className="relative z-10">Pricing</span>
@@ -84,6 +87,7 @@ export function Navigation() {
               </Link>
               <Link
                 href="/blog"
+                prefetch={false}
                 className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
               >
                 <span className="relative z-10">Blog</span>
@@ -116,6 +120,7 @@ export function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    prefetch={false}
                     className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-colors"
                   >
                     {link.label}

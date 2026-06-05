@@ -329,6 +329,16 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 1.5rem));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tripcache-hero-aurora,
   .tripcache-hero-routes,
@@ -351,4 +361,21 @@
 
 .animate-gradient {
   animation: gradient-shift 8s ease infinite;
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.mask-gradient-x {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.mask-gradient-x:hover .animate-marquee {
+  animation-play-state: paused !important;
+}
+
+.content-auto-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 960px;
 }

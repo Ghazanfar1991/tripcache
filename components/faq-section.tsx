@@ -78,7 +78,7 @@ export function FAQSection() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
 
-            <section className="relative py-12 lg:py-16 overflow-hidden">
+            <section className="content-auto-section relative py-12 lg:py-16 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
                 <SectionContainer className="relative z-10">

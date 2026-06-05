@@ -5,11 +5,11 @@ import { SectionContainer } from "./section-container"
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border/50 glass dark:bg-background">
+    <footer className="content-auto-section relative border-t border-border/50 glass dark:bg-background">
       <SectionContainer className="py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-1 space-y-4">
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" prefetch={false} className="flex items-center gap-3 group">
               <Image
                 src="/app-icon.webp"
                 alt="TripCache"
@@ -29,17 +29,17 @@ export function Footer() {
             <h3 className="font-semibold">Product</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="#features" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                <Link href="#features" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#how-it-works" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                <Link href="#how-it-works" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                <Link href="/blog" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   Blog
                 </Link>
               </li>
@@ -51,17 +51,17 @@ export function Footer() {
             <h3 className="font-semibold">Company</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                <Link href="/about" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                <Link href="/privacy" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                <Link href="/terms" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   Terms
                 </Link>
               </li>

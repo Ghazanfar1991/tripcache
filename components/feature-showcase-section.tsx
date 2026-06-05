@@ -1,8 +1,5 @@
-"use client"
-
 import { Bell, CalendarClock, FileLock2, Grid2x2Plus, MapPinned, ReceiptText } from "lucide-react"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { SectionContainer } from "./section-container"
 import {
   PHONE_SCREEN_IMAGE_HEIGHT,
@@ -76,29 +73,22 @@ const showcases = [
 
 export function FeatureShowcaseSection() {
   return (
-    <section className="tripcache-section-backdrop relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+    <section className="content-auto-section tripcache-section-backdrop relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
       <div className="tripcache-section-routes" />
 
       <SectionContainer className="relative z-10">
 
         <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-32 space-y-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl"
           >
             Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Peace of Mind.</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          </h2>
+          <p
             className="text-xl leading-relaxed text-muted-foreground dark:text-slate-400"
           >
             Dive deeper into the trip details that usually get lost across inboxes, screenshots, and booking apps.
-          </motion.p>
+          </p>
         </div>
 
         <div className="space-y-32 lg:space-y-48">
@@ -115,11 +105,7 @@ export function FeatureShowcaseSection() {
                 <div className={`absolute top-1/2 ${isEven ? 'right-0' : 'left-0'} -translate-y-1/2 w-[800px] h-[600px] ${item.bgAccent} blur-[120px] rounded-full pointer-events-none -z-10`} />
 
                 {/* Text Content */}
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
+                <div
                   className="flex-1 space-y-8"
                 >
                   <div className="space-y-4">
@@ -139,14 +125,10 @@ export function FeatureShowcaseSection() {
                   </p>
 
                   <div className={`h-1 w-24 bg-gradient-to-r ${item.color} rounded-full`} />
-                </motion.div>
+                </div>
 
                 {/* Image Showcase */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9, rotateY: isEven ? -10 : 10 }}
-                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+                <div
                   className="relative flex-1 w-full perspective-1000"
                 >
                   <div
@@ -162,7 +144,7 @@ export function FeatureShowcaseSection() {
                       className="w-full h-auto object-contain"
                     />
                   </div>
-                </motion.div>
+                </div>
               </div>
             )
           })}

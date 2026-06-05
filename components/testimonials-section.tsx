@@ -1,9 +1,5 @@
-"use client"
-
-import { useRef, useState, useEffect } from "react"
 import { Star, Quote } from "lucide-react"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { SectionContainer } from "./section-container"
 
 const testimonials = [
@@ -52,10 +48,8 @@ const testimonials = [
 ]
 
 export function TestimonialsSection() {
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-background py-12 dark:bg-slate-950 lg:py-16">
+    <section id="testimonials" className="content-auto-section relative overflow-hidden bg-background py-12 dark:bg-slate-950 lg:py-16">
       {/* Cinematic Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-[20%] w-[500px] h-[500px] bg-gradient-to-l from-indigo-600/10 to-transparent blur-[120px] rounded-full" />
@@ -65,42 +59,27 @@ export function TestimonialsSection() {
 
       <SectionContainer className="relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-indigo-500 shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-indigo-400"
           >
             Social Proof
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          </div>
+          <h2
             className="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl"
           >
             Loved by
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400"> Travelers.</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          </h2>
+          <p
             className="text-lg leading-relaxed text-muted-foreground dark:text-slate-400"
           >
             Join thousands of users who trust TripCache for their journey.
-          </motion.p>
+          </p>
         </div>
 
         {/* Marquee Container */}
-        <div 
-          className="relative flex overflow-hidden mask-gradient-x py-10"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <div className={`flex gap-6 animate-marquee ${isHovered ? 'animation-paused' : ''} whitespace-nowrap`}>
+        <div className="relative flex overflow-hidden mask-gradient-x py-10">
+          <div className="flex gap-6 animate-marquee whitespace-nowrap">
             {/* Render 3 sets of testimonials to ensure flawless infinite scrolling */}
             {[...testimonials, ...testimonials, ...testimonials].map((testimonial, i) => (
               <div
@@ -145,22 +124,6 @@ export function TestimonialsSection() {
           </div>
         </div>
       </SectionContainer>
-
-      <style jsx global>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 1.5rem)); }
-        }
-        .animate-marquee {
-          animation: marquee 40s linear infinite;
-        }
-        .animation-paused {
-          animation-play-state: paused !important;
-        }
-        .mask-gradient-x {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-      `}</style>
     </section>
   )
 }

@@ -1,9 +1,5 @@
-"use client"
-
 import { BellRing, FileSpreadsheet, Hotel, Mail, MapPinned, Plane, ReceiptText, Shield, Zap } from "lucide-react"
 import Image from "next/image"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
 import { SectionContainer } from "./section-container"
 
 const features = [
@@ -89,50 +85,26 @@ const mobileScreens = [
 
 
 function PhoneStack() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  })
-
-  // We map the scroll progress to the fanning out of the phones.
-  // 0 -> completely stacked, 0.5 -> fully fanned out, 1 -> stacked again.
-  const fanOutProgress = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [0, 1, 0])
-
   return (
-    <div ref={containerRef} className="relative mx-auto mt-24 h-[400px] w-full max-w-5xl overflow-hidden hidden md:block">
+    <div className="relative mx-auto mt-24 hidden h-[400px] w-full max-w-5xl overflow-hidden md:block">
       <div className="absolute inset-x-0 bottom-[-50px] h-[300px] rounded-full bg-cyan-500/10 blur-[80px]" />
 
       {mobileScreens.map((screen, index) => {
-        // Calculate offsets based on index
         const centerIndex = Math.floor(mobileScreens.length / 2)
         const offsetIndex = index - centerIndex
-
-        // Final fan out values
-        const finalX = offsetIndex * 110 // pixels to separate
-        const finalRotate = offsetIndex * 6 // degrees to rotate
-        const finalY = Math.abs(offsetIndex) * 15 // pixels down to create an arc
-
-        // Transform based on scroll
-        const x = useTransform(fanOutProgress, [0, 1], [0, finalX])
-        const rotate = useTransform(fanOutProgress, [0, 1], [0, finalRotate])
-        const y = useTransform(fanOutProgress, [0, 1], [0, finalY])
-        const scale = useTransform(fanOutProgress, [0, 1], [1, 1 - Math.abs(offsetIndex) * 0.05])
-
-        // Z-index calculation (center is highest)
+        const x = offsetIndex * 110
+        const rotate = offsetIndex * 6
+        const y = Math.abs(offsetIndex) * 15
+        const scale = 1 - Math.abs(offsetIndex) * 0.05
         const zIndex = 20 - Math.abs(offsetIndex)
 
         return (
-          <motion.div
+          <div
             key={screen.alt}
             className="absolute left-1/2 top-10 origin-bottom"
             style={{
-              x,
-              y,
-              rotate,
-              scale,
+              transform: `translateX(calc(-50% + ${x}px)) translateY(${y}px) rotate(${rotate}deg) scale(${scale})`,
               zIndex,
-              translateX: "-50%"
             }}
           >
             <div className="relative w-[180px] shadow-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
@@ -146,7 +118,7 @@ function PhoneStack() {
                 priority={index === centerIndex}
               />
             </div>
-          </motion.div>
+          </div>
         )
       })}
     </div>
@@ -155,54 +127,39 @@ function PhoneStack() {
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="tripcache-section-backdrop relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
+    <section id="features" className="content-auto-section tripcache-section-backdrop relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
 
       {/* Background decorations */}
       <div className="tripcache-section-routes" />
 
       <SectionContainer className="relative z-10">
         <div className="mb-20 text-center max-w-4xl mx-auto space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-primary shadow-lg shadow-primary/5 backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-cyan-400"
           >
             <Zap className="w-4 h-4" />
             <span>Everything You Need</span>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          <h2
             className="mb-6 text-5xl font-extrabold tracking-tight text-foreground dark:text-white md:text-6xl"
           >
             Powerfully Simple.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Simply Powerful.</span>
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          <p
             className="text-xl text-muted-foreground dark:text-slate-300"
           >
             Master every booking in your itinerary, from flights and stays to maps, expenses, cancellation deadlines, and secure documents.
-          </motion.p>
+          </p>
         </div>
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
-          {features.map((feature, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+          {features.map((feature) => (
+            <div
               key={feature.title}
               className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-border/70 bg-card/60 backdrop-blur-xl transition-colors duration-500 hover:bg-card/80 dark:border-white/10 dark:bg-slate-900/50 dark:hover:bg-slate-800/50"
             >
@@ -258,28 +215,22 @@ export function FeaturesSection() {
                 {/* Hover indicator line */}
                 <div className={`h-1 w-0 bg-gradient-to-r ${feature.gradient} rounded-full mt-6 transition-all duration-500 group-hover:w-full opacity-50`} />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Dynamic Phones Spread */}
         <div className="mt-32 text-center hidden md:block">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+          <div
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-6 py-2 text-xs font-bold uppercase tracking-[0.3em] text-primary shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-cyan-400"
           >
             The Complete Picture
-          </motion.div>
-          <motion.h3
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          </div>
+          <h3
             className="mb-4 text-3xl font-bold text-foreground dark:text-white"
           >
             All Your Workflows in One Hub
-          </motion.h3>
+          </h3>
           <PhoneStack />
         </div>
       </SectionContainer>

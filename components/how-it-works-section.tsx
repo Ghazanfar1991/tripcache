@@ -1,8 +1,5 @@
-"use client"
-
 import { Mail, Sparkles, Download } from "lucide-react"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { SectionContainer } from "./section-container"
 import {
   PHONE_SCREEN_IMAGE_HEIGHT,
@@ -43,7 +40,7 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="relative overflow-hidden bg-background py-6 dark:bg-slate-950 sm:py-12">
+    <section id="how-it-works" className="content-auto-section relative overflow-hidden bg-background py-6 dark:bg-slate-950 sm:py-12">
       {/* Background Decor */}
       <div className="pointer-events-none absolute right-[-10%] top-[20%] h-[600px] w-[600px] rounded-full bg-cyan-500/10 blur-[120px] dark:bg-cyan-900/10" />
       <div className="pointer-events-none absolute bottom-[10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-500/10 blur-[120px] dark:bg-purple-900/10" />
@@ -52,32 +49,21 @@ export function HowItWorksSection() {
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
           >
             How It Works
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          </div>
+          <h2
             className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl dark:text-white"
           >
             The Travel <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pipeline.</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          </h2>
+          <p
             className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground dark:text-slate-400"
           >
             Three simple steps to transform messy confirmation emails into a master itinerary.
-          </motion.p>
+          </p>
         </div>
 
         {/* The Pipeline Steps */}
@@ -93,11 +79,7 @@ export function HowItWorksSection() {
                 <div key={step.title} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-24 relative`}>
 
                   {/* Text Content */}
-                  <motion.div
-                    initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  <div
                     className={`flex-1 text-center ${isEven ? 'lg:text-right' : 'lg:text-left'} space-y-6 lg:max-w-md z-10`}
                   >
                     <div className={`inline-flex items-center justify-center p-4 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-2xl shadow-black/50 mb-4`}>
@@ -112,7 +94,7 @@ export function HowItWorksSection() {
                         {step.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Node connecting marker (Desktop) */}
                   <div className="absolute left-1/2 top-1/2 z-20 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-border bg-background dark:border-white/20 dark:bg-slate-950 lg:block">
@@ -120,19 +102,13 @@ export function HowItWorksSection() {
                   </div>
 
                   {/* Image Presentation */}
-                  <motion.div
-                    initial={{ opacity: 0, x: isEven ? 50 : -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                  <div
                     className="relative z-10 flex-1 w-full perspective-1000"
                   >
                     {/* Glow behind image */}
                     <div className={`absolute inset-0 ${step.glow} blur-[80px] rounded-full -z-10 bg-opacity-40`} />
 
-                    <motion.div
-                      whileHover={{ scale: 1.05, rotateY: isEven ? -5 : 5 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    <div
                       className="relative mx-auto origin-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                       style={{ width: PHONE_SCREEN_WIDTH }}
                     >
@@ -145,8 +121,8 @@ export function HowItWorksSection() {
                         sizes={PHONE_SCREEN_SIZES}
                         className="w-full h-auto object-contain"
                       />
-                    </motion.div>
-                  </motion.div>
+                    </div>
+                  </div>
 
                 </div>
               )

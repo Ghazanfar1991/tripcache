@@ -3,9 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
-import { motion } from "framer-motion"
 import { BadgeCheck, Sparkles } from "lucide-react"
-import { useTheme } from "@/components/theme-provider"
 import {
   PHONE_SCREEN_IMAGE_HEIGHT,
   PHONE_SCREEN_IMAGE_WIDTH,
@@ -153,10 +151,7 @@ export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isActive, setIsActive] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [mounted, setMounted] = useState(false)
   const activeSlide = slides[currentSlide]
-  const { theme } = useTheme()
-  const isDark = !mounted || theme === "dark"
 
   useEffect(() => {
     const handleMouseEnter = () => setIsActive(true)
@@ -184,10 +179,6 @@ export default function Hero() {
     return () => clearInterval(timer)
   }, [isActive])
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
     <section ref={containerRef} className="relative min-h-[100svh] overflow-hidden bg-background">
       <svg className="absolute inset-0 h-0 w-0">
@@ -199,12 +190,12 @@ export default function Hero() {
         </defs>
       </svg>
 
-      <div className={`tripcache-hero-sky ${isDark ? "tripcache-hero-sky-dark" : "tripcache-hero-sky-light"}`} />
+      <div className="tripcache-hero-sky tripcache-hero-sky-light dark:tripcache-hero-sky-dark" />
       <div className="tripcache-hero-aurora" />
       <div className="tripcache-hero-routes" />
       <div className="tripcache-hero-grid" />
       <div className="tripcache-hero-grain" />
-      <div className={`absolute inset-0 ${isDark ? "bg-gradient-to-b from-black/28 via-black/18 to-black/58" : "bg-gradient-to-b from-white/42 via-white/18 to-white/60"}`} />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/42 via-white/18 to-white/60 dark:from-black/28 dark:via-black/18 dark:to-black/58" />
       <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-background dark:to-slate-950" />
 
       <div className="relative z-20 mx-auto w-full max-w-6xl px-4 pb-10 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-32">
@@ -227,11 +218,8 @@ export default function Hero() {
               travel itinerary app.
             </p>
 
-            <motion.div
+            <div
               className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:flex-nowrap md:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.45 }}
             >
               <Link
                 href="https://apps.apple.com/app/id6758403056"
@@ -249,7 +237,7 @@ export default function Hero() {
               >
                 <img src="/play-store-v3.svg" alt="Get it on Google Play" className="block h-auto w-full drop-shadow-lg" />
               </Link>
-            </motion.div>
+            </div>
 
             <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground md:justify-start">
               {points.map((point) => (
