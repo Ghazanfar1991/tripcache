@@ -48,17 +48,18 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 mb-4">
           <a 
-            href="https://apps.apple.com/app/idYOUR_APP_ID" 
+            href="https://apps.apple.com/app/id6758403056" 
             target="_blank" 
             rel="noopener noreferrer"
             className="relative transition-transform hover:-translate-y-1 hover:brightness-110 active:translate-y-0"
           >
             <Image
-              src="/app-store.svg"
+              src="/app-store-v3.svg"
               alt="Download on App Store"
               width={200}
               height={66}
               className="w-[160px] sm:w-[200px] h-auto drop-shadow-xl"
+              style={{ height: "auto" }}
             />
           </a>
           <a 
@@ -68,11 +69,12 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             className="relative transition-transform hover:-translate-y-1 hover:brightness-110 active:translate-y-0"
           >
             <Image
-              src="/play-store.svg"
+              src="/play-store-v3.svg"
               alt="Get it on Google Play"
               width={200}
               height={66}
               className="w-[160px] sm:w-[200px] h-auto drop-shadow-xl"
+              style={{ height: "auto" }}
             />
           </a>
         </div>

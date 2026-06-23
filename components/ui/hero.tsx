@@ -141,10 +141,10 @@ const slides = [
 ]
 
 const points = [
-  "Flights, hotels, cars, tickets",
+  "Forward booking emails",
   "Free-cancellation reminders",
-  "Trip maps and expenses",
-  "Secure document vault",
+  "Trip documents and receipts",
+  "Business travel expense records",
 ]
 
 export default function Hero() {
@@ -190,56 +190,64 @@ export default function Hero() {
         </defs>
       </svg>
 
-      <div className="tripcache-hero-sky tripcache-hero-sky-light dark:tripcache-hero-sky-dark" />
+      <div className="tripcache-hero-sky tripcache-hero-sky-light dark:hidden" />
+      <div className="tripcache-hero-sky tripcache-hero-sky-dark hidden dark:block" />
       <div className="tripcache-hero-aurora" />
       <div className="tripcache-hero-routes" />
       <div className="tripcache-hero-grid" />
       <div className="tripcache-hero-grain" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/42 via-white/18 to-white/60 dark:from-black/28 dark:via-black/18 dark:to-black/58" />
-      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-background dark:to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/42 via-white/18 to-white/60 dark:from-slate-950/88 dark:via-slate-950/76 dark:to-slate-950/94" />
+      <div className="absolute inset-0 hidden bg-[radial-gradient(circle_at_76%_38%,rgba(14,165,233,0.16),transparent_26%),radial-gradient(circle_at_24%_42%,rgba(124,58,237,0.12),transparent_30%),linear-gradient(90deg,rgba(2,6,23,0.9),rgba(2,6,23,0.68)_48%,rgba(2,6,23,0.86))] dark:block" />
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-background" />
 
       <div className="relative z-20 mx-auto w-full max-w-6xl px-4 pb-10 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-32">
         <main className="grid w-full grid-cols-1 items-start gap-8 pb-6 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-6 lg:gap-8 xl:gap-10">
           <div className="mx-auto max-w-[680px] text-center md:mx-0 md:text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-gradient-to-r from-primary/10 to-purple-500/10 px-3 py-1.5 text-xs font-medium text-primary sm:px-4 sm:py-2 sm:text-sm">
               <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              <span className="font-semibold">The Future of Trip Management</span>
+              <span className="font-semibold">AI Travel Inbox & Cancellation Protection</span>
             </div>
 
             <h1 className="mt-6 text-3xl font-bold tracking-tight leading-tight text-foreground sm:text-4xl sm:leading-[1.1] lg:text-[2.75rem] xl:text-5xl">
-              <span className="block lg:whitespace-nowrap">Smart Travel Management</span>
+              <span className="block lg:whitespace-nowrap">Forward travel emails.</span>
               <span className="block lg:whitespace-nowrap animate-gradient bg-gradient-to-r from-primary via-purple-500 to-accent bg-[length:200%_auto] bg-clip-text text-transparent">
-                Your Trips, Supercharged.
+                Never miss deadlines.
               </span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg px-2 text-base leading-relaxed text-muted-foreground dark:text-gray-200 sm:px-0 sm:text-lg md:mx-0">
-              Organize flights, hotels, rental cars, tickets, documents, and free-cancellation reminders in one
-              travel itinerary app.
+              TripCache turns booking confirmations into organized itineraries, tracks hotel cancellation deadlines,
+              and keeps travel receipts, documents, flights, stays, and expenses together.
             </p>
+<div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:flex-nowrap md:justify-start">
+  <Link
+    href="https://apps.apple.com/app/id6758403056"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
+  >
+    <img
+      src="/app-store-v3.svg"
+      alt="Download on the App Store"
+      className="block h-auto w-full"
+    />
+  </Link>
 
-            <div
-              className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:flex-nowrap md:justify-start"
-            >
-              <Link
-                href="https://apps.apple.com/app/id6758403056"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
-              >
-                <img src="/app-store-v3.svg" alt="Download on the App Store" className="block h-auto w-full drop-shadow-lg" />
-              </Link>
-              <Link
-                href="https://play.google.com/store/apps/details?id=app.tripcache"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
-              >
-                <img src="/play-store-v3.svg" alt="Get it on Google Play" className="block h-auto w-full drop-shadow-lg" />
-              </Link>
-            </div>
+  <Link
+    href="https://play.google.com/store/apps/details?id=app.tripcache"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
+  >
+    <img
+      src="/play-store-v3.svg"
+      alt="Get it on Google Play"
+      className="block h-auto w-full"
+    />
+  </Link>
+</div>
 
-            <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground md:justify-start">
+            <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground dark:text-slate-200/80 md:justify-start">
               {points.map((point) => (
                 <span key={point} className="inline-flex items-center gap-2">
                   <BadgeCheck className="h-4 w-4 text-primary" />
@@ -253,46 +261,50 @@ export default function Hero() {
             <div className="relative w-full" style={{ maxWidth: "420px" }}>
               <div className="tripcache-phone-backlight" />
 
-              <div className="pointer-events-none absolute left-2 top-8 z-30 hidden w-[132px] rounded-xl border border-border/70 bg-background/80 px-2.5 py-2 text-left shadow-lg backdrop-blur-xl dark:border-white/20 dark:bg-black/38 xl:block">
+              <div className="pointer-events-none absolute left-2 top-8 z-30 hidden w-[132px] rounded-xl border border-border/70 bg-background/80 px-2.5 py-2 text-left shadow-lg backdrop-blur-xl dark:border-white/20 dark:bg-slate-950/78 dark:shadow-cyan-950/30 xl:block">
                 <div className="text-[9px] font-semibold uppercase tracking-[0.16em] text-primary">{activeSlide.leftBadge.label}</div>
                 <div className="mt-1 text-[11px] font-semibold leading-tight text-foreground">{activeSlide.leftBadge.title}</div>
-                <div className="mt-1 text-[10px] leading-tight text-muted-foreground">{activeSlide.leftBadge.description}</div>
+                <div className="mt-1 text-[10px] leading-tight text-muted-foreground dark:text-slate-200/80">{activeSlide.leftBadge.description}</div>
               </div>
 
-              <div className="pointer-events-none absolute right-2 top-[56%] z-30 hidden w-[132px] rounded-xl border border-border/70 bg-background/80 px-2.5 py-2 text-left shadow-lg backdrop-blur-xl dark:border-white/20 dark:bg-black/38 xl:block">
+              <div className="pointer-events-none absolute right-2 top-[56%] z-30 hidden w-[132px] rounded-xl border border-border/70 bg-background/80 px-2.5 py-2 text-left shadow-lg backdrop-blur-xl dark:border-white/20 dark:bg-slate-950/78 dark:shadow-cyan-950/30 xl:block">
                 <div className="text-[9px] font-semibold uppercase tracking-[0.16em] text-primary">{activeSlide.rightBadge.label}</div>
                 <div className="mt-1 text-[11px] font-semibold leading-tight text-foreground">{activeSlide.rightBadge.title}</div>
-                <div className="mt-1 text-[10px] leading-tight text-muted-foreground">{activeSlide.rightBadge.description}</div>
+                <div className="mt-1 text-[10px] leading-tight text-muted-foreground dark:text-slate-200/80">{activeSlide.rightBadge.description}</div>
               </div>
 
               <div className="relative z-20">
-                <div className="relative mx-auto" style={{ width: PHONE_SCREEN_WIDTH }}>
+                <div
+                  className="relative mx-auto"
+                  style={{
+                    width: PHONE_SCREEN_WIDTH,
+                    aspectRatio: `${PHONE_SCREEN_IMAGE_WIDTH} / ${PHONE_SCREEN_IMAGE_HEIGHT}`,
+                  }}
+                >
                   <div className="absolute inset-0 rounded-[2.8rem] bg-gradient-to-br from-cyan-300/25 via-transparent to-orange-300/20 blur-2xl" />
                   <Image
                     key={activeSlide.src}
                     src={activeSlide.src}
                     alt={activeSlide.alt}
-                    width={PHONE_SCREEN_IMAGE_WIDTH}
-                    height={PHONE_SCREEN_IMAGE_HEIGHT}
+                    fill
                     sizes={PHONE_SCREEN_SIZES}
-                    className="relative z-10 h-auto w-full object-contain drop-shadow-[0_24px_66px_rgba(2,6,23,0.65)] transition-opacity duration-700 ease-in-out"
+                    className="relative z-10 object-contain drop-shadow-[0_24px_66px_rgba(2,6,23,0.65)] transition-opacity duration-700 ease-in-out"
                     priority
                   />
+                </div>
 
-                  <div className="mt-3 flex h-4 items-center justify-center gap-2">
-                    {slides.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentSlide(idx)}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${
-                          idx === currentSlide ? "w-8 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/70"
-                        }`}
-                        aria-label={`Go to slide ${idx + 1}`}
-                      />
-                    ))}
-                    </div>
-                  </div>
-         
+                <div className="mt-3 flex h-4 items-center justify-center gap-2">
+                  {slides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSlide(idx)}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        idx === currentSlide ? "w-8 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/70 dark:bg-white/30 dark:hover:bg-white/55"
+                      }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ export const body = String.raw`# Hotel Cancellation Reminder App: Never Miss a F
 
 Refundable hotel bookings are useful because they let you keep flexibility while trip plans are still changing. The risk is simple: if you miss the free-cancellation deadline, the booking can become an expensive commitment.
 
-TripCache helps you save hotel cancellation deadlines beside the stay itself, then reminds you before the refund window closes.
+TripCache helps you save hotel cancellation deadlines beside the stay itself, then reminds you before the refund window closes. You can also use the [hotel cancellation deadline calculator](/tools/hotel-cancellation-deadline-calculator) to work out a cutoff before adding it to TripCache.
 
 ## Why Hotel Cancellation Deadlines Are Easy to Miss
 
@@ -99,4 +99,6 @@ Before every trip:
 ## Use TripCache for Refundable Stays
 
 TripCache is built for the details that matter after booking: documents, reminders, receipts, expenses, and itinerary context. Add your next refundable hotel stay, save the cancellation deadline, and let TripCache remind you before free cancellation disappears.
+
+See the full [cancellation reminder feature](/features/cancellation-reminders) for the product workflow.
 `

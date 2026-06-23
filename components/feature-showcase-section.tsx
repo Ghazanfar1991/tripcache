@@ -142,6 +142,7 @@ export function FeatureShowcaseSection() {
                       height={PHONE_SCREEN_IMAGE_HEIGHT}
                       sizes={PHONE_SCREEN_SIZES}
                       className="w-full h-auto object-contain"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                 </div>

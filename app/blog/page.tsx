@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Footer } from "@/components/footer"
 import { BlogCardPremium } from "@/components/blog-card-premium"
-import { Newspaper, Search, ArrowLeft } from "lucide-react"
+import { Newspaper, ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 import { getBlogSummaries } from "@/lib/blog"
 import { SectionContainer } from "@/components/section-container"
@@ -57,16 +57,16 @@ export default function BlogPage() {
               Expert tips, in-depth tutorials, and insights to master travel organization. From TripCase migration guides to automation strategies.
             </p>
 
-            {/* Search Bar (Static for now) */}
-            <div className="max-w-md mx-auto pt-4">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  className="w-full pl-12 pr-4 py-3 rounded-full border-2 border-border bg-background/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all dark:border-white/20 dark:bg-background/50"
-                />
-              </div>
+            <div className="flex flex-wrap justify-center gap-3 pt-2 text-sm">
+              <Link className="rounded-full border border-border/60 bg-background/70 px-4 py-2 font-medium hover:text-primary" href="/features/email-to-itinerary">
+                Email automation
+              </Link>
+              <Link className="rounded-full border border-border/60 bg-background/70 px-4 py-2 font-medium hover:text-primary" href="/features/cancellation-reminders">
+                Cancellation reminders
+              </Link>
+              <Link className="rounded-full border border-border/60 bg-background/70 px-4 py-2 font-medium hover:text-primary" href="/features/business-travel-expenses">
+                Business expenses
+              </Link>
             </div>
           </div>
         </SectionContainer>
@@ -87,21 +87,9 @@ export default function BlogPage() {
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-3xl font-bold">Recent Articles</h2>
 
-            {/* Category Pills */}
-            <div className="hidden lg:flex items-center gap-2">
-              <button className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium transition-all hover:scale-105">
-                All
-              </button>
-              <button className="px-4 py-2 rounded-full bg-background border border-border/50 text-sm font-medium transition-all hover:border-primary/30 hover:bg-card">
-                Guides
-              </button>
-              <button className="px-4 py-2 rounded-full bg-background border border-border/50 text-sm font-medium transition-all hover:border-primary/30 hover:bg-card">
-                Tutorials
-              </button>
-              <button className="px-4 py-2 rounded-full bg-background border border-border/50 text-sm font-medium transition-all hover:border-primary/30 hover:bg-card">
-                Comparisons
-              </button>
-            </div>
+            <Link href="/tools/hotel-cancellation-deadline-calculator" className="hidden rounded-full border border-border/50 px-4 py-2 text-sm font-medium transition hover:border-primary/40 hover:text-primary lg:inline-flex">
+              Try the deadline calculator
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -116,22 +104,14 @@ export default function BlogPage() {
       <section className="py-16 lg:py-24">
         <SectionContainer>
           <div className="max-w-4xl mx-auto text-center p-12 rounded-3xl bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Never Miss an Update
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Organize your next trip from email</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Get the latest travel tips, product updates, and exclusive guides delivered to your inbox.
+              Forward booking confirmations to TripCache, track cancellation deadlines, and keep documents and receipts
+              connected to the itinerary.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-3 rounded-full border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-              />
-              <button className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:scale-105 transition-all shadow-lg hover:shadow-xl">
-                Subscribe
-              </button>
-            </div>
+            <Link href="/download" className="inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+              Download TripCache
+            </Link>
           </div>
         </SectionContainer>
       </section>

@@ -9,16 +9,16 @@ import { AISearchAnswerSection } from "@/components/ai-search-answer-section"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Travel Itinerary App for Emails, Documents, Reminders & Expenses",
+  title: "AI Travel Inbox for Email Itineraries & Cancellation Reminders",
   description:
-    "TripCache turns travel confirmation emails into organized itineraries with flight updates, free-cancellation reminders, secure documents, trip maps, expenses, and CSV exports.",
+    "Forward travel emails to TripCache, get organized itineraries, track cancellation deadlines, and keep receipts, documents, flights, hotels, and expenses together.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "TripCache - Travel Itinerary App for Emails, Documents & Reminders",
+    title: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
     description:
-      "Organize confirmation emails, flights, hotels, rental cars, tickets, documents, cancellation deadlines, maps, and expenses in one travel app.",
+      "Forward travel emails, get organized itineraries, and never miss hotel cancellation deadlines.",
     url: "https://trip-cache.com",
   },
 }

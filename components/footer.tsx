@@ -20,7 +20,7 @@ export function Footer() {
               <span className="text-lg font-bold">TripCache</span>
             </Link>
             <p className="text-sm text-muted-foreground text-pretty">
-              The modern way to manage your flight itineraries and travel plans.
+              AI travel inbox for booking emails, cancellation deadlines, receipts, and trip documents.
             </p>
           </div>
 
@@ -29,13 +29,23 @@ export function Footer() {
             <h3 className="font-semibold">Product</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="#features" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
-                  Features
+                <Link href="/features/email-to-itinerary" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Email Automation
                 </Link>
               </li>
               <li>
-                <Link href="#how-it-works" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
-                  How It Works
+                <Link href="/features/cancellation-reminders" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Cancellation Reminders
+                </Link>
+              </li>
+              <li>
+                <Link href="/features/business-travel-expenses" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Business Expenses
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/hotel-cancellation-deadline-calculator" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  Deadline Calculator
                 </Link>
               </li>
               <li>
@@ -48,8 +58,18 @@ export function Footer() {
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Company</h3>
+            <h3 className="font-semibold">Compare</h3>
             <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/alternatives/tripit" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  TripIt Alternative
+                </Link>
+              </li>
+              <li>
+                <Link href="/alternatives/tripcase" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
+                  TripCase Alternative
+                </Link>
+              </li>
               <li>
                 <Link href="/about" prefetch={false} className="text-muted-foreground hover:text-cyan-400 transition-colors">
                   About

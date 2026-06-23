@@ -83,6 +83,7 @@ export function HeroSection() {
                   width={160}
                   height={48}
                   className="w-48 sm:w-54 md:w-[250px] h-auto"
+                  style={{ height: "auto" }}
                 />
               </Link>
               <Link
@@ -97,6 +98,7 @@ export function HeroSection() {
                   width={160}
                   height={48}
                   className="w-48 sm:w-54 md:w-[250px] h-auto"
+                  style={{ height: "auto" }}
                 />
               </Link>
             </div>

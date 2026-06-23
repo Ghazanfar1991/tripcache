@@ -318,6 +318,8 @@ If you're tired of paying for TripIt Pro or frustrated by TripIt Free's limitati
 
 **Save $49/year** and get a better travel management experience.
 
+For the evergreen comparison and current product positioning, see the [TripIt alternative page](/alternatives/tripit).
+
 ---
 
 *Last updated: January 2025. Feature comparison based on current offerings. TripCache features are expanding rapidly - check trip-cache.com for latest updates.*

@@ -26,7 +26,7 @@ export const body = String.raw`# How to Organize Travel Confirmation Emails Auto
 
 Every trip starts in the inbox. Airlines, hotels, car rental companies, ticket platforms, restaurants, and travel agents all send confirmations by email.
 
-The problem is that confirmation emails are designed for delivery, not organization. TripCache helps turn those emails into a structured itinerary.
+The problem is that confirmation emails are designed for delivery, not organization. TripCache helps turn those emails into a structured itinerary through its [email-to-itinerary automation](/features/email-to-itinerary).
 
 ## Why Travel Emails Become Chaotic
 
@@ -120,4 +120,6 @@ Then check:
 ## Turn Email Into a Travel System
 
 You do not need a more complicated inbox. You need a better destination for travel emails. TripCache turns confirmation emails into organized trips, then keeps documents, reminders, and exports connected to the itinerary.
+
+If you want the product workflow, start with the [TripCache travel email organizer](/features/email-to-itinerary).
 `

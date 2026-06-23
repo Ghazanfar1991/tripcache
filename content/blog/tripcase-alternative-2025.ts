@@ -151,6 +151,8 @@ Join thousands of former TripCase users who've already made the switch. Your fut
 
 **Ready to experience stress-free travel management?** [Get started with TripCache today →](https://trip-cache.com)
 
+For the evergreen product comparison, see the [TripCase alternative page](/alternatives/tripcase).
+
 ---
 
 *Have questions about migrating from TripCase? Email us at support@tripcache.app - we're here to help!*

@@ -98,6 +98,7 @@ export function FeaturesSection() {
                     width={132}
                     height={286}
                     className="h-auto w-full rounded-[1.1rem] object-contain"
+                    style={{ width: "100%", height: "auto" }}
                   />
                 </div>
               ))}

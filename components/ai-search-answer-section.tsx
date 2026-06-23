@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Script from "next/script"
 import { BellRing, FileLock2, MailCheck, MapPinned, Plane, ReceiptText } from "lucide-react"
 
 import { SectionContainer } from "./section-container"
@@ -108,8 +109,10 @@ const jsonLd = {
 export function AISearchAnswerSection() {
   return (
     <section id="travel-organizer-guide" className="content-auto-section relative overflow-hidden bg-background py-12 dark:bg-slate-950 sm:py-20">
-      <script
+      <Script
+        id="travel-organizer-guide-schema"
         type="application/ld+json"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}

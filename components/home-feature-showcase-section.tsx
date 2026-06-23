@@ -90,6 +90,7 @@ export function FeatureShowcaseSection() {
                         width={300}
                         height={650}
                         className="h-auto w-full rounded-[1.5rem] object-contain"
+                        style={{ width: "100%", height: "auto" }}
                       />
                     </div>
                   </div>

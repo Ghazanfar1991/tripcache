@@ -26,6 +26,7 @@ export function Footer() {
                   width={200}
                   height={60}
                   className="h-auto w-[190px]"
+                  style={{ width: "190px", height: "auto" }}
                 />
               </a>
               <a href="https://play.google.com/store/apps/details?id=app.tripcache" target="_blank" rel="noopener noreferrer">
@@ -35,6 +36,7 @@ export function Footer() {
                   width={200}
                   height={60}
                   className="h-auto w-[190px]"
+                  style={{ width: "190px", height: "auto" }}
                 />
               </a>
             </div>

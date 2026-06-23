@@ -4,18 +4,20 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { usePathname } from "next/navigation"
 import { GetStartedModal } from "./get-started-modal"
 import { Menu, X } from "lucide-react"
+
+const navLinks = [
+  { href: "/features/email-to-itinerary", label: "Email Automation" },
+  { href: "/features/cancellation-reminders", label: "Reminders" },
+  { href: "/tools/hotel-cancellation-deadline-calculator", label: "Calculator" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/blog", label: "Blog" },
+]
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
-  const isHomePage = pathname === "/"
-
-  const featuresHref = isHomePage ? "#features" : "/#features"
-  const testimonialsHref = isHomePage ? "#testimonials" : "/#testimonials"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,6 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  useEffect(() => {
-    // Close mobile menu on route change to avoid stale open state
-    setMobileMenuOpen(false)
-  }, [pathname])
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 px-4">
@@ -61,38 +58,17 @@ export function Navigation() {
             </Link>
 
             <div className="hidden md:flex items-center gap-1">
-              <Link
-                href={featuresHref}
-                prefetch={false}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
-              >
-                <span className="relative z-10">Features</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
-              </Link>
-              <Link
-                href={testimonialsHref}
-                prefetch={false}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
-              >
-                <span className="relative z-10">Testimonials</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
-              </Link>
-              <Link
-                href="/pricing"
-                prefetch={false}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
-              >
-                <span className="relative z-10">Pricing</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
-              </Link>
-              <Link
-                href="/blog"
-                prefetch={false}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
-              >
-                <span className="relative z-10">Blog</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  prefetch={false}
+                  className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
+                >
+                  <span className="relative z-10">{link.label}</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
+                </Link>
+              ))}
             </div>
 
             <div className="flex items-center gap-2 sm:gap-3">
@@ -116,7 +92,7 @@ export function Navigation() {
           >
             <div className="absolute left-3 right-3 mt-2 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg shadow-primary/5">
               <div className="flex flex-col divide-y divide-border/60">
-                {[{ href: featuresHref, label: "Features" }, { href: testimonialsHref, label: "Testimonials" }, { href: "/pricing", label: "Pricing" }, { href: "/blog", label: "Blog" }].map((link) => (
+                {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}

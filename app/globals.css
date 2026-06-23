@@ -143,9 +143,9 @@
 
   .tripcache-hero-sky-dark {
     background:
-      linear-gradient(135deg, rgba(3, 7, 18, 0.98) 0%, rgba(6, 28, 44, 0.96) 34%, rgba(19, 12, 44, 0.95) 64%, rgba(8, 9, 22, 0.98) 100%),
-      linear-gradient(115deg, transparent 0 18%, rgba(14, 165, 233, 0.3) 26%, transparent 38% 50%, rgba(168, 85, 247, 0.24) 62%, transparent 76%),
-      linear-gradient(70deg, rgba(251, 146, 60, 0.18), transparent 38% 68%, rgba(45, 212, 191, 0.2));
+      linear-gradient(135deg, rgba(2, 6, 23, 1) 0%, rgba(3, 14, 28, 0.98) 38%, rgba(15, 10, 32, 0.98) 68%, rgba(2, 6, 23, 1) 100%),
+      linear-gradient(115deg, transparent 0 18%, rgba(14, 165, 233, 0.16) 26%, transparent 38% 50%, rgba(168, 85, 247, 0.14) 62%, transparent 76%),
+      linear-gradient(70deg, rgba(251, 146, 60, 0.08), transparent 38% 68%, rgba(45, 212, 191, 0.1));
   }
 
   .tripcache-hero-sky-light {
@@ -234,6 +234,22 @@
   .tripcache-section-routes {
     opacity: 0.18;
     mask-image: linear-gradient(to bottom, transparent, black 25%, black 74%, transparent);
+  }
+
+  .dark .tripcache-hero-aurora {
+    opacity: 0.38;
+  }
+
+  .dark .tripcache-hero-routes {
+    opacity: 0.18;
+  }
+
+  .dark .tripcache-hero-grid {
+    opacity: 0.22;
+  }
+
+  .dark .tripcache-hero-grain {
+    opacity: 0.12;
   }
 }
 

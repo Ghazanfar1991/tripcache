@@ -170,9 +170,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <div className="h-12 w-12 rounded-full bg-gradient-to-r from-primary to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                       {metadata.author.charAt(0)}
                     </div>
-                    <div>
-                      <div className="font-semibold text-foreground">{metadata.author}</div>
-                      <div className="text-xs">Travel Expert</div>
+                  <div>
+                    <div className="font-semibold text-foreground">{metadata.author}</div>
+                    <div className="text-xs">TripCache Team</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -219,9 +219,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-3">About {metadata.author}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    {metadata.author} is a travel enthusiast and content creator who loves helping others organize their
-                    adventures. With years of experience in travel planning, they share insights and tips to make your
-                    journeys smoother and more enjoyable.
+                    The TripCache team writes about travel email automation, cancellation reminders, document
+                    organization, and expense workflows for frequent travelers.
                   </p>
                 </div>
               </div>
@@ -263,20 +262,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Newsletter CTA */}
             <div className="mt-16 text-center p-10 rounded-3xl bg-gradient-to-r from-primary/10 to-purple-500/10 border-2 border-primary/20">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-3">Want More Travel Tips?</h3>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-3">Turn travel emails into organized trips</h3>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Subscribe to our newsletter for exclusive guides, product updates, and travel hacks delivered to your inbox.
+                Download TripCache to forward booking emails, track cancellation deadlines, and keep trip documents
+                ready when plans change.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-5 py-3 rounded-full border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                />
-                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-purple-500 text-white font-semibold hover:scale-105 transition-all shadow-lg hover:shadow-xl whitespace-nowrap">
-                  Subscribe
-                </button>
-              </div>
+              <Link
+                href="/download"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-purple-500 px-8 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                Download TripCache
+              </Link>
             </div>
           </div>
         </SectionContainer>

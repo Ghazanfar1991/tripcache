@@ -26,7 +26,7 @@ export const body = String.raw`# Business Travel Expense Reporting App: Organize
 
 Business travel creates paperwork fast. Flights, hotels, rental cars, rideshares, meals, parking, event tickets, and client meetings all create receipts or records that someone eventually needs to reconcile.
 
-TripCache helps business travelers keep expense reporting connected to the trip itself.
+TripCache helps business travelers keep expense reporting connected to the trip itself. The product workflow is covered on the [business travel expense organization page](/features/business-travel-expenses).
 
 ## Why Business Travel Expenses Are Hard to Track
 
@@ -138,5 +138,5 @@ TripCache keeps that context together.
 
 You cannot remove every administrative task from business travel. But you can stop rebuilding the trip from scattered emails and receipts.
 
-Use TripCache to organize the trip while it happens, then export cleaner records when it is time to report.
+Use TripCache to organize the trip while it happens, then export cleaner records when it is time to report. Pair it with [email-to-itinerary automation](/features/email-to-itinerary) so booking confirmations and receipts start in the right trip.
 `

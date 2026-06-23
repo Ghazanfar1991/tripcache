@@ -115,6 +115,7 @@ function PhoneStack() {
                 width={180}
                 height={390}
                 className="w-full h-auto object-contain drop-shadow-2xl"
+                style={{ width: "100%", height: "auto" }}
                 priority={index === centerIndex}
               />
             </div>

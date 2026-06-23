@@ -17,30 +17,23 @@ const SITE_URL = "https://trip-cache.com"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
+    default: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
     template: "%s | TripCache",
   },
   description:
-    "Organize travel confirmation emails, flights, hotels, rental cars, tickets, secure documents, free-cancellation reminders, trip maps, and expenses in one itinerary app.",
+    "Forward travel emails to TripCache, get organized itineraries, track hotel cancellation deadlines, and manage travel documents, receipts, and expenses.",
   keywords: [
     "TripCase alternative",
-    "free travel itinerary manager",
-    "flight tracker app",
-    "trip organizer",
-    "travel planner app",
+    "TripIt alternative",
+    "travel email organizer",
+    "email to itinerary app",
+    "hotel cancellation reminder",
+    "booking cancellation deadline reminder",
+    "business travel organizer",
+    "travel receipt organizer",
+    "travel expense tracker",
     "email to trip automation",
-    "travel document organizer",
-    "business travel expense tracking",
-    "TripIt alternative free",
-    "automatic flight tracking",
-    "email flight parser",
-    "travel itinerary app",
-    "booking cancellation reminder",
-    "hotel cancellation reminder app",
-    "travel document organizer app",
-    "trip management software",
-    "digital nomad tools",
-    "flight booking organizer",
+    "travel confirmation email organizer",
   ],
   authors: [{ name: "TripCache Team" }],
   creator: "TripCache",
@@ -54,9 +47,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
+    title: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
     description:
-      "Manage confirmation emails, flights, stays, rental cars, tickets, documents, reminders, maps, and expenses in one travel app.",
+      "Forward travel emails, get organized itineraries, track cancellation deadlines, and keep receipts and documents together.",
     siteName: "TripCache",
     images: [
       {
@@ -69,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TripCache - Travel Itinerary, Document & Cancellation Reminder App",
-    description: "Organize confirmation emails, trips, documents, flight updates, expenses, and cancellation reminders.",
+    title: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
+    description: "Forward travel emails, get organized itineraries, and never miss cancellation deadlines.",
     images: ["/app-feature-add-everything.webp"],
     creator: "@tripcache",
   },
@@ -102,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         {/* Resource Hints for Performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -124,7 +117,7 @@ export default function RootLayout({
               url: "https://trip-cache.com",
               logo: "https://trip-cache.com/app-icon.png",
               description:
-                "TripCache helps travelers organize confirmation emails, itineraries, cancellation reminders, secure documents, maps, and expenses.",
+                "TripCache helps travelers turn confirmation emails into organized itineraries while tracking cancellation reminders, documents, receipts, and expenses.",
               sameAs: [
                 "https://twitter.com/tripcache",
                 "https://github.com/tripcache",
@@ -144,10 +137,33 @@ export default function RootLayout({
               name: "TripCache",
               url: "https://trip-cache.com",
               description:
-                "Travel organization guides and app information for TripCache, a travel itinerary app for confirmation emails, documents, reminders, maps, and expenses.",
+                "Travel organization guides and app information for TripCache, an AI travel inbox and cancellation reminder platform for confirmation emails, documents, receipts, and expenses.",
               publisher: {
                 "@type": "Organization",
                 name: "TripCache",
+              },
+            }),
+          }}
+        />
+        <Script
+          id="software-application-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "TripCache",
+              applicationCategory: "TravelApplication",
+              operatingSystem: "iOS, Android",
+              url: "https://trip-cache.com",
+              image: "https://trip-cache.com/app-icon.png",
+              description:
+                "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, secure documents, receipts, and expense records.",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
               },
             }),
           }}

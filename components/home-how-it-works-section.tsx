@@ -70,6 +70,7 @@ export function HowItWorksSection() {
                     width={200}
                     height={432}
                     className="h-auto w-full object-contain drop-shadow-[0_20px_40px_rgba(2,6,23,0.45)]"
+                    style={{ width: "100%", height: "auto" }}
                   />
                 </div>
               </div>
