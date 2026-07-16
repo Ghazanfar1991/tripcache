@@ -2,333 +2,179 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "tripcase-shutdown-what-now",
-  title: "TripCase is Gone: Complete Migration Guide to TripCache",
-  excerpt: "Step-by-step guide for former TripCase users. Learn how to migrate your travel data and why thousands are choosing TripCache as their new travel companion.",
-  description: "Step-by-step guide for former TripCase users. Learn how to migrate your travel data and why thousands are choosing TripCache as their new travel companion.",
+  title: "TripCase Shut Down: What Former Users Can Do Now",
+  excerpt:
+    "The TripCase export window has ended. Learn how to rebuild upcoming trips from email, calendars, and receipts, then choose the right replacement workflow.",
+  description:
+    "TripCase shut down in 2025 and its export window has ended. Follow this current guide to recover booking details and rebuild upcoming trips safely.",
   date: "2025-04-10",
-  author: "Michael Chen",
-  readTime: "10 min read",
-  category: "Migration",
+  updatedAt: "2026-07-16",
+  author: "TripCache Editorial Team",
+  readTime: "8 min read",
+  category: "Migration Guide",
   image: "/blog-migration-guide.webp",
   keywords: [
-    "TripCase migration",
-    "switch from TripCase",
+    "TripCase shutdown",
     "TripCase data export",
-    "travel app migration",
-    "TripCache setup"
+    "TripCase replacement",
+    "TripCase alternative",
+    "rebuild travel itinerary",
   ],
 }
 
-export const body = String.raw`# TripCase is Gone: Complete Migration Guide to TripCache
+export const body = String.raw`# TripCase Shut Down: What Former Users Can Do Now
 
-The news hit hard: **TripCase shut down on April 1, 2025**. If you're reading this, you're probably one of the millions of users scrambling to find a replacement and migrate your travel data.
+TripCase ended access to its app and web experience on April 1, 2025. The [official TripCase website](https://www.tripcase.com/) says previous trip data was available for download only until June 30, 2025.
 
-Don't panic. This comprehensive guide will walk you through everything you need to know about migrating from TripCase to TripCache.
+That export period has passed. If you did not download an archive, the practical path in 2026 is to rebuild the trips that still matter from the original sources: confirmation emails, calendars, airline accounts, hotel accounts, receipts, and travel-agency documents.
 
-## Understanding the TripCase Shutdown
+This guide explains how to do that without wasting time recreating every old itinerary.
 
-Sabre Corporation, TripCase's parent company, announced the shutdown with limited notice. While they provided some data export options, many users found the process confusing and incomplete.
+## First: Decide What Is Worth Rebuilding
 
-### What Happened to Your TripCase Data?
+Most travelers do not need a complete copy of every past TripCase trip. Separate the work into three groups.
 
-- **Past trips** - Accessible for export until June 1, 2025
-- **Upcoming trips** - Need to be manually transferred
-- **Documents** - Must be downloaded before the deadline
-- **Settings and preferences** - Not transferable
+### Upcoming trips
 
-## Why Choose TripCache as Your TripCase Replacement?
+Rebuild these first. Collect every active flight, hotel, rental car, rail ticket, tour, meeting, restaurant, and event confirmation.
 
-We built TripCache specifically for displaced TripCase users. Here's what makes us the best choice:
+### Recent business trips
 
-### Feature Parity and Beyond
+Rebuild only the details required for reimbursement, client billing, tax preparation, or company records. A receipt, invoice, or card statement may matter more than a perfect itinerary.
 
-Every feature you loved in TripCase is available in TripCache:
+### Old leisure trips
 
-✅ **Email forwarding** - Automatic trip creation
-✅ **Flight tracking** - Real-time updates
-✅ **Document storage** - Unlimited capacity
-✅ **Expense reports** - CSV exports
-✅ **Multi-device sync** - Access anywhere
-✅ **Offline access** - View trips without internet
+Recreate these only if the history has personal value. Photos, calendar events, and email confirmations may already provide enough of a record.
 
-**Plus new features TripCase never had:**
+## Where to Recover Your Booking Details
 
-🆕 **Advanced filtering** - Find trips instantly
-🆕 **Dark mode** - Easy on the eyes
-🆕 **Better mobile experience** - Optimized for phones
-🆕 **Faster performance** - Lightning-quick loading
-🆕 **Modern design** - Beautiful gradient interface
+### Search your email
 
-## Step-by-Step Migration Guide
+Use combinations of the destination, airline, hotel, booking provider, and common confirmation terms:
 
-### Phase 1: Export Your TripCase Data (Before June 1, 2025)
+- “booking confirmed”
+- “reservation”
+- “itinerary”
+- “ticket” or “e-ticket”
+- “check-in”
+- “rental car”
+- “confirmation number”
+- “cancellation policy”
 
-**1. Log into TripCase one last time**
-Visit the TripCase website and log in with your credentials
+Search both your inbox and archived mail. If you travel for work, check the account used by your employer or travel agency too.
 
-**2. Navigate to Settings**
-Look for the "Export Data" or "Download My Data" option
+### Check airline and hotel accounts
 
-**3. Request your data export**
-TripCase will email you a file containing your trip history
+An airline or hotel loyalty account may show upcoming reservations and recent history. Confirm local departure times, terminal details, and confirmation numbers against the original email.
 
-**4. Download all documents**
-Manually download boarding passes, confirmations, and other documents
+### Review your calendar
 
-**5. Save everything locally**
-Store all files in a dedicated folder on your computer
+TripCase or a booking provider may have added events to your calendar. Calendar entries can help identify travel dates, but they should not be the only source for current flight or cancellation information.
 
-### Phase 2: Set Up Your TripCache Account
+### Review card statements and expense systems
 
-**1. Visit trip-cache.com**
-Click "Get Started" to begin the signup process
+For business trips, card transactions, expense reports, and reimbursement submissions can help reconstruct vendors, dates, and amounts. Keep sensitive payment information out of a general itinerary.
 
-**2. Create your account**
-Use the same email you used for TripCase for continuity
+### Ask the travel agency or booking owner
 
-**3. Verify your email**
-Check your inbox and click the verification link
+If an employer, assistant, or travel agency made the booking, ask for the current itinerary or passenger receipt. The agency's record may be more accurate than an old calendar event.
 
-**4. Complete your profile**
-Add your name, preferences, and notification settings
+## Build a Minimum Reliable Itinerary
 
-**5. Get your unique email address**
-TripCache will assign you a unique forwarding email (e.g., yourname@trips.tripcache.app)
+For each upcoming trip, capture the details you will actually need while traveling.
 
-### Phase 3: Import Your Historical Data
+### Flights
 
-**Option A: Manual Entry (Recommended for Important Trips)**
+- Airline and flight number
+- Travel date and local departure time
+- Origin and destination airports
+- Booking reference
+- Passenger name
+- Terminal or gate only when current
 
-For upcoming trips and important historical data:
+### Hotels and stays
 
-1. Click "Add Trip" in TripCache
-2. Enter flight details from your TripCase export
-3. Upload any saved documents
-4. Add notes and tags as needed
+- Property name and address
+- Check-in and check-out dates
+- Confirmation number
+- Payment status
+- Free-cancellation cutoff, including the property's local time zone
 
-**Option B: Email Forwarding (For Future Trips)**
+### Rental cars and transport
 
-1. Find booking confirmation emails in your inbox
-2. Forward them to your TripCache email address
-3. Let our AI parser extract the details automatically
+- Pickup and return location
+- Local pickup and return time
+- Confirmation number
+- Cancellation terms
 
-**Option C: CSV Import (Coming Soon)**
+### Meetings, tours, and tickets
 
-We're building a direct CSV import tool for bulk migration. Sign up for early access at trip-cache.com/import
+- Venue or meeting location
+- Start time in the local time zone
+- Booking or ticket reference
+- Contact details
+- Cancellation or change policy
 
-### Phase 4: Update Your Email Filters
+## Verify Before You Travel
 
-This is crucial for seamless future trip tracking:
+Rebuilt itineraries can contain mistakes. Before relying on the new app or document:
 
-**Gmail Users:**
+1. Compare flight details with the airline.
+2. Confirm hotel dates and the cancellation cutoff with the property or booking provider.
+3. Check whether a booking is prepaid, pay-at-property, refundable, or non-refundable.
+4. Test that notifications are enabled on your phone.
+5. Keep official tickets, passports, visas, and immigration records available from their authoritative source.
 
-1. Go to Settings → Filters and Blocked Addresses
-2. Find filters forwarding to TripCase
-3. Edit each filter to forward to your TripCache email instead
-4. Common senders to update:
-   - noreply@united.com
-   - confirmation@delta.com
-   - booking@expedia.com
-   - reservations@hotels.com
+An itinerary app is an organizer. It should not replace the airline, hotel, travel agency, government, or original ticket issuer as the final authority.
 
-**Outlook Users:**
+## Choosing a TripCase Replacement
 
-1. Go to Settings → Mail → Rules
-2. Find rules forwarding to TripCase
-3. Update the forwarding address to TripCache
-4. Test with a sample email
+Different apps replace different parts of TripCase.
 
-**Apple Mail Users:**
+- **TripIt** is a mature choice for broad confirmation-email organization and travel-day alerts.
+- **Wanderlog** is strong for collaborative planning, maps, recommendations, and route optimization.
+- **Flighty** focuses deeply on flight status, delays, airports, and frequent-flyer history.
+- **TripCache** focuses on post-booking organization: confirmation emails, cancellation deadlines, documents, receipts, and expense records.
 
-1. Go to Mail → Preferences → Rules
-2. Edit existing TripCase forwarding rules
-3. Change the destination to TripCache
-4. Apply to existing messages if needed
+See the full [TripCase alternatives comparison](/blog/tripcase-alternative-2025) before choosing.
 
-### Phase 5: Migrate Your Documents
+## Rebuilding Upcoming Trips in TripCache
 
-**1. Organize your downloaded TripCase documents**
-Sort by trip, date, or document type
+If TripCache fits your workflow, use this order:
 
-**2. Upload to TripCache**
-Use the document upload feature for each trip
+1. Download TripCache from the official [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache) listing.
+2. Create the upcoming trip with the correct destination and dates.
+3. Manually add the essential bookings, or use Pro email forwarding to create reviewable drafts from confirmations.
+4. Check each draft before saving it.
+5. Add hotel, car, tour, and ticket cancellation deadlines.
+6. Attach only the travel documents you need, after reviewing the [Privacy Policy](/privacy) and current app-store disclosures.
+7. Add receipts and expenses that will matter after the trip.
+8. Export important business records separately when required.
 
-**3. Tag and categorize**
-Add labels like "Passport," "Visa," "Boarding Pass"
+The [email-to-itinerary feature page](/features/email-to-itinerary) explains the forwarding workflow. The [cancellation reminder page](/features/cancellation-reminders) covers refundable booking deadlines.
 
-**4. Verify everything uploaded correctly**
-Double-check that all documents are accessible
+## What Not to Do
 
-## Common Migration Challenges and Solutions
+- Do not pay a third party that claims it can restore deleted TripCase account data without clear evidence.
+- Do not upload passport or payment information to an unfamiliar migration service.
+- Do not assume an old flight time or gate is still current.
+- Do not recreate years of history before securing upcoming travel.
+- Do not treat a comparison article as a substitute for checking the current product and store pages.
 
-### Challenge 1: "I Can't Access My TripCase Data Anymore"
+## A Simple Recovery Checklist
 
-**Solution:** If you missed the export deadline, you can still rebuild your travel history:
+- [ ] Collect upcoming confirmation emails
+- [ ] Check airline, hotel, agency, and calendar records
+- [ ] Rebuild future trips first
+- [ ] Verify local dates and time zones
+- [ ] Record free-cancellation deadlines
+- [ ] Test notifications
+- [ ] Keep authoritative tickets and documents accessible
+- [ ] Export required business records
 
-- Check your email for old booking confirmations
-- Forward them to TripCache for automatic parsing
-- Manually enter critical upcoming trips
-- Use credit card statements to identify past trips
+## Bottom Line
 
-### Challenge 2: "My Email Filters Aren't Working"
+The official TripCase export window is over, but most travelers can rebuild what they need from the original booking sources. Focus on upcoming travel, verify every important detail, and choose a replacement based on the workflow you actually need.
 
-**Solution:** Test your filters systematically:
-
-- Send a test email to yourself with flight details
-- Forward it to your TripCache address
-- Verify it appears in your dashboard
-- Adjust filter rules if needed
-
-### Challenge 3: "I Have Hundreds of Past Trips"
-
-**Solution:** Prioritize strategically:
-
-- Focus on upcoming trips first
-- Add frequently referenced past trips
-- Use the CSV import tool when it launches
-- Remember: you don't need to migrate everything
-
-### Challenge 4: "I'm Not Tech-Savvy"
-
-**Solution:** We're here to help:
-
-- Email support@tripcache.app for personal assistance
-- Watch our video tutorials at trip-cache.com/help
-- Join our community forum for peer support
-- Schedule a free onboarding call
-
-## Optimizing Your TripCache Setup
-
-Once you've migrated, optimize your experience:
-
-### Customize Your Dashboard
-
-- **Set your home airport** for faster trip entry
-- **Choose your preferred units** (miles vs kilometers)
-- **Configure notifications** for flight updates
-- **Select your theme** (light or dark mode)
-
-### Set Up Integrations
-
-- **Calendar sync** - Add trips to your calendar automatically
-- **Expense tools** - Connect to your accounting software
-- **Team sharing** - Invite colleagues or family members
-
-### Master the Features
-
-- **Use tags** to categorize trips (business, personal, family)
-- **Create trip groups** for multi-leg journeys
-- **Set up alerts** for important travel dates
-- **Explore CSV exports** for expense reporting
-
-## What Makes TripCache Better Than TripCase?
-
-### 1. Modern Technology Stack
-
-TripCache is built with cutting-edge technology:
-
-- **Faster loading times** - 3x faster than TripCase
-- **Better mobile experience** - Responsive design
-- **Improved security** - Bank-level encryption
-- **Regular updates** - New features every month
-
-### 2. User-Centric Design
-
-We listened to TripCase users' complaints:
-
-- **Cleaner interface** - Less clutter, more focus
-- **Intuitive navigation** - Find what you need quickly
-- **Beautiful aesthetics** - Gradient design that's easy on the eyes
-- **Accessibility** - Works for users with disabilities
-
-### 3. Affordable for Everyone
-
-With a generous Free plan and Pro at $9.99/month:
-
-- **Free plan for basic trip management** - No credit card required
-- **Pro at $9.99/month** - Email automation, CSV exports, unlimited docs
-- **80% cheaper than TripIt Pro** - More features, less cost
-- **No ads** - Clean, distraction-free experience
-
-### 4. Better Support
-
-We're committed to helping you:
-
-- **24/7 email support** - We respond within hours
-- **Comprehensive documentation** - Detailed guides
-- **Active community** - Connect with other travelers
-- **Regular webinars** - Learn tips and tricks
-
-## Timeline for Migration
-
-Here's a realistic timeline for migrating from TripCase to TripCache:
-
-**Week 1: Setup and Familiarization**
-- Create TripCache account
-- Explore the interface
-- Add one or two test trips
-- Set up email forwarding
-
-**Week 2: Data Migration**
-- Import upcoming trips
-- Upload important documents
-- Configure settings and preferences
-- Test all features
-
-**Week 3: Optimization**
-- Fine-tune email filters
-- Organize historical data
-- Set up integrations
-- Customize your dashboard
-
-**Week 4: Full Transition**
-- Delete TripCase bookmarks
-- Update saved passwords
-- Train team members (if applicable)
-- Celebrate your successful migration!
-
-## Success Stories from Migrated Users
-
-**Jennifer M., Marketing Director**
-*"I was skeptical about switching from TripCase, but TripCache has been incredible. The migration took less than an hour, and I actually prefer the interface now."*
-
-**Robert K., Consultant**
-*"As someone who travels 200+ days a year, I need reliable trip tracking. TripCache hasn't missed a single booking, and the CSV exports are a game-changer for my expense reports."*
-
-**Lisa T., Travel Blogger**
-*"The document storage in TripCache is so much better than TripCase. I can finally keep all my visas, boarding passes, and confirmations organized in one place."*
-
-## Frequently Asked Questions
-
-**Q: How long does migration take?**
-A: Most users complete the basic migration in 30-60 minutes. Full historical data migration may take longer depending on your travel history.
-
-**Q: Will I lose any data?**
-A: No! As long as you export your TripCase data before the deadline and follow our migration guide, you won't lose anything.
-
-**Q: Is TripCache really free forever?**
-A: TripCache offers a generous Free plan for basic trip management. Pro features like email automation and CSV exports are available at $9.99/month — still 80% cheaper than TripIt Pro.
-
-**Q: What if I need help?**
-A: Email us at support@tripcache.app or visit our help center at trip-cache.com/help. We're here to assist you every step of the way.
-
-**Q: Can I use TripCache on my phone?**
-A: TripCache works perfectly on mobile browsers, and native iOS/Android apps are coming soon.
-
-## Take Action Today
-
-Don't wait until the last minute. Start your migration to TripCache today:
-
-1. **Sign up** at trip-cache.com
-2. **Export** your TripCase data (if you haven't already)
-3. **Follow** this migration guide step by step
-4. **Enjoy** stress-free travel organization
-
-The TripCase shutdown doesn't have to be a disaster. With TripCache, you're getting an even better travel companion - one that's faster, more beautiful, and completely free.
-
-**Ready to make the switch?** [Start your migration now →](https://trip-cache.com)
-
----
-
-*Need personalized migration assistance? Email our team at support@tripcache.app - we're happy to help!*
+For TripCache questions, email support@trip-cache.com or compare the current [Basic and Pro plans](/pricing).
 `

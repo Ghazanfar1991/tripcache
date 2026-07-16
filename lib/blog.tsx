@@ -2,16 +2,11 @@ import type { BlogPost, BlogSummary } from "@/types/blog"
 import { renderMarkdown } from "@/lib/markdown"
 
 import * as BestTravelApps from "@/content/blog/best-travel-apps-2025"
-import * as DigitalNomadOrganization from "@/content/blog/digital-nomad-organization"
 import * as EmailToTripAutomation from "@/content/blog/email-to-trip-automation"
-import * as FrequentFlyerTips from "@/content/blog/frequent-flyer-tips"
-import * as GettingStartedWithTripcache from "@/content/blog/getting-started-with-tripcache"
 import * as PrivacyAndSecurity from "@/content/blog/privacy-and-security"
-import * as TravelExpenseTracking from "@/content/blog/travel-expense-tracking"
 import * as TripcaseAlternative from "@/content/blog/tripcase-alternative-2025"
 import * as TripcaseShutdown from "@/content/blog/tripcase-shutdown-what-now"
 import * as TripitComparison from "@/content/blog/tripit-vs-tripcache-comparison-2025"
-import * as TravelDocumentOrganization from "@/content/blog/travel-document-organization-guide-2025"
 import * as AutomaticFlightTracking from "@/content/blog/how-to-automatically-track-flights-2025"
 import * as AiTripPlanner from "@/content/blog/ai-trip-planner-2026"
 import * as BusinessTravelManagement from "@/content/blog/business-travel-management-guide-2026"
@@ -49,18 +44,13 @@ const rawPosts = [
   TravelItineraryTemplate,
   FlightyComparison,
   GoogleTravelAlternative,
-  TravelDocumentOrganization,
   AutomaticFlightTracking,
   TripitComparison,
   TripcaseAlternative,
   TripcaseShutdown,
   BestTravelApps,
-  GettingStartedWithTripcache,
   EmailToTripAutomation,
-  TravelExpenseTracking,
-  DigitalNomadOrganization,
   PrivacyAndSecurity,
-  FrequentFlyerTips,
 ]
 
 const posts: BlogPost[] = rawPosts.map((source) => {

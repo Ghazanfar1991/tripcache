@@ -4,88 +4,62 @@ import { seoLandingPages } from "@/lib/seo-page-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://trip-cache.com"
-  const now = new Date()
+  const siteUpdatedAt = new Date("2026-07-16")
 
   const blogUrls = getBlogSummaries().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt ?? post.date),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
   }))
 
   const seoUrls = seoLandingPages.map((page) => ({
     url: `${baseUrl}${page.path}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: page.kind === "feature" ? 0.9 : 0.85,
+    lastModified: siteUpdatedAt,
   }))
 
   return [
     {
       url: baseUrl,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 1,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/features`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/alternatives`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.75,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/tools`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.75,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/tools/hotel-cancellation-deadline-calculator`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.4,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.4,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/account-delete`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.3,
+      lastModified: siteUpdatedAt,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
+      lastModified: siteUpdatedAt,
     },
     ...seoUrls,
     ...blogUrls,

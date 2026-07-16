@@ -2,84 +2,132 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "privacy-and-security",
-  title: "How We Keep Your Travel Data Secure",
-  excerpt: "Your privacy matters. Learn about the security measures and encryption protocols we use to protect your sensitive travel information.",
-  description: "Your privacy matters. Learn about the security measures and encryption protocols we use to protect your sensitive travel information.",
+  title: "Travel App Privacy: What to Check Before Uploading Documents",
+  excerpt:
+    "A practical checklist for evaluating travel app privacy, store disclosures, document sensitivity, deletion controls, and safer travel-document habits.",
+  description:
+    "Before uploading passports, tickets, receipts, or confirmation emails, use this travel app privacy checklist to review disclosures, deletion, and document sensitivity.",
   date: "2024-12-20",
-  author: "David Park",
-  readTime: "5 min read",
-  category: "Security",
+  updatedAt: "2026-07-16",
+  author: "TripCache Editorial Team",
+  readTime: "6 min read",
+  category: "Privacy",
   image: "/data-security-encryption.webp",
   keywords: [
-    "travel data security",
+    "travel app privacy",
+    "travel document security",
+    "safe travel document app",
+    "travel email privacy",
     "TripCache privacy",
-    "secure travel app",
-    "GDPR compliant travel app",
-    "encrypted itinerary manager"
   ],
 }
 
-export const body = String.raw`# How TripCache Keeps Your Travel Data Secure
+export const body = String.raw`# Travel App Privacy: What to Check Before Uploading Documents
 
-Trust is the foundation of every great travel app. When you forward booking confirmations, you're sharing passport numbers, loyalty IDs, flight plans, and credit card details. TripCache was engineered with enterprise-grade security so you can stay organized without compromising privacy.
+Travel apps can receive unusually sensitive information: passenger names, booking references, travel dates, hotel addresses, receipts, passport copies, visas, and confirmation emails.
 
-## Security Principles We Live By
+Convenience is useful, but no traveler should upload every available document by default. Before using TripCache or any other itinerary app, review what the product collects, why it needs that information, how deletion works, and what the official app-store disclosures say.
 
-We follow three core commitments:
+## 1. Start With the Current Privacy Policy
 
-- **Privacy by design** – data minimization and user control sit at the heart of every feature.
-- **Defense in depth** – multiple layers of protection guard against external and internal threats.
-- **Transparency** – no dark patterns, no hidden data sales, and no surprise partner access.
+Marketing pages and old blog posts are not the final authority. Read the current privacy policy and look for clear answers to these questions:
 
-## Encryption at Every Layer
+- What account information is collected?
+- Are forwarded booking emails stored or only parsed?
+- Which diagnostic and analytics data is collected?
+- What service providers process the data?
+- How can you request access, correction, or deletion?
+- How long can backups or logs remain after deletion?
 
-- **In transit:** Every connection uses TLS 1.3 with modern cipher suites.
-- **At rest:** All databases and object storage are encrypted using AES-256.
-- **Document vault:** Uploaded passports, visas, and PDFs live in a hardened storage bucket with rotating keys.
-- **Secrets management:** Credentials are stored in dedicated secret managers with strict rotation policies.
+For TripCache, use the current [Privacy Policy](/privacy).
 
-## Strict Access Controls
+## 2. Review the App Store and Google Play Disclosures
 
-- Production systems run in isolated VPCs with zero-trust networking.
-- Only vetted engineers with a business need can access infrastructure.
-- Administrative actions are logged and reviewed regularly.
-- Multi-factor authentication is enforced across internal tools.
+Apple and Google require developers to publish platform-specific privacy or data-safety information. These disclosures can change as an app changes, so review them at download time.
 
-## Compliance and Data Residency
+- [TripCache on the App Store](https://apps.apple.com/app/id6758403056)
+- [TripCache on Google Play](https://play.google.com/store/apps/details?id=app.tripcache)
 
-- TripCache complies with GDPR and CCPA, giving you the right to access, correct, or delete your data at any time.
-- Data is hosted in SOC 2-certified data centers with redundant backups.
-- EU user data can be confined to EU regions upon request.
+If a website statement and a current store disclosure appear inconsistent, contact the developer before uploading sensitive documents. The discrepancy should be resolved rather than ignored.
 
-## Keeping Attackers Out
+## 3. Upload the Minimum Useful Document
 
-We invest in proactive security:
+An itinerary often needs far less information than the original document contains.
 
-- Continuous vulnerability scanning and penetration testing.
-- Bug bounty partnerships to surface real-world exploits.
-- Automated anomaly detection that flags suspicious login patterns.
-- Rate limiting and bot protection on all public endpoints.
+### Usually lower sensitivity
 
-## You Control Your Data
+- Hotel confirmation without payment details
+- Train or event ticket
+- Rental car voucher
+- Restaurant reservation
+- Trip schedule or meeting agenda
 
-- Download your entire travel history in CSV format whenever you like.
-- Delete trips, documents, or your whole account from within settings.
-- Request API access logs for peace of mind.
-- Turn off email notifications if you prefer minimal data exposure.
+### Higher sensitivity
 
-## Building a Culture of Security
+- Passport or national identity document
+- Visa containing personal identifiers
+- Boarding pass with a scannable barcode
+- Insurance document with medical information
+- Receipt showing a home address or payment details
+- Confirmation email containing loyalty or account numbers
 
-Security is not a feature—it's a culture:
+Ask whether you need the complete file. A redacted copy, an offline copy, or a note with the essential reference may be safer.
 
-- Every employee completes mandatory security and privacy training.
-- Incident response drills keep the team ready for unlikely events.
-- We publish transparency updates whenever policies change.
+## 4. Keep Authoritative Documents Available Separately
 
-## Partnering With You
+An itinerary app should make documents easier to find; it should not become the only place they exist.
 
-Have a privacy question or need a custom data agreement? Reach us at security@tripcache.app. We're happy to complete vendor assessments, share penetration test summaries, or accommodate enterprise requirements.
+- Keep passports and visas available in their official physical or digital form.
+- Keep airline tickets and current flight details accessible through the airline.
+- Keep insurance policies available through the insurer.
+- Keep tax and reimbursement records in the system required by your employer or accountant.
+- Maintain an offline backup for anything you must access without connectivity.
 
-## Travel Confidently with TripCache
+## 5. Check Account and Device Controls
 
-Your itinerary is more than a calendar—it's a roadmap to your life. TripCache safeguards that roadmap with encryption, compliance, and a relentless focus on privacy. Organize your journeys knowing your data stays protected from booking to boarding.
+Privacy depends on the phone and account as well as the app.
+
+- Use a unique password where the app uses password authentication.
+- Enable multi-factor authentication when available.
+- Protect the phone with a strong passcode or biometric lock.
+- Keep the operating system and app updated.
+- Avoid displaying sensitive notifications on a locked screen.
+- Remove old devices and sessions if the product provides that control.
+
+## 6. Test Deletion Before You Depend on It
+
+Look for a clear way to delete a trip, individual document, and entire account. Understand whether deletion is immediate or whether backups follow a retention period.
+
+TripCache also provides an [account deletion page](/account-delete). For a privacy request, use the contact address on the current Privacy Policy.
+
+## 7. Be Careful With Forwarded Email
+
+Booking emails may contain more than itinerary details. Before forwarding:
+
+- Remove unrelated parts of a long email thread.
+- Check for payment information, loyalty identifiers, and personal addresses.
+- Forward from the account you intend to associate with the trip.
+- Review the generated itinerary draft before saving it.
+- Delete a forwarded item if it is not needed.
+
+The [email-to-itinerary guide](/features/email-to-itinerary) explains TripCache's review-first workflow.
+
+## 8. Evaluate Claims, Not Just Design
+
+Polished visuals, security icons, and phrases such as “enterprise grade” are not evidence by themselves. Trust precise claims only when the current product documentation, store disclosure, certification, or independent report supports them.
+
+Useful trust signals include:
+
+- A clear privacy policy with a current effective date
+- Consistent support and privacy contact information
+- Honest app-store disclosures
+- A working deletion process
+- Specific explanations of what a feature does and does not do
+- No invented review counts, customer numbers, certifications, or guarantees
+
+## TripCache's Role
+
+TripCache is designed to organize confirmed travel: booking emails, itineraries, cancellation deadlines, travel documents, receipts, and expenses. Travelers remain responsible for deciding which information to upload and for keeping authoritative documents available from the original issuer.
+
+Read the [Privacy Policy](/privacy), compare [Basic and Pro](/pricing), and contact privacy@trip-cache.com if you need clarification before adding sensitive travel information.
 `

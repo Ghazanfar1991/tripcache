@@ -30,21 +30,21 @@ const sections = [
   {
     heading: "Security & Retention",
     copy: [
-      "All data is encrypted in transit (TLS 1.3) and at rest (AES-256). Access is limited to vetted team members with strict logging.",
+      "TripCache uses access controls and infrastructure safeguards intended to protect account and travel data. Platform-specific data collection and security disclosures are also available on the official App Store and Google Play listings.",
       "You can delete trips, documents, or your account from within the app. Backups roll off after 30 days.",
     ],
   },
   {
     heading: "Third-Party Processors",
     copy: [
-      "We rely on SOC 2 Type II partners for infrastructure, email, and analytics. Each processor is bound by data processing agreements and cannot use your data beyond the contracted service.",
+      "We use service providers for infrastructure, email delivery, analytics, and app distribution. These providers process data only for the services they supply to TripCache, subject to their agreements and applicable law.",
     ],
   },
   {
     heading: "Your Rights",
     copy: [
       "Request a copy of your data, update incorrect information, restrict processing, or ask us to delete your account entirely.",
-      "Email privacy@tripcache.com and we’ll confirm the request within 5 business days.",
+      "Email privacy@trip-cache.com to submit a privacy request.",
     ],
   },
 ]
@@ -66,8 +66,8 @@ export default function PrivacyPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">Privacy Policy</p>
           <h1 className="text-4xl sm:text-5xl font-bold">Your travel data stays yours.</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Effective as of May 2025. We designed TripCache to be transparent, compliant, and secure for every traveler
-            and enterprise team.
+            Effective July 16, 2026. This page explains how TripCache handles data for travelers using the website and
+            mobile apps.
           </p>
         </header>
 
@@ -89,8 +89,8 @@ export default function PrivacyPage() {
 
         <footer className="rounded-3xl border border-border/50 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-6 text-center text-sm text-muted-foreground">
           Questions? Email{" "}
-          <a className="font-semibold text-cyan-500" href="mailto:privacy@tripcache.com">
-            privacy@tripcache.com
+          <a className="font-semibold text-cyan-500" href="mailto:privacy@trip-cache.com">
+            privacy@trip-cache.com
           </a>{" "}
           or mail TripCache, 440 N Barranca Ave #9933, Covina, CA 91723.
         </footer>

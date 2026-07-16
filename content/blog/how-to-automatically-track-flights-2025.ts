@@ -411,7 +411,7 @@ Example: United flight number UA1234 also sold as:
 
 ### Is It Safe to Forward Flight Emails?
 
-**Short answer:** Yes, when using reputable services with encryption.
+**Short answer:** It can be convenient, but you should review the service's current privacy policy and app-store disclosures first.
 
 **What's in a flight confirmation email:**
 - Your name
@@ -424,12 +424,11 @@ Example: United flight number UA1234 also sold as:
 - Password
 - Passport information
 
-**TripCache security:**
-- End-to-end encryption
-- SOC 2 compliant servers
-- Zero data selling
-- GDPR compliant
-- 2FA available
+**TripCache privacy checks:**
+- Review the current Privacy Policy
+- Review the iOS or Google Play data disclosure for your platform
+- Avoid forwarding messages that contain payment or identity-document details
+- Delete trips and your account when you no longer need the data
 
 **Best practices:**
 - Use strong password for tracking app
@@ -440,9 +439,9 @@ Example: United flight number UA1234 also sold as:
 ### Data Retention
 
 **TripCache:**
-- Keeps flight data indefinitely (for trip history)
-- You can delete trips manually
-- Full account deletion available
+- Lets you delete trips manually
+- Provides an account deletion process
+- Describes retention and deletion in its current Privacy Policy
 - Export your data anytime (CSV)
 
 **How long should you keep flight records?**
@@ -605,10 +604,10 @@ A: TripCache syncs with airline databases and updates automatically. You'll get 
 A: Yes, forward their confirmations to your account. Useful for tracking kids' flights or picking up travelers.
 
 **Q: Is there a limit to how many flights I can track?**
-A: No limit with TripCache (free forever). TripIt Free has some limitations.
+A: Limits can change by plan. Check the current TripCache pricing page and in-app subscription details.
 
 **Q: What happens if the service shuts down?**
-A: You can always export your data as CSV. But TripCache is committed to staying free and operational.
+A: Keep original booking confirmations and provider records. Pro users can also use available export tools for travel records.
 
 ## Action Plan: Set Up Today
 

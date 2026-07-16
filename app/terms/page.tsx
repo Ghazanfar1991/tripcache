@@ -30,21 +30,21 @@ const terms = [
   {
     title: "3. Subscription & Billing",
     body: [
-      "Paid tiers renew monthly or annually depending on the plan you select. We accept all major cards through our payment processor.",
-      "Invoices are due upon receipt. Late payments may result in suspension after reasonable notice.",
+      "Paid subscriptions renew according to the billing period shown when you purchase in the mobile app.",
+      "Apple App Store or Google Play billing terms, cancellation controls, and refund policies apply to purchases made through those platforms.",
     ],
   },
   {
     title: "4. Service Commitments",
     body: [
-      "We maintain >99.5% uptime, scheduled maintenance notices, and enterprise-grade security practices.",
+      "We work to keep TripCache reliable, but travel data and third-party flight information can be delayed, incomplete, or unavailable.",
       "TripCache may modify features to improve performance or compliance; material changes will be communicated in advance when possible.",
     ],
   },
   {
     title: "5. Termination",
     body: [
-      "You may cancel at any time from the billing dashboard. Refunds are not provided for partially used billing periods unless required by law.",
+      "You may cancel a subscription through the store account used to purchase it. Refund eligibility is determined by the applicable store policy and law.",
       "We reserve the right to suspend or terminate accounts that violate these Terms or applicable regulations.",
     ],
   },
@@ -73,7 +73,7 @@ export default function TermsPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">Terms of Service</p>
           <h1 className="text-4xl sm:text-5xl font-bold">The rules that keep TripCache reliable for everyone.</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Effective as of May 2025. These Terms govern your access to TripCache apps, APIs, and related services.
+            Effective July 16, 2026. These Terms govern your access to TripCache apps, the website, and related services.
           </p>
         </header>
 
@@ -92,8 +92,8 @@ export default function TermsPage() {
 
         <footer className="rounded-3xl border border-border/50 bg-card/60 p-6 text-sm text-muted-foreground text-center">
           Questions about these Terms? Contact{" "}
-          <a className="font-semibold text-cyan-500" href="mailto:legal@tripcache.com">
-            legal@tripcache.com
+          <a className="font-semibold text-cyan-500" href="mailto:legal@trip-cache.com">
+            legal@trip-cache.com
           </a>
           .
         </footer>

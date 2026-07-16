@@ -115,7 +115,7 @@ AI categorizes expenses automatically:
 - Creates trip drafts you can review before accepting — no accidental duplicates
 - Pro plan includes CSV expense exports
 - Works on iOS, Android, and web
-- 80% cheaper than TripIt Pro
+- Available on iOS and Android
 
 **Best for:** Travelers who want hands-free itinerary creation from email
 

@@ -13,17 +13,17 @@ import {
 
 const slides = [
   {
-    src: "/app-feature-add-everything.webp",
-    alt: "TripCache add flights hotels cars activities and tickets screen",
+    src: "/app-screenshot-import.webp",
+    alt: "TripCache booking confirmation email import screen",
     leftBadge: {
-      label: "Trip items",
-      title: "Add every booking",
-      description: "Hotels, cars, tickets, notes, and more.",
+      label: "Travel inbox",
+      title: "Forward confirmations",
+      description: "Turn booking emails into trip drafts.",
     },
     rightBadge: {
-      label: "One itinerary",
-      title: "Everything stays together",
-      description: "A complete trip view beyond flights.",
+      label: "Review first",
+      title: "Keep the details accurate",
+      description: "Check each draft before saving it.",
     },
   },
   {
@@ -41,101 +41,31 @@ const slides = [
     },
   },
   {
-    src: "/app-feature-secure-documents.webp",
-    alt: "TripCache secure travel document vault screen",
-    leftBadge: {
-      label: "Documents",
-      title: "Secure travel vault",
-      description: "Passports, tickets, and passes stay organized.",
-    },
-    rightBadge: {
-      label: "PIN access",
-      title: "Private by design",
-      description: "Sensitive travel files stay easy to reach.",
-    },
-  },
-  {
-    src: "/app-screenshot-home.webp",
-    alt: "TripCache home screen",
-    leftBadge: {
-      label: "Smart dashboard",
-      title: "See active trips fast",
-      description: "Flights and updates stay in one view.",
-    },
-    rightBadge: {
-      label: "Mobile-first",
-      title: "Built for travel clarity",
-      description: "Important details stay visible instantly.",
-    },
-  },
-  {
-    src: "/app-screenshot-trip-detail.webp",
-    alt: "TripCache trip detail screen",
-    leftBadge: {
-      label: "Trip timeline",
-      title: "Every segment in order",
-      description: "Key trip details stay structured.",
-    },
-    rightBadge: {
-      label: "Cleaner workflow",
-      title: "Less inbox searching",
-      description: "Trip info is easier to scan on the move.",
-    },
-  },
-  {
-    src: "/app-screenshot-flight-detail.webp",
-    alt: "TripCache flight detail screen",
-    leftBadge: {
-      label: "Flight updates",
-      title: "Track changes live",
-      description: "Gate and status stay attached to the trip.",
-    },
-    rightBadge: {
-      label: "Travel ready",
-      title: "Everything in one place",
-      description: "Flight info stays ready when needed.",
-    },
-  },
-  {
-    src: "/app-screenshot-history.webp",
-    alt: "TripCache history screen",
-    leftBadge: {
-      label: "Travel history",
-      title: "Look back quickly",
-      description: "Past travel stays organized for review.",
-    },
-    rightBadge: {
-      label: "Reporting",
-      title: "Better expense visibility",
-      description: "A cleaner record helps with reimbursement.",
-    },
-  },
-  {
-    src: "/app-screen-trip-map.webp",
-    alt: "TripCache trip map screen",
-    leftBadge: {
-      label: "Trip map",
-      title: "See the journey visually",
-      description: "Destinations and trip context stay easy to scan.",
-    },
-    rightBadge: {
-      label: "Location aware",
-      title: "Know what is nearby",
-      description: "Map-based context helps on travel days.",
-    },
-  },
-  {
     src: "/app-screen-expense-management.webp",
-    alt: "TripCache expense management screen",
+    alt: "TripCache business travel expense management screen",
     leftBadge: {
-      label: "Expenses",
-      title: "Track trip spending",
-      description: "Receipts and costs stay tied to each trip.",
+      label: "Business travel",
+      title: "Track costs by trip",
+      description: "Keep receipts and expenses together.",
     },
     rightBadge: {
       label: "Reports",
-      title: "Cleaner reimbursements",
-      description: "Expense records are easier to review.",
+      title: "Export cleaner records",
+      description: "Prepare CSVs for reimbursement or review.",
+    },
+  },
+  {
+    src: "/app-feature-secure-documents.webp",
+    alt: "TripCache travel document organization screen",
+    leftBadge: {
+      label: "Documents",
+      title: "Files beside the trip",
+      description: "Keep tickets, passes, and confirmations close.",
+    },
+    rightBadge: {
+      label: "Trip context",
+      title: "Find what you need faster",
+      description: "Avoid digging through inboxes and screenshots.",
     },
   },
 ]
@@ -146,6 +76,14 @@ const points = [
   "Trip documents and receipts",
   "Business travel expense records",
 ]
+
+function trackStoreClick(platform: "ios" | "android") {
+  const analyticsWindow = window as Window & {
+    gtag?: (command: "event", name: string, parameters: Record<string, string>) => void
+  }
+
+  analyticsWindow.gtag?.("event", "app_store_click", { platform, placement: "homepage_hero" })
+}
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -205,7 +143,7 @@ export default function Hero() {
           <div className="mx-auto max-w-[680px] text-center md:mx-0 md:text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-gradient-to-r from-primary/10 to-purple-500/10 px-3 py-1.5 text-xs font-medium text-primary sm:px-4 sm:py-2 sm:text-sm">
               <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              <span className="font-semibold">AI Travel Inbox & Cancellation Protection</span>
+              <span className="font-semibold">Post-booking travel organizer</span>
             </div>
 
             <h1 className="mt-6 text-3xl font-bold tracking-tight leading-tight text-foreground sm:text-4xl sm:leading-[1.1] lg:text-[2.75rem] xl:text-5xl">
@@ -216,14 +154,15 @@ export default function Hero() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg px-2 text-base leading-relaxed text-muted-foreground dark:text-gray-200 sm:px-0 sm:text-lg md:mx-0">
-              TripCache turns booking confirmations into organized itineraries, tracks hotel cancellation deadlines,
-              and keeps travel receipts, documents, flights, stays, and expenses together.
+              TripCache turns booking confirmations into organized itineraries, protects free-cancellation deadlines,
+              and keeps travel documents, receipts, flights, stays, and expenses together.
             </p>
 <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:flex-nowrap md:justify-start">
   <Link
     href="https://apps.apple.com/app/id6758403056"
     target="_blank"
     rel="noopener noreferrer"
+    onClick={() => trackStoreClick("ios")}
     className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
   >
     <img
@@ -237,6 +176,7 @@ export default function Hero() {
     href="https://play.google.com/store/apps/details?id=app.tripcache"
     target="_blank"
     rel="noopener noreferrer"
+    onClick={() => trackStoreClick("android")}
     className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
   >
     <img

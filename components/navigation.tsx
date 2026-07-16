@@ -82,7 +82,7 @@ export function Navigation() {
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>
               <ThemeToggle />
-              <GetStartedModal />
+              <GetStartedModal triggerLabel="Download" />
             </div>
           </div>
           {/* Mobile menu */}

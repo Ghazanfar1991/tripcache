@@ -19,6 +19,9 @@ export default function robots(): MetadataRoute.Robots {
           "Claude-SearchBot",
           "Claude-User",
           "PerplexityBot",
+          "Applebot",
+          "Applebot-Extended",
+          "Amazonbot",
         ],
         allow: "/",
         disallow: ["/api/", "/admin/"],
@@ -29,5 +32,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://trip-cache.com/sitemap.xml",
+    host: "https://trip-cache.com",
   }
 }

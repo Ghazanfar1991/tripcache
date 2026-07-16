@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 480, 640, 768, 1024, 1280, 1536],
     imageSizes: [64, 96, 128, 256, 384],
     qualities: [50, 55, 60, 75],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 86400,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -38,13 +35,43 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/tripcase-alternative-2026',
+        destination: '/blog/tripcase-alternative-2025',
+        permanent: true,
+      },
+      {
         source: '/blog/tripit-vs-tripcache-comparison-2026',
         destination: '/blog/tripit-vs-tripcache-comparison-2025',
         permanent: true,
       },
       {
         source: '/blog/travel-document-organization-guide-2026',
-        destination: '/blog/travel-document-organization-guide-2025',
+        destination: '/blog/best-travel-document-organizer-app-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/travel-document-organization-guide-2025',
+        destination: '/blog/best-travel-document-organizer-app-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/travel-expense-tracking',
+        destination: '/blog/business-travel-expense-reporting-app-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/digital-nomad-organization',
+        destination: '/blog/business-travel-management-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/getting-started-with-tripcache',
+        destination: '/features',
+        permanent: true,
+      },
+      {
+        source: '/blog/frequent-flyer-tips',
+        destination: '/blog/how-to-automatically-track-flights-2025',
         permanent: true,
       },
       {

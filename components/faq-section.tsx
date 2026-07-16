@@ -1,164 +1,119 @@
-"use client"
+import Link from "next/link"
 
-import { Plus, Minus } from "lucide-react"
-import { useState } from "react"
 import { SectionContainer } from "./section-container"
-import Script from "next/script"
 
 interface FAQItem {
-    question: string
-    answer: string
+  question: string
+  answer: string
 }
 
 const faqs: FAQItem[] = [
-    {
-        question: "Is TripCache free?",
-        answer: "TripCache offers a generous Free plan that includes manual trip entry, viewing itineraries, and basic organization. Our Pro plan ($9.99/month) unlocks premium features like email-to-trip automation, automatic flight status updates, CSV expense exports, and unlimited document storage. Start free and upgrade anytime!"
-    },
-    {
-        question: "What's included in the Free plan vs Pro plan?",
-        answer: "Free plan includes: manual trip creation, view itineraries, and basic trip organization. Pro plan ($9.99/month) adds: email-to-trip automation, automatic flight updates, CSV export, unlimited document storage, calendar integration, and priority support. It's 80% cheaper than TripIt Pro!"
-    },
-    {
-        question: "How does the email forwarding work?",
-        answer: "With TripCache Pro ($9.99/month), you receive your own unique email address (e.g., trips-abc123@tripcache.app). Simply forward any booking or flight confirmation email to this address. Our AI automatically reads the email, extracts your flight details and creates a flight draft. You'll receive a notification to review and accept the draft. Once accepted, the trip and its related flights are added to your Trips section. You can also view or manage all pending drafts anytime in the Drafts section of the app."
-    },
-
-    {
-        question: "What happened to TripCase?",
-        answer: "TripCase officially shut down on April 1, 2025, as part of Sabre Corporation's strategic restructuring. Millions of users were left searching for alternatives. TripCache was built specifically to fill this gap, offering all the features TripCase users loved, plus modern improvements at an affordable price."
-    },
-    {
-        question: "Can I export my travel data?",
-        answer: "Yes! TripCache Pro includes comprehensive CSV export functionality. You can generate detailed reports of your travel history, perfect for expense reimbursement, tax documentation, or personal recordkeeping. Export filters let you select specific date ranges or trip types."
-    },
-    {
-        question: "Is my data secure and private?",
-        answer: "Yes. We take data security and privacy very seriously. All your information is stored in a private, secure database that only you can access through your account. We never share or sell your data to any third party. If you choose to delete your account, all your data is permanently removed from our database. Your travel information always remains fully under your control."
-    },
-
-    {
-        question: "Does TripCache work on mobile devices?",
-        answer: "Yes. TripCache is designed as a mobile-first app. We're currently offering early access for users, and the full Android and iOS apps will be available soon on the app stores. You can register now to secure early access and be among the first to try the app when it launches."
-    },
-
-    {
-        question: "What airlines and booking sites are supported?",
-        answer: "TripCache's AI can automatically extract flight details from almost all airline confirmation emails and PDF tickets. Even if a booking format is unusual or some information is missing, you can review and manually add or edit the details before accepting the draft. This ensures every flight itinerary can be captured accurately."
-    }
-
+  {
+    question: "Is TripCache free?",
+    answer:
+      "Yes. TripCache Basic includes manual trip entry, itinerary viewing, and core trip organization. TripCache Pro costs $9.99 per month and adds the automation and reporting tools listed on the pricing page.",
+  },
+  {
+    question: "What is included in TripCache Pro?",
+    answer:
+      "Pro adds email-to-trip automation, automatic flight updates, CSV expense exports, expanded document storage, calendar integration, trip sharing, and priority support. Subscriptions are activated and managed in the mobile app.",
+  },
+  {
+    question: "How does email forwarding work?",
+    answer:
+      "TripCache Pro gives you a unique forwarding address. Send a booking confirmation to that address and TripCache extracts the travel details into a draft. You review the draft before adding it to your itinerary.",
+  },
+  {
+    question: "What happened to TripCase?",
+    answer:
+      "The TripCase app and web experience were sunset on April 1, 2025. TripCache is one option for former TripCase users who want email-based itinerary organization, cancellation reminders, documents, and expense records.",
+  },
+  {
+    question: "Can I track free-cancellation deadlines?",
+    answer:
+      "Yes. You can save cancellation cutoffs for refundable hotels, rental cars, tours, tickets, and other bookings, then choose when TripCache should remind you before the deadline.",
+  },
+  {
+    question: "Can I export my travel data?",
+    answer:
+      "Yes. TripCache Pro includes CSV exports for travel history and expense records, useful for reimbursement, client billing, tax preparation, or personal recordkeeping.",
+  },
+  {
+    question: "Does TripCache work on iPhone and Android?",
+    answer:
+      "Yes. TripCache is available now from the Apple App Store and Google Play. The website links directly to both official listings.",
+  },
+  {
+    question: "What types of bookings can I organize?",
+    answer:
+      "TripCache is designed for flights, hotels, rental cars, transport, activities, tickets, restaurants, meetings, parking, notes, documents, and custom trip items. Unusual email formats can still be reviewed and corrected before saving.",
+  },
 ]
 
 export function FAQSection() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  }
 
-    const toggleFAQ = (index: number) => {
-        setOpenIndex(openIndex === index ? null : index)
-    }
+  return (
+    <section className="content-auto-section relative overflow-hidden py-12 lg:py-16">
+      <script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-            }
-        }))
-    }
+      <SectionContainer className="relative z-10">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-12 space-y-4 text-center">
+            <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
+              Frequently asked <span className="text-gradient-primary">questions</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Straight answers about pricing, availability, email import, and the post-booking workflow.
+            </p>
+          </div>
 
-    return (
-        <>
-            <Script
-                id="faq-schema"
-                type="application/ld+json"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <details
+                key={faq.question}
+                open={index === 0}
+                className="group overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm transition hover:border-primary/30 dark:border-white/5 dark:bg-white/5"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 p-6 text-left text-lg font-semibold text-foreground marker:content-none">
+                  {faq.question}
+                  <span aria-hidden="true" className="text-2xl font-normal text-primary group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="px-6 pb-6 leading-relaxed text-muted-foreground dark:text-gray-300">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
 
-            <section className="content-auto-section relative py-12 lg:py-16 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-
-                <SectionContainer className="relative z-10">
-                    <div className="max-w-3xl mx-auto">
-                        <div className="text-center mb-12 space-y-4">
-                            <div
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium"
-                            >
-                                <span>Got Questions?</span>
-                            </div>
-
-                            <h2
-                                className="text-4xl md:text-5xl font-bold tracking-tight"
-                            >
-                                Frequently Asked
-                                <br />
-                                <span className="text-gradient-primary">Questions</span>
-                            </h2>
-
-                            <p
-                                className="text-lg text-muted-foreground"
-                            >
-                                Everything you need to know about TripCache
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            {faqs.map((faq, index) => (
-                                <div
-                                    key={index}
-                                    className="group"
-                                >
-                                    <div className="rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg dark:border-white/5 dark:bg-white/5">
-                                        <button
-                                            onClick={() => toggleFAQ(index)}
-                                            className="w-full flex items-center justify-between p-6 text-left transition-colors"
-                                            aria-expanded={openIndex === index}
-                                        >
-                                            <span className="text-lg font-semibold pr-8 text-foreground group-hover:text-primary transition-colors">
-                                                {faq.question}
-                                            </span>
-                                            <div className="flex-shrink-0">
-                                                {openIndex === index ? (
-                                                    <Minus className="w-5 h-5 text-primary transition-transform duration-300" />
-                                                ) : (
-                                                    <Plus className="w-5 h-5 text-muted-foreground transition-transform duration-300 group-hover:text-primary" />
-                                                )}
-                                            </div>
-                                        </button>
-
-                                        <div
-                                            className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                                                }`}
-                                        >
-                                            <div className="px-6 pb-6 text-muted-foreground leading-relaxed dark:text-gray-400">
-                                                {faq.answer}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div
-                            className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20"
-                        >
-                            <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
-                            <p className="text-muted-foreground mb-4">
-                                We're here to help! Reach out to our support team anytime.
-                            </p>
-                            <a
-                                href="mailto:support@trip-cache.com"
-                                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:scale-105"
-                            >
-                                Contact Support
-                            </a>
-                        </div>
-                    </div>
-                </SectionContainer>
-            </section>
-        </>
-    )
+          <div className="mt-12 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 to-purple-500/10 p-8 text-center">
+            <h3 className="mb-2 text-xl font-bold">Still have questions?</h3>
+            <p className="mb-4 text-muted-foreground">Contact the TripCache support team for setup or billing help.</p>
+            <Link
+              href="mailto:support@trip-cache.com"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:scale-[1.02]"
+            >
+              Contact support
+            </Link>
+          </div>
+        </div>
+      </SectionContainer>
+    </section>
+  )
 }

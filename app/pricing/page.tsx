@@ -1,268 +1,214 @@
-"use client"
-
 import Link from "next/link"
-import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Sparkles, Zap } from "lucide-react"
-import { motion } from "framer-motion"
-import { SectionContainer } from "@/components/section-container"
+import { ArrowRight, CheckCircle2, Clock3, FileSpreadsheet, MailCheck, ShieldCheck } from "lucide-react"
+
 import { Footer } from "@/components/footer"
+import { GetStartedModal } from "@/components/get-started-modal"
+import { SectionContainer } from "@/components/section-container"
 
 const plans = [
   {
     name: "Basic",
     price: "$0",
     cadence: "forever",
-    description: "For travelers who want organized itineraries without automation.",
-    badge: "Free forever",
+    description: "For travelers who want a clear itinerary and prefer to enter trip details manually.",
+    label: "Free plan",
     highlight: false,
-    features: ["Manual trip entry", "View itineraries", "Basic organization"],
-
-    meta: "No credit card needed. Upgrade any time.",
+    features: ["Manual trip entry", "View and organize itineraries", "Core trip organization"],
+    meta: "No credit card needed. Upgrade in the app when automation becomes useful.",
+    cta: "Download free",
   },
   {
     name: "Pro",
     price: "$9.99",
-    cadence: "/mo",
-    description: "Automation, exports, and priority help for power travelers and teams.",
-    badge: "Most popular",
+    cadence: "/month",
+    description: "For frequent and business travelers who want confirmations, reminders, and records handled faster.",
+    label: "Best for post-booking automation",
     highlight: true,
     features: [
       "Email-to-trip automation",
       "Automatic flight status updates",
-      "Live Flight Tracking & Alerts",
+      "Free-cancellation deadline reminders",
       "CSV expense export",
-      "Unlimited document storage",
-      "Calendar integration & trip sharing",
+      "Expanded document storage",
+      "Calendar integration and trip sharing",
       "Priority support",
     ],
-
-    meta: "Cancel anytime. Keep all your exports.",
+    meta: "Cancel anytime. Subscription billing is managed in the mobile app.",
+    cta: "Get TripCache Pro",
   },
 ]
 
-const highlightCards = [
+const reasons = [
   {
-    title: "Built to save time",
-    copy: "Forward booking emails and TripCache builds the trip timeline for you.",
-    icon: Zap,
+    title: "Save time after booking",
+    copy: "Forward confirmation emails and review a structured draft instead of retyping every reservation.",
+    icon: MailCheck,
   },
   {
-    title: "Export-ready records",
-    copy: "Generate clean CSVs for reimbursements, taxes, or sharing with finance.",
-    icon: ShieldCheck,
+    title: "Protect flexible bookings",
+    copy: "Track refundable booking cutoffs and get reminded before a hotel, car, tour, or ticket becomes non-refundable.",
+    icon: Clock3,
   },
   {
-    title: "Always in sync",
-    copy: "Live itinerary updates across devices with priority human support when you need it.",
-    icon: MessageCircle,
+    title: "Close out work trips faster",
+    copy: "Keep receipts and trip costs together, then export a CSV for reimbursement, clients, or tax records.",
+    icon: FileSpreadsheet,
   },
 ]
-
-const guarantees = ["Cancel anytime", "No hidden fees", "Data owned by you"]
 
 export default function PricingPage() {
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "TripCache Pricing",
+    url: "https://trip-cache.com/pricing",
+    mainEntity: {
+      "@id": "https://trip-cache.com/#app",
+    },
+  }
+
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-background via-background to-muted/30 text-foreground pt-24">
+    <main className="relative min-h-screen bg-gradient-to-b from-background via-background to-muted/30 pt-24 text-foreground">
+      <script
+        id="pricing-page-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -left-10 top-[-120px] h-72 w-72 rounded-full bg-primary/20 blur-[120px]" />
         <div className="absolute right-[-60px] top-32 h-96 w-96 rounded-full bg-purple-500/15 blur-[140px]" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.12]" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.08]" />
       </div>
 
-      <motion.section
-        initial={{ opacity: 0, y: -12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="relative pb-12 lg:pb-16"
-      >
-        <SectionContainer className="text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold">
-            <Sparkles className="h-4 w-4" />
-            <span>Pricing that matches how you travel</span>
-          </div>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
-              Simple plans, premium trip management.
+      <section className="relative pb-12 lg:pb-16">
+        <SectionContainer className="space-y-6 text-center">
+          <div className="mx-auto max-w-3xl space-y-4">
+            <h1 className="text-balance text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+              Start free. Pay for the post-booking work you want automated.
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground">
-              Choose the plan that fits your trips. Start free and unlock automation, exports, and concierge support when
-              you are ready.
+            <p className="text-lg text-muted-foreground sm:text-xl">
+              Basic keeps trips organized manually. Pro adds email import, cancellation reminders, flight updates,
+              documents, and expense exports for $9.99 per month.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            {guarantees.map((item) => (
-              <span
-                key={item}
-                className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/60 px-4 py-2"
-              >
+            {["Cancel anytime", "No hidden website fees", "Upgrade in the app"].map((item) => (
+              <span key={item} className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/60 px-4 py-2">
                 <CheckCircle2 className="h-4 w-4 text-primary" />
                 {item}
               </span>
             ))}
           </div>
         </SectionContainer>
-      </motion.section>
+      </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="relative pb-12 lg:pb-16"
-      >
-        <SectionContainer className="grid gap-6 lg:grid-cols-2 max-w-5xl mx-auto">
+      <section className="relative pb-12 lg:pb-16">
+        <SectionContainer className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-2">
           {plans.map((plan) => (
-            <motion.article
+            <article
               key={plan.name}
-              whileHover={{ y: -6 }}
-              className={`relative h-full overflow-hidden rounded-3xl border backdrop-blur-sm p-8 sm:p-10 transition-all duration-500 ${plan.highlight
-                ? "border-primary/40 bg-gradient-to-br from-primary/15 via-background/90 to-purple-500/10 shadow-xl shadow-primary/15"
-                : "border-border/60 bg-card/70"
-                }`}
+              className={`relative flex h-full flex-col overflow-hidden rounded-3xl border p-8 backdrop-blur-sm sm:p-10 ${
+                plan.highlight
+                  ? "border-primary/40 bg-gradient-to-br from-primary/15 via-background/90 to-purple-500/10 shadow-xl shadow-primary/15"
+                  : "border-border/60 bg-card/70"
+              }`}
             >
-              <div className="absolute inset-x-6 top-6 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                <span>{plan.badge}</span>
-                {plan.highlight && <span className="text-primary">Best for automation</span>}
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{plan.label}</p>
+              <div className="mt-6 space-y-2">
+                <h2 className="text-3xl font-bold">{plan.name}</h2>
+                <p className="text-muted-foreground">{plan.description}</p>
               </div>
 
-              <div className="mt-10 space-y-6">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold">{plan.name}</h2>
-                  <p className="text-muted-foreground">{plan.description}</p>
-                </div>
+              <div className="mt-6">
+                <p className="text-sm uppercase tracking-tight text-muted-foreground">Price</p>
+                <p className="text-4xl font-bold">
+                  {plan.price}
+                  <span className="text-lg font-semibold text-muted-foreground"> {plan.cadence}</span>
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{plan.meta}</p>
+              </div>
 
-                <div className="flex items-end justify-between gap-3">
-                  <div>
-                    <p className="text-sm uppercase tracking-tight text-muted-foreground">Price</p>
-                    <p className="text-4xl font-bold">
-                      {plan.price}
-                      <span className="text-lg font-semibold text-muted-foreground"> {plan.cadence}</span>
-                    </p>
-                    <p className="text-sm text-muted-foreground">{plan.meta}</p>
+              <div className="mt-6 space-y-3">
+                {plan.features.map((feature) => (
+                  <div key={feature} className="flex items-start gap-3 text-sm">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <CheckCircle2 className="h-4 w-4" />
+                    </span>
+                    <span className="leading-relaxed text-muted-foreground">{feature}</span>
                   </div>
-                </div>
-
-                <div className="space-y-3">
-                  {plan.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3 text-sm text-foreground">
-                      <span className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
-                        <CheckCircle2 className="h-4 w-4" />
-                      </span>
-                      <span className="leading-relaxed text-left text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-
+                ))}
               </div>
-            </motion.article>
+
+              <div className="mt-auto pt-8">
+                <GetStartedModal
+                  triggerLabel={plan.cta}
+                  triggerClassName={`h-11 w-full rounded-full text-sm ${
+                    plan.highlight
+                      ? "bg-cyan-500 text-white hover:bg-cyan-600"
+                      : "border border-border bg-background text-foreground hover:bg-muted"
+                  }`}
+                />
+              </div>
+            </article>
           ))}
         </SectionContainer>
-      </motion.section>
+      </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="relative pb-12 lg:pb-16"
-      >
-        <SectionContainer className="grid gap-6 lg:grid-cols-[1.1fr,0.9fr] max-w-5xl mx-auto">
-          <div className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Why TripCache Pro</p>
-            <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
-              More automation, tighter control, and export-ready reports.
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              TripCache keeps teams and frequent travelers coordinated with reliable parsing, real-time updates, and
-              exports that finance teams actually want to use.
+      <section className="relative pb-12 lg:pb-16">
+        <SectionContainer className="mx-auto max-w-5xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Why travelers upgrade</p>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Pro is for costly details, not decorative extras.</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The paid plan is focused on the work that can consume time or money after a booking is confirmed.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {highlightCards.map((card) => {
-              const Icon = card.icon
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {reasons.map((reason) => {
+              const Icon = reason.icon
               return (
-                <div
-                  key={card.title}
-                  className="rounded-2xl border border-border/60 bg-card/70 p-5 shadow-sm transition hover:-translate-y-1 hover:border-primary/30"
-                >
-                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <article key={reason.title} className="rounded-2xl border border-border/60 bg-card/70 p-6 shadow-sm">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-lg font-semibold">{card.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{card.copy}</p>
-                </div>
+                  <h3 className="mt-4 text-lg font-semibold">{reason.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{reason.copy}</p>
+                </article>
               )
             })}
           </div>
         </SectionContainer>
-      </motion.section>
+      </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="relative pb-16 lg:pb-20"
-      >
-        <SectionContainer className="max-w-5xl mx-auto">
-          <div className="overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-r from-primary/15 via-background/90 to-purple-500/10 p-8 sm:p-10 shadow-xl">
-            <div className="grid gap-8 md:grid-cols-[1.1fr,0.9fr] items-center">
-              <div className="space-y-4">
-                <p className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                  Need help deciding?
+      <section className="relative pb-16 lg:pb-20">
+        <SectionContainer className="mx-auto max-w-5xl">
+          <div className="overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-r from-primary/15 via-background/90 to-purple-500/10 p-8 shadow-xl sm:p-10">
+            <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <h2 className="text-2xl font-bold sm:text-3xl">Not sure whether Pro fits your travel workflow?</h2>
+                <p className="mt-3 text-muted-foreground">
+                  Ask about email import, cancellation reminders, expense exports, or moving your routine from TripCase.
                 </p>
-                <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                  Talk to a human about billing, teams, or migrating from TripCase.
-                </h3>
-                <p className="text-muted-foreground">
-                  We answer within one business day. Ask us about team rollouts, procurement, or how to move existing
-                  itineraries into TripCache.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <Link
-                    href="mailto:support@tripcache.app?subject=TripCache%20pricing%20question"
-                    className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:scale-[1.01]"
-                  >
-                    Contact Support
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-
-                </div>
               </div>
-
-              <div className="rounded-2xl border border-border/60 bg-card/70 p-6 space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-primary/10 p-2 text-primary">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">Priority routing</p>
-                    <p className="text-sm text-muted-foreground">We put billing and migration questions at the front of the queue.</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-primary/10 p-2 text-primary">
-                    <ShieldCheck className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">Data handled with care</p>
-                    <p className="text-sm text-muted-foreground">Clean imports, exportable records, and secure document handling.</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-primary/10 p-2 text-primary">
-                    <Sparkles className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">Migration guidance</p>
-                    <p className="text-sm text-muted-foreground">We can mirror what you loved about TripCase and add the automation you miss.</p>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
+                <Link
+                  href="mailto:support@trip-cache.com?subject=TripCache%20pricing%20question"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-semibold transition hover:border-primary/40"
+                >
+                  Contact support
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <GetStartedModal triggerLabel="Download" triggerClassName="h-11 rounded-full px-6" />
               </div>
+            </div>
+            <div className="mt-6 flex items-start gap-3 border-t border-border/60 pt-6 text-sm text-muted-foreground">
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p>Review the Privacy Policy and the current App Store or Google Play disclosures before uploading sensitive travel documents.</p>
             </div>
           </div>
         </SectionContainer>
-      </motion.section>
+      </section>
 
       <Footer />
     </main>

@@ -5,19 +5,18 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import { Navigation } from "@/components/navigation"
-import { Outfit } from "next/font/google"
 import "./globals.css"
 
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" })
-
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "PLACEHOLDER_UPDATE_IN_SEARCH_CONSOLE"
+const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 const SITE_URL = "https://trip-cache.com"
+const IOS_STORE_URL = "https://apps.apple.com/app/id6758403056"
+const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=app.tripcache"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
+    default: "TripCache - Post-Booking Travel Organizer",
     template: "%s | TripCache",
   },
   description:
@@ -38,6 +37,8 @@ export const metadata: Metadata = {
   authors: [{ name: "TripCache Team" }],
   creator: "TripCache",
   publisher: "TripCache",
+  category: "travel",
+  manifest: "/manifest.json",
   formatDetection: {
     email: false,
     address: false,
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
+    title: "TripCache - Post-Booking Travel Organizer",
     description:
       "Forward travel emails, get organized itineraries, track cancellation deadlines, and keep receipts and documents together.",
     siteName: "TripCache",
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TripCache - AI Travel Inbox & Cancellation Reminder Platform",
+    title: "TripCache - Post-Booking Travel Organizer",
     description: "Forward travel emails, get organized itineraries, and never miss cancellation deadlines.",
     images: ["/app-feature-add-everything.webp"],
     creator: "@tripcache",
@@ -83,10 +84,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: GOOGLE_SITE_VERIFICATION,
+  verification: GOOGLE_SITE_VERIFICATION
+    ? {
+        google: GOOGLE_SITE_VERIFICATION,
+      }
+    : undefined,
+  other: {
+    "apple-itunes-app": "app-id=6758403056",
   },
-  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -97,83 +102,103 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        {/* Resource Hints for Performance */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://vercel.live" />
-        <link rel="dns-prefetch" href="https://vercel.live" />
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+          </>
+        ) : null}
 
-        {/* Fallback preconnects */}
-
-        <Script
+        <script
           id="organization-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
               name: "TripCache",
-              url: "https://trip-cache.com",
-              logo: "https://trip-cache.com/app-icon.png",
+              url: SITE_URL,
+              logo: `${SITE_URL}/app-icon.png`,
               description:
                 "TripCache helps travelers turn confirmation emails into organized itineraries while tracking cancellation reminders, documents, receipts, and expenses.",
-              sameAs: [
-                "https://twitter.com/tripcache",
-                "https://github.com/tripcache",
-                "https://linkedin.com/company/tripcache",
-              ],
+              email: "support@trip-cache.com",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                email: "support@trip-cache.com",
+                availableLanguage: "English",
+              },
             }),
           }}
         />
-        <Script
+        <script
           id="website-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
               name: "TripCache",
-              url: "https://trip-cache.com",
+              url: SITE_URL,
               description:
-                "Travel organization guides and app information for TripCache, an AI travel inbox and cancellation reminder platform for confirmation emails, documents, receipts, and expenses.",
-              publisher: {
-                "@type": "Organization",
-                name: "TripCache",
-              },
+                "Official product information and travel organization guides for TripCache, a post-booking travel organizer for confirmations, cancellation deadlines, documents, receipts, and expenses.",
+              publisher: { "@id": `${SITE_URL}/#organization` },
+              inLanguage: "en",
             }),
           }}
         />
-        <Script
+        <script
           id="software-application-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "MobileApplication",
+              "@id": `${SITE_URL}/#app`,
               name: "TripCache",
               applicationCategory: "TravelApplication",
+              applicationSubCategory: "Travel itinerary and post-booking organizer",
               operatingSystem: "iOS, Android",
-              url: "https://trip-cache.com",
-              image: "https://trip-cache.com/app-icon.png",
+              url: SITE_URL,
+              image: `${SITE_URL}/app-icon.png`,
               description:
                 "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, secure documents, receipts, and expense records.",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
+              downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
+              featureList: [
+                "Booking confirmation email import",
+                "Travel itinerary organization",
+                "Free-cancellation deadline reminders",
+                "Travel documents and receipts",
+                "Flight status context",
+                "Travel expense records and CSV export",
+              ],
+              provider: { "@id": `${SITE_URL}/#organization` },
+              offers: [
+                {
+                  "@type": "Offer",
+                  name: "TripCache Basic",
+                  price: "0",
+                  priceCurrency: "USD",
+                  url: `${SITE_URL}/pricing`,
+                },
+                {
+                  "@type": "Offer",
+                  name: "TripCache Pro Monthly",
+                  price: "9.99",
+                  priceCurrency: "USD",
+                  url: `${SITE_URL}/pricing`,
+                },
+              ],
             }),
           }}
         />
-        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0891b2" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body suppressHydrationWarning className={`${outfit.variable} font-sans antialiased`}>
+      <body suppressHydrationWarning className="font-sans antialiased">
         <ThemeProvider defaultTheme="dark">
           <Navigation />
           {children}

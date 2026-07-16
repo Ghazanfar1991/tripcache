@@ -30,7 +30,7 @@ const steps = [
   {
     icon: Download,
     title: "Ready When You Are",
-    description: "Access everything offline, track live flight updates, and export expense reports with a tap.",
+    description: "Review your itinerary, track flight updates, and export expense records when you need them.",
     image: "/app-screenshot-home.webp",
     gradient: "from-emerald-500 to-teal-600",
     glow: "bg-emerald-500/20",

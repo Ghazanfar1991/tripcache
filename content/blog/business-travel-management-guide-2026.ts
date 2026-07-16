@@ -257,7 +257,7 @@ Business travel management doesn't have to be painful. With TripCache Pro:
 - ✅ Itineraries auto-created from email
 - ✅ CSV expense reports in one click
 - ✅ All documents in one secure place
-- ✅ 80% cheaper than TripIt Pro
+- ✅ No enterprise contract required for individual use
 - ✅ No enterprise contracts needed
 
 **Stop wasting hours on expense reports.** [Get started with TripCache →](https://trip-cache.com)

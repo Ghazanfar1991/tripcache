@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
@@ -18,31 +18,45 @@ interface GetStartedModalProps {
   triggerLabel?: string
 }
 
+function trackConversion(eventName: string, details: Record<string, string>) {
+  const analyticsWindow = window as Window & {
+    gtag?: (command: "event", name: string, parameters: Record<string, string>) => void
+  }
+
+  analyticsWindow.gtag?.("event", eventName, details)
+}
+
 export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started" }: GetStartedModalProps) {
   const [open, setOpen] = useState(false)
 
+  const handleOpenChange = (nextOpen: boolean) => {
+    setOpen(nextOpen)
+    if (nextOpen) {
+      trackConversion("download_modal_open", { trigger_label: triggerLabel })
+    }
+  }
+
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button
-          size="sm"
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogTrigger
           className={cn(
+            buttonVariants({ size: "sm" }),
             "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg shadow-cyan-500/25",
             "px-3 py-1.5 text-xs font-semibold sm:px-4 sm:py-2 sm:text-sm",
             triggerClassName,
           )}
         >
           {triggerLabel}
-        </Button>
       </DialogTrigger>
 
       <DialogContent className="max-h-[90vh] overflow-y-auto rounded-[2rem] border border-border/60 bg-background/95 p-8 shadow-2xl backdrop-blur-sm sm:max-w-xl text-center">
         <DialogHeader className="space-y-4 flex flex-col items-center text-center">
           <DialogTitle className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-            Ready for a Better Way to Travel?
+            Get TripCache on your phone
           </DialogTitle>
           <DialogDescription className="text-base sm:text-lg mx-auto max-w-md">
-            Join thousands of travelers who have elevated their journey with TripCache. Download the app today.
+            Download the official iPhone or Android app, start with the free plan, and upgrade to Pro in the app when
+            you need automation and exports.
           </DialogDescription>
         </DialogHeader>
 
@@ -51,6 +65,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             href="https://apps.apple.com/app/id6758403056" 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => trackConversion("app_store_click", { platform: "ios", placement: "download_modal" })}
             className="relative transition-transform hover:-translate-y-1 hover:brightness-110 active:translate-y-0"
           >
             <Image
@@ -66,6 +81,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             href="https://play.google.com/store/apps/details?id=app.tripcache" 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => trackConversion("app_store_click", { platform: "android", placement: "download_modal" })}
             className="relative transition-transform hover:-translate-y-1 hover:brightness-110 active:translate-y-0"
           >
             <Image

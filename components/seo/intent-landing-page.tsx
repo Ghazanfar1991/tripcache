@@ -1,11 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
-import { ArrowRight, CheckCircle2, Mail, ShieldCheck, WalletCards } from "lucide-react"
+import { CheckCircle2, Mail, ShieldCheck, WalletCards } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { SectionContainer } from "@/components/section-container"
 import { Footer } from "@/components/footer"
+import { GetStartedModal } from "@/components/get-started-modal"
 import type { SeoLandingPage } from "@/lib/seo-page-data"
 
 const BASE_URL = "https://trip-cache.com"
@@ -93,12 +94,10 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="rounded-full bg-cyan-500 text-white hover:bg-cyan-600">
-                <Link href="/download">
-                  Download TripCache
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+              <GetStartedModal
+                triggerLabel="Download TripCache"
+                triggerClassName="h-10 rounded-full bg-cyan-500 px-6 text-white hover:bg-cyan-600 sm:h-11"
+              />
               <Button asChild size="lg" variant="outline" className="rounded-full">
                 <Link href={page.kind === "feature" ? "/blog" : "/features/email-to-itinerary"}>
                   {page.kind === "feature" ? "Read the guides" : "See email automation"}
@@ -174,9 +173,9 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
           <div className="rounded-[2rem] border border-border/60 bg-card/40 p-6 sm:p-8">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <h2 className="text-2xl font-bold">Build a cleaner TripCache SEO journey</h2>
+                <h2 className="text-2xl font-bold">Continue with the workflow that fits your trip</h2>
                 <p className="mt-2 text-muted-foreground">
-                  Continue from this page into related feature, comparison, tool, and guide content.
+                  Explore the related feature, comparison, calculator, or guide without losing the post-booking context.
                 </p>
               </div>
               <Button asChild className="rounded-full">

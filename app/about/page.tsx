@@ -1,58 +1,45 @@
-import Link from "next/link"
-import { SectionContainer } from "@/components/section-container"
-import { Footer } from "@/components/footer"
-import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
+import Link from "next/link"
+import { ArrowLeft, CalendarClock, FileSpreadsheet, MailCheck } from "lucide-react"
+
+import { Footer } from "@/components/footer"
+import { GetStartedModal } from "@/components/get-started-modal"
+import { SectionContainer } from "@/components/section-container"
 
 export const metadata: Metadata = {
   title: "About TripCache",
   description:
-    "Learn why we built TripCache, the team behind it, and how we help frequent travelers stay organized and compliant.",
+    "Learn why TripCache focuses on confirmation emails, cancellation deadlines, travel documents, receipts, and post-trip records.",
   alternates: {
     canonical: "/about",
   },
 }
 
-const pillars = [
+const principles = [
   {
-    title: "Travel-First Design",
+    icon: MailCheck,
+    title: "Start with confirmed travel",
     description:
-      "Every screen is crafted with actual traveler feedback so you can manage itineraries, travelers, and documents without digging through inboxes.",
+      "TripCache is designed for the moment booking emails and PDFs begin arriving—not for selling flights, hotels, or destination inspiration.",
   },
   {
-    title: "Automation + Control",
+    icon: CalendarClock,
+    title: "Make expensive details visible",
     description:
-      "Email parsing, document storage, and CSV exports are automated, while admin controls ensure travel programs stay compliant and auditable.",
+      "Cancellation cutoffs, flight changes, documents, and receipts should stay attached to the trip instead of disappearing into an inbox.",
   },
   {
-    title: "Security As a Default",
+    icon: FileSpreadsheet,
+    title: "Keep useful records after the trip",
     description:
-      "End-to-end encryption, granular permissions, and SOC 2–ready processes keep sensitive travel and expense data private.",
-  },
-]
-
-const milestones = [
-  {
-    year: "2023",
-    headline: "Research & Prototyping",
-    copy: "Interviewed hundreds of EA teams, consultants, and digital nomads who needed a modern TripCase replacement.",
-  },
-  {
-    year: "2024",
-    headline: "Private Beta",
-    copy: "Rolled out automated email ingest, collaborative trips, and export-ready reporting to our first 2,000 travelers.",
-  },
-  {
-    year: "2025",
-    headline: "Public Launch",
-    copy: "Introduced TripCache mobile, live flight updates, and enterprise privacy controls for larger travel programs.",
+      "Business and frequent travelers can keep costs and receipts in context, then export structured records when the journey is over.",
   },
 ]
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
-      <SectionContainer className="space-y-20 pb-16 pt-24">
+      <SectionContainer className="space-y-16 pb-16 pt-24">
         <div className="flex justify-center lg:justify-start">
           <Link
             href="/"
@@ -62,67 +49,50 @@ export default function AboutPage() {
             Back home
           </Link>
         </div>
-        <header className="text-center space-y-6 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border/50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-            About TripCache
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-balance">
-            Built for teams that live between inboxes, airports, and spreadsheets.
+
+        <header className="mx-auto max-w-3xl space-y-6 text-center">
+          <h1 className="text-balance text-4xl font-bold sm:text-5xl">
+            Built for the details that arrive after you book.
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            TripCache started as an internal tool to keep global project teams aligned on travel plans. Today we help
-            thousands of consultants, founders, and executive assistants organize every flight, hotel, and document in
-            one trustworthy system.
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            Travel information rarely lives in one place. Confirmations sit in email, cancellation policies hide in
+            fine print, receipts land in photo libraries, and trip changes arrive through notifications. TripCache
+            brings those post-booking details into one itinerary.
           </p>
         </header>
 
         <section className="grid gap-6 md:grid-cols-3">
-          {pillars.map((pillar) => (
-            <article
-              key={pillar.title}
-              className="rounded-3xl border border-border/60 bg-card/70 p-6 shadow-sm backdrop-blur"
-            >
-              <h2 className="text-xl font-semibold">{pillar.title}</h2>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{pillar.description}</p>
-            </article>
-          ))}
-        </section>
-
-        <section className="space-y-8">
-          <div className="text-center space-y-2">
-            <p className="text-sm font-semibold text-cyan-500 uppercase tracking-wide">Milestones</p>
-            <h2 className="text-3xl font-bold">Our journey so far</h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {milestones.map((milestone) => (
-              <article key={milestone.year} className="rounded-3xl border border-border/50 bg-card/80 p-6 shadow-sm">
-                <span className="text-sm font-semibold text-muted-foreground">{milestone.year}</span>
-                <h3 className="mt-2 text-xl font-semibold">{milestone.headline}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{milestone.copy}</p>
+          {principles.map((principle) => {
+            const Icon = principle.icon
+            return (
+              <article key={principle.title} className="rounded-3xl border border-border/60 bg-card/70 p-6 shadow-sm">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h2 className="mt-5 text-xl font-semibold">{principle.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{principle.description}</p>
               </article>
-            ))}
-          </div>
+            )
+          })}
         </section>
 
         <section className="rounded-3xl border border-border/50 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-8 shadow-xl">
-          <div className="grid gap-6 md:grid-cols-2 items-center">
-            <div className="space-y-4">
-              <p className="text-sm font-semibold text-cyan-500 uppercase tracking-wide">What&apos;s next</p>
-              <h2 className="text-3xl font-bold">Join the waitlist to shape the roadmap.</h2>
-              <p className="text-muted-foreground">
-                We ship major improvements every two weeks and rely on our community for feedback. Sign up from the home
-                page to get early feature access and invite-only beta builds.
+          <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
+            <div>
+              <h2 className="text-3xl font-bold">TripCache is available now on iPhone and Android.</h2>
+              <p className="mt-3 max-w-2xl text-muted-foreground">
+                Start with the free plan. Upgrade in the app if email automation, cancellation reminders, flight
+                updates, document storage, and CSV exports fit your travel routine.
+              </p>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Questions? Email{" "}
+                <a className="font-semibold text-primary" href="mailto:support@trip-cache.com">
+                  support@trip-cache.com
+                </a>
+                .
               </p>
             </div>
-            <div className="rounded-2xl border border-border/40 bg-background/80 p-6 text-sm text-muted-foreground">
-              <p>
-                Have partnership ideas or want to bring TripCache to your organization? Reach out at{" "}
-                <a className="font-semibold text-cyan-500" href="mailto:hello@tripcache.com">
-                  hello@tripcache.com
-                </a>{" "}
-                and we&apos;ll reply within one business day.
-              </p>
-            </div>
+            <GetStartedModal triggerLabel="Download TripCache" triggerClassName="h-11 rounded-full px-6" />
           </div>
         </section>
       </SectionContainer>
