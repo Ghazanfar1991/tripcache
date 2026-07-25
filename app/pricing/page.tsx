@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$9.99",
+    price: "$5.99",
     cadence: "/month",
     description: "For frequent and business travelers who want confirmations, reminders, and records handled faster.",
     label: "Best for post-booking automation",
@@ -88,7 +88,7 @@ export default function PricingPage() {
             </h1>
             <p className="text-lg text-muted-foreground sm:text-xl">
               Basic keeps trips organized manually. Pro adds email import, cancellation reminders, flight updates,
-              documents, and expense exports for $9.99 per month.
+              documents, and expense exports for $5.99 per month.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
