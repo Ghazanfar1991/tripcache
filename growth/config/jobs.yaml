@@ -1,0 +1,24 @@
+{
+  "timezone": "Australia/Sydney",
+  "dispatcherIntervalMinutes": 60,
+  "jobs": [
+    {
+      "id": "weekly-growth-cycle",
+      "kind": "codex",
+      "intervalDays": 7,
+      "nextDueAt": "2026-08-24T08:00:00+10:00",
+      "prompt": "growth/prompts/weekly-growth-cycle.md",
+      "maxRuntimeMinutes": 45,
+      "dirtyWorktreePolicy": "wait"
+    },
+    {
+      "id": "monthly-strategy-review",
+      "kind": "codex",
+      "intervalDays": 30,
+      "nextDueAt": "2026-09-01T09:00:00+10:00",
+      "prompt": "growth/prompts/monthly-strategy-review.md",
+      "maxRuntimeMinutes": 60,
+      "dirtyWorktreePolicy": "wait"
+    }
+  ]
+}

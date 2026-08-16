@@ -1,0 +1,14 @@
+{
+  "maxConcurrentExperiments": 1,
+  "minimumObservationDays": 14,
+  "requireBuildAndHealthCheck": true,
+  "requireReversibleChange": true,
+  "forbidden": [
+    "modify mobile repository",
+    "change pricing, products, entitlements, billing, credentials, access controls, or legal claims",
+    "commit secrets or customer identifiers",
+    "invent data or treat unavailable data as zero",
+    "deploy on a failed health check"
+  ],
+  "humanConfirmationRequired": ["security credentials", "persistent external access", "billing", "store or RevenueCat product changes"]
+}

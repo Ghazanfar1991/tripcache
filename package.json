@@ -5,7 +5,16 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --webpack",
+    "growth:collect:gsc": "node growth/scripts/collect-search-console.mjs",
+    "growth:collect:ga4": "node growth/scripts/collect-ga4.mjs",
+    "growth:collect:revenue": "node growth/scripts/collect-revenuecat.mjs",
+    "growth:daily": "node growth/scripts/daily.mjs",
+    "growth:dispatch": "node growth/scripts/dispatcher.mjs",
+    "growth:health": "node growth/scripts/health-check.mjs",
+    "growth:report": "node growth/scripts/generate-report.mjs",
+    "growth:validate": "node growth/scripts/validate-growth.mjs",
     "lint": "eslint .",
+    "test": "npm run growth:validate",
     "start": "next start"
   },
   "dependencies": {

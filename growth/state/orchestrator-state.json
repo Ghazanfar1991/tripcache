@@ -1,0 +1,23 @@
+{
+  "updatedAt": "2026-08-16T16:12:49.785Z",
+  "dispatcher": {
+    "status": "IDLE",
+    "lastWakeAt": "2026-08-16T16:12:49.779Z",
+    "pid": 69110,
+    "completedAt": "2026-08-16T16:12:49.785Z"
+  },
+  "jobs": {
+    "weekly-growth-cycle": {
+      "status": "SCHEDULED",
+      "attempts": 0,
+      "lastRunAt": null,
+      "nextDueAt": "2026-08-24T08:00:00+10:00"
+    },
+    "monthly-strategy-review": {
+      "status": "SCHEDULED",
+      "attempts": 0,
+      "lastRunAt": null,
+      "nextDueAt": "2026-09-01T09:00:00+10:00"
+    }
+  }
+}

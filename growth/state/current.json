@@ -1,0 +1,15 @@
+{
+  "updatedAt": "2026-08-17T00:00:00.000Z",
+  "phase": "MEASUREMENT_FOUNDATION",
+  "northStar": { "metric": "mrrAud", "target": 5000, "actual": null },
+  "known": {
+    "searchConsole28DayClicks": 40,
+    "searchConsole28DayImpressions": 7905,
+    "searchConsoleAveragePosition": 10.2,
+    "revenueCatLiveActiveSubscriptions": 1,
+    "revenueCatUiMrr": 8,
+    "revenueCatUiMrrCurrency": "USD_UNVERIFIED"
+  },
+  "unknown": ["website store-intent conversion", "currency-normalized MRR", "app activation", "subscriber retention by cohort"],
+  "primaryConstraint": "Website analytics is not measurable because the deployed GA identifier is G-XXXX and the GA4 property has no web stream."
+}

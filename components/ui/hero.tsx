@@ -82,7 +82,10 @@ function trackStoreClick(platform: "ios" | "android") {
     gtag?: (command: "event", name: string, parameters: Record<string, string>) => void
   }
 
-  analyticsWindow.gtag?.("event", "app_store_click", { platform, placement: "homepage_hero" })
+  analyticsWindow.gtag?.("event", platform === "ios" ? "app_store_click" : "play_store_click", {
+    platform,
+    placement: "homepage_hero",
+  })
 }
 
 export default function Hero() {
