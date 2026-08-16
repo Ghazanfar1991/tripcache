@@ -1,12 +1,15 @@
 {
-  "updatedAt": "2026-08-16T16:12:49.696Z",
+  "updatedAt": "2026-08-16T16:47:47.000Z",
   "localCodexAuth": "READY_CHATGPT_SUBSCRIPTION",
   "launchd": "INSTALLED",
-  "githubDailyWorkflow": "IMPLEMENTED_NOT_DEPLOYED",
-  "googleOidc": "WAITING_FOR_HUMAN_AUTH",
-  "revenueCatApi": "WAITING_FOR_HUMAN_AUTH",
+  "githubDailyWorkflow": "DEPLOYED",
+  "googleOidc": "READY_KEYLESS_REPOSITORY_SCOPED",
+  "revenueCatApi": "READY_CHARTS_READ_ONLY",
   "ga4WebStream": "CREATED_G-JP6JKPVPVY",
-  "bigQuery": "WAITING_FOR_HUMAN_AUTH",
-  "vercel": "WAITING_FOR_OWNER_2FA",
+  "ga4DataApi": "READY_VIEWER",
+  "ga4BigQueryExport": "READY_DAILY_SYDNEY",
+  "searchConsoleApi": "READY_RESTRICTED",
+  "bigQuery": "READY_AUSTRALIA_SOUTHEAST1",
+  "vercel": "READY_PRODUCTION",
   "launchdPlist": "/Users/ghazanfarnasee/Library/LaunchAgents/com.tripcache.growth-dispatcher.plist"
 }

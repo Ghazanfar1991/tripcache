@@ -1,9 +1,9 @@
 {
   "connectors": [
-    { "id": "search-console", "mode": "Google API via GitHub OIDC", "status": "WAITING_FOR_HUMAN_AUTH" },
-    { "id": "ga4", "mode": "Google Analytics Data API via GitHub OIDC", "webStreamId": "15446445587", "webMeasurementId": "G-JP6JKPVPVY", "status": "WEB_STREAM_READY_API_AUTH_PENDING" },
-    { "id": "revenuecat", "mode": "RevenueCat API v2 read-only secret", "status": "WAITING_FOR_HUMAN_AUTH" },
-    { "id": "bigquery", "mode": "trip-cache.tripcache_growth", "location": "australia-southeast1", "status": "WAITING_FOR_HUMAN_AUTH" },
+    { "id": "search-console", "mode": "Google API via GitHub OIDC", "permission": "Restricted", "status": "READY" },
+    { "id": "ga4", "mode": "Google Analytics Data API via GitHub OIDC", "webStreamId": "15446445587", "webMeasurementId": "G-JP6JKPVPVY", "permission": "Viewer", "status": "READY" },
+    { "id": "revenuecat", "mode": "RevenueCat API v2 read-only secret", "permission": "Charts metrics: Read only", "status": "READY" },
+    { "id": "bigquery", "mode": "trip-cache.tripcache_growth", "location": "australia-southeast1", "permission": "Dataset writer + project job user", "status": "READY" },
     { "id": "codex", "mode": "local CLI using ChatGPT sign-in", "status": "READY" }
   ]
 }
