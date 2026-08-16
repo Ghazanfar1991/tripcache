@@ -81,7 +81,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             href="https://play.google.com/store/apps/details?id=app.tripcache" 
             target="_blank" 
             rel="noopener noreferrer"
-            onClick={() => trackConversion("app_store_click", { platform: "android", placement: "download_modal" })}
+            onClick={() => trackConversion("play_store_click", { platform: "android", placement: "download_modal" })}
             className="relative transition-transform hover:-translate-y-1 hover:brightness-110 active:translate-y-0"
           >
             <Image

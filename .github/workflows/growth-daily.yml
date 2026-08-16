@@ -1,0 +1,87 @@
+name: Growth Daily
+
+on:
+  schedule:
+    - cron: "17 17 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: growth-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+      GSC_SITE_URL: sc-domain:trip-cache.com
+      GA4_PROPERTY_ID: "514130776"
+      REVENUECAT_PROJECT_ID: "82e83e04"
+      REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_API_KEY }}
+      TZ: Australia/Sydney
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Connector preflight
+        id: connector-preflight
+        env:
+          REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_API_KEY }}
+        run: |
+          if [[ -n "$REVENUECAT_API_KEY" && -n "$GCP_PROJECT_ID" && -n "${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}" && -n "${{ vars.GCP_SERVICE_ACCOUNT }}" ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Growth collection is intentionally disabled until all read-only connectors are configured."
+          fi
+
+      - if: ${{ steps.connector-preflight.outputs.ready == 'true' }}
+        run: npm ci
+
+      - id: google-auth
+        if: ${{ steps.connector-preflight.outputs.ready == 'true' }}
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          project_id: ${{ vars.GCP_PROJECT_ID }}
+          token_format: access_token
+
+      - if: ${{ steps.google-auth.outcome == 'success' }}
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: Collect and snapshot
+        if: ${{ steps.connector-preflight.outputs.ready == 'true' }}
+        run: npm run growth:daily
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
+
+      - name: Sync sanitized aggregates to BigQuery
+        if: ${{ steps.connector-preflight.outputs.ready == 'true' && steps.google-auth.outcome == 'success' }}
+        run: node growth/scripts/sync-bigquery.mjs
+
+      - name: Production health
+        if: ${{ steps.connector-preflight.outputs.ready == 'true' }}
+        run: npm run growth:health
+
+      - name: Commit growth memory
+        if: ${{ steps.connector-preflight.outputs.ready == 'true' }}
+        run: |
+          if git diff --quiet -- growth; then
+            exit 0
+          fi
+          git config user.name "tripcache-growth-bot"
+          git config user.email "tripcache-growth-bot@users.noreply.github.com"
+          git add growth/data growth/state growth/data-manifest.json growth/reports/incidents
+          git commit -m "growth(data): refresh daily sanitized snapshots"
+          git push

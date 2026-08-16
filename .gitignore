@@ -18,6 +18,13 @@ yarn-error.log*
 
 # env files
 .env*
+!.env.example
+
+# growth runtime (locks, logs, raw exports, temporary warehouse payloads)
+/.growth-runtime/
+
+# Ignore generated credentials from google-github-actions/auth
+gha-creds-*.json
 
 # vercel
 .vercel

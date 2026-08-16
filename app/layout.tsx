@@ -7,7 +7,10 @@ import Script from "next/script"
 import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const configuredGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""
+const GA_MEASUREMENT_ID = /^G-[A-Z0-9]+$/.test(configuredGaMeasurementId) && configuredGaMeasurementId !== "G-XXXX"
+  ? configuredGaMeasurementId
+  : null
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 const SITE_URL = "https://trip-cache.com"
 const IOS_STORE_URL = "https://apps.apple.com/app/id6758403056"
@@ -175,22 +178,13 @@ export default function RootLayout({
                 "Travel expense records and CSV export",
               ],
               provider: { "@id": `${SITE_URL}/#organization` },
-              offers: [
-                {
-                  "@type": "Offer",
-                  name: "TripCache Basic",
-                  price: "0",
-                  priceCurrency: "USD",
-                  url: `${SITE_URL}/pricing`,
-                },
-                {
-                  "@type": "Offer",
-                  name: "TripCache Pro Monthly",
-                  price: "9.99",
-                  priceCurrency: "USD",
-                  url: `${SITE_URL}/pricing`,
-                },
-              ],
+              offers: {
+                "@type": "Offer",
+                name: "TripCache Basic",
+                price: "0",
+                priceCurrency: "USD",
+                url: `${SITE_URL}/pricing`,
+              },
             }),
           }}
         />

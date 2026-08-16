@@ -1,0 +1,218 @@
+{
+  "source": "Authenticated Google Search Console CSV export",
+  "generatedAt": "2026-08-16T16:12:07.467Z",
+  "reportingLagDays": 3,
+  "period": {
+    "startDate": "2026-07-18",
+    "endDate": "2026-08-14"
+  },
+  "totals": {
+    "clicks": 40,
+    "impressions": 7905,
+    "ctr": 0.005060088551549652,
+    "position": 10.249829222011384
+  },
+  "daily": [
+    {
+      "date": "2026-07-18",
+      "clicks": 0,
+      "impressions": 138,
+      "ctr": 0,
+      "position": 17.4
+    },
+    {
+      "date": "2026-07-19",
+      "clicks": 3,
+      "impressions": 175,
+      "ctr": 0.0171,
+      "position": 9.6
+    },
+    {
+      "date": "2026-07-20",
+      "clicks": 3,
+      "impressions": 272,
+      "ctr": 0.011000000000000001,
+      "position": 8.2
+    },
+    {
+      "date": "2026-07-21",
+      "clicks": 0,
+      "impressions": 263,
+      "ctr": 0,
+      "position": 8.6
+    },
+    {
+      "date": "2026-07-22",
+      "clicks": 3,
+      "impressions": 278,
+      "ctr": 0.0108,
+      "position": 8.9
+    },
+    {
+      "date": "2026-07-23",
+      "clicks": 5,
+      "impressions": 257,
+      "ctr": 0.0195,
+      "position": 8.2
+    },
+    {
+      "date": "2026-07-24",
+      "clicks": 0,
+      "impressions": 345,
+      "ctr": 0,
+      "position": 9.6
+    },
+    {
+      "date": "2026-07-25",
+      "clicks": 1,
+      "impressions": 246,
+      "ctr": 0.0040999999999999995,
+      "position": 9.8
+    },
+    {
+      "date": "2026-07-26",
+      "clicks": 1,
+      "impressions": 249,
+      "ctr": 0.004,
+      "position": 9.9
+    },
+    {
+      "date": "2026-07-27",
+      "clicks": 2,
+      "impressions": 274,
+      "ctr": 0.0073,
+      "position": 8.1
+    },
+    {
+      "date": "2026-07-28",
+      "clicks": 3,
+      "impressions": 280,
+      "ctr": 0.010700000000000001,
+      "position": 10.8
+    },
+    {
+      "date": "2026-07-29",
+      "clicks": 2,
+      "impressions": 418,
+      "ctr": 0.0048,
+      "position": 11.9
+    },
+    {
+      "date": "2026-07-30",
+      "clicks": 4,
+      "impressions": 267,
+      "ctr": 0.015,
+      "position": 9.6
+    },
+    {
+      "date": "2026-07-31",
+      "clicks": 1,
+      "impressions": 302,
+      "ctr": 0.0033,
+      "position": 9.5
+    },
+    {
+      "date": "2026-08-01",
+      "clicks": 2,
+      "impressions": 300,
+      "ctr": 0.0067,
+      "position": 10.5
+    },
+    {
+      "date": "2026-08-02",
+      "clicks": 1,
+      "impressions": 313,
+      "ctr": 0.0032,
+      "position": 9.7
+    },
+    {
+      "date": "2026-08-03",
+      "clicks": 3,
+      "impressions": 295,
+      "ctr": 0.0102,
+      "position": 9.2
+    },
+    {
+      "date": "2026-08-04",
+      "clicks": 2,
+      "impressions": 372,
+      "ctr": 0.0054,
+      "position": 8
+    },
+    {
+      "date": "2026-08-05",
+      "clicks": 0,
+      "impressions": 364,
+      "ctr": 0,
+      "position": 11.7
+    },
+    {
+      "date": "2026-08-06",
+      "clicks": 0,
+      "impressions": 334,
+      "ctr": 0,
+      "position": 10.6
+    },
+    {
+      "date": "2026-08-07",
+      "clicks": 0,
+      "impressions": 285,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "date": "2026-08-08",
+      "clicks": 0,
+      "impressions": 237,
+      "ctr": 0,
+      "position": 11.6
+    },
+    {
+      "date": "2026-08-09",
+      "clicks": 0,
+      "impressions": 270,
+      "ctr": 0,
+      "position": 10.8
+    },
+    {
+      "date": "2026-08-10",
+      "clicks": 1,
+      "impressions": 307,
+      "ctr": 0.0033,
+      "position": 11.1
+    },
+    {
+      "date": "2026-08-11",
+      "clicks": 0,
+      "impressions": 314,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "date": "2026-08-12",
+      "clicks": 0,
+      "impressions": 250,
+      "ctr": 0,
+      "position": 10.6
+    },
+    {
+      "date": "2026-08-13",
+      "clicks": 1,
+      "impressions": 260,
+      "ctr": 0.0038,
+      "position": 12.4
+    },
+    {
+      "date": "2026-08-14",
+      "clicks": 2,
+      "impressions": 240,
+      "ctr": 0.0083,
+      "position": 11.1
+    }
+  ],
+  "observedChange": {
+    "clicks": -0.3,
+    "impressions": 1.02,
+    "source": "Search Console Insights comparison shown during audit"
+  }
+}
