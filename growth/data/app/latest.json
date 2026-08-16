@@ -1,7 +1,178 @@
 {
-  "generatedAt": "2026-08-17T00:00:00.000Z",
-  "source": "manual authenticated audit",
-  "status": "PARTIAL",
-  "known": { "ga4PropertyId": "514130776", "androidStreamId": "13033849406", "iosStreamId": "13376590840" },
-  "events": []
+  "source": "GA4 Data API",
+  "generatedAt": "2026-08-16T16:56:17.418Z",
+  "propertyId": "514130776",
+  "reportingWindow": "28daysAgo through 3daysAgo",
+  "events": [
+    {
+      "dimensions": {
+        "eventName": "screen_view",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 2041,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "user_engagement",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 1469,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "screen_view",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 307,
+        "activeUsers": 28
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "user_engagement",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 200,
+        "activeUsers": 18
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "session_start",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 75,
+        "activeUsers": 28
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "session_start",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 30,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "first_open",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 23,
+        "activeUsers": 23
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_remove",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 8,
+        "activeUsers": 6
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "first_open",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 8,
+        "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "notification_receive",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 6,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_exception",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "notification_dismiss",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_update",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "notification_foreground",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_update",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "os_update",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "(not set)",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 0,
+        "activeUsers": 6
+      }
+    }
+  ]
 }

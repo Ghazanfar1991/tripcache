@@ -1,40 +1,48 @@
 {
-  "generatedAt": "2026-08-16T16:18:37.090Z",
+  "generatedAt": "2026-08-16T16:56:47.183Z",
   "sources": [
     {
       "id": "search-console",
-      "status": "MANUAL_SEED",
+      "status": "SUCCESS",
       "freshness": "fresh",
       "reportingLagDays": 3,
       "note": "Sanitized aggregates imported from the owner's authenticated Search Console export; API automation awaits Google OIDC.",
-      "latestSyncTime": "2026-08-16T16:12:07.467Z",
+      "latestSyncTime": "2026-08-16T16:56:17.378Z",
       "coveredDateRange": {
-        "startDate": "2026-07-18",
-        "endDate": "2026-08-14"
+        "startDate": "2026-07-17",
+        "endDate": "2026-08-13"
       },
       "generatedLocalSnapshot": "growth/data/search-console/latest.json",
-      "checkedAt": "2026-08-16T16:12:07.470Z"
+      "checkedAt": "2026-08-16T16:56:17.383Z",
+      "warehouseTable": "trip-cache.tripcache_growth.search_console_daily"
     },
     {
       "id": "ga4",
-      "status": "WAITING_FOR_HUMAN_AUTH",
-      "freshness": "stale",
-      "note": "Property has app streams but no valid website stream."
+      "status": "SUCCESS",
+      "freshness": "fresh",
+      "note": "GA4 app data available; web funnel remains unmeasurable.",
+      "latestSyncTime": "2026-08-16T16:56:17.418Z",
+      "generatedLocalSnapshot": "growth/data/app/latest.json",
+      "checkedAt": "2026-08-16T16:56:17.943Z"
     },
     {
       "id": "revenuecat",
-      "status": "WAITING_FOR_HUMAN_AUTH",
-      "freshness": "stale",
-      "note": "Live dashboard was audited; deterministic API collection awaits a restricted key."
+      "status": "SUCCESS",
+      "freshness": "fresh",
+      "note": "Live dashboard was audited; deterministic API collection awaits a restricted key.",
+      "latestSyncTime": "2026-08-16T16:56:17.977Z",
+      "warehouseTable": "trip-cache.tripcache_growth.revenue_daily",
+      "generatedLocalSnapshot": "growth/data/revenue/latest.json",
+      "checkedAt": "2026-08-16T16:56:18.777Z"
     },
     {
       "id": "production-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-08-16T16:18:37.083Z",
+      "latestSyncTime": "2026-08-16T16:56:47.179Z",
       "generatedLocalSnapshot": "growth/data/seo/technical-health.json",
       "note": "40 sitemap URLs verified.",
-      "checkedAt": "2026-08-16T16:18:37.090Z"
+      "checkedAt": "2026-08-16T16:56:47.183Z"
     }
   ]
 }

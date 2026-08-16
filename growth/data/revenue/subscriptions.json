@@ -1,6 +1,22 @@
 {
-  "generatedAt": "2026-08-17T00:00:00.000Z",
-  "status": "WAITING_FOR_API_COLLECTION",
-  "productsObserved": ["pro_monthly", "pro_yearly"],
-  "pricingDiscrepancy": ["website pricing page: USD 5.99/month", "website structured data: USD 9.99", "US App Store: USD 5.99 monthly and USD 50 yearly", "historical Play transaction observed at USD 9.99 monthly"]
+  "generatedAt": "2026-08-16T16:56:17.977Z",
+  "currency": "AUD",
+  "charts": {
+    "mrr": {
+      "unavailable": true,
+      "reason": "HTTP 404"
+    },
+    "revenue": {
+      "unavailable": true,
+      "reason": "HTTP 400"
+    },
+    "actives": {
+      "unavailable": true,
+      "reason": "HTTP 404"
+    },
+    "trials": {
+      "unavailable": true,
+      "reason": "HTTP 404"
+    }
+  }
 }

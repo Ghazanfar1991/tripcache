@@ -1,5 +1,65 @@
 {
-  "generatedAt": "2026-08-17T00:00:00.000Z",
-  "status": "WAITING_FOR_API_COLLECTION",
-  "cohorts": []
+  "generatedAt": "2026-08-16T16:56:17.418Z",
+  "cohorts": [
+    {
+      "dimensions": {
+        "newVsReturning": "new",
+        "platform": "Android"
+      },
+      "metrics": {
+        "activeUsers": 23,
+        "sessions": 23
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "new",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "activeUsers": 8,
+        "sessions": 8
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "returning",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "activeUsers": 7,
+        "sessions": 21
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "returning",
+        "platform": "Android"
+      },
+      "metrics": {
+        "activeUsers": 6,
+        "sessions": 49
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "(not set)",
+        "platform": "Android"
+      },
+      "metrics": {
+        "activeUsers": 0,
+        "sessions": 5
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "(not set)",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "activeUsers": 0,
+        "sessions": 1
+      }
+    }
+  ]
 }

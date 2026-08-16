@@ -1,5 +1,14 @@
 {
-  "generatedAt": "2026-08-17T00:00:00.000Z",
-  "status": "WAITING_FOR_API_COLLECTION",
-  "charts": {}
+  "generatedAt": "2026-08-16T16:56:17.977Z",
+  "currency": "AUD",
+  "charts": {
+    "churn": {
+      "unavailable": true,
+      "reason": "HTTP 404"
+    },
+    "initialConversion": {
+      "unavailable": true,
+      "reason": "HTTP 404"
+    }
+  }
 }
