@@ -111,7 +111,10 @@ if (dryRun) {
   process.exit(0)
 }
 
-const digest = createHash("sha256").update(`${kind}:${dateOnly()}:${reportPath || "none"}`).digest("hex").slice(0, 24)
+const digest = createHash("sha256")
+  .update(`${recipient}\0${subject}\0${textBody}\0${html}`)
+  .digest("hex")
+  .slice(0, 24)
 const response = await fetch("https://api.resend.com/emails", {
   method: "POST",
   headers: {
