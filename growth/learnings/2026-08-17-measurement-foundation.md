@@ -13,3 +13,7 @@
 - Remove the unverified paid-price structured offer and explicit homepage FAQ price while retaining the factual free offer and linking people to the pricing page. Re-add paid structured pricing only after cross-store catalog reconciliation.
 
 These are measurement/data-quality repairs, not growth experiments.
+
+## Resolution update
+
+GA4 web stream `TripCache Website` was created with stream ID `15446445587` and measurement ID `G-JP6JKPVPVY`. Because a GA measurement ID is public configuration, the site uses it as a safe fallback when the Vercel environment is missing or still contains `G-XXXX`.
