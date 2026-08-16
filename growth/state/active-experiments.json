@@ -1,9 +1,11 @@
 {
-  "updatedAt": "2026-08-17T00:00:00.000Z",
+  "updatedAt": "2026-08-16T17:44:02.483Z",
   "experiments": [
     {
       "id": "seo-hotel-reminder-ctr-2026-08-17",
-      "status": "ACTIVE_PENDING_DEPLOYMENT",
+      "status": "ACTIVE",
+      "deployedAt": "2026-08-16T17:43:21.000Z",
+      "deployedCommit": "691d869b533010821b825491078c2cc019a14a71",
       "record": "growth/experiments/active/seo-hotel-reminder-ctr-2026-08-17.json",
       "earliestDecisionDate": "2026-09-03"
     }
