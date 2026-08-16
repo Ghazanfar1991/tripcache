@@ -8,5 +8,5 @@ Read `context.md`, `growth-model.md`, `metric-definitions.md`, `config/*.yaml`, 
 4. Require a written hypothesis, primary metric, guardrail, baseline, observation window, rollback, and experiment ID before changing production-facing code.
 5. Never expose customer identifiers or secrets. Never alter mobile code, RevenueCat products, prices, entitlements, credentials, security settings, or billing.
 6. Prefer reversible content, internal-link, metadata, and funnel-instrumentation improvements backed by Search Console and website evidence.
-7. Validate, build, and run health checks. Stop at a preview/PR when evidence is inadequate or a human/security confirmation is required.
+7. Validate, build, and run health checks. When evidence is adequate and the experiment is reversible, publish through a `codex/` branch and pull request, wait for CI, merge, and verify production. Stop at a preview/PR when evidence is inadequate or a human/security confirmation is required.
 8. Update state and learnings even when the correct decision is to do nothing.

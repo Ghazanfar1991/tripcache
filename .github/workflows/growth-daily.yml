@@ -24,6 +24,14 @@ jobs:
       GA4_PROPERTY_ID: "514130776"
       REVENUECAT_PROJECT_ID: "82e83e04"
       REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_API_KEY }}
+      GOOGLE_PLAY_REPORT_BUCKET: ${{ vars.GOOGLE_PLAY_REPORT_BUCKET }}
+      GOOGLE_PLAY_PACKAGE_NAME: app.tripcache
+      FIREBASE_CRASHLYTICS_DATASET: firebase_crashlytics
+      APP_STORE_APP_ID: "6758403056"
+      APP_STORE_CONNECT_ISSUER_ID: ${{ vars.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_KEY_ID: ${{ vars.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_VENDOR_NUMBER: ${{ vars.APP_STORE_CONNECT_VENDOR_NUMBER }}
+      APP_STORE_CONNECT_PRIVATE_KEY_BASE64: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY_BASE64 }}
       TZ: Australia/Sydney
     steps:
       - uses: actions/checkout@v4
@@ -43,7 +51,7 @@ jobs:
             echo "ready=true" >> "$GITHUB_OUTPUT"
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Growth collection is intentionally disabled until all read-only connectors are configured."
+            echo "Core growth collection is disabled until Google OIDC and the RevenueCat read-only key are configured. Optional store/Crashlytics connectors may remain pending."
           fi
 
       - if: ${{ steps.connector-preflight.outputs.ready == 'true' }}
@@ -60,7 +68,8 @@ jobs:
           access_token_scopes: >-
             https://www.googleapis.com/auth/cloud-platform,
             https://www.googleapis.com/auth/analytics.readonly,
-            https://www.googleapis.com/auth/webmasters.readonly
+            https://www.googleapis.com/auth/webmasters.readonly,
+            https://www.googleapis.com/auth/devstorage.read_only
 
       - if: ${{ steps.google-auth.outcome == 'success' }}
         uses: google-github-actions/setup-gcloud@v3

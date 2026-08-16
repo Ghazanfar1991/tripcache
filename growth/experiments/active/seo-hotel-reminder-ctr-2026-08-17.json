@@ -1,0 +1,39 @@
+{
+  "id": "seo-hotel-reminder-ctr-2026-08-17",
+  "status": "ACTIVE_PENDING_DEPLOYMENT",
+  "type": "SEO_CTR",
+  "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
+  "hypothesis": "Making the existing free deadline calculator benefit explicit in the search title and description will improve qualified organic CTR for a page that already ranks near position 4.5.",
+  "baseline": {
+    "period": {
+      "startDate": "2026-07-17",
+      "endDate": "2026-08-13"
+    },
+    "clicks": 0,
+    "impressions": 192,
+    "ctr": 0,
+    "averagePosition": 4.536458333333334
+  },
+  "change": {
+    "previousTitle": "Hotel Cancellation Reminder App: Never Miss a Free-Cancellation Deadline",
+    "newTitle": "Hotel Cancellation Reminder + Free Calculator",
+    "previousDescription": "Use TripCache as a hotel cancellation reminder app to track free-cancellation deadlines, hotel confirmations, refund rules, and stay documents inside your travel itinerary.",
+    "newDescription": "Calculate a hotel's free-cancellation cutoff, save confirmation details, and set TripCache reminders before a refundable rate becomes non-refundable."
+  },
+  "primaryMetric": "Google Search Console page CTR",
+  "successCriteria": "At least 100 post-deployment impressions and CTR of 1.0% or higher after the reporting lag.",
+  "guardrails": [
+    "Page remains indexable with HTTP 200 and its existing canonical URL",
+    "Average position does not decline by more than 2.0 positions",
+    "No unverified product, price, or refund claim is introduced"
+  ],
+  "observationWindow": {
+    "minimumDays": 14,
+    "reportingLagDays": 3,
+    "earliestDecisionDate": "2026-09-03"
+  },
+  "rollback": {
+    "condition": "Rollback if a guardrail fails, or if at least 100 impressions accrue and CTR remains 0% while average position declines by more than 2.0 positions.",
+    "action": "Restore the previous title, description, and H1 from this record."
+  }
+}

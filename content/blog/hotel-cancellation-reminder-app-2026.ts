@@ -2,12 +2,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "hotel-cancellation-reminder-app-2026",
-  title: "Hotel Cancellation Reminder App: Never Miss a Free-Cancellation Deadline",
+  title: "Hotel Cancellation Reminder + Free Calculator",
   excerpt:
     "Learn how to track hotel free-cancellation windows, local cutoff times, confirmation numbers, and reminder timing before a refundable stay becomes non-refundable.",
   description:
-    "Use TripCache as a hotel cancellation reminder app to track free-cancellation deadlines, hotel confirmations, refund rules, and stay documents inside your travel itinerary.",
+    "Calculate a hotel's free-cancellation cutoff, save confirmation details, and set TripCache reminders before a refundable rate becomes non-refundable.",
   date: "2026-05-18",
+  updatedAt: "2026-08-17",
   author: "TripCache Team",
   readTime: "8 min read",
   category: "Guide",
@@ -22,7 +23,7 @@ export const metadata: BlogFrontmatter = {
   ],
 }
 
-export const body = String.raw`# Hotel Cancellation Reminder App: Never Miss a Free-Cancellation Deadline
+export const body = String.raw`# Hotel Cancellation Reminder + Free Calculator
 
 Refundable hotel bookings are useful because they let you keep flexibility while trip plans are still changing. The risk is simple: if you miss the free-cancellation deadline, the booking can become an expensive commitment.
 

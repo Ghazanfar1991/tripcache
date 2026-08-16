@@ -30,7 +30,16 @@ export function isoNow() {
 }
 
 export function dateOnly(date = new Date()) {
-  return date.toISOString().slice(0, 10)
+  const timeZone = process.env.TZ || "Australia/Sydney"
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).formatToParts(date).map((part) => [part.type, part.value]),
+  )
+  return `${parts.year}-${parts.month}-${parts.day}`
 }
 
 export function daysAgo(days, from = new Date()) {

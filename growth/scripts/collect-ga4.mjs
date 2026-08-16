@@ -31,7 +31,7 @@ function rows(report) {
 
 try {
   const generatedAt = isoNow()
-  const [eventsReport, retentionReport] = await Promise.all([
+  const [eventsReport, retentionReport, screensReport, acquisitionReport] = await Promise.all([
     runReport({
       dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
       dimensions: [{ name: "eventName" }, { name: "platform" }],
@@ -44,10 +44,56 @@ try {
       metrics: [{ name: "activeUsers" }, { name: "sessions" }],
       limit: 1000,
     }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
+      dimensions: [{ name: "unifiedScreenName" }, { name: "unifiedScreenClass" }, { name: "platform" }],
+      metrics: [{ name: "eventCount" }, { name: "activeUsers" }],
+      dimensionFilter: {
+        filter: {
+          fieldName: "eventName",
+          stringFilter: { matchType: "EXACT", value: "screen_view", caseSensitive: true },
+        },
+      },
+      orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
+      limit: 10000,
+    }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
+      dimensions: [{ name: "firstUserSourceMedium" }, { name: "platform" }],
+      metrics: [{ name: "newUsers" }, { name: "activeUsers" }],
+      orderBys: [{ metric: { metricName: "newUsers" }, desc: true }],
+      limit: 1000,
+    }),
   ])
   const eventRows = rows(eventsReport)
+  const screenRows = rows(screensReport)
+    .filter((row) => row.dimensions.platform !== "WEB")
+    .filter((row) => !["", "(not set)"].includes(row.dimensions.unifiedScreenName)
+      || !["", "(not set)"].includes(row.dimensions.unifiedScreenClass))
+  const acquisitionRows = rows(acquisitionReport).filter((row) => row.dimensions.platform !== "WEB")
   const websiteRows = eventRows.filter((row) => row.dimensions.platform === "WEB")
   const trackedEvents = ["app_store_click", "play_store_click", "pricing_view", "get_started_open"]
+  const appFunnelDefinitions = [
+    { id: "installProxy", events: ["first_open"] },
+    { id: "signUp", events: ["sign_up"] },
+    { id: "onboardingComplete", events: ["onboarding_complete", "onboarding_completed"] },
+    { id: "activation", events: ["trip_created", "import_completed", "draft_approved"] },
+    { id: "paywallView", events: ["paywall_view", "paywall_opened"] },
+    { id: "trialStart", events: ["trial_started", "start_trial"] },
+    { id: "purchase", events: ["purchase", "in_app_purchase", "subscription_started"] },
+  ]
+  const appEvents = eventRows.filter((row) => row.dimensions.platform !== "WEB")
+  const funnelSteps = appFunnelDefinitions.map((definition) => {
+    const matching = appEvents.filter((row) => definition.events.includes(row.dimensions.eventName))
+    return {
+      id: definition.id,
+      eventNames: definition.events,
+      measured: matching.length > 0,
+      eventCount: matching.reduce((sum, row) => sum + row.metrics.eventCount, 0),
+      activeUsers: matching.reduce((sum, row) => sum + row.metrics.activeUsers, 0),
+      byPlatform: matching,
+    }
+  })
 
   await writeJson("data/app/latest.json", {
     source: "GA4 Data API",
@@ -55,8 +101,19 @@ try {
     propertyId,
     reportingWindow: "28daysAgo through 3daysAgo",
     events: eventRows,
+    screenViews: screenRows,
+    acquisition: acquisitionRows,
   })
   await writeJson("data/app/retention.json", { generatedAt, cohorts: rows(retentionReport) })
+  await writeJson("data/app/funnel.json", {
+    source: "GA4 Data API",
+    generatedAt,
+    reportingWindow: "28daysAgo through 3daysAgo",
+    steps: funnelSteps,
+    measurableSteps: funnelSteps.filter((step) => step.measured).map((step) => step.id),
+    missingInstrumentation: funnelSteps.filter((step) => !step.measured).map((step) => step.id),
+    note: "first_open is an analytics install proxy; official store downloads are collected separately.",
+  })
   await writeJson("data/website/funnel.json", {
     generatedAt,
     measurable: websiteRows.length > 0,

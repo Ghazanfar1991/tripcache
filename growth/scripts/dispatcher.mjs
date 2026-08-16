@@ -56,6 +56,19 @@ async function execute(job) {
   return { status: result.status === 0 ? "SUCCESS" : classify(output), output, exitCode: result.status }
 }
 
+function sendReportEmail(job) {
+  const kind = job.id.startsWith("monthly") ? "monthly" : "weekly"
+  const result = spawnSync(process.execPath, [path.join(scriptDir, "send-report-email.mjs"), "--kind", kind], {
+    cwd: repoRoot,
+    encoding: "utf8",
+    env: process.env,
+  })
+  return {
+    status: result.status === 0 ? "SENT_OR_SKIPPED" : "FAILED",
+    output: `${result.stdout || ""}\n${result.stderr || ""}`.trim().slice(-2000),
+  }
+}
+
 if (!(await acquireLock())) {
   console.log("Dispatcher already running; exiting safely.")
   process.exit(0)
@@ -74,6 +87,7 @@ try {
     console.log(`${dryRun ? "Would run" : "Running"}: ${job.id}`)
     if (dryRun) continue
     const result = await execute(job)
+    const email = result.status === "SUCCESS" ? sendReportEmail(job) : null
     const attempts = result.status === "SUCCESS" ? 0 : Number(previous.attempts || 0) + 1
     const retryHours = [6, 12, 24][Math.min(attempts - 1, 2)]
     state.jobs[job.id] = {
@@ -86,6 +100,7 @@ try {
         : new Date(now.getTime() + retryHours * 3600000).toISOString(),
       lastOutput: result.output,
       exitCode: result.exitCode ?? null,
+      email,
     }
     await writeJson("state/orchestrator-state.json", { ...state, updatedAt: isoNow() })
   }
