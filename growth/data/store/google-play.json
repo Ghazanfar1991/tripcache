@@ -1,0 +1,870 @@
+{
+  "source": "Google Play Console Cloud Storage statistics export",
+  "generatedAt": "2026-08-16T17:37:26.250Z",
+  "packageName": "app.tripcache",
+  "reportingLagDays": "3-7",
+  "filesProcessed": [
+    "installs_app.tripcache_202608_country.csv",
+    "installs_app.tripcache_202607_country.csv",
+    "installs_app.tripcache_202606_country.csv",
+    "installs_app.tripcache_202605_country.csv"
+  ],
+  "totals28Days": {
+    "userInstalls": 6,
+    "userUninstalls": 5,
+    "deviceInstalls": 7,
+    "deviceUninstalls": 0
+  },
+  "latestReportedDate": "2026-08-03",
+  "latestInstalledAudience": 14,
+  "daily": [
+    {
+      "date": "2026-05-04",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 6
+    },
+    {
+      "date": "2026-05-05",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 7
+    },
+    {
+      "date": "2026-05-06",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 7
+    },
+    {
+      "date": "2026-05-07",
+      "dailyUserInstalls": 3,
+      "dailyUserUninstalls": 3,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 7
+    },
+    {
+      "date": "2026-05-08",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-05-09",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-05-10",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-11",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-12",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-05-13",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-05-14",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-05-15",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-16",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-05-17",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-18",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-05-19",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-20",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-21",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-05-22",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-05-23",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-05-24",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-05-25",
+      "dailyUserInstalls": 2,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-05-26",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-05-27",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-05-28",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-05-29",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-05-30",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-05-31",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-01",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-06-02",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-06-03",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-04",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-05",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-06",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-06-07",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-08",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-06-09",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-10",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-06-11",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-06-12",
+      "dailyUserInstalls": 2,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-13",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-06-14",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-15",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-06-16",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-17",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-06-18",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 8
+    },
+    {
+      "date": "2026-06-19",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-20",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 8,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-06-21",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-22",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-06-23",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-24",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-25",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-06-26",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-27",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-06-28",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-29",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-06-30",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 9
+    },
+    {
+      "date": "2026-07-01",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-07-02",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-03",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-04",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-07-05",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 15
+    },
+    {
+      "date": "2026-07-06",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-07",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-08",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-09",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-10",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-11",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-12",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-07-13",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 11
+    },
+    {
+      "date": "2026-07-14",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 10
+    },
+    {
+      "date": "2026-07-15",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-16",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 16
+    },
+    {
+      "date": "2026-07-17",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-18",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 17
+    },
+    {
+      "date": "2026-07-19",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-07-20",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-07-21",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-22",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 16
+    },
+    {
+      "date": "2026-07-23",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 16
+    },
+    {
+      "date": "2026-07-24",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-25",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-26",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 16
+    },
+    {
+      "date": "2026-07-27",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 15
+    },
+    {
+      "date": "2026-07-28",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 15
+    },
+    {
+      "date": "2026-07-29",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    },
+    {
+      "date": "2026-07-30",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-07-31",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 15
+    },
+    {
+      "date": "2026-08-01",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 13
+    },
+    {
+      "date": "2026-08-02",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 12
+    },
+    {
+      "date": "2026-08-03",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 14
+    }
+  ],
+  "countries": [
+    {
+      "country": "US",
+      "dailyUserInstalls": 6,
+      "dailyUserUninstalls": 6
+    },
+    {
+      "country": "ID",
+      "dailyUserInstalls": 3,
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "PH",
+      "dailyUserInstalls": 3,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "BR",
+      "dailyUserInstalls": 2,
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "IN",
+      "dailyUserInstalls": 2,
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "CH",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "GY",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "IL",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "NI",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "SA",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "TH",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "BD",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "TT",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "MY",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "AR",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "NO",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "UA",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "DE",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "AU",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 20
+    },
+    {
+      "country": "SG",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0
+    },
+    {
+      "country": "CA",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1
+    },
+    {
+      "country": "IT",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1
+    }
+  ]
+}

@@ -44,11 +44,22 @@ function normalize(rows, dimension) {
   }))
 }
 
+function normalizeQueryPages(rows) {
+  return rows.map((row) => ({
+    page: row.keys?.[0] || "",
+    query: row.keys?.[1] || "",
+    clicks: row.clicks || 0,
+    impressions: row.impressions || 0,
+    ctr: row.ctr || 0,
+    position: row.position || 0,
+  }))
+}
+
 try {
   const currentStart = daysAgo(30)
   const previousStart = daysAgo(58)
   const previousEnd = daysAgo(31)
-  const [currentTotalRows, previousTotalRows, dates, queriesRaw, pagesRaw, countriesRaw, devicesRaw] = await Promise.all([
+  const [currentTotalRows, previousTotalRows, dates, queriesRaw, pagesRaw, queryPagesRaw, countriesRaw, devicesRaw] = await Promise.all([
     query({ startDate: currentStart }),
     (async () => {
       const response = await fetchJson(
@@ -64,6 +75,7 @@ try {
     query({ startDate: daysAgo(92), dimensions: ["date"] }),
     query({ startDate: currentStart, dimensions: ["query"] }),
     query({ startDate: currentStart, dimensions: ["page"] }),
+    query({ startDate: currentStart, dimensions: ["page", "query"] }),
     query({ startDate: currentStart, dimensions: ["country"] }),
     query({ startDate: currentStart, dimensions: ["device"] }),
   ])
@@ -74,7 +86,31 @@ try {
   const pages = normalize(pagesRaw, "page")
   const countries = normalize(countriesRaw, "country")
   const devices = normalize(devicesRaw, "device")
+  const queryPages = normalizeQueryPages(queryPagesRaw)
   const generatedAt = isoNow()
+  const pageOpportunities = pages
+    .filter((row) => row.impressions >= 20 && row.position <= 20 && row.ctr < 0.015)
+    .sort((a, b) => b.impressions - a.impressions)
+  const queryPageOpportunities = queryPages
+    .filter((row) => row.impressions >= 5 && row.position <= 20 && row.ctr < 0.015)
+    .sort((a, b) => b.impressions - a.impressions)
+  const keywordMap = Object.values(queryPages.reduce((map, row) => {
+    const entry = map[row.page] || { page: row.page, impressions: 0, clicks: 0, queries: [] }
+    entry.impressions += row.impressions
+    entry.clicks += row.clicks
+    entry.queries.push({
+      query: row.query,
+      clicks: row.clicks,
+      impressions: row.impressions,
+      ctr: row.ctr,
+      position: row.position,
+    })
+    map[row.page] = entry
+    return map
+  }, {})).map((entry) => ({
+    ...entry,
+    queries: entry.queries.sort((a, b) => b.impressions - a.impressions).slice(0, 25),
+  })).sort((a, b) => b.impressions - a.impressions)
 
   await writeJson("data/search-console/latest.json", {
     source: "Google Search Console API",
@@ -104,6 +140,19 @@ try {
       .slice(0, 100),
   })
   await writeJson("data/search-console/pages.json", { generatedAt, pages })
+  await writeJson("data/seo/opportunities.json", {
+    source: "Google Search Console API",
+    generatedAt,
+    period: { startDate: currentStart, endDate },
+    pageOpportunities: pageOpportunities.slice(0, 100),
+    queryPageOpportunities: queryPageOpportunities.slice(0, 250),
+  })
+  await writeJson("data/seo/keyword-map.json", {
+    source: "Google Search Console API",
+    generatedAt,
+    period: { startDate: currentStart, endDate },
+    pages: keywordMap,
+  })
   await writeJson("data/search-console/countries.json", { generatedAt, countries })
   await writeJson("data/search-console/devices.json", { generatedAt, devices })
   await updateManifest(sourceId, {

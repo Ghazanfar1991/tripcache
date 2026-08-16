@@ -7,3 +7,12 @@ CREATE TABLE IF NOT EXISTS `trip-cache.tripcache_growth.revenue_daily` (
 CREATE TABLE IF NOT EXISTS `trip-cache.tripcache_growth.growth_funnel_daily` (
   snapshot_date DATE, generated_at TIMESTAMP, measurable BOOL, payload JSON
 );
+CREATE TABLE IF NOT EXISTS `trip-cache.tripcache_growth.app_usage_daily` (
+  snapshot_date DATE, generated_at TIMESTAMP, payload JSON
+);
+CREATE TABLE IF NOT EXISTS `trip-cache.tripcache_growth.store_daily` (
+  snapshot_date DATE, generated_at TIMESTAMP, store STRING, payload JSON
+);
+CREATE TABLE IF NOT EXISTS `trip-cache.tripcache_growth.app_quality_daily` (
+  snapshot_date DATE, generated_at TIMESTAMP, payload JSON
+);

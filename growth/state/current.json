@@ -1,26 +1,33 @@
 {
-  "updatedAt": "2026-08-17T00:00:00.000Z",
-  "phase": "MEASUREMENT_FOUNDATION",
+  "updatedAt": "2026-08-16T17:37:30.167Z",
+  "phase": "MEASUREMENT_AND_OPTIMIZATION",
   "northStar": {
     "metric": "mrrAud",
     "target": 5000,
-    "actual": null
+    "actual": 11
   },
   "known": {
-    "searchConsole28DayClicks": 40,
-    "searchConsole28DayImpressions": 7905,
-    "searchConsoleAveragePosition": 10.2,
-    "revenueCatLiveActiveSubscriptions": 1,
-    "revenueCatUiMrr": 8,
-    "revenueCatUiMrrCurrency": "USD_UNVERIFIED"
+    "searchConsole28DayClicks": 42,
+    "searchConsole28DayImpressions": 7770,
+    "searchConsoleAveragePosition": 10.25971685971686,
+    "revenueCatActiveSubscriptions": 1,
+    "revenueCatMrrAud": 11,
+    "googlePlayUserInstalls28Days": 6,
+    "appStoreFirstTimeDownloads28Days": null,
+    "measuredAppScreens": 0,
+    "measuredAppFunnelSteps": [],
+    "androidCrashFreeUsers30Days": 0.8929,
+    "androidCrashes30Days": 10,
+    "iosCrashFreeUsers30Days": 1
   },
   "unknown": [
     "website store-intent conversion",
-    "currency-normalized MRR",
-    "app activation",
-    "subscriber retention by cohort"
+    "screen-level app usage",
+    "app activation conversion",
+    "subscriber churn and retention",
+    "official App Store downloads"
   ],
-  "primaryConstraint": "Website analytics is not measurable because the deployed GA identifier is G-XXXX and the GA4 property has no web stream.",
+  "primaryConstraint": "Android reliability is the immediate product constraint at 89.29% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.",
   "lastDailyRunAt": "2026-08-16T17:00:13.065Z",
   "lastDailyRunStatus": "SUCCESS",
   "failures": []

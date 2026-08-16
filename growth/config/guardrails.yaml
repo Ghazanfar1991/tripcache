@@ -8,7 +8,13 @@
     "change pricing, products, entitlements, billing, credentials, access controls, or legal claims",
     "commit secrets or customer identifiers",
     "invent data or treat unavailable data as zero",
-    "deploy on a failed health check"
+    "deploy on a failed health check",
+    "publish more than one meaningful experiment at a time"
   ],
+  "publishing": {
+    "authorized": true,
+    "method": "validated pull request merged after CI, followed by production health verification",
+    "rollbackRequired": true
+  },
   "humanConfirmationRequired": ["security credentials", "persistent external access", "billing", "store or RevenueCat product changes"]
 }

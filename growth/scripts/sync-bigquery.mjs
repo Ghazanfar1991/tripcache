@@ -20,6 +20,10 @@ try {
   const search = await readJson("data/search-console/latest.json", {})
   const revenue = await readJson("data/revenue/latest.json", {})
   const funnel = await readJson("data/website/funnel.json", {})
+  const app = await readJson("data/app/latest.json", {})
+  const play = await readJson("data/store/google-play.json", {})
+  const apple = await readJson("data/store/app-store.json", {})
+  const quality = await readJson("data/app/quality.json", {})
   const statements = []
   if (search.totals) statements.push(`
 MERGE \`trip-cache.tripcache_growth.search_console_daily\` AS target
@@ -39,6 +43,27 @@ USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${funnel.generat
 ON target.snapshot_date = source.snapshot_date
 WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, measurable = source.measurable, payload = source.payload
 WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, measurable, payload) VALUES (source.snapshot_date, source.generated_at, source.measurable, source.payload);`)
+  if (app.generatedAt) statements.push(`
+MERGE \`trip-cache.tripcache_growth.app_usage_daily\` AS target
+USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${app.generatedAt}' AS generated_at, PARSE_JSON('${JSON.stringify(app).replaceAll("'", "\\'")}') AS payload) AS source
+ON target.snapshot_date = source.snapshot_date
+WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, payload = source.payload
+WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, payload) VALUES (source.snapshot_date, source.generated_at, source.payload);`)
+  for (const [store, snapshot] of [["google-play", play], ["app-store", apple]]) {
+    if (!snapshot.generatedAt) continue
+    statements.push(`
+MERGE \`trip-cache.tripcache_growth.store_daily\` AS target
+USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${snapshot.generatedAt}' AS generated_at, '${store}' AS store, PARSE_JSON('${JSON.stringify(snapshot).replaceAll("'", "\\'")}') AS payload) AS source
+ON target.snapshot_date = source.snapshot_date AND target.store = source.store
+WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, payload = source.payload
+WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, store, payload) VALUES (source.snapshot_date, source.generated_at, source.store, source.payload);`)
+  }
+  if (quality.generatedAt) statements.push(`
+MERGE \`trip-cache.tripcache_growth.app_quality_daily\` AS target
+USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${quality.generatedAt}' AS generated_at, PARSE_JSON('${JSON.stringify(quality).replaceAll("'", "\\'")}') AS payload) AS source
+ON target.snapshot_date = source.snapshot_date
+WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, payload = source.payload
+WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, payload) VALUES (source.snapshot_date, source.generated_at, source.payload);`)
   if (statements.length) run("bq", queryArgs, { input: statements.join("\n") })
   console.log(`BigQuery synchronized (${statements.length} aggregate rows).`)
 } catch (error) {
