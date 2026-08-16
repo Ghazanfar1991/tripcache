@@ -55,6 +55,7 @@ try {
     latestSyncTime: generatedAt,
     warehouseTable: "trip-cache.tripcache_growth.revenue_daily",
     generatedLocalSnapshot: "growth/data/revenue/latest.json",
+    note: "Automated through RevenueCat API v2 with charts/metrics read-only access.",
   })
 } catch (error) {
   await updateManifest(sourceId, {

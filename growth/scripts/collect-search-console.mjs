@@ -113,6 +113,7 @@ try {
     coveredDateRange: { startDate: currentStart, endDate },
     warehouseTable: "trip-cache.tripcache_growth.search_console_daily",
     generatedLocalSnapshot: "growth/data/search-console/latest.json",
+    note: "Automated through the Search Console API using a repository-scoped short-lived token.",
   })
 } catch (error) {
   await updateManifest(sourceId, {

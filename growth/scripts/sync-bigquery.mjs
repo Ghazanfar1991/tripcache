@@ -21,9 +21,24 @@ try {
   const revenue = await readJson("data/revenue/latest.json", {})
   const funnel = await readJson("data/website/funnel.json", {})
   const statements = []
-  if (search.totals) statements.push(`INSERT INTO \`trip-cache.tripcache_growth.search_console_daily\` VALUES (DATE '${dateOnly()}', TIMESTAMP '${search.generatedAt}', ${Number(search.totals.clicks || 0)}, ${Number(search.totals.impressions || 0)}, ${Number(search.totals.ctr || 0)}, ${Number(search.totals.position || 0)});`)
-  if (revenue.generatedAt) statements.push(`INSERT INTO \`trip-cache.tripcache_growth.revenue_daily\` VALUES (DATE '${dateOnly()}', TIMESTAMP '${revenue.generatedAt}', '${String(revenue.currency || "AUD").replaceAll("'", "")}', PARSE_JSON('${JSON.stringify(revenue.overview || {}).replaceAll("'", "\\'")}'));`)
-  if (funnel.generatedAt) statements.push(`INSERT INTO \`trip-cache.tripcache_growth.growth_funnel_daily\` VALUES (DATE '${dateOnly()}', TIMESTAMP '${funnel.generatedAt}', ${Boolean(funnel.measurable)}, PARSE_JSON('${JSON.stringify(funnel).replaceAll("'", "\\'")}'));`)
+  if (search.totals) statements.push(`
+MERGE \`trip-cache.tripcache_growth.search_console_daily\` AS target
+USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${search.generatedAt}' AS generated_at, ${Number(search.totals.clicks || 0)} AS clicks, ${Number(search.totals.impressions || 0)} AS impressions, ${Number(search.totals.ctr || 0)} AS ctr, ${Number(search.totals.position || 0)} AS average_position) AS source
+ON target.snapshot_date = source.snapshot_date
+WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, clicks = source.clicks, impressions = source.impressions, ctr = source.ctr, average_position = source.average_position
+WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, clicks, impressions, ctr, average_position) VALUES (source.snapshot_date, source.generated_at, source.clicks, source.impressions, source.ctr, source.average_position);`)
+  if (revenue.generatedAt) statements.push(`
+MERGE \`trip-cache.tripcache_growth.revenue_daily\` AS target
+USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${revenue.generatedAt}' AS generated_at, '${String(revenue.currency || "AUD").replaceAll("'", "")}' AS currency, PARSE_JSON('${JSON.stringify(revenue.overview || {}).replaceAll("'", "\\'")}') AS payload) AS source
+ON target.snapshot_date = source.snapshot_date
+WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, currency = source.currency, payload = source.payload
+WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, currency, payload) VALUES (source.snapshot_date, source.generated_at, source.currency, source.payload);`)
+  if (funnel.generatedAt) statements.push(`
+MERGE \`trip-cache.tripcache_growth.growth_funnel_daily\` AS target
+USING (SELECT DATE '${dateOnly()}' AS snapshot_date, TIMESTAMP '${funnel.generatedAt}' AS generated_at, ${Boolean(funnel.measurable)} AS measurable, PARSE_JSON('${JSON.stringify(funnel).replaceAll("'", "\\'")}') AS payload) AS source
+ON target.snapshot_date = source.snapshot_date
+WHEN MATCHED THEN UPDATE SET generated_at = source.generated_at, measurable = source.measurable, payload = source.payload
+WHEN NOT MATCHED THEN INSERT (snapshot_date, generated_at, measurable, payload) VALUES (source.snapshot_date, source.generated_at, source.measurable, source.payload);`)
   if (statements.length) run("bq", queryArgs, { input: statements.join("\n") })
   console.log(`BigQuery synchronized (${statements.length} aggregate rows).`)
 } catch (error) {
