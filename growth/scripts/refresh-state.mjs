@@ -15,12 +15,14 @@ function overviewMetric(id) {
 }
 
 const screenMeasurementAvailable = Array.isArray(app.screenViews) && app.screenViews.length > 0
+const productScreenNamesAvailable = screenMeasurementAvailable && app.screenViews.some((row) => !["", "(not set)"].includes(row.dimensions?.unifiedScreenName))
 const activation = appFunnel.steps?.find((step) => step.id === "activation")
 const churnAvailable = !revenueRetention.charts?.churn?.unavailable
 const androidQuality = quality.officialDashboardBaseline?.android
 const unknown = []
 if (!website.measurable) unknown.push("website store-intent conversion")
 if (!screenMeasurementAvailable) unknown.push("screen-level app usage")
+else if (!productScreenNamesAvailable) unknown.push("product-level screen usage (Firebase screen names are not configured)")
 if (!activation?.measured) unknown.push("app activation conversion")
 if (!churnAvailable) unknown.push("subscriber churn and retention")
 if (!play.totals28Days) unknown.push("official Google Play installs")

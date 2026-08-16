@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T17:46:20.119Z",
+  "updatedAt": "2026-08-16T17:48:38.414Z",
   "phase": "MEASUREMENT_AND_OPTIMIZATION",
   "northStar": {
     "metric": "mrrAud",
@@ -24,6 +24,7 @@
   },
   "unknown": [
     "website store-intent conversion",
+    "product-level screen usage (Firebase screen names are not configured)",
     "app activation conversion",
     "official App Store downloads"
   ],
