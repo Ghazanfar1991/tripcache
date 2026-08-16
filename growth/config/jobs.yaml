@@ -5,7 +5,7 @@
     {
       "id": "weekly-growth-cycle",
       "kind": "codex",
-      "intervalDays": 7,
+      "schedule": { "frequency": "weekly", "weekday": 1, "hour": 8, "minute": 0 },
       "nextDueAt": "2026-08-24T08:00:00+10:00",
       "prompt": "growth/prompts/weekly-growth-cycle.md",
       "maxRuntimeMinutes": 45,
@@ -14,7 +14,7 @@
     {
       "id": "monthly-strategy-review",
       "kind": "codex",
-      "intervalDays": 30,
+      "schedule": { "frequency": "monthly", "day": 1, "hour": 9, "minute": 0 },
       "nextDueAt": "2026-09-01T09:00:00+10:00",
       "prompt": "growth/prompts/monthly-strategy-review.md",
       "maxRuntimeMinutes": 60,

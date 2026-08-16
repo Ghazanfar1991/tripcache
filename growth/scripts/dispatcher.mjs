@@ -3,6 +3,7 @@ import { mkdir, readFile, rm, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import { isoNow, readJson, repoRoot, runtimeRoot, writeJson } from "./lib/common.mjs"
+import { nextScheduledAt } from "./lib/schedule.mjs"
 
 const dryRun = process.argv.includes("--dry-run")
 const nowArg = process.argv.indexOf("--now")
@@ -27,10 +28,6 @@ async function acquireLock() {
     } catch {}
     return false
   }
-}
-
-function nextDate(intervalDays) {
-  return new Date(now.getTime() + intervalDays * 86400000).toISOString()
 }
 
 function classify(output) {
@@ -85,7 +82,7 @@ try {
       attempts,
       lastRunAt: now.toISOString(),
       nextDueAt: result.status === "SUCCESS"
-        ? nextDate(job.intervalDays)
+        ? nextScheduledAt(job.schedule, config.timezone, now)
         : new Date(now.getTime() + retryHours * 3600000).toISOString(),
       lastOutput: result.output,
       exitCode: result.exitCode ?? null,
