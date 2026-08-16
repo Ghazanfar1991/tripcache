@@ -1,0 +1,117 @@
+{
+  "source": "GA4 Data API",
+  "generatedAt": "2026-08-16T17:46:09.535Z",
+  "reportingWindow": "28daysAgo through 3daysAgo",
+  "steps": [
+    {
+      "id": "installProxy",
+      "eventNames": [
+        "first_open"
+      ],
+      "measured": true,
+      "eventCount": 31,
+      "activeUsers": 31,
+      "byPlatform": [
+        {
+          "dimensions": {
+            "eventName": "first_open",
+            "platform": "Android"
+          },
+          "metrics": {
+            "eventCount": 23,
+            "activeUsers": 23
+          }
+        },
+        {
+          "dimensions": {
+            "eventName": "first_open",
+            "platform": "iOS"
+          },
+          "metrics": {
+            "eventCount": 8,
+            "activeUsers": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "signUp",
+      "eventNames": [
+        "sign_up"
+      ],
+      "measured": false,
+      "eventCount": 0,
+      "activeUsers": 0,
+      "byPlatform": []
+    },
+    {
+      "id": "onboardingComplete",
+      "eventNames": [
+        "onboarding_complete",
+        "onboarding_completed"
+      ],
+      "measured": false,
+      "eventCount": 0,
+      "activeUsers": 0,
+      "byPlatform": []
+    },
+    {
+      "id": "activation",
+      "eventNames": [
+        "trip_created",
+        "import_completed",
+        "draft_approved"
+      ],
+      "measured": false,
+      "eventCount": 0,
+      "activeUsers": 0,
+      "byPlatform": []
+    },
+    {
+      "id": "paywallView",
+      "eventNames": [
+        "paywall_view",
+        "paywall_opened"
+      ],
+      "measured": false,
+      "eventCount": 0,
+      "activeUsers": 0,
+      "byPlatform": []
+    },
+    {
+      "id": "trialStart",
+      "eventNames": [
+        "trial_started",
+        "start_trial"
+      ],
+      "measured": false,
+      "eventCount": 0,
+      "activeUsers": 0,
+      "byPlatform": []
+    },
+    {
+      "id": "purchase",
+      "eventNames": [
+        "purchase",
+        "in_app_purchase",
+        "subscription_started"
+      ],
+      "measured": false,
+      "eventCount": 0,
+      "activeUsers": 0,
+      "byPlatform": []
+    }
+  ],
+  "measurableSteps": [
+    "installProxy"
+  ],
+  "missingInstrumentation": [
+    "signUp",
+    "onboardingComplete",
+    "activation",
+    "paywallView",
+    "trialStart",
+    "purchase"
+  ],
+  "note": "first_open is an analytics install proxy; official store downloads are collected separately."
+}

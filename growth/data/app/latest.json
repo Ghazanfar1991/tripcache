@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-08-16T17:00:12.171Z",
+  "generatedAt": "2026-08-16T17:46:09.535Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -172,6 +172,271 @@
       "metrics": {
         "eventCount": 0,
         "activeUsers": 6
+      }
+    }
+  ],
+  "screenViews": [
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSScreen",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 945,
+        "activeUsers": 9
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RCTFabricModalHostViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 307,
+        "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "DevLauncherViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 258,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSTabsScreenViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 246,
+        "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "UIViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 239,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "MainActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 221,
+        "activeUsers": 28
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "DevLauncherActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 34,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "PaywallActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 20,
+        "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "SignInHubActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 15,
+        "activeUsers": 13
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RCTAlertController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 14,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "DevMenuViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 11,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "DevLauncherErrorActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 6,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "ProxyBillingActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 6,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "GmsDocumentScanningDelegateActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 5,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSNavigationController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 5,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "SFAuthenticationViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 5,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RCPaywallViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "UIDocumentPickerViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "OrientationAVPlayerViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "UIActivityViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "UIAlertController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 1
+      }
+    }
+  ],
+  "acquisition": [
+    {
+      "dimensions": {
+        "firstUserSourceMedium": "(direct) / (none)",
+        "platform": "Android"
+      },
+      "metrics": {
+        "newUsers": 18,
+        "activeUsers": 19
+      }
+    },
+    {
+      "dimensions": {
+        "firstUserSourceMedium": "(direct) / (none)",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "newUsers": 8,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "firstUserSourceMedium": "google-play / organic",
+        "platform": "Android"
+      },
+      "metrics": {
+        "newUsers": 5,
+        "activeUsers": 9
       }
     }
   ]

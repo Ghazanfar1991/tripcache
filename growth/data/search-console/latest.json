@@ -1,40 +1,33 @@
 {
   "source": "Google Search Console API",
-  "generatedAt": "2026-08-16T17:00:12.092Z",
+  "generatedAt": "2026-08-16T17:46:09.492Z",
   "reportingLagDays": 3,
   "period": {
-    "startDate": "2026-07-17",
-    "endDate": "2026-08-13"
+    "startDate": "2026-07-18",
+    "endDate": "2026-08-14"
   },
   "totals": {
-    "clicks": 42,
-    "impressions": 7770,
-    "ctr": 0.005405405405405406,
-    "position": 10.25971685971686
+    "clicks": 40,
+    "impressions": 7905,
+    "ctr": 0.005060088551549652,
+    "position": 10.234535104364326
   },
   "previousPeriod": {
-    "startDate": "2026-06-19",
-    "endDate": "2026-07-16",
+    "startDate": "2026-06-20",
+    "endDate": "2026-07-17",
     "totals": {
-      "clicks": 54,
-      "impressions": 3883,
-      "ctr": 0.01390677311357198,
-      "position": 11.888488282255988
+      "clicks": 57,
+      "impressions": 3919,
+      "ctr": 0.014544526664965552,
+      "position": 11.9402908905333
     }
   },
   "change": {
-    "clicks": -0.2222222222222222,
-    "impressions": 1.001030131341746,
-    "ctr": -0.6113113113113113
+    "clicks": -0.2982456140350877,
+    "impressions": 1.0170961980096964,
+    "ctr": -0.6520967187101213
   },
   "daily": [
-    {
-      "date": "2026-05-16",
-      "clicks": 0,
-      "impressions": 66,
-      "ctr": 0,
-      "position": 12.181818181818182
-    },
     {
       "date": "2026-05-17",
       "clicks": 0,
@@ -657,6 +650,13 @@
       "impressions": 260,
       "ctr": 0.0038461538461538464,
       "position": 12.365384615384615
+    },
+    {
+      "date": "2026-08-14",
+      "clicks": 2,
+      "impressions": 240,
+      "ctr": 0.008333333333333333,
+      "position": 11.079166666666667
     }
   ]
 }
