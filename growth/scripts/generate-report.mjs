@@ -23,6 +23,10 @@ const missingAppSteps = appFunnel.missingInstrumentation || []
 const churnStatus = revenueRetention.charts?.churn?.unavailable ? "unavailable" : "available"
 const androidQuality = quality.officialDashboardBaseline?.android
 const iosQuality = quality.officialDashboardBaseline?.ios
+const screenLabel = (row) => {
+  const name = row.dimensions.unifiedScreenName
+  return name && name !== "(not set)" ? name : row.dimensions.unifiedScreenClass || "unnamed screen"
+}
 const lines = [
   `# TripCache growth snapshot — ${dateOnly()}`,
   "",
@@ -46,7 +50,7 @@ const lines = [
   "## Most-used app screens",
   "",
   ...(topScreens.length
-    ? topScreens.map((row) => `- ${row.dimensions.unifiedScreenName || row.dimensions.unifiedScreenClass} (${row.dimensions.platform}): ${row.metrics.eventCount} views / ${row.metrics.activeUsers} active users.`)
+    ? topScreens.map((row) => `- ${screenLabel(row)} (${row.dimensions.platform}): ${row.metrics.eventCount} views / ${row.metrics.activeUsers} active users${row.dimensions.unifiedScreenName === "(not set)" ? "; Firebase screen name not configured" : ""}.`)
     : ["- Screen-level data is not available yet."]),
   "",
   "## App quality priorities",

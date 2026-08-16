@@ -66,6 +66,10 @@ const metric = (id) => revenue.overview?.metrics?.find((item) => item.id === id)
 const topScreens = (app.screenViews || []).slice(0, 5)
 const topOpportunities = (opportunities.queryPageOpportunities || []).slice(0, 5)
 const androidQuality = quality.officialDashboardBaseline?.android
+const screenLabel = (row) => {
+  const name = row.dimensions.unifiedScreenName
+  return name && name !== "(not set)" ? name : row.dimensions.unifiedScreenClass || "unnamed screen"
+}
 
 const summary = [
   `Organic: ${search.totals?.clicks ?? "unavailable"} clicks from ${search.totals?.impressions ?? "unavailable"} impressions.`,
@@ -81,7 +85,7 @@ const textBody = [
   ...summary,
   "",
   "Top screens:",
-  ...topScreens.map((row) => `- ${row.dimensions.unifiedScreenName || row.dimensions.unifiedScreenClass}: ${row.metrics.eventCount} views`),
+  ...topScreens.map((row) => `- ${screenLabel(row)}: ${row.metrics.eventCount} views`),
   "",
   "Top SEO opportunities:",
   ...topOpportunities.map((row) => `- ${row.query} — ${row.impressions} impressions, ${(row.ctr * 100).toFixed(2)}% CTR, position ${row.position.toFixed(1)}`),
@@ -91,7 +95,7 @@ const textBody = [
 const html = `<!doctype html><html><body style="font-family:Arial,sans-serif;line-height:1.55;color:#172033;max-width:760px;margin:auto;padding:24px">
 <h1 style="font-size:24px">${escapeHtml(subject)}</h1>
 <h2 style="font-size:18px">Current snapshot</h2><ul>${summary.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ul>
-<h2 style="font-size:18px">Most-used app screens</h2><ul>${topScreens.map((row) => `<li>${escapeHtml(row.dimensions.unifiedScreenName || row.dimensions.unifiedScreenClass)} — ${row.metrics.eventCount} views</li>`).join("") || "<li>Awaiting screen-level data</li>"}</ul>
+<h2 style="font-size:18px">Most-used app screens</h2><ul>${topScreens.map((row) => `<li>${escapeHtml(screenLabel(row))} — ${row.metrics.eventCount} views</li>`).join("") || "<li>Awaiting screen-level data</li>"}</ul>
 <h2 style="font-size:18px">Top SEO opportunities</h2><ul>${topOpportunities.map((row) => `<li>${escapeHtml(row.query)} — ${row.impressions} impressions, ${(row.ctr * 100).toFixed(2)}% CTR, position ${row.position.toFixed(1)}</li>`).join("") || "<li>Awaiting page/query data</li>"}</ul>
 <h2 style="font-size:18px">Audit and recommendations</h2><pre style="white-space:pre-wrap;font-family:Arial,sans-serif;background:#f5f7fb;padding:16px;border-radius:12px">${escapeHtml(report)}</pre>
 </body></html>`
