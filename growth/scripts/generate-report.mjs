@@ -11,6 +11,7 @@ const revenue = await readJson("data/revenue/latest.json", {})
 const revenueRetention = await readJson("data/revenue/retention.json", {})
 const play = await readJson("data/store/google-play.json", {})
 const apple = await readJson("data/store/app-store.json", {})
+const appleBaseline = await readJson("data/store/app-store-dashboard-baseline.json", {})
 const quality = await readJson("data/app/quality.json", {})
 const opportunities = await readJson("data/seo/opportunities.json", {})
 const generatedAt = isoNow()
@@ -23,6 +24,11 @@ const missingAppSteps = appFunnel.missingInstrumentation || []
 const churnStatus = revenueRetention.charts?.churn?.unavailable ? "unavailable" : "available"
 const androidQuality = quality.officialDashboardBaseline?.android
 const iosQuality = quality.officialDashboardBaseline?.ios
+const appleDownloadEvidence = apple.totals28Days
+  ? `${apple.totals28Days.firstTimeDownloads} official first-time downloads in the latest 28 reported days`
+  : appleBaseline.appUnits != null
+    ? `${appleBaseline.appUnits} official App Units from ${appleBaseline.period.startDate} to ${appleBaseline.period.endDate} (manual dashboard baseline; API automation pending)`
+    : "unavailable"
 const screenLabel = (row) => {
   const name = row.dimensions.unifiedScreenName
   return name && name !== "(not set)" ? name : row.dimensions.unifiedScreenClass || "unnamed screen"
@@ -42,7 +48,7 @@ const lines = [
   `- Website funnel: ${funnel.measurable ? "measurable" : "not measurable"}.`,
   `- RevenueCat: A$${overviewMetric("mrr")} MRR; ${overviewMetric("active_subscriptions")} active subscriptions; churn data ${churnStatus}.`,
   `- Google Play: ${play.totals28Days?.userInstalls ?? "unavailable"} official user installs in the latest 28 reported days.`,
-  `- App Store: ${apple.totals28Days?.firstTimeDownloads ?? "unavailable"} official first-time downloads in the latest 28 reported days.`,
+  `- App Store: ${appleDownloadEvidence}.`,
   `- Android quality: ${androidQuality ? `${(androidQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users / ${androidQuality.crashes} crashes affecting ${androidQuality.impactedUsers} users` : "unavailable"}.`,
   `- iOS quality: ${iosQuality ? `${(iosQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users` : "unavailable"}.`,
   `- App funnel instrumentation still missing: ${appFunnel.generatedAt ? (missingAppSteps.length ? missingAppSteps.join(", ") : "none") : "not collected yet"}.`,

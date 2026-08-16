@@ -59,6 +59,7 @@ const search = await readJson("data/search-console/latest.json", {})
 const app = await readJson("data/app/latest.json", {})
 const play = await readJson("data/store/google-play.json", {})
 const apple = await readJson("data/store/app-store.json", {})
+const appleBaseline = await readJson("data/store/app-store-dashboard-baseline.json", {})
 const quality = await readJson("data/app/quality.json", {})
 const revenue = await readJson("data/revenue/latest.json", {})
 const opportunities = await readJson("data/seo/opportunities.json", {})
@@ -66,6 +67,11 @@ const metric = (id) => revenue.overview?.metrics?.find((item) => item.id === id)
 const topScreens = (app.screenViews || []).slice(0, 5)
 const topOpportunities = (opportunities.queryPageOpportunities || []).slice(0, 5)
 const androidQuality = quality.officialDashboardBaseline?.android
+const appleDownloadSummary = apple.totals28Days
+  ? `App Store first-time downloads (28 reported days): ${apple.totals28Days.firstTimeDownloads}.`
+  : appleBaseline.appUnits != null
+    ? `App Store App Units (${appleBaseline.period.startDate} to ${appleBaseline.period.endDate}): ${appleBaseline.appUnits}; API automation pending.`
+    : "App Store first-time downloads: awaiting access."
 const screenLabel = (row) => {
   const name = row.dimensions.unifiedScreenName
   return name && name !== "(not set)" ? name : row.dimensions.unifiedScreenClass || "unnamed screen"
@@ -75,7 +81,7 @@ const summary = [
   `Organic: ${search.totals?.clicks ?? "unavailable"} clicks from ${search.totals?.impressions ?? "unavailable"} impressions.`,
   `MRR: A$${metric("mrr")}; active subscriptions: ${metric("active_subscriptions")}.`,
   `Google Play installs (28 reported days): ${play.totals28Days?.userInstalls ?? "awaiting access"}.`,
-  `App Store first-time downloads (28 reported days): ${apple.totals28Days?.firstTimeDownloads ?? "awaiting access"}.`,
+  appleDownloadSummary,
   `Android crash-free users: ${androidQuality ? `${(androidQuality.crashFreeUsers * 100).toFixed(2)}% (${androidQuality.crashes} crashes / ${androidQuality.impactedUsers} users)` : "awaiting Crashlytics"}.`,
 ]
 const subject = `TripCache ${kind} growth report — ${dateOnly()}`
