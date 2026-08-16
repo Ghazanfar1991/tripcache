@@ -56,6 +56,10 @@ jobs:
           service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
           project_id: ${{ vars.GCP_PROJECT_ID }}
           token_format: access_token
+          access_token_scopes: >-
+            https://www.googleapis.com/auth/cloud-platform,
+            https://www.googleapis.com/auth/analytics.readonly,
+            https://www.googleapis.com/auth/webmasters.readonly
 
       - if: ${{ steps.google-auth.outcome == 'success' }}
         uses: google-github-actions/setup-gcloud@v3
