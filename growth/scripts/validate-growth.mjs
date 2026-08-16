@@ -35,7 +35,11 @@ try {
   for (const job of jobs.jobs || []) {
     if (!job.id || ids.has(job.id)) errors.push(`duplicate or missing job id: ${job.id}`)
     ids.add(job.id)
-    if (!Number.isFinite(job.intervalDays) || job.intervalDays <= 0) errors.push(`${job.id} has invalid intervalDays`)
+    if (!job.schedule || !["weekly", "monthly"].includes(job.schedule.frequency)) errors.push(`${job.id} has invalid schedule frequency`)
+    if (!Number.isInteger(job.schedule?.hour) || job.schedule.hour < 0 || job.schedule.hour > 23) errors.push(`${job.id} has invalid schedule hour`)
+    if (!Number.isInteger(job.schedule?.minute) || job.schedule.minute < 0 || job.schedule.minute > 59) errors.push(`${job.id} has invalid schedule minute`)
+    if (job.schedule?.frequency === "weekly" && (!Number.isInteger(job.schedule.weekday) || job.schedule.weekday < 0 || job.schedule.weekday > 6)) errors.push(`${job.id} has invalid schedule weekday`)
+    if (job.schedule?.frequency === "monthly" && (!Number.isInteger(job.schedule.day) || job.schedule.day < 1 || job.schedule.day > 28)) errors.push(`${job.id} has invalid schedule day`)
   }
 } catch {}
 
