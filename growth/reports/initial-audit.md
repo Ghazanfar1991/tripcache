@@ -19,7 +19,9 @@ The first production experiment changes the hotel-reminder article title and des
 
 ## App acquisition and usage
 
-GA4 recorded 28 Android active users and 10 iOS active users in the audited window. It also recorded 23 Android and 8 iOS `first_open` events. These are analytics install proxies, not official store downloads. The official Google Play report shows six user installs and five user uninstalls in the latest 28 reported days; its latest reported active-device audience was 14 on August 3, while the live Play Console later displayed an installed audience of 13. The cloud service account still needs Play report permission for future automation. App Store Connect still needs a Sales and Reports key before authoritative iOS download totals can be collected.
+GA4 recorded 28 Android active users and 10 iOS active users in the audited window. It also recorded 23 Android and 8 iOS `first_open` events. These are analytics install proxies, not official store downloads. The official Google Play report shows six user installs and five user uninstalls in the latest 28 reported days; its latest reported active-device audience was 14 on August 3, while the live Play Console later displayed an installed audience of 13. The Play reporting service account now has read-only bulk-report permission, but Google's report bucket is still returning 403 while that permission propagates.
+
+App Store Connect reported 12 App Units for TripCache from July 16 through August 15, down 33% from the preceding comparison period. Apple defines App Units as first-time downloads. Device share was 92% iPhone and 8.3% iPad. This official 31-day dashboard baseline is stored separately from the automated 28-day collector so unlike periods are never presented as equivalent. The vendor number and TripCache Apple ID are configured; API automation still requires the Account Holder to request App Store Connect API access and then create a Sales and Reports team key.
 
 The authenticated screen audit completed, but every Firebase screen name is `(not set)`. GA4 can only see implementation classes: iOS `RNSScreen` produced 945 views from nine users; Android `MainActivity` produced 221 views from 28 users; `PaywallActivity` produced 20 views from seven users; and `SignInHubActivity` produced 15 views from 13 users. These are not reliable product-screen names, so popular/unused product areas still cannot be ranked. Development traffic is also contaminating the property: iOS `DevLauncherViewController` produced 258 views from three users and Android `DevLauncherActivity` produced 34 views from one user. Configure explicit screen names and exclude development builds/internal traffic before using screen counts for product decisions.
 
@@ -44,7 +46,7 @@ The latest Android release shown was 1.3.5 (47), so the first engineering check 
 
 iOS release 1.3.3 (51) showed 100% crash-free users and sessions with no open crash issues for the same 30-day selection.
 
-The official dashboard baseline is stored in `growth/data/app/quality.json`. Crashlytics is not currently exported to BigQuery. A daily collector is ready to ingest fatal/ANR event counts and impacted installations automatically after that export is enabled; it deliberately does not infer crash-free percentages without a sessions denominator.
+The official dashboard baseline is stored in `growth/data/app/quality.json`. Crashlytics daily export is now enabled for both apps in the `australia-southeast1` BigQuery region, and the collector has read-only dataset access. Firebase has created the datasets but has not populated their first tables yet. The daily collector will ingest fatal/ANR event counts and impacted installations when the first export arrives; it deliberately does not infer crash-free percentages without a sessions denominator.
 
 ## Measurement and automation status
 
@@ -52,12 +54,12 @@ The official dashboard baseline is stored in `growth/data/app/quality.json`. Cra
 - Weekly intelligent growth cycle: Monday 1:00 PM Australia/Sydney.
 - Monthly strategy review: first day of each month at 4:00 PM Australia/Sydney.
 - The hourly macOS dispatcher is only a lightweight overdue-job checker. It does not run an AI audit every hour; it lets missed weekly/monthly work recover after sleep, restart, network loss, or a dirty worktree without requiring a permanently running process.
-- Weekly/monthly email delivery is implemented through Resend with credentials held in macOS Keychain. Sending begins after the owner confirms the account sign-in/API-key step.
+- Weekly/monthly email delivery is active through Resend with credentials held in macOS Keychain. The initial audit was accepted for delivery to the configured owner email.
 
 ## Prioritized actions
 
 1. Verify whether the two Android crash groups occur on 1.3.5; address current-release crashes before scaling acquisition.
 2. Launch and observe the hotel-reminder CTR experiment; do not stack a second change on that page during the measurement window.
-3. Confirm the growth service account's Google Play report access, create an App Store Connect Sales and Reports key, and enable the Crashlytics BigQuery export.
+3. Let Google Play's newly granted bulk-report permission propagate, and have the App Store Connect Account Holder request API access so a Sales and Reports key can be created. Crashlytics export is enabled and awaiting its first daily tables.
 4. Add stable Firebase screen names, exclude development traffic, and instrument sign-up, onboarding, activation, paywall, trial, and purchase events.
 5. Reconcile subscription pricing before restoring paid-price structured data or changing public pricing copy.
