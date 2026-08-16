@@ -11,7 +11,7 @@ const faqs: FAQItem[] = [
   {
     question: "Is TripCache free?",
     answer:
-      "Yes. TripCache Basic includes manual trip entry, itinerary viewing, and core trip organization. TripCache Pro costs $9.99 per month and adds the automation and reporting tools listed on the pricing page.",
+      "Yes. TripCache Basic includes manual trip entry, itinerary viewing, and core trip organization. TripCache Pro adds the automation and reporting tools listed on the pricing page.",
   },
   {
     question: "What is included in TripCache Pro?",
