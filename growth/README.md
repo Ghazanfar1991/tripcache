@@ -2,6 +2,8 @@
 
 This directory is the durable, Git-backed memory for TripCache growth operations. Cloud jobs collect deterministic, sanitized aggregates every day. A local launchd dispatcher wakes hourly, runs overdue intelligent work through the installed Codex CLI authenticated with the owner's ChatGPT subscription, and records locks, retries, decisions, and evidence here.
 
+Until 2026-09-17 the engine operates in four-week sprint mode: Monday and Thursday intelligent cycles, up to three independent URL/query-cluster experiments in parallel, and a quality-controlled backlink pipeline. Experiments retain a 14-day evidence window; speed comes from parallel execution rather than premature conclusions.
+
 ## Commands
 
 - `npm run growth:daily` — collect all configured data and write a deterministic snapshot.
@@ -19,5 +21,7 @@ Raw customer records, credentials, OAuth refresh tokens, and ad identifiers must
 ## Operating boundary
 
 The engine may implement and publish reversible landing-page and SEO experiments in this repository after recording evidence, passing CI, and verifying production. It must not modify the mobile application, subscriptions, store pricing, billing, credentials, legal claims, or external access controls without the owner taking the required confirmation step.
+
+Backlink work is authorized only for accurate, relevant, editorially legitimate placements. Paid ranking links, automated directory/comment spam, fake reviews or identities, and undisclosed incentives are prohibited. The active opportunity and outreach status is stored in `outreach/backlink-backlog.json`.
 
 Local email credentials are stored in macOS Keychain services `com.tripcache.growth.resend-api-key` and `com.tripcache.growth.report-email`; they are never written to Git or dispatcher logs.

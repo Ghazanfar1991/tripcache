@@ -1,0 +1,37 @@
+{
+  "sprintEndsAt": "2026-09-17",
+  "qualifiedPlacementTarget": 12,
+  "maxNewOpportunitiesPerCycle": 10,
+  "minOpportunitiesAdvancedPerCycle": 3,
+  "qualityWeights": {
+    "topicalRelevance": 0.3,
+    "editorialLegitimacy": 0.25,
+    "qualifiedReferralPotential": 0.2,
+    "destinationFit": 0.15,
+    "executionEase": 0.1
+  },
+  "preferredMotions": [
+    "editorially reviewed app and product listings",
+    "unlinked brand mention reclamation",
+    "resource-page inclusion for the hotel cancellation calculator or TripCase recovery guide",
+    "first-party Search Console trend stories without exposing private data",
+    "truthful founder contributions where self-promotion is allowed and affiliation is disclosed",
+    "journalist and travel-tool roundup pitches tied to a specific reader problem"
+  ],
+  "forbidden": [
+    "paid links that pass ranking credit",
+    "bulk or automated directory submission",
+    "automated comments, forum posts, or private messages",
+    "fake accounts, fake reviews, or fabricated customer claims",
+    "keyword-rich reciprocal link exchanges",
+    "outreach without checking the destination's current rules"
+  ],
+  "requiredEvidence": [
+    "target URL and publisher",
+    "reader and topic fit",
+    "specific TripCache destination page",
+    "accurate pitch or submission copy",
+    "submission/outreach status and date",
+    "resulting live URL when earned"
+  ]
+}

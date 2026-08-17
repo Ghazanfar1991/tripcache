@@ -1,0 +1,54 @@
+{
+  "id": "seo-tripcase-recovery-ctr-2026-08-17",
+  "status": "READY_TO_DEPLOY",
+  "type": "SEO_CTR_AND_STORE_INTENT",
+  "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+  "primaryQueryCluster": "TripCase shutdown, replacement, and recovery",
+  "hypothesis": "Answering the current TripCase status and replacement decision immediately, while preserving the careful recovery guide, will improve CTR and qualified store intent for the site's second-highest-impression page.",
+  "baseline": {
+    "period": {
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-14"
+    },
+    "clicks": 12,
+    "impressions": 2179,
+    "ctr": 0.005507113354749885,
+    "averagePosition": 9.131252868288206,
+    "queryEvidence": {
+      "query": "tripcase",
+      "clicks": 5,
+      "impressions": 814,
+      "ctr": 0.006142506142506142,
+      "averagePosition": 8.953316953316953
+    }
+  },
+  "change": {
+    "previousTitle": "TripCase Shut Down: What Former Users Can Do Now",
+    "newTitle": "TripCase Is Gone: 2026 Replacement & Recovery Guide",
+    "previousDescription": "TripCase shut down in 2025 and its export window has ended. Follow this current guide to recover booking details and rebuild upcoming trips safely.",
+    "newDescription": "TripCase shut down in 2025. Rebuild upcoming trips from confirmation emails and compare 2026 replacements for itineraries, planning, flights, and reminders.",
+    "content": [
+      "Added a direct status answer before the recovery guide",
+      "Added a need-based replacement table",
+      "Added verified TripCache store links without weakening the original-source safety guidance"
+    ]
+  },
+  "primaryMetric": "Google Search Console page CTR",
+  "secondaryMetric": "GA4 outbound store-intent clicks from the page when measurable",
+  "successCriteria": "At least 300 post-deployment impressions and page CTR of 1.0% or higher after the reporting lag, while preserving average position within the guardrail.",
+  "guardrails": [
+    "Page remains indexable with HTTP 200 and its existing canonical URL",
+    "Average position does not decline by more than 2.0 positions",
+    "Recovery guidance continues to direct users to original booking providers as authoritative sources",
+    "No unsupported claim about restoring expired TripCase data is introduced"
+  ],
+  "observationWindow": {
+    "minimumDays": 14,
+    "reportingLagDays": 3,
+    "earliestDecisionDate": "2026-09-03"
+  },
+  "rollback": {
+    "condition": "Rollback if a guardrail fails, or if at least 300 impressions accrue and CTR declines materially while average position declines by more than 2.0 positions.",
+    "action": "Restore the previous title, description, H1, and opening section from this record."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "updatedAt": "2026-08-17T00:00:00Z",
+  "sprintEndsAt": "2026-09-17",
+  "targetQualifiedPlacements": 12,
+  "opportunities": [
+    {
+      "id": "alternativeto-tripcase-tripit-listing",
+      "tier": 1,
+      "motion": "editorial-directory",
+      "publisher": "AlternativeTo",
+      "targetUrl": "https://alternativeto.net/",
+      "destination": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "angle": "Accurate TripCache listing as an iOS and Android alternative for post-booking organization, cancellation reminders, documents, and expenses.",
+      "status": "READY_FOR_RULE_AND_ACCOUNT_CHECK",
+      "notes": "Use the official product name and canonical URL; do not claim feature or pricing parity with TripIt or Wanderlog."
+    },
+    {
+      "id": "product-hunt-tripcache-launch",
+      "tier": 1,
+      "motion": "launch-platform",
+      "publisher": "Product Hunt",
+      "targetUrl": "https://www.producthunt.com/posts/new",
+      "destination": "https://trip-cache.com/",
+      "angle": "Post-booking travel organizer that turns confirmations into reviewable itineraries and keeps cancellation deadlines, documents, receipts, and expenses together.",
+      "status": "READY_FOR_PROFILE_AND_LAUNCH_CHECK",
+      "notes": "Treat as a real launch with screenshots and founder disclosure, not a backlink-only submission."
+    },
+    {
+      "id": "indie-hackers-product-profile",
+      "tier": 1,
+      "motion": "founder-community",
+      "publisher": "Indie Hackers",
+      "targetUrl": "https://www.indiehackers.com/products",
+      "destination": "https://trip-cache.com/",
+      "angle": "Transparent founder story: replacing fragmented post-booking email, reminder, document, and expense workflows.",
+      "status": "RESEARCH_RULES",
+      "notes": "Contribute useful build and measurement details; disclose founder affiliation and avoid generic promotion."
+    },
+    {
+      "id": "betalist-tripcache",
+      "tier": 2,
+      "motion": "editorial-directory",
+      "publisher": "BetaList",
+      "targetUrl": "https://betalist.com/submit",
+      "destination": "https://trip-cache.com/",
+      "angle": "Early-stage cross-platform post-booking organizer for travelers who need confirmation import and cancellation-deadline context.",
+      "status": "RESEARCH_RULES",
+      "notes": "Verify current eligibility, price, and moderation policy before submission."
+    },
+    {
+      "id": "reddit-sideproject-mention-reclamation",
+      "tier": 1,
+      "motion": "unlinked-mention-reclamation",
+      "publisher": "Reddit r/SideProject",
+      "targetUrl": "https://www.reddit.com/r/SideProject/comments/1sw8g4q/shipped_my_first_app_a_tripcase_replacement_i/",
+      "destination": "https://trip-cache.com/",
+      "angle": "Verify whether the existing founder post links the canonical site; if not, add a transparent product update only if subreddit and edit rules allow it.",
+      "status": "VERIFY_EXISTING_LINK_AND_RULES",
+      "notes": "Do not create a duplicate post or disguise affiliation."
+    },
+    {
+      "id": "tripit-replacement-cancellation-deadline-thread",
+      "tier": 1,
+      "motion": "problem-specific-community-help",
+      "publisher": "Reddit r/TripIt",
+      "targetUrl": "https://www.reddit.com/r/TripIt/comments/1rmuuv0/tripit_replacement/",
+      "destination": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
+      "angle": "The thread explicitly asks for cancellation-deadline reminders; offer the free calculator only if current rules permit and clearly disclose the TripCache affiliation.",
+      "status": "VERIFY_RULES_AND_THREAD_STATE",
+      "notes": "No generic app pitch; answer the stated problem and avoid repetitive promotion."
+    },
+    {
+      "id": "travel-app-roundup-marie-claire",
+      "tier": 1,
+      "motion": "editorial-pitch",
+      "publisher": "Marie Claire travel",
+      "targetUrl": "https://www.marieclaire.com/travel/best-apps-for-travel/",
+      "destination": "https://trip-cache.com/features/cancellation-reminders",
+      "angle": "A differentiated post-booking and cancellation-deadline tool for a future travel-app update, supported by a working free calculator and current store links.",
+      "status": "FIND_CURRENT_EDITORIAL_CONTACT",
+      "notes": "Pitch relevance, not a demanded link; accept editorial no."
+    },
+    {
+      "id": "travel-app-roundup-toms-guide",
+      "tier": 1,
+      "motion": "editorial-pitch",
+      "publisher": "Tom's Guide travel",
+      "targetUrl": "https://www.tomsguide.com/phones/5-best-summer-travel-apps-to-help-you-have-the-perfect-vacation",
+      "destination": "https://trip-cache.com/blog/best-travel-apps-2025",
+      "angle": "Offer TripCache for a future roundup where post-booking confirmations, cancellation cutoffs, documents, and receipts are distinct from destination planning.",
+      "status": "FIND_CURRENT_EDITORIAL_CONTACT",
+      "notes": "Use an evidence-based founder pitch and current screenshots."
+    },
+    {
+      "id": "hotel-calculator-resource-pages",
+      "tier": 1,
+      "motion": "linkable-asset-resource-outreach",
+      "publisher": "Travel deal, refundable-booking, and business-travel resource sites",
+      "targetUrl": null,
+      "destination": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
+      "angle": "Free calculator for translating policy wording into a local cancellation cutoff; useful without installing the app.",
+      "status": "RESEARCH_20_RELEVANT_RESOURCE_PAGES",
+      "notes": "Prioritize pages already explaining refundable hotel bookings; avoid generic guest-post farms."
+    },
+    {
+      "id": "tripcase-shutdown-resource-outreach",
+      "tier": 1,
+      "motion": "resource-page-outreach",
+      "publisher": "Travel agencies, corporate travel blogs, and TripCase migration resources",
+      "targetUrl": null,
+      "destination": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "angle": "Current recovery checklist for users who missed the expired TripCase export window, with original-source verification guidance.",
+      "status": "RESEARCH_20_RELEVANT_RESOURCE_PAGES",
+      "notes": "Lead with the recovery resource; do not make unsupported restoration claims."
+    }
+  ]
+}

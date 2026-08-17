@@ -1,6 +1,10 @@
 {
-  "maxConcurrentExperiments": 1,
+  "sprintModeEndsAt": "2026-09-17",
+  "maxConcurrentExperiments": 3,
+  "maxNewExperimentsPerCycle": 2,
   "minimumObservationDays": 14,
+  "requireDistinctCanonicalUrls": true,
+  "requireDistinctPrimaryQueryClusters": true,
   "requireBuildAndHealthCheck": true,
   "requireReversibleChange": true,
   "forbidden": [
@@ -9,12 +13,28 @@
     "commit secrets or customer identifiers",
     "invent data or treat unavailable data as zero",
     "deploy on a failed health check",
-    "publish more than one meaningful experiment at a time"
+    "stack experiments on the same canonical URL or primary query cluster",
+    "buy or sell links for ranking purposes",
+    "use automated backlink, comment, forum, review, or directory spam",
+    "use fake identities, fake reviews, undisclosed incentives, or excessive reciprocal links"
   ],
   "publishing": {
     "authorized": true,
     "method": "validated pull request merged after CI, followed by production health verification",
     "rollbackRequired": true
+  },
+  "backlinks": {
+    "authorized": true,
+    "monthlyQualifiedPlacementTarget": 12,
+    "allowed": [
+      "editorially reviewed product and app directories",
+      "unlinked brand mention reclamation",
+      "resource-page inclusion based on a genuinely useful TripCache tool or guide",
+      "first-party data and digital PR pitches",
+      "truthful founder/community participation with clear affiliation disclosure"
+    ],
+    "requireRelevanceAndHumanReview": true,
+    "requireAccurateIdentityAndClaims": true
   },
   "humanConfirmationRequired": ["security credentials", "persistent external access", "billing", "store or RevenueCat product changes"]
 }
