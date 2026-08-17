@@ -5,6 +5,7 @@ const siteUrl = process.env.GSC_SITE_URL || "sc-domain:trip-cache.com"
 const token = getGoogleAccessToken()
 const reportingLagDays = 3
 const endDate = daysAgo(reportingLagDays)
+const freshEndDate = daysAgo(0)
 
 if (!token) {
   await updateManifest(sourceId, {
@@ -55,11 +56,23 @@ function normalizeQueryPages(rows) {
   }))
 }
 
+function normalizeFreshPageDates(rows) {
+  return rows.map((row) => ({
+    date: row.keys?.[0] || "",
+    page: row.keys?.[1] || "",
+    clicks: row.clicks || 0,
+    impressions: row.impressions || 0,
+    ctr: row.ctr || 0,
+    position: row.position || 0,
+  }))
+}
+
 try {
   const currentStart = daysAgo(30)
   const previousStart = daysAgo(58)
   const previousEnd = daysAgo(31)
-  const [currentTotalRows, previousTotalRows, dates, queriesRaw, pagesRaw, queryPagesRaw, countriesRaw, devicesRaw] = await Promise.all([
+  const freshStartDate = daysAgo(7)
+  const [currentTotalRows, previousTotalRows, dates, queriesRaw, pagesRaw, queryPagesRaw, countriesRaw, devicesRaw, freshResponse] = await Promise.all([
     query({ startDate: currentStart }),
     (async () => {
       const response = await fetchJson(
@@ -78,6 +91,21 @@ try {
     query({ startDate: currentStart, dimensions: ["page", "query"] }),
     query({ startDate: currentStart, dimensions: ["country"] }),
     query({ startDate: currentStart, dimensions: ["device"] }),
+    fetchJson(
+      `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/searchAnalytics/query`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          startDate: freshStartDate,
+          endDate: freshEndDate,
+          dimensions: ["date", "page"],
+          type: "web",
+          dataState: "all",
+          rowLimit: 25000,
+        }),
+      },
+    ),
   ])
 
   const current = currentTotalRows[0] || { clicks: 0, impressions: 0, ctr: 0, position: null }
@@ -125,6 +153,16 @@ try {
       ctr: percentageChange(current.ctr, previous.ctr),
     },
     daily: normalize(dates, "date").slice(-90),
+    fresh: {
+      dataState: "all",
+      directionalOnly: true,
+      period: { startDate: freshStartDate, endDate: freshEndDate },
+      firstIncompleteDate: freshResponse.metadata?.firstIncompleteDate
+        || freshResponse.metadata?.first_incomplete_date
+        || null,
+      pageDaily: normalizeFreshPageDates(freshResponse.rows || []),
+      note: "Fresh Search Console rows may be incomplete and are used only for 72-hour crawl/performance pulses, never final experiment decisions.",
+    },
   })
   await writeJson("data/search-console/queries.json", {
     generatedAt,

@@ -18,6 +18,8 @@ Until 2026-09-17 the engine operates in four-week sprint mode: Monday and Thursd
 
 Raw customer records, credentials, OAuth refresh tokens, and ad identifiers must never be committed. Only sanitized aggregates belong here.
 
+The daily snapshot includes a separate Search Console fresh-data pulse for 72-hour health checks and finalized rows for decisions. Fresh data can reveal crawl/indexing or tracking problems quickly, but it is never treated as a completed experiment result. The Monday and Thursday intelligent cycles consume this pulse, so the engine reacts every 3–4 days while retaining a 14-day evidence window for winner/rollback decisions.
+
 ## Operating boundary
 
 The engine may implement and publish reversible landing-page and SEO experiments in this repository after recording evidence, passing CI, and verifying production. It must not modify the mobile application, subscriptions, store pricing, billing, credentials, legal claims, or external access controls without the owner taking the required confirmation step.

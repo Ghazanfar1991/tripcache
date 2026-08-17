@@ -63,6 +63,7 @@ const appleBaseline = await readJson("data/store/app-store-dashboard-baseline.js
 const quality = await readJson("data/app/quality.json", {})
 const revenue = await readJson("data/revenue/latest.json", {})
 const opportunities = await readJson("data/seo/opportunities.json", {})
+const website = await readJson("data/website/funnel.json", {})
 const metric = (id) => revenue.overview?.metrics?.find((item) => item.id === id)?.value ?? "unavailable"
 const topScreens = (app.screenViews || []).slice(0, 5)
 const topOpportunities = (opportunities.queryPageOpportunities || []).slice(0, 5)
@@ -79,6 +80,7 @@ const screenLabel = (row) => {
 
 const summary = [
   `Organic: ${search.totals?.clicks ?? "unavailable"} clicks from ${search.totals?.impressions ?? "unavailable"} impressions.`,
+  `AI-assistant referrals: ${website.aiAssistantReferrals?.sessions ?? "unavailable"} sessions from recognized AI sources.`,
   `MRR: A$${metric("mrr")}; active subscriptions: ${metric("active_subscriptions")}.`,
   `Google Play installs (28 reported days): ${play.totals28Days?.userInstalls ?? "awaiting access"}.`,
   appleDownloadSummary,

@@ -4,7 +4,11 @@ import { seoLandingPages } from "@/lib/seo-page-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://trip-cache.com"
-  const siteUpdatedAt = new Date("2026-07-16")
+  const changed = (date: string) => new Date(`${date}T00:00:00Z`)
+  const latestBlogUpdate = getBlogSummaries().reduce((latest, post) => {
+    const candidate = new Date(post.updatedAt ?? post.date)
+    return candidate > latest ? candidate : latest
+  }, changed("2026-06-23"))
 
   const blogUrls = getBlogSummaries().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -13,53 +17,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const seoUrls = seoLandingPages.map((page) => ({
     url: `${baseUrl}${page.path}`,
-    lastModified: siteUpdatedAt,
+    lastModified: changed("2026-06-23"),
   }))
 
   return [
     {
       url: baseUrl,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-07-16"),
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-07-16"),
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-07-26"),
     },
     {
       url: `${baseUrl}/features`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-06-23"),
     },
     {
       url: `${baseUrl}/alternatives`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-06-23"),
     },
     {
       url: `${baseUrl}/tools`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-06-23"),
     },
     {
       url: `${baseUrl}/tools/hotel-cancellation-deadline-calculator`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-06-23"),
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-07-16"),
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-07-16"),
     },
     {
       url: `${baseUrl}/account-delete`,
-      lastModified: siteUpdatedAt,
+      lastModified: changed("2026-05-18"),
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: siteUpdatedAt,
+      lastModified: latestBlogUpdate,
     },
     ...seoUrls,
     ...blogUrls,
