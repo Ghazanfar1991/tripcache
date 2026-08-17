@@ -52,6 +52,7 @@ The official dashboard baseline is stored in `growth/data/app/quality.json`. Cra
 
 - Daily deterministic collection: 7:00 PM Australia/Sydney.
 - Weekly intelligent growth cycle: Monday 1:00 PM Australia/Sydney.
+- Midweek growth sprint: Thursday 1:00 PM Australia/Sydney through September 17, allowing up to three independent URL/query-cluster experiments in parallel.
 - Monthly strategy review: first day of each month at 4:00 PM Australia/Sydney.
 - The hourly macOS dispatcher is only a lightweight overdue-job checker. It does not run an AI audit every hour; it lets missed weekly/monthly work recover after sleep, restart, network loss, or a dirty worktree without requiring a permanently running process.
 - Weekly/monthly email delivery is active through Resend with credentials held in macOS Keychain. The initial audit was accepted for delivery to the configured owner email.

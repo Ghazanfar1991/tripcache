@@ -2,13 +2,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "tripcase-shutdown-what-now",
-  title: "TripCase Shut Down: What Former Users Can Do Now",
+  title: "TripCase Is Gone: 2026 Replacement & Recovery Guide",
   excerpt:
-    "The TripCase export window has ended. Learn how to rebuild upcoming trips from email, calendars, and receipts, then choose the right replacement workflow.",
+    "TripCase is gone and its export window has ended. Rebuild upcoming trips from original confirmations, then choose a replacement workflow that fits.",
   description:
-    "TripCase shut down in 2025 and its export window has ended. Follow this current guide to recover booking details and rebuild upcoming trips safely.",
+    "TripCase shut down in 2025. Rebuild upcoming trips from confirmation emails and compare 2026 replacements for itineraries, planning, flights, and reminders.",
   date: "2025-04-10",
-  updatedAt: "2026-07-16",
+  updatedAt: "2026-08-17",
   author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Migration Guide",
@@ -22,7 +22,19 @@ export const metadata: BlogFrontmatter = {
   ],
 }
 
-export const body = String.raw`# TripCase Shut Down: What Former Users Can Do Now
+export const body = String.raw`# TripCase Is Gone: 2026 Replacement & Recovery Guide
+
+**Quick answer:** TripCase no longer works, and its official data-export deadline has passed. Rebuild upcoming trips from the original confirmation emails and provider accounts; then choose a replacement based on whether you need broad itinerary automation, collaborative planning, flight intelligence, or cancellation-deadline organization.
+
+| Your immediate need | Best starting point |
+|---|---|
+| Recover an upcoming booking | Original airline, hotel, agency, calendar, and confirmation-email records |
+| Broad confirmation-to-itinerary automation | TripIt |
+| Collaborative planning, maps, and routes | Wanderlog |
+| Deep flight status and operational alerts | Flighty |
+| Cancellation deadlines, documents, receipts, and post-booking organization | TripCache |
+
+If the last workflow matches your problem, TripCache is available on the [App Store](https://apps.apple.com/app/id6758403056) and [Google Play](https://play.google.com/store/apps/details?id=app.tripcache). Continue below for the recovery steps and verification checklist before importing anything.
 
 TripCase ended access to its app and web experience on April 1, 2025. The [official TripCase website](https://www.tripcase.com/) says previous trip data was available for download only until June 30, 2025.
 

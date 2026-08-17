@@ -2,13 +2,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "best-travel-apps-2025",
-  title: "Best Travel Itinerary Apps in 2026: Which Workflow Fits?",
+  title: "Best Travel Apps for Planning in 2026: 4 Top Picks",
   excerpt:
-    "Compare TripCache, TripIt, Wanderlog, and Flighty by the job each app does best: post-booking organization, itinerary automation, collaborative planning, or flight intelligence.",
+    "Compare four top travel-planning apps by the job each does best: post-booking organization, itinerary automation, collaborative planning, or flight intelligence.",
   description:
-    "An objective 2026 comparison of TripCache, TripIt, Wanderlog, and Flighty for email import, itineraries, planning, flight alerts, documents, reminders, and expenses.",
+    "Compare TripCache, TripIt, Wanderlog, and Flighty for itinerary planning, booking imports, maps, flight alerts, cancellation reminders, and documents.",
   date: "2025-04-05",
-  updatedAt: "2026-07-16",
+  updatedAt: "2026-08-17",
   author: "TripCache Editorial Team",
   readTime: "10 min read",
   category: "Comparison",
@@ -22,7 +22,11 @@ export const metadata: BlogFrontmatter = {
   ],
 }
 
-export const body = String.raw`# Best Travel Itinerary Apps in 2026: Which Workflow Fits?
+export const body = String.raw`# Best Travel Apps for Planning in 2026: 4 Top Picks
+
+**Quick answer:** choose **TripCache** for post-booking confirmations, cancellation deadlines, documents, and expenses; **TripIt** for mature itinerary automation; **Wanderlog** for collaborative planning and maps; or **Flighty** for deep flight intelligence.
+
+Already have bookings to organize? Download TripCache from the [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache), or compare the four workflows below first.
 
 The best travel app depends on what you are trying to do.
 
@@ -39,7 +43,7 @@ This guide compares four useful options by their strongest workflow:
 
 | App | Best for | Main strength | Current premium positioning |
 |---|---|---|---|
-| **TripCache** | Frequent and business travelers managing confirmed bookings | Email drafts, cancellation deadlines, documents, receipts, CSV exports | Pro listed at $9.99/month |
+| **TripCache** | Frequent and business travelers managing confirmed bookings | Email drafts, cancellation deadlines, documents, receipts, CSV exports | Basic available free; verify the current Pro price in your store |
 | **TripIt** | Travelers who want mature confirmation import and travel-day alerts | Broad itinerary automation plus Pro flight and airport tools | Pro listed at $49/year |
 | **Wanderlog** | Leisure groups, road trips, and travelers planning places and routes | Itinerary + map, collaboration, recommendations, budgeting | Pro starts at $39.99/year |
 | **Flighty** | Frequent flyers who want detailed operational flight information | Fast alerts, delay predictions, inbound aircraft, airport conditions | Check the current in-app pricing |

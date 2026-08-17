@@ -1,0 +1,56 @@
+{
+  "id": "seo-best-travel-apps-ctr-2026-08-17",
+  "status": "ACTIVE",
+  "deployedAt": "2026-08-17T01:56:10.000Z",
+  "deployedCommit": "5c7668114cf7b294e35c3cbcbe699df8151f48f1",
+  "type": "SEO_CTR_AND_STORE_INTENT",
+  "page": "https://trip-cache.com/blog/best-travel-apps-2025",
+  "primaryQueryCluster": "best travel apps for planning and itinerary app comparisons",
+  "hypothesis": "Matching the high-ranking planning query more directly, giving a useful four-option answer immediately, and exposing verified store links above the fold will improve qualified organic CTR and store intent on TripCache's highest-impression page.",
+  "baseline": {
+    "period": {
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-14"
+    },
+    "clicks": 8,
+    "impressions": 3959,
+    "ctr": 0.002020712301086133,
+    "averagePosition": 9.519323061379136,
+    "queryEvidence": {
+      "query": "best travel apps for planning",
+      "clicks": 0,
+      "impressions": 168,
+      "ctr": 0,
+      "averagePosition": 2.9226190476190474
+    }
+  },
+  "change": {
+    "previousTitle": "Best Travel Itinerary Apps in 2026: Which Workflow Fits?",
+    "newTitle": "Best Travel Apps for Planning in 2026: 4 Top Picks",
+    "previousDescription": "An objective 2026 comparison of TripCache, TripIt, Wanderlog, and Flighty for email import, itineraries, planning, flight alerts, documents, reminders, and expenses.",
+    "newDescription": "Compare TripCache, TripIt, Wanderlog, and Flighty for itinerary planning, booking imports, maps, flight alerts, cancellation reminders, and documents.",
+    "content": [
+      "Added a direct four-product quick answer before the long comparison",
+      "Added verified App Store and Google Play links near the opening",
+      "Removed a stale numeric TripCache price from the comparison table"
+    ]
+  },
+  "primaryMetric": "Google Search Console page CTR",
+  "secondaryMetric": "GA4 outbound store-intent clicks from the page when measurable",
+  "successCriteria": "At least 500 post-deployment impressions and page CTR of 0.6% or higher after the reporting lag, while preserving average position within the guardrail.",
+  "guardrails": [
+    "Page remains indexable with HTTP 200 and its existing canonical URL",
+    "Average position does not decline by more than 2.0 positions",
+    "Comparison remains accurate and does not introduce unverified pricing or superiority claims",
+    "App Store and Google Play links remain valid"
+  ],
+  "observationWindow": {
+    "minimumDays": 14,
+    "reportingLagDays": 3,
+    "earliestDecisionDate": "2026-09-03"
+  },
+  "rollback": {
+    "condition": "Rollback if a guardrail fails, or if at least 500 impressions accrue and CTR declines materially while average position declines by more than 2.0 positions.",
+    "action": "Restore the previous title, description, H1, opening paragraphs, and TripCache table wording from this record."
+  }
+}

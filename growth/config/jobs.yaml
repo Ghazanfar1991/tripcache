@@ -12,6 +12,15 @@
       "dirtyWorktreePolicy": "wait"
     },
     {
+      "id": "midweek-growth-sprint",
+      "kind": "codex",
+      "schedule": { "frequency": "weekly", "weekday": 4, "hour": 13, "minute": 0 },
+      "nextDueAt": "2026-08-20T13:00:00+10:00",
+      "prompt": "growth/prompts/weekly-growth-cycle.md",
+      "maxRuntimeMinutes": 45,
+      "dirtyWorktreePolicy": "wait"
+    },
+    {
       "id": "monthly-strategy-review",
       "kind": "codex",
       "schedule": { "frequency": "monthly", "day": 1, "hour": 16, "minute": 0 },

@@ -38,7 +38,11 @@ function classify(output) {
 
 async function execute(job) {
   const git = spawnSync("git", ["status", "--porcelain", "--untracked-files=no"], { cwd: repoRoot, encoding: "utf8" })
-  if (job.dirtyWorktreePolicy === "wait" && git.stdout.trim()) {
+  const blockingChanges = git.stdout
+    .split("\n")
+    .filter(Boolean)
+    .filter((line) => line.slice(3) !== "growth/state/orchestrator-state.json")
+  if (job.dirtyWorktreePolicy === "wait" && blockingChanges.length) {
     return { status: "WAITING_FOR_CLEAN_WORKTREE", output: "Tracked files have uncommitted changes." }
   }
   const codex = process.env.CODEX_BIN || "/Applications/ChatGPT.app/Contents/Resources/codex"

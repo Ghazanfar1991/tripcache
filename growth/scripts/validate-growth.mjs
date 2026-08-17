@@ -4,9 +4,10 @@ import { growthRoot, readJson } from "./lib/common.mjs"
 
 const required = [
   "AGENT.md", "README.md", "context.md", "growth-model.md", "metric-definitions.md", "data-manifest.json",
-  "config/goals.yaml", "config/jobs.yaml", "config/guardrails.yaml", "config/markets.yaml", "config/connectors.yaml",
+  "config/goals.yaml", "config/jobs.yaml", "config/guardrails.yaml", "config/markets.yaml", "config/connectors.yaml", "config/backlinks.yaml",
   "state/current.json", "state/orchestrator-state.json", "state/setup-state.json", "state/active-experiments.json",
-  "data/app/quality.json", "experiments/active/seo-hotel-reminder-ctr-2026-08-17.json",
+  "data/app/quality.json", "outreach/backlink-backlog.json", "experiments/active/seo-hotel-reminder-ctr-2026-08-17.json",
+  "experiments/active/seo-best-travel-apps-ctr-2026-08-17.json", "experiments/active/seo-tripcase-recovery-ctr-2026-08-17.json",
 ]
 const errors = []
 
