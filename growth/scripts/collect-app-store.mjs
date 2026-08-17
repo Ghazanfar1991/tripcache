@@ -56,21 +56,22 @@ async function dailyReport(date) {
   const response = await fetch(`https://api.appstoreconnect.apple.com/v1/salesReports?${params}`, {
     headers: { Authorization: `Bearer ${jwt()}`, Accept: "application/a-gzip" },
   })
-  if (response.status === 404) return []
+  if (response.status === 404) return { available: false, rows: [] }
   if (!response.ok) {
     const detail = (await response.text()).slice(0, 500)
     throw Object.assign(new Error(`HTTP ${response.status} fetching App Store report for ${date}: ${detail}`), { status: response.status })
   }
   const bytes = Buffer.from(await response.arrayBuffer())
   const text = bytes[0] === 0x1f && bytes[1] === 0x8b ? gunzipSync(bytes).toString("utf8") : bytes.toString("utf8")
-  return parseTsv(text)
+  return { available: true, rows: parseTsv(text) }
 }
 
 try {
   const daily = []
   for (let offset = 35; offset >= 1; offset -= 1) {
     const date = daysAgo(offset)
-    const rows = await dailyReport(date)
+    const report = await dailyReport(date)
+    const rows = report.rows
     const appRows = rows.filter((row) => row["Apple Identifier"] === appleId)
     const initialTypes = new Set(["1", "1F", "1T"])
     const redownloadTypes = new Set(["3", "3F"])
@@ -78,18 +79,20 @@ try {
     const total = (types) => appRows
       .filter((row) => types.has(row["Product Type Identifier"]))
       .reduce((sum, row) => sum + Number(row.Units || 0), 0)
-    if (appRows.length) {
-      daily.push({
-        date,
-        firstTimeDownloads: total(initialTypes),
-        redownloads: total(redownloadTypes),
-        updates: total(updateTypes),
-      })
-    }
+    daily.push({
+      date,
+      reportAvailable: report.available,
+      firstTimeDownloads: total(initialTypes),
+      redownloads: total(redownloadTypes),
+      updates: total(updateTypes),
+    })
   }
 
   const generatedAt = isoNow()
-  const last28 = daily.slice(-28)
+  const latestReportedIndex = daily.findLastIndex((row) => row.reportAvailable)
+  const last28 = latestReportedIndex >= 0
+    ? daily.slice(Math.max(0, latestReportedIndex - 27), latestReportedIndex + 1)
+    : []
   const totals28Days = last28.reduce((totals, row) => ({
     firstTimeDownloads: totals.firstTimeDownloads + row.firstTimeDownloads,
     redownloads: totals.redownloads + row.redownloads,
@@ -101,9 +104,11 @@ try {
     appleId,
     timezone: "America/Los_Angeles",
     reportingLagDays: 1,
+    coveredDateRange: last28.length ? { startDate: last28[0].date, endDate: last28.at(-1).date } : null,
+    latestReportedDate: last28.at(-1)?.date || null,
     totals28Days,
     daily,
-    definition: "firstTimeDownloads counts product types 1, 1F, and 1T; redownloads and updates are reported separately.",
+    definition: "The 28-day window ends on the latest available Apple report date. HTTP 404 dates inside that calendar window are retained as zero rather than extending the period. firstTimeDownloads counts product types 1, 1F, and 1T; redownloads and updates are reported separately.",
   })
   await updateManifest(sourceId, {
     status: "SUCCESS",
