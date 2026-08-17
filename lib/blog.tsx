@@ -7,7 +7,6 @@ import * as PrivacyAndSecurity from "@/content/blog/privacy-and-security"
 import * as TripcaseAlternative from "@/content/blog/tripcase-alternative-2025"
 import * as TripcaseShutdown from "@/content/blog/tripcase-shutdown-what-now"
 import * as TripitComparison from "@/content/blog/tripit-vs-tripcache-comparison-2025"
-import * as AutomaticFlightTracking from "@/content/blog/how-to-automatically-track-flights-2025"
 import * as AiTripPlanner from "@/content/blog/ai-trip-planner-2026"
 import * as BusinessTravelManagement from "@/content/blog/business-travel-management-guide-2026"
 import * as TravelItineraryTemplate from "@/content/blog/travel-itinerary-template-2026"
@@ -44,7 +43,6 @@ const rawPosts = [
   TravelItineraryTemplate,
   FlightyComparison,
   GoogleTravelAlternative,
-  AutomaticFlightTracking,
   TripitComparison,
   TripcaseAlternative,
   TripcaseShutdown,

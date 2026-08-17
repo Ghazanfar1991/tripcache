@@ -71,7 +71,12 @@ const nextConfig = {
       },
       {
         source: '/blog/frequent-flyer-tips',
-        destination: '/blog/how-to-automatically-track-flights-2025',
+        destination: '/blog/organize-travel-confirmation-emails-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-automatically-track-flights-2025',
+        destination: '/blog/organize-travel-confirmation-emails-2026',
         permanent: true,
       },
       {

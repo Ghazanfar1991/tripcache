@@ -3,6 +3,7 @@
   "maxConcurrentExperiments": 3,
   "maxNewExperimentsPerCycle": 2,
   "minimumObservationDays": 14,
+  "earlyDirectionalPulseHours": 72,
   "requireDistinctCanonicalUrls": true,
   "requireDistinctPrimaryQueryClusters": true,
   "requireBuildAndHealthCheck": true,

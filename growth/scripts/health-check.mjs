@@ -31,6 +31,16 @@ function absolute(value) {
   try { return new URL(value, baseUrl).href } catch { return null }
 }
 
+function comparableUrl(value) {
+  try {
+    const url = new URL(value)
+    url.hash = ""
+    return url.href.replace(/\/$/, "")
+  } catch {
+    return value
+  }
+}
+
 try {
   if (local && process.env.START_LOCAL_SITE === "1") {
     server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "-H", "127.0.0.1", "-p", new URL(baseUrl).port || "3000"], {
@@ -40,10 +50,12 @@ try {
     await waitForSite()
   }
 
-  const [home, robots, sitemap] = await Promise.all([
+  const [home, robots, sitemap, llms, llmsFull] = await Promise.all([
     fetchText(baseUrl),
     fetchText(new URL("/robots.txt", baseUrl)),
     fetchText(new URL("/sitemap.xml", baseUrl)),
+    fetchText(new URL("/llms.txt", baseUrl)),
+    fetchText(new URL("/llms-full.txt", baseUrl)),
   ])
   const locations = [...sitemap.text.matchAll(/<loc>(.*?)<\/loc>/g)].map((entry) => entry[1])
   const uniqueUrls = [...new Set([baseUrl, ...locations])].slice(0, 100)
@@ -64,9 +76,13 @@ try {
   const failures = []
   if (!home.ok) failures.push(`homepage returned ${home.status}`)
   if (!robots.ok || !/sitemap/i.test(robots.text)) failures.push("robots.txt is missing or does not advertise a sitemap")
+  if (!/OAI-SearchBot/i.test(robots.text)) failures.push("robots.txt does not explicitly allow OpenAI search discovery")
   if (!sitemap.ok || locations.length === 0) failures.push("sitemap.xml is missing or empty")
+  if (!llms.ok || !/TripCache/i.test(llms.text)) failures.push("llms.txt is missing or invalid")
+  if (!llmsFull.ok || !/TripCache Full AI Reference/i.test(llmsFull.text)) failures.push("llms-full.txt is missing or invalid")
   for (const page of pages) {
     if (page.status >= 400) failures.push(`${page.url} returned ${page.status}`)
+    if (comparableUrl(page.url) !== comparableUrl(page.finalUrl)) failures.push(`${page.url} redirects to ${page.finalUrl} but is listed in the sitemap`)
     if (!page.title) failures.push(`${page.url} has no title`)
     if (!page.description) failures.push(`${page.url} has no meta description`)
   }
@@ -76,7 +92,14 @@ try {
     generatedAt,
     baseUrl,
     status: failures.length ? "FAIL" : "PASS",
-    checks: { homepageStatus: home.status, robotsStatus: robots.status, sitemapStatus: sitemap.status, sitemapUrls: locations.length },
+    checks: {
+      homepageStatus: home.status,
+      robotsStatus: robots.status,
+      sitemapStatus: sitemap.status,
+      sitemapUrls: locations.length,
+      llmsStatus: llms.status,
+      llmsFullStatus: llmsFull.status,
+    },
     failures,
   }
   await writeJson("data/seo/technical-health.json", health)

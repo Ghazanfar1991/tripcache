@@ -31,7 +31,7 @@ function rows(report) {
 
 try {
   const generatedAt = isoNow()
-  const [eventsReport, retentionReport, screensReport, acquisitionReport] = await Promise.all([
+  const [eventsReport, retentionReport, screensReport, acquisitionReport, websiteAcquisitionReport] = await Promise.all([
     runReport({
       dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
       dimensions: [{ name: "eventName" }, { name: "platform" }],
@@ -64,6 +64,17 @@ try {
       orderBys: [{ metric: { metricName: "newUsers" }, desc: true }],
       limit: 1000,
     }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
+      dimensions: [
+        { name: "sessionSourceMedium" },
+        { name: "landingPagePlusQueryString" },
+        { name: "platform" },
+      ],
+      metrics: [{ name: "sessions" }, { name: "activeUsers" }],
+      orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
+      limit: 10000,
+    }),
   ])
   const eventRows = rows(eventsReport)
   const screenRows = rows(screensReport)
@@ -72,6 +83,11 @@ try {
       || !["", "(not set)"].includes(row.dimensions.unifiedScreenClass))
   const acquisitionRows = rows(acquisitionReport).filter((row) => row.dimensions.platform !== "WEB")
   const websiteRows = eventRows.filter((row) => row.dimensions.platform === "WEB")
+  const websiteAcquisitionRows = rows(websiteAcquisitionReport)
+    .filter((row) => row.dimensions.platform === "WEB")
+  const aiAssistantPattern = /(chatgpt|openai|perplexity|claude|copilot|gemini|meta\.ai)/i
+  const aiReferralRows = websiteAcquisitionRows
+    .filter((row) => aiAssistantPattern.test(row.dimensions.sessionSourceMedium))
   const trackedEvents = ["app_store_click", "play_store_click", "pricing_view", "get_started_open"]
   const appFunnelDefinitions = [
     { id: "installProxy", events: ["first_open"] },
@@ -119,6 +135,14 @@ try {
     measurable: websiteRows.length > 0,
     status: websiteRows.length > 0 ? "MEASURED" : "WAITING_FOR_WEB_STREAM",
     events: websiteRows.filter((row) => trackedEvents.includes(row.dimensions.eventName)),
+    acquisition: websiteAcquisitionRows,
+    aiAssistantReferrals: {
+      sessions: aiReferralRows.reduce((sum, row) => sum + row.metrics.sessions, 0),
+      activeUsers: aiReferralRows.reduce((sum, row) => sum + row.metrics.activeUsers, 0),
+      landingPages: aiReferralRows,
+      recognizedSources: ["chatgpt", "openai", "perplexity", "claude", "copilot", "gemini", "meta.ai"],
+      note: "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic.",
+    },
     note: websiteRows.length > 0 ? null : "The GA4 property currently has app streams only; do not infer web conversion rates.",
   })
   await updateManifest(sourceId, {
