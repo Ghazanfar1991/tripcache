@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T00:16:12.163Z",
+  "updatedAt": "2026-08-17T00:18:52.515Z",
   "phase": "MEASUREMENT_AND_OPTIMIZATION",
   "northStar": {
     "metric": "mrrAud",
@@ -28,7 +28,7 @@
     "app activation conversion"
   ],
   "primaryConstraint": "Android reliability is the immediate product constraint at 89.29% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.",
-  "lastDailyRunAt": "2026-08-16T23:52:01.652Z",
+  "lastDailyRunAt": "2026-08-17T00:18:52.579Z",
   "lastDailyRunStatus": "SUCCESS_WITH_CONNECTOR_GAPS",
   "failures": [],
   "connectorGaps": [
@@ -39,10 +39,6 @@
     {
       "id": "google-play",
       "status": "WAITING_FOR_HUMAN_AUTH"
-    },
-    {
-      "id": "app-store-connect",
-      "status": "WAITING_FOR_CONFIGURATION"
     }
   ]
 }
