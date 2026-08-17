@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-08-17T00:18:25.312Z",
+  "generatedAt": "2026-08-17T09:36:59.100Z",
   "measurable": false,
   "status": "WAITING_FOR_WEB_STREAM",
   "events": [],
+  "acquisition": [],
+  "aiAssistantReferrals": {
+    "sessions": 0,
+    "activeUsers": 0,
+    "landingPages": [],
+    "recognizedSources": [
+      "chatgpt",
+      "openai",
+      "perplexity",
+      "claude",
+      "copilot",
+      "gemini",
+      "meta.ai"
+    ],
+    "note": "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic."
+  },
   "note": "The GA4 property currently has app streams only; do not infer web conversion rates."
 }

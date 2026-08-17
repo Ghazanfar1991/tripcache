@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-08-17T00:19:22.505Z",
+  "generatedAt": "2026-08-17T09:38:01.213Z",
   "baseUrl": "https://trip-cache.com",
   "status": "PASS",
   "checks": {
     "homepageStatus": 200,
     "robotsStatus": 200,
     "sitemapStatus": 200,
-    "sitemapUrls": 40
+    "sitemapUrls": 39,
+    "llmsStatus": 200,
+    "llmsFullStatus": 200
   },
   "failures": []
 }
