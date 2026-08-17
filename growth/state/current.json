@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T23:52:01.584Z",
+  "updatedAt": "2026-08-17T00:16:12.163Z",
   "phase": "MEASUREMENT_AND_OPTIMIZATION",
   "northStar": {
     "metric": "mrrAud",
@@ -13,7 +13,7 @@
     "revenueCatActiveSubscriptions": 1,
     "revenueCatMrrAud": 11,
     "googlePlayUserInstalls28Days": 6,
-    "appStoreFirstTimeDownloads28Days": null,
+    "appStoreFirstTimeDownloads28Days": 12,
     "measuredAppScreens": 21,
     "measuredAppFunnelSteps": [
       "installProxy"
@@ -25,8 +25,7 @@
   "unknown": [
     "website store-intent conversion",
     "product-level screen usage (Firebase screen names are not configured)",
-    "app activation conversion",
-    "official App Store downloads"
+    "app activation conversion"
   ],
   "primaryConstraint": "Android reliability is the immediate product constraint at 89.29% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.",
   "lastDailyRunAt": "2026-08-16T23:52:01.652Z",

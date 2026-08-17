@@ -55,10 +55,10 @@ try {
     await updateManifest(sourceId, {
       status: "MANUAL_BASELINE",
       freshness: baseline.officialDashboardBaseline ? "fresh" : "stale",
-      note: `Official Crashlytics dashboard baseline preserved; ${datasetId} export is not enabled yet.`,
+      note: `Official Crashlytics dashboard baseline preserved; ${datasetId} exists but its first app tables have not populated yet.`,
       generatedLocalSnapshot: "growth/data/app/quality.json",
     })
-    console.log(`Crashlytics: preserved dashboard baseline (${datasetId} export is not enabled).`)
+    console.log(`Crashlytics: preserved dashboard baseline (${datasetId} app tables have not populated yet).`)
     process.exit(0)
   }
 
@@ -120,10 +120,10 @@ try {
     await updateManifest(sourceId, {
       status: "MANUAL_BASELINE",
       freshness: baseline.officialDashboardBaseline ? "fresh" : "stale",
-      note: `Official Crashlytics dashboard baseline preserved; ${datasetId} export is not enabled yet.`,
+      note: `Official Crashlytics dashboard baseline preserved; ${datasetId} is not available yet.`,
       generatedLocalSnapshot: "growth/data/app/quality.json",
     })
-    console.log(`Crashlytics: preserved dashboard baseline (${datasetId} export is not enabled).`)
+    console.log(`Crashlytics: preserved dashboard baseline (${datasetId} is not available yet).`)
   } else {
     await updateManifest(sourceId, {
       status: "CONNECTOR_FAILURE",

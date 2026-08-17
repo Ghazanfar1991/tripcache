@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T23:52:27.245Z",
+  "generatedAt": "2026-08-17T00:16:12.094Z",
   "sources": [
     {
       "id": "search-console",
@@ -48,9 +48,9 @@
       "id": "firebase-crashlytics",
       "status": "MANUAL_BASELINE",
       "freshness": "fresh",
-      "note": "Official Crashlytics dashboard baseline preserved; firebase_crashlytics export is not enabled yet.",
+      "note": "Official Crashlytics dashboard baseline preserved; firebase_crashlytics exists but its first app tables have not populated yet.",
       "generatedLocalSnapshot": "growth/data/app/quality.json",
-      "checkedAt": "2026-08-16T23:51:52.632Z"
+      "checkedAt": "2026-08-17T00:16:12.093Z"
     },
     {
       "id": "google-play",
@@ -63,10 +63,12 @@
     },
     {
       "id": "app-store-connect",
-      "status": "WAITING_FOR_CONFIGURATION",
-      "freshness": "stale",
-      "note": "App Store Connect Sales and Reports credentials are not fully configured.",
-      "checkedAt": "2026-08-16T23:52:01.539Z"
+      "status": "SUCCESS",
+      "freshness": "fresh",
+      "note": "12 official App Store first-time downloads in the latest 28 reported days.",
+      "checkedAt": "2026-08-17T00:15:32.090Z",
+      "latestSyncTime": "2026-08-17T00:15:32.084Z",
+      "generatedLocalSnapshot": "growth/data/store/app-store.json"
     }
   ]
 }
