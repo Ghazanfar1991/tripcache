@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T00:00:00Z",
+  "updatedAt": "2026-08-17T02:33:13Z",
   "sprintEndsAt": "2026-09-17",
   "targetQualifiedPlacements": 12,
   "opportunities": [
@@ -8,11 +8,21 @@
       "tier": 1,
       "motion": "editorial-directory",
       "publisher": "AlternativeTo",
-      "targetUrl": "https://alternativeto.net/",
-      "destination": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "targetUrl": "https://alternativeto.net/software/tripcache/",
+      "destination": "https://trip-cache.com/",
       "angle": "Accurate TripCache listing as an iOS and Android alternative for post-booking organization, cancellation reminders, documents, and expenses.",
-      "status": "READY_FOR_RULE_AND_ACCOUNT_CHECK",
-      "notes": "Use the official product name and canonical URL; do not claim feature or pricing parity with TripIt or Wanderlog."
+      "status": "SUBMITTED_PENDING_REVIEW",
+      "submittedAt": "2026-08-17T02:33:13Z",
+      "submissionId": "8ce90a09-b75b-4334-a963-1b0a2d9a89bc",
+      "reviewTier": "FREE_QUEUE",
+      "associatedAlternatives": [
+        "TripIt",
+        "Wanderlog",
+        "Tripsy",
+        "KDE Itinerary",
+        "TREK"
+      ],
+      "notes": "Submitted through the verified tripcacheapp account with official App Store media and Google Play URL. AlternativeTo says only the submitter can see the page until approval and that free review can take a few months. No paid priority review was purchased."
     },
     {
       "id": "product-hunt-tripcache-launch",
