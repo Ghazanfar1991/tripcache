@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { dateOnly, growthRoot, isoNow, readJson } from "./lib/common.mjs"
+import { aiAssistantReferralSummary } from "./lib/measurement.mjs"
 
 const manifest = await readJson("data-manifest.json", { sources: [] })
 const search = await readJson("data/search-console/latest.json", {})
@@ -27,7 +28,7 @@ const latestFreshTotals = latestFreshRows.reduce((totals, row) => ({
   clicks: totals.clicks + row.clicks,
   impressions: totals.impressions + row.impressions,
 }), { clicks: 0, impressions: 0 })
-const aiReferrals = funnel.aiAssistantReferrals || {}
+const aiReferralEvidence = aiAssistantReferralSummary(funnel)
 const missingAppSteps = appFunnel.missingInstrumentation || []
 const churnStatus = revenueRetention.charts?.churn?.unavailable ? "unavailable" : "available"
 const androidQuality = quality.officialDashboardBaseline?.android
@@ -55,7 +56,7 @@ const lines = [
   `- Organic search: ${search.totals?.clicks ?? "unavailable"} clicks / ${search.totals?.impressions ?? "unavailable"} impressions.` ,
   `- Fresh SEO pulse: ${latestFreshDate ? `${latestFreshTotals.clicks} clicks / ${latestFreshTotals.impressions} impressions on ${latestFreshDate}` : "unavailable"} (directional; recent rows may be incomplete).`,
   `- Website funnel: ${funnel.measurable ? "measurable" : "not measurable"}.`,
-  `- AI-assistant referrals: ${aiReferrals.sessions ?? "unavailable"} sessions / ${aiReferrals.activeUsers ?? "unavailable"} active users from recognized AI sources.`,
+  `- AI-assistant referrals: ${aiReferralEvidence.text}.`,
   `- RevenueCat: A$${overviewMetric("mrr")} MRR; ${overviewMetric("active_subscriptions")} active subscriptions; churn data ${churnStatus}.`,
   `- Google Play: ${play.totals28Days?.userInstalls ?? "unavailable"} official user installs in the latest 28 reported days.`,
   `- App Store: ${appleDownloadEvidence}.`,
@@ -83,9 +84,11 @@ const lines = [
   "",
   "## AI-assistant discovery",
   "",
-  ...(aiReferrals.landingPages?.length
-    ? aiReferrals.landingPages.slice(0, 10).map((row) => `- ${row.dimensions.sessionSourceMedium} → ${row.dimensions.landingPagePlusQueryString}: ${row.metrics.sessions} sessions / ${row.metrics.activeUsers} active users.`)
-    : ["- No recognized AI-assistant referral sessions were measured in the current window."]),
+  ...(aiReferralEvidence.measurable
+    ? aiReferralEvidence.landingPages.length
+      ? aiReferralEvidence.landingPages.slice(0, 10).map((row) => `- ${row.dimensions.sessionSourceMedium} → ${row.dimensions.landingPagePlusQueryString}: ${row.metrics.sessions} sessions / ${row.metrics.activeUsers} active users.`)
+      : ["- Web traffic was measurable; no recognized AI-assistant referral sessions were measured in the current window."]
+    : ["- AI-assistant referrals are unknown because GA4 returned no web rows for the reporting window."]),
   "",
   "## Decision gate",
   "",
