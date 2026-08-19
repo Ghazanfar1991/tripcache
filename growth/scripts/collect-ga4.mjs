@@ -1,4 +1,5 @@
 import { fetchJson, isoNow, updateManifest, writeJson, getGoogleAccessToken } from "./lib/common.mjs"
+import { buildAiAssistantReferrals } from "./lib/measurement.mjs"
 
 const sourceId = "ga4"
 const propertyId = process.env.GA4_PROPERTY_ID || "514130776"
@@ -31,7 +32,7 @@ function rows(report) {
 
 try {
   const generatedAt = isoNow()
-  const [eventsReport, retentionReport, screensReport, acquisitionReport, websiteAcquisitionReport] = await Promise.all([
+  const [eventsReport, retentionReport, screensReport, acquisitionReport, websiteEventsReport, websiteAcquisitionReport] = await Promise.all([
     runReport({
       dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
       dimensions: [{ name: "eventName" }, { name: "platform" }],
@@ -65,7 +66,13 @@ try {
       limit: 1000,
     }),
     runReport({
-      dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
+      dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
+      dimensions: [{ name: "eventName" }, { name: "platform" }],
+      metrics: [{ name: "eventCount" }, { name: "activeUsers" }],
+      limit: 10000,
+    }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
       dimensions: [
         { name: "sessionSourceMedium" },
         { name: "landingPagePlusQueryString" },
@@ -82,12 +89,14 @@ try {
     .filter((row) => !["", "(not set)"].includes(row.dimensions.unifiedScreenName)
       || !["", "(not set)"].includes(row.dimensions.unifiedScreenClass))
   const acquisitionRows = rows(acquisitionReport).filter((row) => row.dimensions.platform !== "WEB")
-  const websiteRows = eventRows.filter((row) => row.dimensions.platform === "WEB")
+  const websiteRows = rows(websiteEventsReport).filter((row) => row.dimensions.platform === "WEB")
   const websiteAcquisitionRows = rows(websiteAcquisitionReport)
     .filter((row) => row.dimensions.platform === "WEB")
   const aiAssistantPattern = /(chatgpt|openai|perplexity|claude|copilot|gemini|meta\.ai)/i
   const aiReferralRows = websiteAcquisitionRows
     .filter((row) => aiAssistantPattern.test(row.dimensions.sessionSourceMedium))
+  const websiteMeasurable = websiteRows.length > 0 || websiteAcquisitionRows.length > 0
+  const aiAssistantReferrals = buildAiAssistantReferrals({ measurable: websiteMeasurable, rows: aiReferralRows })
   const trackedEvents = ["app_store_click", "play_store_click", "pricing_view", "get_started_open"]
   const appFunnelDefinitions = [
     { id: "installProxy", events: ["first_open"] },
@@ -132,25 +141,23 @@ try {
   })
   await writeJson("data/website/funnel.json", {
     generatedAt,
-    measurable: websiteRows.length > 0,
-    status: websiteRows.length > 0 ? "MEASURED" : "WAITING_FOR_WEB_STREAM",
+    propertyId,
+    webStreamId: process.env.GA4_WEB_STREAM_ID || "15446445587",
+    measurementId: process.env.GA4_WEB_MEASUREMENT_ID || "G-JP6JKPVPVY",
+    reportingWindow: "28daysAgo through yesterday; recent rows may be incomplete",
+    measurable: websiteMeasurable,
+    status: websiteMeasurable ? "MEASURED" : "UNKNOWN_WEB_STREAM",
     events: websiteRows.filter((row) => trackedEvents.includes(row.dimensions.eventName)),
     acquisition: websiteAcquisitionRows,
-    aiAssistantReferrals: {
-      sessions: aiReferralRows.reduce((sum, row) => sum + row.metrics.sessions, 0),
-      activeUsers: aiReferralRows.reduce((sum, row) => sum + row.metrics.activeUsers, 0),
-      landingPages: aiReferralRows,
-      recognizedSources: ["chatgpt", "openai", "perplexity", "claude", "copilot", "gemini", "meta.ai"],
-      note: "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic.",
-    },
-    note: websiteRows.length > 0 ? null : "The GA4 property currently has app streams only; do not infer web conversion rates.",
+    aiAssistantReferrals,
+    note: websiteMeasurable ? null : "No WEB rows were returned for this reporting window; do not infer web conversion or referral rates.",
   })
   await updateManifest(sourceId, {
     status: "SUCCESS",
     freshness: "fresh",
     latestSyncTime: generatedAt,
     generatedLocalSnapshot: "growth/data/app/latest.json",
-    note: websiteRows.length > 0 ? "GA4 app and web data available." : "GA4 app data available; web funnel remains unmeasurable.",
+    note: websiteMeasurable ? "GA4 app and web data available." : "GA4 app data available; web funnel remains unmeasurable.",
   })
 } catch (error) {
   await updateManifest(sourceId, {

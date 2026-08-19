@@ -3,6 +3,7 @@ import { mkdir, readFile, rm, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import { isoNow, readJson, repoRoot, runtimeRoot, writeJson } from "./lib/common.mjs"
+import { syncRepository } from "./lib/repository-sync.mjs"
 import { nextScheduledAt } from "./lib/schedule.mjs"
 
 const dryRun = process.argv.includes("--dry-run")
@@ -37,14 +38,8 @@ function classify(output) {
 }
 
 async function execute(job) {
-  const git = spawnSync("git", ["status", "--porcelain", "--untracked-files=no"], { cwd: repoRoot, encoding: "utf8" })
-  const blockingChanges = git.stdout
-    .split("\n")
-    .filter(Boolean)
-    .filter((line) => line.slice(3) !== "growth/state/orchestrator-state.json")
-  if (job.dirtyWorktreePolicy === "wait" && blockingChanges.length) {
-    return { status: "WAITING_FOR_CLEAN_WORKTREE", output: "Tracked files have uncommitted changes." }
-  }
+  const repository = syncRepository({ cwd: repoRoot })
+  if (repository.status !== "SUCCESS") return repository
   const codex = process.env.CODEX_BIN || "/Applications/ChatGPT.app/Contents/Resources/codex"
   const prompt = await readFile(path.join(repoRoot, job.prompt), "utf8")
   const outputPath = path.join(runtimeRoot, `${job.id}-last-message.txt`)
@@ -57,7 +52,12 @@ async function execute(job) {
     env: { ...process.env, CODEX_AUTO_TASK: "1" },
   })
   const output = `${result.stdout || ""}\n${result.stderr || ""}`.trim().slice(-8000)
-  return { status: result.status === 0 ? "SUCCESS" : classify(output), output, exitCode: result.status }
+  return {
+    status: result.status === 0 ? "SUCCESS" : classify(output),
+    output,
+    exitCode: result.status,
+    syncedRevision: repository.revision,
+  }
 }
 
 function sendReportEmail(job) {
@@ -104,6 +104,7 @@ try {
         : new Date(now.getTime() + retryHours * 3600000).toISOString(),
       lastOutput: result.output,
       exitCode: result.exitCode ?? null,
+      syncedRevision: result.syncedRevision ?? previous.syncedRevision ?? null,
       email,
     }
     await writeJson("state/orchestrator-state.json", { ...state, updatedAt: isoNow() })

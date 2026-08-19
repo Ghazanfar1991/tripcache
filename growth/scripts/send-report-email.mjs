@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process"
 import { readFile, readdir, stat } from "node:fs/promises"
 import path from "node:path"
 import { dateOnly, growthRoot, readJson } from "./lib/common.mjs"
+import { aiAssistantReferralSummary } from "./lib/measurement.mjs"
 
 const kindArg = process.argv.indexOf("--kind")
 const kind = kindArg >= 0 ? process.argv[kindArg + 1] : "weekly"
@@ -64,6 +65,7 @@ const quality = await readJson("data/app/quality.json", {})
 const revenue = await readJson("data/revenue/latest.json", {})
 const opportunities = await readJson("data/seo/opportunities.json", {})
 const website = await readJson("data/website/funnel.json", {})
+const aiReferralEvidence = aiAssistantReferralSummary(website)
 const metric = (id) => revenue.overview?.metrics?.find((item) => item.id === id)?.value ?? "unavailable"
 const topScreens = (app.screenViews || []).slice(0, 5)
 const topOpportunities = (opportunities.queryPageOpportunities || []).slice(0, 5)
@@ -80,7 +82,7 @@ const screenLabel = (row) => {
 
 const summary = [
   `Organic: ${search.totals?.clicks ?? "unavailable"} clicks from ${search.totals?.impressions ?? "unavailable"} impressions.`,
-  `AI-assistant referrals: ${website.aiAssistantReferrals?.sessions ?? "unavailable"} sessions from recognized AI sources.`,
+  `AI-assistant referrals: ${aiReferralEvidence.text}.`,
   `MRR: A$${metric("mrr")}; active subscriptions: ${metric("active_subscriptions")}.`,
   `Google Play installs (28 reported days): ${play.totals28Days?.userInstalls ?? "awaiting access"}.`,
   appleDownloadSummary,

@@ -12,13 +12,16 @@ Until 2026-09-17 the engine operates in four-week sprint mode: Monday and Thursd
 - `npm run growth:collect:crashlytics` — collect fatal/ANR aggregates from the Crashlytics BigQuery export while preserving the official dashboard baseline.
 - `npm run growth:email -- --kind weekly` — email the latest report using a Resend key from the environment or macOS Keychain.
 - `npm run growth:health` — verify production SEO and availability.
-- `npm run growth:dispatch -- --dry-run` — show due local jobs without executing them.
+- `npm run growth:dispatch -- --dry-run` — show due local jobs without executing or synchronizing them.
+- `npm run growth:test` — run regression tests for dispatcher synchronization and measurement semantics.
 - `npm run growth:validate` — validate memory, configuration, and secret hygiene.
 - `node growth/scripts/install-launchd.mjs` — install/reload the hourly macOS dispatcher.
 
 Raw customer records, credentials, OAuth refresh tokens, and ad identifiers must never be committed. Only sanitized aggregates belong here.
 
 The daily snapshot includes a separate Search Console fresh-data pulse for 72-hour health checks and finalized rows for decisions. Fresh data can reveal crawl/indexing or tracking problems quickly, but it is never treated as a completed experiment result. The Monday and Thursday intelligent cycles consume this pulse, so the engine reacts every 3–4 days while retaining a 14-day evidence window for winner/rollback decisions.
+
+Immediately before an intelligent cycle, the dispatcher verifies a clean `main` checkout, fetches `origin/main`, and applies only a fast-forward update. It stops safely instead of running against stale or divergent code. GA4 app reporting retains a three-day stability lag, while the website funnel reports through yesterday and labels recent rows as potentially incomplete. If GA4 returns no web rows, website conversion and AI-referral values remain unknown rather than being reported as zero.
 
 ## Operating boundary
 
