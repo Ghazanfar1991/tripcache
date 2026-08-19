@@ -1,6 +1,6 @@
 {
-  "source": "Firebase Crashlytics dashboard audit",
-  "generatedAt": "2026-08-17T00:00:00.000Z",
+  "source": "Firebase Crashlytics dashboard and BigQuery export",
+  "generatedAt": "2026-08-19T09:29:36.460Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -45,5 +45,34 @@
     }
   },
   "automationStatus": "WAITING_FOR_BIGQUERY_EXPORT",
-  "automationNote": "The daily collector will replace raw crash counts automatically after the Crashlytics BigQuery export is enabled. Official crash-free percentages require a sessions denominator and are never inferred from event counts."
+  "automationNote": "Raw fatal/ANR events and impacted installations are refreshed daily. Crash-free percentages remain official dashboard metrics unless Firebase Sessions export supplies the denominator.",
+  "automated30Days": [
+    {
+      "platform": "IOS",
+      "table": "app_tripcache_IOS",
+      "fatalOrAnrEvents": 7,
+      "impactedInstallations": 1,
+      "fatalOrAnrIssues": 3,
+      "topIssues": [
+        {
+          "issueId": "a82cf3a407a536179c47d4d5224b0023",
+          "errorType": "FATAL",
+          "events": 5,
+          "impactedInstallations": 1
+        },
+        {
+          "issueId": "f08c9d2dd9ae1bff1e9589a74b5c938f",
+          "errorType": "FATAL",
+          "events": 1,
+          "impactedInstallations": 1
+        },
+        {
+          "issueId": "066b04a5b7a4c45fc8c47b537a48c490",
+          "errorType": "FATAL",
+          "events": 1,
+          "impactedInstallations": 1
+        }
+      ]
+    }
+  ]
 }
