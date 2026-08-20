@@ -1,13 +1,19 @@
 {
-  "generatedAt": "2026-08-19T09:29:35.201Z",
+  "generatedAt": "2026-08-20T09:29:45.257Z",
+  "propertyId": "514130776",
+  "webStreamId": "15446445587",
+  "measurementId": "G-JP6JKPVPVY",
+  "reportingWindow": "28daysAgo through yesterday; recent rows may be incomplete",
   "measurable": false,
-  "status": "WAITING_FOR_WEB_STREAM",
+  "status": "UNKNOWN_WEB_STREAM",
   "events": [],
   "acquisition": [],
   "aiAssistantReferrals": {
-    "sessions": 0,
-    "activeUsers": 0,
-    "landingPages": [],
+    "measurable": false,
+    "status": "UNKNOWN_WEB_STREAM",
+    "sessions": null,
+    "activeUsers": null,
+    "landingPages": null,
     "recognizedSources": [
       "chatgpt",
       "openai",
@@ -17,7 +23,7 @@
       "gemini",
       "meta.ai"
     ],
-    "note": "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic."
+    "note": "No WEB rows were returned for this reporting window. Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic."
   },
-  "note": "The GA4 property currently has app streams only; do not infer web conversion rates."
+  "note": "No WEB rows were returned for this reporting window; do not infer web conversion or referral rates."
 }
