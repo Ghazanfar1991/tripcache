@@ -6,7 +6,7 @@
     { "id": "google-play", "mode": "Play Console Cloud Storage reports via GitHub OIDC", "permission": "View app information and download bulk reports", "status": "ACCESS_GRANTED_PROPAGATING" },
     { "id": "app-store-connect", "mode": "App Store Connect API", "permission": "Sales and Reports", "status": "READY" },
     { "id": "firebase-crashlytics", "mode": "Firebase Crashlytics dashboard and BigQuery", "permission": "Viewer/export only", "status": "EXPORT_ENABLED_WAITING_FOR_FIRST_TABLES" },
-    { "id": "email", "mode": "Resend API + macOS Keychain", "permission": "Sending access to owner report address", "status": "READY" },
+    { "id": "email", "mode": "Resend API with signed-in macOS Mail fallback + macOS Keychain recipient", "permission": "Sending access to owner report address", "status": "READY" },
     { "id": "bigquery", "mode": "trip-cache.tripcache_growth", "location": "australia-southeast1", "permission": "Dataset writer + project job user", "status": "READY" },
     { "id": "codex", "mode": "local CLI using ChatGPT sign-in", "status": "READY" }
   ]

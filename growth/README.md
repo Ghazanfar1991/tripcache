@@ -10,7 +10,7 @@ Until 2026-09-17 the engine operates in four-week sprint mode: Monday and Thursd
 - `npm run growth:collect:play` — collect official Google Play installs/uninstalls from the private report bucket.
 - `npm run growth:collect:apple` — collect official App Store first-time downloads from Sales and Trends.
 - `npm run growth:collect:crashlytics` — collect fatal/ANR aggregates from the Crashlytics BigQuery export while preserving the official dashboard baseline.
-- `npm run growth:email -- --kind weekly` — email the latest report using a Resend key from the environment or macOS Keychain.
+- `npm run growth:email -- --kind weekly` — email the latest report. `auto` uses Resend first and falls back to the signed-in macOS Mail account when Resend's unverified test sender cannot reach the configured recipient.
 - `npm run growth:health` — verify production SEO and availability.
 - `npm run growth:dispatch -- --dry-run` — show due local jobs without executing or synchronizing them.
 - `npm run growth:dispatch -- --run <job-id>` — force one named job immediately and record it as a manual trigger.
@@ -32,4 +32,4 @@ The engine may implement and publish reversible landing-page and SEO experiments
 
 Backlink work is authorized only for accurate, relevant, editorially legitimate placements. Paid ranking links, automated directory/comment spam, fake reviews or identities, and undisclosed incentives are prohibited. The active opportunity and outreach status is stored in `outreach/backlink-backlog.json`.
 
-Local email credentials are stored in macOS Keychain services `com.tripcache.growth.resend-api-key` and `com.tripcache.growth.report-email`; they are never written to Git or dispatcher logs.
+Local email credentials are stored in macOS Keychain services `com.tripcache.growth.resend-api-key` and `com.tripcache.growth.report-email`; they are never written to Git or dispatcher logs. `GROWTH_EMAIL_TRANSPORT` accepts `auto`, `resend`, or `mail` and defaults to `auto`.
