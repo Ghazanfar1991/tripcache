@@ -13,6 +13,7 @@ Until 2026-09-17 the engine operates in four-week sprint mode: Monday and Thursd
 - `npm run growth:email -- --kind weekly` — email the latest report using a Resend key from the environment or macOS Keychain.
 - `npm run growth:health` — verify production SEO and availability.
 - `npm run growth:dispatch -- --dry-run` — show due local jobs without executing or synchronizing them.
+- `npm run growth:dispatch -- --run <job-id>` — force one named job immediately and record it as a manual trigger.
 - `npm run growth:test` — run regression tests for dispatcher synchronization and measurement semantics.
 - `npm run growth:validate` — validate memory, configuration, and secret hygiene.
 - `node growth/scripts/install-launchd.mjs` — install/reload the hourly macOS dispatcher.
