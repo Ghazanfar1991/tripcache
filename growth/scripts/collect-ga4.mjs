@@ -1,5 +1,5 @@
 import { fetchJson, isoNow, updateManifest, writeJson, getGoogleAccessToken } from "./lib/common.mjs"
-import { buildAiAssistantReferrals } from "./lib/measurement.mjs"
+import { buildAiAssistantReferrals, isWebPlatform } from "./lib/measurement.mjs"
 
 const sourceId = "ga4"
 const propertyId = process.env.GA4_PROPERTY_ID || "514130776"
@@ -85,13 +85,13 @@ try {
   ])
   const eventRows = rows(eventsReport)
   const screenRows = rows(screensReport)
-    .filter((row) => row.dimensions.platform !== "WEB")
+    .filter((row) => !isWebPlatform(row.dimensions.platform))
     .filter((row) => !["", "(not set)"].includes(row.dimensions.unifiedScreenName)
       || !["", "(not set)"].includes(row.dimensions.unifiedScreenClass))
-  const acquisitionRows = rows(acquisitionReport).filter((row) => row.dimensions.platform !== "WEB")
-  const websiteRows = rows(websiteEventsReport).filter((row) => row.dimensions.platform === "WEB")
+  const acquisitionRows = rows(acquisitionReport).filter((row) => !isWebPlatform(row.dimensions.platform))
+  const websiteRows = rows(websiteEventsReport).filter((row) => isWebPlatform(row.dimensions.platform))
   const websiteAcquisitionRows = rows(websiteAcquisitionReport)
-    .filter((row) => row.dimensions.platform === "WEB")
+    .filter((row) => isWebPlatform(row.dimensions.platform))
   const aiAssistantPattern = /(chatgpt|openai|perplexity|claude|copilot|gemini|meta\.ai)/i
   const aiReferralRows = websiteAcquisitionRows
     .filter((row) => aiAssistantPattern.test(row.dimensions.sessionSourceMedium))
@@ -107,7 +107,7 @@ try {
     { id: "trialStart", events: ["trial_started", "start_trial"] },
     { id: "purchase", events: ["purchase", "in_app_purchase", "subscription_started"] },
   ]
-  const appEvents = eventRows.filter((row) => row.dimensions.platform !== "WEB")
+  const appEvents = eventRows.filter((row) => !isWebPlatform(row.dimensions.platform))
   const funnelSteps = appFunnelDefinitions.map((definition) => {
     const matching = appEvents.filter((row) => definition.events.includes(row.dimensions.eventName))
     return {

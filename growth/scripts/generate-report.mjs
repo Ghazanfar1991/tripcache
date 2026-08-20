@@ -15,9 +15,17 @@ const apple = await readJson("data/store/app-store.json", {})
 const appleBaseline = await readJson("data/store/app-store-dashboard-baseline.json", {})
 const quality = await readJson("data/app/quality.json", {})
 const opportunities = await readJson("data/seo/opportunities.json", {})
+const activeExperiments = await readJson("state/active-experiments.json", { experiments: [] })
+const guardrails = await readJson("config/guardrails.yaml", {})
 const generatedAt = isoNow()
 const experimentRequiredSources = new Set(["search-console", "ga4", "revenuecat", "production-health"])
-const unavailable = manifest.sources.filter((source) => experimentRequiredSources.has(source.id) && source.status !== "SUCCESS")
+const unavailable = manifest.sources.filter((source) => experimentRequiredSources.has(source.id) && (source.status !== "SUCCESS" || source.freshness !== "fresh"))
+const activeExperimentRecords = await Promise.all((activeExperiments.experiments || [])
+  .filter((experiment) => experiment.status === "ACTIVE")
+  .map((experiment) => readJson(experiment.record.replace(/^growth\//, ""), { id: experiment.id })))
+const activeExperimentCount = activeExperimentRecords.length
+const experimentCapacity = Math.max(0, Number(guardrails.maxConcurrentExperiments || 0) - activeExperimentCount)
+const launchCapacity = Math.min(experimentCapacity, Number(guardrails.maxNewExperimentsPerCycle || experimentCapacity))
 const overviewMetric = (id) => revenue.overview?.metrics?.find((metric) => metric.id === id)?.value ?? "unavailable"
 const topScreens = (app.screenViews || []).slice(0, 10)
 const topOpportunities = (opportunities.queryPageOpportunities || []).slice(0, 10)
@@ -33,11 +41,15 @@ const missingAppSteps = appFunnel.missingInstrumentation || []
 const churnStatus = revenueRetention.charts?.churn?.unavailable ? "unavailable" : "available"
 const androidQuality = quality.officialDashboardBaseline?.android
 const iosQuality = quality.officialDashboardBaseline?.ios
+const playSource = manifest.sources.find((source) => source.id === "google-play")
 const appleDownloadEvidence = apple.totals28Days
   ? `${apple.totals28Days.firstTimeDownloads} official first-time downloads in the latest 28 reported days`
   : appleBaseline.appUnits != null
     ? `${appleBaseline.appUnits} official App Units from ${appleBaseline.period.startDate} to ${appleBaseline.period.endDate} (manual dashboard baseline; API automation pending)`
     : "unavailable"
+const playInstallEvidence = playSource?.freshness === "fresh" && play.totals28Days
+  ? `${play.totals28Days.userInstalls} official user installs in the latest 28 reported days`
+  : `unavailable as fresh evidence${play.latestReportedDate ? ` (latest Play export date ${play.latestReportedDate})` : ""}`
 const screenLabel = (row) => {
   const name = row.dimensions.unifiedScreenName
   return name && name !== "(not set)" ? name : row.dimensions.unifiedScreenClass || "unnamed screen"
@@ -58,7 +70,7 @@ const lines = [
   `- Website funnel: ${funnel.measurable ? "measurable" : "not measurable"}.`,
   `- AI-assistant referrals: ${aiReferralEvidence.text}.`,
   `- RevenueCat: A$${overviewMetric("mrr")} MRR; ${overviewMetric("active_subscriptions")} active subscriptions; churn data ${churnStatus}.`,
-  `- Google Play: ${play.totals28Days?.userInstalls ?? "unavailable"} official user installs in the latest 28 reported days.`,
+  `- Google Play: ${playInstallEvidence}.`,
   `- App Store: ${appleDownloadEvidence}.`,
   `- Android quality: ${androidQuality ? `${(androidQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users / ${androidQuality.crashes} crashes affecting ${androidQuality.impactedUsers} users` : "unavailable"}.`,
   `- iOS quality: ${iosQuality ? `${(iosQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users` : "unavailable"}.`,
@@ -75,6 +87,17 @@ const lines = [
   ...(androidQuality?.openIssues?.length
     ? androidQuality.openIssues.map((issue) => `- Android: ${issue.title} — ${issue.events} events / ${issue.users} users (${issue.subtitle}).`)
     : ["- No Android crash issue baseline is available."]),
+  "",
+  "## Active experiment pulse",
+  "",
+  ...(activeExperimentRecords.length
+    ? activeExperimentRecords.map((experiment) => {
+        const pulse = experiment.latestDirectionalPulse
+        return pulse
+          ? `- ${experiment.id}: ${pulse.clicks} clicks / ${pulse.impressions} impressions, ${(pulse.ctr * 100).toFixed(2)}% CTR, position ${pulse.averagePosition.toFixed(1)} (${pulse.period.startDate}–${pulse.period.endDate}); ${pulse.guardrailStatus}, directional only, continue to ${experiment.observationWindow.earliestDecisionDate}.`
+          : `- ${experiment.id}: no >72-hour pulse recorded yet; continue to ${experiment.observationWindow?.earliestDecisionDate || "the predeclared decision gate"}.`
+      })
+    : ["- No active experiments."]),
   "",
   "## First-party keyword opportunities",
   "",
@@ -94,7 +117,9 @@ const lines = [
   "",
   unavailable.length
     ? `No autonomous website experiment should be launched while these sources are unavailable: ${unavailable.map((source) => source.id).join(", ")}.`
-    : "All required sources are fresh; the weekly agent may evaluate one reversible experiment.",
+    : activeExperimentCount >= Number(guardrails.maxConcurrentExperiments || 0)
+      ? `All ${activeExperimentCount} experiment slots are occupied. Preserve their 14-day windows and do not launch or stack another page experiment.`
+      : `Required experiment sources are fresh; up to ${launchCapacity} independent page experiment(s) may be evaluated.`,
   "",
 ]
 

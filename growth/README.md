@@ -14,6 +14,8 @@ Until 2026-09-17 the engine operates in four-week sprint mode: Monday and Thursd
 - `npm run growth:health` — verify production SEO and availability.
 - `npm run growth:dispatch -- --dry-run` — show due local jobs without executing or synchronizing them.
 - `npm run growth:dispatch -- --run <job-id>` — force one named job immediately and record it as a manual trigger.
+
+The dispatcher allows up to 64 MiB of Codex transcript output per job so long autonomous cycles are not terminated by Node's default child-process buffer limit. Failures record the process signal and error code in `growth/state/orchestrator-state.json` for diagnosis.
 - `npm run growth:test` — run regression tests for dispatcher synchronization and measurement semantics.
 - `npm run growth:validate` — validate memory, configuration, and secret hygiene.
 - `node growth/scripts/install-launchd.mjs` — install/reload the hourly macOS dispatcher.

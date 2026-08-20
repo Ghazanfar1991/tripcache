@@ -35,6 +35,7 @@ async function acquireLock() {
 }
 
 function classify(output) {
+  if (/ENOBUFS|maxBuffer|output buffer/i.test(output)) return "RETRYABLE"
   if (/usage limit|rate limit|429|temporar(?:y|ily)|network|timeout|timed out/i.test(output)) return "RETRYABLE"
   if (/not logged in|authentication|login required|unauthorized|forbidden/i.test(output)) return "WAITING_FOR_HUMAN_AUTH"
   return "FAILED"
@@ -50,13 +51,19 @@ async function execute(job) {
     cwd: repoRoot,
     encoding: "utf8",
     timeout: job.maxRuntimeMinutes * 60 * 1000,
+    maxBuffer: 64 * 1024 * 1024,
     env: { ...process.env, CODEX_AUTO_TASK: "1" },
   })
-  const output = `${result.stdout || ""}\n${result.stderr || ""}`.trim().slice(-8000)
+  const diagnostic = result.error
+    ? `${result.error.name || "Error"}: ${result.error.message || String(result.error)}`
+    : ""
+  const output = `${result.stdout || ""}\n${result.stderr || ""}\n${diagnostic}`.trim().slice(-8000)
   return {
     status: result.status === 0 ? "SUCCESS" : classify(output),
     output,
     exitCode: result.status,
+    signal: result.signal ?? null,
+    errorCode: result.error?.code ?? null,
     syncedRevision: repository.revision,
   }
 }
@@ -109,6 +116,8 @@ try {
         : new Date(now.getTime() + retryHours * 3600000).toISOString(),
       lastOutput: result.output,
       exitCode: result.exitCode ?? null,
+      signal: result.signal ?? null,
+      errorCode: result.errorCode ?? null,
       syncedRevision: result.syncedRevision ?? previous.syncedRevision ?? null,
       email,
     }

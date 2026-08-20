@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T09:30:50.048Z",
+  "generatedAt": "2026-08-20T13:42:06Z",
   "sources": [
     {
       "id": "search-console",
@@ -56,11 +56,11 @@
     {
       "id": "google-play",
       "status": "SUCCESS",
-      "freshness": "fresh",
+      "freshness": "stale",
       "latestSyncTime": "2026-08-20T09:29:57.959Z",
       "generatedLocalSnapshot": "growth/data/store/google-play.json",
-      "note": "6 official Play user installs in the latest 28 reported days.",
-      "checkedAt": "2026-08-20T09:29:57.966Z"
+      "note": "Play export fetched successfully, but the latest reported date (2026-08-03) is 17 days old; treat install totals as stale.",
+      "checkedAt": "2026-08-20T13:42:06Z"
     },
     {
       "id": "app-store-connect",

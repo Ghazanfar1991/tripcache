@@ -165,6 +165,7 @@ export default function Hero() {
     href="https://apps.apple.com/app/id6758403056"
     target="_blank"
     rel="noopener noreferrer"
+    data-store-event-handled="true"
     onClick={() => trackStoreClick("ios")}
     className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
   >
@@ -179,6 +180,7 @@ export default function Hero() {
     href="https://play.google.com/store/apps/details?id=app.tripcache"
     target="_blank"
     rel="noopener noreferrer"
+    data-store-event-handled="true"
     onClick={() => trackStoreClick("android")}
     className="block w-[220px] shrink-0 transition duration-300 hover:-translate-y-0.5 sm:w-[214px] lg:w-[226px] xl:w-[236px]"
   >

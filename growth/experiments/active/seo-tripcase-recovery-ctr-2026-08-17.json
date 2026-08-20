@@ -49,6 +49,21 @@
     "reportingLagDays": 3,
     "earliestDecisionDate": "2026-09-03"
   },
+  "latestDirectionalPulse": {
+    "checkedAt": "2026-08-20T13:42:06Z",
+    "sourceGeneratedAt": "2026-08-20T09:29:45.223Z",
+    "period": {
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-19"
+    },
+    "clicks": 3,
+    "impressions": 287,
+    "ctr": 0.010452961672473868,
+    "averagePosition": 9.592334494773519,
+    "guardrailStatus": "PASS",
+    "decision": "CONTINUE_TO_FINALIZED_GATE",
+    "note": "Fresh Search Console rows are incomplete directional evidence. CTR is directionally above the predeclared threshold and position is inside the guardrail, but no winner is declared before the finalized 14-day window."
+  },
   "rollback": {
     "condition": "Rollback if a guardrail fails, or if at least 300 impressions accrue and CTR declines materially while average position declines by more than 2.0 positions.",
     "action": "Restore the previous title, description, H1, and opening section from this record."
