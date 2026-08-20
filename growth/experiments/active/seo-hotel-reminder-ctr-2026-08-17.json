@@ -6,6 +6,7 @@
   "deploymentId": "dpl_CRtJ6mXXZfJNVoUZe4y71a3z5xJF",
   "type": "SEO_CTR",
   "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
+  "primaryQueryCluster": "hotel cancellation reminder and free-cancellation deadline calculator",
   "hypothesis": "Making the existing free deadline calculator benefit explicit in the search title and description will improve qualified organic CTR for a page that already ranks near position 4.5.",
   "baseline": {
     "period": {
@@ -34,6 +35,21 @@
     "minimumDays": 14,
     "reportingLagDays": 3,
     "earliestDecisionDate": "2026-09-03"
+  },
+  "latestDirectionalPulse": {
+    "checkedAt": "2026-08-20T13:42:06Z",
+    "sourceGeneratedAt": "2026-08-20T09:29:45.223Z",
+    "period": {
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-19"
+    },
+    "clicks": 0,
+    "impressions": 42,
+    "ctr": 0,
+    "averagePosition": 5.333333333333333,
+    "guardrailStatus": "PASS",
+    "decision": "CONTINUE_TO_FINALIZED_GATE",
+    "note": "Fresh Search Console rows are incomplete directional evidence. The page remains healthy and the position guardrail is intact; do not declare a result before the finalized 14-day window."
   },
   "rollback": {
     "condition": "Rollback if a guardrail fails, or if at least 100 impressions accrue and CTR remains 0% while average position declines by more than 2.0 positions.",

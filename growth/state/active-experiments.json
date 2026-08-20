@@ -1,5 +1,6 @@
 {
-  "updatedAt": "2026-08-17T01:56:10.000Z",
+  "updatedAt": "2026-08-20T13:42:06Z",
+  "latestPulseAt": "2026-08-20T09:29:45.223Z",
   "experiments": [
     {
       "id": "seo-hotel-reminder-ctr-2026-08-17",
@@ -26,5 +27,5 @@
       "earliestDecisionDate": "2026-09-03"
     }
   ],
-  "decision": "Run three parallel Search Console CTR/store-intent experiments on distinct canonical URLs and query clusters during the four-week sprint; do not stack another change on any active target page before its decision gate."
+  "decision": "All three experiments passed the >72-hour directional pulse guardrails and remain active through the finalized 2026-09-03 decision gate. Do not declare winners, shorten their windows, stack changes, or launch a fourth page experiment while all slots are occupied."
 }

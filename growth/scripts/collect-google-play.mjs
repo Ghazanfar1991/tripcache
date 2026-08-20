@@ -1,8 +1,10 @@
 import { TextDecoder } from "node:util"
 import { fetchJson, isoNow, updateManifest, writeJson, getGoogleAccessToken } from "./lib/common.mjs"
+import { datedSourceFreshness } from "./lib/measurement.mjs"
 
 const sourceId = "google-play"
 const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME || "app.tripcache"
+const maxReportingLagDays = 7
 const bucket = (process.env.GOOGLE_PLAY_REPORT_BUCKET || "").replace(/^gs:\/\//, "").replace(/\/.*$/, "")
 const token = getGoogleAccessToken()
 
@@ -130,6 +132,8 @@ try {
 
   const generatedAt = isoNow()
   const daily = [...dailyMap.values()].sort((a, b) => a.date.localeCompare(b.date))
+  const latestReportedDate = daily.at(-1)?.date ?? null
+  const sourceFreshness = datedSourceFreshness({ latestReportedDate, generatedAt, maxLagDays: maxReportingLagDays })
   const last28 = daily.slice(-28)
   const totals28Days = last28.reduce((totals, row) => ({
     userInstalls: totals.userInstalls + row.dailyUserInstalls,
@@ -145,17 +149,19 @@ try {
     reportingLagDays: "3-7",
     filesProcessed: selected.map((name) => name.split("/").at(-1)),
     totals28Days,
-    latestReportedDate: daily.at(-1)?.date ?? null,
+    latestReportedDate,
     latestInstalledAudience: daily.at(-1)?.activeDeviceInstalls ?? null,
     daily: daily.slice(-92),
     countries: [...countryMap.values()].sort((a, b) => b.dailyUserInstalls - a.dailyUserInstalls).slice(0, 100),
   })
   await updateManifest(sourceId, {
     status: "SUCCESS",
-    freshness: "fresh",
+    freshness: sourceFreshness.fresh ? "fresh" : "stale",
     latestSyncTime: generatedAt,
     generatedLocalSnapshot: "growth/data/store/google-play.json",
-    note: `${totals28Days.userInstalls} official Play user installs in the latest 28 reported days.`,
+    note: sourceFreshness.fresh
+      ? `${totals28Days.userInstalls} official Play user installs in the latest 28 reported days.`
+      : `Play export fetched successfully, but the latest reported date (${latestReportedDate || "unknown"}) is ${sourceFreshness.ageDays ?? "an unknown number of"} days old; treat install totals as stale.`,
   })
 } catch (error) {
   await updateManifest(sourceId, {

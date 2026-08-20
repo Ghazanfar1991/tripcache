@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import { Navigation } from "@/components/navigation"
+import { StoreLinkAnalytics } from "@/components/store-link-analytics"
 import "./globals.css"
 
 const DEFAULT_GA_MEASUREMENT_ID = "G-JP6JKPVPVY"
@@ -196,6 +197,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className="font-sans antialiased">
         <ThemeProvider defaultTheme="dark">
           <Navigation />
+          <StoreLinkAnalytics />
           {children}
           <Analytics />
           <SpeedInsights />
