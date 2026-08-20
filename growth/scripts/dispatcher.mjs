@@ -57,7 +57,12 @@ async function execute(job) {
   const diagnostic = result.error
     ? `${result.error.name || "Error"}: ${result.error.message || String(result.error)}`
     : ""
-  const output = `${result.stdout || ""}\n${result.stderr || ""}\n${diagnostic}`.trim().slice(-8000)
+  const processOutput = `${result.stdout || ""}\n${result.stderr || ""}\n${diagnostic}`.trim()
+  let finalMessage = ""
+  try {
+    finalMessage = (await readFile(outputPath, "utf8")).trim()
+  } catch {}
+  const output = (result.status === 0 && finalMessage ? finalMessage : processOutput).slice(-8000)
   return {
     status: result.status === 0 ? "SUCCESS" : classify(output),
     output,
