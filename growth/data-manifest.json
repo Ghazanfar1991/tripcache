@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T13:42:06Z",
+  "generatedAt": "2026-08-20T14:04:34.691Z",
   "sources": [
     {
       "id": "search-console",
@@ -18,12 +18,12 @@
     },
     {
       "id": "ga4",
-      "status": "SUCCESS",
-      "freshness": "fresh",
-      "note": "GA4 app data available; web funnel remains unmeasurable.",
+      "status": "WAITING_FOR_HUMAN_AUTH",
+      "freshness": "stale",
+      "note": "HTTP 403 for https://analyticsdata.googleapis.com/v1beta/properties/514130776:runReport: {\"error\":{\"code\":403,\"message\":\"Request had insufficient authentication scopes.\",\"status\":\"PERMISSION_DENIED\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.ErrorInfo\",\"reason\":\"ACCESS_TOKEN_SCOPE_INSUFFICIENT\",\"domain\":\"googleapis.com\",\"metadata\":{\"method\":\"google.analytics.data.v1beta.BetaAnalyticsData.RunReport\",\"service\":\"analyticsdata.googleapis.com\"}}]}}",
       "latestSyncTime": "2026-08-20T09:29:45.257Z",
       "generatedLocalSnapshot": "growth/data/app/latest.json",
-      "checkedAt": "2026-08-20T09:29:45.920Z"
+      "checkedAt": "2026-08-20T14:00:29.874Z"
     },
     {
       "id": "revenuecat",
@@ -39,10 +39,10 @@
       "id": "production-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-08-20T09:30:50.045Z",
+      "latestSyncTime": "2026-08-20T14:04:34.687Z",
       "generatedLocalSnapshot": "growth/data/seo/technical-health.json",
       "note": "39 sitemap URLs verified.",
-      "checkedAt": "2026-08-20T09:30:50.048Z"
+      "checkedAt": "2026-08-20T14:04:34.691Z"
     },
     {
       "id": "firebase-crashlytics",

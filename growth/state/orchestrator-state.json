@@ -1,10 +1,32 @@
 {
-  "updatedAt": "2026-08-16T16:12:49.785Z",
+  "updatedAt": "2026-08-20T14:05:21Z",
   "dispatcher": {
     "status": "IDLE",
-    "lastWakeAt": "2026-08-16T16:12:49.779Z",
-    "pid": 69110,
-    "completedAt": "2026-08-16T16:12:49.785Z"
+    "lastWakeAt": "2026-08-20T13:38:31.232Z",
+    "pid": 55167,
+    "completedAt": "2026-08-20T13:46:12.023Z"
+  },
+  "latestGrowthCycleEvidence": {
+    "completedAt": "2026-08-20T14:05:21Z",
+    "trigger": "MANUAL_RECOVERY_AFTER_SCHEDULED_FAILURE",
+    "branch": "codex/growth-weekly-2026-08-20",
+    "decision": "NO_NEW_EXPERIMENT",
+    "reason": "All three independent experiment slots are occupied and their >72-hour directional pulses and production guardrails pass. Preserve the finalized 2026-09-03 decision gates.",
+    "searchConsolePulseAt": "2026-08-20T09:29:45.223Z",
+    "production": {
+      "commit": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
+      "deploymentId": "dpl_DYs3JAwf4BKizW8c8LWmDiPRXQqP",
+      "deployedAt": "2026-08-20T13:52:42.191Z",
+      "healthCheckedAt": "2026-08-20T14:04:34.687Z",
+      "status": "PASS"
+    },
+    "backlinksAdvanced": [
+      "product-hunt-tripcache-launch",
+      "betalist-tripcache",
+      "travel-app-roundup-toms-guide",
+      "reddit-sideproject-mention-reclamation"
+    ],
+    "measurementBlocker": "GA4 refresh returned insufficient authentication scopes; the source is marked WAITING_FOR_HUMAN_AUTH and stale. Existing website conversion remains unknown."
   },
   "jobs": {
     "weekly-growth-cycle": {
@@ -18,6 +40,17 @@
       "attempts": 0,
       "lastRunAt": null,
       "nextDueAt": "2026-09-01T16:00:00+10:00"
+    },
+    "midweek-growth-sprint": {
+      "status": "FAILED",
+      "attempts": 1,
+      "lastRunAt": "2026-08-20T13:38:31.232Z",
+      "nextDueAt": "2026-08-20T19:38:31.232Z",
+      "lastOutput": "able.map((source) => source.id).join(\", \")}.`\n-    : \"All required sources are fresh; the weekly agent may evaluate one reversible experiment.\",\n+    : activeExperimentCount >= Number(guardrails.maxConcurrentExperiments || 0)\n+      ? `All ${activeExperimentCount} experiment slots are occupied. Preserve their 14-day windows and do not launch or stack another page experiment.`\n+      : `Required experiment sources are fresh; up to ${launchCapacity} independent page experiment(s) may be evaluated.`,\n   \"\",\n ]\n \ndiff --git a/growth/scripts/lib/measurement.mjs b/growth/scripts/lib/measurement.mjs\nindex 52849fd229567aa0a783fe2895f4517377c55752..063df541e9872d9dcd8cc9ce0b439fa60bf56bf9\n--- a/growth/scripts/lib/measurement.mjs\n+++ b/growth/scripts/lib/measurement.mjs\n@@ -1,5 +1,20 @@\n const recognizedAiSources = [\"chatgpt\", \"openai\", \"perplexity\", \"claude\", \"copilot\", \"gemini\", \"meta.ai\"]\n \n+export function isWebPlatform(value) {\n+  return typeof value === \"string\" && value.trim().toLowerCase() === \"web\"\n+}\n+\n+export function datedSourceFreshness({ latestReportedDate, generatedAt, maxLagDays }) {\n+  const latest = Date.parse(`${latestReportedDate}T00:00:00.000Z`)\n+  const generatedDate = typeof generatedAt === \"string\" ? generatedAt.slice(0, 10) : \"\"\n+  const generated = Date.parse(`${generatedDate}T00:00:00.000Z`)\n+  if (!Number.isFinite(latest) || !Number.isFinite(generated) || !Number.isFinite(maxLagDays)) {\n+    return { fresh: false, ageDays: null }\n+  }\n+  const ageDays = Math.max(0, Math.floor((generated - latest) / 86_400_000))\n+  return { fresh: ageDays <= maxLagDays, ageDays }\n+}\n+\n export function buildAiAssistantReferrals({ measurable, rows }) {\n   const note = \"Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic.\"\n   if (!measurable) {\ndiff --git a/growth/scripts/refresh-state.mjs b/growth/scripts/refresh-state.mjs\nindex df81afafa62f63406a6014da1e4051cb24b43178..becdaa5bd1da70a7a17e5d9cddb5782b3244288c\n--- a/growth/scripts/refresh-state.mjs\n+++ b/growth/scripts/refresh-state.mjs\n@@ -9,6 +9,7 @@\n const play = await readJson(\"data/store/google-play.json\", {})\n const apple = await readJson(\"data/store/app-store.json\", {})\n const quality = await readJson(\"data/app/quality.json\", {})\n+const manifest = await readJson(\"data-manifest.json\", { sources: [] })\n \n function overviewMetric(id) {\n   return revenue.overview?.metrics?.find((metric) => metric.id === id)?.value ?? null\n@@ -19,19 +20,20 @@\n const activation = appFunnel.steps?.find((step) => step.id === \"activation\")\n const churnAvailable = !revenueRetention.charts?.churn?.unavailable\n const androidQuality = quality.officialDashboardBaseline?.android\n+const playFresh = manifest.sources.find((source) => source.id === \"google-play\")?.freshness === \"fresh\"\n const unknown = []\n if (!website.measurable) unknown.push(\"website store-intent conversion\")\n if (!screenMeasurementAvailable) unknown.push(\"screen-level app usage\")\n else if (!productScreenNamesAvailable) unknown.push(\"product-level screen usage (Firebase screen names are not configured)\")\n if (!activation?.measured) unknown.push(\"app activation conversion\")\n if (!churnAvailable) unknown.push(\"subscriber churn and retention\")\n-if (!play.totals28Days) unknown.push(\"official Google Play installs\")\n+if (!play.totals28Days || !playFresh) unknown.push(\"official Google Play installs (fresh evidence)\")\n if (!apple.totals28Days) unknown.push(\"official App Store downloads\")\n \n let primaryConstraint = \"The full funnel is measurable; prioritize the largest observed conversion loss in the weekly cycle.\"\n if (androidQuality?.crashFreeUsers < 0.99) primaryConstraint = `Android reliability is the immediate product constraint at ${(androidQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.`\n else if (!website.measurable) primaryConstraint = \"Website store-intent conversion is not yet measurable while the new GA4 web stream accumulates data.\"\n-else if (!play.totals28Days || !apple.totals28Days) primaryConstraint = \"Official store download data is incomplete, so store-listing conversion cannot yet be calculated.\"\n+else if (!play.totals28Days || !playFresh || !apple.totals28Days) primaryConstraint = \"Official store download data is incomplete or stale, so store-listing conversion cannot yet be calculated.\"\n else if (!activation?.measured) primaryConstraint = \"The app does not emit a verified activation event, so install-to-value conversion remains the largest measurement gap.\"\n \n const existing = await readJson(\"state/current.json\", {})\n@@ -50,7 +52,7 @@\n     searchConsoleAveragePosition: search.totals?.position ?? null,\n     revenueCatActiveSubscriptions: overviewMetric(\"active_subscriptions\"),\n     revenueCatMrrAud: overviewMetric(\"mrr\"),\n-    googlePlayUserInstalls28Days: play.totals28Days?.userInstalls ?? null,\n+    googlePlayUserInstalls28Days: playFresh ? play.totals28Days?.userInstalls ?? null : null,\n     appStoreFirstTimeDownloads28Days: apple.totals28Days?.firstTimeDownloads ?? null,\n     measuredAppScreens: app.screenViews?.length ?? 0,\n     measuredAppFunnelSteps: appFunnel.measurableSteps || [],\ndiff --git a/growth/state/active-experiments.json b/growth/state/active-experiments.json\nindex 589545fdb21326be39af087ddfc49fa79c35f4d0..2fe641ae3d0a839e85912061c817563cba1e2586\n--- a/growth/state/active-experiments.json\n+++ b/growth/state/active-experiments.json\n@@ -1,5 +1,6 @@\n {\n-  \"updatedAt\": \"2026-08-17T01:56:10.000Z\",\n+  \"updatedAt\": \"2026-08-20T13:42:06Z\",\n+  \"latestPulseAt\": \"2026-08-20T09:29:45.223Z\",\n   \"experiments\": [\n     {\n       \"id\": \"seo-hotel-reminder-ctr-2026-08-17\",\n@@ -26,5 +27,5 @@\n       \"earliestDecisionDate\": \"2026-09-03\"\n     }\n   ],\n-  \"decision\": \"Run three parallel Search Console CTR/store-intent experiments on distinct canonical URLs and query clusters during the four-week sprint; do not stack another change on any active target page before its decision gate.\"\n+  \"decision\": \"All three experiments passed the >72-hour directional pulse guardrails and remain active through the finalized 2026-09-03 decision gate. Do not declare winners, shorten their windows, stack changes, or launch a fourth page experiment while all slots are occupied.\"\n }\ndiff --git a/growth/tests/measurement.test.mjs b/growth/tests/measurement.test.mjs\nindex cbce1a4e6608e0bd19f2c99e95a8605784ff3470..7efb84e13fae82e27d751a4c23f1aadf0d5b9193\n--- a/growth/tests/measurement.test.mjs\n+++ b/growth/tests/measurement.test.mjs\n@@ -1,6 +1,21 @@\n import assert from \"node:assert/strict\"\n import test from \"node:test\"\n-import { aiAssistantReferralSummary, buildAiAssistantReferrals } from \"../scripts/lib/measurement.mjs\"\n+import { aiAssistantReferralSummary, buildAiAssistantReferrals, datedSourceFreshness, isWebPlatform } from \"../scripts/lib/measurement.mjs\"\n+\n+test(\"web platform matching is case-insensitive and exact\", () => {\n+  assert.equal(isWebPlatform(\"web\"), true)\n+  assert.equal(isWebPlatform(\"WEB\"), true)\n+  assert.equal(isWebPlatform(\" Web \"), true)\n+  assert.equal(isWebPlatform(\"Android\"), false)\n+  assert.equal(isWebPlatform(\"website\"), false)\n+  assert.equal(isWebPlatform(null), false)\n+})\n+\n+test(\"dated source freshness respects the maximum reporting lag\", () => {\n+  assert.deepEqual(datedSourceFreshness({ latestReportedDate: \"2026-08-13\", generatedAt: \"2026-08-20T09:29:57.959Z\", maxLagDays: 7 }), { fresh: true, ageDays: 7 })\n+  assert.deepEqual(datedSourceFreshness({ latestReportedDate: \"2026-08-12\", generatedAt: \"2026-08-20T09:29:57.959Z\", maxLagDays: 7 }), { fresh: false, ageDays: 8 })\n+  assert.deepEqual(datedSourceFreshness({ latestReportedDate: null, generatedAt: \"2026-08-20T09:29:57.959Z\", maxLagDays: 7 }), { fresh: false, ageDays: null })\n+})\n \n test(\"unmeasurable web data remains unknown instead of becoming zero\", () => {\n   const referrals = buildAiAssistantReferrals({ measurable: false, rows: [] })",
+      "exitCode": null,
+      "syncedRevision": "9ad1b2b5fa586e4079819753ae364b023fd858e1",
+      "email": null,
+      "trigger": "SCHEDULED"
     }
   }
 }
