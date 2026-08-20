@@ -3,10 +3,13 @@ import { mkdir, readFile, rm, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import { isoNow, readJson, repoRoot, runtimeRoot, writeJson } from "./lib/common.mjs"
+import { codexExecArgs, selectJobs } from "./lib/dispatcher-command.mjs"
 import { syncRepository } from "./lib/repository-sync.mjs"
 import { nextScheduledAt } from "./lib/schedule.mjs"
 
 const dryRun = process.argv.includes("--dry-run")
+const runArg = process.argv.indexOf("--run")
+const requestedJobId = runArg >= 0 ? process.argv[runArg + 1] : null
 const nowArg = process.argv.indexOf("--now")
 const now = new Date(nowArg >= 0 ? process.argv[nowArg + 1] : process.env.GROWTH_NOW || Date.now())
 const lockDir = path.join(runtimeRoot, "dispatcher.lock")
@@ -43,9 +46,7 @@ async function execute(job) {
   const codex = process.env.CODEX_BIN || "/Applications/ChatGPT.app/Contents/Resources/codex"
   const prompt = await readFile(path.join(repoRoot, job.prompt), "utf8")
   const outputPath = path.join(runtimeRoot, `${job.id}-last-message.txt`)
-  const result = spawnSync(codex, [
-    "exec", "-C", repoRoot, "-s", "workspace-write", "--approve-for-me", "-o", outputPath, prompt,
-  ], {
+  const result = spawnSync(codex, codexExecArgs({ repoRoot, outputPath, prompt }), {
     cwd: repoRoot,
     encoding: "utf8",
     timeout: job.maxRuntimeMinutes * 60 * 1000,
@@ -67,11 +68,14 @@ function sendReportEmail(job) {
     encoding: "utf8",
     env: process.env,
   })
+  const output = `${result.stdout || ""}\n${result.stderr || ""}`.trim().slice(-2000)
   return {
-    status: result.status === 0 ? "SENT_OR_SKIPPED" : "FAILED",
-    output: `${result.stdout || ""}\n${result.stderr || ""}`.trim().slice(-2000),
+    status: result.status !== 0 ? "FAILED" : /email accepted/i.test(output) ? "SENT" : "SKIPPED",
+    output,
   }
 }
+
+if (runArg >= 0 && !requestedJobId) throw new Error("--run requires a growth job id")
 
 if (!(await acquireLock())) {
   console.log("Dispatcher already running; exiting safely.")
@@ -82,7 +86,7 @@ try {
   const config = await readJson("config/jobs.yaml")
   const state = await readJson("state/orchestrator-state.json", { dispatcher: {}, jobs: {} })
   state.dispatcher = { ...state.dispatcher, status: dryRun ? "DRY_RUN" : "RUNNING", lastWakeAt: now.toISOString(), pid: process.pid }
-  const due = config.jobs.filter((job) => new Date(state.jobs?.[job.id]?.nextDueAt || job.nextDueAt) <= now)
+  const due = selectJobs({ jobs: config.jobs, state, now, requestedJobId })
   if (!due.length) {
     console.log(`No jobs due at ${now.toISOString()}.`)
   }
@@ -97,6 +101,7 @@ try {
     state.jobs[job.id] = {
       ...previous,
       status: result.status,
+      trigger: requestedJobId ? "MANUAL" : "SCHEDULED",
       attempts,
       lastRunAt: now.toISOString(),
       nextDueAt: result.status === "SUCCESS"
