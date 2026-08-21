@@ -1,6 +1,6 @@
 {
   "source": "Firebase Crashlytics dashboard and BigQuery export",
-  "generatedAt": "2026-08-20T09:29:46.322Z",
+  "generatedAt": "2026-08-21T09:32:34.709Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -48,26 +48,71 @@
   "automationNote": "Raw fatal/ANR events and impacted installations are refreshed daily. Crash-free percentages remain official dashboard metrics unless Firebase Sessions export supplies the denominator.",
   "automated30Days": [
     {
-      "platform": "IOS",
-      "table": "app_tripcache_IOS",
-      "fatalOrAnrEvents": 7,
-      "impactedInstallations": 1,
-      "fatalOrAnrIssues": 3,
+      "platform": "ANDROID",
+      "table": "app_tripcache_ANDROID",
+      "fatalOrAnrEvents": 9,
+      "impactedInstallations": 2,
+      "fatalOrAnrIssues": 2,
       "topIssues": [
         {
-          "issueId": "a82cf3a407a536179c47d4d5224b0023",
+          "issueId": "9eae1138ed1504493a9f9bec0c757839",
           "errorType": "FATAL",
-          "events": 5,
+          "events": 7,
           "impactedInstallations": 1
         },
         {
+          "issueId": "5533564def85b996beb4c9d2094d1d37",
+          "errorType": "FATAL",
+          "events": 2,
+          "impactedInstallations": 1
+        }
+      ]
+    },
+    {
+      "platform": "IOS",
+      "table": "app_tripcache_IOS",
+      "fatalOrAnrEvents": 24,
+      "impactedInstallations": 3,
+      "fatalOrAnrIssues": 7,
+      "topIssues": [
+        {
+          "issueId": "b2f4336e1bde515c0f9545956c7ad15d",
+          "errorType": "FATAL",
+          "events": 9,
+          "impactedInstallations": 1
+        },
+        {
+          "issueId": "a82cf3a407a536179c47d4d5224b0023",
+          "errorType": "FATAL",
+          "events": 6,
+          "impactedInstallations": 2
+        },
+        {
           "issueId": "f08c9d2dd9ae1bff1e9589a74b5c938f",
+          "errorType": "FATAL",
+          "events": 3,
+          "impactedInstallations": 3
+        },
+        {
+          "issueId": "70bd8948d33cb473534a5b1c4f24f447",
+          "errorType": "FATAL",
+          "events": 3,
+          "impactedInstallations": 1
+        },
+        {
+          "issueId": "b919f2c9fe161ec2c8f8ecc227dd13e4",
           "errorType": "FATAL",
           "events": 1,
           "impactedInstallations": 1
         },
         {
           "issueId": "066b04a5b7a4c45fc8c47b537a48c490",
+          "errorType": "FATAL",
+          "events": 1,
+          "impactedInstallations": 1
+        },
+        {
+          "issueId": "efa570795299be7175018ce933ae2bce",
           "errorType": "FATAL",
           "events": 1,
           "impactedInstallations": 1
