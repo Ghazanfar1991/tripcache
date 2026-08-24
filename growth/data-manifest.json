@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T09:24:38.817Z",
+  "generatedAt": "2026-08-24T03:50:12.223Z",
   "sources": [
     {
       "id": "search-console",
@@ -20,7 +20,7 @@
       "id": "ga4",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "note": "GA4 app and web data available.",
+      "note": "GA4 app, web traffic, and AI referrals are available; the stored snapshot predates the dedicated unique-user store-intent report, so the conversion rate remains unknown.",
       "latestSyncTime": "2026-08-23T09:23:29.856Z",
       "generatedLocalSnapshot": "growth/data/app/latest.json",
       "checkedAt": "2026-08-23T09:23:30.601Z"
@@ -39,10 +39,10 @@
       "id": "production-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-08-23T09:24:38.813Z",
+      "latestSyncTime": "2026-08-24T03:50:12.215Z",
       "generatedLocalSnapshot": "growth/data/seo/technical-health.json",
       "note": "39 sitemap URLs verified.",
-      "checkedAt": "2026-08-23T09:24:38.817Z"
+      "checkedAt": "2026-08-24T03:50:12.223Z"
     },
     {
       "id": "firebase-crashlytics",

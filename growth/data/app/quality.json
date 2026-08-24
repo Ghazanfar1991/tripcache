@@ -44,7 +44,7 @@
       "openCrashIssues": 0
     }
   },
-  "automationStatus": "WAITING_FOR_BIGQUERY_EXPORT",
+  "automationStatus": "READY_BIGQUERY_EXPORT",
   "automationNote": "Raw fatal/ANR events and impacted installations are refreshed daily. Crash-free percentages remain official dashboard metrics unless Firebase Sessions export supplies the denominator.",
   "automated30Days": [
     {

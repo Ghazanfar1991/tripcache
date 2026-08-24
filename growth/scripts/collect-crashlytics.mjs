@@ -104,6 +104,7 @@ try {
     ...baseline,
     source: "Firebase Crashlytics dashboard and BigQuery export",
     generatedAt,
+    automationStatus: "READY_BIGQUERY_EXPORT",
     automated30Days,
     automationNote: "Raw fatal/ANR events and impacted installations are refreshed daily. Crash-free percentages remain official dashboard metrics unless Firebase Sessions export supplies the denominator.",
   })

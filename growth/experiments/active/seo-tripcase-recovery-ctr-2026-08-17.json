@@ -49,26 +49,41 @@
     "reportingLagDays": 3,
     "earliestDecisionDate": "2026-09-03"
   },
-  "latestDirectionalPulse": {
-    "checkedAt": "2026-08-20T13:42:06Z",
-    "sourceGeneratedAt": "2026-08-20T09:29:45.223Z",
+  "latestFinalizedEvidence": {
+    "checkedAt": "2026-08-24T03:39:56Z",
+    "sourceGeneratedAt": "2026-08-23T09:23:29.810Z",
     "period": {
       "startDate": "2026-08-17",
-      "endDate": "2026-08-19"
+      "endDate": "2026-08-20"
     },
-    "clicks": 3,
-    "impressions": 287,
-    "ctr": 0.010452961672473868,
-    "averagePosition": 9.592334494773519,
+    "clicks": 5,
+    "impressions": 404,
+    "ctr": 0.012376237623762377,
+    "averagePosition": 8.893564356435643,
     "guardrailStatus": "PASS",
     "decision": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "Fresh Search Console rows are incomplete directional evidence. CTR is directionally above the predeclared threshold and position is inside the guardrail, but no winner is declared before the finalized 14-day window."
+    "note": "Finalized evidence directionally exceeds the 300-impression and 1.0% CTR criteria while position remains inside the guardrail, but no winner is declared before the 14-day observation window ends."
+  },
+  "latestDirectionalPulse": {
+    "checkedAt": "2026-08-24T03:39:56Z",
+    "sourceGeneratedAt": "2026-08-23T09:23:29.810Z",
+    "period": {
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-22"
+    },
+    "clicks": 2,
+    "impressions": 154,
+    "ctr": 0.012987012987012988,
+    "averagePosition": 10.64935064935065,
+    "guardrailStatus": "PASS",
+    "decision": "CONTINUE_TO_FINALIZED_GATE",
+    "note": "August 21–22 rows are incomplete directional evidence and August 23 is unavailable rather than zero. CTR remains directionally above threshold; position passes but is only 0.48 positions inside the predeclared guardrail, so monitor the next pulse closely."
   },
   "lastCycleReview": {
-    "reviewedAt": "2026-08-20T14:01:12Z",
-    "productionHealthAt": "2026-08-20T14:04:34.687Z",
+    "reviewedAt": "2026-08-24T03:39:56Z",
+    "productionHealthAt": "2026-08-24T03:50:12.215Z",
     "status": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "The >72-hour pulse and post-deployment production/indexing guardrails pass. Evidence remains below the predeclared impression threshold, so preserve the target page unchanged until the finalized 2026-09-03 decision gate."
+    "note": "Fresh Search Console and production guardrails pass. Preserve the target page unchanged until the finalized 2026-09-03 decision gate and monitor position in the next pulse."
   },
   "rollback": {
     "condition": "Rollback if a guardrail fails, or if at least 300 impressions accrue and CTR declines materially while average position declines by more than 2.0 positions.",

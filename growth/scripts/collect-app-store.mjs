@@ -1,6 +1,7 @@
 import { createPrivateKey, sign } from "node:crypto"
 import { gunzipSync } from "node:zlib"
 import { daysAgo, isoNow, updateManifest, writeJson } from "./lib/common.mjs"
+import { datedSourceFreshness } from "./lib/measurement.mjs"
 
 const sourceId = "app-store-connect"
 const issuerId = process.env.APP_STORE_CONNECT_ISSUER_ID
@@ -98,6 +99,8 @@ try {
     redownloads: totals.redownloads + row.redownloads,
     updates: totals.updates + row.updates,
   }), { firstTimeDownloads: 0, redownloads: 0, updates: 0 })
+  const latestReportedDate = last28.at(-1)?.date || null
+  const sourceFreshness = datedSourceFreshness({ latestReportedDate, generatedAt, maxLagDays: 3 })
   await writeJson("data/store/app-store.json", {
     source: "App Store Connect Sales and Trends Summary Sales Report",
     generatedAt,
@@ -105,17 +108,19 @@ try {
     timezone: "America/Los_Angeles",
     reportingLagDays: 1,
     coveredDateRange: last28.length ? { startDate: last28[0].date, endDate: last28.at(-1).date } : null,
-    latestReportedDate: last28.at(-1)?.date || null,
+    latestReportedDate,
     totals28Days,
     daily,
     definition: "The 28-day window ends on the latest available Apple report date. HTTP 404 dates inside that calendar window are retained as zero rather than extending the period. firstTimeDownloads counts product types 1, 1F, and 1T; redownloads and updates are reported separately.",
   })
   await updateManifest(sourceId, {
-    status: "SUCCESS",
-    freshness: "fresh",
+    status: sourceFreshness.fresh ? "SUCCESS" : "STALE_SOURCE_DATA",
+    freshness: sourceFreshness.fresh ? "fresh" : "stale",
     latestSyncTime: generatedAt,
     generatedLocalSnapshot: "growth/data/store/app-store.json",
-    note: `${totals28Days.firstTimeDownloads} official App Store first-time downloads in the latest 28 reported days.`,
+    note: sourceFreshness.fresh
+      ? `${totals28Days.firstTimeDownloads} official App Store first-time downloads in the latest 28 reported days; latest report ${latestReportedDate}.`
+      : `App Store report is stale or unavailable; latest report ${latestReportedDate || "unknown"}.`,
   })
 } catch (error) {
   await updateManifest(sourceId, {

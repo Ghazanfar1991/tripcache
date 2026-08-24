@@ -1,42 +1,63 @@
 {
-  "updatedAt": "2026-08-20T14:14:53.000Z",
+  "updatedAt": "2026-08-24T03:50:00Z",
   "dispatcher": {
     "status": "IDLE",
-    "lastWakeAt": "2026-08-20T13:52:31.331Z",
-    "pid": 72969,
-    "completedAt": "2026-08-20T14:10:10.081Z"
+    "lastWakeAt": "2026-08-24T02:34:30.919Z",
+    "pid": 55369,
+    "completedAt": "2026-08-24T02:34:30.925Z"
   },
   "latestGrowthCycleEvidence": {
-    "completedAt": "2026-08-20T14:05:21.000Z",
-    "trigger": "MANUAL_RECOVERY_AFTER_SCHEDULED_FAILURE",
-    "branch": "codex/growth-weekly-2026-08-20",
-    "pullRequest": 24,
-    "mergeCommit": "007dc32405e9c69963b9e0fedc056f1e07dfd2d6",
+    "status": "AWAITING_PULL_REQUEST",
+    "completedAt": null,
+    "trigger": "USER_REQUESTED_WEEKLY_CYCLE",
+    "branch": "codex/growth-weekly-2026-08-24",
+    "pullRequest": null,
+    "mergeCommit": null,
     "decision": "NO_NEW_EXPERIMENT",
-    "reason": "All three independent experiment slots are occupied and their >72-hour directional pulses and production guardrails pass. Preserve the finalized 2026-09-03 decision gates.",
-    "searchConsolePulseAt": "2026-08-20T09:29:45.223Z",
+    "reason": "All three independent experiment slots are occupied and pass refreshed production and Search Console guardrails. Preserve their finalized 2026-09-03 gates and target pages.",
+    "searchConsolePulseAt": "2026-08-23T09:23:29.810Z",
+    "finalizedSearchConsoleThrough": "2026-08-20",
+    "freshPulsePeriod": {
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-22",
+      "missingDateTreatedAsUnknown": "2026-08-23"
+    },
     "production": {
       "commit": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
       "deploymentId": "dpl_DYs3JAwf4BKizW8c8LWmDiPRXQqP",
       "deployedAt": "2026-08-20T13:52:42.191Z",
-      "healthCheckedAt": "2026-08-20T14:08:51.267Z",
+      "healthCheckedAt": "2026-08-24T03:50:12.215Z",
       "status": "PASS",
       "sitemapUrlsVerified": 39
     },
     "backlinksAdvanced": [
       "product-hunt-tripcache-launch",
-      "betalist-tripcache",
       "travel-app-roundup-toms-guide",
-      "reddit-sideproject-mention-reclamation"
+      "travel-app-roundup-marie-claire"
     ],
-    "measurementBlocker": "GA4 refresh returned insufficient authentication scopes; the source is marked WAITING_FOR_HUMAN_AUTH and stale. Existing website conversion remains unknown."
+    "backlinksPreparedConditional": [
+      "tripit-replacement-cancellation-deadline-thread"
+    ],
+    "measurementRepair": "GA4 traffic and AI referrals are fresh, but store intent was falsely marked measurable. The collector now separates traffic from conversion and will request a unique WEB denominator plus per-page store-click rows; the rate remains unknown until the next successful run.",
+    "remainingBlockers": [
+      "website store-intent rate awaiting the corrected collector",
+      "app activation instrumentation is outside this repository",
+      "public pricing remains frozen pending website/store/RevenueCat reconciliation"
+    ]
   },
   "jobs": {
     "weekly-growth-cycle": {
-      "status": "SCHEDULED",
+      "status": "CYCLE_RECORDED_AWAITING_MERGE",
       "attempts": 0,
-      "lastRunAt": null,
-      "nextDueAt": "2026-08-24T13:00:00+10:00"
+      "lastRunAt": "2026-08-24T03:35:00.000Z",
+      "nextDueAt": "2026-08-31T03:00:00.000Z",
+      "lastOutput": "Weekly cycle recorded on codex/growth-weekly-2026-08-24. No fourth experiment launched; three backlink actions advanced; GA4 store-intent semantics and production indexability guardrails repaired. Awaiting PR, CI, merge, and final production verification.",
+      "exitCode": null,
+      "signal": null,
+      "errorCode": null,
+      "syncedRevision": "c696fd9bc8b78c21957b9d6a9fcc991aa0067d45",
+      "email": null,
+      "trigger": "USER"
     },
     "monthly-strategy-review": {
       "status": "SCHEDULED",

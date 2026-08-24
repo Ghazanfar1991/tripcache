@@ -36,26 +36,41 @@
     "reportingLagDays": 3,
     "earliestDecisionDate": "2026-09-03"
   },
-  "latestDirectionalPulse": {
-    "checkedAt": "2026-08-20T13:42:06Z",
-    "sourceGeneratedAt": "2026-08-20T09:29:45.223Z",
+  "latestFinalizedEvidence": {
+    "checkedAt": "2026-08-24T03:39:56Z",
+    "sourceGeneratedAt": "2026-08-23T09:23:29.810Z",
     "period": {
       "startDate": "2026-08-17",
-      "endDate": "2026-08-19"
+      "endDate": "2026-08-20"
     },
     "clicks": 0,
-    "impressions": 42,
+    "impressions": 45,
     "ctr": 0,
-    "averagePosition": 5.333333333333333,
+    "averagePosition": 5.4222222222222225,
     "guardrailStatus": "PASS",
     "decision": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "Fresh Search Console rows are incomplete directional evidence. The page remains healthy and the position guardrail is intact; do not declare a result before the finalized 14-day window."
+    "note": "These rows are finalized, but only 45 of the predeclared 100 impressions have accrued. Position remains inside the guardrail, so continue without changing the target page."
+  },
+  "latestDirectionalPulse": {
+    "checkedAt": "2026-08-24T03:39:56Z",
+    "sourceGeneratedAt": "2026-08-23T09:23:29.810Z",
+    "period": {
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-22"
+    },
+    "clicks": 0,
+    "impressions": 17,
+    "ctr": 0,
+    "averagePosition": 5.764705882352941,
+    "guardrailStatus": "PASS",
+    "decision": "CONTINUE_TO_FINALIZED_GATE",
+    "note": "August 21–22 rows are incomplete directional evidence and August 23 is unavailable rather than zero. Position remains inside the guardrail and the impression threshold has not been reached."
   },
   "lastCycleReview": {
-    "reviewedAt": "2026-08-20T14:01:12Z",
-    "productionHealthAt": "2026-08-20T14:04:34.687Z",
+    "reviewedAt": "2026-08-24T03:39:56Z",
+    "productionHealthAt": "2026-08-24T03:50:12.215Z",
     "status": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "The >72-hour pulse and post-deployment production/indexing guardrails pass. Evidence remains below the predeclared impression threshold, so preserve the target page unchanged until the finalized 2026-09-03 decision gate."
+    "note": "Fresh Search Console and production guardrails pass. Evidence remains below the predeclared impression threshold, so preserve the target page unchanged until the finalized 2026-09-03 decision gate."
   },
   "rollback": {
     "condition": "Rollback if a guardrail fails, or if at least 100 impressions accrue and CTR remains 0% while average position declines by more than 2.0 positions.",
