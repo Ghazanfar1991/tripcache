@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-23T09:23:29.856Z",
+  "generatedAt": "2026-08-24T09:42:00.887Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
   "reportingWindow": "28daysAgo through yesterday; recent rows may be incomplete",
   "trafficMeasurable": true,
-  "measurable": false,
-  "status": "UNKNOWN_STORE_INTENT_RATE",
+  "measurable": true,
+  "status": "MEASURED",
   "events": [
     {
       "dimensions": {
@@ -17,9 +17,30 @@
         "eventCount": 2,
         "activeUsers": 1
       }
+    },
+    {
+      "dimensions": {
+        "eventName": "play_store_click",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 2
+      }
     }
   ],
   "acquisition": [
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 7,
+        "activeUsers": 7
+      }
+    },
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
@@ -27,30 +48,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 6,
-        "activeUsers": 5
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
+        "sessions": 7,
+        "activeUsers": 6
       }
     },
     {
@@ -60,19 +59,30 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
+        "sessions": 7,
+        "activeUsers": 7
       }
     },
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 3,
-        "activeUsers": 3
+        "sessions": 5,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 4
       }
     },
     {
@@ -155,6 +165,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/pricing",
         "platform": "web"
       },
@@ -220,19 +241,42 @@
     }
   ],
   "storeIntent": {
-    "measurable": false,
-    "status": "DEDICATED_UNIQUE_USER_REPORT_NOT_COLLECTED",
-    "landingUsers": null,
-    "landingSessions": null,
-    "storeIntentUsers": null,
-    "storeIntentEvents": null,
-    "rate": null,
+    "measurable": true,
+    "status": "MEASURED",
+    "landingUsers": 44,
+    "landingSessions": 49,
+    "storeIntentUsers": 2,
+    "storeIntentEvents": 2,
+    "rate": 0.045454545454545456,
     "eventNames": [
       "app_store_click",
       "play_store_click"
     ],
-    "byPage": null,
-    "note": "This snapshot predates the dedicated GA4 unique-user denominator and per-page store-click reports. Store intent is unknown rather than zero."
+    "byPage": [
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 1,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/blog/tripcase-shutdown-what-now",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 1,
+          "activeUsers": 1
+        }
+      }
+    ],
+    "note": "Store-intent users and landing users come from dedicated GA4 WEB reports so per-page active users are not summed into the rate. Recent rows may be incomplete."
   },
   "aiAssistantReferrals": {
     "measurable": true,
@@ -274,5 +318,5 @@
     ],
     "note": "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic."
   },
-  "note": "WEB traffic and AI referrals are measurable. The observed download-modal event is not a store click; store-intent conversion remains unknown until the corrected collector runs."
+  "note": null
 }

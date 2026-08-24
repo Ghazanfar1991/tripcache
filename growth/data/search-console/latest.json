@@ -1,40 +1,33 @@
 {
   "source": "Google Search Console API",
-  "generatedAt": "2026-08-23T09:23:29.810Z",
+  "generatedAt": "2026-08-24T09:42:00.842Z",
   "reportingLagDays": 3,
   "period": {
-    "startDate": "2026-07-24",
-    "endDate": "2026-08-20"
+    "startDate": "2026-07-25",
+    "endDate": "2026-08-21"
   },
   "totals": {
     "clicks": 45,
-    "impressions": 9670,
-    "ctr": 0.004653567735263702,
-    "position": 9.59627714581179
+    "impressions": 9737,
+    "ctr": 0.004621546677621444,
+    "position": 9.573790695286023
   },
   "previousPeriod": {
-    "startDate": "2026-06-26",
-    "endDate": "2026-07-23",
+    "startDate": "2026-06-27",
+    "endDate": "2026-07-24",
     "totals": {
-      "clicks": 60,
-      "impressions": 4775,
-      "ctr": 0.012565445026178011,
-      "position": 11.06240837696335
+      "clicks": 56,
+      "impressions": 4929,
+      "ctr": 0.011361330898762427,
+      "position": 10.908297829174275
     }
   },
   "change": {
-    "clicks": -0.25,
-    "impressions": 1.025130890052356,
-    "ctr": -0.6296535677352636
+    "clicks": -0.19642857142857142,
+    "impressions": 0.975451410022317,
+    "ctr": -0.5932213647500697
   },
   "daily": [
-    {
-      "date": "2026-05-23",
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 20.234375
-    },
     {
       "date": "2026-05-24",
       "clicks": 1,
@@ -657,16 +650,23 @@
       "impressions": 538,
       "ctr": 0.013011152416356878,
       "position": 9.394052044609666
+    },
+    {
+      "date": "2026-08-21",
+      "clicks": 0,
+      "impressions": 412,
+      "ctr": 0,
+      "position": 9.075242718446601
     }
   ],
   "fresh": {
     "dataState": "all",
     "directionalOnly": true,
     "period": {
-      "startDate": "2026-08-16",
-      "endDate": "2026-08-23"
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-24"
     },
-    "firstIncompleteDate": "2026-08-21",
+    "firstIncompleteDate": "2026-08-23",
     "pageDaily": [
       {
         "date": "2026-08-19",
@@ -675,14 +675,6 @@
         "impressions": 31,
         "ctr": 0.0967741935483871,
         "position": 32.064516129032256
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/",
-        "clicks": 2,
-        "impressions": 33,
-        "ctr": 0.06060606060606061,
-        "position": 28.181818181818183
       },
       {
         "date": "2026-08-18",
@@ -720,9 +712,17 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
         "clicks": 2,
-        "impressions": 78,
-        "ctr": 0.02564102564102564,
-        "position": 12.897435897435898
+        "impressions": 88,
+        "ctr": 0.022727272727272728,
+        "position": 12.227272727272727
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+        "clicks": 2,
+        "impressions": 74,
+        "ctr": 0.02702702702702703,
+        "position": 7.472972972972973
       },
       {
         "date": "2026-08-17",
@@ -776,137 +776,25 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/",
         "clicks": 1,
+        "impressions": 21,
+        "ctr": 0.047619047619047616,
+        "position": 47.61904761904762
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/",
+        "clicks": 1,
         "impressions": 20,
         "ctr": 0.05,
-        "position": 49.95
+        "position": 23.85
       },
       {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/about",
-        "clicks": 0,
-        "impressions": 5,
-        "ctr": 0,
-        "position": 19.4
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/alternatives/tripcase",
-        "clicks": 0,
-        "impressions": 8,
-        "ctr": 0,
-        "position": 47.125
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog",
-        "clicks": 0,
-        "impressions": 17,
-        "ctr": 0,
-        "position": 40.8235294117647
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 2
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/best-travel-apps-2025",
-        "clicks": 0,
-        "impressions": 158,
-        "ctr": 0,
-        "position": 7.493670886075949
-      },
-      {
-        "date": "2026-08-16",
+        "date": "2026-08-23",
         "page": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
-        "clicks": 0,
-        "impressions": 17,
-        "ctr": 0,
-        "position": 15.235294117647058
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/digital-nomad-organization",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 10
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
-        "clicks": 0,
-        "impressions": 18,
-        "ctr": 0,
-        "position": 4.444444444444445
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/trip-expense-management-app-2026",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 5
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
-        "clicks": 0,
-        "impressions": 45,
-        "ctr": 0,
-        "position": 16.822222222222223
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-        "clicks": 0,
-        "impressions": 51,
-        "ctr": 0,
-        "position": 9.529411764705882
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-        "clicks": 0,
-        "impressions": 11,
-        "ctr": 0,
-        "position": 11.454545454545455
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/features/business-travel-expenses",
-        "clicks": 0,
+        "clicks": 1,
         "impressions": 5,
-        "ctr": 0,
-        "position": 21.4
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/pricing",
-        "clicks": 0,
-        "impressions": 5,
-        "ctr": 0,
-        "position": 45.8
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/privacy",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 10
-      },
-      {
-        "date": "2026-08-16",
-        "page": "https://trip-cache.com/terms",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 94
+        "ctr": 0.2,
+        "position": 7.8
       },
       {
         "date": "2026-08-17",
@@ -1536,9 +1424,9 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/about",
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0,
-        "position": 67.25
+        "position": 54
       },
       {
         "date": "2026-08-22",
@@ -1560,25 +1448,25 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
         "clicks": 0,
-        "impressions": 17,
+        "impressions": 21,
         "ctr": 0,
-        "position": 7.470588235294118
+        "position": 7.857142857142857
       },
       {
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/best-travel-apps-2025",
         "clicks": 0,
-        "impressions": 154,
+        "impressions": 187,
         "ctr": 0,
-        "position": 8.051948051948052
+        "position": 7.352941176470588
       },
       {
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 7,
         "ctr": 0,
-        "position": 8.666666666666668
+        "position": 7.714285714285714
       },
       {
         "date": "2026-08-22",
@@ -1592,9 +1480,9 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 6,
         "ctr": 0,
-        "position": 35.4
+        "position": 31
       },
       {
         "date": "2026-08-22",
@@ -1608,17 +1496,17 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0,
-        "position": 3
+        "position": 3.6666666666666665
       },
       {
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
         "clicks": 0,
-        "impressions": 8,
+        "impressions": 11,
         "ctr": 0,
-        "position": 15.875
+        "position": 13.272727272727273
       },
       {
         "date": "2026-08-22",
@@ -1640,9 +1528,9 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
         "clicks": 0,
-        "impressions": 25,
+        "impressions": 28,
         "ctr": 0,
-        "position": 7.32
+        "position": 7.321428571428571
       },
       {
         "date": "2026-08-22",
@@ -1656,17 +1544,17 @@
         "date": "2026-08-22",
         "page": "https://trip-cache.com/features/business-travel-expenses",
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 7,
         "ctr": 0,
-        "position": 19.166666666666668
+        "position": 16.57142857142857
       },
       {
         "date": "2026-08-22",
         "page": "https://trip-cache.com/pricing",
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 6,
         "ctr": 0,
-        "position": 30
+        "position": 25.166666666666668
       },
       {
         "date": "2026-08-22",
@@ -1675,6 +1563,150 @@
         "impressions": 2,
         "ctr": 0,
         "position": 88
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/about",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/alternatives/tripcase",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 38.166666666666664
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 53.142857142857146
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 6.277777777777778
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/best-travel-apps-2025",
+        "clicks": 0,
+        "impressions": 173,
+        "ctr": 0,
+        "position": 7.578034682080925
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 13.6875
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 12.88888888888889
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/privacy-and-security",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/trip-expense-management-app-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
+        "clicks": 0,
+        "impressions": 31,
+        "ctr": 0,
+        "position": 12.935483870967742
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 8.714285714285715
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/features",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 37.5
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/features/business-travel-expenses",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 44.5
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/pricing",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 17.2
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/privacy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 26.333333333333332
+      },
+      {
+        "date": "2026-08-23",
+        "page": "https://trip-cache.com/terms",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
       }
     ],
     "note": "Fresh Search Console rows may be incomplete and are used only for 72-hour crawl/performance pulses, never final experiment decisions."
