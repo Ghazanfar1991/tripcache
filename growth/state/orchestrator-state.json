@@ -14,7 +14,7 @@
     "pullRequest": 28,
     "mergeCommit": "8536c56717d2c909aa985447a77f3f926b158056",
     "finalizationBranch": "codex/growth-finalize-2026-08-24",
-    "finalizationPullRequest": null,
+    "finalizationPullRequest": 29,
     "decision": "NO_NEW_EXPERIMENT",
     "reason": "All three independent experiment slots are occupied and pass refreshed production and Search Console guardrails. Preserve their finalized 2026-09-03 gates and target pages.",
     "searchConsolePulseAt": "2026-08-23T09:23:29.810Z",
