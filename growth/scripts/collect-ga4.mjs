@@ -1,5 +1,5 @@
 import { fetchJson, isoNow, updateManifest, writeJson, getGoogleAccessToken } from "./lib/common.mjs"
-import { buildAiAssistantReferrals, isWebPlatform } from "./lib/measurement.mjs"
+import { buildAiAssistantReferrals, buildWebsiteStoreIntent, isWebPlatform } from "./lib/measurement.mjs"
 
 const sourceId = "ga4"
 const propertyId = process.env.GA4_PROPERTY_ID || "514130776"
@@ -32,7 +32,17 @@ function rows(report) {
 
 try {
   const generatedAt = isoNow()
-  const [eventsReport, retentionReport, screensReport, acquisitionReport, websiteEventsReport, websiteAcquisitionReport] = await Promise.all([
+  const [
+    eventsReport,
+    retentionReport,
+    screensReport,
+    acquisitionReport,
+    websiteEventsReport,
+    websiteAcquisitionReport,
+    websiteTrafficTotalsReport,
+    websiteStoreIntentTotalsReport,
+    websiteStoreIntentByPageReport,
+  ] = await Promise.all([
     runReport({
       dateRanges: [{ startDate: "28daysAgo", endDate: "3daysAgo" }],
       dimensions: [{ name: "eventName" }, { name: "platform" }],
@@ -82,6 +92,65 @@ try {
       orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
       limit: 10000,
     }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
+      dimensions: [{ name: "platform" }],
+      metrics: [{ name: "sessions" }, { name: "activeUsers" }],
+      dimensionFilter: {
+        filter: {
+          fieldName: "platform",
+          stringFilter: { matchType: "EXACT", value: "web", caseSensitive: false },
+        },
+      },
+    }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
+      dimensions: [{ name: "platform" }],
+      metrics: [{ name: "eventCount" }, { name: "activeUsers" }],
+      dimensionFilter: {
+        andGroup: {
+          expressions: [
+            {
+              filter: {
+                fieldName: "platform",
+                stringFilter: { matchType: "EXACT", value: "web", caseSensitive: false },
+              },
+            },
+            {
+              filter: {
+                fieldName: "eventName",
+                inListFilter: { values: ["app_store_click", "play_store_click"], caseSensitive: true },
+              },
+            },
+          ],
+        },
+      },
+    }),
+    runReport({
+      dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
+      dimensions: [{ name: "eventName" }, { name: "pagePathPlusQueryString" }, { name: "platform" }],
+      metrics: [{ name: "eventCount" }, { name: "activeUsers" }],
+      dimensionFilter: {
+        andGroup: {
+          expressions: [
+            {
+              filter: {
+                fieldName: "platform",
+                stringFilter: { matchType: "EXACT", value: "web", caseSensitive: false },
+              },
+            },
+            {
+              filter: {
+                fieldName: "eventName",
+                inListFilter: { values: ["app_store_click", "play_store_click"], caseSensitive: true },
+              },
+            },
+          ],
+        },
+      },
+      orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
+      limit: 10000,
+    }),
   ])
   const eventRows = rows(eventsReport)
   const screenRows = rows(screensReport)
@@ -95,9 +164,14 @@ try {
   const aiAssistantPattern = /(chatgpt|openai|perplexity|claude|copilot|gemini|meta\.ai)/i
   const aiReferralRows = websiteAcquisitionRows
     .filter((row) => aiAssistantPattern.test(row.dimensions.sessionSourceMedium))
-  const websiteMeasurable = websiteRows.length > 0 || websiteAcquisitionRows.length > 0
-  const aiAssistantReferrals = buildAiAssistantReferrals({ measurable: websiteMeasurable, rows: aiReferralRows })
-  const trackedEvents = ["app_store_click", "play_store_click", "pricing_view", "get_started_open"]
+  const websiteTrafficMeasurable = websiteRows.length > 0 || websiteAcquisitionRows.length > 0
+  const aiAssistantReferrals = buildAiAssistantReferrals({ measurable: websiteTrafficMeasurable, rows: aiReferralRows })
+  const trackedEvents = ["app_store_click", "play_store_click", "pricing_view", "download_modal_open"]
+  const storeIntent = buildWebsiteStoreIntent({
+    trafficRows: rows(websiteTrafficTotalsReport),
+    storeIntentRows: rows(websiteStoreIntentTotalsReport),
+    byPage: rows(websiteStoreIntentByPageReport),
+  })
   const appFunnelDefinitions = [
     { id: "installProxy", events: ["first_open"] },
     { id: "signUp", events: ["sign_up"] },
@@ -145,19 +219,29 @@ try {
     webStreamId: process.env.GA4_WEB_STREAM_ID || "15446445587",
     measurementId: process.env.GA4_WEB_MEASUREMENT_ID || "G-JP6JKPVPVY",
     reportingWindow: "28daysAgo through yesterday; recent rows may be incomplete",
-    measurable: websiteMeasurable,
-    status: websiteMeasurable ? "MEASURED" : "UNKNOWN_WEB_STREAM",
+    trafficMeasurable: websiteTrafficMeasurable,
+    measurable: storeIntent.measurable,
+    status: storeIntent.measurable ? "MEASURED" : "UNKNOWN_STORE_INTENT_RATE",
     events: websiteRows.filter((row) => trackedEvents.includes(row.dimensions.eventName)),
     acquisition: websiteAcquisitionRows,
+    storeIntent,
     aiAssistantReferrals,
-    note: websiteMeasurable ? null : "No WEB rows were returned for this reporting window; do not infer web conversion or referral rates.",
+    note: storeIntent.measurable
+      ? null
+      : websiteTrafficMeasurable
+        ? "WEB traffic and referrals were measured, but no unique-user denominator was returned for the store-intent rate."
+        : "No WEB rows were returned for this reporting window; do not infer web conversion or referral rates.",
   })
   await updateManifest(sourceId, {
     status: "SUCCESS",
     freshness: "fresh",
     latestSyncTime: generatedAt,
     generatedLocalSnapshot: "growth/data/app/latest.json",
-    note: websiteMeasurable ? "GA4 app and web data available." : "GA4 app data available; web funnel remains unmeasurable.",
+    note: storeIntent.measurable
+      ? "GA4 app, web traffic, referrals, and store-intent measurement available."
+      : websiteTrafficMeasurable
+        ? "GA4 app, web traffic, and referrals available; store-intent rate remains unknown."
+        : "GA4 app data available; web funnel remains unmeasurable.",
   })
 } catch (error) {
   await updateManifest(sourceId, {

@@ -15,6 +15,31 @@ export function datedSourceFreshness({ latestReportedDate, generatedAt, maxLagDa
   return { fresh: ageDays <= maxLagDays, ageDays }
 }
 
+export function buildWebsiteStoreIntent({ trafficRows = [], storeIntentRows = [], byPage = [] }) {
+  const webTrafficRows = trafficRows.filter((row) => isWebPlatform(row.dimensions?.platform))
+  const webStoreIntentRows = storeIntentRows.filter((row) => isWebPlatform(row.dimensions?.platform))
+  const landingUsers = webTrafficRows.reduce((sum, row) => sum + (row.metrics?.activeUsers || 0), 0)
+  const landingSessions = webTrafficRows.reduce((sum, row) => sum + (row.metrics?.sessions || 0), 0)
+  const storeIntentUsers = webStoreIntentRows.reduce((sum, row) => sum + (row.metrics?.activeUsers || 0), 0)
+  const storeIntentEvents = webStoreIntentRows.reduce((sum, row) => sum + (row.metrics?.eventCount || 0), 0)
+  const measurable = landingUsers > 0
+
+  return {
+    measurable,
+    status: measurable ? "MEASURED" : "UNKNOWN_WEB_TRAFFIC",
+    landingUsers: measurable ? landingUsers : null,
+    landingSessions: measurable ? landingSessions : null,
+    storeIntentUsers: measurable ? storeIntentUsers : null,
+    storeIntentEvents: measurable ? storeIntentEvents : null,
+    rate: measurable ? storeIntentUsers / landingUsers : null,
+    eventNames: ["app_store_click", "play_store_click"],
+    byPage: measurable ? byPage : null,
+    note: measurable
+      ? "Store-intent users and landing users come from dedicated GA4 WEB reports so per-page active users are not summed into the rate. Recent rows may be incomplete."
+      : "No unique WEB landing-user denominator was returned; store intent remains unknown rather than zero.",
+  }
+}
+
 export function buildAiAssistantReferrals({ measurable, rows }) {
   const note = "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic."
   if (!measurable) {
@@ -42,7 +67,9 @@ export function buildAiAssistantReferrals({ measurable, rows }) {
 
 export function aiAssistantReferralSummary(funnel) {
   const referrals = funnel?.aiAssistantReferrals || {}
-  const measurable = funnel?.measurable === true
+  const trafficMeasurable = funnel?.trafficMeasurable === true
+    || (funnel?.trafficMeasurable == null && funnel?.measurable === true)
+  const measurable = trafficMeasurable
     && referrals.measurable !== false
     && Number.isFinite(referrals.sessions)
     && Number.isFinite(referrals.activeUsers)

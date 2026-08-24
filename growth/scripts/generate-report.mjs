@@ -27,6 +27,7 @@ const activeExperimentCount = activeExperimentRecords.length
 const experimentCapacity = Math.max(0, Number(guardrails.maxConcurrentExperiments || 0) - activeExperimentCount)
 const launchCapacity = Math.min(experimentCapacity, Number(guardrails.maxNewExperimentsPerCycle || experimentCapacity))
 const overviewMetric = (id) => revenue.overview?.metrics?.find((metric) => metric.id === id)?.value ?? "unavailable"
+const subscriptionCount = overviewMetric("active_subscriptions")
 const topScreens = (app.screenViews || []).slice(0, 10)
 const topOpportunities = (opportunities.queryPageOpportunities || []).slice(0, 10)
 const freshSearchRows = search.fresh?.pageDaily || []
@@ -38,9 +39,13 @@ const latestFreshTotals = latestFreshRows.reduce((totals, row) => ({
 }), { clicks: 0, impressions: 0 })
 const aiReferralEvidence = aiAssistantReferralSummary(funnel)
 const missingAppSteps = appFunnel.missingInstrumentation || []
-const churnStatus = revenueRetention.charts?.churn?.unavailable ? "unavailable" : "available"
+const conversionToPaying = revenueRetention.charts?.conversionToPaying?.data?.summary?.total
+const retentionAvailable = !revenueRetention.charts?.churn?.unavailable
 const androidQuality = quality.officialDashboardBaseline?.android
 const iosQuality = quality.officialDashboardBaseline?.ios
+const qualityPeriod = quality.officialDashboardBaseline?.period
+const automatedAndroidQuality = quality.automated30Days?.find((row) => row.platform === "ANDROID")
+const automatedIosQuality = quality.automated30Days?.find((row) => row.platform === "IOS")
 const playSource = manifest.sources.find((source) => source.id === "google-play")
 const appleDownloadEvidence = apple.totals28Days
   ? `${apple.totals28Days.firstTimeDownloads} official first-time downloads in the latest 28 reported days`
@@ -54,6 +59,18 @@ const screenLabel = (row) => {
   const name = row.dimensions.unifiedScreenName
   return name && name !== "(not set)" ? name : row.dimensions.unifiedScreenClass || "unnamed screen"
 }
+const websiteFunnelEvidence = funnel.measurable && Number.isFinite(funnel.storeIntent?.rate)
+  ? `${(funnel.storeIntent.rate * 100).toFixed(2)}% store intent (${funnel.storeIntent.storeIntentUsers}/${funnel.storeIntent.landingUsers} unique users)`
+  : funnel.trafficMeasurable === true || funnel.measurable === true
+    ? "traffic and referrals measurable; store-intent rate unknown"
+    : "not measurable"
+const payingConversionEvidence = conversionToPaying?.["New Customers"] != null
+  ? `${conversionToPaying["Paying Customers (7 days)"]}/${conversionToPaying["New Customers"]} customers converted to paying within 7 days (${conversionToPaying["Conversion Rate (7 days)"]}%) in the current 90-day chart`
+  : "paying conversion unavailable"
+const qualityPeriodText = qualityPeriod ? `${qualityPeriod.startDate}–${qualityPeriod.endDate} dashboard baseline` : "dashboard baseline"
+const automatedQualityText = (row) => row
+  ? `${row.fatalOrAnrEvents} fatal/ANR events affecting ${row.impactedInstallations} installations in the automated 30-day export`
+  : "automated fatal/ANR export unavailable"
 const lines = [
   `# TripCache growth snapshot — ${dateOnly()}`,
   "",
@@ -67,13 +84,13 @@ const lines = [
   "",
   `- Organic search: ${search.totals?.clicks ?? "unavailable"} clicks / ${search.totals?.impressions ?? "unavailable"} impressions.` ,
   `- Fresh SEO pulse: ${latestFreshDate ? `${latestFreshTotals.clicks} clicks / ${latestFreshTotals.impressions} impressions on ${latestFreshDate}` : "unavailable"} (directional; recent rows may be incomplete).`,
-  `- Website funnel: ${funnel.measurable ? "measurable" : "not measurable"}.`,
+  `- Website funnel: ${websiteFunnelEvidence}.`,
   `- AI-assistant referrals: ${aiReferralEvidence.text}.`,
-  `- RevenueCat: A$${overviewMetric("mrr")} MRR; ${overviewMetric("active_subscriptions")} active subscriptions; churn data ${churnStatus}.`,
+  `- RevenueCat: A$${overviewMetric("mrr")} MRR; ${subscriptionCount} active subscription${subscriptionCount === 1 ? "" : "s"}; ${payingConversionEvidence}; retention/churn data ${retentionAvailable ? "available but too sparse for decisions" : "unavailable"}.`,
   `- Google Play: ${playInstallEvidence}.`,
   `- App Store: ${appleDownloadEvidence}.`,
-  `- Android quality: ${androidQuality ? `${(androidQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users / ${androidQuality.crashes} crashes affecting ${androidQuality.impactedUsers} users` : "unavailable"}.`,
-  `- iOS quality: ${iosQuality ? `${(iosQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users` : "unavailable"}.`,
+  `- Android quality: ${androidQuality ? `${(androidQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users / ${androidQuality.crashes} crashes affecting ${androidQuality.impactedUsers} users (${qualityPeriodText}); ${automatedQualityText(automatedAndroidQuality)}` : "unavailable"}.`,
+  `- iOS quality: ${iosQuality ? `${(iosQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users (${qualityPeriodText}); ${automatedQualityText(automatedIosQuality)}; reconcile the windows before calling current health` : "unavailable"}.`,
   `- App funnel instrumentation still missing: ${appFunnel.generatedAt ? (missingAppSteps.length ? missingAppSteps.join(", ") : "none") : "not collected yet"}.`,
   "",
   "## Most-used app screens",
@@ -96,6 +113,17 @@ const lines = [
         return pulse
           ? `- ${experiment.id}: ${pulse.clicks} clicks / ${pulse.impressions} impressions, ${(pulse.ctr * 100).toFixed(2)}% CTR, position ${pulse.averagePosition.toFixed(1)} (${pulse.period.startDate}–${pulse.period.endDate}); ${pulse.guardrailStatus}, directional only, continue to ${experiment.observationWindow.earliestDecisionDate}.`
           : `- ${experiment.id}: no >72-hour pulse recorded yet; continue to ${experiment.observationWindow?.earliestDecisionDate || "the predeclared decision gate"}.`
+      })
+    : ["- No active experiments."]),
+  "",
+  "## Finalized experiment evidence (decision windows still open)",
+  "",
+  ...(activeExperimentRecords.length
+    ? activeExperimentRecords.map((experiment) => {
+        const evidence = experiment.latestFinalizedEvidence
+        return evidence
+          ? `- ${experiment.id}: ${evidence.clicks} clicks / ${evidence.impressions} impressions, ${(evidence.ctr * 100).toFixed(2)}% CTR, position ${evidence.averagePosition.toFixed(1)} (${evidence.period.startDate}–${evidence.period.endDate}); ${evidence.guardrailStatus}, continue to ${experiment.observationWindow.earliestDecisionDate}.`
+          : `- ${experiment.id}: no finalized post-deployment evidence recorded yet.`
       })
     : ["- No active experiments."]),
   "",

@@ -32,7 +32,7 @@ if (!apple.totals28Days) unknown.push("official App Store downloads")
 
 let primaryConstraint = "The full funnel is measurable; prioritize the largest observed conversion loss in the weekly cycle."
 if (androidQuality?.crashFreeUsers < 0.99) primaryConstraint = `Android reliability is the immediate product constraint at ${(androidQuality.crashFreeUsers * 100).toFixed(2)}% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.`
-else if (!website.measurable) primaryConstraint = "Website store-intent conversion is not yet measurable while the new GA4 web stream accumulates data."
+else if (!website.measurable) primaryConstraint = "Website traffic is measurable, but an attributable unique-user store-intent rate is not yet available."
 else if (!play.totals28Days || !playFresh || !apple.totals28Days) primaryConstraint = "Official store download data is incomplete or stale, so store-listing conversion cannot yet be calculated."
 else if (!activation?.measured) primaryConstraint = "The app does not emit a verified activation event, so install-to-value conversion remains the largest measurement gap."
 
@@ -56,6 +56,8 @@ await writeJson("state/current.json", {
     appStoreFirstTimeDownloads28Days: apple.totals28Days?.firstTimeDownloads ?? null,
     measuredAppScreens: app.screenViews?.length ?? 0,
     measuredAppFunnelSteps: appFunnel.measurableSteps || [],
+    websiteTrafficMeasured: website.trafficMeasurable === true || website.measurable === true,
+    websiteStoreIntentRate: website.measurable ? website.storeIntent?.rate ?? null : null,
     androidCrashFreeUsers30Days: androidQuality?.crashFreeUsers ?? null,
     androidCrashes30Days: androidQuality?.crashes ?? null,
     iosCrashFreeUsers30Days: quality.officialDashboardBaseline?.ios?.crashFreeUsers ?? null,

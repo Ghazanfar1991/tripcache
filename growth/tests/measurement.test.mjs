@@ -1,6 +1,12 @@
 import assert from "node:assert/strict"
 import test from "node:test"
-import { aiAssistantReferralSummary, buildAiAssistantReferrals, datedSourceFreshness, isWebPlatform } from "../scripts/lib/measurement.mjs"
+import {
+  aiAssistantReferralSummary,
+  buildAiAssistantReferrals,
+  buildWebsiteStoreIntent,
+  datedSourceFreshness,
+  isWebPlatform,
+} from "../scripts/lib/measurement.mjs"
 
 test("web platform matching is case-insensitive and exact", () => {
   assert.equal(isWebPlatform("web"), true)
@@ -43,4 +49,35 @@ test("measured AI referrals are summed", () => {
   })
   assert.equal(referrals.sessions, 5)
   assert.equal(referrals.activeUsers, 3)
+})
+
+test("AI referrals remain measurable when store intent is still unknown", () => {
+  const referrals = buildAiAssistantReferrals({ measurable: true, rows: [] })
+  const summary = aiAssistantReferralSummary({
+    trafficMeasurable: true,
+    measurable: false,
+    aiAssistantReferrals: referrals,
+  })
+  assert.equal(summary.measurable, true)
+  assert.match(summary.text, /^0 sessions/)
+})
+
+test("store intent uses dedicated unique-user totals and preserves a measured zero", () => {
+  const result = buildWebsiteStoreIntent({
+    trafficRows: [{ dimensions: { platform: "web" }, metrics: { sessions: 24, activeUsers: 20 } }],
+    storeIntentRows: [],
+    byPage: [],
+  })
+  assert.equal(result.measurable, true)
+  assert.equal(result.landingUsers, 20)
+  assert.equal(result.storeIntentUsers, 0)
+  assert.equal(result.rate, 0)
+})
+
+test("store intent remains unknown without a unique web-user denominator", () => {
+  const result = buildWebsiteStoreIntent({ trafficRows: [], storeIntentRows: [] })
+  assert.equal(result.measurable, false)
+  assert.equal(result.landingUsers, null)
+  assert.equal(result.storeIntentUsers, null)
+  assert.equal(result.rate, null)
 })

@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-08-20T14:01:12Z",
-  "latestPulseAt": "2026-08-20T09:29:45.223Z",
-  "lastCycleReviewAt": "2026-08-20T14:01:12Z",
+  "updatedAt": "2026-08-24T03:39:56Z",
+  "latestPulseAt": "2026-08-23T09:23:29.810Z",
+  "lastCycleReviewAt": "2026-08-24T03:39:56Z",
   "productionGuardrail": {
-    "checkedAt": "2026-08-20T14:04:34.687Z",
+    "checkedAt": "2026-08-24T03:50:12.215Z",
     "status": "PASS",
     "verifiedCommit": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
-    "note": "All three target URLs returned HTTP 200 with their intended self-canonical and indexable production rendering."
+    "note": "All three target URLs returned HTTP 200 without redirects, kept their intended self-canonical and experiment metadata, remained in the 39-URL sitemap, and continued receiving Search Console impressions."
   },
   "experiments": [
     {
@@ -34,5 +34,5 @@
       "earliestDecisionDate": "2026-09-03"
     }
   ],
-  "decision": "All three experiments passed the >72-hour directional pulse and post-deployment production guardrails and remain active through the finalized 2026-09-03 decision gate. Do not declare winners, shorten their windows, stack changes, or launch a fourth page experiment while all slots are occupied."
+  "decision": "All three experiments pass the refreshed production and Search Console pulse guardrails. August 17–20 is stored as finalized evidence; August 21–22 remains incomplete and August 23 is unknown. Continue to the 2026-09-03 gate without changing target pages, stacking changes, or launching a fourth experiment."
 }

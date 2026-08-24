@@ -4,9 +4,21 @@
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
   "reportingWindow": "28daysAgo through yesterday; recent rows may be incomplete",
-  "measurable": true,
-  "status": "MEASURED",
-  "events": [],
+  "trafficMeasurable": true,
+  "measurable": false,
+  "status": "UNKNOWN_STORE_INTENT_RATE",
+  "events": [
+    {
+      "dimensions": {
+        "eventName": "download_modal_open",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 1
+      }
+    }
+  ],
   "acquisition": [
     {
       "dimensions": {
@@ -207,6 +219,21 @@
       }
     }
   ],
+  "storeIntent": {
+    "measurable": false,
+    "status": "DEDICATED_UNIQUE_USER_REPORT_NOT_COLLECTED",
+    "landingUsers": null,
+    "landingSessions": null,
+    "storeIntentUsers": null,
+    "storeIntentEvents": null,
+    "rate": null,
+    "eventNames": [
+      "app_store_click",
+      "play_store_click"
+    ],
+    "byPage": null,
+    "note": "This snapshot predates the dedicated GA4 unique-user denominator and per-page store-click reports. Store intent is unknown rather than zero."
+  },
   "aiAssistantReferrals": {
     "measurable": true,
     "status": "MEASURED",
@@ -247,5 +274,5 @@
     ],
     "note": "Directional GA4 referral measurement; unlinked or privacy-stripped AI discovery may appear as direct traffic."
   },
-  "note": null
+  "note": "WEB traffic and AI referrals are measurable. The observed download-modal event is not a store click; store-intent conversion remains unknown until the corrected collector runs."
 }

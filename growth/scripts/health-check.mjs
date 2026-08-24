@@ -58,7 +58,13 @@ try {
     fetchText(new URL("/llms-full.txt", baseUrl)),
   ])
   const locations = [...sitemap.text.matchAll(/<loc>(.*?)<\/loc>/g)].map((entry) => entry[1])
-  const uniqueUrls = [...new Set([baseUrl, ...locations])].slice(0, 100)
+  const healthUrls = local
+    ? locations.map((location) => {
+        const listed = new URL(location)
+        return new URL(`${listed.pathname}${listed.search}`, baseUrl).href
+      })
+    : locations
+  const uniqueUrls = [...new Set([baseUrl, ...healthUrls])].slice(0, 100)
   const pages = []
   for (const url of uniqueUrls) {
     const result = await fetchText(url)
@@ -70,6 +76,8 @@ try {
       description: match(result.text, /<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i)
         || match(result.text, /<meta[^>]+content=["']([^"']*)["'][^>]+name=["']description["']/i),
       canonical: absolute(match(result.text, /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']*)["']/i)),
+      robots: match(result.text, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']*)["']/i)
+        || match(result.text, /<meta[^>]+content=["']([^"']*)["'][^>]+name=["']robots["']/i),
     })
   }
 
@@ -85,6 +93,16 @@ try {
     if (comparableUrl(page.url) !== comparableUrl(page.finalUrl)) failures.push(`${page.url} redirects to ${page.finalUrl} but is listed in the sitemap`)
     if (!page.title) failures.push(`${page.url} has no title`)
     if (!page.description) failures.push(`${page.url} has no meta description`)
+    if (!page.canonical) failures.push(`${page.url} has no canonical URL`)
+    else {
+      const pageUrl = new URL(page.url)
+      const canonicalUrl = new URL(page.canonical)
+      const selfCanonical = local
+        ? pageUrl.pathname.replace(/\/$/, "") === canonicalUrl.pathname.replace(/\/$/, "")
+        : comparableUrl(page.url) === comparableUrl(page.canonical)
+      if (!selfCanonical) failures.push(`${page.url} has a non-self canonical ${page.canonical}`)
+    }
+    if (/\bnoindex\b/i.test(page.robots || "")) failures.push(`${page.url} has a noindex robots directive`)
   }
 
   const generatedAt = isoNow()

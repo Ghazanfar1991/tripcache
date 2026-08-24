@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-08-20T14:01:12Z",
+  "updatedAt": "2026-08-24T03:50:00Z",
   "sprintEndsAt": "2026-09-17",
   "targetQualifiedPlacements": 12,
-  "lastCycleSummary": "Four legitimate opportunities advanced without paid placement, bulk submission, duplicate posting, or undisclosed promotion. Product Hunt and BetaList are prepared but require authenticated owner submissions; the Tom's Guide pitch is prepared but requires the owner's real sender identity; the existing Reddit mention is live but needs an owner edit to remove an inconsistent price claim.",
+  "lastCycleSummary": "Three qualified opportunities advanced with current rules and founder-disclosed copy: Product Hunt, Tom's Guide, and Marie Claire. A problem-specific Reddit reply is prepared but blocked on a signed-in rules check. BetaList was deferred because TripCache no longer fits its recently launched criterion. No outreach was sent, no paid placement was purchased, and no automated or undisclosed promotion was used.",
   "opportunities": [
     {
       "id": "alternativeto-tripcase-tripit-listing",
@@ -33,25 +33,29 @@
       "targetUrl": "https://www.producthunt.com/posts/new",
       "destination": "https://trip-cache.com/",
       "angle": "Post-booking travel organizer that turns confirmations into reviewable itineraries and keeps cancellation deadlines, documents, receipts, and expenses together.",
-      "status": "OWNER_PROFILE_AND_DRAFT_REQUIRED",
-      "researchedAt": "2026-08-20T14:01:12Z",
+      "status": "DRAFT_COPY_READY_OWNER_AUTH_DUPLICATE_CHECK_REQUIRED",
+      "researchedAt": "2026-08-24T03:50:00Z",
       "rules": [
         "https://www.producthunt.com/launch",
-        "https://help.producthunt.com/en/articles/479557-how-to-post-a-product"
+        "https://help.producthunt.com/en/articles/479557-how-to-post-a-product",
+        "https://help.producthunt.com/en/articles/9883485-product-hunt-featuring-guidelines",
+        "https://help.producthunt.com/en/articles/2690626-how-do-i-share-my-post"
       ],
       "preparedAction": {
         "name": "TripCache",
-        "tagline": "Turn travel confirmations into organized trips and deadline reminders.",
-        "description": "TripCache is an iOS and Android travel organizer for confirmed bookings. Forward travel emails, review parsed trip drafts, keep documents and receipts together, track refundable-booking deadlines, and export expenses by trip.",
+        "tagline": "Travel confirmations, deadlines, documents, and expenses.",
+        "description": "TripCache is a post-booking travel organizer for iOS and Android. Forward confirmation emails into reviewable trip drafts, track free-cancellation deadlines, keep documents and receipts together, and export trip expenses.",
+        "pricingLabel": "Paid (with a free plan)",
+        "firstMakerComment": "Hi Product Hunt — I'm Ghazanfar Nasee, founder of TripCache. I built it after TripCase shut down and the alternatives I tried did not fit the way I manage confirmed travel.\n\nTripCache starts after you book: forward confirmation emails into drafts you review before saving, track refundable-booking deadlines, keep documents and receipts with the trip, and export expense records. It is live on iOS and Android, with a free Basic tier.\n\nThe problem I care most about is the small operational detail that becomes expensive when it is missed—especially a hotel cancellation cutoff buried in a confirmation. I would value candid feedback on the forwarding-and-review flow and whether the deadline workflow is clear enough for a first trip.",
         "assetChecklist": [
-          "Use the existing 512x512 app icon",
-          "Prepare at least two landscape gallery composites from current product screenshots",
-          "Verify no prior TripCache listing from the authenticated owner account",
-          "Select the pricing label only after current store and website presentation is reconciled",
-          "Add a truthful first maker comment with founder disclosure"
+          "Use a current square app icon; Product Hunt recommends 240x240 pixels",
+          "Prepare at least two current gallery images; Product Hunt recommends 1270x760 pixels",
+          "Verify no prior TripCache listing from the authenticated personal owner account",
+          "Confirm the personal account age/onboarding requirement before drafting",
+          "Recheck every claim, asset, and the non-numeric pricing label before publishing"
         ]
       },
-      "notes": "Official guidance requires a personal account and onboarding, permits makers to post their own products, and prohibits inauthentic promotion. Publishing is deferred until the owner-authenticated duplicate check, profile, assets, and pricing label are verified."
+      "notes": "Product Hunt is free and accepts live digital products from personal accounts. The direct product URL is primary; store links may be added. Do not mass-message, incentivize, coordinate votes, or directly ask for upvotes. Public exact-match checks found no discoverable TripCache launch, but only the authenticated owner flow can complete the duplicate check."
     },
     {
       "id": "indie-hackers-product-profile",
@@ -72,8 +76,8 @@
       "targetUrl": "https://betalist.com/submit",
       "destination": "https://trip-cache.com/",
       "angle": "Early-stage cross-platform post-booking organizer for travelers who need confirmation import and cancellation-deadline context.",
-      "status": "FREE_SUBMISSION_READY_OWNER_AUTH_REQUIRED",
-      "researchedAt": "2026-08-20T14:01:12Z",
+      "status": "DEFERRED_RECENCY_CRITERION_NOT_MET",
+      "researchedAt": "2026-08-24T03:50:00Z",
       "rules": [
         "https://betalist.com/criteria",
         "https://betalist.com/terms/submissions"
@@ -82,7 +86,7 @@
         "copy": "TripCache is a cross-platform post-booking travel organizer for confirmed flights, stays, rental cars, tickets, documents, refundable-booking deadlines, receipts, and trip-based expense exports. It is available on iOS and Android with a free Basic tier; current Pro pricing should be verified in the relevant store.",
         "submissionPath": "Use the free editorial queue only through a founder, employee, or authorized representative."
       },
-      "notes": "TripCache meets the own-domain, technology-product, and visitor-access requirements. BetaList prefers unreleased or recently launched products, so acceptance is uncertain. Do not purchase priority review for ranking purposes."
+      "notes": "Current criteria explicitly prefer unreleased or recently launched products and describe products launched weeks ago or longer as a poor fit. TripCache had a public founder launch mention by 2026-04-26, so do not submit or purchase priority review now."
     },
     {
       "id": "reddit-sideproject-mention-reclamation",
@@ -106,8 +110,11 @@
       "targetUrl": "https://www.reddit.com/r/TripIt/comments/1rmuuv0/tripit_replacement/",
       "destination": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "angle": "The thread explicitly asks for cancellation-deadline reminders; offer the free calculator only if current rules permit and clearly disclose the TripCache affiliation.",
-      "status": "VERIFY_RULES_AND_THREAD_STATE",
-      "notes": "No generic app pitch; answer the stated problem and avoid repetitive promotion."
+      "status": "THREAD_LIVE_COPY_READY_OWNER_RULE_RECHECK_REQUIRED",
+      "verifiedAt": "2026-08-24T03:50:00Z",
+      "rulesVerification": "The thread remains live and cancellation-deadline alerts are the requester's stated top problem. Public subreddit rules could not be verified because the rules endpoint returned 403; the owner must check the signed-in sidebar immediately before replying.",
+      "preparedAction": "Founder disclosure: I built TripCache. Your cancellation-deadline comment is the exact problem it is meant to handle: you can keep a refundable booking's cutoff with the trip and set reminders before it becomes non-refundable. If you want to test the date/time logic without installing anything, this free calculator uses the check-in date, policy window, local cutoff time, and hotel time zone: https://trip-cache.com/tools/hotel-cancellation-deadline-calculator. It also tells you to confirm the result against the hotel or provider's actual terms. I don't want to oversell it as a fix for the Outlook calendar-sync issue you raised; this reply is specifically about the cancellation reminder need.",
+      "notes": "Do not post until the owner verifies current rules while signed in. Do not create a duplicate post or send a private message."
     },
     {
       "id": "travel-app-roundup-marie-claire",
@@ -117,8 +124,21 @@
       "targetUrl": "https://www.marieclaire.com/travel/best-apps-for-travel/",
       "destination": "https://trip-cache.com/features/cancellation-reminders",
       "angle": "A differentiated post-booking and cancellation-deadline tool for a future travel-app update, supported by a working free calculator and current store links.",
-      "status": "FIND_CURRENT_EDITORIAL_CONTACT",
-      "notes": "Pitch relevance, not a demanded link; accept editorial no."
+      "status": "PITCH_COPY_READY_OWNER_EMAIL_REQUIRED",
+      "researchedAt": "2026-08-24T03:50:00Z",
+      "rules": [
+        "https://www.marieclaire.com/about/a394/about-us/",
+        "https://www.marieclaire.com/about/news/a2709/contact-us/"
+      ],
+      "contact": {
+        "address": "pr@futurenet.com",
+        "source": "https://www.marieclaire.com/about/news/a2709/contact-us/"
+      },
+      "preparedAction": {
+        "subject": "Press note for travel editorial: a post-booking deadline tool",
+        "body": "Hi Marie Claire team — please route this note to the travel editor if relevant. I'm Ghazanfar Nasee, founder of TripCache. Grace Dean's stress-free travel-app guide highlights TripIt and Wanderlog for keeping booking information and expenditure organized. A related reader problem for a future update is the free-cancellation cutoff buried in a hotel or activity confirmation. TripCache is live on iOS and Android and keeps cancellation reminders with the booking context: https://trip-cache.com/features/cancellation-reminders. We also publish a free, no-install deadline calculator that uses the check-in date, policy window, local cutoff time, and hotel time zone, with a clear instruction to confirm the result against the provider's terms: https://trip-cache.com/tools/hotel-cancellation-deadline-calculator. I can provide current screenshots or tester access. There is no incentive or link requirement; inclusion is entirely an editorial decision. — Ghazanfar Nasee, founder, TripCache"
+      },
+      "notes": "The live 2025 travel-app guide specifically covers itinerary apps that organize booking information and expenditure. Send once from the founder's real address to the official PR contact and request routing to travel editorial; do not use the advertising contact or demand a link."
     },
     {
       "id": "travel-app-roundup-toms-guide",
@@ -126,10 +146,10 @@
       "motion": "editorial-pitch",
       "publisher": "Tom's Guide travel",
       "targetUrl": "https://www.tomsguide.com/phones/5-best-summer-travel-apps-to-help-you-have-the-perfect-vacation",
-      "destination": "https://trip-cache.com/blog/best-travel-apps-2025",
+      "destination": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "angle": "Offer TripCache for a future roundup where post-booking confirmations, cancellation cutoffs, documents, and receipts are distinct from destination planning.",
-      "status": "PITCH_COPY_READY_OWNER_EMAIL_REQUIRED",
-      "researchedAt": "2026-08-20T14:01:12Z",
+      "status": "READY_OWNER_SEND_VERIFIED_2026-08-24",
+      "researchedAt": "2026-08-24T03:50:00Z",
       "contact": {
         "address": "freelancepitches@futurenet.com",
         "source": "https://www.tomsguide.com/reference/about-us"
