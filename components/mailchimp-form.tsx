@@ -43,9 +43,10 @@ export function MailchimpForm() {
         }
         #mc_embed_signup h2 {
           font-size: 1.5rem;
-          font-weight: 700;
+          font-weight: 650;
+          letter-spacing: -0.03em;
           margin-bottom: 1rem;
-          color: inherit;
+          color: #29251f;
         }
         #mc_embed_signup .mc-field-group {
           margin-bottom: 1rem;
@@ -55,52 +56,58 @@ export function MailchimpForm() {
           display: block;
           margin-bottom: 0.5rem;
           font-size: 0.875rem;
-          font-weight: 500;
-          color: inherit;
+          font-weight: 600;
+          color: #514a42;
         }
         #mc_embed_signup input[type="email"] {
           width: 100%;
           padding: 0.75rem 1rem;
-          border: 1px solid hsl(var(--border));
+          border: 1px solid rgba(58, 48, 38, 0.14);
           border-radius: 9999px;
-          background: hsl(var(--background));
-          color: hsl(var(--foreground));
+          background: rgba(255, 255, 255, 0.58);
+          color: #29251f;
           font-size: 1rem;
-          box-shadow: 0 0 0 1px hsl(var(--border) / 0.3);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 24px rgba(72, 53, 33, 0.05);
+          transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
         }
         :global(.dark) #mc_embed_signup input[type="email"] {
-          background: hsl(var(--background) / 0.9);
-          border-color: hsl(var(--border));
-          box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.58);
+          border-color: rgba(58, 48, 38, 0.14);
+          color: #29251f;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 24px rgba(72, 53, 33, 0.05);
         }
         #mc_embed_signup input[type="email"]:focus {
-          outline: 2px solid hsl(var(--ring));
+          outline: 2px solid #db6947;
           outline-offset: 2px;
-          box-shadow: 0 0 0 1px hsl(var(--ring));
+          border-color: rgba(219, 105, 71, 0.5);
+          background: rgba(255, 255, 255, 0.84);
         }
         #mc_embed_signup .button {
           width: 100%;
           padding: 0.75rem 2rem;
-          background: hsl(var(--accent));
-          color: hsl(var(--accent-foreground));
+          background: #b9543a;
+          color: #ffffff;
           border: none;
           border-radius: 9999px;
           font-size: 1rem;
           font-weight: 600;
           cursor: pointer;
-          transition: all 0.2s;
+          box-shadow: 0 12px 28px rgba(145, 60, 38, 0.22);
+          transition: transform 150ms ease, background-color 150ms ease;
         }
         #mc_embed_signup .button:hover {
-          background: hsl(var(--accent) / 0.9);
-          transform: scale(1.02);
+          background: #a44833;
+        }
+        #mc_embed_signup .button:active {
+          transform: scale(0.965);
         }
         #mc_embed_signup .indicates-required {
           font-size: 0.75rem;
-          color: hsl(var(--muted-foreground));
+          color: #71695f;
           margin-bottom: 1rem;
         }
         #mc_embed_signup .asterisk {
-          color: hsl(var(--destructive));
+          color: #be123c;
         }
         #mc_embed_signup .clear.foot {
           margin-top: 1rem;
@@ -117,12 +124,12 @@ export function MailchimpForm() {
           font-size: 0.875rem;
         }
         #mce-error-response {
-          background: hsl(var(--destructive) / 0.1);
-          color: hsl(var(--destructive));
+          background: rgba(190, 18, 60, 0.08);
+          color: #9f1239;
         }
         #mce-success-response {
-          background: hsl(var(--accent) / 0.1);
-          color: hsl(var(--accent));
+          background: rgba(4, 120, 87, 0.08);
+          color: #047857;
         }
       `}</style>
 

@@ -3,6 +3,7 @@ import type { ComponentType } from "react"
 export interface BlogFrontmatter {
   slug: string
   title: string
+  seoTitle?: string
   excerpt: string
   description: string
   date: string
@@ -11,6 +12,7 @@ export interface BlogFrontmatter {
   readTime: string
   category: string
   image: string
+  imageAlt?: string
   keywords?: string[]
 }
 

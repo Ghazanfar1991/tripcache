@@ -12,7 +12,7 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Editorial Team",
   readTime: "10 min read",
   category: "Comparison",
-  image: "/blog-app-comparison.webp",
+  image: "/blog-cover-travel-booking-organizer.webp",
   keywords: [
     "best travel itinerary apps 2026",
     "TripIt vs Wanderlog",

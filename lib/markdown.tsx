@@ -122,6 +122,8 @@ export function renderMarkdown(markdown: string, options: RenderMarkdownOptions 
   let listBuffer: { ordered: boolean; items: string[] } | null = null
   let quoteBuffer: string[] = []
   let tableBuffer: string[] = []
+  let codeBuffer: string[] | null = null
+  let codeLanguage = ""
   let firstH1Skipped = false
 
   const nextKey = () => `md-${keyIndex++}`
@@ -245,9 +247,38 @@ export function renderMarkdown(markdown: string, options: RenderMarkdownOptions 
     )
   }
 
+  const flushCode = () => {
+    if (!codeBuffer) return
+    elements.push(
+      <pre key={nextKey()} className="mb-8 overflow-x-auto rounded-2xl bg-[#29251f] p-5 text-sm leading-6 text-[#f7f2e9]">
+        <code className={codeLanguage ? `language-${codeLanguage}` : undefined}>{codeBuffer.join("\n")}</code>
+      </pre>,
+    )
+    codeBuffer = null
+    codeLanguage = ""
+  }
+
   for (const rawLine of lines) {
     const line = rawLine.trimEnd()
     const trimmed = line.trim()
+
+    if (trimmed.startsWith("```")) {
+      if (codeBuffer) {
+        flushCode()
+      } else {
+        flushList()
+        flushQuote()
+        flushTable()
+        codeBuffer = []
+        codeLanguage = trimmed.slice(3).trim()
+      }
+      continue
+    }
+
+    if (codeBuffer) {
+      codeBuffer.push(rawLine)
+      continue
+    }
 
     if (!trimmed) {
       flushList()
@@ -335,6 +366,7 @@ export function renderMarkdown(markdown: string, options: RenderMarkdownOptions 
   flushList()
   flushQuote()
   flushTable()
+  flushCode()
 
   return elements
 }

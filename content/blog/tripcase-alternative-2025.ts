@@ -6,9 +6,9 @@ export const metadata: BlogFrontmatter = {
   excerpt:
     "TripCase shut down in 2025. Compare TripCache, TripIt, Wanderlog, and Flighty by email import, cancellation reminders, documents, flight alerts, and expense records.",
   description:
-    "Compare the best TripCase alternatives in 2026, including TripCache, TripIt, Wanderlog, and Flighty, for itineraries, email import, reminders, documents, and expenses.",
+    "Compare TripCase alternatives in 2026 for itinerary import, flight alerts, cancellation reminders, travel documents, maps, and expenses.",
   date: "2025-04-15",
-  updatedAt: "2026-07-16",
+  updatedAt: "2026-08-26",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Comparison",
@@ -116,7 +116,7 @@ The old TripCase data-export period has ended, so most travelers now need to reb
 
 ## TripCache Pricing and Availability
 
-TripCache is available on iPhone and Android. The Basic plan is free for manual trip organization. TripCache Pro is currently listed at $9.99 per month and adds email-to-trip automation, automatic flight updates, cancellation reminders, CSV exports, expanded document storage, calendar integration, trip sharing, and priority support.
+TripCache is available on iPhone and Android. The Basic plan covers manual trip organization. TripCache Pro adds email-to-trip automation, automatic flight updates, cancellation reminders, CSV exports, expanded document storage, calendar integration, trip sharing, and priority support. Check the current [TripCache pricing page](/pricing) before subscribing.
 
 - [Download TripCache on the App Store](https://apps.apple.com/app/id6758403056)
 - [Get TripCache on Google Play](https://play.google.com/store/apps/details?id=app.tripcache)

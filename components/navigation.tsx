@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { usePathname } from "next/navigation"
 import { GetStartedModal } from "./get-started-modal"
 import { Menu, X } from "lucide-react"
 
@@ -16,97 +16,133 @@ const navLinks = [
 ]
 
 export function Navigation() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
+  const [compact, setCompact] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+    let lastScrollY = window.scrollY
+    let animationFrame = 0
+
+    const updateNavigation = () => {
+      const nextScrollY = window.scrollY
+      const delta = nextScrollY - lastScrollY
+
+      setScrolled(nextScrollY > 16)
+
+      if (nextScrollY <= 16) {
+        setCompact(false)
+      } else if (delta > 5) {
+        setCompact(true)
+        setMobileMenuOpen(false)
+      } else if (delta < -5) {
+        setCompact(false)
+      }
+
+      lastScrollY = nextScrollY
+      animationFrame = 0
     }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+
+    const handleScroll = () => {
+      if (!animationFrame) {
+        animationFrame = window.requestAnimationFrame(updateNavigation)
+      }
+    }
+
+    updateNavigation()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      if (animationFrame) window.cancelAnimationFrame(animationFrame)
+    }
   }, [])
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 px-4">
-      <nav
-        className={`relative w-full max-w-6xl transition-all duration-500 rounded-2xl ${scrolled
-          ? "bg-background/90 backdrop-blur-xl border border-primary/10 shadow-xl shadow-primary/5"
-          : "bg-background/70 backdrop-blur-lg border border-border/20"
-          }`}
-        style={{
-          backdropFilter: "blur(24px) saturate(180%)",
-          WebkitBackdropFilter: "blur(24px) saturate(180%)",
-        }}
-      >
-        <div className="px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-18">
-            <Link href="/" prefetch={false} className="flex items-center gap-1 sm:gap-2.5 group">
-              <div className="relative hidden sm:block">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
-                <Image
-                  src="/app-icon.webp"
-                  alt="TripCache"
-                  width={36}
-                  height={36}
-                  className="relative rounded-xl transition-transform group-hover:scale-110 group-hover:rotate-3"
-                />
-              </div>
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-accent bg-[length:200%_auto] group-hover:animate-gradient">
-                TripCache
-              </span>
-            </Link>
+    <header
+      className="floating-nav-shell"
+      data-compact={compact}
+      data-scrolled={scrolled}
+    >
+      <div className="floating-nav-surface">
+        <div className="design-one-glass floating-nav-backdrop" aria-hidden="true" />
+        <div className="floating-nav-content">
+          <Link href="/" prefetch={false} className="design-one-press floating-nav-brand group flex shrink-0 items-center gap-2.5" aria-label="TripCache home">
+            <Image
+              src="/icon.png"
+              alt="TripCache"
+              width={34}
+              height={34}
+              className="rounded-[10px] shadow-sm transition-transform duration-150 group-hover:scale-[1.04]"
+            />
+            <span className="text-[15px] font-bold tracking-[-0.025em] text-[#29251f]">TripCache</span>
+          </Link>
 
-            <div className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => (
+          <nav className="floating-nav-tabs hidden items-center gap-1 min-[920px]:flex" aria-label="Primary navigation">
+            {navLinks.map((link) => {
+              const active = pathname === link.href || pathname.startsWith(`${link.href}/`)
+              return (
                 <Link
                   key={link.href}
                   href={link.href}
                   prefetch={false}
-                  className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all rounded-lg hover:bg-primary/5 group"
+                  aria-current={active ? "page" : undefined}
+                  className={`design-one-press rounded-full px-3.5 py-2 text-[13px] font-medium transition-colors duration-150 ${
+                    active ? "bg-[#eadfce] text-[#9e432f]" : "text-[#625b52] hover:bg-black/[0.045] hover:text-[#29251f]"
+                  }`}
                 >
-                  <span className="relative z-10">{link.label}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
+                  {link.label}
                 </Link>
-              ))}
-            </div>
+              )
+            })}
+          </nav>
 
-            <div className="flex items-center gap-2 sm:gap-3">
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen((open) => !open)}
-                className="md:hidden inline-flex items-center justify-center rounded-xl bg-background/70 px-3 py-2 text-sm font-medium text-foreground hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40 transition"
-                aria-expanded={mobileMenuOpen}
-                aria-label="Toggle navigation menu"
-              >
-                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </button>
-              <ThemeToggle />
-              <GetStartedModal triggerLabel="Download" />
-            </div>
-          </div>
-          {/* Mobile menu */}
-          <div
-            className={`md:hidden transition-all duration-200 origin-top ${mobileMenuOpen ? "opacity-100 scale-100" : "pointer-events-none opacity-0 scale-95"
-              }`}
-          >
-            <div className="absolute left-3 right-3 mt-2 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg shadow-primary/5">
-              <div className="flex flex-col divide-y divide-border/60">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    prefetch={false}
-                    className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+          <div className="floating-nav-actions flex items-center gap-2.5">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+              className="design-one-press grid h-10 w-10 place-items-center rounded-full bg-black/[0.045] text-[#29251f] transition-colors hover:bg-black/[0.075] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b9543a]/45 min-[920px]:hidden"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-label="Toggle navigation menu"
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+            <GetStartedModal
+              triggerLabel="Download"
+              triggerClassName="h-10 rounded-full bg-[#a44833] px-5 text-sm text-white shadow-[0_10px_24px_rgba(113,47,33,0.18)] hover:bg-[#8f3e2d]"
+            />
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      <div
+        id="mobile-navigation"
+        className={`design-one-glass pointer-events-auto absolute inset-x-4 top-[68px] origin-top rounded-[24px] border border-white/60 bg-[#f8f4ec]/88 p-2 shadow-[0_24px_65px_rgba(68,50,30,0.16)] backdrop-blur-2xl transition-[opacity,transform] duration-200 min-[920px]:hidden ${
+          mobileMenuOpen ? "scale-100 opacity-100" : "pointer-events-none scale-[0.97] opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col" aria-label="Mobile navigation">
+          {navLinks.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`)
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                prefetch={false}
+                aria-current={active ? "page" : undefined}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`rounded-2xl px-4 py-3 text-sm font-semibold transition-colors ${
+                  active ? "bg-[#eadfce] text-[#9e432f]" : "text-[#625b52] hover:bg-black/[0.045] hover:text-[#29251f]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
+        </nav>
+      </div>
+    </header>
   )
 }

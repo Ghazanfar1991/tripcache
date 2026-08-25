@@ -2,11 +2,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
+import "lenis/dist/lenis.css"
 import { Navigation } from "@/components/navigation"
+import { SiteMotion } from "@/components/site-motion"
 import { StoreLinkAnalytics } from "@/components/store-link-analytics"
 import "./globals.css"
+import "./design-one.css"
 
 const DEFAULT_GA_MEASUREMENT_ID = "G-JP6JKPVPVY"
 const configuredGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || DEFAULT_GA_MEASUREMENT_ID
@@ -74,9 +76,9 @@ export const metadata: Metadata = {
     creator: "@tripcache",
   },
   icons: {
-    icon: "/app-icon.png",
-    shortcut: "/app-icon.png",
-    apple: "/app-icon.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   robots: {
     index: true,
@@ -105,7 +107,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         {GA_MEASUREMENT_ID ? (
           <>
@@ -124,7 +126,7 @@ export default function RootLayout({
               "@id": `${SITE_URL}/#organization`,
               name: "TripCache",
               url: SITE_URL,
-              logo: `${SITE_URL}/app-icon.png`,
+              logo: `${SITE_URL}/icon.png`,
               description:
                 "TripCache helps travelers turn confirmation emails into organized itineraries while tracking cancellation reminders, documents, receipts, and expenses.",
               email: "support@trip-cache.com",
@@ -167,9 +169,9 @@ export default function RootLayout({
               applicationSubCategory: "Travel itinerary and post-booking organizer",
               operatingSystem: "iOS, Android",
               url: SITE_URL,
-              image: `${SITE_URL}/app-icon.png`,
+              image: `${SITE_URL}/icon.png`,
               description:
-                "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, secure documents, receipts, and expense records.",
+                "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, trip documents, receipts, and expense records.",
               downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
               featureList: [
                 "Booking confirmation email import",
@@ -180,35 +182,57 @@ export default function RootLayout({
                 "Travel expense records and CSV export",
               ],
               provider: { "@id": `${SITE_URL}/#organization` },
-              offers: {
-                "@type": "Offer",
-                name: "TripCache Basic",
-                price: "0",
-                priceCurrency: "USD",
-                url: `${SITE_URL}/pricing`,
-              },
+              offers: [
+                {
+                  "@type": "Offer",
+                  name: "TripCache Basic",
+                  price: "0",
+                  priceCurrency: "USD",
+                  url: `${SITE_URL}/pricing`,
+                },
+                {
+                  "@type": "Offer",
+                  name: "TripCache Pro Monthly",
+                  price: "5.99",
+                  priceCurrency: "USD",
+                  url: `${SITE_URL}/pricing`,
+                },
+                {
+                  "@type": "Offer",
+                  name: "TripCache Pro Yearly",
+                  price: "49.99",
+                  priceCurrency: "USD",
+                  url: `${SITE_URL}/pricing`,
+                },
+              ],
             }),
           }}
         />
-        <meta name="theme-color" content="#0891b2" />
+        <meta name="theme-color" content="#f4f0e8" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body suppressHydrationWarning className="font-sans antialiased">
-        <ThemeProvider defaultTheme="dark">
-          <Navigation />
-          <StoreLinkAnalytics />
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          {GA_MEASUREMENT_ID ? (
-            <>
-              <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-                strategy="afterInteractive"
-              />
-              <Script id="ga-init" strategy="afterInteractive">
-                {`
+      <body suppressHydrationWarning className="bg-[#f4f0e8] font-sans text-[#29251f] antialiased">
+        <a
+          href="#main-content"
+          className="fixed start-4 top-3 z-[60] -translate-y-24 rounded-full bg-[#29251f] px-4 py-2 text-sm font-semibold text-[#f7f2e9] transition-transform focus:translate-y-0"
+        >
+          Skip to content
+        </a>
+        <Navigation />
+        <SiteMotion />
+        <StoreLinkAnalytics />
+        <div id="main-content">{children}</div>
+        <Analytics />
+        <SpeedInsights />
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
@@ -216,10 +240,9 @@ export default function RootLayout({
                     page_path: window.location.pathname,
                   });
                 `}
-              </Script>
-            </>
-          ) : null}
-        </ThemeProvider>
+            </Script>
+          </>
+        ) : null}
       </body>
     </html>
   )

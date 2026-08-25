@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
     "Calculate a hotel's free-cancellation cutoff, save confirmation details, and set TripCache reminders before a refundable rate becomes non-refundable.",
   date: "2026-05-18",
   updatedAt: "2026-08-17",
-  author: "TripCache Team",
+  author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
   image: "/blog-cover-hotel-cancellation-reminder.webp",

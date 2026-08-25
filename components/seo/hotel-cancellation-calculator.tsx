@@ -125,15 +125,15 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
   const timeZone = values?.timeZone || "America/New_York"
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-      <form method="get" className="rounded-[2rem] border border-border/60 bg-card/60 p-6 shadow-sm sm:p-8">
+    <div className="grid gap-5 min-[960px]:grid-cols-[0.88fr_1.12fr] min-[960px]:items-start">
+      <form method="get" className="rounded-[2rem] bg-white/50 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_20px_55px_rgba(72,53,33,0.065)] sm:p-9">
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f0d7ca] text-[#b9543a]">
             <CalendarClock className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold">Calculate your deadline</h2>
-            <p className="text-sm text-muted-foreground">Use the policy wording from your hotel confirmation.</p>
+            <h2 className="text-2xl font-semibold tracking-[-0.035em]">Calculate your deadline</h2>
+            <p className="text-sm text-[#71695f]">Use the policy wording from your hotel confirmation.</p>
           </div>
         </div>
 
@@ -144,7 +144,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               name="hotelName"
               defaultValue={values?.hotelName ?? ""}
               placeholder="Hilton Sydney"
-              className="rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition focus:border-primary"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 placeholder:text-[#8c8276] focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
             />
           </label>
 
@@ -154,7 +154,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               name="checkInDate"
               type="date"
               defaultValue={values?.checkInDate ?? ""}
-              className="rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition focus:border-primary"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
             />
           </label>
 
@@ -163,7 +163,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
             <select
               name="policyHours"
               defaultValue={policyHours}
-              className="rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition focus:border-primary"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
             >
               {policyOptions.map((option) => (
                 <option key={option.hours} value={option.hours}>
@@ -179,7 +179,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               name="cutoffTime"
               type="time"
               defaultValue={values?.cutoffTime ?? "18:00"}
-              className="rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition focus:border-primary"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
             />
           </label>
 
@@ -188,7 +188,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
             <select
               name="timeZone"
               defaultValue={timeZone}
-              className="rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition focus:border-primary"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
             >
               {timeZones.map((zone) => (
                 <option key={zone} value={zone}>
@@ -198,36 +198,36 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
             </select>
           </label>
 
-          <Button type="submit" className="rounded-full">
+          <Button type="submit" className="min-h-12 rounded-full bg-[#29251f] text-[#f7f2e9] hover:bg-[#3a342d]">
             Calculate deadline
           </Button>
         </div>
       </form>
 
-      <section className="rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary/10 via-card/80 to-cyan-500/10 p-6 shadow-sm sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Your cancellation deadline</p>
+      <section className="rounded-[2rem] bg-[#29251f] p-6 text-[#f7f2e9] shadow-[0_30px_70px_rgba(59,43,27,0.18)] sm:p-9 min-[960px]:translate-y-8">
+        <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#e98362]">Your cancellation deadline</p>
         {result ? (
           <div className="mt-5 space-y-6">
             <div>
-              <div className="text-3xl font-bold leading-tight sm:text-4xl">{formatInZone(result.deadline, result.timeZone)}</div>
-              <p className="mt-3 leading-7 text-muted-foreground">
+              <div className="text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">{formatInZone(result.deadline, result.timeZone)}</div>
+              <p className="mt-4 leading-7 text-[#b9b0a3]">
                 This is the latest calculated cancellation time based on the check-in date, hotel cutoff time, policy
                 window, and hotel time zone you entered.
               </p>
             </div>
 
             <div className="grid gap-3">
-              <div className="rounded-2xl border border-border/60 bg-background/70 p-4">
+              <div className="rounded-2xl bg-white/[0.06] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                 <div className="text-sm font-semibold">Reminder suggestion 1</div>
-                <div className="mt-1 text-muted-foreground">{formatInZone(result.twoDaysBefore, result.timeZone)}</div>
+                <div className="mt-1 text-[#b9b0a3]">{formatInZone(result.twoDaysBefore, result.timeZone)}</div>
               </div>
-              <div className="rounded-2xl border border-border/60 bg-background/70 p-4">
+              <div className="rounded-2xl bg-white/[0.06] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                 <div className="text-sm font-semibold">Reminder suggestion 2</div>
-                <div className="mt-1 text-muted-foreground">{formatInZone(result.oneDayBefore, result.timeZone)}</div>
+                <div className="mt-1 text-[#b9b0a3]">{formatInZone(result.oneDayBefore, result.timeZone)}</div>
               </div>
-              <div className="rounded-2xl border border-border/60 bg-background/70 p-4">
+              <div className="rounded-2xl bg-white/[0.06] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                 <div className="text-sm font-semibold">Day-of backup</div>
-                <div className="mt-1 text-muted-foreground">Set one final reminder a few hours before the deadline.</div>
+                <div className="mt-1 text-[#b9b0a3]">Set one final reminder a few hours before the deadline.</div>
               </div>
             </div>
 
@@ -236,12 +236,12 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               <textarea
                 readOnly
                 value={result.summary}
-                className="min-h-28 rounded-2xl border border-border/60 bg-background/70 p-4 leading-7 text-muted-foreground"
+                className="min-h-28 rounded-2xl border border-white/10 bg-white/[0.06] p-4 leading-7 text-[#b9b0a3] outline-none focus:border-[#e98362] focus:ring-2 focus:ring-[#e98362]/15"
               />
             </label>
           </div>
         ) : (
-          <p className="mt-5 leading-7 text-muted-foreground">Add the booking details to calculate the deadline.</p>
+          <p className="mt-5 leading-7 text-[#b9b0a3]">Add the booking details to calculate the deadline.</p>
         )}
       </section>
     </div>

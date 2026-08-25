@@ -44,8 +44,8 @@ export function BlogShareButton({ url, title }: BlogShareButtonProps) {
   }
 
   const iconClass = cn(
-    "h-4 w-4 mr-2 transition-colors",
-    status === "success" ? "text-emerald-500" : status === "error" ? "text-rose-500" : "text-foreground",
+    "me-2 h-4 w-4 transition-colors duration-150",
+    status === "success" ? "text-emerald-600" : status === "error" ? "text-rose-600" : "text-[#514a42]",
   )
 
   const icon =
@@ -66,11 +66,11 @@ export function BlogShareButton({ url, title }: BlogShareButtonProps) {
       size="sm"
       onClick={handleShare}
       className={cn(
-        "min-w-[160px] justify-center rounded-full border border-border/60 bg-background/80 text-sm font-medium text-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-foreground/5 dark:bg-muted/40 dark:text-foreground dark:hover:bg-muted/60",
+        "min-w-[160px] justify-center rounded-full bg-white/55 text-sm font-semibold text-[#514a42] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.09),0_8px_24px_rgba(72,53,33,0.06)] transition-[transform,background-color] duration-150 hover:bg-white/85 active:scale-[0.965]",
         status === "success"
-          ? "border-emerald-500/60 text-emerald-600 dark:text-emerald-400"
+          ? "text-emerald-700 shadow-[inset_0_0_0_1px_rgba(4,120,87,0.35)]"
           : status === "error"
-            ? "border-rose-500/60 text-rose-600 dark:text-rose-400"
+            ? "text-rose-700 shadow-[inset_0_0_0_1px_rgba(190,18,60,0.35)]"
             : "",
       )}
       aria-label={

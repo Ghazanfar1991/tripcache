@@ -3,12 +3,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 export const metadata: BlogFrontmatter = {
   slug: "free-cancellation-reminder-travel-bookings-2026",
   title: "Free Cancellation Reminder App for Hotels, Cars, and Travel Bookings",
+  seoTitle: "Free Cancellation Reminder App for Travel Bookings",
   excerpt:
     "Learn how to track free-cancellation deadlines for hotels, rental cars, tours, and tickets so you do not pay for bookings you meant to cancel.",
   description:
-    "Use TripCache as a free cancellation reminder app for travel bookings. Track hotel, rental car, activity, ticket, and transport cancellation deadlines inside your trip itinerary.",
+    "Track hotel, rental car, tour, ticket, and transport cancellation deadlines with a free-cancellation reminder workflow organized by trip.",
   date: "2026-05-17",
-  author: "TripCache Team",
+  author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Guide",
   image: "/blog-cover-free-cancellation-reminders.webp",
@@ -26,7 +27,7 @@ export const body = String.raw`# Free Cancellation Reminder App for Hotels, Cars
 
 Free cancellation is one of the best travel deals available, but only if you remember the deadline. A refundable hotel, rental car, activity, or event ticket can quietly become a paid commitment when the cancellation window closes.
 
-TripCache helps you turn those scattered booking rules into clear reminders attached to the trip they belong to.
+TripCache helps you turn those scattered booking rules into clear reminders attached to the trip they belong to. For a hotel-specific workflow, start with the [hotel cancellation reminder and free calculator](/blog/hotel-cancellation-reminder-app-2026).
 
 ## Why Cancellation Deadlines Get Missed
 
@@ -112,6 +113,8 @@ Rental cars often have flexible terms until a pickup deadline, but prepaid rates
 
 Set a reminder one or two days before pickup so you can compare prices, adjust pickup times, or cancel if your flight changes.
 
+The [rental car cancellation reminder guide](/blog/rental-car-cancellation-reminder-app-2026) covers prepaid versus pay-at-counter bookings and pickup details.
+
 ## Why This Matters for Business Travel
 
 For consultants, founders, sales teams, and frequent flyers, missed cancellation windows add up quickly. A forgotten hotel or car can become an unreimbursed expense, an awkward finance conversation, or a wasted client cost.
@@ -146,4 +149,6 @@ Before every trip, review these items:
 TripCache is more than a flight itinerary app. It is a place to manage the details that cost real money when they go missing: hotels, cars, tickets, documents, reminders, expenses, and the timeline of your trip.
 
 Add your next refundable booking to TripCache, set the cancellation deadline, and let the app remind you before "free cancellation" becomes a missed opportunity.
+
+If you already have confirmations in email, use the [travel confirmation email organizer workflow](/blog/organize-travel-confirmation-emails-2026) to bring bookings into one trip before adding deadlines.
 `

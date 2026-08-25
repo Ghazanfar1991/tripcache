@@ -122,7 +122,7 @@ export default async function HotelCancellationDeadlineCalculatorPage({
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-[#f4f0e8] text-[#29251f] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
       <Script
         id="hotel-cancellation-calculator-faq-schema"
         type="application/ld+json"
@@ -134,30 +134,31 @@ export default async function HotelCancellationDeadlineCalculatorPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <section className="relative overflow-hidden pt-28 pb-12 lg:pt-36 lg:pb-20">
-        <div className="pointer-events-none absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-cyan-500/15 blur-[120px]" />
+      <section className="relative overflow-hidden pb-9 pt-28 lg:pb-10 lg:pt-28">
+        <div className="pointer-events-none absolute -inset-inline-start-24 top-28 hidden h-60 w-60 rounded-full border border-[#41382e]/10 sm:block" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-inline-start-8 top-52 hidden h-20 w-20 rounded-full bg-white/45 shadow-[inset_0_0_0_1px_rgba(65,56,46,0.05)] sm:block" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-inline-end-[5%] top-24 hidden h-28 w-28 rounded-full border border-[#bd573d]/10 sm:block" aria-hidden="true" />
         <SectionContainer className="relative">
-          <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+          <div className="design-one-calculator-hero">
+            <div className="design-one-calculator-eyebrow inline-flex w-fit items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a44833] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)]">
               <CheckCircle2 className="h-4 w-4" />
               Free cancellation deadline tool
             </div>
-            <h1 className="text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl">
+            <div className="design-one-calculator-title"><h1 className="design-one-display-feature">
               Hotel cancellation deadline calculator
-            </h1>
-            <p className="max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+            </h1></div>
+            <p className="design-one-calculator-copy max-w-3xl text-base leading-7 text-[#696158] min-[1100px]:text-lg">
               Calculate the latest time to cancel a refundable hotel booking using the check-in date, policy window,
               cutoff time, and hotel time zone.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="rounded-full bg-cyan-500 text-white hover:bg-cyan-600">
+            <div className="design-one-calculator-actions flex flex-col gap-3 sm:flex-row min-[900px]:items-start">
+              <Button asChild size="lg" className="rounded-full bg-[#29251f] px-6 text-[#f7f2e9] hover:bg-[#3a342d]">
                 <Link href="/download">
                   Use TripCache for reminders
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full">
+              <Button asChild size="lg" variant="outline" className="rounded-full border-[#41382e]/15 bg-white/50 px-6 text-[#29251f] hover:bg-white/80">
                 <Link href="/features/cancellation-reminders">See cancellation reminders</Link>
               </Button>
             </div>
@@ -165,17 +166,17 @@ export default async function HotelCancellationDeadlineCalculatorPage({
         </SectionContainer>
       </section>
 
-      <section className="py-10 lg:py-16">
+      <section className="pb-24 pt-2 lg:pb-32 lg:pt-4">
         <SectionContainer>
           <HotelCancellationCalculator values={calculatorValues} />
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-20">
-        <SectionContainer className="grid gap-10 lg:grid-cols-[0.85fr_1fr]">
+      <section className="bg-[#29251f] py-24 text-[#f7f2e9] lg:py-32">
+        <SectionContainer className="grid gap-12 min-[900px]:grid-cols-[0.8fr_1.2fr] min-[900px]:gap-20">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">How policies usually work</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#e98362]">How policies usually work</p>
+            <h2 className="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">
               Most missed deadlines happen because the cutoff is hidden in the confirmation.
             </h2>
           </div>
@@ -186,46 +187,46 @@ export default async function HotelCancellationDeadlineCalculatorPage({
               "Cancel 48 or 72 hours before arrival.",
               "Non-refundable after a specific local date.",
             ].map((item) => (
-              <div key={item} className="rounded-2xl border border-border/60 bg-card/50 p-5 font-medium">
-                {item}
+              <div key={item} className="grid grid-cols-[auto_1fr] items-start gap-4 rounded-[1.5rem] bg-white/[0.055] p-5 font-medium leading-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6">
+                <CheckCircle2 className="mt-1 h-4 w-4 text-[#e98362]" />{item}
               </div>
             ))}
           </div>
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-20">
-        <SectionContainer className="grid gap-10 lg:grid-cols-[0.8fr_1fr]">
+      <section className="py-24 lg:py-32">
+        <SectionContainer className="grid gap-12 min-[900px]:grid-cols-[0.72fr_1.28fr] min-[900px]:gap-20">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Hotel cancellation FAQ</h2>
-            <p className="mt-4 leading-7 text-muted-foreground">
+            <h2 className="text-4xl font-semibold tracking-[-0.055em] sm:text-6xl">Hotel cancellation FAQ</h2>
+            <p className="mt-5 leading-7 text-[#71695f]">
               Use this calculator as a planning helper, then confirm the final deadline against the provider or hotel
               confirmation.
             </p>
           </div>
           <div className="space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.question} className="rounded-2xl border border-border/60 bg-card/50 p-5">
-                <summary className="cursor-pointer list-none font-semibold">{faq.question}</summary>
-                <p className="mt-3 leading-7 text-muted-foreground">{faq.answer}</p>
+              <details key={faq.question} className="group rounded-[1.5rem] bg-white/46 px-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_16px_44px_rgba(72,53,33,0.055)] sm:px-8">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-semibold marker:content-none"><span>{faq.question}</span><span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#eadfce] text-xl font-normal text-[#b9543a] transition-transform duration-150 group-open:rotate-45">+</span></summary>
+                <p className="max-w-3xl pb-7 leading-7 text-[#71695f]">{faq.answer}</p>
               </details>
             ))}
           </div>
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-16">
+      <section className="pb-24 lg:pb-32">
         <SectionContainer>
-          <div className="rounded-[2rem] border border-border/60 bg-card/50 p-6 sm:p-8">
-            <h2 className="text-2xl font-bold">Related TripCache resources</h2>
+          <div className="rounded-[2rem] bg-[#db6947] p-7 text-white shadow-[0_28px_65px_rgba(98,41,25,0.16)] sm:p-10">
+            <h2 className="text-3xl font-semibold tracking-[-0.04em]">Related TripCache resources</h2>
             <div className="mt-6 grid gap-3 md:grid-cols-3">
-              <Link className="rounded-2xl border border-border/60 bg-background/70 p-4 font-semibold hover:text-primary" href="/features/cancellation-reminders">
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/features/cancellation-reminders">
                 Cancellation reminder feature
               </Link>
-              <Link className="rounded-2xl border border-border/60 bg-background/70 p-4 font-semibold hover:text-primary" href="/blog/hotel-cancellation-reminder-app-2026">
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/blog/hotel-cancellation-reminder-app-2026">
                 Hotel cancellation guide
               </Link>
-              <Link className="rounded-2xl border border-border/60 bg-background/70 p-4 font-semibold hover:text-primary" href="/features/email-to-itinerary">
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/features/email-to-itinerary">
                 Email-to-itinerary automation
               </Link>
             </div>

@@ -51,21 +51,21 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
-      <SectionContainer className="space-y-16 pb-16 pt-24">
+    <main className="journal-paper min-h-screen text-[#29251f]">
+      <SectionContainer className="space-y-16 pb-20 pt-32 sm:pt-36">
         <div className="flex justify-center lg:justify-start">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-2 text-sm font-medium text-foreground shadow-sm transition hover:-translate-y-0.5"
+            className="design-one-press inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#625b52] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] transition-colors hover:text-[#a44833]"
           >
             <ArrowLeft className="h-4 w-4" />
             Back home
           </Link>
         </div>
         <header className="space-y-4 text-center max-w-3xl mx-auto">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">Privacy Policy</p>
-          <h1 className="text-4xl sm:text-5xl font-bold">Your travel data stays yours.</h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#a44833]">Privacy Policy</p>
+          <h1 className="text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">Your travel data stays yours.</h1>
+          <p className="text-lg leading-8 text-[#6f675d]">
             Effective July 16, 2026. This page explains how TripCache handles data for travelers using the website and
             mobile apps.
           </p>
@@ -75,10 +75,10 @@ export default function PrivacyPage() {
           {sections.map((section) => (
             <section
               key={section.heading}
-              className="rounded-3xl border border-border/50 bg-card/80 p-6 shadow-sm backdrop-blur"
+              className="rounded-[28px] bg-white/48 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_20px_55px_rgba(72,53,33,0.06)] sm:p-8"
             >
               <h2 className="text-2xl font-semibold">{section.heading}</h2>
-              <div className="mt-3 space-y-3 text-muted-foreground text-sm leading-relaxed">
+              <div className="mt-3 space-y-3 text-sm leading-relaxed text-[#71695f]">
                 {section.copy.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -87,9 +87,9 @@ export default function PrivacyPage() {
           ))}
         </div>
 
-        <footer className="rounded-3xl border border-border/50 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-6 text-center text-sm text-muted-foreground">
+        <footer className="rounded-[28px] bg-[#f0d7ca] p-7 text-center text-sm text-[#71695f]">
           Questions? Email{" "}
-          <a className="font-semibold text-cyan-500" href="mailto:privacy@trip-cache.com">
+          <a className="font-semibold text-[#a44833]" href="mailto:privacy@trip-cache.com">
             privacy@trip-cache.com
           </a>{" "}
           or mail TripCache, 440 N Barranca Ave #9933, Covina, CA 91723.

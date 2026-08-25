@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "TripCache pricing for free travel itinerary management, booking organization, cancellation reminders, document storage, and Pro automation.",
+    "Start with TripCache Basic for free, choose Pro for $5.99/month, or save 30% with Pro Yearly at $49.99/year.",
   alternates: {
     canonical: "/pricing",
   },

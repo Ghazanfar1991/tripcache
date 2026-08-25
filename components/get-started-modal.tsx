@@ -41,7 +41,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
       <DialogTrigger
           className={cn(
             buttonVariants({ size: "sm" }),
-            "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg shadow-cyan-500/25",
+            "rounded-full bg-[#a44833] text-white shadow-[0_10px_24px_rgba(113,47,33,0.18)] hover:bg-[#8f3e2d] hover:shadow-[0_12px_28px_rgba(113,47,33,0.23)]",
             "px-3 py-1.5 text-xs font-semibold sm:px-4 sm:py-2 sm:text-sm",
             triggerClassName,
           )}
@@ -49,12 +49,12 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
           {triggerLabel}
       </DialogTrigger>
 
-      <DialogContent className="max-h-[90vh] overflow-y-auto rounded-[2rem] border border-border/60 bg-background/95 p-8 shadow-2xl backdrop-blur-sm sm:max-w-xl text-center">
+      <DialogContent className="max-h-[90vh] overflow-y-auto rounded-[2rem] border border-[#3f352a]/10 bg-[#f4f0e8]/96 p-8 text-center text-[#29251f] shadow-[0_30px_90px_rgba(67,49,31,0.24)] backdrop-blur-xl sm:max-w-xl">
         <DialogHeader className="space-y-4 flex flex-col items-center text-center">
           <DialogTitle className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Get TripCache on your phone
           </DialogTitle>
-          <DialogDescription className="text-base sm:text-lg mx-auto max-w-md">
+          <DialogDescription className="mx-auto max-w-md text-base text-[#71695f] sm:text-lg">
             Download the official iPhone or Android app, start with the free plan, and upgrade to Pro in the app when
             you need automation and exports.
           </DialogDescription>

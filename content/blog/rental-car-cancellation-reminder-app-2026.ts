@@ -3,12 +3,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 export const metadata: BlogFrontmatter = {
   slug: "rental-car-cancellation-reminder-app-2026",
   title: "Rental Car Cancellation Reminder App: Track Pickup Times, Refund Windows, and Receipts",
+  seoTitle: "Rental Car Cancellation Reminder App and Checklist",
   excerpt:
     "A practical guide to tracking rental car cancellation deadlines, pickup details, prepaid rates, insurance choices, and receipts inside your trip itinerary.",
   description:
-    "Use TripCache as a rental car cancellation reminder app to manage pickup details, free-cancellation deadlines, prepaid rates, receipts, and travel expense records.",
+    "Track rental car pickup details, free-cancellation deadlines, prepaid rates, receipts, and travel expense records with a reminder workflow.",
   date: "2026-05-18",
-  author: "TripCache Team",
+  author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
   image: "/blog-cover-rental-car-cancellation-reminder.webp",

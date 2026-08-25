@@ -4,71 +4,75 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Premium Light Theme (Clean, High Contrast) */
-  --background: oklch(0.98 0.01 220);
-  --foreground: oklch(0.1 0.02 240);
+  /* Design 01: warm paper, rich ink, and one restrained coral accent. */
+  --paper-50: #fffdf9;
+  --paper-100: #fbf8f2;
+  --paper-200: #f4f0e8;
+  --paper-300: #eee7dc;
+  --paper-400: #ddd3c5;
+  --ink-300: #a09689;
+  --ink-500: #71695f;
+  --ink-700: #514a42;
+  --ink-900: #29251f;
+  --coral-100: #f5e4dc;
+  --coral-200: #e8c4b6;
+  --coral-600: #a44833;
+  --coral-700: #8f3e2d;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.1 0.02 240);
+  --color-bg-page: var(--paper-200);
+  --color-bg-surface: var(--paper-100);
+  --color-bg-raised: var(--paper-50);
+  --color-bg-sunken: var(--paper-300);
+  --color-bg-overlay: rgb(41 37 31 / 0.52);
+  --color-text-primary: var(--ink-900);
+  --color-text-secondary: var(--ink-500);
+  --color-text-disabled: var(--ink-300);
+  --color-text-inverse: var(--paper-100);
+  --color-text-on-accent: var(--paper-50);
+  --color-border-subtle: var(--paper-400);
+  --color-border-default: #cfc3b4;
+  --color-border-strong: #b7aa9a;
+  --color-border-focus: var(--coral-700);
+  --color-border-separator: var(--paper-400);
+  --color-accent-subtle: var(--coral-100);
+  --color-accent-border: var(--coral-200);
+  --color-accent-solid: var(--coral-600);
+  --color-accent-solid-hover: var(--coral-700);
+  --color-accent-text: var(--coral-700);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.1 0.02 240);
+  /* Compatibility tokens for the shared UI primitives. */
+  --background: var(--color-bg-page);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-bg-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-bg-raised);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-accent-solid);
+  --primary-foreground: var(--color-text-on-accent);
+  --secondary: var(--color-bg-sunken);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-bg-sunken);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-accent-subtle);
+  --accent-foreground: var(--color-accent-text);
+  --destructive: #b42318;
+  --destructive-foreground: var(--paper-50);
+  --border: var(--color-border-default);
+  --input: var(--color-bg-sunken);
+  --ring: var(--color-border-focus);
 
-  --primary: oklch(0.1 0.02 240);
-  --primary-foreground: oklch(0.98 0.01 220);
-
-  --secondary: oklch(0.96 0.01 220);
-  --secondary-foreground: oklch(0.1 0.02 240);
-
-  --muted: oklch(0.96 0.01 220);
-  --muted-foreground: oklch(0.4 0.02 240);
-
-  --accent: oklch(0.96 0.01 220);
-  --accent-foreground: oklch(0.1 0.02 240);
-
-  --destructive: oklch(0.6 0.2 20);
-  --destructive-foreground: oklch(0.98 0.01 220);
-
-  --border: oklch(0.92 0.01 220);
-  --input: oklch(0.92 0.01 220);
-  --ring: oklch(0.1 0.02 240);
-
+  --shadow-border:
+    0 0 0 1px rgb(65 52 39 / 0.07),
+    0 1px 2px -1px rgb(65 52 39 / 0.08),
+    0 2px 4px rgb(65 52 39 / 0.04);
+  --shadow-border-hover:
+    0 0 0 1px rgb(65 52 39 / 0.11),
+    0 2px 5px -1px rgb(65 52 39 / 0.09),
+    0 5px 14px -6px rgb(65 52 39 / 0.12);
+  --shadow-raised:
+    0 18px 50px -24px rgb(65 52 39 / 0.22),
+    0 4px 14px -8px rgb(65 52 39 / 0.14);
   --radius: 0.75rem;
-}
-
-.dark {
-  /* "Billion Dollar" Dark Theme (Midnight Blue, Deep Black, Neon Accents) */
-  --background: oklch(0.08 0.03 260);
-  /* Deep Midnight Blue */
-  --foreground: oklch(0.98 0.01 220);
-
-  --card: oklch(0.12 0.04 260 / 0.5);
-  /* Glassy Card */
-  --card-foreground: oklch(0.98 0.01 220);
-
-  --popover: oklch(0.12 0.04 260);
-  --popover-foreground: oklch(0.98 0.01 220);
-
-  /* Electric Cyan Primary */
-  --primary: oklch(0.7 0.18 200);
-  --primary-foreground: oklch(0.08 0.03 260);
-
-  --secondary: oklch(0.18 0.04 260);
-  --secondary-foreground: oklch(0.98 0.01 220);
-
-  --muted: oklch(0.18 0.04 260);
-  --muted-foreground: oklch(0.6 0.02 220);
-
-  /* Neon Purple Accent */
-  --accent: oklch(0.6 0.2 280);
-  --accent-foreground: oklch(0.98 0.01 220);
-
-  --destructive: oklch(0.6 0.2 20);
-  --destructive-foreground: oklch(0.98 0.01 220);
-
-  --border: oklch(0.2 0.04 260);
-  --input: oklch(0.2 0.04 260);
-  --ring: oklch(0.7 0.18 200);
 }
 
 @theme inline {
@@ -92,7 +96,15 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-
+  --color-surface: var(--color-bg-surface);
+  --color-surface-raised: var(--color-bg-raised);
+  --color-surface-sunken: var(--color-bg-sunken);
+  --color-content-secondary: var(--color-text-secondary);
+  --color-brand-subtle: var(--color-accent-subtle);
+  --color-brand-border: var(--color-accent-border);
+  --color-brand-solid: var(--color-accent-solid);
+  --color-brand-solid-hover: var(--color-accent-solid-hover);
+  --color-brand-text: var(--color-accent-text);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -104,292 +116,30 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: auto;
+  }
+
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-/* Premium Utilities */
-@layer utilities {
-  .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-black/5 shadow-xl dark:bg-white/5 dark:border-white/10;
-  }
-
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-black/5 shadow-2xl hover:border-primary/20 transition-colors duration-300 dark:bg-card dark:border-white/5;
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-white/80 dark:to-white/60;
-  }
-
-  .text-gradient-primary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-primary bg-[length:200%_auto];
-    animation: gradient-shift 8s ease infinite;
-  }
-
-  .mask-gradient-b {
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  }
-
-  .tripcache-hero-sky {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-  }
-
-  .tripcache-hero-sky-dark {
-    background:
-      linear-gradient(135deg, rgba(2, 6, 23, 1) 0%, rgba(3, 14, 28, 0.98) 38%, rgba(15, 10, 32, 0.98) 68%, rgba(2, 6, 23, 1) 100%),
-      linear-gradient(115deg, transparent 0 18%, rgba(14, 165, 233, 0.16) 26%, transparent 38% 50%, rgba(168, 85, 247, 0.14) 62%, transparent 76%),
-      linear-gradient(70deg, rgba(251, 146, 60, 0.08), transparent 38% 68%, rgba(45, 212, 191, 0.1));
-  }
-
-  .tripcache-hero-sky-light {
-    background:
-      linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(236, 254, 255, 0.96) 36%, rgba(255, 247, 237, 0.94) 68%, rgba(241, 245, 249, 1) 100%),
-      linear-gradient(115deg, transparent 0 16%, rgba(14, 165, 233, 0.24) 28%, transparent 42% 52%, rgba(168, 85, 247, 0.16) 64%, transparent 78%),
-      linear-gradient(70deg, rgba(251, 146, 60, 0.18), transparent 40% 66%, rgba(20, 184, 166, 0.15));
-  }
-
-  .tripcache-hero-aurora {
-    position: absolute;
-    inset: -18% -12%;
-    background:
-      linear-gradient(118deg, transparent 0 12%, rgba(56, 189, 248, 0.34) 22%, transparent 34% 44%, rgba(168, 85, 247, 0.26) 54%, transparent 68%),
-      linear-gradient(63deg, transparent 6%, rgba(20, 184, 166, 0.2) 22%, transparent 36% 58%, rgba(251, 146, 60, 0.18) 74%, transparent 88%),
-      conic-gradient(from 212deg at 62% 42%, transparent 0deg, rgba(14, 165, 233, 0.18) 56deg, transparent 122deg, rgba(217, 70, 239, 0.16) 196deg, transparent 292deg);
-    filter: saturate(1.15) blur(26px);
-    opacity: 0.9;
-    transform: translate3d(0, 0, 0);
-    animation: hero-aurora-drift 18s ease-in-out infinite alternate;
-  }
-
-  .tripcache-hero-routes,
-  .tripcache-section-routes {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(120deg, transparent 0 29%, rgba(255, 255, 255, 0.22) 29.15%, transparent 29.45% 59%, rgba(34, 211, 238, 0.16) 59.15%, transparent 59.45%),
-      linear-gradient(36deg, transparent 0 22%, rgba(251, 146, 60, 0.12) 22.1%, transparent 22.35% 72%, rgba(168, 85, 247, 0.13) 72.1%, transparent 72.35%),
-      repeating-linear-gradient(96deg, transparent 0 74px, rgba(255, 255, 255, 0.045) 75px 76px, transparent 77px 148px);
-    background-size: 1300px 820px, 1180px 760px, 310px 310px;
-    mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
-    opacity: 0.58;
-    animation: hero-routes-pan 28s linear infinite;
-  }
-
-  .tripcache-hero-grid {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(0deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: linear-gradient(to bottom, black 0%, transparent 82%);
-    opacity: 0.42;
-  }
-
-  .tripcache-hero-grain {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(115deg, rgba(255, 255, 255, 0.05), transparent 38%),
-      radial-gradient(circle at 30% 32%, rgba(255, 255, 255, 0.13) 0 1px, transparent 1.5px),
-      radial-gradient(circle at 78% 21%, rgba(255, 255, 255, 0.1) 0 1px, transparent 1.5px),
-      radial-gradient(circle at 62% 76%, rgba(255, 255, 255, 0.08) 0 1px, transparent 1.5px);
-    background-size: auto, 190px 170px, 230px 190px, 260px 240px;
-    mix-blend-mode: screen;
-    opacity: 0.35;
-  }
-
-  .tripcache-phone-backlight {
-    position: absolute;
-    inset: 0 -18% 6% -18%;
-    background:
-      linear-gradient(118deg, transparent 8%, rgba(34, 211, 238, 0.2) 34%, transparent 58%),
-      linear-gradient(62deg, transparent 12%, rgba(251, 146, 60, 0.18) 42%, transparent 70%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 55%);
-    filter: blur(58px);
-    opacity: 0.86;
-    transform: translate3d(0, 0, 0);
-    animation: hero-phone-sheen 9s ease-in-out infinite alternate;
-  }
-
-  .tripcache-section-backdrop::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(118deg, transparent 0 18%, rgba(14, 165, 233, 0.08) 34%, transparent 50% 64%, rgba(168, 85, 247, 0.07) 80%, transparent 100%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
-    opacity: 0.85;
-  }
-
-  .tripcache-section-routes {
-    opacity: 0.18;
-    mask-image: linear-gradient(to bottom, transparent, black 25%, black 74%, transparent);
-  }
-
-  .dark .tripcache-hero-aurora {
-    opacity: 0.38;
-  }
-
-  .dark .tripcache-hero-routes {
-    opacity: 0.18;
-  }
-
-  .dark .tripcache-hero-grid {
-    opacity: 0.22;
-  }
-
-  .dark .tripcache-hero-grain {
-    opacity: 0.12;
-  }
-}
-
-/* Animations */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes glow {
-
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 20px var(--primary);
-  }
-
-  50% {
-    opacity: 0.7;
-    box-shadow: 0 0 40px var(--primary);
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes spotlight {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes hero-aurora-drift {
-  0% {
-    transform: translate3d(-2%, -1%, 0) scale(1);
-    background-position: 0% 50%, 60% 50%, 50% 50%;
-  }
-
-  50% {
-    transform: translate3d(2%, 1.5%, 0) scale(1.04);
-    background-position: 50% 48%, 30% 52%, 62% 42%;
-  }
-
-  100% {
-    transform: translate3d(3%, -1%, 0) scale(1.02);
-    background-position: 100% 52%, 0% 48%, 44% 58%;
-  }
-}
-
-@keyframes hero-routes-pan {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-
-  100% {
-    background-position: 1300px -820px, -1180px 760px, 310px 310px;
-  }
-}
-
-@keyframes hero-phone-sheen {
-  0% {
-    opacity: 0.58;
-    transform: translate3d(-2%, 2%, 0) rotate(-1deg);
-  }
-
-  100% {
-    opacity: 0.92;
-    transform: translate3d(2%, -1%, 0) rotate(1deg);
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(calc(-50% - 1.5rem));
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tripcache-hero-aurora,
-  .tripcache-hero-routes,
-  .tripcache-section-routes,
-  .tripcache-phone-backlight,
-  .animate-gradient,
-  .animate-float,
-  .animate-glow {
-    animation: none !important;
+  html {
+    scroll-behavior: auto;
   }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 3s ease-in-out infinite;
-}
-
-.animate-gradient {
-  animation: gradient-shift 8s ease infinite;
-}
-
-.animate-marquee {
-  animation: marquee 40s linear infinite;
-}
-
-.mask-gradient-x {
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.mask-gradient-x:hover .animate-marquee {
-  animation-play-state: paused !important;
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-secondary: var(--ink-900);
+    --color-border-subtle: var(--ink-500);
+    --color-border-default: var(--ink-700);
+    --color-accent-solid: var(--coral-700);
+    --color-accent-solid-hover: var(--ink-900);
+    --color-accent-text: var(--coral-700);
+  }
 }
 
 .content-auto-section {

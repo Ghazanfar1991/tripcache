@@ -3,12 +3,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 export const metadata: BlogFrontmatter = {
   slug: "travel-booking-organizer-app-2026",
   title: "Travel Booking Organizer App: Keep Flights, Hotels, Cars, and Tickets Together",
+  seoTitle: "Travel Booking Organizer App for Every Reservation",
   excerpt:
     "A practical guide to organizing every travel booking in one itinerary, including flights, hotels, rental cars, transport, tickets, documents, and cancellation reminders.",
   description:
-    "Learn how to use a travel booking organizer app to manage flights, hotels, rental cars, activities, tickets, documents, notes, and free-cancellation reminders in one itinerary.",
+    "Use a travel booking organizer app to keep flights, hotels, rental cars, activities, tickets, documents, notes, and reminders in one itinerary.",
   date: "2026-05-18",
-  author: "TripCache Team",
+  author: "TripCache Editorial Team",
   readTime: "10 min read",
   category: "Guide",
   image: "/blog-cover-travel-booking-organizer.webp",
@@ -126,7 +127,7 @@ TripCache combines the features travelers usually split across several apps:
 - Itinerary organization.
 - Email-to-trip automation.
 - Manual booking entry.
-- Secure document storage.
+- Trip-linked document organization.
 - Cancellation deadline reminders.
 - Flight tracking.
 - CSV export for expense reports.

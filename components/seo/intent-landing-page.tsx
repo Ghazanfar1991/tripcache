@@ -62,7 +62,7 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-[#f4f0e8] text-[#29251f] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
       <Script
         id={`${page.slug}-faq-schema`}
         type="application/ld+json"
@@ -74,93 +74,91 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <section className="relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24">
-        <div className="pointer-events-none absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="pointer-events-none absolute -left-28 top-8 h-80 w-80 rounded-full bg-cyan-500/15 blur-[120px]" />
-        <div className="pointer-events-none absolute right-[-120px] top-28 h-96 w-96 rounded-full bg-emerald-400/10 blur-[140px]" />
+      <section className="relative overflow-hidden pb-14 pt-28 min-[940px]:flex min-[940px]:min-h-[100svh] min-[940px]:items-center min-[940px]:pb-8 min-[940px]:pt-24">
+        <div className="pointer-events-none absolute inset-inline-end-[-10rem] top-20 h-[32rem] w-[32rem] rounded-full bg-[#e5dac7] min-[940px]:h-[40rem] min-[940px]:w-[40rem]" />
+        <div className="pointer-events-none absolute inset-inline-end-[-6rem] top-32 h-[24rem] w-[24rem] rounded-full border border-[#3b3329]/10 min-[940px]:h-[31rem] min-[940px]:w-[31rem]" />
 
-        <SectionContainer className="relative grid items-center gap-12 lg:grid-cols-[1fr_0.84fr]">
-          <div className="space-y-7">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+        <SectionContainer className="relative grid items-center gap-12 min-[940px]:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.62fr)] min-[940px]:gap-10">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#eadfce] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#b9543a]">
               <CheckCircle2 className="h-4 w-4" />
               {page.eyebrow}
             </div>
 
-            <div className="space-y-5">
-              <h1 className="max-w-4xl text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl">
+            <div>
+              <h1 className="design-one-display-feature mt-6 max-w-4xl">
                 {page.hero}
               </h1>
-              <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">{page.description}</p>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-[#696158] sm:text-lg">{page.description}</p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 min-[480px]:flex-row">
               <GetStartedModal
                 triggerLabel="Download TripCache"
-                triggerClassName="h-10 rounded-full bg-cyan-500 px-6 text-white hover:bg-cyan-600 sm:h-11"
+                triggerClassName="min-h-12 rounded-full bg-[#db6947] px-7 font-semibold text-white shadow-[0_12px_28px_rgba(157,74,49,0.2)] transition-[transform,background-color,box-shadow] duration-150 ease-out hover:bg-[#c85e40] hover:shadow-[0_15px_34px_rgba(157,74,49,0.27)] active:scale-[0.96]"
               />
-              <Button asChild size="lg" variant="outline" className="rounded-full">
+              <Button asChild size="lg" variant="outline" className="min-h-12 rounded-full border-[#29251f]/15 bg-white/40 px-7 text-[#29251f] shadow-none hover:bg-white/70 hover:text-[#29251f]">
                 <Link href={page.kind === "feature" ? "/blog" : "/features/email-to-itinerary"}>
                   {page.kind === "feature" ? "Read the guides" : "See email automation"}
                 </Link>
               </Button>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
+            <div className="mt-6 grid gap-2.5 min-[620px]:grid-cols-3">
               {page.proofPoints.map((point) => (
-                <div key={point} className="rounded-2xl border border-border/60 bg-card/60 px-4 py-3 text-sm font-medium">
+                <div key={point} className="rounded-[16px] bg-white/48 px-3.5 py-3 text-[13px] font-medium leading-5 text-[#5f584f] shadow-[0_1px_0_rgba(255,255,255,0.72),0_12px_32px_rgba(72,53,33,0.045)]">
                   {point}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md">
-            <div className="absolute inset-6 rounded-[2rem] bg-cyan-500/20 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-card/60 p-3 shadow-2xl">
-              <Image
-                src={page.image}
-                alt={page.imageAlt}
-                width={720}
-                height={960}
-                className="h-auto w-full rounded-[1.5rem] object-cover"
-                style={{ width: "100%", height: "auto" }}
-                priority
-              />
-            </div>
+          <div className="relative mx-auto flex w-full max-w-[19.5rem] items-center justify-center">
+            <div aria-hidden="true" className="absolute inset-inline-start-[-2.5rem] top-[13%] hidden h-40 w-40 -rotate-3 rounded-[20px] bg-[#db6947] shadow-[0_22px_45px_rgba(157,74,49,0.2)] min-[1120px]:block" />
+            <Image
+              src={page.image}
+              alt={page.imageAlt}
+              width={720}
+              height={960}
+              sizes="(max-width: 939px) min(78vw, 19.5rem), 19.5rem"
+              className="relative mx-auto h-auto max-h-[calc(100svh-10rem)] w-auto max-w-full object-contain drop-shadow-[0_34px_40px_rgba(66,49,31,0.22)]"
+              loading="eager"
+            />
           </div>
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-16">
-        <SectionContainer className="grid gap-5 md:grid-cols-3">
+      <section className="bg-[#29251f] py-20 text-[#f4f0e8] min-[900px]:py-28">
+        <SectionContainer className="grid gap-5 min-[760px]:grid-cols-3">
           {page.benefits.map((benefit) => (
-            <article key={benefit.title} className="rounded-2xl border border-border/60 bg-card/50 p-6">
-              <h2 className="text-xl font-bold">{benefit.title}</h2>
-              <p className="mt-3 leading-7 text-muted-foreground">{benefit.copy}</p>
+            <article key={benefit.title} className="rounded-[26px] bg-white/[0.055] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-8">
+              <span aria-hidden="true" className="block h-2.5 w-2.5 rounded-full bg-[#db6947]" />
+              <h2 className="mt-14 text-2xl font-semibold tracking-[-0.035em]">{benefit.title}</h2>
+              <p className="mt-4 leading-7 text-[#c9c2b8]">{benefit.copy}</p>
             </article>
           ))}
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-20">
-        <SectionContainer className="grid gap-10 lg:grid-cols-[0.7fr_1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{page.primaryKeyword}</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{page.workflowTitle}</h2>
-            <p className="mt-4 leading-7 text-muted-foreground">
+      <section className="py-20 min-[900px]:py-32">
+        <SectionContainer className="grid gap-12 min-[940px]:grid-cols-[minmax(18rem,0.58fr)_minmax(0,1fr)] min-[940px]:gap-20">
+          <div className="min-[940px]:sticky min-[940px]:top-32 min-[940px]:self-start">
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#b9543a]">{page.primaryKeyword}</p>
+            <h2 className="mt-5 max-w-lg text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-[#24211d] sm:text-5xl">{page.workflowTitle}</h2>
+            <p className="mt-6 max-w-lg leading-7 text-[#71695f]">
               TripCache is built for travelers who already have real bookings and need a calmer way to manage what
               happens after the confirmation arrives.
             </p>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-5">
             {page.workflow.map((step, index) => (
-              <article key={step.title} className="grid gap-4 rounded-2xl border border-border/60 bg-card/50 p-5 sm:grid-cols-[auto_1fr]">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+              <article key={step.title} className="grid gap-5 rounded-[26px] bg-white/52 p-6 shadow-[0_1px_0_rgba(255,255,255,0.75),0_16px_42px_rgba(72,53,33,0.05)] sm:grid-cols-[auto_1fr] sm:p-8">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#db6947] text-sm font-bold text-white shadow-[0_8px_20px_rgba(157,74,49,0.2)]">
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="font-semibold">{step.title}</h3>
-                  <p className="mt-2 leading-7 text-muted-foreground">{step.copy}</p>
+                  <h3 className="text-xl font-semibold tracking-[-0.025em]">{step.title}</h3>
+                  <p className="mt-3 leading-7 text-[#71695f]">{step.copy}</p>
                 </div>
               </article>
             ))}
@@ -168,27 +166,27 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-16">
+      <section className="pb-20 min-[900px]:pb-32">
         <SectionContainer>
-          <div className="rounded-[2rem] border border-border/60 bg-card/40 p-6 sm:p-8">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="rounded-[32px] bg-[#db6947] p-7 text-white shadow-[0_24px_60px_rgba(157,74,49,0.16)] sm:p-10 min-[900px]:p-14">
+            <div className="flex flex-col gap-7 min-[900px]:flex-row min-[900px]:items-end min-[900px]:justify-between">
               <div>
-                <h2 className="text-2xl font-bold">Continue with the workflow that fits your trip</h2>
-                <p className="mt-2 text-muted-foreground">
+                <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Continue with the workflow that fits your trip</h2>
+                <p className="mt-3 max-w-2xl leading-7 text-white/76">
                   Explore the related feature, comparison, calculator, or guide without losing the post-booking context.
                 </p>
               </div>
-              <Button asChild className="rounded-full">
+              <Button asChild className="min-h-12 shrink-0 rounded-full bg-white px-7 text-[#29251f] shadow-[0_10px_25px_rgba(98,41,25,0.16)] hover:bg-[#f4f0e8] hover:text-[#29251f]">
                 <Link href="/tools/hotel-cancellation-deadline-calculator">Try the deadline calculator</Link>
               </Button>
             </div>
 
-            <div className="mt-8 grid gap-3 md:grid-cols-3">
+            <div className="mt-10 grid gap-3 min-[760px]:grid-cols-3">
               {page.internalLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-2xl border border-border/60 bg-background/70 p-4 text-sm font-semibold transition hover:border-primary/40 hover:text-primary"
+                  className="rounded-[18px] bg-white/10 p-5 text-sm font-semibold text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition-[background-color,transform] duration-150 ease-out hover:-translate-y-0.5 hover:bg-white/16"
                 >
                   {link.label}
                 </Link>
@@ -198,36 +196,39 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-20">
-        <SectionContainer className="grid gap-10 lg:grid-cols-[0.8fr_1fr]">
+      <section className="py-20 min-[900px]:py-28">
+        <SectionContainer className="grid gap-12 min-[900px]:grid-cols-[minmax(17rem,0.62fr)_minmax(0,1fr)] min-[900px]:gap-20">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently asked questions</h2>
-            <p className="mt-4 leading-7 text-muted-foreground">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.05em] text-[#24211d] sm:text-5xl">Frequently asked questions</h2>
+            <p className="mt-5 max-w-md leading-7 text-[#71695f]">
               Clear answers for travelers comparing tools and building better travel organization workflows.
             </p>
           </div>
           <div className="space-y-3">
             {page.faqs.map((faq) => (
-              <details key={faq.question} className="group rounded-2xl border border-border/60 bg-card/50 p-5">
-                <summary className="cursor-pointer list-none font-semibold">{faq.question}</summary>
-                <p className="mt-3 leading-7 text-muted-foreground">{faq.answer}</p>
+              <details key={faq.question} className="group rounded-[22px] bg-white/48 px-6 shadow-[0_1px_0_rgba(255,255,255,0.7),0_14px_36px_rgba(72,53,33,0.04)] sm:px-7">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-semibold marker:content-none">
+                  <span>{faq.question}</span>
+                  <span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#eadfce] text-xl font-normal text-[#b9543a] transition-transform duration-150 ease-out group-open:rotate-45">+</span>
+                </summary>
+                <p className="max-w-3xl pb-7 leading-7 text-[#71695f]">{faq.answer}</p>
               </details>
             ))}
           </div>
         </SectionContainer>
       </section>
 
-      <section className="py-12 lg:py-16">
-        <SectionContainer className="grid gap-4 md:grid-cols-3">
+      <section className="pb-20 min-[900px]:pb-28">
+        <SectionContainer className="grid gap-4 min-[760px]:grid-cols-3">
           {featureLinks.map((link) => {
             const Icon = link.icon
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center gap-3 rounded-2xl border border-border/60 bg-card/50 p-5 transition hover:border-primary/40 hover:text-primary"
+                className="group flex min-h-24 items-center gap-4 rounded-[22px] bg-[#29251f] p-6 text-[#f4f0e8] shadow-[0_16px_38px_rgba(52,43,33,0.12)] transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:bg-[#373129]"
               >
-                <Icon className="h-5 w-5" />
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#db6947]"><Icon className="h-5 w-5" /></span>
                 <span className="font-semibold">{link.label}</span>
               </Link>
             )

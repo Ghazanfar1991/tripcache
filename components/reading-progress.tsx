@@ -25,7 +25,7 @@ export function ReadingProgress() {
         <>
             {/* Reading Progress Bar */}
             <motion.div
-                className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-purple-500 to-primary bg-[length:200%_100%] origin-left z-50 animate-gradient"
+                className="fixed inset-x-0 top-0 z-[60] h-1 origin-left bg-[#db6947]"
                 style={{ scaleX }}
             />
 
@@ -36,7 +36,7 @@ export function ReadingProgress() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full bg-gradient-to-r from-primary to-purple-500 text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all flex items-center justify-center"
+                    className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] end-[max(1.5rem,env(safe-area-inset-right))] z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#29251f] text-[#f7f2e9] shadow-[0_12px_30px_rgba(57,42,27,0.22)] transition-[transform,background-color] duration-150 hover:bg-[#403a32] active:scale-[0.965]"
                     aria-label="Scroll to top"
                 >
                     <svg

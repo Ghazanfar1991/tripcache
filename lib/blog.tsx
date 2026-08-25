@@ -81,3 +81,36 @@ export function getBlogSlugs(): string[] {
 export function getBlogSummaries(): BlogSummary[] {
   return getAllBlogPosts().map((post) => post.metadata)
 }
+
+export function getRelatedBlogPosts(slug: string, limit = 3): BlogSummary[] {
+  const current = getBlogPostBySlug(slug)?.metadata
+
+  if (!current) return []
+
+  const currentTerms = new Set(
+    [current.category, ...(current.keywords ?? [])]
+      .join(" ")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((term) => term.length > 3),
+  )
+
+  return getBlogSummaries()
+    .filter((post) => post.slug !== slug)
+    .map((post) => {
+      const candidateTerms = new Set(
+        [post.category, ...(post.keywords ?? [])]
+          .join(" ")
+          .toLowerCase()
+          .split(/[^a-z0-9]+/)
+          .filter((term) => term.length > 3),
+      )
+      const sharedTerms = [...currentTerms].filter((term) => candidateTerms.has(term)).length
+      const categoryMatch = post.category === current.category ? 3 : 0
+
+      return { post, score: sharedTerms + categoryMatch }
+    })
+    .sort((a, b) => b.score - a.score || new Date(b.post.date).getTime() - new Date(a.post.date).getTime())
+    .slice(0, limit)
+    .map(({ post }) => post)
+}

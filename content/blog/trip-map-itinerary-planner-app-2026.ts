@@ -3,12 +3,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 export const metadata: BlogFrontmatter = {
   slug: "trip-map-itinerary-planner-app-2026",
   title: "Trip Map Itinerary Planner App: See Hotels, Activities, and Travel Plans Visually",
+  seoTitle: "Trip Map Itinerary Planner App for Visual Travel Plans",
   excerpt:
     "Learn how a trip map helps travelers understand hotel locations, activities, transport, meetings, and day-of-travel context inside one itinerary.",
   description:
-    "Use TripCache as a trip map itinerary planner app to visualize hotels, activities, transport, meetings, and travel plans alongside documents, reminders, and expenses.",
+    "Use a trip map itinerary planner to visualize hotels, activities, transport, meetings, and travel plans alongside reminders and trip details.",
   date: "2026-05-18",
-  author: "TripCache Team",
+  author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
   image: "/blog-cover-trip-map-itinerary-planner.webp",

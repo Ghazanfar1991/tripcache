@@ -6,7 +6,7 @@ export const metadata: BlogFrontmatter = {
   excerpt:
     "A practical checklist for evaluating travel app privacy, store disclosures, document sensitivity, deletion controls, and safer travel-document habits.",
   description:
-    "Before uploading passports, tickets, receipts, or confirmation emails, use this travel app privacy checklist to review disclosures, deletion, and document sensitivity.",
+    "Use this travel app privacy checklist to review disclosures, deletion controls, and document sensitivity before uploading travel records.",
   date: "2024-12-20",
   updatedAt: "2026-07-16",
   author: "TripCache Editorial Team",

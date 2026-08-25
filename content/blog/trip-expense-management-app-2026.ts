@@ -3,12 +3,13 @@ import type { BlogFrontmatter } from "@/types/blog"
 export const metadata: BlogFrontmatter = {
   slug: "trip-expense-management-app-2026",
   title: "Trip Expense Management App: Track Travel Costs, Receipts, and Reimbursements",
+  seoTitle: "Trip Expense Management App for Receipts and Costs",
   excerpt:
     "Learn how to manage travel costs by trip, attach receipts, organize booking expenses, and prepare cleaner reimbursement records.",
   description:
     "Use TripCache as a trip expense management app to track travel costs, receipts, invoices, cancellation fees, and reimbursement records by itinerary.",
   date: "2026-05-18",
-  author: "TripCache Team",
+  author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Business Travel",
   image: "/blog-cover-trip-expense-management.webp",

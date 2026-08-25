@@ -7,64 +7,91 @@ import { getBlogSummaries } from "@/lib/blog"
 import { SectionContainer } from "@/components/section-container"
 
 export const metadata: Metadata = {
-  title: "Travel Tips & Guides Blog",
+  title: "Post-Booking Travel Organization Guides",
   description:
-    "Travel itinerary, document organization, booking cancellation reminder, and trip planning guides for modern travelers using TripCache.",
+    "Practical guides for organizing travel confirmation emails, itineraries, cancellation deadlines, documents, receipts, and business trip expenses.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "TripCache Blog - Travel Tips & Guides",
-    description: "Expert travel tips, booking reminder workflows, and itinerary management guides.",
+    title: "Post-Booking Travel Organization Guides | TripCache",
+    description: "Organize confirmation emails, itineraries, cancellation deadlines, travel documents, receipts, and trip expenses.",
     url: "https://trip-cache.com/blog",
     type: "website",
+    siteName: "TripCache",
+    images: [{ url: "/blog-app-comparison.webp", width: 1200, height: 630, alt: "TripCache travel organization guides" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Post-Booking Travel Organization Guides | TripCache",
+    description: "Practical guides for confirmations, itineraries, cancellation deadlines, documents, and trip expenses.",
+    images: ["/blog-app-comparison.webp"],
   },
 }
 
 export default function BlogPage() {
   const blogPosts = getBlogSummaries()
   const [featuredPost, ...regularPosts] = blogPosts
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://trip-cache.com/blog#collection",
+    name: "TripCache post-booking travel organization guides",
+    description: "Guides for travel confirmation emails, itineraries, cancellation deadlines, documents, receipts, and expenses.",
+    url: "https://trip-cache.com/blog",
+    isPartOf: { "@id": "https://trip-cache.com/#website" },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: blogPosts.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: post.title,
+        url: `https://trip-cache.com/blog/${post.slug}`,
+      })),
+    },
+  }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-hidden bg-[#f4f0e8] text-[#29251f] [background-image:radial-gradient(circle_at_12%_8%,rgba(255,255,255,0.9),transparent_30%),linear-gradient(rgba(55,45,35,0.028)_1px,transparent_1px),linear-gradient(90deg,rgba(55,45,35,0.028)_1px,transparent_1px)] [background-size:auto,32px_32px,32px_32px]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema).replace(/</g, "\\u003c") }} />
       {/* Hero Section - Enhanced */}
-      <section className="relative pt-20 pb-12 lg:pt-28 lg:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-purple-500/5 to-background" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+      <section className="relative overflow-hidden pb-14 pt-28 sm:pb-16 lg:pb-20 lg:pt-28">
+        <div className="pointer-events-none absolute -end-24 top-20 h-80 w-80 rounded-full bg-[#e5dac7]/70 blur-3xl" />
 
         <SectionContainer className="relative z-10">
-          <div className="flex justify-center lg:justify-start mb-6">
+          <div className="mb-7 flex justify-center lg:justify-start">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 backdrop-blur-sm px-4 py-2 text-sm font-medium text-foreground shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#514a42] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] backdrop-blur-xl transition-[transform,background-color] duration-150 hover:bg-white/80 active:scale-[0.965]"
             >
               <ArrowLeft className="h-4 w-4" />
               Back home
             </Link>
           </div>
 
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20 text-sm font-medium">
-              <Newspaper className="h-4 w-4 text-primary" />
-              <span>Travel Insights & Expert Guides</span>
+          <div className="mx-auto max-w-5xl space-y-6 text-center lg:mx-0 lg:text-start">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#a44833] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)]">
+              <Newspaper className="h-3.5 w-3.5" />
+              <span>Post-booking travel organizer</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance">
-              TripCache <span className="text-gradient-primary">Blog</span>
+            <h1 className="design-one-display-blog">
+              Travel organization guides for <span className="text-[#c45b3f]">after you book.</span>
             </h1>
 
-            <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
-              Expert tips, in-depth tutorials, and insights to master travel organization. From TripCase migration guides to automation strategies.
+            <p className="mx-auto max-w-3xl text-pretty text-lg leading-8 text-[#696158] sm:text-xl lg:mx-0">
+              Learn how to turn travel confirmation emails into itineraries, protect free-cancellation deadlines,
+              and keep documents, receipts, flights, stays, and trip expenses organized.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-3 pt-2 text-sm">
-              <Link className="rounded-full border border-border/60 bg-background/70 px-4 py-2 font-medium hover:text-primary" href="/features/email-to-itinerary">
+            <div className="flex flex-wrap justify-center gap-3 pt-3 text-sm lg:justify-start">
+              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#a44833] active:scale-[0.965]" href="/features/email-to-itinerary">
                 Email automation
               </Link>
-              <Link className="rounded-full border border-border/60 bg-background/70 px-4 py-2 font-medium hover:text-primary" href="/features/cancellation-reminders">
+              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#a44833] active:scale-[0.965]" href="/features/cancellation-reminders">
                 Cancellation reminders
               </Link>
-              <Link className="rounded-full border border-border/60 bg-background/70 px-4 py-2 font-medium hover:text-primary" href="/features/business-travel-expenses">
+              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#a44833] active:scale-[0.965]" href="/features/business-travel-expenses">
                 Business expenses
               </Link>
             </div>
@@ -74,7 +101,7 @@ export default function BlogPage() {
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="py-2 lg:py-2">
+        <section className="py-2">
           <SectionContainer>
             <BlogCardPremium post={featuredPost} featured={true} />
           </SectionContainer>
@@ -82,18 +109,18 @@ export default function BlogPage() {
       )}
 
       {/* Recent Posts Grid */}
-      <section className="py-12 lg:py-8">
+      <section className="py-20 lg:py-28">
         <SectionContainer>
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-3xl font-bold">Recent Articles</h2>
+          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+            <h2 className="text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">Recent Articles</h2>
 
-            <Link href="/tools/hotel-cancellation-deadline-calculator" className="hidden rounded-full border border-border/50 px-4 py-2 text-sm font-medium transition hover:border-primary/40 hover:text-primary lg:inline-flex">
+            <Link href="/tools/hotel-cancellation-deadline-calculator" className="hidden min-h-11 items-center rounded-full bg-[#29251f] px-5 py-2 text-sm font-semibold text-[#f7f2e9] shadow-[0_12px_28px_rgba(58,43,28,0.16)] transition-[transform,background-color] duration-150 hover:bg-[#403a32] active:scale-[0.965] lg:inline-flex">
               Try the deadline calculator
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post, index) => (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {regularPosts.map((post) => (
               <BlogCardPremium key={post.slug} post={post} />
             ))}
           </div>
@@ -101,15 +128,15 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 lg:py-24">
+      <section className="pb-24 pt-8 lg:pb-32 lg:pt-12">
         <SectionContainer>
-          <div className="max-w-4xl mx-auto text-center p-12 rounded-3xl bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Organize your next trip from email</h2>
-            <p className="text-lg text-muted-foreground mb-8">
+          <div className="mx-auto max-w-5xl rounded-[2rem] bg-[#29251f] p-8 text-center text-[#f7f2e9] shadow-[0_28px_70px_rgba(57,42,27,0.18)] sm:p-12 lg:p-16">
+            <h2 className="mb-5 text-3xl font-semibold tracking-[-0.045em] lg:text-5xl">Organize your next trip from email</h2>
+            <p className="mx-auto mb-8 max-w-3xl text-lg leading-8 text-[#b9b0a3]">
               Forward booking confirmations to TripCache, track cancellation deadlines, and keep documents and receipts
               connected to the itinerary.
             </p>
-            <Link href="/download" className="inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+            <Link href="/download" className="inline-flex min-h-12 items-center rounded-full bg-[#b9543a] px-8 py-3 font-semibold text-white shadow-[0_12px_28px_rgba(145,60,38,0.3)] transition-[transform,background-color] duration-150 hover:bg-[#a44833] active:scale-[0.965]">
               Download TripCache
             </Link>
           </div>
