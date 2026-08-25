@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Design 01: warm paper, rich ink, and one restrained coral accent. */
+  /* Design 01: warm paper, app-black ink, and the TripCache blue-violet accent. */
   --paper-50: #fffdf9;
   --paper-100: #fbf8f2;
   --paper-200: #f4f0e8;
   --paper-300: #eee7dc;
   --paper-400: #ddd3c5;
-  --ink-300: #a09689;
-  --ink-500: #71695f;
-  --ink-700: #514a42;
-  --ink-900: #29251f;
-  --coral-100: #f5e4dc;
-  --coral-200: #e8c4b6;
-  --coral-600: #a44833;
-  --coral-700: #8f3e2d;
+  --ink-300: #969696;
+  --ink-500: #666666;
+  --ink-700: #444444;
+  --ink-900: #121212;
+  --violet-100: #f0ecff;
+  --violet-200: #d2c2fa;
+  --violet-600: #602ad2;
+  --violet-700: #4d20af;
 
   --color-bg-page: var(--paper-200);
   --color-bg-surface: var(--paper-100);
   --color-bg-raised: var(--paper-50);
   --color-bg-sunken: var(--paper-300);
-  --color-bg-overlay: rgb(41 37 31 / 0.52);
+  --color-bg-overlay: rgb(18 18 18 / 0.52);
   --color-text-primary: var(--ink-900);
   --color-text-secondary: var(--ink-500);
   --color-text-disabled: var(--ink-300);
@@ -32,13 +32,13 @@
   --color-border-subtle: var(--paper-400);
   --color-border-default: #cfc3b4;
   --color-border-strong: #b7aa9a;
-  --color-border-focus: var(--coral-700);
+  --color-border-focus: var(--violet-700);
   --color-border-separator: var(--paper-400);
-  --color-accent-subtle: var(--coral-100);
-  --color-accent-border: var(--coral-200);
-  --color-accent-solid: var(--coral-600);
-  --color-accent-solid-hover: var(--coral-700);
-  --color-accent-text: var(--coral-700);
+  --color-accent-subtle: var(--violet-100);
+  --color-accent-border: var(--violet-200);
+  --color-accent-solid: var(--violet-600);
+  --color-accent-solid-hover: var(--violet-700);
+  --color-accent-text: var(--violet-700);
 
   /* Compatibility tokens for the shared UI primitives. */
   --background: var(--color-bg-page);
@@ -136,9 +136,9 @@
     --color-text-secondary: var(--ink-900);
     --color-border-subtle: var(--ink-500);
     --color-border-default: var(--ink-700);
-    --color-accent-solid: var(--coral-700);
+    --color-accent-solid: var(--violet-700);
     --color-accent-solid-hover: var(--ink-900);
-    --color-accent-text: var(--coral-700);
+    --color-accent-text: var(--violet-700);
   }
 }
 

@@ -31,17 +31,17 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
                             className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                             preload
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#211d18]/95 via-[#211d18]/48 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#211d18]/48 to-transparent" />
 
                         {/* Featured Badge */}
-                        <div className="absolute start-5 top-5 flex items-center gap-2 rounded-full bg-[#b9543a] px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(91,37,23,0.25)] sm:start-6 sm:top-6">
+                        <div className="absolute start-5 top-5 flex items-center gap-2 rounded-full bg-[#602ad2] px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(58,24,135,0.25)] sm:start-6 sm:top-6">
                             <TrendingUp className="h-4 w-4" />
                             <span>Featured Post</span>
                         </div>
 
                         {/* Category Badge */}
                         <div className="absolute end-5 top-5 sm:end-6 sm:top-6">
-                            <span className="rounded-full bg-[#29251f]/58 px-4 py-2 text-sm font-medium text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.16)] backdrop-blur-md">
+                            <span className="rounded-full bg-[#121212]/58 px-4 py-2 text-sm font-medium text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.16)] backdrop-blur-md">
                                 {post.category}
                             </span>
                         </div>
@@ -100,11 +100,11 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
                         sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#29251f]/20 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/20 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
 
                     {/* Category Badge */}
                     <div className="absolute start-4 top-4">
-                        <span className="rounded-full bg-[#b9543a] px-3 py-1.5 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(91,37,23,0.2)]">
+                        <span className="rounded-full bg-[#602ad2] px-3 py-1.5 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(58,24,135,0.2)]">
                             {post.category}
                         </span>
                     </div>
@@ -127,19 +127,19 @@ export function BlogCardPremium({ post, featured = false }: { post: BlogSummary;
                     </div>
 
                     {/* Title */}
-                    <h3 className="mb-3 line-clamp-2 text-xl font-semibold leading-snug tracking-[-0.025em] text-[#29251f] transition-colors duration-150 group-hover:text-[#a44833]">
+                    <h3 className="mb-3 line-clamp-2 text-xl font-semibold leading-snug tracking-[-0.025em] text-[#121212] transition-colors duration-150 group-hover:text-[#4d20af]">
                         {post.title}
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="mb-5 line-clamp-3 flex-1 text-sm leading-6 text-[#71695f]">
+                    <p className="mb-5 line-clamp-3 flex-1 text-sm leading-6 text-[#666666]">
                         {post.excerpt}
                     </p>
 
                     {/* Footer */}
                     <div className="flex items-center justify-between gap-4 pt-4 shadow-[inset_0_1px_0_rgba(58,48,38,0.08)]">
-                        <span className="text-sm font-medium text-[#71695f]">By {post.author}</span>
-                        <div className="flex items-center gap-2 font-semibold text-[#a44833]">
+                        <span className="text-sm font-medium text-[#666666]">By {post.author}</span>
+                        <div className="flex items-center gap-2 font-semibold text-[#4d20af]">
                             <span className="text-sm">Read</span>
                             <ArrowRight className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-1" />
                         </div>

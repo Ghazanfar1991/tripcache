@@ -41,7 +41,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
       <DialogTrigger
           className={cn(
             buttonVariants({ size: "sm" }),
-            "rounded-full bg-[#a44833] text-white shadow-[0_10px_24px_rgba(113,47,33,0.18)] hover:bg-[#8f3e2d] hover:shadow-[0_12px_28px_rgba(113,47,33,0.23)]",
+            "rounded-full bg-[#602ad2] text-white shadow-[0_10px_24px_rgba(77,32,175,0.18)] hover:bg-[#4d20af] hover:shadow-[0_12px_28px_rgba(77,32,175,0.23)]",
             "px-3 py-1.5 text-xs font-semibold sm:px-4 sm:py-2 sm:text-sm",
             triggerClassName,
           )}
@@ -49,12 +49,12 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
           {triggerLabel}
       </DialogTrigger>
 
-      <DialogContent className="max-h-[90vh] overflow-y-auto rounded-[2rem] border border-[#3f352a]/10 bg-[#f4f0e8]/96 p-8 text-center text-[#29251f] shadow-[0_30px_90px_rgba(67,49,31,0.24)] backdrop-blur-xl sm:max-w-xl">
+      <DialogContent className="max-h-[90vh] overflow-y-auto rounded-[2rem] border border-[#3f352a]/10 bg-[#f4f0e8]/96 p-8 text-center text-[#121212] shadow-[0_30px_90px_rgba(67,49,31,0.24)] backdrop-blur-xl sm:max-w-xl">
         <DialogHeader className="space-y-4 flex flex-col items-center text-center">
           <DialogTitle className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Get TripCache on your phone
           </DialogTitle>
-          <DialogDescription className="mx-auto max-w-md text-base text-[#71695f] sm:text-lg">
+          <DialogDescription className="mx-auto max-w-md text-base text-[#666666] sm:text-lg">
             Download the official iPhone or Android app, start with the free plan, and upgrade to Pro in the app when
             you need automation and exports.
           </DialogDescription>

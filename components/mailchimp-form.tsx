@@ -46,7 +46,7 @@ export function MailchimpForm() {
           font-weight: 650;
           letter-spacing: -0.03em;
           margin-bottom: 1rem;
-          color: #29251f;
+          color: #121212;
         }
         #mc_embed_signup .mc-field-group {
           margin-bottom: 1rem;
@@ -57,7 +57,7 @@ export function MailchimpForm() {
           margin-bottom: 0.5rem;
           font-size: 0.875rem;
           font-weight: 600;
-          color: #514a42;
+          color: #444444;
         }
         #mc_embed_signup input[type="email"] {
           width: 100%;
@@ -65,7 +65,7 @@ export function MailchimpForm() {
           border: 1px solid rgba(58, 48, 38, 0.14);
           border-radius: 9999px;
           background: rgba(255, 255, 255, 0.58);
-          color: #29251f;
+          color: #121212;
           font-size: 1rem;
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 24px rgba(72, 53, 33, 0.05);
           transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
@@ -73,11 +73,11 @@ export function MailchimpForm() {
         :global(.dark) #mc_embed_signup input[type="email"] {
           background: rgba(255, 255, 255, 0.58);
           border-color: rgba(58, 48, 38, 0.14);
-          color: #29251f;
+          color: #121212;
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 24px rgba(72, 53, 33, 0.05);
         }
         #mc_embed_signup input[type="email"]:focus {
-          outline: 2px solid #db6947;
+          outline: 2px solid #602ad2;
           outline-offset: 2px;
           border-color: rgba(219, 105, 71, 0.5);
           background: rgba(255, 255, 255, 0.84);
@@ -85,25 +85,25 @@ export function MailchimpForm() {
         #mc_embed_signup .button {
           width: 100%;
           padding: 0.75rem 2rem;
-          background: #b9543a;
+          background: #602ad2;
           color: #ffffff;
           border: none;
           border-radius: 9999px;
           font-size: 1rem;
           font-weight: 600;
           cursor: pointer;
-          box-shadow: 0 12px 28px rgba(145, 60, 38, 0.22);
+          box-shadow: 0 12px 28px rgba(77, 32, 175, 0.22);
           transition: transform 150ms ease, background-color 150ms ease;
         }
         #mc_embed_signup .button:hover {
-          background: #a44833;
+          background: #4d20af;
         }
         #mc_embed_signup .button:active {
           transform: scale(0.965);
         }
         #mc_embed_signup .indicates-required {
           font-size: 0.75rem;
-          color: #71695f;
+          color: #666666;
           margin-bottom: 1rem;
         }
         #mc_embed_signup .asterisk {

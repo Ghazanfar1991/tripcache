@@ -1,75 +1,52 @@
 {
-  "updatedAt": "2026-08-24T03:56:00.125Z",
+  "updatedAt": "2026-08-25T16:35:30.724Z",
   "dispatcher": {
     "status": "IDLE",
-    "lastWakeAt": "2026-08-24T02:34:30.919Z",
-    "pid": 55369,
-    "completedAt": "2026-08-24T02:34:30.925Z"
+    "lastWakeAt": "2026-08-25T16:35:30.718Z",
+    "pid": 87690,
+    "completedAt": "2026-08-25T16:35:30.724Z"
   },
   "latestGrowthCycleEvidence": {
-    "status": "COMPLETE",
-    "completedAt": "2026-08-24T03:56:00.125Z",
-    "trigger": "USER_REQUESTED_WEEKLY_CYCLE",
-    "branch": "codex/growth-weekly-2026-08-24",
-    "pullRequest": 28,
-    "mergeCommit": "8536c56717d2c909aa985447a77f3f926b158056",
-    "finalizationBranch": "codex/growth-finalize-2026-08-24",
-    "finalizationPullRequest": 29,
+    "completedAt": "2026-08-20T14:05:21.000Z",
+    "trigger": "MANUAL_RECOVERY_AFTER_SCHEDULED_FAILURE",
+    "branch": "codex/growth-weekly-2026-08-20",
+    "pullRequest": 24,
+    "mergeCommit": "007dc32405e9c69963b9e0fedc056f1e07dfd2d6",
     "decision": "NO_NEW_EXPERIMENT",
-    "reason": "All three independent experiment slots are occupied and pass refreshed production and Search Console guardrails. Preserve their finalized 2026-09-03 gates and target pages.",
-    "searchConsolePulseAt": "2026-08-23T09:23:29.810Z",
-    "finalizedSearchConsoleThrough": "2026-08-20",
-    "freshPulsePeriod": {
-      "startDate": "2026-08-21",
-      "endDate": "2026-08-22",
-      "missingDateTreatedAsUnknown": "2026-08-23"
-    },
+    "reason": "All three independent experiment slots are occupied and their >72-hour directional pulses and production guardrails pass. Preserve the finalized 2026-09-03 decision gates.",
+    "searchConsolePulseAt": "2026-08-20T09:29:45.223Z",
     "production": {
-      "commit": "b97562d842a4d5accbde6f50ab236e0be487fa83",
-      "deploymentId": "dpl_9pZR1uNSf3oU7JZuq4VZgp3a5DgZ",
-      "deployedAt": "2026-08-20T14:15:24.270Z",
-      "healthCheckedAt": "2026-08-24T03:56:00.125Z",
+      "commit": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
+      "deploymentId": "dpl_DYs3JAwf4BKizW8c8LWmDiPRXQqP",
+      "deployedAt": "2026-08-20T13:52:42.191Z",
+      "healthCheckedAt": "2026-08-20T14:08:51.267Z",
       "status": "PASS",
-      "sitemapUrlsVerified": 39,
-      "mergeDeploymentAttempt": {
-        "deploymentId": "dpl_FwjT5CNXmFsXpCPsyT3tSVLJdvEu",
-        "commit": "8536c56717d2c909aa985447a77f3f926b158056",
-        "status": "CANCELED_EXPECTED_GROWTH_ONLY_IGNORE",
-        "createdAt": "2026-08-24T03:53:48.584Z",
-        "completedAt": "2026-08-24T03:53:51.962Z"
-      }
+      "sitemapUrlsVerified": 39
     },
     "backlinksAdvanced": [
       "product-hunt-tripcache-launch",
+      "betalist-tripcache",
       "travel-app-roundup-toms-guide",
-      "travel-app-roundup-marie-claire"
+      "reddit-sideproject-mention-reclamation"
     ],
-    "backlinksPreparedConditional": [
-      "tripit-replacement-cancellation-deadline-thread"
-    ],
-    "measurementRepair": "GA4 traffic and AI referrals are fresh, but store intent was falsely marked measurable. The collector now separates traffic from conversion and will request a unique WEB denominator plus per-page store-click rows; the rate remains unknown until the next successful run.",
-    "remainingBlockers": [
-      "website store-intent rate awaiting the corrected collector",
-      "app activation instrumentation is outside this repository",
-      "public pricing remains frozen pending website/store/RevenueCat reconciliation"
-    ]
+    "measurementBlocker": "GA4 refresh returned insufficient authentication scopes; the source is marked WAITING_FOR_HUMAN_AUTH and stale. Existing website conversion remains unknown."
   },
   "jobs": {
     "weekly-growth-cycle": {
       "status": "SUCCESS",
       "attempts": 0,
-      "lastRunAt": "2026-08-24T03:35:00.000Z",
+      "lastRunAt": "2026-08-24T03:34:31.078Z",
       "nextDueAt": "2026-08-31T03:00:00.000Z",
-      "lastOutput": "Weekly growth cycle completed via PR #28. No fourth experiment launched; all three active experiments passed refreshed pulse and production guardrails. Three qualified backlink actions advanced. GA4 store-intent semantics and production indexability checks were repaired. The growth-only Vercel production attempt was intentionally ignored; live READY production passed all 39 health checks.",
+      "trigger": "SCHEDULED",
+      "lastOutput": "Weekly growth cycle completed and merged.\n\n- [PR #28](https://github.com/Ghazanfar1991/tripcache/pull/28) and [PR #29](https://github.com/Ghazanfar1991/tripcache/pull/29) passed CI and merged. Final merge: `344e172`.\n- No experiment targets were changed or stacked. All three retain the September 3 finalized decision gate.\n- Directional Search Console pulse:\n  - Hotel reminders: 0/17 clicks, position 5.76\n  - Best travel apps: 0/380, position 8.11\n  - TripCase recovery: 2/154, 1.30% CTR, position 10.65\n- Fixed GA4 funnel measurement semantics, strengthened indexing/canonical health checks, and added dated source-freshness handling.\n- Revenue remains sparse: A$11 MRR, one active subscriber, 1/84 current 90-day conversion.\n- Advanced Product Hunt, Tom’s Guide, and Marie Claire opportunities with verified rules and founder-disclosed drafts. Nothing was sent without an authorized owner identity.\n- Tests passed: 15/15, production build passed, and local health passed across 39 URLs.\n- Production health passed at `2026-08-24T03:56:00Z`. Growth-only merges were intentionally skipped by Vercel’s ignored-build rule; `trip-cache.com` remains on READY deployment `dpl_9pZR…`, commit `b97562d`, deployed `2026-08-20T14:15:24Z`.\n- Local `main` is synchronized and clean.\n\nFull details: [weekly report](/Users/ghazanfarnasee/Apps/Trip-Cache/tripcache-landing-page/growth/reports/weekly/2026-08-24.md) and [cycle learning](/Users/ghazanfarnasee/Apps/Trip-Cache/tripcache-landing-page/growth/learnings/2026-08-24-finalized-pulse-measurement-and-outreach.md).",
       "exitCode": 0,
       "signal": null,
       "errorCode": null,
-      "syncedRevision": "8536c56717d2c909aa985447a77f3f926b158056",
+      "syncedRevision": "c696fd9bc8b78c21957b9d6a9fcc991aa0067d45",
       "email": {
-        "status": "NOT_SENT",
-        "output": "Interactive user-requested cycle; no report email was requested."
-      },
-      "trigger": "USER"
+        "status": "SENT",
+        "output": "Growth report email accepted (macOS Mail).\n\nResend unavailable; falling back to macOS Mail (Resend HTTP 403: You can only send testing emails to your own email address (ghazanfarnaseer91@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.)."
+      }
     },
     "monthly-strategy-review": {
       "status": "SCHEDULED",

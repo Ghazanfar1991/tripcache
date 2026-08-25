@@ -128,12 +128,12 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
     <div className="grid gap-5 min-[960px]:grid-cols-[0.88fr_1.12fr] min-[960px]:items-start">
       <form method="get" className="rounded-[2rem] bg-white/50 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_20px_55px_rgba(72,53,33,0.065)] sm:p-9">
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f0d7ca] text-[#b9543a]">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e8e0ff] text-[#602ad2]">
             <CalendarClock className="h-5 w-5" />
           </div>
           <div>
             <h2 className="text-2xl font-semibold tracking-[-0.035em]">Calculate your deadline</h2>
-            <p className="text-sm text-[#71695f]">Use the policy wording from your hotel confirmation.</p>
+            <p className="text-sm text-[#666666]">Use the policy wording from your hotel confirmation.</p>
           </div>
         </div>
 
@@ -144,7 +144,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               name="hotelName"
               defaultValue={values?.hotelName ?? ""}
               placeholder="Hilton Sydney"
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 placeholder:text-[#8c8276] focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 placeholder:text-[#858585] focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
             />
           </label>
 
@@ -154,7 +154,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               name="checkInDate"
               type="date"
               defaultValue={values?.checkInDate ?? ""}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
             />
           </label>
 
@@ -163,7 +163,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
             <select
               name="policyHours"
               defaultValue={policyHours}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
             >
               {policyOptions.map((option) => (
                 <option key={option.hours} value={option.hours}>
@@ -179,7 +179,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               name="cutoffTime"
               type="time"
               defaultValue={values?.cutoffTime ?? "18:00"}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
             />
           </label>
 
@@ -188,7 +188,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
             <select
               name="timeZone"
               defaultValue={timeZone}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#29251f] outline-none transition-colors duration-150 focus:border-[#bd573d] focus:ring-2 focus:ring-[#bd573d]/15"
+              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
             >
               {timeZones.map((zone) => (
                 <option key={zone} value={zone}>
@@ -198,14 +198,14 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
             </select>
           </label>
 
-          <Button type="submit" className="min-h-12 rounded-full bg-[#29251f] text-[#f7f2e9] hover:bg-[#3a342d]">
+          <Button type="submit" className="min-h-12 rounded-full bg-[#121212] text-[#f7f2e9] hover:bg-[#242424]">
             Calculate deadline
           </Button>
         </div>
       </form>
 
-      <section className="rounded-[2rem] bg-[#29251f] p-6 text-[#f7f2e9] shadow-[0_30px_70px_rgba(59,43,27,0.18)] sm:p-9 min-[960px]:translate-y-8">
-        <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#e98362]">Your cancellation deadline</p>
+      <section className="rounded-[2rem] bg-[#121212] p-6 text-[#f7f2e9] shadow-[0_30px_70px_rgba(42,20,82,0.18)] sm:p-9 min-[960px]:translate-y-8">
+        <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#a98af0]">Your cancellation deadline</p>
         {result ? (
           <div className="mt-5 space-y-6">
             <div>
@@ -236,7 +236,7 @@ export function HotelCancellationCalculator({ values }: HotelCancellationCalcula
               <textarea
                 readOnly
                 value={result.summary}
-                className="min-h-28 rounded-2xl border border-white/10 bg-white/[0.06] p-4 leading-7 text-[#b9b0a3] outline-none focus:border-[#e98362] focus:ring-2 focus:ring-[#e98362]/15"
+                className="min-h-28 rounded-2xl border border-white/10 bg-white/[0.06] p-4 leading-7 text-[#b9b0a3] outline-none focus:border-[#a98af0] focus:ring-2 focus:ring-[#a98af0]/15"
               />
             </label>
           </div>

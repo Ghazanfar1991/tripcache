@@ -250,7 +250,7 @@ export function renderMarkdown(markdown: string, options: RenderMarkdownOptions 
   const flushCode = () => {
     if (!codeBuffer) return
     elements.push(
-      <pre key={nextKey()} className="mb-8 overflow-x-auto rounded-2xl bg-[#29251f] p-5 text-sm leading-6 text-[#f7f2e9]">
+      <pre key={nextKey()} className="mb-8 overflow-x-auto rounded-2xl bg-[#121212] p-5 text-sm leading-6 text-[#f7f2e9]">
         <code className={codeLanguage ? `language-${codeLanguage}` : undefined}>{codeBuffer.join("\n")}</code>
       </pre>,
     )

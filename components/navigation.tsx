@@ -76,7 +76,7 @@ export function Navigation() {
               height={34}
               className="rounded-[10px] shadow-sm transition-transform duration-150 group-hover:scale-[1.04]"
             />
-            <span className="text-[15px] font-bold tracking-[-0.025em] text-[#29251f]">TripCache</span>
+            <span className="text-[15px] font-bold tracking-[-0.025em] text-[#121212]">TripCache</span>
           </Link>
 
           <nav className="floating-nav-tabs hidden items-center gap-1 min-[920px]:flex" aria-label="Primary navigation">
@@ -89,7 +89,7 @@ export function Navigation() {
                   prefetch={false}
                   aria-current={active ? "page" : undefined}
                   className={`design-one-press rounded-full px-3.5 py-2 text-[13px] font-medium transition-colors duration-150 ${
-                    active ? "bg-[#eadfce] text-[#9e432f]" : "text-[#625b52] hover:bg-black/[0.045] hover:text-[#29251f]"
+                    active ? "bg-[#e5dcff] text-[#4d20af]" : "text-[#5f5f5f] hover:bg-black/[0.045] hover:text-[#121212]"
                   }`}
                 >
                   {link.label}
@@ -102,7 +102,7 @@ export function Navigation() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className="design-one-press grid h-10 w-10 place-items-center rounded-full bg-black/[0.045] text-[#29251f] transition-colors hover:bg-black/[0.075] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b9543a]/45 min-[920px]:hidden"
+              className="design-one-press grid h-10 w-10 place-items-center rounded-full bg-black/[0.045] text-[#121212] transition-colors hover:bg-black/[0.075] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 min-[920px]:hidden"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
               aria-label="Toggle navigation menu"
@@ -111,7 +111,7 @@ export function Navigation() {
             </button>
             <GetStartedModal
               triggerLabel="Download"
-              triggerClassName="h-10 rounded-full bg-[#a44833] px-5 text-sm text-white shadow-[0_10px_24px_rgba(113,47,33,0.18)] hover:bg-[#8f3e2d]"
+              triggerClassName="h-10 rounded-full bg-[#602ad2] px-5 text-sm text-white shadow-[0_10px_24px_rgba(77,32,175,0.18)] hover:bg-[#4d20af]"
             />
           </div>
         </div>
@@ -134,7 +134,7 @@ export function Navigation() {
                 aria-current={active ? "page" : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`rounded-2xl px-4 py-3 text-sm font-semibold transition-colors ${
-                  active ? "bg-[#eadfce] text-[#9e432f]" : "text-[#625b52] hover:bg-black/[0.045] hover:text-[#29251f]"
+                  active ? "bg-[#e5dcff] text-[#4d20af]" : "text-[#5f5f5f] hover:bg-black/[0.045] hover:text-[#121212]"
                 }`}
               >
                 {link.label}

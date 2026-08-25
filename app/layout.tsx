@@ -212,10 +212,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body suppressHydrationWarning className="bg-[#f4f0e8] font-sans text-[#29251f] antialiased">
+      <body suppressHydrationWarning className="bg-[#f4f0e8] font-sans text-[#121212] antialiased">
         <a
           href="#main-content"
-          className="fixed start-4 top-3 z-[60] -translate-y-24 rounded-full bg-[#29251f] px-4 py-2 text-sm font-semibold text-[#f7f2e9] transition-transform focus:translate-y-0"
+          className="fixed start-4 top-3 z-[60] -translate-y-24 rounded-full bg-[#121212] px-4 py-2 text-sm font-semibold text-[#f7f2e9] transition-transform focus:translate-y-0"
         >
           Skip to content
         </a>

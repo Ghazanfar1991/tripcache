@@ -153,7 +153,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
             data-active={active}
             aria-hidden={!active}
           >
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#bd573d]">{story.secondLabel}</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#602ad2]">{story.secondLabel}</p>
             <p className="mt-2 text-sm font-bold">{story.secondTitle}</p>
             <p className="mt-1 text-[11px] leading-4 text-[#766d62]">{story.secondDescription}</p>
           </div>
@@ -169,7 +169,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
             aria-label={`Go to slide ${index + 1}`}
             aria-current={index === currentSlide ? "true" : undefined}
             className={`h-1.5 rounded-full transition-[width,background-color,transform] duration-150 active:scale-[0.96] ${
-              index === currentSlide ? "w-8 bg-[#b9543a]" : "w-2 bg-[#3f352a]/20 hover:bg-[#3f352a]/35"
+              index === currentSlide ? "w-8 bg-[#602ad2]" : "w-2 bg-[#3f352a]/20 hover:bg-[#3f352a]/35"
             }`}
           />
         ))}

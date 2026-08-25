@@ -38,12 +38,12 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <main className="journal-paper min-h-screen text-[#29251f]">
+    <main className="journal-paper min-h-screen text-[#121212]">
       <SectionContainer className="space-y-16 pb-20 pt-32 sm:pt-36">
         <div className="flex justify-center lg:justify-start">
           <Link
             href="/"
-            className="design-one-press inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#625b52] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] transition-colors hover:text-[#a44833]"
+            className="design-one-press inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#5f5f5f] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] transition-colors hover:text-[#4d20af]"
           >
             <ArrowLeft className="h-4 w-4" />
             Back home
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <h1 className="text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">
             Built for the details that arrive after you book.
           </h1>
-          <p className="text-lg leading-8 text-[#6f675d]">
+          <p className="text-lg leading-8 text-[#666666]">
             Travel information rarely lives in one place. Confirmations sit in email, cancellation policies hide in
             fine print, receipts land in photo libraries, and trip changes arrive through notifications. TripCache
             brings those post-booking details into one itinerary.
@@ -66,11 +66,11 @@ export default function AboutPage() {
             const Icon = principle.icon
             return (
               <article key={principle.title} className="rounded-[28px] bg-white/48 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_20px_55px_rgba(72,53,33,0.06)]">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f0d7ca] text-[#b9543a]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e8e0ff] text-[#602ad2]">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h2 className="mt-5 text-xl font-semibold">{principle.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-[#71695f]">{principle.description}</p>
+                <p className="mt-3 text-sm leading-6 text-[#666666]">{principle.description}</p>
               </article>
             )
           })}
@@ -78,14 +78,14 @@ export default function AboutPage() {
 
         <section id="editorial-standards" className="scroll-mt-28 rounded-[32px] bg-white/48 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_20px_55px_rgba(72,53,33,0.06)] sm:p-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#a44833]">Editorial standards</p>
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#4d20af]">Editorial standards</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em]">How TripCache guides are researched and updated</h2>
-            <p className="mt-5 leading-7 text-[#71695f]">
+            <p className="mt-5 leading-7 text-[#666666]">
               The TripCache Editorial Team publishes practical guidance about post-booking travel organization. We
               check changeable prices, product features, shutdown dates, and policies against official product pages,
               store listings, help centers, or government sources before relying on them.
             </p>
-            <ul className="mt-6 list-disc space-y-3 ps-5 leading-7 text-[#71695f]">
+            <ul className="mt-6 list-disc space-y-3 ps-5 leading-7 text-[#666666]">
               <li>Material claims link to a source that lets readers verify the detail.</li>
               <li>Comparison pages explain where TripCache is not the best fit and avoid unsupported superiority claims.</li>
               <li>Publication and update dates stay visible, and substantive corrections receive a new review date.</li>
@@ -95,7 +95,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="rounded-[32px] bg-[#29251f] p-8 text-[#f7f2e9] shadow-[0_28px_70px_rgba(64,47,30,0.16)] sm:p-10">
+        <section className="rounded-[32px] bg-[#121212] p-8 text-[#f7f2e9] shadow-[0_28px_70px_rgba(64,47,30,0.16)] sm:p-10">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
             <div>
               <h2 className="text-3xl font-bold">TripCache is available now on iPhone and Android.</h2>
@@ -105,7 +105,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-4 text-sm text-[#b9b0a3]">
                 Questions? Email{" "}
-                <a className="font-semibold text-[#e98362]" href="mailto:support@trip-cache.com">
+                <a className="font-semibold text-[#a98af0]" href="mailto:support@trip-cache.com">
                   support@trip-cache.com
                 </a>
                 .

@@ -27,7 +27,7 @@ export async function createSocialPreview() {
           display: "flex",
           alignItems: "stretch",
           background: "#f4f0e8",
-          color: "#29251f",
+          color: "#121212",
           fontFamily: "sans-serif",
           padding: "58px 64px",
           position: "relative",
@@ -42,7 +42,7 @@ export async function createSocialPreview() {
             borderRadius: 430,
             right: -90,
             top: -110,
-            background: "#dfb59f",
+            background: "#c3b0ee",
             opacity: 0.55,
           }}
         />
@@ -70,7 +70,7 @@ export async function createSocialPreview() {
             style={{
               display: "flex",
               marginTop: 54,
-              color: "#a44833",
+              color: "#4d20af",
               fontSize: 18,
               fontWeight: 700,
               letterSpacing: "0.08em",

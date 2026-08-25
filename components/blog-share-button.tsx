@@ -45,7 +45,7 @@ export function BlogShareButton({ url, title }: BlogShareButtonProps) {
 
   const iconClass = cn(
     "me-2 h-4 w-4 transition-colors duration-150",
-    status === "success" ? "text-emerald-600" : status === "error" ? "text-rose-600" : "text-[#514a42]",
+    status === "success" ? "text-emerald-600" : status === "error" ? "text-rose-600" : "text-[#444444]",
   )
 
   const icon =
@@ -66,7 +66,7 @@ export function BlogShareButton({ url, title }: BlogShareButtonProps) {
       size="sm"
       onClick={handleShare}
       className={cn(
-        "min-w-[160px] justify-center rounded-full bg-white/55 text-sm font-semibold text-[#514a42] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.09),0_8px_24px_rgba(72,53,33,0.06)] transition-[transform,background-color] duration-150 hover:bg-white/85 active:scale-[0.965]",
+        "min-w-[160px] justify-center rounded-full bg-white/55 text-sm font-semibold text-[#444444] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.09),0_8px_24px_rgba(72,53,33,0.06)] transition-[transform,background-color] duration-150 hover:bg-white/85 active:scale-[0.965]",
         status === "success"
           ? "text-emerald-700 shadow-[inset_0_0_0_1px_rgba(4,120,87,0.35)]"
           : status === "error"

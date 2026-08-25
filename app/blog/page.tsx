@@ -52,7 +52,7 @@ export default function BlogPage() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f4f0e8] text-[#29251f] [background-image:radial-gradient(circle_at_12%_8%,rgba(255,255,255,0.9),transparent_30%),linear-gradient(rgba(55,45,35,0.028)_1px,transparent_1px),linear-gradient(90deg,rgba(55,45,35,0.028)_1px,transparent_1px)] [background-size:auto,32px_32px,32px_32px]">
+    <main className="min-h-screen overflow-hidden bg-[#f4f0e8] text-[#121212] [background-image:radial-gradient(circle_at_12%_8%,rgba(255,255,255,0.9),transparent_30%),linear-gradient(rgba(55,45,35,0.028)_1px,transparent_1px),linear-gradient(90deg,rgba(55,45,35,0.028)_1px,transparent_1px)] [background-size:auto,32px_32px,32px_32px]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema).replace(/</g, "\\u003c") }} />
       {/* Hero Section - Enhanced */}
       <section className="relative overflow-hidden pb-14 pt-28 sm:pb-16 lg:pb-20 lg:pt-28">
@@ -62,7 +62,7 @@ export default function BlogPage() {
           <div className="mb-7 flex justify-center lg:justify-start">
             <Link
               href="/"
-              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#514a42] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] backdrop-blur-xl transition-[transform,background-color] duration-150 hover:bg-white/80 active:scale-[0.965]"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#444444] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] backdrop-blur-xl transition-[transform,background-color] duration-150 hover:bg-white/80 active:scale-[0.965]"
             >
               <ArrowLeft className="h-4 w-4" />
               Back home
@@ -70,28 +70,28 @@ export default function BlogPage() {
           </div>
 
           <div className="mx-auto max-w-5xl space-y-6 text-center lg:mx-0 lg:text-start">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#a44833] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)]">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#4d20af] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)]">
               <Newspaper className="h-3.5 w-3.5" />
               <span>Post-booking travel organizer</span>
             </div>
 
             <h1 className="design-one-display-blog">
-              Travel organization guides for <span className="text-[#c45b3f]">after you book.</span>
+              Travel organization guides for <span className="text-[#5121b3]">after you book.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-pretty text-lg leading-8 text-[#696158] sm:text-xl lg:mx-0">
+            <p className="mx-auto max-w-3xl text-pretty text-lg leading-8 text-[#626262] sm:text-xl lg:mx-0">
               Learn how to turn travel confirmation emails into itineraries, protect free-cancellation deadlines,
               and keep documents, receipts, flights, stays, and trip expenses organized.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 pt-3 text-sm lg:justify-start">
-              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#a44833] active:scale-[0.965]" href="/features/email-to-itinerary">
+              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#4d20af] active:scale-[0.965]" href="/features/email-to-itinerary">
                 Email automation
               </Link>
-              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#a44833] active:scale-[0.965]" href="/features/cancellation-reminders">
+              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#4d20af] active:scale-[0.965]" href="/features/cancellation-reminders">
                 Cancellation reminders
               </Link>
-              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#a44833] active:scale-[0.965]" href="/features/business-travel-expenses">
+              <Link className="inline-flex min-h-11 items-center rounded-full bg-white/50 px-4 py-2 font-semibold text-[#5e564c] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)] transition-[transform,background-color,color] duration-150 hover:bg-white/80 hover:text-[#4d20af] active:scale-[0.965]" href="/features/business-travel-expenses">
                 Business expenses
               </Link>
             </div>
@@ -114,7 +114,7 @@ export default function BlogPage() {
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
             <h2 className="text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">Recent Articles</h2>
 
-            <Link href="/tools/hotel-cancellation-deadline-calculator" className="hidden min-h-11 items-center rounded-full bg-[#29251f] px-5 py-2 text-sm font-semibold text-[#f7f2e9] shadow-[0_12px_28px_rgba(58,43,28,0.16)] transition-[transform,background-color] duration-150 hover:bg-[#403a32] active:scale-[0.965] lg:inline-flex">
+            <Link href="/tools/hotel-cancellation-deadline-calculator" className="hidden min-h-11 items-center rounded-full bg-[#121212] px-5 py-2 text-sm font-semibold text-[#f7f2e9] shadow-[0_12px_28px_rgba(58,43,28,0.16)] transition-[transform,background-color] duration-150 hover:bg-[#242424] active:scale-[0.965] lg:inline-flex">
               Try the deadline calculator
             </Link>
           </div>
@@ -130,13 +130,13 @@ export default function BlogPage() {
       {/* Newsletter CTA */}
       <section className="pb-24 pt-8 lg:pb-32 lg:pt-12">
         <SectionContainer>
-          <div className="mx-auto max-w-5xl rounded-[2rem] bg-[#29251f] p-8 text-center text-[#f7f2e9] shadow-[0_28px_70px_rgba(57,42,27,0.18)] sm:p-12 lg:p-16">
+          <div className="mx-auto max-w-5xl rounded-[2rem] bg-[#121212] p-8 text-center text-[#f7f2e9] shadow-[0_28px_70px_rgba(42,20,82,0.18)] sm:p-12 lg:p-16">
             <h2 className="mb-5 text-3xl font-semibold tracking-[-0.045em] lg:text-5xl">Organize your next trip from email</h2>
             <p className="mx-auto mb-8 max-w-3xl text-lg leading-8 text-[#b9b0a3]">
               Forward booking confirmations to TripCache, track cancellation deadlines, and keep documents and receipts
               connected to the itinerary.
             </p>
-            <Link href="/download" className="inline-flex min-h-12 items-center rounded-full bg-[#b9543a] px-8 py-3 font-semibold text-white shadow-[0_12px_28px_rgba(145,60,38,0.3)] transition-[transform,background-color] duration-150 hover:bg-[#a44833] active:scale-[0.965]">
+            <Link href="/download" className="inline-flex min-h-12 items-center rounded-full bg-[#602ad2] px-8 py-3 font-semibold text-white shadow-[0_12px_28px_rgba(77,32,175,0.3)] transition-[transform,background-color] duration-150 hover:bg-[#4d20af] active:scale-[0.965]">
               Download TripCache
             </Link>
           </div>
