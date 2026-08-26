@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T09:31:27.209Z",
+  "generatedAt": "2026-08-26T09:36:54.004Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -14,8 +14,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 6,
-        "activeUsers": 4
+        "eventCount": 7,
+        "activeUsers": 5
       }
     },
     {
@@ -24,8 +24,18 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 4,
-        "activeUsers": 4
+        "eventCount": 6,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_store_click",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 1
       }
     }
   ],
@@ -37,8 +47,19 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 11,
-        "activeUsers": 10
+        "sessions": 14,
+        "activeUsers": 11
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 8,
+        "activeUsers": 8
       }
     },
     {
@@ -65,24 +86,24 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 6,
-        "activeUsers": 6
-      }
-    },
-    {
-      "dimensions": {
         "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
+        "sessions": 7,
+        "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 6,
+        "activeUsers": 5
       }
     },
     {
@@ -142,6 +163,17 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/about",
         "platform": "web"
@@ -197,8 +229,41 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/variations/journal",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "(not set)",
         "landingPagePlusQueryString": "(not set)",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "/",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
         "platform": "web"
       },
       "metrics": {
@@ -260,27 +325,16 @@
         "sessions": 1,
         "activeUsers": 1
       }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
     }
   ],
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 54,
-    "landingSessions": 60,
-    "storeIntentUsers": 4,
-    "storeIntentEvents": 4,
-    "rate": 0.07407407407407407,
+    "landingUsers": 61,
+    "landingSessions": 70,
+    "storeIntentUsers": 6,
+    "storeIntentEvents": 7,
+    "rate": 0.09836065573770492,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -293,8 +347,19 @@
           "platform": "web"
         },
         "metrics": {
-          "eventCount": 2,
-          "activeUsers": 2
+          "eventCount": 3,
+          "activeUsers": 3
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "app_store_click",
+          "pagePathPlusQueryString": "/",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 1,
+          "activeUsers": 1
         }
       },
       {
@@ -312,6 +377,17 @@
         "dimensions": {
           "eventName": "play_store_click",
           "pagePathPlusQueryString": "/blog/best-travel-document-organizer-app-2026",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 1,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/blog/tripcase-alternative-2025",
           "platform": "web"
         },
         "metrics": {
