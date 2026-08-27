@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T03:38:17.795Z",
+  "updatedAt": "2026-08-27T03:50:48Z",
   "dispatcher": {
     "status": "IDLE",
     "lastWakeAt": "2026-08-27T02:24:02.783Z",
@@ -8,11 +8,12 @@
   },
   "latestGrowthCycleEvidence": {
     "startedAt": "2026-08-27T03:27:48Z",
-    "status": "PENDING_CI_AND_PRODUCTION",
+    "status": "SUCCESS",
     "trigger": "MANUAL_USER_REQUEST",
     "branch": "codex/growth-sprint-2026-08-27",
-    "pullRequest": null,
-    "mergeCommit": null,
+    "completedAt": "2026-08-27T03:50:48Z",
+    "pullRequest": 30,
+    "mergeCommit": "63c4e05009285bc16d8309ff747329f2a2530d2e",
     "decision": "NO_NEW_EXPERIMENT_WITH_URGENT_ANALYTICS_REPAIR",
     "reason": "All three slots are occupied. Crawl/indexing and fresh position guardrails pass, but the August 25 redesign contaminated every original treatment window and same-origin /download clicks were missing from store-intent measurement. Preserve target content, extend the homogeneous decision gate to 2026-09-12, and repair analytics only.",
     "searchConsolePulseAt": "2026-08-26T09:36:53.955Z",
@@ -26,6 +27,17 @@
       "status": "PASS",
       "sitemapUrlsVerified": 39
     },
+    "productionRelease": {
+      "commit": "63c4e05009285bc16d8309ff747329f2a2530d2e",
+      "githubDeploymentId": 6116171719,
+      "deploymentUrl": "https://tripcache-l1hznwezr-ghazanfar1991s-projects.vercel.app",
+      "deploymentStatusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/zfWLiP9j699u96BQwBnM3YyTMxsR",
+      "deployedAt": "2026-08-27T03:47:46Z",
+      "healthCheckedAt": "2026-08-27T03:48:45.043Z",
+      "status": "PASS",
+      "sitemapUrlsVerified": 39,
+      "routingVerification": "iOS /download returned App Store, Android returned Google Play, desktop returned the homepage, and the live JavaScript contains the repaired analytics events."
+    },
     "backlinksAdvanced": [
       "travel-app-roundup-the-points-guy",
       "travel-app-roundup-travel-and-leisure",
@@ -33,7 +45,7 @@
       "product-hunt-tripcache-launch",
       "travel-app-roundup-toms-guide"
     ],
-    "measurementRepair": "Instrument same-origin /download CTAs with route-consistent mobile store events, a non-store desktop event, handled-link de-duplication, placement/destination fields, and beacon transport. Pre-repair store intent is a directional lower bound.",
+    "measurementRepair": "Instrumented same-origin /download CTAs with route-consistent mobile store events, a non-store desktop event, handled-link de-duplication, placement/destination fields, and beacon transport. PR #30 passed CI and deployed successfully. Pre-repair store intent is a directional lower bound; end-to-end event receipt remains for the next GA4 snapshot.",
     "remainingBlockers": [
       "App activation through purchase remains uninstrumented and is outside this repository.",
       "Android reliability is below the acquisition guardrail and the official dashboard baseline is dated.",
@@ -66,18 +78,18 @@
     "midweek-growth-sprint": {
       "status": "SUCCESS",
       "attempts": 0,
-      "lastRunAt": "2026-08-20T13:52:31.331Z",
-      "nextDueAt": "2026-08-27T03:00:00.000Z",
-      "lastOutput": "Weekly growth cycle completed and merged via PR #24. No fourth experiment was launched because all three slots are occupied through the finalized 2026-09-03 decision gate. All three directional pulses and production/indexing guardrails passed. Four legitimate backlink opportunities were advanced. GA4 requires refreshed Analytics Data API authorization; Google Play evidence remains stale.",
+      "lastRunAt": "2026-08-27T03:50:48Z",
+      "nextDueAt": "2026-09-03T03:00:00.000Z",
+      "lastOutput": "Midweek growth sprint completed via PR #30. No new experiment launched because all three independent slots remain occupied. Fresh finalized and directional Search Console evidence plus production/indexing guardrails passed, but the August 25 shared redesign contaminated the original treatment windows, moving the earliest defensible gate to September 12. The same-origin /download analytics gap was repaired and deployed as 63c4e050; post-deployment health passed all 39 sitemap URLs and live iOS/Android/desktop routing matched the classifier. The Points Guy, Travel + Leisure, and Travelling for Business advanced to founder-disclosed, rules-verified pitch copy; nothing was sent without an authorized identity.",
       "exitCode": 0,
       "signal": null,
       "errorCode": null,
-      "syncedRevision": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
+      "syncedRevision": "63c4e05009285bc16d8309ff747329f2a2530d2e",
       "email": {
-        "status": "SENT",
-        "output": "Growth report email accepted by macOS Mail and verified in the iCloud Sent mailbox at 2026-08-20T14:14:53.000Z."
+        "status": "NOT_SENT_AUTHORIZED_SENDER_NOT_CONFIRMED",
+        "output": "No report email was sent in this cycle because an authorized sender identity was not confirmed."
       },
-      "trigger": "MANUAL"
+      "trigger": "MANUAL_USER_REQUEST"
     }
   }
 }
