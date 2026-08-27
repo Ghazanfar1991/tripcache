@@ -35,7 +35,7 @@ export function buildWebsiteStoreIntent({ trafficRows = [], storeIntentRows = []
     eventNames: ["app_store_click", "play_store_click"],
     byPage: measurable ? byPage : null,
     note: measurable
-      ? "Store-intent users and landing users come from dedicated GA4 WEB reports so per-page active users are not summed into the rate. Recent rows may be incomplete."
+      ? "Store-intent users and landing users come from dedicated GA4 WEB reports so per-page active users are not summed into the rate. Same-origin /download clicks were not captured before the 2026-08-27 analytics repair, so windows spanning that boundary are directional lower bounds. Recent rows may be incomplete."
       : "No unique WEB landing-user denominator was returned; store intent remains unknown rather than zero.",
   }
 }

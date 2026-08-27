@@ -47,43 +47,66 @@
   "observationWindow": {
     "minimumDays": 14,
     "reportingLagDays": 3,
-    "earliestDecisionDate": "2026-09-03"
+    "originalEarliestDecisionDate": "2026-09-03",
+    "earliestDecisionDate": "2026-09-12",
+    "extensionReason": "The shared production redesign deployed during the original window. Preserve the original evidence, quarantine the August 25 transition day, and require a homogeneous August 26–September 8 treatment window plus the existing reporting lag."
   },
   "latestFinalizedEvidence": {
-    "checkedAt": "2026-08-24T03:39:56Z",
-    "sourceGeneratedAt": "2026-08-23T09:23:29.810Z",
+    "checkedAt": "2026-08-27T03:27:48Z",
+    "sourceGeneratedAt": "2026-08-26T09:36:53.955Z",
     "period": {
       "startDate": "2026-08-17",
-      "endDate": "2026-08-20"
+      "endDate": "2026-08-23"
     },
-    "clicks": 5,
-    "impressions": 404,
-    "ctr": 0.012376237623762377,
-    "averagePosition": 8.893564356435643,
+    "clicks": 9,
+    "impressions": 652,
+    "ctr": 0.013803680981595092,
+    "averagePosition": 9.069018404907975,
     "guardrailStatus": "PASS",
     "decision": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "Finalized evidence directionally exceeds the 300-impression and 1.0% CTR criteria while position remains inside the guardrail, but no winner is declared before the 14-day observation window ends."
+    "note": "Finalized evidence through August 23 exceeds the 300-impression and 1.0% CTR criteria while position remains inside the guardrail, but no winner is declared before the 14-day observation window ends."
   },
   "latestDirectionalPulse": {
-    "checkedAt": "2026-08-24T03:39:56Z",
-    "sourceGeneratedAt": "2026-08-23T09:23:29.810Z",
+    "checkedAt": "2026-08-27T03:27:48Z",
+    "sourceGeneratedAt": "2026-08-26T09:36:53.955Z",
     "period": {
-      "startDate": "2026-08-21",
-      "endDate": "2026-08-22"
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-25"
     },
-    "clicks": 2,
-    "impressions": 154,
-    "ctr": 0.012987012987012988,
-    "averagePosition": 10.64935064935065,
+    "clicks": 1,
+    "impressions": 176,
+    "ctr": 0.005681818181818182,
+    "averagePosition": 9.380681818181818,
     "guardrailStatus": "PASS",
     "decision": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "August 21–22 rows are incomplete directional evidence and August 23 is unavailable rather than zero. CTR remains directionally above threshold; position passes but is only 0.48 positions inside the predeclared guardrail, so monitor the next pulse closely."
+    "note": "August 24–25 rows are incomplete directional evidence. CTR is below the success threshold in this slice, but position remains inside the guardrail and the pulse does not satisfy the rollback condition or shorten the observation window."
   },
   "lastCycleReview": {
-    "reviewedAt": "2026-08-24T03:39:56Z",
-    "productionHealthAt": "2026-08-24T03:56:00.125Z",
+    "reviewedAt": "2026-08-27T03:27:48Z",
+    "productionHealthAt": "2026-08-27T03:42:20.653Z",
     "status": "CONTINUE_TO_FINALIZED_GATE",
-    "note": "Fresh Search Console and production guardrails pass. Preserve the target page unchanged until the finalized 2026-09-03 decision gate and monitor position in the next pulse."
+    "note": "Fresh Search Console and live production/indexing guardrails pass. Preserve the target page unchanged and use the extended 2026-09-12 gate because the shared redesign contaminated the original window."
+  },
+  "treatmentContamination": {
+    "detectedAt": "2026-08-27T03:27:48Z",
+    "transitionDeployment": {
+      "commit": "2e437f647da408f4f2ef49fb19ecd1e6290fd03b",
+      "deployedAt": "2026-08-25T17:11:29Z",
+      "statusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/9hA8omNpkk4q2cbZKe7HByDuyp5o"
+    },
+    "change": "A site-wide redesign changed the shared blog template and layout while the experiment was active.",
+    "decision": "PRESERVE_EVIDENCE_BUT_DO_NOT_CALL_WIN_OR_LOSS_FROM_MIXED_TREATMENTS",
+    "homogeneousWindow": {
+      "startDate": "2026-08-26",
+      "minimumDays": 14,
+      "reportingLagDays": 3,
+      "earliestDecisionDate": "2026-09-12"
+    }
+  },
+  "analyticsMeasurementBoundary": {
+    "detectedAt": "2026-08-27T03:27:48Z",
+    "issue": "Same-origin /download CTA clicks were not included in store-intent events, so the pre-repair secondary metric is a directional lower bound.",
+    "decision": "Repair tracking immediately, keep the primary Search Console metric unchanged, and compare secondary store intent only after the repair deployment is timestamped."
   },
   "rollback": {
     "condition": "Rollback if a guardrail fails, or if at least 300 impressions accrue and CTR declines materially while average position declines by more than 2.0 positions.",

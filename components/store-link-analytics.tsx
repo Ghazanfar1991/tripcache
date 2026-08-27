@@ -1,19 +1,10 @@
 "use client"
 
 import { useEffect } from "react"
+import { classifyStoreIntentLink } from "@/lib/store-link-measurement.mjs"
 
 type AnalyticsWindow = Window & {
   gtag?: (command: "event", name: string, parameters: Record<string, string>) => void
-}
-
-function storeEvent(url: URL) {
-  if (url.hostname === "apps.apple.com") {
-    return { name: "app_store_click", platform: "ios" }
-  }
-  if (url.hostname === "play.google.com" && url.pathname.startsWith("/store/apps/")) {
-    return { name: "play_store_click", platform: "android" }
-  }
-  return null
 }
 
 export function StoreLinkAnalytics() {
@@ -25,21 +16,20 @@ export function StoreLinkAnalytics() {
       const anchor = target.closest<HTMLAnchorElement>("a[href]")
       if (!anchor || anchor.dataset.storeEventHandled === "true") return
 
-      let url: URL
-      try {
-        url = new URL(anchor.href, window.location.href)
-      } catch {
-        return
-      }
-
-      const store = storeEvent(url)
+      const store = classifyStoreIntentLink({
+        href: anchor.href,
+        pageUrl: window.location.href,
+        userAgent: window.navigator.userAgent,
+        alreadyHandled: anchor.dataset.storeEventHandled === "true",
+      })
       if (!store) return
 
       const analyticsWindow = window as AnalyticsWindow
       analyticsWindow.gtag?.("event", store.name, {
         platform: store.platform,
         placement: anchor.dataset.storePlacement || window.location.pathname,
-        link_url: url.toString(),
+        link_url: store.linkUrl,
+        transport_type: "beacon",
       })
     }
 

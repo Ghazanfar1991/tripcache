@@ -1,35 +1,44 @@
 {
-  "updatedAt": "2026-08-25T16:35:30.724Z",
+  "updatedAt": "2026-08-27T03:38:17.795Z",
   "dispatcher": {
     "status": "IDLE",
-    "lastWakeAt": "2026-08-25T16:35:30.718Z",
-    "pid": 87690,
-    "completedAt": "2026-08-25T16:35:30.724Z"
+    "lastWakeAt": "2026-08-27T02:24:02.783Z",
+    "pid": 21922,
+    "completedAt": "2026-08-27T02:24:02.794Z"
   },
   "latestGrowthCycleEvidence": {
-    "completedAt": "2026-08-20T14:05:21.000Z",
-    "trigger": "MANUAL_RECOVERY_AFTER_SCHEDULED_FAILURE",
-    "branch": "codex/growth-weekly-2026-08-20",
-    "pullRequest": 24,
-    "mergeCommit": "007dc32405e9c69963b9e0fedc056f1e07dfd2d6",
-    "decision": "NO_NEW_EXPERIMENT",
-    "reason": "All three independent experiment slots are occupied and their >72-hour directional pulses and production guardrails pass. Preserve the finalized 2026-09-03 decision gates.",
-    "searchConsolePulseAt": "2026-08-20T09:29:45.223Z",
-    "production": {
-      "commit": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
-      "deploymentId": "dpl_DYs3JAwf4BKizW8c8LWmDiPRXQqP",
-      "deployedAt": "2026-08-20T13:52:42.191Z",
-      "healthCheckedAt": "2026-08-20T14:08:51.267Z",
+    "startedAt": "2026-08-27T03:27:48Z",
+    "status": "PENDING_CI_AND_PRODUCTION",
+    "trigger": "MANUAL_USER_REQUEST",
+    "branch": "codex/growth-sprint-2026-08-27",
+    "pullRequest": null,
+    "mergeCommit": null,
+    "decision": "NO_NEW_EXPERIMENT_WITH_URGENT_ANALYTICS_REPAIR",
+    "reason": "All three slots are occupied. Crawl/indexing and fresh position guardrails pass, but the August 25 redesign contaminated every original treatment window and same-origin /download clicks were missing from store-intent measurement. Preserve target content, extend the homogeneous decision gate to 2026-09-12, and repair analytics only.",
+    "searchConsolePulseAt": "2026-08-26T09:36:53.955Z",
+    "productionBaseline": {
+      "commit": "2e437f647da408f4f2ef49fb19ecd1e6290fd03b",
+      "githubDeploymentId": 6088232367,
+      "deploymentUrl": "https://tripcache-9w9h6ldf4-ghazanfar1991s-projects.vercel.app",
+      "deploymentStatusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/9hA8omNpkk4q2cbZKe7HByDuyp5o",
+      "deployedAt": "2026-08-25T17:11:30Z",
+      "healthCheckedAt": "2026-08-27T03:42:20.653Z",
       "status": "PASS",
       "sitemapUrlsVerified": 39
     },
     "backlinksAdvanced": [
+      "travel-app-roundup-the-points-guy",
+      "travel-app-roundup-travel-and-leisure",
+      "business-travel-digital-itinerary-guide",
       "product-hunt-tripcache-launch",
-      "betalist-tripcache",
-      "travel-app-roundup-toms-guide",
-      "reddit-sideproject-mention-reclamation"
+      "travel-app-roundup-toms-guide"
     ],
-    "measurementBlocker": "GA4 refresh returned insufficient authentication scopes; the source is marked WAITING_FOR_HUMAN_AUTH and stale. Existing website conversion remains unknown."
+    "measurementRepair": "Instrument same-origin /download CTAs with route-consistent mobile store events, a non-store desktop event, handled-link de-duplication, placement/destination fields, and beacon transport. Pre-repair store intent is a directional lower bound.",
+    "remainingBlockers": [
+      "App activation through purchase remains uninstrumented and is outside this repository.",
+      "Android reliability is below the acquisition guardrail and the official dashboard baseline is dated.",
+      "Backlink emails and owner-account edits require a confirmed authorized sender/account identity."
+    ]
   },
   "jobs": {
     "weekly-growth-cycle": {

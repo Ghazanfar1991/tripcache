@@ -166,7 +166,7 @@ try {
     .filter((row) => aiAssistantPattern.test(row.dimensions.sessionSourceMedium))
   const websiteTrafficMeasurable = websiteRows.length > 0 || websiteAcquisitionRows.length > 0
   const aiAssistantReferrals = buildAiAssistantReferrals({ measurable: websiteTrafficMeasurable, rows: aiReferralRows })
-  const trackedEvents = ["app_store_click", "play_store_click", "pricing_view", "download_modal_open"]
+  const trackedEvents = ["app_store_click", "play_store_click", "download_cta_click", "pricing_view", "download_modal_open"]
   const storeIntent = buildWebsiteStoreIntent({
     trafficRows: rows(websiteTrafficTotalsReport),
     storeIntentRows: rows(websiteStoreIntentTotalsReport),
