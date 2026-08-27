@@ -1,12 +1,14 @@
 {
-  "updatedAt": "2026-08-24T03:39:56Z",
-  "latestPulseAt": "2026-08-23T09:23:29.810Z",
-  "lastCycleReviewAt": "2026-08-24T03:39:56Z",
+  "updatedAt": "2026-08-27T03:27:48Z",
+  "latestPulseAt": "2026-08-26T09:36:53.955Z",
+  "lastCycleReviewAt": "2026-08-27T03:27:48Z",
   "productionGuardrail": {
-    "checkedAt": "2026-08-24T03:56:00.125Z",
+    "checkedAt": "2026-08-27T03:42:20.653Z",
     "status": "PASS",
-    "verifiedCommit": "b97562d842a4d5accbde6f50ab236e0be487fa83",
-    "note": "All three target URLs returned HTTP 200 without redirects, kept their intended self-canonical and experiment metadata, remained in the 39-URL sitemap, and continued receiving Search Console impressions."
+    "verifiedCommit": "2e437f647da408f4f2ef49fb19ecd1e6290fd03b",
+    "deploymentVerifiedAt": "2026-08-25T17:11:29Z",
+    "deploymentStatusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/9hA8omNpkk4q2cbZKe7HByDuyp5o",
+    "note": "All three target URLs returned HTTP 200 without redirects, kept self-canonicals and indexable metadata, remained in the 39-URL sitemap, and continued receiving Search Console impressions. The verified redesign deployment changed the shared blog presentation mid-window, so mixed-treatment evidence cannot support a win/loss call."
   },
   "experiments": [
     {
@@ -15,7 +17,7 @@
       "deployedAt": "2026-08-16T17:43:21.000Z",
       "deployedCommit": "691d869b533010821b825491078c2cc019a14a71",
       "record": "growth/experiments/active/seo-hotel-reminder-ctr-2026-08-17.json",
-      "earliestDecisionDate": "2026-09-03"
+      "earliestDecisionDate": "2026-09-12"
     },
     {
       "id": "seo-best-travel-apps-ctr-2026-08-17",
@@ -23,7 +25,7 @@
       "deployedAt": "2026-08-17T01:56:10.000Z",
       "deployedCommit": "5c7668114cf7b294e35c3cbcbe699df8151f48f1",
       "record": "growth/experiments/active/seo-best-travel-apps-ctr-2026-08-17.json",
-      "earliestDecisionDate": "2026-09-03"
+      "earliestDecisionDate": "2026-09-12"
     },
     {
       "id": "seo-tripcase-recovery-ctr-2026-08-17",
@@ -31,8 +33,8 @@
       "deployedAt": "2026-08-17T01:56:10.000Z",
       "deployedCommit": "5c7668114cf7b294e35c3cbcbe699df8151f48f1",
       "record": "growth/experiments/active/seo-tripcase-recovery-ctr-2026-08-17.json",
-      "earliestDecisionDate": "2026-09-03"
+      "earliestDecisionDate": "2026-09-12"
     }
   ],
-  "decision": "All three experiments pass the refreshed production and Search Console pulse guardrails. August 17–20 is stored as finalized evidence; August 21–22 remains incomplete and August 23 is unknown. Continue to the 2026-09-03 gate without changing target pages, stacking changes, or launching a fourth experiment."
+  "decision": "NO_NEW_EXPERIMENT. All three slots remain occupied and pass the refreshed crawl/indexing and Search Console guardrails. August 17–23 is stored as finalized evidence and August 24–25 is incomplete directional evidence, but the production redesign deployed on August 25 contaminated every target's treatment. Preserve the original evidence, quarantine the transition day, and require a homogeneous August 26–September 8 window plus reporting lag; the earliest defensible gate is 2026-09-12. Do not change target-page content or launch a fourth experiment."
 }
