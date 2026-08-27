@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-08-26T09:36:54.004Z",
+  "generatedAt": "2026-08-27T16:38:08.470Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 54,
-      "activeUsers": 54,
+      "eventCount": 60,
+      "activeUsers": 60,
       "byPlatform": [
         {
           "dimensions": {
@@ -28,8 +28,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 18,
-            "activeUsers": 18
+            "eventCount": 24,
+            "activeUsers": 24
           }
         }
       ]

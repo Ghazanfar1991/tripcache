@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T09:36:54.004Z",
+  "generatedAt": "2026-08-27T16:38:08.470Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -24,8 +24,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 6,
-        "activeUsers": 5
+        "eventCount": 7,
+        "activeUsers": 6
       }
     },
     {
@@ -47,8 +47,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 14,
-        "activeUsers": 11
+        "sessions": 29,
+        "activeUsers": 22
       }
     },
     {
@@ -58,19 +58,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 8,
-        "activeUsers": 8
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 8,
-        "activeUsers": 8
+        "sessions": 9,
+        "activeUsers": 9
       }
     },
     {
@@ -80,8 +69,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 7,
-        "activeUsers": 6
+        "sessions": 9,
+        "activeUsers": 8
       }
     },
     {
@@ -91,19 +80,41 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 7,
-        "activeUsers": 7
+        "sessions": 9,
+        "activeUsers": 9
       }
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "",
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 6,
-        "activeUsers": 5
+        "sessions": 9,
+        "activeUsers": 9
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/travel-itinerary-template-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 4
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 3
       }
     },
     {
@@ -120,18 +131,40 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/travel-itinerary-template-2026",
+        "landingPagePlusQueryString": "/blog",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 3,
-        "activeUsers": 3
+        "sessions": 2,
+        "activeUsers": 2
       }
     },
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/business-travel-management-guide-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/pricing",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "gemini.google.com / ai-assistant",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
@@ -153,17 +186,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 2,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
         "platform": "web"
       },
@@ -174,8 +196,8 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/about",
+        "sessionSourceMedium": "(data not available)",
+        "landingPagePlusQueryString": "/features/business-travel-expenses",
         "platform": "web"
       },
       "metrics": {
@@ -186,7 +208,18 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog",
+        "landingPagePlusQueryString": "(not set)",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/about",
         "platform": "web"
       },
       "metrics": {
@@ -208,7 +241,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/pricing",
+        "landingPagePlusQueryString": "/features/email-to-itinerary?layout-check=3",
         "platform": "web"
       },
       "metrics": {
@@ -230,7 +263,29 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/tools/hotel-cancellation-deadline-calculator",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/variations/journal",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
@@ -251,19 +306,8 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "/",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/blog/best-travel-document-organizer-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -285,17 +329,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "chatgpt.com / ai-assistant",
-        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "gemini.google.com / ai-assistant",
         "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
@@ -330,11 +363,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 61,
-    "landingSessions": 70,
-    "storeIntentUsers": 6,
-    "storeIntentEvents": 7,
-    "rate": 0.09836065573770492,
+    "landingUsers": 87,
+    "landingSessions": 102,
+    "storeIntentUsers": 7,
+    "storeIntentEvents": 8,
+    "rate": 0.08045977011494253,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -349,6 +382,17 @@
         "metrics": {
           "eventCount": 3,
           "activeUsers": 3
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/blog/tripcase-alternative-2025",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 2,
+          "activeUsers": 2
         }
       },
       {
@@ -383,27 +427,27 @@
           "eventCount": 1,
           "activeUsers": 1
         }
-      },
-      {
-        "dimensions": {
-          "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/blog/tripcase-alternative-2025",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
-        }
       }
     ],
-    "note": "Store-intent users and landing users come from dedicated GA4 WEB reports so per-page active users are not summed into the rate. Recent rows may be incomplete."
+    "note": "Store-intent users and landing users come from dedicated GA4 WEB reports so per-page active users are not summed into the rate. Same-origin /download clicks were not captured before the 2026-08-27 analytics repair, so windows spanning that boundary are directional lower bounds. Recent rows may be incomplete."
   },
   "aiAssistantReferrals": {
     "measurable": true,
     "status": "MEASURED",
-    "sessions": 3,
-    "activeUsers": 3,
+    "sessions": 4,
+    "activeUsers": 4,
     "landingPages": [
+      {
+        "dimensions": {
+          "sessionSourceMedium": "gemini.google.com / ai-assistant",
+          "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
+          "platform": "web"
+        },
+        "metrics": {
+          "sessions": 2,
+          "activeUsers": 2
+        }
+      },
       {
         "dimensions": {
           "sessionSourceMedium": "chatgpt.com / ai-assistant",
@@ -418,17 +462,6 @@
       {
         "dimensions": {
           "sessionSourceMedium": "chatgpt.com / ai-assistant",
-          "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-          "platform": "web"
-        },
-        "metrics": {
-          "sessions": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "sessionSourceMedium": "gemini.google.com / ai-assistant",
           "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
           "platform": "web"
         },
