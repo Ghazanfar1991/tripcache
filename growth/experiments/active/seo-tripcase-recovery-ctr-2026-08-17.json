@@ -83,7 +83,7 @@
   },
   "lastCycleReview": {
     "reviewedAt": "2026-08-27T03:27:48Z",
-    "productionHealthAt": "2026-08-27T03:42:20.653Z",
+    "productionHealthAt": "2026-08-27T03:48:45.043Z",
     "status": "CONTINUE_TO_FINALIZED_GATE",
     "note": "Fresh Search Console and live production/indexing guardrails pass. Preserve the target page unchanged and use the extended 2026-09-12 gate because the shared redesign contaminated the original window."
   },
@@ -106,7 +106,15 @@
   "analyticsMeasurementBoundary": {
     "detectedAt": "2026-08-27T03:27:48Z",
     "issue": "Same-origin /download CTA clicks were not included in store-intent events, so the pre-repair secondary metric is a directional lower bound.",
-    "decision": "Repair tracking immediately, keep the primary Search Console metric unchanged, and compare secondary store intent only after the repair deployment is timestamped."
+    "decision": "Repair tracking immediately, keep the primary Search Console metric unchanged, and compare secondary store intent only after the repair deployment is timestamped.",
+    "repairDeployment": {
+      "commit": "63c4e05009285bc16d8309ff747329f2a2530d2e",
+      "deployedAt": "2026-08-27T03:47:46Z",
+      "statusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/zfWLiP9j699u96BQwBnM3YyTMxsR",
+      "productionHealthAt": "2026-08-27T03:48:45.043Z"
+    },
+    "secondaryMetricComparableFrom": "2026-08-27T03:47:46Z",
+    "verification": "The live script contains the new event classifier and the production iOS, Android, and desktop redirects match it. Event collection still requires confirmation in the next GA4 snapshot."
   },
   "rollback": {
     "condition": "Rollback if a guardrail fails, or if at least 300 impressions accrue and CTR declines materially while average position declines by more than 2.0 positions.",

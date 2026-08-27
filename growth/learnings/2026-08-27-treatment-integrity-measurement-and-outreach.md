@@ -6,7 +6,7 @@
 - Current 28-day organic performance is 50 clicks / 9,997 impressions, 0.50% CTR, position 9.51. Impressions increased 94.3% period over period, but clicks declined 12.3% and CTR declined 54.9%.
 - Finalized August 17–23 evidence is: hotel reminder 0 / 68, position 5.57; best travel apps 4 / 1,771, 0.23% CTR, position 6.99; TripCase recovery 9 / 652, 1.38% CTR, position 9.07.
 - The incomplete August 24–25 pulse is: hotel reminder 0 / 8, position 6.13; best travel apps 6 / 317, 1.89% CTR, position 8.45; TripCase recovery 1 / 176, 0.57% CTR, position 9.38. Every position guardrail passes and none of these rows is a winner decision.
-- Live production health passed at `2026-08-27T03:42:20.653Z`: homepage, robots, sitemap, both AI reference files, and 39 sitemap URLs passed status, redirect, title, description, canonical, and `noindex` checks.
+- Live production health passed before release at `2026-08-27T03:42:20.653Z` and after release at `2026-08-27T03:48:45.043Z`: homepage, robots, sitemap, both AI reference files, and 39 sitemap URLs passed status, redirect, title, description, canonical, and `noindex` checks.
 - Public GitHub/Vercel production evidence ties the live redesign to commit `2e437f647da408f4f2ef49fb19ecd1e6290fd03b`, completed at `2026-08-25T17:11:29Z`. The prior known-good record pointed to an obsolete August 20 deployment.
 - The redesign changed the shared blog template and layout during all three active experiments. This is a mixed-treatment window even though the declared titles, descriptions, canonicals, and primary query clusters remain intact.
 - GA4 reports 6 store-intent users among 61 landing users, but 25 of 39 sitemap pages use a same-origin `/download` CTA that the existing listener did not count. The 9.84% rate is therefore a historical lower bound.
@@ -20,6 +20,8 @@
 - Repair the `/download` analytics failure immediately without treating it as a fourth content experiment. The shared classifier now uses the same iOS/Android user-agent rules as the redirect route, emits the corresponding store event only for mobile destinations, records other platforms as `download_cta_click`, preserves placement/destination fields, requests beacon transport, and prevents duplicate direct-store events.
 - Treat all pre-repair store-intent values as directional lower bounds. Start secondary-metric comparison only after the repair deployment time is recorded and the next GA4 collector confirms events.
 - Correct the known-good production attribution to the verified August 25 redesign deployment.
+- Release the repair only after CI. PR #30 passed GitHub Actions and Vercel checks, squash-merged as `63c4e05009285bc16d8309ff747329f2a2530d2e`, and reached Vercel production at `2026-08-27T03:47:46Z` as GitHub deployment `6116171719`.
+- Verify the live result at three layers: the 39-URL health suite passed; iOS, Android, and desktop `/download` redirects resolved to their intended destinations; and the served JavaScript contained the new analytics event names and beacon parameter.
 - Keep public pricing unchanged and make no mobile, store, RevenueCat, product, entitlement, billing, credential, or access-control change.
 
 ## Backlink pipeline
@@ -37,7 +39,6 @@
 
 ## Next evidence
 
-- After deployment, verify the exact production commit/time, rerun production health, and confirm direct Apple, direct Play, mobile `/download`, and non-mobile `/download` behavior.
 - In the next GA4 snapshot, require a populated `download_cta_click` row or new mobile store-click evidence from a `/download` placement before calling the repair operational. A measured absence is zero only after the deployment boundary and a successful report.
 - At each Monday/Thursday cycle, continue fresh directional crawl/indexing/position checks without changing targets. At the September 12 gate, use only the homogeneous finalized window for a win/loss decision.
 - Escalate activation instrumentation and crash investigation to the authorized mobile owner outside this repository; do not patch mobile code from the landing-page cycle.
