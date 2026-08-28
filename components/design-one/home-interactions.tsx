@@ -21,9 +21,6 @@ const storeLinks = {
   android: "https://play.google.com/store/apps/details?id=app.tripcache",
 }
 
-const HERO_IMAGE_BLUR_DATA_URL =
-  "data:image/webp;base64,UklGRhgBAABXRUJQVlA4WAoAAAAQAAAADwAAIgAAQUxQSGEAAAABcFvbthI9Mu/CmmDRAVTmPchYL+7uErlHRHBH84iYAGIN00o1dZa0RZJ5JpcSMO4g9QnSf98WukAz6AQ9kcsRue+gJ3K7Iv3Jvxl8XP/31JFygNhS7p7lFgpEDC+k8gwRAFZQOCCQAAAAEAQAnQEqEAAjAD8Fbq1Qq6akorVIAXAgiWQAv+wgEfNsVbRWSDhX6yIA/ACon6WS2bAu5IsWB6vHXZa2n5ywUQjNujcSNAewP3wUC/ElALqnmu4zxiiJg3YdmtwsgcW8K8On9a0fT8ihv/mxF9TBffs/dah/oly/r9NWU2h32Ttct9zv5/r2GZNnI3ASSaAA"
-
 function trackStoreClick(platform: "ios" | "android") {
   const analyticsWindow = window as Window & {
     gtag?: (command: "event", name: string, parameters: Record<string, string>) => void
@@ -137,8 +134,6 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
             width={1250}
             height={2700}
             sizes="(min-width: 940px) 258px, (min-width: 640px) 245px, 210px"
-            placeholder="blur"
-            blurDataURL={HERO_IMAGE_BLUR_DATA_URL}
             className="h-auto w-full drop-shadow-[0_55px_58px_rgba(66,49,31,0.25)]"
           />
         </div>
