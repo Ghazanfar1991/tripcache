@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-27T19:24:22.531Z",
+  "generatedAt": "2026-08-28T20:39:27.520Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-05-30",
-    "endDate": "2026-08-28"
+    "startDate": "2026-05-31",
+    "endDate": "2026-08-29"
   },
   "charts": {
     "mrr": {
@@ -132,11 +132,11 @@
                 "id": "prodb0c0083742"
               },
               {
-                "display_name": "pro_yearly",
+                "display_name": "Premium Yearly (pro_yearly)",
                 "id": "prode5b312f37b"
               },
               {
-                "display_name": "pro_monthly",
+                "display_name": "Premium Monthly (pro_monthly)",
                 "id": "prod3393b87025"
               }
             ]
@@ -1687,7 +1687,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1787875200,
+        "end_date": 1787961600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1706,10 +1706,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780099200,
+        "start_date": 1780185600,
         "summary": {
           "average": {
-            "MRR": 13.02
+            "MRR": 12.87
           }
         },
         "unsupported_params": null,
@@ -1717,12 +1717,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1780099200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 25.43
-          },
           {
             "cohort": 1780185600,
             "incomplete": false,
@@ -2253,12 +2247,18 @@
           },
           {
             "cohort": 1787788800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 11.49
           },
           {
             "cohort": 1787875200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 11.49
+          },
+          {
+            "cohort": 1787961600,
             "incomplete": true,
             "measure": 0,
             "value": 11.49
@@ -2394,11 +2394,11 @@
                 "id": "prodb0c0083742"
               },
               {
-                "display_name": "pro_yearly",
+                "display_name": "Premium Yearly (pro_yearly)",
                 "id": "prode5b312f37b"
               },
               {
-                "display_name": "pro_monthly",
+                "display_name": "Premium Monthly (pro_monthly)",
                 "id": "prod3393b87025"
               }
             ]
@@ -4009,7 +4009,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1787875200,
+        "end_date": 1787961600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4044,7 +4044,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780099200,
+        "start_date": 1780185600,
         "summary": {
           "average": {
             "Ad Impressions": 0,
@@ -4062,24 +4062,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1780099200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1780099200,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1780099200,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1780185600,
             "incomplete": false,
@@ -5666,19 +5648,19 @@
           },
           {
             "cohort": 1787788800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1787788800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1787788800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5696,6 +5678,24 @@
           },
           {
             "cohort": 1787875200,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1787961600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1787961600,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1787961600,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -5831,11 +5831,11 @@
                 "id": "prodb0c0083742"
               },
               {
-                "display_name": "pro_yearly",
+                "display_name": "Premium Yearly (pro_yearly)",
                 "id": "prode5b312f37b"
               },
               {
-                "display_name": "pro_monthly",
+                "display_name": "Premium Monthly (pro_monthly)",
                 "id": "prod3393b87025"
               }
             ]
@@ -7365,7 +7365,7 @@
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1787875200,
+        "end_date": 1787961600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7384,21 +7384,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780099200,
+        "start_date": 1780185600,
         "summary": {
           "average": {
-            "Actives": 1.33
+            "Actives": 1.32
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1780099200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 2
-          },
           {
             "cohort": 1780185600,
             "incomplete": false,
@@ -7929,12 +7923,18 @@
           },
           {
             "cohort": 1787788800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 1
           },
           {
             "cohort": 1787875200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 1
+          },
+          {
+            "cohort": 1787961600,
             "incomplete": true,
             "measure": 0,
             "value": 1
@@ -8070,11 +8070,11 @@
                 "id": "prodb0c0083742"
               },
               {
-                "display_name": "pro_yearly",
+                "display_name": "Premium Yearly (pro_yearly)",
                 "id": "prode5b312f37b"
               },
               {
-                "display_name": "pro_monthly",
+                "display_name": "Premium Monthly (pro_monthly)",
                 "id": "prod3393b87025"
               }
             ]
@@ -9566,7 +9566,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1787875200,
+        "end_date": 1787961600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9585,7 +9585,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780099200,
+        "start_date": 1780185600,
         "summary": {
           "average": {
             "Active Trials": 0
@@ -9594,12 +9594,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1780099200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1780185600,
             "incomplete": false,
@@ -10130,12 +10124,18 @@
           },
           {
             "cohort": 1787788800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1787875200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1787961600,
             "incomplete": true,
             "measure": 0,
             "value": 0
@@ -10271,11 +10271,11 @@
                 "id": "prodb0c0083742"
               },
               {
-                "display_name": "pro_yearly",
+                "display_name": "Premium Yearly (pro_yearly)",
                 "id": "prode5b312f37b"
               },
               {
-                "display_name": "pro_monthly",
+                "display_name": "Premium Monthly (pro_monthly)",
                 "id": "prod3393b87025"
               }
             ]
