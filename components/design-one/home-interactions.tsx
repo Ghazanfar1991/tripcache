@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import type { ReactNode } from "react"
 import { useEffect, useState } from "react"
 
 type HeroStory = {
@@ -58,8 +59,24 @@ export function DesignOneStoreButtons() {
   )
 }
 
+export function DesignOneSupportLink({ className, children }: { className?: string; children: ReactNode }) {
+  return (
+    <a
+      href="mailto:"
+      className={className}
+      onClick={(event) => {
+        event.preventDefault()
+        window.location.href = ["mailto:support", "trip-cache.com"].join("@")
+      }}
+    >
+      {children}
+    </a>
+  )
+}
+
 export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [hasChanged, setHasChanged] = useState(false)
   const [paused, setPaused] = useState(false)
   const [pageInactive, setPageInactive] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
@@ -88,6 +105,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
   useEffect(() => {
     if (paused || pageInactive || reducedMotion) return
     const timer = window.setInterval(() => {
+      setHasChanged(true)
       setCurrentSlide((current) => (current + 1) % stories.length)
     }, 10000)
     return () => window.clearInterval(timer)
@@ -107,7 +125,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
       <div className="absolute inset-0 z-20" aria-live="polite">
         <div
           key={story.image}
-          className="design-one-story-screen-change hero-story-screen absolute inset-x-0 top-1/2 mx-auto w-[210px] sm:w-[245px] min-[940px]:w-[258px]"
+          className={`${hasChanged ? "design-one-story-screen-change " : ""}hero-story-screen absolute inset-x-0 top-1/2 mx-auto w-[210px] sm:w-[245px] min-[940px]:w-[258px]`}
           data-active="true"
         >
           <Image
@@ -123,7 +141,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
 
       <div
         key={`primary-${story.title}`}
-        className="design-one-story-change hero-story-card hero-story-card-primary absolute z-30 hidden w-[210px] p-5 text-white sm:block"
+        className={`${hasChanged ? "design-one-story-change " : ""}hero-story-card hero-story-card-primary absolute z-30 hidden w-[210px] p-5 text-white sm:block`}
         data-active="true"
       >
         <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{story.label}</p>
@@ -133,7 +151,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
 
       <div
         key={`secondary-${story.secondTitle}`}
-        className="design-one-glass design-one-story-change hero-story-card hero-story-card-secondary absolute z-30 w-[190px] p-4 sm:w-[200px]"
+        className={`design-one-glass ${hasChanged ? "design-one-story-change " : ""}hero-story-card hero-story-card-secondary absolute z-30 w-[190px] p-4 sm:w-[200px]`}
         data-active="true"
       >
         <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#602ad2]">{story.secondLabel}</p>
@@ -146,7 +164,10 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
           <button
             key={story.title}
             type="button"
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => {
+              setHasChanged(true)
+              setCurrentSlide(index)
+            }}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={index === currentSlide ? "true" : undefined}
             className="group grid h-11 w-11 touch-manipulation place-items-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45"

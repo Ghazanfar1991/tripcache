@@ -7,11 +7,6 @@
   }
 }
 
-@keyframes heroAnimationIn {
-  from { transform: translateY(12px); }
-  to { transform: translateY(0); }
-}
-
 @keyframes storyChangeIn {
   from {
     opacity: 0;
@@ -55,8 +50,9 @@
 }
 
 .design-one-reveal.design-one-hero-reveal {
-  animation: heroAnimationIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both;
+  animation: none;
   opacity: 1;
+  transform: none;
 }
 
 .design-one-reveal.design-one-critical-reveal {

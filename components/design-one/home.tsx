@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 
 import { Reveal } from "@/components/design-one/reveal"
-import { DesignOneHeroCarousel, DesignOneStoreButtons } from "@/components/design-one/home-interactions"
+import { DesignOneHeroCarousel, DesignOneStoreButtons, DesignOneSupportLink } from "@/components/design-one/home-interactions"
 import { Footer } from "@/components/footer"
 
 const heroPoints = [
@@ -179,7 +179,7 @@ export function DesignOneHome() {
     <section id="faq" className="journal-faq px-5 py-20 sm:px-8 min-[940px]:py-28"><div className="mx-auto max-w-[1080px]">
       <Reveal className="max-w-[820px]"><Eyebrow>FAQ</Eyebrow><h2 className="mt-6 text-4xl font-semibold tracking-[-0.055em] sm:text-6xl">Frequently asked questions</h2><p className="mt-5 text-lg leading-8 text-[#666666]">Straight answers about pricing, availability, email import, and the post-booking workflow.</p></Reveal>
       <div className="mt-14 space-y-3">{faqs.map((faq, index) => <Reveal key={faq.question} delay={(index % 3) * 45}><details open={index === 0} className="group rounded-[22px] bg-white/46 px-6 shadow-[0_1px_0_rgba(255,255,255,0.7),0_16px_44px_rgba(72,53,33,0.055)] sm:px-8"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold marker:content-none sm:text-xl"><span>{faq.question}</span><span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#e5dcff] text-xl font-normal text-[#602ad2] transition-transform duration-150 group-open:rotate-45">+</span></summary><p className="max-w-3xl pb-7 leading-7 text-[#666666]">{faq.answer}</p></details></Reveal>)}</div>
-      <Reveal className="mt-14 rounded-[30px] bg-[#602ad2] p-8 text-center text-white sm:p-12"><h3 className="text-2xl font-semibold">Still have questions?</h3><p className="mt-2 text-white/76">Contact the TripCache support team for setup or billing help.</p><Link href="mailto:support%40trip-cache.com" className="design-one-press mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 font-semibold text-[#121212] shadow-[0_12px_28px_rgba(58,24,135,0.2)]">Contact support</Link></Reveal>
+      <Reveal className="mt-14 rounded-[30px] bg-[#602ad2] p-8 text-center text-white sm:p-12"><h3 className="text-2xl font-semibold">Still have questions?</h3><p className="mt-2 text-white/76">Contact the TripCache support team for setup or billing help.</p><DesignOneSupportLink className="design-one-press mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 font-semibold text-[#121212] shadow-[0_12px_28px_rgba(58,24,135,0.2)]">Contact support</DesignOneSupportLink></Reveal>
     </div></section>
 
     <Footer />
