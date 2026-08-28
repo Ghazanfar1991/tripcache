@@ -2,6 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { SectionContainer } from "./section-container"
 
+const COPYRIGHT_YEAR = 2026
+
 export function Footer() {
   return (
     <footer className="relative bg-[#eee7dc] text-[#121212] shadow-[inset_0_1px_0_rgba(66,50,32,0.08)]">
@@ -91,7 +93,7 @@ export function Footer() {
          
 
         <div className="mt-12 border-t border-[#3f352a]/10 pt-8 text-center text-sm text-[#665f56]">
-          <p>© {new Date().getFullYear()} TripCache. All rights reserved.</p>
+          <p>© {COPYRIGHT_YEAR} TripCache. All rights reserved.</p>
         </div>
       </SectionContainer>
     </footer>

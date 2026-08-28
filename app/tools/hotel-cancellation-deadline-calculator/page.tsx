@@ -10,6 +10,8 @@ import { SectionContainer } from "@/components/section-container"
 import { HotelCancellationCalculator } from "@/components/seo/hotel-cancellation-calculator"
 import { Button } from "@/components/ui/button"
 
+export const instant = false
+
 const BASE_URL = "https://trip-cache.com"
 const PAGE_PATH = "/tools/hotel-cancellation-deadline-calculator"
 

@@ -1,6 +1,8 @@
 import type { ReactNode } from "react"
+import { Suspense } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { io } from "next/cache"
 import {
   ArrowUpRight, BadgeCheck, Bell, BellRing, BriefcaseBusiness, CalendarClock, Download,
   FileCheck2, FileLock2, FileSpreadsheet, Grid2x2Plus, Hotel, Mail, MailCheck, MapPinned,
@@ -144,6 +146,17 @@ export function DesignOneHome() {
       <DesignOneHeroCarousel stories={heroStories} />
     </section>
 
+    <Suspense fallback={null}>
+      <DeferredHomeContent />
+    </Suspense>
+  </main>
+}
+
+async function DeferredHomeContent() {
+  await io()
+
+  return <>
+
     <section className="px-5 pb-20 pt-2 sm:px-8 min-[940px]:pb-28"><div className="mx-auto max-w-[1240px]">
       <Reveal className="mb-8 flex items-end justify-between gap-8"><h2 className="max-w-3xl text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">One calm place for the details after booking.</h2><p className="hidden max-w-xs text-sm leading-6 text-[#746c61] min-[900px]:block">The whole post-booking journey, organized around what you need next.</p></Reveal>
       <div className="journal-story-scroller">{heroStories.map((story, index) => <Reveal key={story.title} delay={index * 70} className="journal-story-card"><div className="relative flex min-h-[355px] items-end overflow-hidden rounded-[26px] bg-[#e8dece] px-5 pt-7"><Image src={story.image} alt={story.alt} width={1250} height={2700} sizes="155px" className="mx-auto w-[155px] translate-y-12 drop-shadow-[0_24px_30px_rgba(42,20,82,0.2)]" /></div><div className="space-y-5 px-1 pt-6"><div><p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#602ad2]">{story.label}</p><h3 className="mt-2 text-xl font-semibold tracking-[-0.025em]">{story.title}</h3><p className="mt-2 text-sm leading-6 text-[#666666]">{story.description}</p></div><div className="rounded-2xl bg-white/54 p-4"><p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#858585]">{story.secondLabel}</p><p className="mt-1.5 text-sm font-bold">{story.secondTitle}</p><p className="mt-1 text-xs leading-5 text-[#666666]">{story.secondDescription}</p></div></div></Reveal>)}</div>
@@ -183,5 +196,5 @@ export function DesignOneHome() {
     </div></section>
 
     <Footer />
-  </main>
+  </>
 }
