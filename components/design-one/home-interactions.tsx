@@ -16,6 +16,8 @@ type HeroStory = {
   secondDescription: string
 }
 
+const HERO_STORY_INTERVAL_MS = 6000
+
 const storeLinks = {
   ios: "https://apps.apple.com/app/id6758403056",
   android: "https://play.google.com/store/apps/details?id=app.tripcache",
@@ -76,8 +78,7 @@ export function DesignOneSupportLink({ className, children }: { className?: stri
 
 export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [hasChanged, setHasChanged] = useState(false)
-  const [paused, setPaused] = useState(false)
+  const [direction, setDirection] = useState<1 | -1>(1)
   const [pageInactive, setPageInactive] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
   useEffect(() => {
@@ -103,83 +104,105 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
   }, [])
 
   useEffect(() => {
-    if (paused || pageInactive || reducedMotion) return
-    const timer = window.setInterval(() => {
-      setHasChanged(true)
-      setCurrentSlide((current) => (current + 1) % stories.length)
-    }, 10000)
-    return () => window.clearInterval(timer)
-  }, [pageInactive, paused, reducedMotion, stories.length])
+    if (pageInactive || reducedMotion || stories.length < 2) return
+    const timer = window.setTimeout(() => {
+      const lastSlide = stories.length - 1
+      const nextSlide = currentSlide + direction
+
+      if (nextSlide >= lastSlide) {
+        setDirection(-1)
+        setCurrentSlide(lastSlide)
+      } else if (nextSlide <= 0) {
+        setDirection(1)
+        setCurrentSlide(0)
+      } else {
+        setCurrentSlide(nextSlide)
+      }
+    }, HERO_STORY_INTERVAL_MS)
+    return () => window.clearTimeout(timer)
+  }, [currentSlide, direction, pageInactive, reducedMotion, stories.length])
 
   const story = stories[currentSlide]
 
+  const selectSlide = (index: number) => {
+    const lastSlide = stories.length - 1
+    const nextDirection = index === 0 ? 1 : index === lastSlide ? -1 : index >= currentSlide ? 1 : -1
+    setDirection(nextDirection)
+    setCurrentSlide(index)
+  }
+
   return (
-    <div
-      className="relative mx-auto min-h-[520px] w-full max-w-[620px] sm:min-h-[590px] min-[940px]:min-h-[620px]"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      <div className="absolute inset-[8%] rounded-full bg-[#e5dac7]" />
-      <div className="absolute inset-[14%] rounded-full border border-[#3b3329]/10" />
+    <div className="relative mx-auto min-h-[560px] w-full max-w-[620px] sm:min-h-[640px] min-[940px]:min-h-[670px]">
+      <div className="absolute inset-0 z-20">
+        {stories.map((slide, index) => (
+          <div
+            key={slide.image}
+            className="hero-story-screen absolute inset-x-0 top-1/2 mx-auto w-[210px] sm:w-[245px] min-[940px]:w-[258px]"
+            data-active={index === currentSlide ? "true" : "false"}
+            aria-hidden={index !== currentSlide}
+          >
+            <Image
+              src={`${slide.image}?surface=hero`}
+              alt={slide.alt}
+              width={1250}
+              height={2700}
+              loading={index === 0 ? "eager" : "lazy"}
+              sizes="(min-width: 940px) 258px, (min-width: 640px) 245px, 210px"
+              className="h-auto w-full drop-shadow-[0_55px_58px_rgba(66,49,31,0.25)]"
+            />
+          </div>
+        ))}
+      </div>
 
-      <div className="absolute inset-0 z-20" aria-live="polite">
+      {stories.map((slide, index) => (
         <div
-          key={story.image}
-          className={`${hasChanged ? "design-one-story-screen-change " : ""}hero-story-screen absolute inset-x-0 top-1/2 mx-auto w-[210px] sm:w-[245px] min-[940px]:w-[258px]`}
-          data-active="true"
+          key={`primary-${slide.title}`}
+          className="hero-story-card hero-story-card-primary absolute z-30 hidden w-[210px] p-5 text-white sm:block"
+          data-active={index === currentSlide ? "true" : "false"}
+          aria-hidden={index !== currentSlide}
         >
-          <Image
-            src={story.image}
-            alt={story.alt}
-            width={1250}
-            height={2700}
-            sizes="(min-width: 940px) 258px, (min-width: 640px) 245px, 210px"
-            className="h-auto w-full drop-shadow-[0_55px_58px_rgba(66,49,31,0.25)]"
-          />
+          <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{slide.label}</p>
+          <p className="mt-6 text-2xl font-semibold tracking-[-0.04em]">{slide.title}</p>
+          <p className="mt-2 text-xs leading-5 text-white/80">{slide.description}</p>
         </div>
-      </div>
+      ))}
 
-      <div
-        key={`primary-${story.title}`}
-        className={`${hasChanged ? "design-one-story-change " : ""}hero-story-card hero-story-card-primary absolute z-30 hidden w-[210px] p-5 text-white sm:block`}
-        data-active="true"
-      >
-        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{story.label}</p>
-        <p className="mt-6 text-2xl font-semibold tracking-[-0.04em]">{story.title}</p>
-        <p className="mt-2 text-xs leading-5 text-white/80">{story.description}</p>
-      </div>
+      {stories.map((slide, index) => (
+        <div
+          key={`secondary-${slide.secondTitle}`}
+          className="design-one-glass hero-story-card hero-story-card-secondary absolute z-30 w-[190px] p-4 sm:w-[200px]"
+          data-active={index === currentSlide ? "true" : "false"}
+          aria-hidden={index !== currentSlide}
+        >
+          <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#602ad2]">{slide.secondLabel}</p>
+          <p className="mt-2 text-sm font-bold">{slide.secondTitle}</p>
+          <p className="mt-1 text-[11px] leading-4 text-[#766d62]">{slide.secondDescription}</p>
+        </div>
+      ))}
 
-      <div
-        key={`secondary-${story.secondTitle}`}
-        className={`design-one-glass ${hasChanged ? "design-one-story-change " : ""}hero-story-card hero-story-card-secondary absolute z-30 w-[190px] p-4 sm:w-[200px]`}
-        data-active="true"
-      >
-        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#602ad2]">{story.secondLabel}</p>
-        <p className="mt-2 text-sm font-bold">{story.secondTitle}</p>
-        <p className="mt-1 text-[11px] leading-4 text-[#766d62]">{story.secondDescription}</p>
-      </div>
+      <p className="sr-only" aria-live="polite">Showing screen {currentSlide + 1} of {stories.length}: {story.title}</p>
 
-      <div className="absolute inset-x-0 bottom-[5%] z-40 flex items-center justify-center gap-2">
-        {stories.map((story, index) => (
+      <div className="absolute inset-x-0 top-[calc(50%+215px)] z-40 flex items-center justify-center sm:top-[calc(50%+250px)] min-[940px]:top-[calc(50%+264px)]">
+        <div className="inline-flex items-center" role="group" aria-label="Featured TripCache screens">
+        {stories.map((slide, index) => (
           <button
-            key={story.title}
+            key={slide.title}
             type="button"
-            onClick={() => {
-              setHasChanged(true)
-              setCurrentSlide(index)
-            }}
-            aria-label={`Go to slide ${index + 1}`}
+            onClick={() => selectSlide(index)}
+            aria-label={`Show screen ${index + 1}: ${slide.title}`}
+            aria-pressed={index === currentSlide}
             aria-current={index === currentSlide ? "true" : undefined}
-            className="group grid h-11 w-11 touch-manipulation place-items-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45"
+            data-active={index === currentSlide ? "true" : "false"}
+            data-direction={direction === 1 ? "next" : "previous"}
+            className="hero-story-dot-button group relative h-8 w-7 touch-manipulation rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 focus-visible:ring-offset-2"
           >
             <span
               aria-hidden="true"
-              className={`h-1.5 w-8 origin-center rounded-full transition-[background-color,transform] duration-150 group-active:scale-[0.96] ${
-                index === currentSlide ? "scale-x-100 bg-[#602ad2]" : "scale-x-25 bg-[#3f352a]/25 group-hover:bg-[#3f352a]/40"
-              }`}
+              className="hero-story-dot"
             />
           </button>
         ))}
+        </div>
       </div>
     </div>
   )

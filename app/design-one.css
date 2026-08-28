@@ -7,41 +7,35 @@
   }
 }
 
-@keyframes storyChangeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px) scale(0.97);
+@keyframes storyDotAdvance {
+  0%,
+  80% {
+    width: 0.5rem;
+    transform: translate(-50%, -50%);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  94% {
+    width: 2.25rem;
+    transform: translate(-0.25rem, -50%);
   }
-}
-
-@keyframes storyScreenChangeIn {
-  from {
-    opacity: 0;
-    transform: translateY(calc(-50% + 12px)) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%) scale(1);
+  100% {
+    width: 0.5rem;
+    transform: translate(1.5rem, -50%);
   }
 }
 
-@keyframes storyChangeFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes storyScreenChangeFade {
-  from {
-    opacity: 0;
-    transform: translateY(-50%);
+@keyframes storyDotRewind {
+  0%,
+  80% {
+    width: 0.5rem;
+    transform: translate(-50%, -50%);
   }
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
+  94% {
+    width: 2.25rem;
+    transform: translate(-2rem, -50%);
+  }
+  100% {
+    width: 0.5rem;
+    transform: translate(-2rem, -50%);
   }
 }
 
@@ -59,14 +53,6 @@
   animation: none;
   opacity: 1;
   transform: none;
-}
-
-.design-one-story-change {
-  animation: storyChangeIn 450ms cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.design-one-story-screen-change {
-  animation: storyScreenChangeIn 450ms cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 @supports (animation-timeline: view()) {
@@ -205,8 +191,8 @@
   opacity: 0;
   pointer-events: none;
   transition:
-    opacity 420ms ease,
-    transform 520ms cubic-bezier(0.23, 1, 0.32, 1);
+    opacity 360ms cubic-bezier(0.4, 0, 1, 1),
+    transform 540ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
@@ -265,10 +251,10 @@
   z-index: 1;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(calc(-50% + 12px)) scale(0.985);
+  transform: translateY(-50%) scale(0.965);
   transition:
-    opacity 520ms ease,
-    transform 650ms cubic-bezier(0.23, 1, 0.32, 1);
+    opacity 420ms cubic-bezier(0.4, 0, 1, 1),
+    transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
@@ -276,6 +262,39 @@
   z-index: 2;
   opacity: 1;
   transform: translateY(-50%) scale(1);
+}
+
+.hero-story-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(118, 109, 98, 0.28);
+  transform: translate(-50%, -50%);
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.hero-story-dot-button:hover .hero-story-dot {
+  background: rgba(96, 42, 210, 0.48);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.hero-story-dot-button[data-active="true"] .hero-story-dot {
+  z-index: 1;
+  background: #602ad2;
+  box-shadow: 0 0 0 3px rgba(96, 42, 210, 0.1);
+}
+
+.hero-story-dot-button[data-active="true"][data-direction="next"] .hero-story-dot {
+  animation: storyDotAdvance 6000ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.hero-story-dot-button[data-active="true"][data-direction="previous"] .hero-story-dot {
+  animation: storyDotRewind 6000ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 @media (min-width: 75rem) {
@@ -308,6 +327,221 @@
   background-size: auto, 32px 32px, 32px 32px;
 }
 
+.cursor-trail-region {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.design-one-hero {
+  background: #f4f0e8;
+  font-family: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+.design-one-hero::after {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: clamp(8rem, 20vh, 13rem);
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 240, 232, 0),
+    rgba(244, 240, 232, 0.54) 48%,
+    rgba(244, 240, 232, 0.9) 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.design-one-hero-blend {
+  --hero-blend-height: clamp(6rem, 10vw, 9rem);
+  position: relative;
+  z-index: 2;
+  height: var(--hero-blend-height);
+  margin-top: clamp(-5.85rem, -6.5vw, -3.9rem);
+  margin-bottom: clamp(-3.15rem, -3.5vw, -2.1rem);
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 240, 232, 0) 0%,
+    rgba(244, 240, 232, 0.58) 34%,
+    rgba(250, 247, 241, 0.72) 62%,
+    rgba(255, 253, 249, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.design-one-hero-blend > div,
+.design-one-hero-blend::before,
+.design-one-hero-blend::after {
+  position: absolute;
+  inset: 0;
+}
+
+.design-one-hero-blend::before {
+  z-index: 1;
+  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
+  content: "";
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 30%, transparent 46%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 30%, transparent 46%);
+}
+
+.design-one-hero-blend > div:nth-child(1) {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 15%, #000 30%, #000 46%, transparent 62%);
+  mask-image: linear-gradient(to bottom, transparent 15%, #000 30%, #000 46%, transparent 62%);
+}
+
+.design-one-hero-blend > div:nth-child(2) {
+  z-index: 3;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 30%, #000 46%, #000 62%, transparent 78%);
+  mask-image: linear-gradient(to bottom, transparent 30%, #000 46%, #000 62%, transparent 78%);
+}
+
+.design-one-hero-blend > div:nth-child(3) {
+  z-index: 4;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 46%, #000 62%, #000 78%, transparent 92%);
+  mask-image: linear-gradient(to bottom, transparent 46%, #000 62%, #000 78%, transparent 92%);
+}
+
+.design-one-hero-blend > div:nth-child(4) {
+  z-index: 5;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 64%, #000 78%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 64%, #000 78%, #000 90%, transparent 100%);
+}
+
+.design-one-hero-blend::after {
+  z-index: 6;
+  background: linear-gradient(to bottom, transparent, rgba(255, 253, 249, 0.34) 72%, transparent);
+  content: "";
+}
+
+.design-one-hero-atmosphere {
+  position: absolute;
+  z-index: 0;
+  inset: -1.5rem;
+  background-image: url("/hero-halftone-world.webp");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.52;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 62%,
+    rgba(0, 0, 0, 0.82) 76%,
+    rgba(0, 0, 0, 0.34) 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 62%,
+    rgba(0, 0, 0, 0.82) 76%,
+    rgba(0, 0, 0, 0.34) 90%,
+    transparent 100%
+  );
+}
+
+.cursor-trail-layer {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  mix-blend-mode: screen;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.cursor-trail-mount {
+  display: contents;
+}
+
+.cursor-trail-shader {
+  position: absolute !important;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.cursor-trail-content {
+  position: relative;
+  z-index: 1;
+}
+
+.design-one-hero-copy::before {
+  position: absolute;
+  z-index: -1;
+  inset: -4.5rem -4rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(248, 245, 239, 0.94) 0%,
+    rgba(248, 245, 239, 0.78) 48%,
+    rgba(248, 245, 239, 0) 78%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.design-one-hero-lede {
+  color: #4e4a47;
+  font-weight: 440;
+  letter-spacing: -0.012em;
+}
+
+.design-one-hero-points {
+  color: #504c48;
+}
+
+@media (max-width: 58.74rem) {
+  .design-one-hero-atmosphere {
+    background-position: 58% center;
+    opacity: 0.4;
+  }
+
+  .design-one-hero-copy::before {
+    inset: -3rem -1.5rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(248, 245, 239, 0.96) 0%,
+      rgba(248, 245, 239, 0.8) 54%,
+      rgba(248, 245, 239, 0) 82%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-trail-layer {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce), (hover: none), (pointer: coarse) {
+  .cursor-trail-layer {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .design-one-hero-atmosphere,
+  .design-one-hero-blend,
+  .cursor-trail-layer {
+    display: none;
+  }
+}
+
 .design-one-page {
   min-height: 100svh;
   background-color: #f4f0e8;
@@ -331,9 +565,10 @@
 }
 
 .design-one-display-home {
-  font-size: clamp(3rem, 5vw, 4.75rem);
-  line-height: 0.94;
-  letter-spacing: -0.058em;
+  font-size: clamp(3rem, 4.6vw, 4.35rem);
+  font-weight: 650;
+  line-height: 0.98;
+  letter-spacing: -0.052em;
 }
 
 .design-one-display-index {
@@ -388,8 +623,9 @@
 
 @media (max-width: 39.99rem) {
   .design-one-display-home {
-    font-size: clamp(2.75rem, 13vw, 3.45rem);
-    line-height: 0.95;
+    font-size: clamp(2.5rem, 11.6vw, 3.1rem);
+    line-height: 1;
+    letter-spacing: -0.048em;
   }
 
   .design-one-display-index,
@@ -563,18 +799,6 @@
     transform: none !important;
   }
 
-  .design-one-story-change {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-  .design-one-story-screen-change {
-    animation: none;
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-
   .floating-nav-backdrop,
   .floating-nav-surface,
   .floating-nav-tabs,
@@ -584,10 +808,18 @@
     transform: none !important;
   }
 
-  .hero-story-card,
-  .hero-story-screen {
-    transition: opacity 180ms ease;
+  .hero-story-card {
+    transition: opacity 140ms ease;
     transform: none !important;
+  }
+
+  .hero-story-screen {
+    transition: opacity 140ms ease;
+    transform: translateY(-50%) !important;
+  }
+
+  .hero-story-dot-button[data-active="true"] .hero-story-dot {
+    animation: none;
   }
 
   html {
@@ -606,6 +838,12 @@
 }
 
 @media (prefers-reduced-transparency: reduce) {
+  .design-one-hero-blend > div,
+  .design-one-hero-blend::before {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .design-one-glass {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;

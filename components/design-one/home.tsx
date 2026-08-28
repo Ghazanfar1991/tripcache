@@ -12,6 +12,7 @@ import {
 import { Reveal } from "@/components/design-one/reveal"
 import { DesignOneHeroCarousel, DesignOneStoreButtons, DesignOneSupportLink } from "@/components/design-one/home-interactions"
 import { Footer } from "@/components/footer"
+import CursorTrailGate from "@/components/ui/CursorTrailGate"
 
 const heroPoints = [
   "Import booking confirmation emails",
@@ -135,16 +136,23 @@ function Eyebrow({ children, inverse = false }: { children: ReactNode; inverse?:
 
 export function DesignOneHome() {
   return <main className="journal-paper min-h-screen overflow-hidden text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
-    <section className="relative mx-auto grid min-h-screen max-w-[1380px] items-center gap-5 px-5 pb-12 pt-28 sm:px-8 sm:pt-28 min-[940px]:min-h-[100svh] min-[940px]:grid-cols-[minmax(0,1.02fr)_minmax(27rem,0.98fr)] min-[940px]:gap-10 min-[940px]:px-12 min-[940px]:pb-10 min-[940px]:pt-24">
-      <div className="relative z-10 mx-auto max-w-[650px] py-3 text-center min-[940px]:mx-0 min-[940px]:py-8 min-[940px]:text-start">
-        <Reveal className="design-one-hero-reveal"><Eyebrow><Plane className="h-3.5 w-3.5" /> Travel itinerary organizer app</Eyebrow></Reveal>
-        <Reveal delay={70} className="design-one-critical-reveal design-one-hero-reveal"><h1 className="mt-6 design-one-display-home">Turn booking emails into one organized travel itinerary.</h1></Reveal>
-        <Reveal delay={150} className="design-one-hero-reveal"><p className="mx-auto mt-6 max-w-[590px] text-base leading-7 tracking-[-0.01em] text-[#626262] sm:text-lg sm:leading-8 min-[940px]:mx-0">Forward flight, hotel, car, tour, and ticket confirmations to TripCache. Review your itinerary, track free-cancellation deadlines, and keep documents, receipts, and expenses together.</p></Reveal>
-        <Reveal delay={220} className="design-one-hero-reveal mt-7 flex justify-center min-[940px]:justify-start"><DesignOneStoreButtons /></Reveal>
-        <Reveal delay={280} className="design-one-hero-reveal mx-auto mt-5 grid max-w-[35rem] gap-x-7 gap-y-2.5 text-start text-[13px] font-medium text-[#666666] min-[520px]:grid-cols-2 min-[940px]:mx-0">{heroPoints.map((point) => <span key={point} className="inline-flex items-center gap-2"><BadgeCheck className="h-4 w-4 shrink-0 text-[#602ad2]" />{point}</span>)}</Reveal>
+    <section className="design-one-hero cursor-trail-region relative min-h-screen min-[940px]:min-h-[100svh]">
+      <div className="design-one-hero-atmosphere" aria-hidden="true" />
+      <div className="cursor-trail-layer" aria-hidden="true"><CursorTrailGate /></div>
+      <div className="cursor-trail-content mx-auto grid min-h-screen max-w-[1380px] items-center gap-5 px-5 pb-12 pt-28 sm:px-8 sm:pt-28 min-[940px]:min-h-[100svh] min-[940px]:grid-cols-[minmax(0,1.02fr)_minmax(27rem,0.98fr)] min-[940px]:gap-10 min-[940px]:px-12 min-[940px]:pb-10 min-[940px]:pt-24">
+        <div className="design-one-hero-copy relative mx-auto max-w-[650px] py-3 text-center min-[940px]:mx-0 min-[940px]:py-8 min-[940px]:text-start">
+          <Reveal delay={70} className="design-one-critical-reveal design-one-hero-reveal"><h1 className="design-one-display-home">Turn booking emails into one organized travel itinerary.</h1></Reveal>
+          <Reveal delay={150} className="design-one-hero-reveal"><p className="design-one-hero-lede mx-auto mt-6 max-w-[590px] text-base leading-7 sm:text-lg sm:leading-8 min-[940px]:mx-0">Forward flight, hotel, car, tour, and ticket confirmations to TripCache. Review your itinerary, track free-cancellation deadlines, and keep documents, receipts, and expenses together.</p></Reveal>
+          <Reveal delay={220} className="design-one-hero-reveal mt-7 flex justify-center min-[940px]:justify-start"><DesignOneStoreButtons /></Reveal>
+          <Reveal delay={280} className="design-one-hero-points design-one-hero-reveal mx-auto mt-5 grid max-w-[35rem] gap-x-7 gap-y-2.5 text-start text-[13px] font-medium min-[520px]:grid-cols-2 min-[940px]:mx-0">{heroPoints.map((point) => <span key={point} className="inline-flex items-center gap-2"><BadgeCheck className="h-4 w-4 shrink-0 text-[#602ad2]" />{point}</span>)}</Reveal>
+        </div>
+        <DesignOneHeroCarousel stories={heroStories} />
       </div>
-      <DesignOneHeroCarousel stories={heroStories} />
     </section>
+
+    <div className="design-one-hero-blend" aria-hidden="true">
+      <div /><div /><div /><div />
+    </div>
 
     <Suspense fallback={null}>
       <DeferredHomeContent />
@@ -157,7 +165,7 @@ async function DeferredHomeContent() {
 
   return <>
 
-    <section className="px-5 pb-20 pt-2 sm:px-8 min-[940px]:pb-28"><div className="mx-auto max-w-[1240px]">
+    <section className="design-one-after-hero relative z-[3] px-5 pb-20 pt-8 sm:px-8 sm:pt-10 min-[940px]:pb-28"><div className="mx-auto max-w-[1240px]">
       <Reveal className="mb-8 flex items-end justify-between gap-8"><h2 className="max-w-3xl text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">One calm place for the details after booking.</h2><p className="hidden max-w-xs text-sm leading-6 text-[#746c61] min-[900px]:block">The whole post-booking journey, organized around what you need next.</p></Reveal>
       <div className="journal-story-scroller">{heroStories.map((story, index) => <Reveal key={story.title} delay={index * 70} className="journal-story-card"><div className="relative flex min-h-[355px] items-end overflow-hidden rounded-[26px] bg-[#e8dece] px-5 pt-7"><Image src={story.image} alt={story.alt} width={1250} height={2700} sizes="155px" className="mx-auto w-[155px] translate-y-12 drop-shadow-[0_24px_30px_rgba(42,20,82,0.2)]" /></div><div className="space-y-5 px-1 pt-6"><div><p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#602ad2]">{story.label}</p><h3 className="mt-2 text-xl font-semibold tracking-[-0.025em]">{story.title}</h3><p className="mt-2 text-sm leading-6 text-[#666666]">{story.description}</p></div><div className="rounded-2xl bg-white/54 p-4"><p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#858585]">{story.secondLabel}</p><p className="mt-1.5 text-sm font-bold">{story.secondTitle}</p><p className="mt-1 text-xs leading-5 text-[#666666]">{story.secondDescription}</p></div></div></Reveal>)}</div>
     </div></section>

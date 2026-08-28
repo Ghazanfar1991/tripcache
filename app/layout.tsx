@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import { Navigation } from "@/components/navigation"
 import { StoreLinkAnalytics } from "@/components/store-link-analytics"
+import "@fontsource-variable/plus-jakarta-sans/wght.css"
 import "./globals.css"
 import "./design-one.css"
 
@@ -201,6 +202,7 @@ export default function RootLayout({
           }}
         />
         <meta name="theme-color" content="#f4f0e8" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
