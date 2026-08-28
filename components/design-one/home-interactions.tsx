@@ -89,7 +89,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
     if (paused || pageInactive || reducedMotion) return
     const timer = window.setInterval(() => {
       setCurrentSlide((current) => (current + 1) % stories.length)
-    }, 3800)
+    }, 10000)
     return () => window.clearInterval(timer)
   }, [pageInactive, paused, reducedMotion, stories.length])
 
@@ -153,8 +153,8 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
           >
             <span
               aria-hidden="true"
-              className={`h-1.5 rounded-full transition-[width,background-color,transform] duration-150 group-active:scale-[0.96] ${
-                index === currentSlide ? "w-8 bg-[#602ad2]" : "w-2 bg-[#3f352a]/25 group-hover:bg-[#3f352a]/40"
+              className={`h-1.5 w-8 origin-center rounded-full transition-[background-color,transform] duration-150 group-active:scale-[0.96] ${
+                index === currentSlide ? "scale-x-100 bg-[#602ad2]" : "scale-x-25 bg-[#3f352a]/25 group-hover:bg-[#3f352a]/40"
               }`}
             />
           </button>

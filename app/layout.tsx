@@ -248,7 +248,7 @@ export default function RootLayout({
                 events.forEach(function(eventName) {
                   window.addEventListener(eventName, load, { passive: true, once: true });
                 });
-                window.setTimeout(load, 3500);
+                window.setTimeout(load, 15000);
               })();
             `}
           </Script>
