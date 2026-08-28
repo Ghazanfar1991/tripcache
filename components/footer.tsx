@@ -12,7 +12,7 @@ export function Footer() {
           <div className="col-span-2 max-w-sm space-y-4 min-[800px]:col-span-1">
             <Link href="/" prefetch={false} className="design-one-press group flex items-center gap-3">
               <Image
-                src="/icon.png"
+                src="/app-icon-violet-indigo.png"
                 alt=""
                 width={40}
                 height={40}

@@ -70,7 +70,7 @@ export function Navigation() {
         <div className="floating-nav-content">
           <Link href="/" prefetch={false} className="design-one-press floating-nav-brand group flex shrink-0 items-center gap-2.5" aria-label="TripCache home">
             <Image
-              src="/icon.png"
+              src="/app-icon-violet-indigo.png"
               alt=""
               width={34}
               height={34}

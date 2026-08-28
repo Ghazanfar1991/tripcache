@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     creator: "@tripcache",
   },
   icons: {
-    icon: "/app-icon.webp",
-    shortcut: "/app-icon.webp",
-    apple: "/app-icon.webp",
+    icon: "/app-icon-violet-indigo.webp",
+    shortcut: "/app-icon-violet-indigo.webp",
+    apple: "/app-icon-violet-indigo.webp",
   },
   robots: {
     index: true,
@@ -118,7 +118,7 @@ export default function RootLayout({
               "@id": `${SITE_URL}/#organization`,
               name: "TripCache",
               url: SITE_URL,
-              logo: `${SITE_URL}/app-icon.webp`,
+              logo: `${SITE_URL}/app-icon-violet-indigo.webp`,
               description:
                 "TripCache helps travelers turn confirmation emails into organized itineraries while tracking cancellation reminders, documents, receipts, and expenses.",
               email: "support@trip-cache.com",
@@ -161,7 +161,7 @@ export default function RootLayout({
               applicationSubCategory: "Travel itinerary and post-booking organizer",
               operatingSystem: "iOS, Android",
               url: SITE_URL,
-              image: `${SITE_URL}/app-icon.webp`,
+              image: `${SITE_URL}/app-icon-violet-indigo.webp`,
               description:
                 "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, trip documents, receipts, and expense records.",
               downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
