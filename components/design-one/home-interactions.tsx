@@ -62,7 +62,7 @@ export function DesignOneStoreButtons() {
 export function DesignOneSupportLink({ className, children }: { className?: string; children: ReactNode }) {
   return (
     <a
-      href="mailto:"
+      href="#faq"
       className={className}
       onClick={(event) => {
         event.preventDefault()
