@@ -1,3 +1,5 @@
+import "../../secondary.css"
+
 import { Footer } from "@/components/footer"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import Image from "next/image"

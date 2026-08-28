@@ -1,3 +1,5 @@
+import "../secondary.css"
+
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft, CalendarClock, FileSpreadsheet, MailCheck } from "lucide-react"

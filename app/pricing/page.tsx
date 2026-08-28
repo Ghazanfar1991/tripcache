@@ -1,3 +1,5 @@
+import "../secondary.css"
+
 import Link from "next/link"
 import { ArrowRight, CheckCircle2, Clock3, FileSpreadsheet, MailCheck, ShieldCheck } from "lucide-react"
 

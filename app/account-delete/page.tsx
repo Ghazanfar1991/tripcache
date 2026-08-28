@@ -1,3 +1,5 @@
+import "../secondary.css"
+
 import Link from "next/link"
 import type { Metadata } from "next"
 import { ArrowLeft, Mail, Smartphone, Trash2 } from "lucide-react"

@@ -1,3 +1,5 @@
+import "../secondary.css"
+
 import Link from "next/link"
 import { SectionContainer } from "@/components/section-container"
 import { Footer } from "@/components/footer"

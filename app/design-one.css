@@ -1,14 +1,15 @@
 @keyframes animationIn {
   from {
-    opacity: 0;
     transform: translateY(24px);
-    filter: blur(7px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
+}
+
+@keyframes heroAnimationIn {
+  from { transform: translateY(12px); }
+  to { transform: translateY(0); }
 }
 
 @keyframes storyChangeIn {
@@ -53,6 +54,17 @@
   animation: animationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both;
 }
 
+.design-one-reveal.design-one-hero-reveal {
+  animation: heroAnimationIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both;
+  opacity: 1;
+}
+
+.design-one-reveal.design-one-critical-reveal {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
 .design-one-story-change {
   animation: storyChangeIn 450ms cubic-bezier(0.23, 1, 0.32, 1) both;
 }
@@ -62,7 +74,7 @@
 }
 
 @supports (animation-timeline: view()) {
-  .design-one-reveal {
+  .design-one-reveal:not(.design-one-hero-reveal) {
     animation-delay: 0ms;
     animation-duration: 1ms;
     animation-timeline: view(block);

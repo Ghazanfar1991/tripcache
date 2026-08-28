@@ -1,3 +1,5 @@
+import "../secondary.css"
+
 import Link from "next/link"
 import { Footer } from "@/components/footer"
 import { BlogCardPremium } from "@/components/blog-card-premium"

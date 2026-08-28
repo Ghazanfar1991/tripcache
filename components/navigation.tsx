@@ -71,7 +71,7 @@ export function Navigation() {
           <Link href="/" prefetch={false} className="design-one-press floating-nav-brand group flex shrink-0 items-center gap-2.5" aria-label="TripCache home">
             <Image
               src="/icon.png"
-              alt="TripCache"
+              alt=""
               width={34}
               height={34}
               className="rounded-[10px] shadow-sm transition-transform duration-150 group-hover:scale-[1.04]"

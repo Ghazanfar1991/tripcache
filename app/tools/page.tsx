@@ -1,3 +1,5 @@
+import "../secondary.css"
+
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, CalendarClock } from "lucide-react"

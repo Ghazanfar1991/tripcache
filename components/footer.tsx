@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" prefetch={false} className="design-one-press group flex items-center gap-3">
               <Image
                 src="/icon.png"
-                alt="TripCache"
+                alt=""
                 width={40}
                 height={40}
                 className="rounded-[11px] shadow-sm transition-transform duration-150 ease-out group-hover:scale-[1.04]"
@@ -90,7 +90,7 @@ export function Footer() {
          </div>
          
 
-        <div className="mt-12 border-t border-[#3f352a]/10 pt-8 text-center text-sm text-[#7c7469]">
+        <div className="mt-12 border-t border-[#3f352a]/10 pt-8 text-center text-sm text-[#665f56]">
           <p>© {new Date().getFullYear()} TripCache. All rights reserved.</p>
         </div>
       </SectionContainer>

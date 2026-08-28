@@ -14,9 +14,9 @@
     ],
     "icons": [
         {
-            "src": "/icon.png",
-            "sizes": "1024x1024",
-            "type": "image/png",
+            "src": "/app-icon.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
             "purpose": "any maskable"
         }
     ],
@@ -36,9 +36,9 @@
             "url": "/?action=waitlist",
             "icons": [
                 {
-                    "src": "/icon.png",
-                    "sizes": "1024x1024",
-                    "type": "image/png"
+                    "src": "/app-icon.webp",
+                    "sizes": "512x512",
+                    "type": "image/webp"
                 }
             ]
         }

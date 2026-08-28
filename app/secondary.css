@@ -1,0 +1,25 @@
+/*
+ * Utilities used outside the landing page. Keeping these route-scoped stops
+ * first-time home-page visitors from downloading styles for every article,
+ * comparison, calculator, and account page.
+ */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+
+@source "./about";
+@source "./account-delete";
+@source "./alternatives";
+@source "./blog";
+@source "./features";
+@source "./pricing";
+@source "./privacy";
+@source "./terms";
+@source "./tools";
+@source "./not-found.tsx";
+@source "../components/blog-card-premium.tsx";
+@source "../components/blog-share-button.tsx";
+@source "../components/mailchimp-form.tsx";
+@source "../components/reading-progress.tsx";
+@source "../components/seo";
+@source "../components/ui/button.tsx";
+@source "../hooks";

@@ -3,9 +3,7 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
-import "lenis/dist/lenis.css"
 import { Navigation } from "@/components/navigation"
-import { SiteMotion } from "@/components/site-motion"
 import { StoreLinkAnalytics } from "@/components/store-link-analytics"
 import "./globals.css"
 import "./design-one.css"
@@ -19,6 +17,7 @@ const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATIO
 const SITE_URL = "https://trip-cache.com"
 const IOS_STORE_URL = "https://apps.apple.com/app/id6758403056"
 const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=app.tripcache"
+const IS_VERCEL_DEPLOYMENT = process.env.VERCEL === "1"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -76,9 +75,9 @@ export const metadata: Metadata = {
     creator: "@tripcache",
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/app-icon.webp",
+    shortcut: "/app-icon.webp",
+    apple: "/app-icon.webp",
   },
   robots: {
     index: true,
@@ -109,13 +108,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning>
       <head>
-        {GA_MEASUREMENT_ID ? (
-          <>
-            <link rel="preconnect" href="https://www.googletagmanager.com" />
-            <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-          </>
-        ) : null}
-
         <script
           id="organization-schema"
           type="application/ld+json"
@@ -126,7 +118,7 @@ export default function RootLayout({
               "@id": `${SITE_URL}/#organization`,
               name: "TripCache",
               url: SITE_URL,
-              logo: `${SITE_URL}/icon.png`,
+              logo: `${SITE_URL}/app-icon.webp`,
               description:
                 "TripCache helps travelers turn confirmation emails into organized itineraries while tracking cancellation reminders, documents, receipts, and expenses.",
               email: "support@trip-cache.com",
@@ -169,7 +161,7 @@ export default function RootLayout({
               applicationSubCategory: "Travel itinerary and post-booking organizer",
               operatingSystem: "iOS, Android",
               url: SITE_URL,
-              image: `${SITE_URL}/icon.png`,
+              image: `${SITE_URL}/app-icon.webp`,
               description:
                 "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, trip documents, receipts, and expense records.",
               downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
@@ -220,28 +212,46 @@ export default function RootLayout({
           Skip to content
         </a>
         <Navigation />
-        <SiteMotion />
         <StoreLinkAnalytics />
         <div id="main-content">{children}</div>
-        <Analytics />
-        <SpeedInsights />
-        {GA_MEASUREMENT_ID ? (
+        {IS_VERCEL_DEPLOYMENT ? (
           <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga-init" strategy="afterInteractive">
-              {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_MEASUREMENT_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `}
-            </Script>
+            <Analytics />
+            <SpeedInsights />
           </>
+        ) : null}
+        {GA_MEASUREMENT_ID ? (
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                page_path: window.location.pathname,
+              });
+
+              (function deferGoogleAnalytics() {
+                var loaded = false;
+                var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+                var load = function() {
+                  if (loaded) return;
+                  loaded = true;
+                  events.forEach(function(eventName) {
+                    window.removeEventListener(eventName, load);
+                  });
+                  var script = document.createElement('script');
+                  script.async = true;
+                  script.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+                  document.head.appendChild(script);
+                };
+
+                events.forEach(function(eventName) {
+                  window.addEventListener(eventName, load, { passive: true, once: true });
+                });
+                window.setTimeout(load, 3500);
+              })();
+            `}
+          </Script>
         ) : null}
       </body>
     </html>

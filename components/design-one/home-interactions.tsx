@@ -93,6 +93,8 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
     return () => window.clearInterval(timer)
   }, [pageInactive, paused, reducedMotion, stories.length])
 
+  const story = stories[currentSlide]
+
   return (
     <div
       className="relative mx-auto min-h-[520px] w-full max-w-[620px] sm:min-h-[590px] min-[940px]:min-h-[620px]"
@@ -103,62 +105,41 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
       <div className="absolute inset-[14%] rounded-full border border-[#3b3329]/10" />
 
       <div className="absolute inset-0 z-20" aria-live="polite">
-        {stories.map((story, index) => {
-          const active = index === currentSlide
-
-          return (
-            <div
-              key={story.image}
-              className="hero-story-screen absolute inset-x-0 top-1/2 mx-auto w-[210px] sm:w-[245px] min-[940px]:w-[258px]"
-              data-active={active}
-              aria-hidden={!active}
-            >
-              <Image
-                src={story.image}
-                alt={active ? story.alt : ""}
-                width={1250}
-                height={2700}
-                preload={index === 0}
-                className="h-auto w-full drop-shadow-[0_55px_58px_rgba(66,49,31,0.25)]"
-              />
-            </div>
-          )
-        })}
+        <div
+          key={story.image}
+          className="design-one-story-screen-change hero-story-screen absolute inset-x-0 top-1/2 mx-auto w-[210px] sm:w-[245px] min-[940px]:w-[258px]"
+          data-active="true"
+        >
+          <Image
+            src={story.image}
+            alt={story.alt}
+            width={1250}
+            height={2700}
+            sizes="(min-width: 940px) 258px, (min-width: 640px) 245px, 210px"
+            className="h-auto w-full drop-shadow-[0_55px_58px_rgba(66,49,31,0.25)]"
+          />
+        </div>
       </div>
 
-      {stories.map((story, index) => {
-        const active = index === currentSlide
+      <div
+        key={`primary-${story.title}`}
+        className="design-one-story-change hero-story-card hero-story-card-primary absolute z-30 hidden w-[210px] p-5 text-white sm:block"
+        data-active="true"
+      >
+        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{story.label}</p>
+        <p className="mt-6 text-2xl font-semibold tracking-[-0.04em]">{story.title}</p>
+        <p className="mt-2 text-xs leading-5 text-white/80">{story.description}</p>
+      </div>
 
-        return (
-          <div
-            key={`primary-${story.title}`}
-            className="hero-story-card hero-story-card-primary absolute z-30 hidden w-[210px] p-5 text-white sm:block"
-            data-active={active}
-            aria-hidden={!active}
-          >
-            <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">{story.label}</p>
-            <p className="mt-6 text-2xl font-semibold tracking-[-0.04em]">{story.title}</p>
-            <p className="mt-2 text-xs leading-5 text-white/80">{story.description}</p>
-          </div>
-        )
-      })}
-
-      {stories.map((story, index) => {
-        const active = index === currentSlide
-
-        return (
-          <div
-            key={`secondary-${story.secondTitle}`}
-            className="design-one-glass hero-story-card hero-story-card-secondary absolute z-30 w-[190px] p-4 sm:w-[200px]"
-            data-active={active}
-            aria-hidden={!active}
-          >
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#602ad2]">{story.secondLabel}</p>
-            <p className="mt-2 text-sm font-bold">{story.secondTitle}</p>
-            <p className="mt-1 text-[11px] leading-4 text-[#766d62]">{story.secondDescription}</p>
-          </div>
-        )
-      })}
+      <div
+        key={`secondary-${story.secondTitle}`}
+        className="design-one-glass design-one-story-change hero-story-card hero-story-card-secondary absolute z-30 w-[190px] p-4 sm:w-[200px]"
+        data-active="true"
+      >
+        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#602ad2]">{story.secondLabel}</p>
+        <p className="mt-2 text-sm font-bold">{story.secondTitle}</p>
+        <p className="mt-1 text-[11px] leading-4 text-[#766d62]">{story.secondDescription}</p>
+      </div>
 
       <div className="absolute inset-x-0 bottom-[5%] z-40 flex items-center justify-center gap-2">
         {stories.map((story, index) => (
@@ -168,10 +149,15 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
             onClick={() => setCurrentSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={index === currentSlide ? "true" : undefined}
-            className={`h-1.5 rounded-full transition-[width,background-color,transform] duration-150 active:scale-[0.96] ${
-              index === currentSlide ? "w-8 bg-[#602ad2]" : "w-2 bg-[#3f352a]/20 hover:bg-[#3f352a]/35"
-            }`}
-          />
+            className="group grid h-11 w-11 touch-manipulation place-items-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45"
+          >
+            <span
+              aria-hidden="true"
+              className={`h-1.5 rounded-full transition-[width,background-color,transform] duration-150 group-active:scale-[0.96] ${
+                index === currentSlide ? "w-8 bg-[#602ad2]" : "w-2 bg-[#3f352a]/25 group-hover:bg-[#3f352a]/40"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

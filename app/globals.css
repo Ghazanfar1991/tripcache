@@ -1,5 +1,14 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import "tailwindcss" source(none);
+@source "./layout.tsx";
+@source "./page.tsx";
+@source "../components/design-one/home.tsx";
+@source "../components/design-one/home-interactions.tsx";
+@source "../components/design-one/reveal.tsx";
+@source "../components/navigation.tsx";
+@source "../components/footer.tsx";
+@source "../components/get-started-modal.tsx";
+@source "../components/section-container.tsx";
+@source "../components/store-link-analytics.tsx";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -117,7 +126,8 @@
   }
 
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   body {
@@ -140,9 +150,4 @@
     --color-accent-solid-hover: var(--ink-900);
     --color-accent-text: var(--violet-700);
   }
-}
-
-.content-auto-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 960px;
 }
