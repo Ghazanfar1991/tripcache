@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T20:39:19.328Z",
+  "generatedAt": "2026-08-29T14:08:34.755Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -14,7 +14,7 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 10,
+        "eventCount": 11,
         "activeUsers": 7
       }
     },
@@ -47,8 +47,19 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 50,
-        "activeUsers": 40
+        "sessions": 61,
+        "activeUsers": 44
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 16,
+        "activeUsers": 8
       }
     },
     {
@@ -60,17 +71,6 @@
       "metrics": {
         "sessions": 13,
         "activeUsers": 13
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 11,
-        "activeUsers": 8
       }
     },
     {
@@ -141,6 +141,50 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "/",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/about",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog",
         "platform": "web"
@@ -197,7 +241,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "(not set)",
+        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
@@ -208,7 +252,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/about",
+        "landingPagePlusQueryString": "(not set)",
         "platform": "web"
       },
       "metrics": {
@@ -295,6 +339,17 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "/about",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "bing / organic",
         "landingPagePlusQueryString": "/blog/best-travel-document-organizer-app-2026",
         "platform": "web"
@@ -363,11 +418,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 114,
-    "landingSessions": 137,
+    "landingUsers": 120,
+    "landingSessions": 158,
     "storeIntentUsers": 8,
     "storeIntentEvents": 9,
-    "rate": 0.07017543859649122,
+    "rate": 0.06666666666666667,
     "eventNames": [
       "app_store_click",
       "play_store_click"
