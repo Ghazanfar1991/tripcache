@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T14:09:39.298Z",
+  "generatedAt": "2026-08-30T14:16:07.834Z",
   "baseUrl": "https://trip-cache.com",
   "pages": [
     {
@@ -9,52 +9,76 @@
       "title": "Travel Itinerary App for Booking Emails | TripCache",
       "description": "Turn booking emails into one organized travel itinerary. Track cancellation deadlines and keep documents, receipts, flights, stays, and expenses together.",
       "canonical": "https://trip-cache.com/",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/about",
       "status": 200,
       "finalUrl": "https://trip-cache.com/about",
-      "title": "About TripCache | TripCache",
+      "title": "About the Post-Booking Travel Organizer | TripCache",
       "description": "Learn why TripCache focuses on confirmation emails, cancellation deadlines, travel documents, receipts, and post-trip records.",
       "canonical": "https://trip-cache.com/about",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/about",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/pricing",
       "status": 200,
       "finalUrl": "https://trip-cache.com/pricing",
-      "title": "Pricing | TripCache",
+      "title": "Travel App Pricing | TripCache",
       "description": "Start with TripCache Basic for free, choose Pro for $5.99/month, or save 30% with Pro Yearly at $49.99/year.",
       "canonical": "https://trip-cache.com/pricing",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/pricing",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/features",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features",
-      "title": "TripCache Features for Email Itineraries, Reminders, and Expenses | TripCache",
+      "title": "Email Itinerary, Reminder, and Expense Features | TripCache",
       "description": "Explore TripCache features for travel email organization, cancellation deadline reminders, business travel receipts, documents, and expenses.",
       "canonical": "https://trip-cache.com/features",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/features",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/alternatives",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives",
-      "title": "TripCache Alternatives to TripIt and TripCase | TripCache",
+      "title": "Alternatives to TripIt and TripCase | TripCache",
       "description": "Compare TripCache with TripIt and TripCase for travel email organization, cancellation reminders, documents, receipts, and business travel workflows.",
       "canonical": "https://trip-cache.com/alternatives",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/alternatives",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/tools",
       "status": 200,
       "finalUrl": "https://trip-cache.com/tools",
-      "title": "TripCache Travel Tools | TripCache",
+      "title": "Free Travel Tools | TripCache",
       "description": "Free TripCache tools for travelers, starting with a hotel cancellation deadline calculator for refundable bookings.",
       "canonical": "https://trip-cache.com/tools",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/tools",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
@@ -63,16 +87,24 @@
       "title": "Hotel Cancellation Deadline Calculator | TripCache",
       "description": "Calculate hotel free-cancellation deadlines by check-in date, policy window, cutoff time, and hotel time zone, then copy a reminder summary.",
       "canonical": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
+      "h1Count": 1,
+      "jsonLdCount": 5,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/privacy",
       "status": 200,
       "finalUrl": "https://trip-cache.com/privacy",
       "title": "Privacy Policy | TripCache",
-      "description": "Understand how TripCache collects, stores, and protects your travel data.",
+      "description": "Understand how TripCache collects, uses, stores, and handles your travel data.",
       "canonical": "https://trip-cache.com/privacy",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/privacy",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/terms",
@@ -81,7 +113,11 @@
       "title": "Terms of Service | TripCache",
       "description": "TripCache Terms of Service outlining acceptable use, payments, and legal responsibilities.",
       "canonical": "https://trip-cache.com/terms",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/terms",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/account-delete",
@@ -90,7 +126,11 @@
       "title": "Delete Your Account | TripCache",
       "description": "Learn how to delete your TripCache account directly from the app or contact support for account deletion help.",
       "canonical": "https://trip-cache.com/account-delete",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/account-delete",
+      "h1Count": 1,
+      "jsonLdCount": 3,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog",
@@ -99,52 +139,76 @@
       "title": "Post-Booking Travel Organization Guides | TripCache",
       "description": "Practical guides for organizing travel confirmation emails, itineraries, cancellation deadlines, documents, receipts, and business trip expenses.",
       "canonical": "https://trip-cache.com/blog",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/features/email-to-itinerary",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features/email-to-itinerary",
-      "title": "Email-to-Itinerary App for Travel Confirmation Emails | TripCache",
-      "description": "Forward travel confirmation emails to TripCache and turn flights, hotels, rental cars, and bookings into organized trip timelines.",
+      "title": "Email-to-Itinerary App for Booking Confirmations | TripCache",
+      "description": "Use TripCache&#x27;s paid Email Import with supported travel confirmations to create reviewable trip drafts for flights, hotels, rental cars, and tickets.",
       "canonical": "https://trip-cache.com/features/email-to-itinerary",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/features/email-to-itinerary",
+      "h1Count": 1,
+      "jsonLdCount": 5,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/features/cancellation-reminders",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features/cancellation-reminders",
-      "title": "Hotel Cancellation Reminder and Booking Deadline Tracker | TripCache",
-      "description": "Track hotel, rental car, and refundable booking cancellation deadlines so you can avoid missed free-cancellation windows.",
+      "title": "Hotel Cancellation Reminder and Deadline Tracker | TripCache",
+      "description": "Use the paid plan to record hotel, rental-car, and refundable-booking cancellation cutoffs and set reminders; the provider&#x27;s confirmation remains authoritative.",
       "canonical": "https://trip-cache.com/features/cancellation-reminders",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/features/cancellation-reminders",
+      "h1Count": 1,
+      "jsonLdCount": 5,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/features/business-travel-expenses",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features/business-travel-expenses",
-      "title": "Business Travel Organizer for Receipts and Trip Expenses | TripCache",
-      "description": "Organize business trip bookings, receipts, documents, and expenses so reimbursement records stay connected to each trip.",
+      "title": "Business Travel Expense and Receipt Organizer | TripCache",
+      "description": "Organize business-trip bookings, receipts, documents, and expenses by trip, with paid CSV export for reimbursement review.",
       "canonical": "https://trip-cache.com/features/business-travel-expenses",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/features/business-travel-expenses",
+      "h1Count": 1,
+      "jsonLdCount": 5,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/alternatives/tripit",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives/tripit",
-      "title": "TripIt Alternative for Email Itineraries and Cancellation Reminders | TripCache",
+      "title": "TripIt Alternative with Reminders and Documents | TripCache",
       "description": "Compare TripCache with TripIt if you want travel email organization, cancellation deadline tracking, documents, and business travel expense workflows.",
       "canonical": "https://trip-cache.com/alternatives/tripit",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/alternatives/tripit",
+      "h1Count": 1,
+      "jsonLdCount": 5,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/alternatives/tripcase",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives/tripcase",
-      "title": "TripCase Alternative for Travel Emails, Documents, and Reminders | TripCache",
+      "title": "TripCase Alternative for Travel Confirmations | TripCache",
       "description": "Use TripCache as a TripCase alternative for organizing travel confirmations, trip timelines, cancellation reminders, documents, and expenses.",
       "canonical": "https://trip-cache.com/alternatives/tripcase",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/alternatives/tripcase",
+      "h1Count": 1,
+      "jsonLdCount": 5,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
@@ -153,7 +217,11 @@
       "title": "Best TripIt Alternatives in 2026: 6 Apps Compared",
       "description": "Compare TripIt alternatives in 2026 by email import, travel documents, cancellation reminders, maps, flight tools, and expense workflows.",
       "canonical": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
@@ -162,7 +230,11 @@
       "title": "AI Travel Organizer App for Emails, PDFs, and Trips",
       "description": "See how an AI travel organizer turns booking emails, PDFs, flights, hotels, tickets, documents, reminders, maps, and expenses into one itinerary.",
       "canonical": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
@@ -171,7 +243,11 @@
       "title": "Hotel Cancellation Reminder + Free Calculator",
       "description": "Calculate a hotel&#x27;s free-cancellation cutoff, save confirmation details, and set TripCache reminders before a refundable rate becomes non-refundable.",
       "canonical": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
@@ -180,7 +256,11 @@
       "title": "Rental Car Cancellation Reminder App and Checklist",
       "description": "Track rental car pickup details, free-cancellation deadlines, prepaid rates, receipts, and travel expense records with a reminder workflow.",
       "canonical": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/trip-expense-management-app-2026",
@@ -189,7 +269,11 @@
       "title": "Trip Expense Management App for Receipts and Costs",
       "description": "Use TripCache as a trip expense management app to track travel costs, receipts, invoices, cancellation fees, and reimbursement records by itinerary.",
       "canonical": "https://trip-cache.com/blog/trip-expense-management-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/trip-expense-management-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/trip-map-itinerary-planner-app-2026",
@@ -198,7 +282,11 @@
       "title": "Trip Map Itinerary Planner App for Visual Travel Plans",
       "description": "Use a trip map itinerary planner to visualize hotels, activities, transport, meetings, and travel plans alongside reminders and trip details.",
       "canonical": "https://trip-cache.com/blog/trip-map-itinerary-planner-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/trip-map-itinerary-planner-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
@@ -207,7 +295,11 @@
       "title": "Travel Booking Organizer App for Every Reservation",
       "description": "Use a travel booking organizer app to keep flights, hotels, rental cars, activities, tickets, documents, notes, and reminders in one itinerary.",
       "canonical": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
@@ -216,7 +308,11 @@
       "title": "Best Travel Document Organizer App: What to Look For",
       "description": "A guide to choosing a travel document organizer app for passports, visas, boarding passes, flight tickets, hotel confirmations, receipts, and trip documents.",
       "canonical": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
@@ -225,7 +321,11 @@
       "title": "How to Organize Travel Confirmation Emails Automatically",
       "description": "Organize flight, hotel, rental car, ticket, and other travel confirmation emails into a structured itinerary with a review-first workflow.",
       "canonical": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
@@ -234,7 +334,11 @@
       "title": "Business Travel Expense App for Receipts and CSV Exports",
       "description": "Organize business travel receipts, booking confirmations, cancellation reminders, and CSV exports into a cleaner expense-reporting workflow.",
       "canonical": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
@@ -243,7 +347,11 @@
       "title": "TripIt Alternative for Reminders and Travel Documents",
       "description": "Compare a TripIt alternative focused on cancellation reminders, trip-linked documents, booking emails, receipts, and travel expense exports.",
       "canonical": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
@@ -252,7 +360,11 @@
       "title": "Free Cancellation Reminder App for Travel Bookings",
       "description": "Track hotel, rental car, tour, ticket, and transport cancellation deadlines with a free-cancellation reminder workflow organized by trip.",
       "canonical": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/ai-trip-planner-2026",
@@ -261,7 +373,11 @@
       "title": "AI Trip Planner vs Travel Organizer: Key Differences",
       "description": "Compare AI trip planners and AI travel organizers by workflow, inputs, outputs, limitations, privacy choices, and the point in a trip when each is useful.",
       "canonical": "https://trip-cache.com/blog/ai-trip-planner-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/ai-trip-planner-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/business-travel-management-guide-2026",
@@ -270,7 +386,11 @@
       "title": "Business Travel Organization Checklist for 2026",
       "description": "Use this business travel organization checklist to manage bookings, cancellation deadlines, receipts, trip documents, expense notes, and CSV records.",
       "canonical": "https://trip-cache.com/blog/business-travel-management-guide-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/business-travel-management-guide-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/travel-itinerary-template-2026",
@@ -279,7 +399,11 @@
       "title": "Free Travel Itinerary Template: Vacation and Business",
       "description": "Copy free vacation, business trip, road trip, and group travel itinerary templates with fields for bookings, contacts, documents, deadlines, and expenses.",
       "canonical": "https://trip-cache.com/blog/travel-itinerary-template-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/travel-itinerary-template-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
@@ -288,7 +412,11 @@
       "title": "Flighty vs TripCache: Flight Tracker or Trip Organizer?",
       "description": "Compare Flighty and TripCache for flight alerts, itinerary import, cancellation reminders, documents, receipts, expenses, platforms, and current pricing.",
       "canonical": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/google-travel-alternative-2026",
@@ -297,7 +425,11 @@
       "title": "Google Trips Replacement: Best Alternatives for 2026",
       "description": "Find a Google Trips replacement for reservation import, itinerary planning, maps, flight alerts, documents, cancellation reminders, and trip expenses.",
       "canonical": "https://trip-cache.com/blog/google-travel-alternative-2026",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/google-travel-alternative-2026",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/tripcase-alternative-2025",
@@ -306,7 +438,11 @@
       "title": "Best TripCase Alternatives After the Shutdown (2026 Guide)",
       "description": "Compare TripCase alternatives in 2026 for itinerary import, flight alerts, cancellation reminders, travel documents, maps, and expenses.",
       "canonical": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
@@ -315,7 +451,11 @@
       "title": "TripCase Is Gone: 2026 Replacement &amp; Recovery Guide",
       "description": "TripCase shut down in 2025. Rebuild upcoming trips from confirmation emails and compare 2026 replacements for itineraries, planning, flights, and reminders.",
       "canonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/best-travel-apps-2025",
@@ -324,7 +464,11 @@
       "title": "Best Travel Apps for Planning in 2026: 4 Top Picks",
       "description": "Compare TripCache, TripIt, Wanderlog, and Flighty for itinerary planning, booking imports, maps, flight alerts, cancellation reminders, and documents.",
       "canonical": "https://trip-cache.com/blog/best-travel-apps-2025",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/best-travel-apps-2025",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
@@ -333,7 +477,11 @@
       "title": "TripIt vs TripCache: Features and Pricing (2026)",
       "description": "Compare TripIt and TripCache pricing, email itinerary tools, flight alerts, cancellation reminders, document organization, and expense exports in 2026.",
       "canonical": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/email-to-trip-automation",
@@ -342,7 +490,11 @@
       "title": "Email to Itinerary App: How Travel Email Automation Works",
       "description": "See how email-to-itinerary apps turn travel confirmations into organized trip items, what to verify, and how to set up a reliable forwarding workflow.",
       "canonical": "https://trip-cache.com/blog/email-to-trip-automation",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/email-to-trip-automation",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     },
     {
       "url": "https://trip-cache.com/blog/privacy-and-security",
@@ -351,7 +503,11 @@
       "title": "Travel App Privacy: What to Check Before Uploading Documents",
       "description": "Use this travel app privacy checklist to review disclosures, deletion controls, and document sensitivity before uploading travel records.",
       "canonical": "https://trip-cache.com/blog/privacy-and-security",
-      "robots": "index, follow"
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/privacy-and-security",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": []
     }
   ]
 }

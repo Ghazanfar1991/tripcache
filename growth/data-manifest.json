@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T14:09:39.303Z",
+  "generatedAt": "2026-08-30T14:16:07.839Z",
   "sources": [
     {
       "id": "search-console",
@@ -7,13 +7,13 @@
       "freshness": "fresh",
       "reportingLagDays": 3,
       "note": "Automated through the Search Console API using a repository-scoped short-lived token.",
-      "latestSyncTime": "2026-08-29T14:08:34.708Z",
+      "latestSyncTime": "2026-08-30T14:15:03.426Z",
       "coveredDateRange": {
-        "startDate": "2026-07-31",
-        "endDate": "2026-08-27"
+        "startDate": "2026-08-01",
+        "endDate": "2026-08-28"
       },
       "generatedLocalSnapshot": "growth/data/search-console/latest.json",
-      "checkedAt": "2026-08-29T14:08:34.717Z",
+      "checkedAt": "2026-08-30T14:15:03.433Z",
       "warehouseTable": "trip-cache.tripcache_growth.search_console_daily"
     },
     {
@@ -21,28 +21,28 @@
       "status": "SUCCESS",
       "freshness": "fresh",
       "note": "GA4 app, web traffic, referrals, and store-intent measurement available.",
-      "latestSyncTime": "2026-08-29T14:08:34.755Z",
+      "latestSyncTime": "2026-08-30T14:15:03.471Z",
       "generatedLocalSnapshot": "growth/data/app/latest.json",
-      "checkedAt": "2026-08-29T14:08:35.599Z"
+      "checkedAt": "2026-08-30T14:15:04.265Z"
     },
     {
       "id": "revenuecat",
       "status": "SUCCESS",
       "freshness": "fresh",
       "note": "Automated through RevenueCat API v2 with charts/metrics read-only access.",
-      "latestSyncTime": "2026-08-29T14:08:41.608Z",
+      "latestSyncTime": "2026-08-30T14:15:11.544Z",
       "warehouseTable": "trip-cache.tripcache_growth.revenue_daily",
       "generatedLocalSnapshot": "growth/data/revenue/latest.json",
-      "checkedAt": "2026-08-29T14:08:49.767Z"
+      "checkedAt": "2026-08-30T14:15:19.272Z"
     },
     {
       "id": "production-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-08-29T14:09:39.298Z",
+      "latestSyncTime": "2026-08-30T14:16:07.834Z",
       "generatedLocalSnapshot": "growth/data/seo/technical-health.json",
       "note": "39 sitemap URLs verified.",
-      "checkedAt": "2026-08-29T14:09:39.303Z"
+      "checkedAt": "2026-08-30T14:16:07.839Z"
     },
     {
       "id": "firebase-crashlytics",
@@ -50,25 +50,25 @@
       "freshness": "fresh",
       "note": "Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.",
       "generatedLocalSnapshot": "growth/data/app/quality.json",
-      "checkedAt": "2026-08-29T14:08:41.572Z",
-      "latestSyncTime": "2026-08-29T14:08:36.051Z"
+      "checkedAt": "2026-08-30T14:15:11.510Z",
+      "latestSyncTime": "2026-08-30T14:15:04.774Z"
     },
     {
       "id": "google-play",
       "status": "SUCCESS",
       "freshness": "stale",
-      "latestSyncTime": "2026-08-29T14:08:50.530Z",
+      "latestSyncTime": "2026-08-30T14:15:19.955Z",
       "generatedLocalSnapshot": "growth/data/store/google-play.json",
-      "note": "Play export fetched successfully, but the latest reported date (2026-08-21) is 8 days old; treat install totals as stale.",
-      "checkedAt": "2026-08-29T14:08:50.540Z"
+      "note": "Play export fetched successfully, but the latest reported date (2026-08-21) is 9 days old; treat install totals as stale.",
+      "checkedAt": "2026-08-30T14:15:19.965Z"
     },
     {
       "id": "app-store-connect",
       "status": "STALE_SOURCE_DATA",
       "freshness": "stale",
       "note": "App Store report is stale or unavailable; latest report 2026-08-25.",
-      "checkedAt": "2026-08-29T14:09:09.455Z",
-      "latestSyncTime": "2026-08-29T14:09:09.452Z",
+      "checkedAt": "2026-08-30T14:15:38.957Z",
+      "latestSyncTime": "2026-08-30T14:15:38.954Z",
       "generatedLocalSnapshot": "growth/data/store/app-store.json"
     }
   ]
