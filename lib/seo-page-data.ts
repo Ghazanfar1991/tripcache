@@ -18,6 +18,7 @@ export interface SeoLandingPage {
   imageAlt: string
   primaryKeyword: string
   proofPoints: string[]
+  planNote: string
   benefits: Array<{
     title: string
     copy: string
@@ -31,6 +32,10 @@ export interface SeoLandingPage {
     href: string
     label: string
   }>
+  resourceCta: {
+    href: string
+    label: string
+  }
   faqs: SeoFaq[]
 }
 
@@ -40,15 +45,17 @@ export const featurePages: SeoLandingPage[] = [
     slug: "email-to-itinerary",
     path: "/features/email-to-itinerary",
     title: "Email-to-itinerary automation",
-    metaTitle: "Email-to-Itinerary App for Travel Confirmation Emails",
+    metaTitle: "Email-to-Itinerary App for Booking Confirmations",
     description:
-      "Forward travel confirmation emails to TripCache and turn flights, hotels, rental cars, and bookings into organized trip timelines.",
+      "Use TripCache's paid Email Import with supported travel confirmations to create reviewable trip drafts for flights, hotels, rental cars, and tickets.",
     eyebrow: "Travel email organizer",
-    hero: "Forward travel emails. TripCache turns booking confirmations into organized itineraries.",
+    hero: "Forward supported travel emails. TripCache turns booking confirmations into reviewable itinerary drafts.",
     image: "/app-screenshot-import.webp",
     imageAlt: "TripCache import screen for forwarding travel confirmation emails",
     primaryKeyword: "travel email organizer",
-    proofPoints: ["Booking email forwarding", "Automatic trip timelines", "Flights, stays, cars, and tickets"],
+    proofPoints: ["Supported email forwarding", "Reviewable trip drafts", "Flights, stays, cars, and tickets"],
+    planNote:
+      "Email Import is included in the paid plan and works with supported booking confirmations. Review each draft before saving.",
     benefits: [
       {
         title: "Stop hunting through your inbox",
@@ -67,7 +74,7 @@ export const featurePages: SeoLandingPage[] = [
     workflow: [
       {
         title: "Forward the confirmation",
-        copy: "Send hotel, flight, rental car, ticket, or reservation emails into TripCache.",
+        copy: "With the paid plan, send a supported hotel, flight, rental car, ticket, or reservation confirmation into TripCache.",
       },
       {
         title: "Review the extracted draft",
@@ -83,11 +90,15 @@ export const featurePages: SeoLandingPage[] = [
       { href: "/blog/organize-travel-confirmation-emails-2026", label: "Confirmation email guide" },
       { href: "/blog/email-to-trip-automation", label: "Email automation workflow" },
     ],
+    resourceCta: {
+      href: "/blog/organize-travel-confirmation-emails-2026",
+      label: "Read the confirmation-email guide",
+    },
     faqs: [
       {
         question: "What kinds of travel emails can TripCache organize?",
         answer:
-          "TripCache is built around common travel confirmations such as flights, hotel stays, rental cars, tickets, and reservations.",
+          "TripCache's paid Email Import works with supported travel confirmations such as flights, hotel stays, rental cars, tickets, and reservations.",
       },
       {
         question: "Is this a generic trip planner?",
@@ -106,15 +117,17 @@ export const featurePages: SeoLandingPage[] = [
     slug: "cancellation-reminders",
     path: "/features/cancellation-reminders",
     title: "Cancellation deadline reminders",
-    metaTitle: "Hotel Cancellation Reminder and Booking Deadline Tracker",
+    metaTitle: "Hotel Cancellation Reminder and Deadline Tracker",
     description:
-      "Track hotel, rental car, and refundable booking cancellation deadlines so you can avoid missed free-cancellation windows.",
-    eyebrow: "Cancellation protection",
-    hero: "Never miss the free-cancellation deadline buried inside a travel confirmation.",
+      "Use the paid plan to record hotel, rental-car, and refundable-booking cancellation cutoffs and set reminders; the provider's confirmation remains authoritative.",
+    eyebrow: "Cancellation reminders",
+    hero: "Bring the free-cancellation deadline from the provider's confirmation into your trip.",
     image: "/app-feature-cancellation-reminder.webp",
     imageAlt: "TripCache cancellation reminder feature",
     primaryKeyword: "hotel cancellation reminder",
     proofPoints: ["Hotel cutoff tracking", "Rental car reminders", "Refundable booking workflows"],
+    planNote:
+      "Cancellation Reminders are included in the paid plan. You enter the cutoff from the original confirmation; the booking provider remains authoritative.",
     benefits: [
       {
         title: "Protect flexible bookings",
@@ -141,7 +154,7 @@ export const featurePages: SeoLandingPage[] = [
       },
       {
         title: "Act before the window closes",
-        copy: "Review the trip when reminders arrive and cancel duplicate or risky bookings in time.",
+        copy: "Review the trip when reminders arrive, then confirm or cancel directly with the provider before its stated deadline.",
       },
     ],
     internalLinks: [
@@ -149,11 +162,15 @@ export const featurePages: SeoLandingPage[] = [
       { href: "/blog/hotel-cancellation-reminder-app-2026", label: "Hotel reminder guide" },
       { href: "/blog/free-cancellation-reminder-travel-bookings-2026", label: "Free cancellation reminders" },
     ],
+    resourceCta: {
+      href: "/tools/hotel-cancellation-deadline-calculator",
+      label: "Calculate a hotel cancellation deadline",
+    },
     faqs: [
       {
         question: "Can TripCache track hotel cancellation deadlines?",
         answer:
-          "Yes. TripCache helps you store cancellation deadlines and reminders with the hotel stay and its confirmation details.",
+          "Yes. The paid plan lets you store a user-entered cancellation deadline and reminders with the stay. The provider's confirmation remains authoritative.",
       },
       {
         question: "Does this work for rental cars?",
@@ -172,15 +189,17 @@ export const featurePages: SeoLandingPage[] = [
     slug: "business-travel-expenses",
     path: "/features/business-travel-expenses",
     title: "Business travel expense organization",
-    metaTitle: "Business Travel Organizer for Receipts and Trip Expenses",
+    metaTitle: "Business Travel Expense and Receipt Organizer",
     description:
-      "Organize business trip bookings, receipts, documents, and expenses so reimbursement records stay connected to each trip.",
+      "Organize business-trip bookings, receipts, documents, and expenses by trip, with paid CSV export for reimbursement review.",
     eyebrow: "Business travel organizer",
     hero: "Keep business trip bookings, receipts, and expense details ready for reimbursement.",
     image: "/app-screen-expense-management.webp",
     imageAlt: "TripCache expense management screen for business travel",
     primaryKeyword: "business travel organizer",
-    proofPoints: ["Receipt storage", "Trip expense records", "CSV export workflows"],
+    proofPoints: ["Receipt storage", "Trip expense records", "Paid CSV exports"],
+    planNote:
+      "Track costs and receipts by trip; CSV export is included in the paid plan. Records are organizational aids, not accounting or tax advice.",
     benefits: [
       {
         title: "Attach receipts where they belong",
@@ -192,7 +211,7 @@ export const featurePages: SeoLandingPage[] = [
       },
       {
         title: "Built for frequent travelers",
-        copy: "Consultants, sales teams, executives, and remote workers can keep every trip audit-ready.",
+        copy: "Consultants, sales teams, executives, and remote workers can keep every trip organized for review.",
       },
     ],
     workflowTitle: "From trip to expense record",
@@ -207,7 +226,7 @@ export const featurePages: SeoLandingPage[] = [
       },
       {
         title: "Export when it is time to report",
-        copy: "Use TripCache as the organized source of truth before submitting expenses.",
+        copy: "Use the paid CSV export to prepare organized records for submission or reimbursement review.",
       },
     ],
     internalLinks: [
@@ -215,6 +234,10 @@ export const featurePages: SeoLandingPage[] = [
       { href: "/blog/trip-expense-management-app-2026", label: "Trip expense management" },
       { href: "/features/email-to-itinerary", label: "Email-to-itinerary automation" },
     ],
+    resourceCta: {
+      href: "/blog/business-travel-expense-reporting-app-2026",
+      label: "Read the expense reporting guide",
+    },
     faqs: [
       {
         question: "Is TripCache a full corporate travel management system?",
@@ -231,6 +254,11 @@ export const featurePages: SeoLandingPage[] = [
         answer:
           "It is especially useful for frequent business travelers, consultants, sales professionals, executives, and remote workers.",
       },
+      {
+        question: "Does TripCache provide CSV export?",
+        answer:
+          "Yes. CSV export is included in the paid plan and can help prepare records for reimbursement review. TripCache is an organizational aid, not accounting or tax advice.",
+      },
     ],
   },
 ]
@@ -241,7 +269,7 @@ export const alternativePages: SeoLandingPage[] = [
     slug: "tripit",
     path: "/alternatives/tripit",
     title: "TripIt alternative for reminders, documents, and expenses",
-    metaTitle: "TripIt Alternative for Email Itineraries and Cancellation Reminders",
+    metaTitle: "TripIt Alternative with Reminders and Documents",
     description:
       "Compare TripCache with TripIt if you want travel email organization, cancellation deadline tracking, documents, and business travel expense workflows.",
     eyebrow: "TripIt alternative",
@@ -250,6 +278,8 @@ export const alternativePages: SeoLandingPage[] = [
     imageAlt: "TripCache TripIt alternative article cover",
     primaryKeyword: "TripIt alternative",
     proofPoints: ["Email-to-trip workflow", "Cancellation reminders", "Documents and expenses"],
+    planNote:
+      "Basic supports manual trip organization. The paid plan adds email import, reminders, supported flight-status updates, expanded document storage, and CSV exports.",
     benefits: [
       {
         title: "More than a timeline",
@@ -284,6 +314,10 @@ export const alternativePages: SeoLandingPage[] = [
       { href: "/blog/best-tripit-alternatives-2026", label: "Best TripIt alternatives" },
       { href: "/features/cancellation-reminders", label: "Cancellation reminders" },
     ],
+    resourceCta: {
+      href: "/blog/tripit-vs-tripcache-comparison-2025",
+      label: "Read the TripIt comparison",
+    },
     faqs: [
       {
         question: "Is TripCache a direct TripIt replacement?",
@@ -293,7 +327,7 @@ export const alternativePages: SeoLandingPage[] = [
       {
         question: "Why compare TripCache with TripIt?",
         answer:
-          "Travelers looking for a TripIt alternative often want automatic organization plus stronger workflows around reminders and records.",
+          "Travelers looking for a TripIt alternative often want itinerary organization with reminders and records kept in the same trip context.",
       },
       {
         question: "Does TripCache support business travel?",
@@ -307,7 +341,7 @@ export const alternativePages: SeoLandingPage[] = [
     slug: "tripcase",
     path: "/alternatives/tripcase",
     title: "TripCase alternative for frequent travelers",
-    metaTitle: "TripCase Alternative for Travel Emails, Documents, and Reminders",
+    metaTitle: "TripCase Alternative for Travel Confirmations",
     description:
       "Use TripCache as a TripCase alternative for organizing travel confirmations, trip timelines, cancellation reminders, documents, and expenses.",
     eyebrow: "TripCase alternative",
@@ -316,6 +350,8 @@ export const alternativePages: SeoLandingPage[] = [
     imageAlt: "TripCache TripCase alternative article cover",
     primaryKeyword: "TripCase alternative",
     proofPoints: ["TripCase migration intent", "Modern travel inbox", "Reminders and documents"],
+    planNote:
+      "Basic supports manual trip organization. The paid plan adds supported email import, cancellation reminders, expanded document storage, and CSV exports.",
     benefits: [
       {
         title: "Organize confirmed trips",
@@ -350,6 +386,10 @@ export const alternativePages: SeoLandingPage[] = [
       { href: "/blog/tripcase-alternative-2025", label: "TripCase alternative guide" },
       { href: "/features/email-to-itinerary", label: "Email-to-itinerary automation" },
     ],
+    resourceCta: {
+      href: "/blog/tripcase-shutdown-what-now",
+      label: "Read the TripCase shutdown guide",
+    },
     faqs: [
       {
         question: "Why look for a TripCase alternative?",

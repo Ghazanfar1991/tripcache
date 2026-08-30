@@ -4,7 +4,10 @@ import { SectionContainer } from "./section-container"
 
 const COPYRIGHT_YEAR = 2026
 
-export function Footer() {
+const DEFAULT_DESCRIPTION =
+  "AI travel inbox for booking emails, cancellation deadlines, receipts, and trip documents."
+
+export function Footer({ description = DEFAULT_DESCRIPTION }: { description?: string }) {
   return (
     <footer className="relative bg-[#eee7dc] text-[#121212] shadow-[inset_0_1px_0_rgba(66,50,32,0.08)]">
       <SectionContainer className="py-14 lg:py-18">
@@ -21,7 +24,7 @@ export function Footer() {
               <span className="text-lg font-bold">TripCache</span>
             </Link>
             <p className="text-pretty text-sm leading-6 text-[#666666]">
-              AI travel inbox for booking emails, cancellation deadlines, receipts, and trip documents.
+              {description}
             </p>
           </div>
 

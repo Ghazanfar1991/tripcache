@@ -5,15 +5,14 @@ import type { Metadata } from "next"
 import { ArrowLeft, Mail, Smartphone, Trash2 } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { SectionContainer } from "@/components/section-container"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Delete Your Account",
   description:
     "Learn how to delete your TripCache account directly from the app or contact support for account deletion help.",
-  alternates: {
-    canonical: "/account-delete",
-  },
-}
+  path: "/account-delete",
+})
 
 const steps = [
   "Open the TripCache app and sign in to the account you want to remove.",

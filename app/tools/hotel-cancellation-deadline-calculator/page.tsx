@@ -2,13 +2,13 @@ import "../../secondary.css"
 
 import type { Metadata } from "next"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { SectionContainer } from "@/components/section-container"
 import { HotelCancellationCalculator } from "@/components/seo/hotel-cancellation-calculator"
 import { Button } from "@/components/ui/button"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
 export const instant = false
 
@@ -33,7 +33,7 @@ const faqs = [
   },
 ]
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Hotel Cancellation Deadline Calculator",
   description:
     "Calculate hotel free-cancellation deadlines by check-in date, policy window, cutoff time, and hotel time zone, then copy a reminder summary.",
@@ -43,31 +43,10 @@ export const metadata: Metadata = {
     "free cancellation deadline",
     "booking cancellation tracker",
   ],
-  alternates: {
-    canonical: PAGE_PATH,
-  },
-  openGraph: {
-    title: "Hotel Cancellation Deadline Calculator | TripCache",
-    description:
-      "Calculate the deadline for refundable hotel bookings and create reminder timing before free cancellation closes.",
-    url: `${BASE_URL}${PAGE_PATH}`,
-    type: "website",
-    images: [
-      {
-        url: "/blog-cover-hotel-cancellation-reminder.webp",
-        width: 1200,
-        height: 630,
-        alt: "Hotel cancellation reminder calculator",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Hotel Cancellation Deadline Calculator | TripCache",
-    description: "Calculate hotel free-cancellation deadlines and reminder timing.",
-    images: ["/blog-cover-hotel-cancellation-reminder.webp"],
-  },
-}
+  path: PAGE_PATH,
+  socialDescription:
+    "Calculate the deadline for refundable hotel bookings and create reminder timing before free cancellation closes.",
+})
 
 function firstParam(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value
@@ -127,15 +106,15 @@ export default async function HotelCancellationDeadlineCalculatorPage({
 
   return (
     <main className="min-h-screen bg-[#f4f0e8] text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
-      <Script
+      <script
         id="hotel-cancellation-calculator-faq-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
       />
-      <Script
+      <script
         id="hotel-cancellation-calculator-breadcrumb-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
       />
 
       <section className="relative overflow-hidden pb-9 pt-28 lg:pb-10 lg:pt-28">

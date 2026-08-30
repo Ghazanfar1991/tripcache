@@ -137,21 +137,43 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <ReadingProgress />
 
-      {/* Hero Image */}
-      <SectionContainer className="pt-28 lg:pt-36">
-        <div className="relative min-h-[30rem] overflow-hidden rounded-[2rem] sm:h-[58vh] sm:min-h-[36rem]">
+      {/* Article navigation and cover */}
+      <SectionContainer className="pt-24 lg:pt-32">
+        <div className="mb-4 sm:mb-6">
+          <Link
+            href="/blog"
+            className="group inline-flex min-h-11 items-center gap-2.5 rounded-xl px-1 text-sm font-semibold text-[#5e564c] transition-colors duration-150 hover:text-[#4d20af] active:text-[#4d20af]"
+          >
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-white/65 text-[#444444] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_6px_18px_rgba(72,53,33,0.08)] transition-[transform,background-color,color] duration-150 group-hover:-translate-x-0.5 group-hover:bg-white group-hover:text-[#4d20af] group-active:scale-95">
+              <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            </span>
+            <span>Back to Blog</span>
+          </Link>
+        </div>
+
+        <div className="relative aspect-video overflow-hidden rounded-[1.5rem] bg-[#353458] shadow-[0_20px_55px_rgba(62,43,24,0.11)] sm:rounded-[2rem]">
+          <Image
+            src={metadata.image || "/placeholder.svg"}
+            alt=""
+            fill
+            sizes="(max-width: 639px) calc(100vw - 2.5rem), (max-width: 1279px) calc(100vw - 4rem), 73rem"
+            className="scale-110 object-cover opacity-45 blur-2xl saturate-75"
+            aria-hidden="true"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-[#121212]/10" aria-hidden="true" />
           <Image
             src={metadata.image || "/placeholder.svg"}
             alt={metadata.imageAlt ?? metadata.title}
             fill
-            className="object-cover"
-            priority
+            sizes="(max-width: 639px) calc(100vw - 2.5rem), (max-width: 1279px) calc(100vw - 4rem), 73rem"
+            className="object-contain"
+            preload
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/70 via-[#121212]/12 to-transparent" />
 
           {/* Category Badge */}
-          <div className="absolute start-6 top-6 sm:start-8 sm:top-8">
-            <span className="rounded-full bg-[#602ad2] px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(58,24,135,0.24)]">
+          <div className="absolute start-4 top-4 sm:start-6 sm:top-6">
+            <span className="inline-flex min-h-9 items-center rounded-full bg-[#602ad2] px-3.5 py-1.5 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(58,24,135,0.24)] sm:px-4 sm:text-sm">
               {metadata.category}
             </span>
           </div>
@@ -159,25 +181,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </SectionContainer>
 
       {/* Article Content */}
-      <article className="relative -mt-24 pb-24 sm:-mt-28 lg:pb-32">
+      <article className="relative pb-24 pt-5 sm:-mt-16 sm:pt-0 lg:pb-32">
         <SectionContainer>
           <div className="mx-auto max-w-4xl">
-            {/* Back Button */}
-            <div className="mb-6 flex">
-              <Link
-                href="/blog"
-                className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#f4f0e8]/90 px-5 py-2.5 text-sm font-semibold text-[#444444] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_10px_28px_rgba(72,53,33,0.12)] backdrop-blur-xl transition-[transform,background-color] duration-150 hover:bg-white active:scale-[0.965]"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to Blog
-              </Link>
-            </div>
-
             {/* Header Card */}
-            <div className="mb-0 rounded-[2rem] bg-[#f8f4ed]/94 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_28px_70px_rgba(72,53,33,0.14)] backdrop-blur-xl sm:p-10 lg:p-14">
-              <div className="space-y-8">
+            <div className="rounded-[1.5rem] bg-[#f8f4ed]/94 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_24px_60px_rgba(72,53,33,0.12)] backdrop-blur-xl sm:rounded-[2rem] sm:p-10 lg:p-14">
+              <div className="space-y-7 sm:space-y-8">
                 {/* Title */}
-                <h1 className="text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-[#121212] sm:text-5xl lg:text-6xl">
+                <h1 className="text-balance text-[2rem] font-semibold leading-[1.04] tracking-[-0.05em] text-[#121212] sm:text-5xl sm:leading-[1.02] lg:text-6xl">
                   {metadata.title}
                 </h1>
 
@@ -187,9 +198,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#602ad2] text-lg font-bold text-white shadow-[0_8px_20px_rgba(58,24,135,0.2)]">
                       {metadata.author.charAt(0)}
                     </div>
-                  <div>
-                    <div className="font-semibold text-[#121212]">{metadata.author}</div>
-                    <div className="text-xs">Research and product guidance</div>
+                    <div>
+                      <div className="font-semibold text-[#121212]">{metadata.author}</div>
+                      <div className="text-xs">Research and product guidance</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -221,7 +232,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               prose-ul:my-6 prose-li:my-2
               prose-table:border-collapse prose-th:bg-[#e5dcff] prose-th:text-[#121212] prose-th:p-3 prose-td:p-3 prose-td:text-[#444444]
             ">
-              <div className="rounded-b-[2rem] bg-white/42 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.76),0_22px_60px_rgba(72,53,33,0.07)] sm:p-10 lg:p-14">
+              <div className="mt-3 rounded-[1.5rem] bg-white/42 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.76),0_22px_60px_rgba(72,53,33,0.07)] sm:rounded-[2rem] sm:p-10 lg:p-14">
                 <Content />
               </div>
             </div>
@@ -262,6 +273,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             src={relatedPost.image || "/placeholder.svg"}
                             alt={relatedPost.title}
                             fill
+                            sizes="(max-width: 767px) calc(100vw - 3.75rem), (max-width: 1023px) 50vw, 18rem"
                             className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
                           />
                         </div>

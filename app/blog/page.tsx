@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     url: "https://trip-cache.com/blog",
     type: "website",
     siteName: "TripCache",
-    images: [{ url: "/blog-app-comparison.webp", width: 1200, height: 630, alt: "TripCache travel organization guides" }],
+    images: [{ url: "/opengraph-image?v=20260829", width: 1200, height: 630, alt: "TripCache travel organization guides" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Post-Booking Travel Organization Guides | TripCache",
     description: "Practical guides for confirmations, itineraries, cancellation deadlines, documents, and trip expenses.",
-    images: ["/blog-app-comparison.webp"],
+    images: [{ url: "/twitter-image?v=20260829", width: 1200, height: 630, alt: "TripCache travel organization guides" }],
   },
 }
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState, useEffect } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import { GetStartedModal } from "./get-started-modal"
 import { Menu, X } from "lucide-react"
@@ -20,6 +20,16 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [compact, setCompact] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+
+  const closeMobileMenu = useCallback((restoreFocus = false) => {
+    setMobileMenuOpen(false)
+
+    if (restoreFocus) {
+      window.requestAnimationFrame(() => mobileMenuButtonRef.current?.focus())
+    }
+  }, [])
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -35,7 +45,8 @@ export function Navigation() {
         setCompact(false)
       } else if (delta > 5) {
         setCompact(true)
-        setMobileMenuOpen(false)
+        const focusIsInsideMenu = mobileMenuRef.current?.contains(document.activeElement) ?? false
+        closeMobileMenu(focusIsInsideMenu)
       } else if (delta < -5) {
         setCompact(false)
       }
@@ -57,7 +68,22 @@ export function Navigation() {
       window.removeEventListener("scroll", handleScroll)
       if (animationFrame) window.cancelAnimationFrame(animationFrame)
     }
-  }, [])
+  }, [closeMobileMenu])
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return
+
+      event.preventDefault()
+      event.stopPropagation()
+      closeMobileMenu(true)
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [closeMobileMenu, mobileMenuOpen])
 
   return (
     <header
@@ -100,14 +126,15 @@ export function Navigation() {
 
           <div className="floating-nav-actions flex items-center gap-2.5">
             <button
+              ref={mobileMenuButtonRef}
               type="button"
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className="design-one-press grid h-10 w-10 place-items-center rounded-full bg-black/[0.045] text-[#121212] transition-colors hover:bg-black/[0.075] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 min-[920px]:hidden"
+              className="design-one-press grid h-10 w-10 place-items-center rounded-full bg-black/[0.045] text-[#121212] transition-colors hover:bg-black/[0.075] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af] min-[920px]:hidden"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
-              aria-label="Toggle navigation menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {mobileMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
             </button>
             <GetStartedModal
               triggerLabel="Download"
@@ -118,7 +145,10 @@ export function Navigation() {
       </div>
 
       <div
+        ref={mobileMenuRef}
         id="mobile-navigation"
+        inert={!mobileMenuOpen}
+        aria-hidden={!mobileMenuOpen}
         className={`design-one-glass pointer-events-auto absolute inset-x-4 top-[68px] origin-top rounded-[24px] border border-white/60 bg-[#f8f4ec]/88 p-2 shadow-[0_24px_65px_rgba(68,50,30,0.16)] backdrop-blur-2xl transition-[opacity,transform] duration-200 min-[920px]:hidden ${
           mobileMenuOpen ? "scale-100 opacity-100" : "pointer-events-none scale-[0.97] opacity-0"
         }`}

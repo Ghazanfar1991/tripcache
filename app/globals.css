@@ -50,6 +50,8 @@
   --color-accent-solid: var(--violet-600);
   --color-accent-solid-hover: var(--violet-700);
   --color-accent-text: var(--violet-700);
+  --focus-ring-outer: #4d20af;
+  --focus-ring-inner: #fffdf9;
 
   /* Compatibility tokens for the shared UI primitives. */
   --background: var(--color-bg-page);
@@ -124,7 +126,13 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus-ring-outer) !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 2px var(--focus-ring-inner) !important;
   }
 
   html {
@@ -151,5 +159,13 @@
     --color-accent-solid: var(--violet-700);
     --color-accent-solid-hover: var(--ink-900);
     --color-accent-text: var(--violet-700);
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid Highlight !important;
+    outline-offset: 3px !important;
+    box-shadow: none !important;
   }
 }

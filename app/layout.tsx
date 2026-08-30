@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   creator: "TripCache",
   publisher: "TripCache",
   category: "travel",
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
   formatDetection: {
     email: false,
     address: false,
@@ -61,18 +61,25 @@ export const metadata: Metadata = {
     siteName: "TripCache",
     images: [
       {
-        url: "/app-feature-add-everything.webp",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "TripCache App Dashboard",
+        alt: "TripCache travel itinerary app for booking emails and cancellation deadlines",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TripCache - Post-Booking Travel Organizer",
-    description: "Forward travel emails, get organized itineraries, and never miss cancellation deadlines.",
-    images: ["/app-feature-add-everything.webp"],
+    description: "Forward travel emails, get organized itineraries, and track cancellation deadlines.",
+    images: [
+      {
+        url: "/twitter-image",
+        width: 1200,
+        height: 630,
+        alt: "TripCache travel itinerary app for booking emails and cancellation deadlines",
+      },
+    ],
     creator: "@tripcache",
   },
   icons: {
@@ -129,7 +136,7 @@ export default function RootLayout({
                 email: "support@trip-cache.com",
                 availableLanguage: "English",
               },
-            }),
+            }).replace(/</g, "\\u003c"),
           }}
         />
         <script
@@ -146,7 +153,7 @@ export default function RootLayout({
                 "Official product information and travel organization guides for TripCache, a post-booking travel organizer for confirmations, cancellation deadlines, documents, receipts, and expenses.",
               publisher: { "@id": `${SITE_URL}/#organization` },
               inLanguage: "en",
-            }),
+            }).replace(/</g, "\\u003c"),
           }}
         />
         <script
@@ -169,9 +176,9 @@ export default function RootLayout({
               featureList: [
                 "Booking confirmation email import",
                 "Travel itinerary organization",
-                "Free-cancellation deadline reminders",
+                "User-set cancellation deadline reminders",
                 "Travel documents and receipts",
-                "Flight status context",
+                "Supported flight-status updates",
                 "Travel expense records and CSV export",
               ],
               provider: { "@id": `${SITE_URL}/#organization` },
@@ -198,7 +205,7 @@ export default function RootLayout({
                   url: `${SITE_URL}/pricing`,
                 },
               ],
-            }),
+            }).replace(/</g, "\\u003c"),
           }}
         />
         <meta name="theme-color" content="#f4f0e8" />
@@ -215,7 +222,7 @@ export default function RootLayout({
         </a>
         <Navigation />
         <StoreLinkAnalytics />
-        <div id="main-content">{children}</div>
+        <div id="main-content" tabIndex={-1}>{children}</div>
         {IS_VERCEL_DEPLOYMENT ? (
           <>
             <Analytics />

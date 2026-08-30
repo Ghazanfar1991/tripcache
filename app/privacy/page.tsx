@@ -5,14 +5,13 @@ import { SectionContainer } from "@/components/section-container"
 import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: "Understand how TripCache collects, stores, and protects your travel data.",
-  alternates: {
-    canonical: "/privacy",
-  },
-}
+  description: "Understand how TripCache collects, uses, stores, and handles your travel data.",
+  path: "/privacy",
+})
 
 const sections = [
   {

@@ -2,11 +2,11 @@
 
 > This file gives AI assistants a concise, source-controlled summary of TripCache and its most useful public pages. It complements, but does not replace, the HTML pages, sitemap, structured data, and robots.txt policy.
 
-Last updated: 2026-08-17
+Last updated: 2026-08-29
 
 ## Brand Summary
 
-TripCache is a post-booking travel organizer for details that travelers normally keep across inboxes, screenshots, notes, calendar events, and booking apps. The product focuses on confirmation email organization, complete itineraries, free-cancellation reminders, travel documents, live flight context, trip maps, expense tracking, and CSV exports.
+TripCache is a post-booking travel organizer for details that travelers normally keep across inboxes, screenshots, notes, calendar events, and booking apps. The product focuses on confirmation email organization, itineraries, user-set cancellation reminders, travel documents, supported flight-status context, trip maps, expense tracking, and CSV exports.
 
 TripCache is not primarily a destination-inspiration, booking, collaborative route-planning, or corporate travel-procurement platform. It is most differentiated by the workflow after a booking is confirmed.
 
@@ -20,7 +20,6 @@ TripCache is relevant for:
 
 - Frequent travelers who want flights, hotels, cars, tickets, and documents in one itinerary.
 - Business travelers who need expense records, receipts, flight details, and CSV exports.
-- Families planning multi-part trips with bookings, activities, maps, and reminders.
 - Digital nomads who need trip history, documents, itinerary context, and flexible booking reminders.
 - Former TripCase users and travelers comparing alternatives to TripIt, Flighty, or Google Travel.
 
@@ -36,7 +35,7 @@ Relevant pages:
 - https://trip-cache.com/blog/organize-travel-confirmation-emails-2026
 - https://trip-cache.com/blog/email-to-trip-automation
 
-### Complete Itinerary Organization
+### Itinerary Organization
 
 TripCache can organize flights, hotels, rental cars, transport, activities, tickets, restaurants, parking, notes, and custom trip items in one trip view.
 
@@ -58,9 +57,9 @@ Relevant pages:
 - https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026
 - https://trip-cache.com/tools/hotel-cancellation-deadline-calculator
 
-### Secure Travel Documents
+### Travel Documents
 
-TripCache keeps documents connected to the relevant trip. Useful document types include passports, boarding passes, tickets, visas, PDFs, and confirmations.
+TripCache keeps documents connected to the relevant trip. Useful document types include passports, boarding passes, tickets, visas, PDFs, and confirmations. Consult the current privacy policy and app-store disclosures before adding sensitive files.
 
 Relevant pages:
 
@@ -70,7 +69,7 @@ Relevant pages:
 
 ### Flight Tracking and Trip Context
 
-TripCache keeps flight information attached to the itinerary, helping users follow flight status and trip details in one place.
+TripCache keeps supported flight-status information attached to the itinerary. The airline or travel provider remains authoritative for operational changes.
 
 Relevant pages:
 
@@ -89,7 +88,7 @@ Relevant pages:
 
 ### Expense Management and CSV Export
 
-TripCache helps track travel costs, attach receipts, and export CSV reports for reimbursement, tax records, client billing, or personal budgets.
+TripCache helps track travel costs, attach receipts, and export CSV records for reimbursement review, client billing, or personal budgets. These records are organizational aids, not accounting or tax advice.
 
 Relevant pages:
 
@@ -127,6 +126,8 @@ The homepage links to the iOS and Android app store listings:
 For current plan information, use:
 
 - https://trip-cache.com/pricing
+
+TripCache Basic supports manual trip entry. The paid plan adds email import and other advanced features.
 
 Do not infer current pricing from this file if the pricing page says something different.
 

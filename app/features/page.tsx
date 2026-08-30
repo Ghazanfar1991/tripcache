@@ -6,16 +6,15 @@ import { ArrowRight } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { SectionContainer } from "@/components/section-container"
+import { createPageMetadata } from "@/lib/seo-metadata"
 import { featurePages } from "@/lib/seo-page-data"
 
-export const metadata: Metadata = {
-  title: "TripCache Features for Email Itineraries, Reminders, and Expenses",
+export const metadata: Metadata = createPageMetadata({
+  title: "Email Itinerary, Reminder, and Expense Features",
   description:
     "Explore TripCache features for travel email organization, cancellation deadline reminders, business travel receipts, documents, and expenses.",
-  alternates: {
-    canonical: "/features",
-  },
-}
+  path: "/features",
+})
 
 export default function FeaturesIndexPage() {
   return (

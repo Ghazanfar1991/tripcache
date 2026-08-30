@@ -1,0 +1,100 @@
+{
+  "auditDate": "2026-08-29",
+  "scope": "TripCache homepage redesign and site SEO change control",
+  "status": "CONDITIONAL_HOMEPAGE_ONLY",
+  "score": {
+    "overall": 74,
+    "maximum": 100,
+    "interpretation": "Remediation required before an SEO-sensitive release",
+    "categories": {
+      "intentOwnership": { "score": 17, "maximum": 20 },
+      "metadataHeadingAlignment": { "score": 14, "maximum": 15 },
+      "helpfulContent": { "score": 14, "maximum": 20 },
+      "claimsAndEntityConsistency": { "score": 8, "maximum": 15 },
+      "technicalAndSchema": { "score": 12, "maximum": 15 },
+      "internalLinking": { "score": 7, "maximum": 10 },
+      "performanceRisk": { "score": 2, "maximum": 5 }
+    }
+  },
+  "postImplementationScore": {
+    "overall": 92,
+    "maximum": 100,
+    "interpretation": "Release-ready; all repository-level hard-failure gates pass",
+    "categories": {
+      "intentOwnership": { "score": 18, "maximum": 20 },
+      "metadataHeadingAlignment": { "score": 15, "maximum": 15 },
+      "helpfulContent": { "score": 19, "maximum": 20 },
+      "claimsAndEntityConsistency": { "score": 11, "maximum": 15 },
+      "technicalAndSchema": { "score": 15, "maximum": 15 },
+      "internalLinking": { "score": 10, "maximum": 10 },
+      "performanceRisk": { "score": 4, "maximum": 5 }
+    },
+    "remainingExternalOrLongitudinalRisks": [
+      "Cloudflare production behavior",
+      "app-store disclosure parity",
+      "same-name entity and brand resolution",
+      "field Core Web Vitals",
+      "post-release Search Console evidence"
+    ]
+  },
+  "firstPartyBaseline": {
+    "period": { "startDate": "2026-07-29", "endDate": "2026-08-25" },
+    "site": { "clicks": 53, "impressions": 10215, "ctr": 0.005188448360254528, "averagePosition": 9.531375428291728 },
+    "homepage": { "clicks": 17, "impressions": 738, "ctr": 0.023035230352303523, "averagePosition": 33.40108401084011 },
+    "storeIntent": { "uniqueUsers": 87, "storeIntentUsers": 7, "rate": 0.08045977011494253 }
+  },
+  "protectedHomepage": {
+    "title": "Travel Itinerary App for Booking Emails | TripCache",
+    "metaDescription": "Turn booking emails into one organized travel itinerary. Track cancellation deadlines and keep documents, receipts, flights, stays, and expenses together.",
+    "h1": "Turn booking emails into one organized travel itinerary.",
+    "meanings": [
+      "supported booking confirmation email import",
+      "reviewable itinerary drafts",
+      "free-cancellation deadline reminders",
+      "travel documents",
+      "receipts and trip expenses",
+      "CSV export",
+      "free versus paid plan boundary",
+      "iOS and Android availability"
+    ]
+  },
+  "safeRemovals": [
+    "post-hero story gallery",
+    "eleven-screen workflow rail",
+    "three of six long deep-dives",
+    "repeated post-booking benefit block",
+    "duplicate answer-card presentation when merged into FAQ"
+  ],
+  "activeExperimentFreezeUntil": "2026-09-12",
+  "experimentSharedEnvironmentEvent": {
+    "date": "2026-08-29",
+    "changes": ["global route metadata", "navigation behavior", "focus styles"],
+    "protectedTreatmentCopyChanged": false,
+    "sharedBlogArticleTemplateChanged": false
+  },
+  "protectedExperimentPages": [
+    "/blog/best-travel-apps-2025",
+    "/blog/hotel-cancellation-reminder-app-2026",
+    "/blog/tripcase-shutdown-what-now"
+  ],
+  "priorityFindings": [
+    "Preserve homepage booking-email itinerary intent during structural redesign",
+    "Resolve same-name iOS app and cross-store entity inconsistency",
+    "Resolve Cloudflare managed AI-crawler rules that conflict with application policy",
+    "Link orphan Features, Alternatives, and Tools hubs after the experiment gate",
+    "Fix route-specific Open Graph and Twitter metadata",
+    "Server-render page-level structured data and keep it identical to visible content",
+    "Remove unnecessary dynamic rendering boundary from static homepage content",
+    "Reconcile public plan, store, manifest, privacy, and security claims",
+    "Use truthful sitemap modification dates and permanent www-to-apex redirect",
+    "Reduce homepage HTML and repeated image/JavaScript cost"
+  ],
+  "unknowns": [
+    "current post-redesign field Core Web Vitals",
+    "full Search Console URL Inspection coverage",
+    "paid keyword volume",
+    "final brand and publisher identity decision",
+    "resolved Google Play encryption disclosure",
+    "in-app price and plan-name parity across markets"
+  ]
+}

@@ -5,14 +5,13 @@ import { SectionContainer } from "@/components/section-container"
 import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
   description: "TripCache Terms of Service outlining acceptable use, payments, and legal responsibilities.",
-  alternates: {
-    canonical: "/terms",
-  },
-}
+  path: "/terms",
+})
 
 const terms = [
   {

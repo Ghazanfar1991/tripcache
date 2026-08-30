@@ -1,56 +1,35 @@
 {
-  "updatedAt": "2026-08-27T03:50:48Z",
+  "updatedAt": "2026-08-30T06:27:30.510Z",
   "dispatcher": {
     "status": "IDLE",
-    "lastWakeAt": "2026-08-27T02:24:02.783Z",
-    "pid": 21922,
-    "completedAt": "2026-08-27T02:24:02.794Z"
+    "lastWakeAt": "2026-08-30T06:27:30.503Z",
+    "pid": 58038,
+    "completedAt": "2026-08-30T06:27:30.510Z"
   },
   "latestGrowthCycleEvidence": {
-    "startedAt": "2026-08-27T03:27:48Z",
-    "status": "SUCCESS",
-    "trigger": "MANUAL_USER_REQUEST",
-    "branch": "codex/growth-sprint-2026-08-27",
-    "completedAt": "2026-08-27T03:50:48Z",
-    "pullRequest": 30,
-    "mergeCommit": "63c4e05009285bc16d8309ff747329f2a2530d2e",
-    "decision": "NO_NEW_EXPERIMENT_WITH_URGENT_ANALYTICS_REPAIR",
-    "reason": "All three slots are occupied. Crawl/indexing and fresh position guardrails pass, but the August 25 redesign contaminated every original treatment window and same-origin /download clicks were missing from store-intent measurement. Preserve target content, extend the homogeneous decision gate to 2026-09-12, and repair analytics only.",
-    "searchConsolePulseAt": "2026-08-26T09:36:53.955Z",
-    "productionBaseline": {
-      "commit": "2e437f647da408f4f2ef49fb19ecd1e6290fd03b",
-      "githubDeploymentId": 6088232367,
-      "deploymentUrl": "https://tripcache-9w9h6ldf4-ghazanfar1991s-projects.vercel.app",
-      "deploymentStatusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/9hA8omNpkk4q2cbZKe7HByDuyp5o",
-      "deployedAt": "2026-08-25T17:11:30Z",
-      "healthCheckedAt": "2026-08-27T03:42:20.653Z",
+    "completedAt": "2026-08-20T14:05:21.000Z",
+    "trigger": "MANUAL_RECOVERY_AFTER_SCHEDULED_FAILURE",
+    "branch": "codex/growth-weekly-2026-08-20",
+    "pullRequest": 24,
+    "mergeCommit": "007dc32405e9c69963b9e0fedc056f1e07dfd2d6",
+    "decision": "NO_NEW_EXPERIMENT",
+    "reason": "All three independent experiment slots are occupied and their >72-hour directional pulses and production guardrails pass. Preserve the finalized 2026-09-03 decision gates.",
+    "searchConsolePulseAt": "2026-08-20T09:29:45.223Z",
+    "production": {
+      "commit": "929e94602bc8de43dba9cd545a192c1c9963aa0e",
+      "deploymentId": "dpl_DYs3JAwf4BKizW8c8LWmDiPRXQqP",
+      "deployedAt": "2026-08-20T13:52:42.191Z",
+      "healthCheckedAt": "2026-08-20T14:08:51.267Z",
       "status": "PASS",
       "sitemapUrlsVerified": 39
     },
-    "productionRelease": {
-      "commit": "63c4e05009285bc16d8309ff747329f2a2530d2e",
-      "githubDeploymentId": 6116171719,
-      "deploymentUrl": "https://tripcache-l1hznwezr-ghazanfar1991s-projects.vercel.app",
-      "deploymentStatusUrl": "https://vercel.com/ghazanfar1991s-projects/tripcache/zfWLiP9j699u96BQwBnM3YyTMxsR",
-      "deployedAt": "2026-08-27T03:47:46Z",
-      "healthCheckedAt": "2026-08-27T03:48:45.043Z",
-      "status": "PASS",
-      "sitemapUrlsVerified": 39,
-      "routingVerification": "iOS /download returned App Store, Android returned Google Play, desktop returned the homepage, and the live JavaScript contains the repaired analytics events."
-    },
     "backlinksAdvanced": [
-      "travel-app-roundup-the-points-guy",
-      "travel-app-roundup-travel-and-leisure",
-      "business-travel-digital-itinerary-guide",
       "product-hunt-tripcache-launch",
-      "travel-app-roundup-toms-guide"
+      "betalist-tripcache",
+      "travel-app-roundup-toms-guide",
+      "reddit-sideproject-mention-reclamation"
     ],
-    "measurementRepair": "Instrumented same-origin /download CTAs with route-consistent mobile store events, a non-store desktop event, handled-link de-duplication, placement/destination fields, and beacon transport. PR #30 passed CI and deployed successfully. Pre-repair store intent is a directional lower bound; end-to-end event receipt remains for the next GA4 snapshot.",
-    "remainingBlockers": [
-      "App activation through purchase remains uninstrumented and is outside this repository.",
-      "Android reliability is below the acquisition guardrail and the official dashboard baseline is dated.",
-      "Backlink emails and owner-account edits require a confirmed authorized sender/account identity."
-    ]
+    "measurementBlocker": "GA4 refresh returned insufficient authentication scopes; the source is marked WAITING_FOR_HUMAN_AUTH and stale. Existing website conversion remains unknown."
   },
   "jobs": {
     "weekly-growth-cycle": {
@@ -78,18 +57,18 @@
     "midweek-growth-sprint": {
       "status": "SUCCESS",
       "attempts": 0,
-      "lastRunAt": "2026-08-27T03:50:48Z",
+      "lastRunAt": "2026-08-27T03:24:02.903Z",
       "nextDueAt": "2026-09-03T03:00:00.000Z",
-      "lastOutput": "Midweek growth sprint completed via PR #30. No new experiment launched because all three independent slots remain occupied. Fresh finalized and directional Search Console evidence plus production/indexing guardrails passed, but the August 25 shared redesign contaminated the original treatment windows, moving the earliest defensible gate to September 12. The same-origin /download analytics gap was repaired and deployed as 63c4e050; post-deployment health passed all 39 sitemap URLs and live iOS/Android/desktop routing matched the classifier. The Points Guy, Travel + Leisure, and Travelling for Business advanced to founder-disclosed, rules-verified pitch copy; nothing was sent without an authorized identity.",
+      "lastOutput": "Weekly growth cycle completed and merged.\n\n- [PR #30](https://github.com/Ghazanfar1991/tripcache/pull/30) deployed the analytics repair as `63c4e05`.\n- [PR #31](https://github.com/Ghazanfar1991/tripcache/pull/31) recorded final production evidence as `bd926fd`.\n- Local `main` is synchronized and clean.\n\nKey outcomes:\n\n- No new experiment launched; all three slots remain occupied and target pages were unchanged.\n- The August 25 shared redesign contaminated the original experiment windows. The earliest defensible finalized decision gate is now September 12.\n- Fresh guardrails pass for all experiments; directional pulses were:\n  - Hotel reminders: 0/8 clicks, position 6.13\n  - Best travel apps: 6/317, 1.89% CTR, position 8.45\n  - TripCase recovery: 1/176, 0.57% CTR, position 9.38\n- Repaired missing analytics for same-origin `/download` CTAs. Production routing was verified for iOS, Android, and desktop, and the live bundle contains the new events. The next GA4 snapshot must still confirm event receipt.\n- Production deployment `6116171719` completed at `2026-08-27T03:47:46Z`. Final health passed all 39 sitemap URLs at `03:55:42Z`.\n- Advanced rules-verified pitches for The Points Guy, Travel + Leisure, and Travelling for Business. Nothing was sent without a confirmed authorized identity.\n- Revenue remains A$11 MRR with one active subscription; Android reliability and the missing activation-to-purchase funnel remain constraints.\n\nValidation passed: TypeScript, 22/22 tests, growth-memory validation, lint with zero errors, 48-route webpack production build, and local/live health checks. The default Turbopack build only failed because its internal worker could not bind a port in the managed environment.\n\nFull records: [weekly report](/Users/ghazanfarnasee/Apps/Trip-Cache/tripcache-landing-page/growth/reports/weekly/2026-08-27.md) and [cycle learning](/Users/ghazanfarnasee/Apps/Trip-Cache/tripcache-landing-page/growth/learnings/2026-08-27-treatment-integrity-measurement-and-outreach.md).",
       "exitCode": 0,
       "signal": null,
       "errorCode": null,
-      "syncedRevision": "63c4e05009285bc16d8309ff747329f2a2530d2e",
+      "syncedRevision": "58a981836f5509b64f64988173b73f1b8b01ded3",
       "email": {
-        "status": "NOT_SENT_AUTHORIZED_SENDER_NOT_CONFIRMED",
-        "output": "No report email was sent in this cycle because an authorized sender identity was not confirmed."
+        "status": "SENT",
+        "output": "Growth report email accepted (macOS Mail).\n\nResend unavailable; falling back to macOS Mail (Resend HTTP 403: You can only send testing emails to your own email address (ghazanfarnaseer91@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.)."
       },
-      "trigger": "MANUAL_USER_REQUEST"
+      "trigger": "SCHEDULED"
     }
   }
 }

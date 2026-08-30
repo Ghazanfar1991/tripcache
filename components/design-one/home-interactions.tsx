@@ -23,18 +23,20 @@ const storeLinks = {
   android: "https://play.google.com/store/apps/details?id=app.tripcache",
 }
 
-function trackStoreClick(platform: "ios" | "android") {
+type StoreButtonPlacement = "homepage_hero" | "homepage_final_cta"
+
+function trackStoreClick(platform: "ios" | "android", placement: StoreButtonPlacement) {
   const analyticsWindow = window as Window & {
     gtag?: (command: "event", name: string, parameters: Record<string, string>) => void
   }
 
   analyticsWindow.gtag?.("event", platform === "ios" ? "app_store_click" : "play_store_click", {
     platform,
-    placement: "homepage_hero",
+    placement,
   })
 }
 
-export function DesignOneStoreButtons() {
+export function DesignOneStoreButtons({ placement = "homepage_hero" }: { placement?: StoreButtonPlacement }) {
   return (
     <div className="flex w-full max-w-[17.5rem] flex-col gap-3 min-[430px]:max-w-none min-[430px]:flex-row">
       <Link
@@ -42,7 +44,7 @@ export function DesignOneStoreButtons() {
         target="_blank"
         rel="noopener noreferrer"
         data-store-event-handled="true"
-        onClick={() => trackStoreClick("ios")}
+        onClick={() => trackStoreClick("ios", placement)}
         className="design-one-press block w-full min-[430px]:w-[13.5rem]"
       >
         <Image src="/app-store-v3.svg" alt="Download on the App Store" width={540} height={160} className="block h-auto w-full" />
@@ -52,7 +54,7 @@ export function DesignOneStoreButtons() {
         target="_blank"
         rel="noopener noreferrer"
         data-store-event-handled="true"
-        onClick={() => trackStoreClick("android")}
+        onClick={() => trackStoreClick("android", placement)}
         className="design-one-press block w-full min-[430px]:w-[13.5rem]"
       >
         <Image src="/play-store-v3.svg" alt="Get it on Google Play" width={540} height={160} className="block h-auto w-full" />
@@ -63,14 +65,7 @@ export function DesignOneStoreButtons() {
 
 export function DesignOneSupportLink({ className, children }: { className?: string; children: ReactNode }) {
   return (
-    <a
-      href="#faq"
-      className={className}
-      onClick={(event) => {
-        event.preventDefault()
-        window.location.href = ["mailto:support", "trip-cache.com"].join("@")
-      }}
-    >
+    <a href="mailto:support@trip-cache.com" className={className}>
       {children}
     </a>
   )
@@ -81,9 +76,22 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
   const [direction, setDirection] = useState<1 | -1>(1)
   const [pageInactive, setPageInactive] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
+  const [motionOverride, setMotionOverride] = useState(false)
+  const [autoplayPaused, setAutoplayPaused] = useState(false)
+  const [hovered, setHovered] = useState(false)
+  const [focusWithin, setFocusWithin] = useState(false)
+  const [statusMessage, setStatusMessage] = useState("")
+
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)")
-    const updateMotionPreference = () => setReducedMotion(media.matches)
+    const updateMotionPreference = () => {
+      setReducedMotion(media.matches)
+
+      if (media.matches) {
+        setAutoplayPaused(true)
+        setMotionOverride(false)
+      }
+    }
     const updateVisibility = () => setPageInactive(document.hidden)
     const markInactive = () => setPageInactive(true)
     const markActive = () => setPageInactive(document.hidden)
@@ -103,8 +111,11 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
     }
   }, [])
 
+  const autoplayEnabled = !autoplayPaused && (!reducedMotion || motionOverride)
+  const autoplayActive = autoplayEnabled && !pageInactive && !hovered && !focusWithin && stories.length > 1
+
   useEffect(() => {
-    if (pageInactive || reducedMotion || stories.length < 2) return
+    if (!autoplayActive) return
     const timer = window.setTimeout(() => {
       const lastSlide = stories.length - 1
       const nextSlide = currentSlide + direction
@@ -120,19 +131,41 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
       }
     }, HERO_STORY_INTERVAL_MS)
     return () => window.clearTimeout(timer)
-  }, [currentSlide, direction, pageInactive, reducedMotion, stories.length])
-
-  const story = stories[currentSlide]
+  }, [autoplayActive, currentSlide, direction, stories.length])
 
   const selectSlide = (index: number) => {
     const lastSlide = stories.length - 1
     const nextDirection = index === 0 ? 1 : index === lastSlide ? -1 : index >= currentSlide ? 1 : -1
     setDirection(nextDirection)
     setCurrentSlide(index)
+    setStatusMessage(`Showing screen ${index + 1} of ${stories.length}: ${stories[index].title}`)
+  }
+
+  const toggleAutoplay = () => {
+    if (autoplayEnabled) {
+      setAutoplayPaused(true)
+      return
+    }
+
+    setMotionOverride(true)
+    setAutoplayPaused(false)
   }
 
   return (
-    <div className="relative mx-auto min-h-[560px] w-full max-w-[620px] sm:min-h-[640px] min-[940px]:min-h-[670px]">
+    <div
+      className="relative mx-auto min-h-[560px] w-full max-w-[620px] sm:min-h-[640px] min-[940px]:min-h-[670px]"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Featured TripCache screens"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onFocusCapture={() => setFocusWithin(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setFocusWithin(false)
+        }
+      }}
+    >
       <div className="absolute inset-0 z-20">
         {stories.map((slide, index) => (
           <div
@@ -142,7 +175,7 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
             aria-hidden={index !== currentSlide}
           >
             <Image
-              src={`${slide.image}?surface=hero`}
+              src={slide.image}
               alt={slide.alt}
               width={1250}
               height={2700}
@@ -180,28 +213,41 @@ export function DesignOneHeroCarousel({ stories }: { stories: HeroStory[] }) {
         </div>
       ))}
 
-      <p className="sr-only" aria-live="polite">Showing screen {currentSlide + 1} of {stories.length}: {story.title}</p>
+      <p className="sr-only" role="status" aria-atomic="true">
+        {statusMessage}
+      </p>
 
       <div className="absolute inset-x-0 top-[calc(50%+215px)] z-40 flex items-center justify-center sm:top-[calc(50%+250px)] min-[940px]:top-[calc(50%+264px)]">
-        <div className="inline-flex items-center" role="group" aria-label="Featured TripCache screens">
-        {stories.map((slide, index) => (
+        <div className="inline-flex items-center gap-2">
+          <div className="inline-flex items-center" role="group" aria-label="Choose a featured TripCache screen">
+            {stories.map((slide, index) => (
+              <button
+                key={slide.title}
+                type="button"
+                onClick={() => selectSlide(index)}
+                aria-label={`Show screen ${index + 1}: ${slide.title}`}
+                aria-pressed={index === currentSlide}
+                aria-current={index === currentSlide ? "true" : undefined}
+                data-active={index === currentSlide ? "true" : "false"}
+                data-autoplay={autoplayActive ? "true" : "false"}
+                data-direction={direction === 1 ? "next" : "previous"}
+                className="hero-story-dot-button group relative h-8 w-7 touch-manipulation rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="hero-story-dot"
+                />
+              </button>
+            ))}
+          </div>
           <button
-            key={slide.title}
             type="button"
-            onClick={() => selectSlide(index)}
-            aria-label={`Show screen ${index + 1}: ${slide.title}`}
-            aria-pressed={index === currentSlide}
-            aria-current={index === currentSlide ? "true" : undefined}
-            data-active={index === currentSlide ? "true" : "false"}
-            data-direction={direction === 1 ? "next" : "previous"}
-            className="hero-story-dot-button group relative h-8 w-7 touch-manipulation rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 focus-visible:ring-offset-2"
+            onClick={toggleAutoplay}
+            aria-label={`${autoplayEnabled ? "Pause" : "Play"} featured screen carousel`}
+            className="design-one-press inline-flex min-h-8 items-center rounded-full border border-[#4d20af]/20 bg-[#fffdf9]/78 px-3 text-[11px] font-bold text-[#4d20af] shadow-sm backdrop-blur-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af]"
           >
-            <span
-              aria-hidden="true"
-              className="hero-story-dot"
-            />
+            {autoplayEnabled ? "Pause" : "Play"}
           </button>
-        ))}
         </div>
       </div>
     </div>

@@ -7,15 +7,14 @@ import { ArrowLeft, CalendarClock, FileSpreadsheet, MailCheck } from "lucide-rea
 import { Footer } from "@/components/footer"
 import { GetStartedModal } from "@/components/get-started-modal"
 import { SectionContainer } from "@/components/section-container"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
-export const metadata: Metadata = {
-  title: "About TripCache",
+export const metadata: Metadata = createPageMetadata({
+  title: "About the Post-Booking Travel Organizer",
   description:
     "Learn why TripCache focuses on confirmation emails, cancellation deadlines, travel documents, receipts, and post-trip records.",
-  alternates: {
-    canonical: "/about",
-  },
-}
+  path: "/about",
+})
 
 const principles = [
   {

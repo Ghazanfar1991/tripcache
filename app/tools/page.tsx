@@ -6,15 +6,14 @@ import { ArrowRight, CalendarClock } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { SectionContainer } from "@/components/section-container"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
-export const metadata: Metadata = {
-  title: "TripCache Travel Tools",
+export const metadata: Metadata = createPageMetadata({
+  title: "Free Travel Tools",
   description:
     "Free TripCache tools for travelers, starting with a hotel cancellation deadline calculator for refundable bookings.",
-  alternates: {
-    canonical: "/tools",
-  },
-}
+  path: "/tools",
+})
 
 export default function ToolsIndexPage() {
   return (

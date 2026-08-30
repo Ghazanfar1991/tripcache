@@ -7,15 +7,14 @@ import { ArrowRight } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { SectionContainer } from "@/components/section-container"
 import { alternativePages } from "@/lib/seo-page-data"
+import { createPageMetadata } from "@/lib/seo-metadata"
 
-export const metadata: Metadata = {
-  title: "TripCache Alternatives to TripIt and TripCase",
+export const metadata: Metadata = createPageMetadata({
+  title: "Alternatives to TripIt and TripCase",
   description:
     "Compare TripCache with TripIt and TripCase for travel email organization, cancellation reminders, documents, receipts, and business travel workflows.",
-  alternates: {
-    canonical: "/alternatives",
-  },
-}
+  path: "/alternatives",
+})
 
 export default function AlternativesIndexPage() {
   return (

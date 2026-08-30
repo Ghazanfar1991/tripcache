@@ -289,11 +289,11 @@
   box-shadow: 0 0 0 3px rgba(96, 42, 210, 0.1);
 }
 
-.hero-story-dot-button[data-active="true"][data-direction="next"] .hero-story-dot {
+.hero-story-dot-button[data-active="true"][data-autoplay="true"][data-direction="next"] .hero-story-dot {
   animation: storyDotAdvance 6000ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-.hero-story-dot-button[data-active="true"][data-direction="previous"] .hero-story-dot {
+.hero-story-dot-button[data-active="true"][data-autoplay="true"][data-direction="previous"] .hero-story-dot {
   animation: storyDotRewind 6000ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 

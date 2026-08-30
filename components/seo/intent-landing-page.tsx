@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import { CheckCircle2, Mail, ShieldCheck, WalletCards } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -63,15 +62,15 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
 
   return (
     <main className="min-h-screen bg-[#f4f0e8] text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
-      <Script
+      <script
         id={`${page.slug}-faq-schema`}
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
       />
-      <Script
+      <script
         id={`${page.slug}-breadcrumb-schema`}
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
       />
 
       <section className="relative overflow-hidden pb-14 pt-28 min-[940px]:flex min-[940px]:min-h-[100svh] min-[940px]:items-center min-[940px]:pb-8 min-[940px]:pt-24">
@@ -111,6 +110,9 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
                 </div>
               ))}
             </div>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#6b6258]">
+              {page.planNote}
+            </p>
           </div>
 
           <div className="relative mx-auto flex w-full max-w-[19.5rem] items-center justify-center">
@@ -177,7 +179,7 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
                 </p>
               </div>
               <Button asChild className="min-h-12 shrink-0 rounded-full bg-white px-7 text-[#121212] shadow-[0_10px_25px_rgba(58,24,135,0.16)] hover:bg-[#f4f0e8] hover:text-[#121212]">
-                <Link href="/tools/hotel-cancellation-deadline-calculator">Try the deadline calculator</Link>
+                <Link href={page.resourceCta.href}>{page.resourceCta.label}</Link>
               </Button>
             </div>
 

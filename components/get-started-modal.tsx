@@ -34,7 +34,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
         type="button"
         onClick={openDialog}
         className={cn(
-          "inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#602ad2] px-3 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(77,32,175,0.18)] transition-[background-color,box-shadow,transform] hover:bg-[#4d20af] hover:shadow-[0_12px_28px_rgba(77,32,175,0.23)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 sm:px-4 sm:text-sm",
+          "inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#602ad2] px-3 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(77,32,175,0.18)] transition-[background-color,box-shadow,transform] hover:bg-[#4d20af] hover:shadow-[0_12px_28px_rgba(77,32,175,0.23)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af] active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 sm:px-4 sm:text-sm",
           triggerClassName,
         )}
       >
@@ -55,7 +55,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             type="button"
             onClick={closeDialog}
             aria-label="Close download dialog"
-            className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-black/[0.055] text-2xl leading-none text-[#444444] transition-colors hover:bg-black/[0.09] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45"
+            className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-black/[0.055] text-2xl leading-none text-[#444444] transition-colors hover:bg-black/[0.09] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af]"
           >
             <span aria-hidden="true">×</span>
           </button>
@@ -75,7 +75,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
               rel="noopener noreferrer"
               data-store-event-handled="true"
               onClick={() => trackConversion("app_store_click", { platform: "ios", placement: "download_modal" })}
-              className="relative rounded-xl transition-transform hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 active:translate-y-0"
+              className="relative rounded-xl transition-transform hover:-translate-y-1 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af] active:translate-y-0"
             >
               <Image
                 src="/app-store-v3.svg"
@@ -92,7 +92,7 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
               rel="noopener noreferrer"
               data-store-event-handled="true"
               onClick={() => trackConversion("play_store_click", { platform: "android", placement: "download_modal" })}
-              className="relative rounded-xl transition-transform hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#602ad2]/45 active:translate-y-0"
+              className="relative rounded-xl transition-transform hover:-translate-y-1 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4d20af] active:translate-y-0"
             >
               <Image
                 src="/play-store-v3.svg"

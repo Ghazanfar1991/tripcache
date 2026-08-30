@@ -69,7 +69,7 @@ const reasons = [
   },
   {
     title: "Close out work trips faster",
-    copy: "Keep receipts and trip costs together, then export a CSV for reimbursement, clients, or tax records.",
+    copy: "Keep receipts and trip costs together, then export a CSV for reimbursement, client review, or your own records.",
     icon: FileSpreadsheet,
   },
 ]
@@ -90,7 +90,7 @@ export default function PricingPage() {
       <script
         id="pricing-page-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema).replace(/</g, "\\u003c") }}
       />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[32rem] overflow-hidden" aria-hidden="true">
         <div className="absolute -inset-inline-start-24 top-28 hidden h-64 w-64 rounded-full border border-[#41382e]/10 sm:block" />
