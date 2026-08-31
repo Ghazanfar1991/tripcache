@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T14:15:03.471Z",
+  "generatedAt": "2026-08-31T16:39:47.504Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -24,8 +24,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 8,
-        "activeUsers": 7
+        "eventCount": 9,
+        "activeUsers": 8
       }
     },
     {
@@ -47,7 +47,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 64,
+        "sessions": 65,
         "activeUsers": 46
       }
     },
@@ -58,8 +58,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 17,
-        "activeUsers": 8
+        "sessions": 18,
+        "activeUsers": 9
       }
     },
     {
@@ -80,8 +80,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 11,
-        "activeUsers": 11
+        "sessions": 12,
+        "activeUsers": 12
       }
     },
     {
@@ -113,19 +113,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 5,
-        "activeUsers": 5
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 5,
-        "activeUsers": 5
+        "sessions": 6,
+        "activeUsers": 6
       }
     },
     {
@@ -147,6 +136,17 @@
       },
       "metrics": {
         "sessions": 4,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
         "activeUsers": 3
       }
     },
@@ -207,13 +207,13 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 2,
-        "activeUsers": 2
+        "sessions": 1,
+        "activeUsers": 0
       }
     },
     {
@@ -241,7 +241,29 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
         "platform": "web"
       },
       "metrics": {
@@ -297,6 +319,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/variations/journal",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
@@ -407,11 +440,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 127,
-    "landingSessions": 167,
+    "landingUsers": 132,
+    "landingSessions": 174,
     "storeIntentUsers": 9,
-    "storeIntentEvents": 10,
-    "rate": 0.07086614173228346,
+    "storeIntentEvents": 11,
+    "rate": 0.06818181818181818,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -424,8 +457,8 @@
           "platform": "web"
         },
         "metrics": {
-          "eventCount": 3,
-          "activeUsers": 3
+          "eventCount": 4,
+          "activeUsers": 4
         }
       },
       {

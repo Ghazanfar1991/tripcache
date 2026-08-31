@@ -1,96 +1,89 @@
 {
-  "generatedAt": "2026-08-30T14:15:03.426Z",
+  "generatedAt": "2026-08-31T16:39:47.460Z",
   "countries": [
     {
       "country": "usa",
-      "clicks": 15,
-      "impressions": 4479,
-      "ctr": 0.003348961821835231,
-      "position": 9.511721366376424
+      "clicks": 16,
+      "impressions": 4507,
+      "ctr": 0.0035500332815620148,
+      "position": 9.767694697137786
     },
     {
       "country": "aus",
       "clicks": 8,
-      "impressions": 489,
-      "ctr": 0.016359918200409,
-      "position": 7.194274028629857
+      "impressions": 473,
+      "ctr": 0.016913319238900635,
+      "position": 7.245243128964059
     },
     {
       "country": "can",
       "clicks": 6,
-      "impressions": 344,
-      "ctr": 0.01744186046511628,
-      "position": 9.31686046511628
+      "impressions": 338,
+      "ctr": 0.01775147928994083,
+      "position": 9.334319526627219
     },
     {
       "country": "bgd",
       "clicks": 3,
-      "impressions": 75,
-      "ctr": 0.04,
-      "position": 8.653333333333332
+      "impressions": 78,
+      "ctr": 0.038461538461538464,
+      "position": 9.205128205128204
     },
     {
       "country": "ind",
       "clicks": 3,
-      "impressions": 514,
-      "ctr": 0.005836575875486381,
-      "position": 11.013618677042802
+      "impressions": 513,
+      "ctr": 0.005847953216374269,
+      "position": 11.397660818713451
+    },
+    {
+      "country": "bel",
+      "clicks": 2,
+      "impressions": 24,
+      "ctr": 0.08333333333333333,
+      "position": 7.375
     },
     {
       "country": "bra",
       "clicks": 2,
       "impressions": 190,
       "ctr": 0.010526315789473684,
-      "position": 11.657894736842104
+      "position": 11.426315789473684
     },
     {
       "country": "gbr",
       "clicks": 2,
-      "impressions": 694,
-      "ctr": 0.002881844380403458,
-      "position": 8.22622478386167
+      "impressions": 696,
+      "ctr": 0.0028735632183908046,
+      "position": 8.479885057471265
     },
     {
       "country": "isr",
       "clicks": 2,
-      "impressions": 64,
-      "ctr": 0.03125,
-      "position": 12.234375
+      "impressions": 68,
+      "ctr": 0.029411764705882353,
+      "position": 11.764705882352942
     },
     {
       "country": "pak",
       "clicks": 2,
-      "impressions": 81,
-      "ctr": 0.024691358024691357,
-      "position": 10.91358024691358
-    },
-    {
-      "country": "bel",
-      "clicks": 1,
-      "impressions": 23,
-      "ctr": 0.043478260869565216,
-      "position": 7.6521739130434785
-    },
-    {
-      "country": "che",
-      "clicks": 1,
-      "impressions": 42,
-      "ctr": 0.023809523809523808,
-      "position": 6.285714285714286
+      "impressions": 83,
+      "ctr": 0.024096385542168676,
+      "position": 10.518072289156626
     },
     {
       "country": "cze",
       "clicks": 1,
-      "impressions": 14,
-      "ctr": 0.07142857142857142,
-      "position": 6
+      "impressions": 12,
+      "ctr": 0.08333333333333333,
+      "position": 5.916666666666667
     },
     {
       "country": "deu",
       "clicks": 1,
-      "impressions": 335,
-      "ctr": 0.0029850746268656717,
-      "position": 6.647761194029851
+      "impressions": 327,
+      "ctr": 0.0030581039755351682,
+      "position": 6.678899082568807
     },
     {
       "country": "ecu",
@@ -102,51 +95,51 @@
     {
       "country": "fra",
       "clicks": 1,
-      "impressions": 153,
-      "ctr": 0.006535947712418301,
-      "position": 8.973856209150327
+      "impressions": 147,
+      "ctr": 0.006802721088435374,
+      "position": 9.197278911564625
     },
     {
       "country": "idn",
       "clicks": 1,
-      "impressions": 119,
-      "ctr": 0.008403361344537815,
-      "position": 15.663865546218487
+      "impressions": 123,
+      "ctr": 0.008130081300813009,
+      "position": 15.764227642276422
     },
     {
       "country": "ita",
       "clicks": 1,
-      "impressions": 135,
-      "ctr": 0.007407407407407408,
-      "position": 7.985185185185185
+      "impressions": 134,
+      "ctr": 0.007462686567164179,
+      "position": 8.014925373134329
     },
     {
       "country": "mys",
       "clicks": 1,
-      "impressions": 60,
-      "ctr": 0.016666666666666666,
-      "position": 8.516666666666666
+      "impressions": 58,
+      "ctr": 0.017241379310344827,
+      "position": 8.637931034482758
     },
     {
       "country": "nld",
       "clicks": 1,
-      "impressions": 258,
-      "ctr": 0.003875968992248062,
-      "position": 9.375968992248062
+      "impressions": 250,
+      "ctr": 0.004,
+      "position": 9.456
     },
     {
       "country": "swe",
       "clicks": 1,
-      "impressions": 27,
-      "ctr": 0.037037037037037035,
-      "position": 5.407407407407407
+      "impressions": 28,
+      "ctr": 0.03571428571428571,
+      "position": 5.357142857142857
     },
     {
       "country": "zaf",
       "clicks": 1,
-      "impressions": 18,
-      "ctr": 0.05555555555555555,
-      "position": 4.666666666666666
+      "impressions": 19,
+      "ctr": 0.05263157894736842,
+      "position": 4.473684210526316
     },
     {
       "country": "afg",
@@ -156,6 +149,13 @@
       "position": 7
     },
     {
+      "country": "ago",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
       "country": "alb",
       "clicks": 0,
       "impressions": 2,
@@ -163,25 +163,18 @@
       "position": 2.5
     },
     {
-      "country": "and",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 24
-    },
-    {
       "country": "are",
       "clicks": 0,
-      "impressions": 189,
+      "impressions": 188,
       "ctr": 0,
-      "position": 6.830687830687831
+      "position": 6.824468085106383
     },
     {
       "country": "arg",
       "clicks": 0,
-      "impressions": 77,
+      "impressions": 70,
       "ctr": 0,
-      "position": 13.987012987012987
+      "position": 11.942857142857143
     },
     {
       "country": "arm",
@@ -202,7 +195,7 @@
       "clicks": 0,
       "impressions": 27,
       "ctr": 0,
-      "position": 5.222222222222222
+      "position": 5.37037037037037
     },
     {
       "country": "aze",
@@ -235,9 +228,9 @@
     {
       "country": "bgr",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 7,
       "ctr": 0,
-      "position": 6
+      "position": 6.571428571428571
     },
     {
       "country": "bhr",
@@ -284,9 +277,9 @@
     {
       "country": "brn",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 1.25
+      "position": 1.5
     },
     {
       "country": "btn",
@@ -301,6 +294,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 4
+    },
+    {
+      "country": "che",
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 6.619047619047619
     },
     {
       "country": "chl",
@@ -361,9 +361,9 @@
     {
       "country": "cyp",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 4
+      "position": 6
     },
     {
       "country": "dnk",
@@ -382,30 +382,30 @@
     {
       "country": "dza",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0,
-      "position": 33.857142857142854
+      "position": 34.4
     },
     {
       "country": "egy",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 22,
       "ctr": 0,
-      "position": 5.761904761904762
+      "position": 5.545454545454546
     },
     {
       "country": "esp",
       "clicks": 0,
-      "impressions": 96,
+      "impressions": 92,
       "ctr": 0,
-      "position": 9.90625
+      "position": 10.076086956521738
     },
     {
       "country": "est",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 2.2857142857142856
+      "position": 3.125
     },
     {
       "country": "eth",
@@ -436,6 +436,13 @@
       "position": 11.333333333333334
     },
     {
+      "country": "ggy",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
       "country": "gha",
       "clicks": 0,
       "impressions": 1,
@@ -445,9 +452,9 @@
     {
       "country": "grc",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 22,
       "ctr": 0,
-      "position": 6.285714285714286
+      "position": 6.5
     },
     {
       "country": "grl",
@@ -473,9 +480,9 @@
     {
       "country": "hkg",
       "clicks": 0,
-      "impressions": 73,
+      "impressions": 68,
       "ctr": 0,
-      "position": 6.931506849315069
+      "position": 7.073529411764706
     },
     {
       "country": "hnd",
@@ -487,9 +494,9 @@
     {
       "country": "hrv",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 11.333333333333334
+      "position": 11.8
     },
     {
       "country": "hti",
@@ -501,9 +508,9 @@
     {
       "country": "hun",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 9,
       "ctr": 0,
-      "position": 6
+      "position": 6.555555555555555
     },
     {
       "country": "imn",
@@ -550,23 +557,23 @@
     {
       "country": "jor",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 15,
       "ctr": 0,
-      "position": 32.111111111111114
+      "position": 24.266666666666666
     },
     {
       "country": "jpn",
       "clicks": 0,
-      "impressions": 144,
+      "impressions": 147,
       "ctr": 0,
-      "position": 6.097222222222222
+      "position": 8.068027210884352
     },
     {
       "country": "kaz",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0,
-      "position": 9.857142857142858
+      "position": 11.4
     },
     {
       "country": "ken",
@@ -574,13 +581,6 @@
       "impressions": 12,
       "ctr": 0,
       "position": 6.25
-    },
-    {
-      "country": "kgz",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
     },
     {
       "country": "khm",
@@ -606,9 +606,9 @@
     {
       "country": "kor",
       "clicks": 0,
-      "impressions": 124,
+      "impressions": 119,
       "ctr": 0,
-      "position": 8.185483870967742
+      "position": 8.235294117647058
     },
     {
       "country": "kwt",
@@ -639,6 +639,13 @@
       "position": 1
     },
     {
+      "country": "lby",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
       "country": "lie",
       "clicks": 0,
       "impressions": 1,
@@ -648,16 +655,16 @@
     {
       "country": "lka",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 6,
       "ctr": 0,
-      "position": 7.571428571428571
+      "position": 7.333333333333333
     },
     {
       "country": "ltu",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 6.846153846153846
+      "position": 6.571428571428571
     },
     {
       "country": "lux",
@@ -685,7 +692,7 @@
       "clicks": 0,
       "impressions": 16,
       "ctr": 0,
-      "position": 28.25
+      "position": 31.4375
     },
     {
       "country": "mda",
@@ -704,16 +711,16 @@
     {
       "country": "mdv",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 1
+      "position": 2.5
     },
     {
       "country": "mex",
       "clicks": 0,
-      "impressions": 127,
+      "impressions": 128,
       "ctr": 0,
-      "position": 13.929133858267717
+      "position": 15.40625
     },
     {
       "country": "mli",
@@ -746,9 +753,9 @@
     {
       "country": "nga",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 17,
       "ctr": 0,
-      "position": 4.875
+      "position": 5.588235294117647
     },
     {
       "country": "nic",
@@ -776,14 +783,14 @@
       "clicks": 0,
       "impressions": 41,
       "ctr": 0,
-      "position": 5.829268292682927
+      "position": 5.878048780487805
     },
     {
       "country": "omn",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 17,
       "ctr": 0,
-      "position": 19.3125
+      "position": 18.41176470588235
     },
     {
       "country": "pan",
@@ -802,9 +809,9 @@
     {
       "country": "phl",
       "clicks": 0,
-      "impressions": 130,
+      "impressions": 135,
       "ctr": 0,
-      "position": 21.43076923076923
+      "position": 22.68148148148148
     },
     {
       "country": "png",
@@ -816,9 +823,9 @@
     {
       "country": "pol",
       "clicks": 0,
-      "impressions": 51,
+      "impressions": 50,
       "ctr": 0,
-      "position": 11.72549019607843
+      "position": 12.08
     },
     {
       "country": "pri",
@@ -830,9 +837,9 @@
     {
       "country": "prt",
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 28,
       "ctr": 0,
-      "position": 4.518518518518519
+      "position": 4.392857142857142
     },
     {
       "country": "pry",
@@ -851,9 +858,9 @@
     {
       "country": "qat",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 7,
       "ctr": 0,
-      "position": 6.888888888888889
+      "position": 5.857142857142857
     },
     {
       "country": "rou",
@@ -867,7 +874,7 @@
       "clicks": 0,
       "impressions": 26,
       "ctr": 0,
-      "position": 16.115384615384613
+      "position": 16.153846153846153
     },
     {
       "country": "rwa",
@@ -879,9 +886,9 @@
     {
       "country": "sau",
       "clicks": 0,
-      "impressions": 54,
+      "impressions": 48,
       "ctr": 0,
-      "position": 7.388888888888889
+      "position": 7.270833333333333
     },
     {
       "country": "sen",
@@ -895,7 +902,7 @@
       "clicks": 0,
       "impressions": 72,
       "ctr": 0,
-      "position": 6.763888888888889
+      "position": 6.513888888888889
     },
     {
       "country": "slb",
@@ -914,9 +921,9 @@
     {
       "country": "srb",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 6.285714285714286
+      "position": 5.75
     },
     {
       "country": "sur",
@@ -935,9 +942,9 @@
     {
       "country": "svn",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 4.75
+      "position": 3.6666666666666665
     },
     {
       "country": "tca",
@@ -949,9 +956,9 @@
     {
       "country": "tha",
       "clicks": 0,
-      "impressions": 83,
+      "impressions": 74,
       "ctr": 0,
-      "position": 20.771084337349397
+      "position": 16.64864864864865
     },
     {
       "country": "tjk",
@@ -977,16 +984,16 @@
     {
       "country": "tur",
       "clicks": 0,
-      "impressions": 56,
+      "impressions": 57,
       "ctr": 0,
-      "position": 20.642857142857142
+      "position": 20.350877192982455
     },
     {
       "country": "twn",
       "clicks": 0,
-      "impressions": 56,
+      "impressions": 54,
       "ctr": 0,
-      "position": 9.732142857142858
+      "position": 9.88888888888889
     },
     {
       "country": "tza",
@@ -1005,9 +1012,9 @@
     {
       "country": "ukr",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 11,
       "ctr": 0,
-      "position": 11.692307692307692
+      "position": 12.090909090909092
     },
     {
       "country": "ury",
@@ -1033,9 +1040,9 @@
     {
       "country": "vnm",
       "clicks": 0,
-      "impressions": 74,
+      "impressions": 77,
       "ctr": 0,
-      "position": 24.675675675675677
+      "position": 26.324675324675326
     },
     {
       "country": "yem",
