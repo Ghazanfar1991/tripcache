@@ -1,13 +1,12 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-08-31T16:40:01.516Z",
+  "generatedAt": "2026-09-01T13:53:51.712Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
     "installs_app.tripcache_202608_country.csv",
     "installs_app.tripcache_202607_country.csv",
-    "installs_app.tripcache_202606_country.csv",
-    "installs_app.tripcache_202605_country.csv"
+    "installs_app.tripcache_202606_country.csv"
   ],
   "totals28Days": {
     "userInstalls": 3,
@@ -18,86 +17,6 @@
   "latestReportedDate": "2026-08-21",
   "latestInstalledAudience": 13,
   "daily": [
-    {
-      "date": "2026-05-22",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 10
-    },
-    {
-      "date": "2026-05-23",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 9
-    },
-    {
-      "date": "2026-05-24",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 2,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 8
-    },
-    {
-      "date": "2026-05-25",
-      "dailyUserInstalls": 2,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 2,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 11
-    },
-    {
-      "date": "2026-05-26",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 10
-    },
-    {
-      "date": "2026-05-27",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 1,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 10
-    },
-    {
-      "date": "2026-05-28",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 11
-    },
-    {
-      "date": "2026-05-29",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 10
-    },
-    {
-      "date": "2026-05-30",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 1,
-      "dailyDeviceInstalls": 1,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 13
-    },
-    {
-      "date": "2026-05-31",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 11
-    },
     {
       "date": "2026-06-01",
       "dailyUserInstalls": 1,
@@ -757,27 +676,17 @@
   ],
   "countries": [
     {
-      "country": "US",
-      "dailyUserInstalls": 6,
-      "dailyUserUninstalls": 6
-    },
-    {
-      "country": "ID",
-      "dailyUserInstalls": 3,
-      "dailyUserUninstalls": 2
-    },
-    {
       "country": "PH",
-      "dailyUserInstalls": 3,
+      "dailyUserInstalls": 2,
       "dailyUserUninstalls": 1
     },
     {
-      "country": "BR",
+      "country": "US",
       "dailyUserInstalls": 2,
-      "dailyUserUninstalls": 2
+      "dailyUserUninstalls": 4
     },
     {
-      "country": "IN",
+      "country": "BR",
       "dailyUserInstalls": 2,
       "dailyUserUninstalls": 2
     },
@@ -790,6 +699,11 @@
       "country": "GY",
       "dailyUserInstalls": 1,
       "dailyUserUninstalls": 0
+    },
+    {
+      "country": "ID",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1
     },
     {
       "country": "IL",
@@ -805,11 +719,6 @@
       "country": "SA",
       "dailyUserInstalls": 1,
       "dailyUserUninstalls": 1
-    },
-    {
-      "country": "TH",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 0
     },
     {
       "country": "GB",
@@ -842,24 +751,19 @@
       "dailyUserUninstalls": 1
     },
     {
-      "country": "NO",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 2
-    },
-    {
-      "country": "UA",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 0
-    },
-    {
-      "country": "DE",
+      "country": "IN",
       "dailyUserInstalls": 1,
       "dailyUserUninstalls": 1
     },
     {
       "country": "AU",
       "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 22
+      "dailyUserUninstalls": 17
+    },
+    {
+      "country": "TH",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0
     },
     {
       "country": "SG",
@@ -868,11 +772,6 @@
     },
     {
       "country": "CA",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 1
-    },
-    {
-      "country": "IT",
       "dailyUserInstalls": 0,
       "dailyUserUninstalls": 1
     }
