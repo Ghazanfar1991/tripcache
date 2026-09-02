@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T13:54:11.206Z",
+  "updatedAt": "2026-09-02T13:12:28.666Z",
   "phase": "MEASUREMENT_AND_OPTIMIZATION",
   "northStar": {
     "metric": "mrrAud",
@@ -7,9 +7,9 @@
     "actual": 11
   },
   "known": {
-    "searchConsole28DayClicks": 56,
-    "searchConsole28DayImpressions": 10300,
-    "searchConsoleAveragePosition": 9.814951456310679,
+    "searchConsole28DayClicks": 61,
+    "searchConsole28DayImpressions": 10280,
+    "searchConsoleAveragePosition": 10.056517509727627,
     "revenueCatActiveSubscriptions": 1,
     "revenueCatMrrAud": 11,
     "googlePlayUserInstalls28Days": null,
@@ -19,7 +19,7 @@
       "installProxy"
     ],
     "websiteTrafficMeasured": true,
-    "websiteStoreIntentRate": 0.06338028169014084,
+    "websiteStoreIntentRate": 0.061224489795918366,
     "androidCrashFreeUsers30Days": 0.8929,
     "androidCrashes30Days": 10,
     "iosCrashFreeUsers30Days": 1
@@ -29,7 +29,7 @@
     "official Google Play installs (fresh evidence)"
   ],
   "primaryConstraint": "Android reliability is the immediate product constraint at 89.29% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.",
-  "lastDailyRunAt": "2026-09-01T13:54:11.266Z",
+  "lastDailyRunAt": "2026-09-02T13:12:28.733Z",
   "lastDailyRunStatus": "SUCCESS_WITH_CONNECTOR_GAPS",
   "failures": [],
   "connectorGaps": [
