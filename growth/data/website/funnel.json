@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T13:11:51.514Z",
+  "generatedAt": "2026-09-03T13:12:56.484Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -69,8 +69,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 18,
-        "activeUsers": 18
+        "sessions": 19,
+        "activeUsers": 19
       }
     },
     {
@@ -124,8 +124,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
+        "sessions": 5,
+        "activeUsers": 5
       }
     },
     {
@@ -240,6 +240,28 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(data not available)",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/?ref=producthunt",
         "platform": "web"
@@ -275,6 +297,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
         "platform": "web"
       },
       "metrics": {
@@ -351,7 +384,40 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
         "landingPagePlusQueryString": "(not set)",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "/",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
         "platform": "web"
       },
       "metrics": {
@@ -462,11 +528,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 147,
-    "landingSessions": 191,
+    "landingUsers": 152,
+    "landingSessions": 198,
     "storeIntentUsers": 9,
     "storeIntentEvents": 11,
-    "rate": 0.061224489795918366,
+    "rate": 0.05921052631578947,
     "eventNames": [
       "app_store_click",
       "play_store_click"
