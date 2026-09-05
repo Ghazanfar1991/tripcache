@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-04T13:06:43.398Z",
+  "generatedAt": "2026-09-05T12:20:00.339Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-06-06",
-    "endDate": "2026-09-04"
+    "startDate": "2026-06-07",
+    "endDate": "2026-09-05"
   },
   "charts": {
     "mrr": {
@@ -1687,7 +1687,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1788480000,
+        "end_date": 1788566400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1706,10 +1706,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780704000,
+        "start_date": 1780790400,
         "summary": {
           "average": {
-            "MRR": 11.95
+            "MRR": 11.8
           }
         },
         "unsupported_params": null,
@@ -1717,12 +1717,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1780704000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 25.43
-          },
           {
             "cohort": 1780790400,
             "incomplete": false,
@@ -2259,6 +2253,12 @@
           },
           {
             "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 0,
+            "value": 11.49
+          },
+          {
+            "cohort": 1788566400,
             "incomplete": true,
             "measure": 0,
             "value": 11.49
@@ -4009,7 +4009,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1788480000,
+        "end_date": 1788566400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4044,7 +4044,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780704000,
+        "start_date": 1780790400,
         "summary": {
           "average": {
             "Ad Impressions": 0,
@@ -4062,24 +4062,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1780704000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1780704000,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1780704000,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1780790400,
             "incomplete": false,
@@ -5684,18 +5666,36 @@
           },
           {
             "cohort": 1788480000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1788480000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7361,18 +7361,18 @@
       },
       "data": {
         "category": "actives",
-        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nFor the current period, the number indicated is the current active subscriptions. Subscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
+        "description": "Active Subscriptions shows the number of unexpired, paid subscriptions at the end of each period charted.\n\nFor the current period, the number indicated is the current active subscriptions. Subscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1788480000,
+        "end_date": 1788566400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": "The number of paid subscriptions granting access at the end of the period.",
+            "description": "The number of un-expired subscriptions at the end of the period.",
             "display_name": "Actives",
             "tabulable": true,
             "unit": "#"
@@ -7384,21 +7384,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780704000,
+        "start_date": 1780790400,
         "summary": {
           "average": {
-            "Actives": 1.25
+            "Actives": 1.24
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1780704000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 2
-          },
           {
             "cohort": 1780790400,
             "incomplete": false,
@@ -7935,6 +7929,12 @@
           },
           {
             "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 0,
+            "value": 1
+          },
+          {
+            "cohort": 1788566400,
             "incomplete": true,
             "measure": 0,
             "value": 1
@@ -9566,7 +9566,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1788480000,
+        "end_date": 1788566400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9585,7 +9585,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1780704000,
+        "start_date": 1780790400,
         "summary": {
           "average": {
             "Active Trials": 0
@@ -9594,12 +9594,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1780704000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1780790400,
             "incomplete": false,
@@ -10136,6 +10130,12 @@
           },
           {
             "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
             "incomplete": true,
             "measure": 0,
             "value": 0
