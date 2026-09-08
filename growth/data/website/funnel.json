@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T14:43:50.622Z",
+  "generatedAt": "2026-09-08T13:15:40.049Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -47,7 +47,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 71,
+        "sessions": 72,
         "activeUsers": 51
       }
     },
@@ -102,8 +102,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 9,
-        "activeUsers": 4
+        "sessions": 10,
+        "activeUsers": 5
       }
     },
     {
@@ -209,17 +209,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 2,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
@@ -472,17 +461,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog",
         "platform": "web"
       },
@@ -562,7 +540,7 @@
     "measurable": true,
     "status": "MEASURED",
     "landingUsers": 164,
-    "landingSessions": 215,
+    "landingSessions": 216,
     "storeIntentUsers": 11,
     "storeIntentEvents": 14,
     "rate": 0.06707317073170732,

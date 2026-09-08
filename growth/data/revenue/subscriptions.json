@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T14:43:59.133Z",
+  "generatedAt": "2026-09-08T13:15:46.728Z",
   "currency": "AUD",
   "reportingWindow": {
     "startDate": "2026-06-10",
@@ -2253,7 +2253,7 @@
           },
           {
             "cohort": 1788739200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 11.49
           },
@@ -4016,7 +4016,7 @@
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": "The total revenue generated in a given period, minus refunds from transactions that occurred in that period, rounded to the nearest whole number.",
+            "description": "The total revenue generated in a given period, minus refunds and downward subscription payment adjustments recorded in that period regardless of when the original transaction occurred, rounded to the nearest whole number.",
             "display_name": "Revenue",
             "tabulable": true,
             "unit": "$"
@@ -4024,7 +4024,7 @@
           {
             "chartable": false,
             "decimal_precision": 0,
-            "description": "The count of revenue generating transactions for the period, minus those that have since been refunded.",
+            "description": "The count of revenue-generating purchase transactions in the period. Refunds do not reduce this count.",
             "display_name": "Transactions",
             "tabulable": true,
             "unit": "#"
@@ -5666,19 +5666,19 @@
           },
           {
             "cohort": 1788739200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1788739200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1788739200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -7361,7 +7361,7 @@
       },
       "data": {
         "category": "actives",
-        "description": "Active Subscriptions shows the number of unexpired, paid subscriptions at the end of each period charted.\n\nFor the current period, the number indicated is the current active subscriptions. Subscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
+        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nFor the current period, the number indicated is the current active subscriptions. Subscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
@@ -7372,7 +7372,7 @@
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": "The number of un-expired subscriptions at the end of the period.",
+            "description": "The number of paid subscriptions granting access at the end of the period.",
             "display_name": "Actives",
             "tabulable": true,
             "unit": "#"
@@ -7929,7 +7929,7 @@
           },
           {
             "cohort": 1788739200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 1
           },
@@ -9573,7 +9573,7 @@
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": null,
+            "description": "The number of free trials granting access at the end of the period.",
             "display_name": "Active Trials",
             "tabulable": true,
             "unit": "#"
@@ -10130,7 +10130,7 @@
           },
           {
             "cohort": 1788739200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
