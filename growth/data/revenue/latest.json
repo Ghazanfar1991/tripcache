@@ -1,6 +1,6 @@
 {
   "source": "RevenueCat API v2",
-  "generatedAt": "2026-09-09T13:21:06.080Z",
+  "generatedAt": "2026-09-10T13:18:12.349Z",
   "currency": "AUD",
   "overview": {
     "currency": "AUD",
@@ -25,7 +25,7 @@
         "object": "overview_metric",
         "period": "P0D",
         "unit": "#",
-        "value": 1
+        "value": 2
       },
       {
         "description": "Monthly Recurring Revenue",
@@ -36,7 +36,7 @@
         "object": "overview_metric",
         "period": "P28D",
         "unit": "$",
-        "value": 11
+        "value": 17
       },
       {
         "description": "Last 28 days",
@@ -47,7 +47,7 @@
         "object": "overview_metric",
         "period": "P28D",
         "unit": "$",
-        "value": 0
+        "value": 69
       },
       {
         "description": "Last 28 days",
@@ -58,7 +58,7 @@
         "object": "overview_metric",
         "period": "P28D",
         "unit": "#",
-        "value": 52
+        "value": 53
       },
       {
         "description": "Last 28 days",
@@ -69,7 +69,7 @@
         "object": "overview_metric",
         "period": "P28D",
         "unit": "#",
-        "value": 60
+        "value": 61
       }
     ],
     "object": "overview_metrics"
