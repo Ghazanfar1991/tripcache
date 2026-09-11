@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-09-10T13:18:06.276Z",
+  "generatedAt": "2026-09-11T13:11:58.089Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,8 +10,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 2993,
-        "activeUsers": 23
+        "eventCount": 1943,
+        "activeUsers": 22
       }
     },
     {
@@ -20,8 +20,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 2484,
-        "activeUsers": 33
+        "eventCount": 1724,
+        "activeUsers": 32
       }
     },
     {
@@ -30,7 +30,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 938,
+        "eventCount": 920,
         "activeUsers": 38
       }
     },
@@ -40,8 +40,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 618,
-        "activeUsers": 163
+        "eventCount": 623,
+        "activeUsers": 165
       }
     },
     {
@@ -50,7 +50,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 488,
+        "eventCount": 483,
         "activeUsers": 34
       }
     },
@@ -60,8 +60,18 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 225,
-        "activeUsers": 84
+        "eventCount": 227,
+        "activeUsers": 85
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "session_start",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 217,
+        "activeUsers": 165
       }
     },
     {
@@ -70,18 +80,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 215,
+        "eventCount": 211,
         "activeUsers": 77
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "session_start",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 215,
-        "activeUsers": 163
       }
     },
     {
@@ -90,8 +90,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 163,
-        "activeUsers": 163
+        "eventCount": 165,
+        "activeUsers": 165
       }
     },
     {
@@ -100,8 +100,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 94,
-        "activeUsers": 32
+        "eventCount": 91,
+        "activeUsers": 31
       }
     },
     {
@@ -120,8 +120,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 57,
-        "activeUsers": 28
+        "eventCount": 58,
+        "activeUsers": 29
       }
     },
     {
@@ -140,8 +140,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 29,
-        "activeUsers": 29
+        "eventCount": 28,
+        "activeUsers": 28
       }
     },
     {
@@ -247,21 +247,21 @@
     {
       "dimensions": {
         "eventName": "app_update",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 3,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_update",
         "platform": "Android"
       },
       "metrics": {
         "eventCount": 2,
         "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_update",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 2
       }
     },
     {
@@ -303,8 +303,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 1601,
-        "activeUsers": 14
+        "eventCount": 907,
+        "activeUsers": 13
       }
     },
     {
@@ -314,19 +314,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 445,
-        "activeUsers": 10
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "UIViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 279,
-        "activeUsers": 14
+        "eventCount": 272,
+        "activeUsers": 9
       }
     },
     {
@@ -343,23 +332,23 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "DevLauncherViewController",
+        "unifiedScreenClass": "UIViewController",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 235,
-        "activeUsers": 2
+        "eventCount": 203,
+        "activeUsers": 13
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "MainActivity",
-        "platform": "Android"
+        "unifiedScreenClass": "DevLauncherViewController",
+        "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 113,
-        "activeUsers": 19
+        "eventCount": 142,
+        "activeUsers": 1
       }
     },
     {
@@ -382,6 +371,17 @@
       "metrics": {
         "eventCount": 101,
         "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "MainActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 99,
+        "activeUsers": 19
       }
     },
     {
@@ -519,17 +519,6 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTAlertController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 20,
-        "activeUsers": 5
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
         "unifiedScreenClass": "PaywallActivity",
         "platform": "Android"
       },
@@ -551,6 +540,17 @@
     },
     {
       "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RCTAlertController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 14,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
         "unifiedScreenName": "Profile",
         "unifiedScreenClass": "Profile",
         "platform": "iOS"
@@ -558,17 +558,6 @@
       "metrics": {
         "eventCount": 13,
         "activeUsers": 4
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "GmsDocumentScanningDelegateActivity",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 12,
-        "activeUsers": 5
       }
     },
     {
@@ -607,17 +596,6 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "DevMenuViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 9,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
         "unifiedScreenClass": "SFAuthenticationViewController",
         "platform": "iOS"
       },
@@ -634,6 +612,17 @@
       },
       "metrics": {
         "eventCount": 9,
+        "activeUsers": 4
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "GmsDocumentScanningDelegateActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 8,
         "activeUsers": 4
       }
     },
@@ -739,6 +728,17 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "DevMenuViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
         "unifiedScreenClass": "RCTRedBoxController",
         "platform": "iOS"
       },
@@ -761,7 +761,7 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "UIAlertController",
+        "unifiedScreenClass": "VNDocumentCameraViewController_InProcess",
         "platform": "iOS"
       },
       "metrics": {
@@ -772,12 +772,12 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "VNDocumentCameraViewController_InProcess",
+        "unifiedScreenClass": "UIAlertController",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 2,
-        "activeUsers": 2
+        "eventCount": 1,
+        "activeUsers": 1
       }
     },
     {
@@ -809,8 +809,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "newUsers": 29,
-        "activeUsers": 33
+        "newUsers": 28,
+        "activeUsers": 32
       }
     },
     {
