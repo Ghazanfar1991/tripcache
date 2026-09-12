@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-09-11T13:11:58.052Z",
+  "generatedAt": "2026-09-12T12:35:57.017Z",
   "period": {
-    "startDate": "2026-08-12",
-    "endDate": "2026-09-08"
+    "startDate": "2026-08-13",
+    "endDate": "2026-09-09"
   },
   "topQueries": [
     {
       "query": "tripcache",
-      "clicks": 10,
-      "impressions": 23,
-      "ctr": 0.43478260869565216,
+      "clicks": 11,
+      "impressions": 24,
+      "ctr": 0.4583333333333333,
       "position": 1
     },
     {
       "query": "tripcase",
       "clicks": 5,
-      "impressions": 1032,
-      "ctr": 0.0048449612403100775,
-      "position": 12.887596899224807
+      "impressions": 1046,
+      "ctr": 0.004780114722753346,
+      "position": 12.749521988527725
     },
     {
       "query": "trip case",
-      "clicks": 3,
-      "impressions": 142,
-      "ctr": 0.02112676056338028,
-      "position": 17.577464788732396
+      "clicks": 4,
+      "impressions": 152,
+      "ctr": 0.02631578947368421,
+      "position": 16.888157894736842
     },
     {
       "query": "best tripit alternative",
@@ -43,16 +43,16 @@
     {
       "query": "tripcase sabre",
       "clicks": 1,
-      "impressions": 12,
-      "ctr": 0.08333333333333333,
-      "position": 10.333333333333334
+      "impressions": 13,
+      "ctr": 0.07692307692307693,
+      "position": 10.384615384615385
     },
     {
       "query": "tripcase.com",
       "clicks": 1,
-      "impressions": 36,
-      "ctr": 0.027777777777777776,
-      "position": 5.888888888888889
+      "impressions": 39,
+      "ctr": 0.02564102564102564,
+      "position": 6.076923076923077
     },
     {
       "query": "\"corporate travel management\"",
@@ -132,6 +132,13 @@
       "position": 13
     },
     {
+      "query": "american airlines app alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
       "query": "and bookings in one place",
       "clicks": 0,
       "impressions": 1,
@@ -162,9 +169,9 @@
     {
       "query": "app that organizes all travel in emails",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 17.666666666666668
+      "position": 16.5
     },
     {
       "query": "app to manage many air travel itineraries",
@@ -235,13 +242,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 2
-    },
-    {
-      "query": "are there any platforms that provide digital tools for organising holiday itineraries?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
     },
     {
       "query": "atripchay",
@@ -456,9 +456,9 @@
     {
       "query": "best itinerary app",
       "clicks": 0,
-      "impressions": 40,
+      "impressions": 43,
       "ctr": 0,
-      "position": 57.8
+      "position": 57.86046511627907
     },
     {
       "query": "best itinerary builder app",
@@ -512,9 +512,16 @@
     {
       "query": "best organization apps",
       "clicks": 0,
-      "impressions": 199,
+      "impressions": 209,
       "ctr": 0,
-      "position": 3.6532663316582914
+      "position": 3.7033492822966507
+    },
+    {
+      "query": "best planning apps",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 23
     },
     {
       "query": "best platform for building custom travel itineraries",
@@ -533,23 +540,16 @@
     {
       "query": "best road trip apps",
       "clicks": 0,
-      "impressions": 41,
+      "impressions": 42,
       "ctr": 0,
-      "position": 3.658536585365854
-    },
-    {
-      "query": "best road trip planner app",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 16
+      "position": 3.619047619047619
     },
     {
       "query": "best smart routing travel platforms",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 3.5
+      "position": 5
     },
     {
       "query": "best tools to plan flights travel",
@@ -596,16 +596,16 @@
     {
       "query": "best travel apps for managing flight itineraries and mobile check-in?",
       "clicks": 0,
-      "impressions": 43,
+      "impressions": 42,
       "ctr": 0,
-      "position": 3.3255813953488373
+      "position": 3.357142857142857
     },
     {
       "query": "best travel apps for planning",
       "clicks": 0,
-      "impressions": 368,
+      "impressions": 373,
       "ctr": 0,
-      "position": 7.567934782608695
+      "position": 7.498659517426273
     },
     {
       "query": "best travel booking apps",
@@ -645,16 +645,16 @@
     {
       "query": "best travel itinerary app",
       "clicks": 0,
-      "impressions": 37,
+      "impressions": 39,
       "ctr": 0,
-      "position": 57.108108108108105
+      "position": 57.17948717948718
     },
     {
       "query": "best travel itinerary apps",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 57
+      "position": 58
     },
     {
       "query": "best travel itinerary apps 2025",
@@ -669,6 +669,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "query": "best travel itinerary planner app",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49.5
     },
     {
       "query": "best travel management app",
@@ -715,9 +722,9 @@
     {
       "query": "best travel organizer app",
       "clicks": 0,
-      "impressions": 38,
+      "impressions": 40,
       "ctr": 0,
-      "position": 48.86842105263158
+      "position": 49.125
     },
     {
       "query": "best travel planner app",
@@ -743,9 +750,16 @@
     {
       "query": "best travel planning apps",
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 29,
       "ctr": 0,
-      "position": 56.370370370370374
+      "position": 56.58620689655172
+    },
+    {
+      "query": "best travel planning software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
     },
     {
       "query": "best travel planning tool? tried tripit, tripadvisor.",
@@ -790,6 +804,13 @@
       "position": 2.166666666666667
     },
     {
+      "query": "best trip itinerary planner app",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
       "query": "best trip management app",
       "clicks": 0,
       "impressions": 3,
@@ -799,9 +820,9 @@
     {
       "query": "best trip manager app",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 22,
       "ctr": 0,
-      "position": 51.61904761904762
+      "position": 51.5
     },
     {
       "query": "best trip organizer app",
@@ -837,6 +858,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 21
+    },
+    {
+      "query": "best trip planning software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
     },
     {
       "query": "best update travel",
@@ -956,13 +984,6 @@
       "impressions": 20,
       "ctr": 0,
       "position": 3.95
-    },
-    {
-      "query": "compare with other",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
     },
     {
       "query": "comparez les modèles d'itinéraires disponibles sur google avec d'autres solutions pour déterminer celle qui correspond le mieux à vos besoins en matière de planification de voyage.",
@@ -1198,9 +1219,9 @@
     {
       "query": "google trips alternative",
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 28,
       "ctr": 0,
-      "position": 31.333333333333332
+      "position": 31.678571428571427
     },
     {
       "query": "google trips replacement",
@@ -1268,16 +1289,16 @@
     {
       "query": "how do i find leading tools for planning family air travel?",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 10.75
+      "position": 11
     },
     {
       "query": "how do i organize flight and hotel confirmations?",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 9.222222222222221
+      "position": 9.4
     },
     {
       "query": "how much does tripit cost",
@@ -1296,9 +1317,9 @@
     {
       "query": "how well do travel planning apps integrate with booking services?",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 3.1666666666666665
+      "position": 2.8
     },
     {
       "query": "https://wanderlog.com/",
@@ -1310,9 +1331,9 @@
     {
       "query": "https://www.tripcase.com",
       "clicks": 0,
-      "impressions": 24,
+      "impressions": 27,
       "ctr": 0,
-      "position": 8.125
+      "position": 8.296296296296298
     },
     {
       "query": "i connected",
@@ -1345,9 +1366,9 @@
     {
       "query": "i'm looking for software that automates business travel itinerary creation",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 5.166666666666667
+      "position": 5
     },
     {
       "query": "is there a better alternative?",
@@ -1366,16 +1387,16 @@
     {
       "query": "is there a travel app better than tripit for managing business trips?",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 4.142857142857142
+      "position": 4.230769230769231
     },
     {
       "query": "is there a travel app that handles everything — flights, hotels, loyalty, and changes?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 9
+      "position": 7
     },
     {
       "query": "is there any other application",
@@ -1387,9 +1408,9 @@
     {
       "query": "is tripcase still active",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 19,
       "ctr": 0,
-      "position": 6.55
+      "position": 6.526315789473684
     },
     {
       "query": "is tripit app free",
@@ -1406,6 +1427,13 @@
       "position": 3
     },
     {
+      "query": "itinerary document organizer for travel",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 14
+    },
+    {
       "query": "itinerary email",
       "clicks": 0,
       "impressions": 1,
@@ -1415,7 +1443,7 @@
     {
       "query": "itinerary+recovery",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 8
     },
@@ -1490,13 +1518,6 @@
       "position": 5
     },
     {
-      "query": "my tripbook",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 56
-    },
-    {
       "query": "need a tool that detects schedule changes and immediately proposes the best alternative flights to rebook",
       "clicks": 0,
       "impressions": 2,
@@ -1525,13 +1546,6 @@
       "position": 16
     },
     {
-      "query": "quais são as melhores alternativas aos modelos de itinerário online e como se comparam os seus modelos de preços?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 24
-    },
-    {
       "query": "quais são as melhores alternativas de modelos de itinerário disponíveis em diferentes aplicativos, com suas respectivas opções de preço?",
       "clicks": 0,
       "impressions": 1,
@@ -1555,9 +1569,9 @@
     {
       "query": "quais são as opções mais recentes de modelos de itinerário disponíveis em aplicativos, incluindo informações sobre preços?",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 3.25
+      "position": 3
     },
     {
       "query": "quais são os melhores aplicativos de modelos de itinerário e como seus preços se comparam?",
@@ -1616,13 +1630,6 @@
       "position": 1.6
     },
     {
-      "query": "quelles sont les meilleures plateformes de modèles d'itinéraires économiques disponibles pour planifier des voyages ?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 21
-    },
-    {
       "query": "quels sont les outils de création d'itinéraires réellement disponibles pour faciliter la planification et l'organisation des voyages ?",
       "clicks": 0,
       "impressions": 1,
@@ -1646,9 +1653,9 @@
     {
       "query": "sabre tripcase",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 1
+      "position": 5
     },
     {
       "query": "seyahat için en iyi uygulama hangisi?",
@@ -1695,16 +1702,16 @@
     {
       "query": "tipcase",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
       "position": 10
     },
     {
       "query": "tool to centralize reservations and travel confirmations",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 8,
       "ctr": 0,
-      "position": 4.111111111111111
+      "position": 3
     },
     {
       "query": "top 10 best travel trip planner apps to have in 2023",
@@ -1712,6 +1719,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 53
+    },
+    {
+      "query": "top 10 flight booking apps",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
     },
     {
       "query": "top itinerary management software 2026",
@@ -1740,29 +1754,15 @@
       "impressions": 3,
       "ctr": 0,
       "position": 3.6666666666666665
-    },
-    {
-      "query": "top travel applications",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 1.5
-    },
-    {
-      "query": "top travel apps",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 1
     }
   ],
   "ctrOpportunities": [
     {
       "query": "tripcase",
       "clicks": 5,
-      "impressions": 1032,
-      "ctr": 0.0048449612403100775,
-      "position": 12.887596899224807
+      "impressions": 1046,
+      "ctr": 0.004780114722753346,
+      "position": 12.749521988527725
     },
     {
       "query": "wanderlog reviews",
@@ -1774,37 +1774,30 @@
     {
       "query": "best travel apps for planning",
       "clicks": 0,
-      "impressions": 368,
+      "impressions": 373,
       "ctr": 0,
-      "position": 7.567934782608695
+      "position": 7.498659517426273
     },
     {
       "query": "best organization apps",
       "clicks": 0,
-      "impressions": 199,
+      "impressions": 209,
       "ctr": 0,
-      "position": 3.6532663316582914
+      "position": 3.7033492822966507
     },
     {
       "query": "tripit pro pricing official 2026",
       "clicks": 0,
-      "impressions": 154,
+      "impressions": 155,
       "ctr": 0,
-      "position": 10.603896103896103
+      "position": 10.541935483870967
     },
     {
       "query": "tripcase replacement",
       "clicks": 0,
-      "impressions": 148,
+      "impressions": 144,
       "ctr": 0,
-      "position": 12.358108108108109
-    },
-    {
-      "query": "what are the top itinerary template apps and how do their pricing compare?",
-      "clicks": 0,
-      "impressions": 72,
-      "ctr": 0,
-      "position": 3.2083333333333335
+      "position": 12.26388888888889
     },
     {
       "query": "what are the best itinerary template alternatives with their pricing options available on different apps",
@@ -1814,46 +1807,60 @@
       "position": 3.579710144927536
     },
     {
+      "query": "what are the top itinerary template apps and how do their pricing compare?",
+      "clicks": 0,
+      "impressions": 67,
+      "ctr": 0,
+      "position": 2.925373134328358
+    },
+    {
       "query": "what are the best itinerary template options available in apps for 2026 with pricing information?",
       "clicks": 0,
-      "impressions": 54,
+      "impressions": 51,
       "ctr": 0,
-      "position": 2.3703703703703702
-    },
-    {
-      "query": "tripcase corporate pricing",
-      "clicks": 0,
-      "impressions": 47,
-      "ctr": 0,
-      "position": 10.170212765957446
-    },
-    {
-      "query": "best travel apps for managing flight itineraries and mobile check-in?",
-      "clicks": 0,
-      "impressions": 43,
-      "ctr": 0,
-      "position": 3.3255813953488373
+      "position": 2.450980392156863
     },
     {
       "query": "tripcase official website",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 48,
       "ctr": 0,
-      "position": 5.571428571428571
+      "position": 5.875
     },
     {
-      "query": "what are the best itinerary template apps and how do their pricing compare?",
+      "query": "tripcase corporate pricing",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 45,
       "ctr": 0,
-      "position": 4.595238095238095
+      "position": 10.022222222222222
     },
     {
       "query": "best road trip apps",
       "clicks": 0,
-      "impressions": 41,
+      "impressions": 42,
       "ctr": 0,
-      "position": 3.658536585365854
+      "position": 3.619047619047619
+    },
+    {
+      "query": "best travel apps for managing flight itineraries and mobile check-in?",
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 3.357142857142857
+    },
+    {
+      "query": "what are the best itinerary template apps and how do their pricing compare?",
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 3.85
+    },
+    {
+      "query": "tripcase com",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 14.068965517241379
     },
     {
       "query": "best business travel apps in 2026",
@@ -1863,32 +1870,18 @@
       "position": 8.321428571428571
     },
     {
-      "query": "tripcase com",
+      "query": "what are the latest itinerary template options available on apps with pricing information?",
       "clicks": 0,
       "impressions": 28,
       "ctr": 0,
-      "position": 14.178571428571429
-    },
-    {
-      "query": "what are the latest itinerary template options available on apps with pricing information?",
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 5.407407407407407
+      "position": 5.5
     },
     {
       "query": "https://www.tripcase.com",
       "clicks": 0,
-      "impressions": 24,
+      "impressions": 27,
       "ctr": 0,
-      "position": 8.125
-    },
-    {
-      "query": "what are the different platforms that offer itinerary template tools and how do they compare to each other?",
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 4.6521739130434785
+      "position": 8.296296296296298
     },
     {
       "query": "tripcase login",
@@ -1905,104 +1898,97 @@
       "position": 2.1818181818181817
     },
     {
+      "query": "what are the different platforms that offer itinerary template tools and how do they compare to each other?",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 4.727272727272727
+    },
+    {
       "query": "compare itinerary template options available through google with other alternatives to help determine the best choice for your travel planning needs.",
       "clicks": 0,
       "impressions": 20,
       "ctr": 0,
       "position": 3.95
-    },
-    {
-      "query": "is tripcase still active",
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 6.55
     }
   ],
   "rankingOpportunities": [
     {
       "query": "tripcase",
       "clicks": 5,
-      "impressions": 1032,
-      "ctr": 0.0048449612403100775,
-      "position": 12.887596899224807
+      "impressions": 1046,
+      "ctr": 0.004780114722753346,
+      "position": 12.749521988527725
     },
     {
       "query": "best travel apps for planning",
       "clicks": 0,
-      "impressions": 368,
+      "impressions": 373,
       "ctr": 0,
-      "position": 7.567934782608695
+      "position": 7.498659517426273
     },
     {
       "query": "tripcase app",
       "clicks": 0,
-      "impressions": 175,
+      "impressions": 177,
       "ctr": 0,
-      "position": 15.451428571428572
+      "position": 15.141242937853107
     },
     {
       "query": "tripit pro pricing official 2026",
       "clicks": 0,
-      "impressions": 154,
+      "impressions": 155,
       "ctr": 0,
-      "position": 10.603896103896103
+      "position": 10.541935483870967
+    },
+    {
+      "query": "trip case",
+      "clicks": 4,
+      "impressions": 152,
+      "ctr": 0.02631578947368421,
+      "position": 16.888157894736842
     },
     {
       "query": "tripcase replacement",
       "clicks": 0,
-      "impressions": 148,
+      "impressions": 144,
       "ctr": 0,
-      "position": 12.358108108108109
-    },
-    {
-      "query": "trip case",
-      "clicks": 3,
-      "impressions": 142,
-      "ctr": 0.02112676056338028,
-      "position": 17.577464788732396
+      "position": 12.26388888888889
     },
     {
       "query": "tripit alternatives",
       "clicks": 0,
-      "impressions": 131,
+      "impressions": 133,
       "ctr": 0,
-      "position": 20.47328244274809
+      "position": 20.263157894736842
     },
     {
       "query": "tripit alternative",
       "clicks": 0,
-      "impressions": 121,
+      "impressions": 123,
       "ctr": 0,
-      "position": 24.43801652892562
+      "position": 24.170731707317074
     },
     {
       "query": "tripcase alternative",
       "clicks": 0,
-      "impressions": 65,
+      "impressions": 66,
       "ctr": 0,
-      "position": 16.184615384615384
-    },
-    {
-      "query": "tripcase corporate pricing",
-      "clicks": 0,
-      "impressions": 47,
-      "ctr": 0,
-      "position": 10.170212765957446
+      "position": 15.909090909090908
     },
     {
       "query": "tripcase official website",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 48,
       "ctr": 0,
-      "position": 5.571428571428571
+      "position": 5.875
     },
     {
-      "query": "what are the best itinerary template apps and how do their pricing compare?",
+      "query": "tripcase corporate pricing",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 45,
       "ctr": 0,
-      "position": 4.595238095238095
+      "position": 10.022222222222222
     },
     {
       "query": "trip case app",
@@ -2014,9 +2000,16 @@
     {
       "query": "tripcase.com",
       "clicks": 1,
-      "impressions": 36,
-      "ctr": 0.027777777777777776,
-      "position": 5.888888888888889
+      "impressions": 39,
+      "ctr": 0.02564102564102564,
+      "position": 6.076923076923077
+    },
+    {
+      "query": "tripcase com",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 14.068965517241379
     },
     {
       "query": "best business travel apps in 2026",
@@ -2026,32 +2019,18 @@
       "position": 8.321428571428571
     },
     {
-      "query": "tripcase com",
+      "query": "what are the latest itinerary template options available on apps with pricing information?",
       "clicks": 0,
       "impressions": 28,
       "ctr": 0,
-      "position": 14.178571428571429
-    },
-    {
-      "query": "what are the latest itinerary template options available on apps with pricing information?",
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 5.407407407407407
+      "position": 5.5
     },
     {
       "query": "https://www.tripcase.com",
       "clicks": 0,
-      "impressions": 24,
+      "impressions": 27,
       "ctr": 0,
-      "position": 8.125
-    },
-    {
-      "query": "what are the different platforms that offer itinerary template tools and how do they compare to each other?",
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 4.6521739130434785
+      "position": 8.296296296296298
     },
     {
       "query": "tripcase login",
@@ -2061,11 +2040,18 @@
       "position": 12.636363636363637
     },
     {
+      "query": "what are the different platforms that offer itinerary template tools and how do they compare to each other?",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 4.727272727272727
+    },
+    {
       "query": "is tripcase still active",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 19,
       "ctr": 0,
-      "position": 6.55
+      "position": 6.526315789473684
     },
     {
       "query": "tripit pro pricing 2026",
@@ -2089,6 +2075,13 @@
       "position": 19.8
     },
     {
+      "query": "tripit vs tripit pro",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 27.2
+    },
+    {
       "query": "automated travel booking confirmations",
       "clicks": 0,
       "impressions": 14,
@@ -2096,32 +2089,25 @@
       "position": 15.142857142857142
     },
     {
+      "query": "tripcase sabre",
+      "clicks": 1,
+      "impressions": 13,
+      "ctr": 0.07692307692307693,
+      "position": 10.384615384615385
+    },
+    {
       "query": "is there a travel app better than tripit for managing business trips?",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 4.142857142857142
+      "position": 4.230769230769231
     },
     {
       "query": "tripcas",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 6.285714285714286
-    },
-    {
-      "query": "tripit vs tripit pro",
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 26.928571428571427
-    },
-    {
-      "query": "tripcase sabre",
-      "clicks": 1,
-      "impressions": 12,
-      "ctr": 0.08333333333333333,
-      "position": 10.333333333333334
+      "position": 6.6923076923076925
     },
     {
       "query": "travel document organizer app",
@@ -2129,13 +2115,6 @@
       "impressions": 12,
       "ctr": 0,
       "position": 14.583333333333334
-    },
-    {
-      "query": "what real itinerary template tools are available to help plan and organize travel schedules?",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 9.083333333333334
     },
     {
       "query": "confirmation tripcase com",
@@ -2157,6 +2136,20 @@
       "impressions": 10,
       "ctr": 0,
       "position": 9
+    },
+    {
+      "query": "how do i organize flight and hotel confirmations?",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 9.4
+    },
+    {
+      "query": "what real itinerary template tools are available to help plan and organize travel schedules?",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 5.9
     },
     {
       "query": "www.tripcase.com",

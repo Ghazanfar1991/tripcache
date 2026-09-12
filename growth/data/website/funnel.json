@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T13:11:58.089Z",
+  "generatedAt": "2026-09-12T12:35:57.058Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -102,25 +102,25 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 11,
-        "activeUsers": 6
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/travel-itinerary-template-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 6,
-        "activeUsers": 6
+        "sessions": 12,
+        "activeUsers": 7
       }
     },
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 7,
+        "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/travel-itinerary-template-2026",
         "platform": "web"
       },
       "metrics": {
@@ -141,6 +141,17 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
         "platform": "web"
@@ -154,17 +165,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "(not set)",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog",
         "platform": "web"
       },
       "metrics": {
@@ -263,6 +263,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/best-travel-document-organizer-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
         "platform": "web"
       },
@@ -280,28 +291,6 @@
       "metrics": {
         "sessions": 2,
         "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(data not available)",
-        "landingPagePlusQueryString": "/blog/best-travel-document-organizer-app-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(data not available)",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
       }
     },
     {
@@ -439,17 +428,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(not set)",
         "landingPagePlusQueryString": "(not set)",
         "platform": "web"
       },
@@ -527,29 +505,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 0
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/best-travel-document-organizer-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -606,7 +562,7 @@
     "measurable": true,
     "status": "MEASURED",
     "landingUsers": 176,
-    "landingSessions": 233,
+    "landingSessions": 234,
     "storeIntentUsers": 13,
     "storeIntentEvents": 18,
     "rate": 0.07386363636363637,
