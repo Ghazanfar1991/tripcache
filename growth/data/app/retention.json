@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T12:35:57.058Z",
+  "generatedAt": "2026-09-13T13:37:08.257Z",
   "cohorts": [
     {
       "dimensions": {
@@ -7,8 +7,8 @@
         "platform": "web"
       },
       "metrics": {
-        "activeUsers": 166,
-        "sessions": 166
+        "activeUsers": 176,
+        "sessions": 176
       }
     },
     {
@@ -17,8 +17,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "activeUsers": 74,
-        "sessions": 74
+        "activeUsers": 75,
+        "sessions": 75
       }
     },
     {
@@ -27,18 +27,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "activeUsers": 28,
-        "sessions": 27
-      }
-    },
-    {
-      "dimensions": {
-        "newVsReturning": "returning",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "activeUsers": 16,
-        "sessions": 61
+        "activeUsers": 31,
+        "sessions": 30
       }
     },
     {
@@ -47,8 +37,18 @@
         "platform": "web"
       },
       "metrics": {
-        "activeUsers": 14,
-        "sessions": 41
+        "activeUsers": 17,
+        "sessions": 46
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "returning",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "activeUsers": 15,
+        "sessions": 59
       }
     },
     {
@@ -57,8 +57,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "activeUsers": 10,
-        "sessions": 129
+        "activeUsers": 11,
+        "sessions": 131
       }
     },
     {
@@ -88,7 +88,7 @@
       },
       "metrics": {
         "activeUsers": 0,
-        "sessions": 11
+        "sessions": 12
       }
     }
   ]
