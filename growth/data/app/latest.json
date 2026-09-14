@@ -1,17 +1,17 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-09-13T13:37:08.257Z",
+  "generatedAt": "2026-09-14T15:36:36.555Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
     {
       "dimensions": {
         "eventName": "screen_view",
-        "platform": "iOS"
+        "platform": "Android"
       },
       "metrics": {
-        "eventCount": 1497,
-        "activeUsers": 25
+        "eventCount": 916,
+        "activeUsers": 35
       }
     },
     {
@@ -20,18 +20,18 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 1409,
+        "eventCount": 864,
         "activeUsers": 35
       }
     },
     {
       "dimensions": {
         "eventName": "screen_view",
-        "platform": "Android"
+        "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 984,
-        "activeUsers": 39
+        "eventCount": 752,
+        "activeUsers": 25
       }
     },
     {
@@ -40,8 +40,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 647,
-        "activeUsers": 175
+        "eventCount": 641,
+        "activeUsers": 174
       }
     },
     {
@@ -50,8 +50,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 524,
-        "activeUsers": 35
+        "eventCount": 469,
+        "activeUsers": 34
       }
     },
     {
@@ -61,7 +61,7 @@
       },
       "metrics": {
         "eventCount": 239,
-        "activeUsers": 93
+        "activeUsers": 94
       }
     },
     {
@@ -70,8 +70,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 233,
-        "activeUsers": 175
+        "eventCount": 230,
+        "activeUsers": 174
       }
     },
     {
@@ -80,8 +80,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 213,
-        "activeUsers": 78
+        "eventCount": 198,
+        "activeUsers": 75
       }
     },
     {
@@ -90,8 +90,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 175,
-        "activeUsers": 175
+        "eventCount": 172,
+        "activeUsers": 172
       }
     },
     {
@@ -100,7 +100,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 92,
+        "eventCount": 91,
         "activeUsers": 34
       }
     },
@@ -110,8 +110,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 75,
-        "activeUsers": 75
+        "eventCount": 72,
+        "activeUsers": 72
       }
     },
     {
@@ -120,8 +120,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 63,
-        "activeUsers": 31
+        "eventCount": 61,
+        "activeUsers": 30
       }
     },
     {
@@ -146,22 +146,12 @@
     },
     {
       "dimensions": {
-        "eventName": "notification_receive",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 24,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "click",
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 21,
-        "activeUsers": 15
+        "eventCount": 23,
+        "activeUsers": 16
       }
     },
     {
@@ -170,8 +160,18 @@
         "platform": "web"
       },
       "metrics": {
+        "eventCount": 19,
+        "activeUsers": 12
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "notification_receive",
+        "platform": "Android"
+      },
+      "metrics": {
         "eventCount": 17,
-        "activeUsers": 11
+        "activeUsers": 1
       }
     },
     {
@@ -186,6 +186,16 @@
     },
     {
       "dimensions": {
+        "eventName": "play_store_click",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 12,
+        "activeUsers": 11
+      }
+    },
+    {
+      "dimensions": {
         "eventName": "app_exception",
         "platform": "Android"
       },
@@ -196,32 +206,12 @@
     },
     {
       "dimensions": {
-        "eventName": "play_store_click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 11,
-        "activeUsers": 10
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "notification_dismiss",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 9,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "app_store_click",
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 7,
-        "activeUsers": 5
+        "eventCount": 9,
+        "activeUsers": 6
       }
     },
     {
@@ -236,12 +226,12 @@
     },
     {
       "dimensions": {
-        "eventName": "notification_foreground",
+        "eventName": "notification_dismiss",
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 4,
-        "activeUsers": 2
+        "eventCount": 5,
+        "activeUsers": 1
       }
     },
     {
@@ -252,6 +242,16 @@
       "metrics": {
         "eventCount": 3,
         "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "notification_foreground",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 3,
+        "activeUsers": 1
       }
     },
     {
@@ -298,45 +298,23 @@
   "screenViews": [
     {
       "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RNSScreen",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 605,
-        "activeUsers": 11
-      }
-    },
-    {
-      "dimensions": {
         "unifiedScreenName": "Trips",
         "unifiedScreenClass": "Trips",
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 283,
-        "activeUsers": 16
+        "eventCount": 281,
+        "activeUsers": 15
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTFabricModalHostViewController",
+        "unifiedScreenClass": "RNSScreen",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 168,
-        "activeUsers": 7
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "UIViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 145,
+        "eventCount": 147,
         "activeUsers": 11
       }
     },
@@ -358,8 +336,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 124,
-        "activeUsers": 5
+        "eventCount": 121,
+        "activeUsers": 4
       }
     },
     {
@@ -369,8 +347,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 104,
-        "activeUsers": 10
+        "eventCount": 102,
+        "activeUsers": 9
       }
     },
     {
@@ -380,19 +358,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 101,
-        "activeUsers": 8
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "DevLauncherViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 98,
-        "activeUsers": 1
+        "eventCount": 100,
+        "activeUsers": 7
       }
     },
     {
@@ -402,19 +369,19 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 95,
-        "activeUsers": 11
+        "eventCount": 94,
+        "activeUsers": 10
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "MainActivity",
-        "platform": "Android"
+        "unifiedScreenClass": "UIViewController",
+        "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 80,
-        "activeUsers": 19
+        "eventCount": 63,
+        "activeUsers": 11
       }
     },
     {
@@ -426,6 +393,17 @@
       "metrics": {
         "eventCount": 57,
         "activeUsers": 9
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RCTFabricModalHostViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 55,
+        "activeUsers": 7
       }
     },
     {
@@ -452,6 +430,17 @@
     },
     {
       "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "MainActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 50,
+        "activeUsers": 14
+      }
+    },
+    {
+      "dimensions": {
         "unifiedScreenName": "Drafts",
         "unifiedScreenClass": "Drafts",
         "platform": "iOS"
@@ -468,19 +457,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 38,
-        "activeUsers": 4
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Profile",
-        "unifiedScreenClass": "Profile",
-        "platform": "Android"
-      },
-      "metrics": {
         "eventCount": 35,
-        "activeUsers": 4
+        "activeUsers": 3
       }
     },
     {
@@ -492,6 +470,17 @@
       "metrics": {
         "eventCount": 34,
         "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "Profile",
+        "unifiedScreenClass": "Profile",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 34,
+        "activeUsers": 3
       }
     },
     {
@@ -519,12 +508,12 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "PaywallActivity",
-        "platform": "Android"
+        "unifiedScreenClass": "DevLauncherViewController",
+        "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 17,
-        "activeUsers": 8
+        "eventCount": 21,
+        "activeUsers": 1
       }
     },
     {
@@ -536,17 +525,6 @@
       "metrics": {
         "eventCount": 16,
         "activeUsers": 10
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "SignInHubActivity",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 15,
-        "activeUsers": 13
       }
     },
     {
@@ -574,12 +552,12 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTAlertController",
-        "platform": "iOS"
+        "unifiedScreenClass": "SignInHubActivity",
+        "platform": "Android"
       },
       "metrics": {
-        "eventCount": 13,
-        "activeUsers": 4
+        "eventCount": 11,
+        "activeUsers": 11
       }
     },
     {
@@ -607,19 +585,19 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "SFAuthenticationViewController",
+        "unifiedScreenClass": "RCTAlertController",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 9,
-        "activeUsers": 5
+        "eventCount": 8,
+        "activeUsers": 3
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "GmsDocumentScanningDelegateActivity",
-        "platform": "Android"
+        "unifiedScreenClass": "SFAuthenticationViewController",
+        "platform": "iOS"
       },
       "metrics": {
         "eventCount": 8,
@@ -633,8 +611,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 8,
-        "activeUsers": 3
+        "eventCount": 7,
+        "activeUsers": 2
       }
     },
     {
@@ -651,23 +629,23 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "ProxyBillingActivity",
+        "unifiedScreenClass": "GmsDocumentScanningDelegateActivity",
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 5,
-        "activeUsers": 1
+        "eventCount": 6,
+        "activeUsers": 3
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCPaywallViewController",
-        "platform": "iOS"
+        "unifiedScreenClass": "PaywallActivity",
+        "platform": "Android"
       },
       "metrics": {
-        "eventCount": 5,
-        "activeUsers": 2
+        "eventCount": 6,
+        "activeUsers": 6
       }
     },
     {
@@ -694,17 +672,6 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "PHPickerViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 3,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
         "unifiedScreenName": "ForgotPassword",
         "unifiedScreenClass": "ForgotPassword",
         "platform": "Android"
@@ -717,18 +684,7 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "DevLauncherActivity",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 2,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTRedBoxController",
+        "unifiedScreenClass": "RCPaywallViewController",
         "platform": "iOS"
       },
       "metrics": {
@@ -750,7 +706,7 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "DevMenuViewController",
+        "unifiedScreenClass": "RCTRedBoxController",
         "platform": "iOS"
       },
       "metrics": {
@@ -768,17 +724,6 @@
         "eventCount": 1,
         "activeUsers": 1
       }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "UIDocumentPickerViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 1,
-        "activeUsers": 1
-      }
     }
   ],
   "acquisition": [
@@ -788,8 +733,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "newUsers": 67,
-        "activeUsers": 68
+        "newUsers": 64,
+        "activeUsers": 65
       }
     },
     {

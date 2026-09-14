@@ -1,34 +1,20 @@
 {
   "source": "App Store Connect Sales and Trends Summary Sales Report",
-  "generatedAt": "2026-09-13T13:37:42.022Z",
+  "generatedAt": "2026-09-14T15:37:12.991Z",
   "appleId": "6758403056",
   "timezone": "America/Los_Angeles",
   "reportingLagDays": 1,
   "coveredDateRange": {
-    "startDate": "2026-08-16",
-    "endDate": "2026-09-12"
+    "startDate": "2026-08-17",
+    "endDate": "2026-09-13"
   },
-  "latestReportedDate": "2026-09-12",
+  "latestReportedDate": "2026-09-13",
   "totals28Days": {
-    "firstTimeDownloads": 11,
+    "firstTimeDownloads": 14,
     "redownloads": 0,
     "updates": 18
   },
   "daily": [
-    {
-      "date": "2026-08-09",
-      "reportAvailable": false,
-      "firstTimeDownloads": 0,
-      "redownloads": 0,
-      "updates": 0
-    },
-    {
-      "date": "2026-08-10",
-      "reportAvailable": false,
-      "firstTimeDownloads": 0,
-      "redownloads": 0,
-      "updates": 0
-    },
     {
       "date": "2026-08-11",
       "reportAvailable": true,
@@ -259,6 +245,20 @@
       "firstTimeDownloads": 0,
       "redownloads": 0,
       "updates": 1
+    },
+    {
+      "date": "2026-09-13",
+      "reportAvailable": true,
+      "firstTimeDownloads": 3,
+      "redownloads": 0,
+      "updates": 0
+    },
+    {
+      "date": "2026-09-14",
+      "reportAvailable": false,
+      "firstTimeDownloads": 0,
+      "redownloads": 0,
+      "updates": 0
     }
   ],
   "definition": "The 28-day window ends on the latest available Apple report date. HTTP 404 dates inside that calendar window are retained as zero rather than extending the period. firstTimeDownloads counts product types 1, 1F, and 1T; redownloads and updates are reported separately."
