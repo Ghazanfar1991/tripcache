@@ -1,27 +1,20 @@
 {
   "source": "App Store Connect Sales and Trends Summary Sales Report",
-  "generatedAt": "2026-09-15T14:08:14.818Z",
+  "generatedAt": "2026-09-16T14:01:07.148Z",
   "appleId": "6758403056",
   "timezone": "America/Los_Angeles",
   "reportingLagDays": 1,
   "coveredDateRange": {
-    "startDate": "2026-08-18",
-    "endDate": "2026-09-14"
+    "startDate": "2026-08-19",
+    "endDate": "2026-09-15"
   },
-  "latestReportedDate": "2026-09-14",
+  "latestReportedDate": "2026-09-15",
   "totals28Days": {
     "firstTimeDownloads": 15,
     "redownloads": 0,
     "updates": 18
   },
   "daily": [
-    {
-      "date": "2026-08-12",
-      "reportAvailable": true,
-      "firstTimeDownloads": 1,
-      "redownloads": 0,
-      "updates": 0
-    },
     {
       "date": "2026-08-13",
       "reportAvailable": true,
@@ -255,6 +248,13 @@
     },
     {
       "date": "2026-09-15",
+      "reportAvailable": true,
+      "firstTimeDownloads": 1,
+      "redownloads": 0,
+      "updates": 0
+    },
+    {
+      "date": "2026-09-16",
       "reportAvailable": false,
       "firstTimeDownloads": 0,
       "redownloads": 0,
