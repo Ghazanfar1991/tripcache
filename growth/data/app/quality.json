@@ -1,6 +1,6 @@
 {
   "source": "Firebase Crashlytics dashboard and BigQuery export",
-  "generatedAt": "2026-09-17T14:04:05.803Z",
+  "generatedAt": "2026-09-18T13:20:27.417Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -50,7 +50,7 @@
     {
       "platform": "ANDROID",
       "table": "app_tripcache_ANDROID",
-      "fatalOrAnrEvents": 57,
+      "fatalOrAnrEvents": 56,
       "impactedInstallations": 8,
       "fatalOrAnrIssues": 3,
       "topIssues": [
@@ -69,7 +69,7 @@
         {
           "issueId": "5533564def85b996beb4c9d2094d1d37",
           "errorType": "FATAL",
-          "events": 4,
+          "events": 3,
           "impactedInstallations": 3
         }
       ]
@@ -77,16 +77,10 @@
     {
       "platform": "IOS",
       "table": "app_tripcache_IOS",
-      "fatalOrAnrEvents": 20,
-      "impactedInstallations": 4,
-      "fatalOrAnrIssues": 7,
+      "fatalOrAnrEvents": 7,
+      "impactedInstallations": 3,
+      "fatalOrAnrIssues": 4,
       "topIssues": [
-        {
-          "issueId": "b2f4336e1bde515c0f9545956c7ad15d",
-          "errorType": "FATAL",
-          "events": 9,
-          "impactedInstallations": 1
-        },
         {
           "issueId": "cbc449ec56dfa15ec325a7bea97a3fa0",
           "errorType": "FATAL",
@@ -94,9 +88,9 @@
           "impactedInstallations": 2
         },
         {
-          "issueId": "70bd8948d33cb473534a5b1c4f24f447",
+          "issueId": "f08c9d2dd9ae1bff1e9589a74b5c938f",
           "errorType": "FATAL",
-          "events": 3,
+          "events": 1,
           "impactedInstallations": 1
         },
         {
@@ -107,18 +101,6 @@
         },
         {
           "issueId": "efa570795299be7175018ce933ae2bce",
-          "errorType": "FATAL",
-          "events": 1,
-          "impactedInstallations": 1
-        },
-        {
-          "issueId": "a82cf3a407a536179c47d4d5224b0023",
-          "errorType": "FATAL",
-          "events": 1,
-          "impactedInstallations": 1
-        },
-        {
-          "issueId": "f08c9d2dd9ae1bff1e9589a74b5c938f",
           "errorType": "FATAL",
           "events": 1,
           "impactedInstallations": 1

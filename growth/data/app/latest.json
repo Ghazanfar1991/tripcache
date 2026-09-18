@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-09-17T14:04:03.551Z",
+  "generatedAt": "2026-09-18T13:20:26.039Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,8 +10,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 846,
-        "activeUsers": 35
+        "eventCount": 801,
+        "activeUsers": 31
       }
     },
     {
@@ -20,18 +20,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 826,
-        "activeUsers": 32
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "screen_view",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 687,
-        "activeUsers": 27
+        "eventCount": 791,
+        "activeUsers": 30
       }
     },
     {
@@ -40,8 +30,18 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 648,
-        "activeUsers": 180
+        "eventCount": 647,
+        "activeUsers": 181
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "screen_view",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 627,
+        "activeUsers": 25
       }
     },
     {
@@ -50,18 +50,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 402,
-        "activeUsers": 30
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "user_engagement",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 238,
-        "activeUsers": 92
+        "eventCount": 390,
+        "activeUsers": 27
       }
     },
     {
@@ -71,7 +61,17 @@
       },
       "metrics": {
         "eventCount": 236,
-        "activeUsers": 180
+        "activeUsers": 181
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "user_engagement",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 236,
+        "activeUsers": 90
       }
     },
     {
@@ -80,8 +80,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 178,
-        "activeUsers": 178
+        "eventCount": 179,
+        "activeUsers": 179
       }
     },
     {
@@ -90,28 +90,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 172,
-        "activeUsers": 67
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "session_start",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 66,
-        "activeUsers": 32
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "first_open",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 64,
-        "activeUsers": 64
+        "eventCount": 165,
+        "activeUsers": 63
       }
     },
     {
@@ -120,18 +100,28 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 61,
+        "eventCount": 63,
+        "activeUsers": 32
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "session_start",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 62,
         "activeUsers": 30
       }
     },
     {
       "dimensions": {
         "eventName": "first_open",
-        "platform": "iOS"
+        "platform": "Android"
       },
       "metrics": {
-        "eventCount": 27,
-        "activeUsers": 27
+        "eventCount": 60,
+        "activeUsers": 60
       }
     },
     {
@@ -142,6 +132,16 @@
       "metrics": {
         "eventCount": 25,
         "activeUsers": 18
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "first_open",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 25,
+        "activeUsers": 25
       }
     },
     {
@@ -201,7 +201,7 @@
       },
       "metrics": {
         "eventCount": 7,
-        "activeUsers": 7
+        "activeUsers": 6
       }
     },
     {
@@ -237,16 +237,6 @@
     {
       "dimensions": {
         "eventName": "app_update",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 2,
-        "activeUsers": 0
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_update",
         "platform": "iOS"
       },
       "metrics": {
@@ -271,7 +261,7 @@
       },
       "metrics": {
         "eventCount": 0,
-        "activeUsers": 12
+        "activeUsers": 11
       }
     }
   ],
@@ -283,8 +273,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 254,
-        "activeUsers": 14
+        "eventCount": 245,
+        "activeUsers": 11
       }
     },
     {
@@ -294,19 +284,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 131,
+        "eventCount": 129,
         "activeUsers": 13
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RNSScreen",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 113,
-        "activeUsers": 10
       }
     },
     {
@@ -316,7 +295,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 105,
+        "eventCount": 98,
         "activeUsers": 2
       }
     },
@@ -327,7 +306,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 98,
+        "eventCount": 96,
         "activeUsers": 9
       }
     },
@@ -338,8 +317,19 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 96,
+        "eventCount": 95,
         "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSScreen",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 84,
+        "activeUsers": 8
       }
     },
     {
@@ -349,7 +339,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 85,
+        "eventCount": 80,
         "activeUsers": 9
       }
     },
@@ -371,19 +361,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 54,
-        "activeUsers": 10
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTFabricModalHostViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
         "eventCount": 52,
-        "activeUsers": 5
+        "activeUsers": 10
       }
     },
     {
@@ -393,8 +372,19 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 51,
-        "activeUsers": 14
+        "eventCount": 47,
+        "activeUsers": 13
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RCTFabricModalHostViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 45,
+        "activeUsers": 4
       }
     },
     {
@@ -404,19 +394,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 47,
+        "eventCount": 45,
         "activeUsers": 9
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "UIViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 44,
-        "activeUsers": 10
       }
     },
     {
@@ -426,8 +405,19 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 41,
+        "eventCount": 40,
         "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "UIViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 32,
+        "activeUsers": 8
       }
     },
     {
@@ -437,19 +427,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 32,
-        "activeUsers": 5
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Onboarding",
-        "unifiedScreenClass": "Onboarding",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 31,
-        "activeUsers": 20
+        "eventCount": 30,
+        "activeUsers": 4
       }
     },
     {
@@ -459,8 +438,19 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 30,
+        "eventCount": 29,
         "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "Onboarding",
+        "unifiedScreenClass": "Onboarding",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 26,
+        "activeUsers": 17
       }
     },
     {
@@ -470,8 +460,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 30,
-        "activeUsers": 14
+        "eventCount": 26,
+        "activeUsers": 12
       }
     },
     {
@@ -481,7 +471,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 27,
+        "eventCount": 24,
         "activeUsers": 1
       }
     },
@@ -547,41 +537,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 11,
-        "activeUsers": 11
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTAlertController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 8,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "SFAuthenticationViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 7,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "TripExpenses",
-        "unifiedScreenClass": "TripExpenses",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 7,
-        "activeUsers": 1
+        "eventCount": 10,
+        "activeUsers": 10
       }
     },
     {
@@ -598,23 +555,34 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "PaywallActivity",
-        "platform": "Android"
+        "unifiedScreenClass": "RCTAlertController",
+        "platform": "iOS"
       },
       "metrics": {
         "eventCount": 6,
-        "activeUsers": 6
+        "activeUsers": 2
       }
     },
     {
       "dimensions": {
-        "unifiedScreenName": "SignUp",
-        "unifiedScreenClass": "SignUp",
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "SFAuthenticationViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 6,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "TripExpenses",
+        "unifiedScreenClass": "TripExpenses",
         "platform": "Android"
       },
       "metrics": {
         "eventCount": 6,
-        "activeUsers": 6
+        "activeUsers": 1
       }
     },
     {
@@ -626,6 +594,28 @@
       "metrics": {
         "eventCount": 6,
         "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "PaywallActivity",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 5,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "SignUp",
+        "unifiedScreenClass": "SignUp",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 5,
+        "activeUsers": 5
       }
     },
     {
@@ -691,8 +681,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "newUsers": 57,
-        "activeUsers": 58
+        "newUsers": 54,
+        "activeUsers": 55
       }
     },
     {
@@ -701,8 +691,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "newUsers": 27,
-        "activeUsers": 32
+        "newUsers": 25,
+        "activeUsers": 30
       }
     },
     {
@@ -711,8 +701,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "newUsers": 6,
-        "activeUsers": 8
+        "newUsers": 5,
+        "activeUsers": 7
       }
     },
     {
