@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T15:37:00.419Z",
+  "generatedAt": "2026-09-22T13:51:45.177Z",
   "currency": "AUD",
   "reportingWindow": {
     "startDate": "2026-06-24",
@@ -2257,7 +2257,7 @@
           },
           {
             "cohort": 1789948800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 17.25
           },
@@ -5674,19 +5674,19 @@
           },
           {
             "cohort": 1789948800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1789948800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1789948800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -7941,7 +7941,7 @@
           },
           {
             "cohort": 1789948800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 2
           },
@@ -9604,7 +9604,7 @@
         "start_date": 1782259200,
         "summary": {
           "average": {
-            "Active Trials": 0
+            "Active Trials": 0.01
           }
         },
         "unsupported_params": null,
@@ -10146,7 +10146,7 @@
           },
           {
             "cohort": 1789948800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
@@ -10154,7 +10154,7 @@
             "cohort": 1790035200,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 1
           }
         ],
         "yaxis": "#",
