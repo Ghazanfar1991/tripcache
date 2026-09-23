@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T13:52:47.874Z",
+  "generatedAt": "2026-09-23T14:04:15.384Z",
   "sources": [
     {
       "id": "search-console",
@@ -7,13 +7,13 @@
       "freshness": "fresh",
       "reportingLagDays": 3,
       "note": "Automated through the Search Console API using a repository-scoped short-lived token.",
-      "latestSyncTime": "2026-09-22T13:51:38.437Z",
+      "latestSyncTime": "2026-09-23T14:02:56.324Z",
       "coveredDateRange": {
-        "startDate": "2026-08-23",
-        "endDate": "2026-09-19"
+        "startDate": "2026-08-25",
+        "endDate": "2026-09-21"
       },
       "generatedLocalSnapshot": "growth/data/search-console/latest.json",
-      "checkedAt": "2026-09-22T13:51:38.444Z",
+      "checkedAt": "2026-09-23T14:02:56.382Z",
       "warehouseTable": "trip-cache.tripcache_growth.search_console_daily"
     },
     {
@@ -21,28 +21,28 @@
       "status": "SUCCESS",
       "freshness": "fresh",
       "note": "GA4 app, web traffic, referrals, and store-intent measurement available.",
-      "latestSyncTime": "2026-09-22T13:51:38.483Z",
+      "latestSyncTime": "2026-09-23T14:02:56.408Z",
       "generatedLocalSnapshot": "growth/data/app/latest.json",
-      "checkedAt": "2026-09-22T13:51:40.071Z"
+      "checkedAt": "2026-09-23T14:03:00.189Z"
     },
     {
       "id": "revenuecat",
       "status": "SUCCESS",
       "freshness": "fresh",
       "note": "Automated through RevenueCat API v2 with charts/metrics read-only access.",
-      "latestSyncTime": "2026-09-22T13:51:45.177Z",
+      "latestSyncTime": "2026-09-23T14:03:06.869Z",
       "warehouseTable": "trip-cache.tripcache_growth.revenue_daily",
       "generatedLocalSnapshot": "growth/data/revenue/latest.json",
-      "checkedAt": "2026-09-22T13:51:54.786Z"
+      "checkedAt": "2026-09-23T14:03:16.231Z"
     },
     {
       "id": "production-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-09-22T13:52:47.871Z",
+      "latestSyncTime": "2026-09-23T14:04:15.382Z",
       "generatedLocalSnapshot": "growth/data/seo/technical-health.json",
       "note": "39 sitemap URLs verified.",
-      "checkedAt": "2026-09-22T13:52:47.874Z"
+      "checkedAt": "2026-09-23T14:04:15.384Z"
     },
     {
       "id": "firebase-crashlytics",
@@ -50,25 +50,25 @@
       "freshness": "fresh",
       "note": "Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.",
       "generatedLocalSnapshot": "growth/data/app/quality.json",
-      "checkedAt": "2026-09-22T13:51:45.140Z",
-      "latestSyncTime": "2026-09-22T13:51:40.584Z"
+      "checkedAt": "2026-09-23T14:03:06.843Z",
+      "latestSyncTime": "2026-09-23T14:03:00.694Z"
     },
     {
       "id": "google-play",
       "status": "SUCCESS",
       "freshness": "stale",
-      "latestSyncTime": "2026-09-22T13:51:55.993Z",
+      "latestSyncTime": "2026-09-23T14:03:17.104Z",
       "generatedLocalSnapshot": "growth/data/store/google-play.json",
-      "note": "Play export fetched successfully, but the latest reported date (2026-09-08) is 14 days old; treat install totals as stale.",
-      "checkedAt": "2026-09-22T13:51:56.003Z"
+      "note": "Play export fetched successfully, but the latest reported date (2026-09-08) is 15 days old; treat install totals as stale.",
+      "checkedAt": "2026-09-23T14:03:17.110Z"
     },
     {
       "id": "app-store-connect",
-      "status": "SUCCESS",
-      "freshness": "fresh",
-      "note": "15 official App Store first-time downloads in the latest 28 reported days; latest report 2026-09-19.",
-      "checkedAt": "2026-09-22T13:52:15.222Z",
-      "latestSyncTime": "2026-09-22T13:52:15.219Z",
+      "status": "STALE_SOURCE_DATA",
+      "freshness": "stale",
+      "note": "App Store report is stale or unavailable; latest report 2026-09-19.",
+      "checkedAt": "2026-09-23T14:03:36.661Z",
+      "latestSyncTime": "2026-09-23T14:03:36.659Z",
       "generatedLocalSnapshot": "growth/data/store/app-store.json"
     }
   ]

@@ -1,6 +1,6 @@
 {
   "source": "Firebase Crashlytics dashboard and BigQuery export",
-  "generatedAt": "2026-09-22T13:51:40.584Z",
+  "generatedAt": "2026-09-23T14:03:00.694Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -77,17 +77,10 @@
     {
       "platform": "IOS",
       "table": "app_tripcache_IOS",
-      "fatalOrAnrEvents": 1,
-      "impactedInstallations": 1,
-      "fatalOrAnrIssues": 1,
-      "topIssues": [
-        {
-          "issueId": "36bec89a655a09b3f90c10c8376bccdc",
-          "errorType": "FATAL",
-          "events": 1,
-          "impactedInstallations": 1
-        }
-      ]
+      "fatalOrAnrEvents": 0,
+      "impactedInstallations": 0,
+      "fatalOrAnrIssues": 0,
+      "topIssues": []
     }
   ]
 }

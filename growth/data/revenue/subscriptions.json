@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-22T13:51:45.177Z",
+  "generatedAt": "2026-09-23T14:03:06.869Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-06-24",
-    "endDate": "2026-09-22"
+    "startDate": "2026-06-26",
+    "endDate": "2026-09-24"
   },
   "charts": {
     "mrr": {
@@ -1691,7 +1691,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1790035200,
+        "end_date": 1790208000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1710,10 +1710,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782259200,
+        "start_date": 1782432000,
         "summary": {
           "average": {
-            "MRR": 12.38
+            "MRR": 12.5
           }
         },
         "unsupported_params": null,
@@ -1721,18 +1721,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1782259200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
-          {
-            "cohort": 1782345600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1782432000,
             "incomplete": false,
@@ -2263,6 +2251,18 @@
           },
           {
             "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 0,
+            "value": 17.25
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 17.25
+          },
+          {
+            "cohort": 1790208000,
             "incomplete": true,
             "measure": 0,
             "value": 17.25
@@ -4017,7 +4017,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1790035200,
+        "end_date": 1790208000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4052,7 +4052,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782259200,
+        "start_date": 1782432000,
         "summary": {
           "average": {
             "Ad Impressions": 0,
@@ -4070,42 +4070,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1782259200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1782259200,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1782259200,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
-          {
-            "cohort": 1782345600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1782345600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1782345600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1782432000,
             "incomplete": false,
@@ -5692,18 +5656,54 @@
           },
           {
             "cohort": 1790035200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1790035200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790208000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1790208000,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1790208000,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7373,11 +7373,11 @@
       },
       "data": {
         "category": "actives",
-        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nFor the current period, the number indicated is the current active subscriptions. Subscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
+        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nSubscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1790035200,
+        "end_date": 1790208000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7396,7 +7396,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782259200,
+        "start_date": 1782432000,
         "summary": {
           "average": {
             "Actives": 1.21
@@ -7405,18 +7405,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1782259200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 2
-          },
-          {
-            "cohort": 1782345600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 2
-          },
           {
             "cohort": 1782432000,
             "incomplete": false,
@@ -7947,6 +7935,18 @@
           },
           {
             "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 0,
+            "value": 2
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 2
+          },
+          {
+            "cohort": 1790208000,
             "incomplete": true,
             "measure": 0,
             "value": 2
@@ -9578,11 +9578,11 @@
       },
       "data": {
         "category": "trials",
-        "description": "Active Trials shows the number of active trials at the end of the period. Included in this number is all trials, regardless of whether they are set to auto-convert on completion or not.\n\nThe volume of Active Trials is a good leading indicator to growth of Active Subscriptions and therefore MRR. If the volume of active trials is increasing or decreasing it indicates that your business may be accelerating or decelerating respectively. The Active Trials Movement chart can help you understand these movements.",
+        "description": "Active Trials shows the number of active trials at the end of the period. This includes all trials, regardless of whether they are set to auto-convert on completion.\n\nThe volume of Active Trials is a good leading indicator to growth of Active Subscriptions and therefore MRR. If the volume of active trials is increasing or decreasing it indicates that your business may be accelerating or decelerating respectively. The Active Trials Movement chart can help you understand these movements.",
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1790035200,
+        "end_date": 1790208000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9601,27 +9601,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782259200,
+        "start_date": 1782432000,
         "summary": {
           "average": {
-            "Active Trials": 0.01
+            "Active Trials": 0.03
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1782259200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1782345600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1782432000,
             "incomplete": false,
@@ -10152,6 +10140,18 @@
           },
           {
             "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 0,
+            "value": 1
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 1
+          },
+          {
+            "cohort": 1790208000,
             "incomplete": true,
             "measure": 0,
             "value": 1
