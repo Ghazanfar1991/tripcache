@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T14:24:28.036Z",
+  "updatedAt": "2026-09-26T13:36:31.387Z",
   "phase": "MEASUREMENT_AND_OPTIMIZATION",
   "northStar": {
     "metric": "mrrAud",
@@ -19,7 +19,7 @@
       "installProxy"
     ],
     "websiteTrafficMeasured": true,
-    "websiteStoreIntentRate": 0.09219858156028368,
+    "websiteStoreIntentRate": 0.10071942446043165,
     "androidCrashFreeUsers30Days": 0.8929,
     "androidCrashes30Days": 10,
     "iosCrashFreeUsers30Days": 1
@@ -29,7 +29,7 @@
     "official Google Play installs (fresh evidence)"
   ],
   "primaryConstraint": "Android reliability is the immediate product constraint at 89.29% crash-free users; fix the two observed startup/native crash groups before scaling acquisition aggressively.",
-  "lastDailyRunAt": "2026-09-25T14:24:28.105Z",
+  "lastDailyRunAt": "2026-09-26T13:36:31.453Z",
   "lastDailyRunStatus": "SUCCESS",
   "failures": [],
   "connectorGaps": []
