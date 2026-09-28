@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-27T14:31:50.358Z",
+  "generatedAt": "2026-09-28T17:18:15.431Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-06-30",
-    "endDate": "2026-09-28"
+    "startDate": "2026-07-01",
+    "endDate": "2026-09-29"
   },
   "charts": {
     "mrr": {
@@ -1691,14 +1691,14 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1790553600,
+        "end_date": 1790640000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": "Monthly Recurring Revenue",
+            "description": "Monthly Recurring Revenue at the end of the period.",
             "display_name": "MRR",
             "tabulable": true,
             "unit": "$"
@@ -1710,10 +1710,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782777600,
+        "start_date": 1782864000,
         "summary": {
           "average": {
-            "MRR": 13.13
+            "MRR": 13.29
           }
         },
         "unsupported_params": null,
@@ -1721,12 +1721,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1782777600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1782864000,
             "incomplete": false,
@@ -2257,12 +2251,18 @@
           },
           {
             "cohort": 1790467200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 25.8
           },
           {
             "cohort": 1790553600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 25.8
+          },
+          {
+            "cohort": 1790640000,
             "incomplete": true,
             "measure": 0,
             "value": 25.8
@@ -4017,7 +4017,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1790553600,
+        "end_date": 1790640000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4052,7 +4052,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782777600,
+        "start_date": 1782864000,
         "summary": {
           "average": {
             "Ad Impressions": 0,
@@ -4070,24 +4070,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1782777600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1782777600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1782777600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1782864000,
             "incomplete": false,
@@ -5674,19 +5656,19 @@
           },
           {
             "cohort": 1790467200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1790467200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1790467200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5704,6 +5686,24 @@
           },
           {
             "cohort": 1790553600,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7377,7 +7377,7 @@
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1790553600,
+        "end_date": 1790640000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7396,21 +7396,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782777600,
+        "start_date": 1782864000,
         "summary": {
           "average": {
-            "Actives": 1.26
+            "Actives": 1.29
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1782777600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
           {
             "cohort": 1782864000,
             "incomplete": false,
@@ -7941,12 +7935,18 @@
           },
           {
             "cohort": 1790467200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 3
           },
           {
             "cohort": 1790553600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 3
+          },
+          {
+            "cohort": 1790640000,
             "incomplete": true,
             "measure": 0,
             "value": 3
@@ -9582,7 +9582,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1790553600,
+        "end_date": 1790640000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9601,7 +9601,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1782777600,
+        "start_date": 1782864000,
         "summary": {
           "average": {
             "Active Trials": 0.03
@@ -9610,12 +9610,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1782777600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1782864000,
             "incomplete": false,
@@ -10146,12 +10140,18 @@
           },
           {
             "cohort": 1790467200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1790553600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
             "incomplete": true,
             "measure": 0,
             "value": 0
@@ -11946,7 +11946,7 @@
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": "The number of currently active subscriptions that are set to renew at the end of their current period.",
+            "description": "The number of currently active subscriptions in the Set to Renew status, including subscriptions set to renew, change products, or already renewed.",
             "display_name": "Active Subscriptions Set to Renew",
             "scale": "absolute",
             "tabulable": true,
@@ -11973,7 +11973,7 @@
           {
             "chartable": true,
             "decimal_precision": 1,
-            "description": "The portion of currently active subscriptions that are set to renew at the end of their current period.",
+            "description": "The portion of currently active subscriptions in the Set to Renew status.",
             "display_name": "Active Subscriptions Set to Renew Percentage",
             "scale": "relative",
             "tabulable": true,

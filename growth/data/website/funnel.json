@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T14:31:44.209Z",
+  "generatedAt": "2026-09-28T17:18:08.721Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -10,21 +10,21 @@
   "events": [
     {
       "dimensions": {
-        "eventName": "app_store_click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 14,
-        "activeUsers": 9
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "download_modal_open",
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 14,
+        "eventCount": 20,
+        "activeUsers": 15
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_store_click",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 17,
         "activeUsers": 12
       }
     },
@@ -42,6 +42,17 @@
   "acquisition": [
     {
       "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 21,
+        "activeUsers": 18
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/",
         "platform": "web"
@@ -49,17 +60,6 @@
       "metrics": {
         "sessions": 21,
         "activeUsers": 13
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 20,
-        "activeUsers": 17
       }
     },
     {
@@ -76,12 +76,12 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "landingPagePlusQueryString": "(not set)",
         "platform": "web"
       },
       "metrics": {
         "sessions": 8,
-        "activeUsers": 8
+        "activeUsers": 6
       }
     },
     {
@@ -97,19 +97,19 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "(not set)",
+        "sessionSourceMedium": "(not set)",
+        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 7,
-        "activeUsers": 6
+        "sessions": 6,
+        "activeUsers": 5
       }
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
         "platform": "web"
       },
       "metrics": {
@@ -119,7 +119,7 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
         "platform": "web"
       },
@@ -131,12 +131,12 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
+        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
+        "sessions": 5,
+        "activeUsers": 5
       }
     },
     {
@@ -163,17 +163,6 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
         "sessionSourceMedium": "chatgpt.com / ai-assistant",
         "landingPagePlusQueryString": "/",
         "platform": "web"
@@ -185,13 +174,13 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "(not set)",
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 2,
-        "activeUsers": 1
+        "sessions": 3,
+        "activeUsers": 3
       }
     },
     {
@@ -220,6 +209,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/travel-itinerary-template-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
         "platform": "web"
       },
       "metrics": {
@@ -295,8 +295,19 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(data not available)",
+        "landingPagePlusQueryString": "/pricing",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "",
+        "landingPagePlusQueryString": "(not set)",
         "platform": "web"
       },
       "metrics": {
@@ -341,6 +352,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/best-travel-apps-2025?hl=de-DE",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/best-travel-document-organizer-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -439,6 +461,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/travel-booking-organizer-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
         "platform": "web"
       },
@@ -484,6 +517,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/pricing",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/",
         "platform": "web"
       },
       "metrics": {
@@ -648,6 +692,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/hotel-cancellation-reminder-app-2026",
         "platform": "web"
       },
@@ -715,11 +770,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 135,
-    "landingSessions": 162,
-    "storeIntentUsers": 13,
-    "storeIntentEvents": 21,
-    "rate": 0.0962962962962963,
+    "landingUsers": 136,
+    "landingSessions": 163,
+    "storeIntentUsers": 16,
+    "storeIntentEvents": 24,
+    "rate": 0.11764705882352941,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -732,8 +787,8 @@
           "platform": "web"
         },
         "metrics": {
-          "eventCount": 9,
-          "activeUsers": 4
+          "eventCount": 11,
+          "activeUsers": 6
         }
       },
       {
@@ -784,6 +839,17 @@
         "dimensions": {
           "eventName": "app_store_click",
           "pagePathPlusQueryString": "/features/business-travel-expenses",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 1,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "app_store_click",
+          "pagePathPlusQueryString": "/pricing",
           "platform": "web"
         },
         "metrics": {
