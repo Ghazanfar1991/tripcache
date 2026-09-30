@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-09-29T15:19:11.578Z",
+  "generatedAt": "2026-09-30T15:33:52.861Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,7 +10,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 633,
+        "eventCount": 579,
         "activeUsers": 15
       }
     },
@@ -30,8 +30,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 362,
-        "activeUsers": 23
+        "eventCount": 378,
+        "activeUsers": 24
       }
     },
     {
@@ -40,7 +40,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 267,
+        "eventCount": 242,
         "activeUsers": 15
       }
     },
@@ -50,8 +50,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 204,
-        "activeUsers": 120
+        "eventCount": 223,
+        "activeUsers": 126
       }
     },
     {
@@ -60,8 +60,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 145,
-        "activeUsers": 120
+        "eventCount": 151,
+        "activeUsers": 126
       }
     },
     {
@@ -70,8 +70,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 117,
-        "activeUsers": 117
+        "eventCount": 122,
+        "activeUsers": 122
       }
     },
     {
@@ -80,8 +80,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 80,
-        "activeUsers": 56
+        "eventCount": 85,
+        "activeUsers": 60
       }
     },
     {
@@ -90,7 +90,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 79,
+        "eventCount": 72,
         "activeUsers": 26
       }
     },
@@ -100,7 +100,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 35,
+        "eventCount": 36,
         "activeUsers": 25
       }
     },
@@ -110,7 +110,17 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 26,
+        "eventCount": 27,
+        "activeUsers": 20
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "click",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 23,
         "activeUsers": 19
       }
     },
@@ -126,32 +136,12 @@
     },
     {
       "dimensions": {
-        "eventName": "click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 20,
-        "activeUsers": 16
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "first_open",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 20,
-        "activeUsers": 20
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_store_click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 14,
-        "activeUsers": 9
+        "eventCount": 21,
+        "activeUsers": 21
       }
     },
     {
@@ -160,18 +150,18 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 14,
-        "activeUsers": 12
+        "eventCount": 20,
+        "activeUsers": 15
       }
     },
     {
       "dimensions": {
-        "eventName": "notification_receive",
-        "platform": "Android"
+        "eventName": "app_store_click",
+        "platform": "web"
       },
       "metrics": {
-        "eventCount": 12,
-        "activeUsers": 1
+        "eventCount": 17,
+        "activeUsers": 12
       }
     },
     {
@@ -196,7 +186,7 @@
     },
     {
       "dimensions": {
-        "eventName": "notification_dismiss",
+        "eventName": "notification_receive",
         "platform": "Android"
       },
       "metrics": {
@@ -293,7 +283,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 188,
+        "eventCount": 170,
         "activeUsers": 12
       }
     },
@@ -304,7 +294,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 114,
+        "eventCount": 108,
         "activeUsers": 7
       }
     },
@@ -315,8 +305,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 82,
-        "activeUsers": 13
+        "eventCount": 86,
+        "activeUsers": 14
       }
     },
     {
@@ -326,7 +316,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 76,
+        "eventCount": 71,
         "activeUsers": 8
       }
     },
@@ -337,7 +327,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 66,
+        "eventCount": 59,
         "activeUsers": 8
       }
     },
@@ -348,7 +338,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 60,
+        "eventCount": 51,
         "activeUsers": 6
       }
     },
@@ -359,7 +349,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 48,
+        "eventCount": 49,
         "activeUsers": 7
       }
     },
@@ -370,7 +360,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 41,
+        "eventCount": 37,
         "activeUsers": 4
       }
     },
@@ -392,8 +382,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 32,
-        "activeUsers": 8
+        "eventCount": 35,
+        "activeUsers": 9
       }
     },
     {
@@ -403,8 +393,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 23,
-        "activeUsers": 8
+        "eventCount": 26,
+        "activeUsers": 9
       }
     },
     {
@@ -442,24 +432,13 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "Profile",
-        "unifiedScreenClass": "Profile",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 19,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
         "unifiedScreenName": "Onboarding",
         "unifiedScreenClass": "Onboarding",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 18,
-        "activeUsers": 18
+        "eventCount": 19,
+        "activeUsers": 19
       }
     },
     {
@@ -469,8 +448,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 17,
-        "activeUsers": 12
+        "eventCount": 18,
+        "activeUsers": 13
       }
     },
     {
@@ -486,13 +465,13 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RNSTabsScreenViewController",
-        "platform": "iOS"
+        "unifiedScreenName": "Profile",
+        "unifiedScreenClass": "Profile",
+        "platform": "Android"
       },
       "metrics": {
-        "eventCount": 13,
-        "activeUsers": 1
+        "eventCount": 14,
+        "activeUsers": 2
       }
     },
     {
@@ -502,8 +481,19 @@
         "platform": "iOS"
       },
       "metrics": {
+        "eventCount": 14,
+        "activeUsers": 13
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSTabsScreenViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
         "eventCount": 13,
-        "activeUsers": 12
+        "activeUsers": 1
       }
     },
     {
@@ -535,6 +525,17 @@
         "platform": "iOS"
       },
       "metrics": {
+        "eventCount": 10,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "Profile",
+        "unifiedScreenClass": "Profile",
+        "platform": "iOS"
+      },
+      "metrics": {
         "eventCount": 9,
         "activeUsers": 5
       }
@@ -548,17 +549,6 @@
       "metrics": {
         "eventCount": 9,
         "activeUsers": 9
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Profile",
-        "unifiedScreenClass": "Profile",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 8,
-        "activeUsers": 4
       }
     },
     {
@@ -690,7 +680,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "newUsers": 20,
+        "newUsers": 21,
         "activeUsers": 25
       }
     },
