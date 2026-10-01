@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T15:33:52.861Z",
+  "generatedAt": "2026-10-01T15:58:04.627Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -58,8 +58,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 20,
-        "activeUsers": 18
+        "sessions": 18,
+        "activeUsers": 17
       }
     },
     {
@@ -141,28 +141,6 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
         "sessionSourceMedium": "chatgpt.com / ai-assistant",
         "landingPagePlusQueryString": "/",
         "platform": "web"
@@ -197,7 +175,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/ai-trip-planner-2026",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
@@ -219,7 +197,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
+        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
         "platform": "web"
       },
       "metrics": {
@@ -229,8 +207,8 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "",
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
         "platform": "web"
       },
       "metrics": {
@@ -274,23 +252,12 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(data not available)",
-        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
         "sessions": 1,
         "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "(not set)",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 0
       }
     },
     {
@@ -319,6 +286,28 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/alternatives/tripcase",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/ai-trip-planner-2026",
         "platform": "web"
       },
       "metrics": {
@@ -462,17 +451,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/pricing",
         "platform": "web"
       },
       "metrics": {
@@ -647,8 +625,8 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "gemini.google.com / ai-assistant",
-        "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -737,11 +715,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 132,
-    "landingSessions": 157,
+    "landingUsers": 129,
+    "landingSessions": 151,
     "storeIntentUsers": 17,
     "storeIntentEvents": 25,
-    "rate": 0.12878787878787878,
+    "rate": 0.13178294573643412,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -874,8 +852,8 @@
   "aiAssistantReferrals": {
     "measurable": true,
     "status": "MEASURED",
-    "sessions": 11,
-    "activeUsers": 11,
+    "sessions": 10,
+    "activeUsers": 10,
     "landingPages": [
       {
         "dimensions": {
@@ -947,17 +925,6 @@
         "dimensions": {
           "sessionSourceMedium": "gemini.google.com / ai-assistant",
           "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
-          "platform": "web"
-        },
-        "metrics": {
-          "sessions": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "sessionSourceMedium": "gemini.google.com / ai-assistant",
-          "landingPagePlusQueryString": "/blog/tripcase-alternative-2025",
           "platform": "web"
         },
         "metrics": {
