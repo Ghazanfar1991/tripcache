@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-10-01T15:58:04.584Z",
+  "generatedAt": "2026-10-02T15:18:20.419Z",
   "devices": [
+    {
+      "device": "MOBILE",
+      "clicks": 29,
+      "impressions": 2125,
+      "ctr": 0.013647058823529411,
+      "position": 10.160941176470589
+    },
     {
       "device": "DESKTOP",
       "clicks": 28,
-      "impressions": 6587,
-      "ctr": 0.004250797024442083,
-      "position": 11.042052527706089
-    },
-    {
-      "device": "MOBILE",
-      "clicks": 28,
-      "impressions": 2179,
-      "ctr": 0.012849931161083065,
-      "position": 10.374024782010096
+      "impressions": 6419,
+      "ctr": 0.004362050163576881,
+      "position": 10.843745131640443
     },
     {
       "device": "TABLET",
       "clicks": 2,
-      "impressions": 80,
-      "ctr": 0.025,
-      "position": 6.95
+      "impressions": 78,
+      "ctr": 0.02564102564102564,
+      "position": 6.858974358974359
     }
   ]
 }
