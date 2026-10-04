@@ -8,7 +8,7 @@
 import { motion, useReducedMotion } from "framer-motion"
 import { Glasses, MoonStar, Plane, PlaneLanding, PlaneTakeoff, Sun } from "lucide-react"
 import { useState, type ReactNode } from "react"
-import { cx } from "@/components/seo/tool-ui"
+import { cx } from "@/components/site/kit"
 import { formatDuration, formatIn, zoneAbbreviation, type Place } from "@/lib/flight-time"
 import { formatShift, type Block, type BlockKind, type JetLagPlan, type PlanDay } from "@/lib/jet-lag"
 
@@ -138,7 +138,7 @@ function Agenda({ items, tz }: { items: Block[]; tz: string }) {
               <Icon className="size-4" strokeWidth={2.2} />
             </span>
             <span className="min-w-0 pt-0.5">
-              <span className="block text-[0.9375rem] font-semibold leading-6 text-tc-ink">{block.kind === "flightSleep" ? "Sleep on the plane" : style.label}</span>
+              <span className="block text-[15px] font-semibold leading-6 text-tc-ink">{block.kind === "flightSleep" ? "Sleep on the plane" : style.label}</span>
               <span className="block text-[13px] leading-5 text-tc-mute sm:text-[13.5px]">{style.hint}</span>
             </span>
           </li>
@@ -175,7 +175,7 @@ function DayCard({ day, badge, step }: { day: PlanDay; badge: ReactNode; step: n
           </div>
           {badge}
         </header>
-        <p className="mt-3 text-[0.9375rem] leading-6 text-tc-ink-2">{day.note}</p>
+        <p className="mt-3 text-[15px] leading-6 text-tc-ink-2">{day.note}</p>
         <div className="mt-4">
           <DayStrip day={day} />
         </div>
@@ -199,7 +199,7 @@ function FlightCard({ plan, from, to, step }: { plan: JetLagPlan; from: Place; t
     <li className="relative sm:pl-14">
       <span aria-hidden="true" className="absolute left-0 top-5 hidden size-9 place-items-center rounded-full border-2 border-white bg-[#4f46e5] text-white shadow-[0_0_0_1px_#e7e9eb] sm:grid">
         <Plane className="size-4" />
-        <span className="tct-sr-only">{step}</span>
+        <span className="sr-only">{step}</span>
       </span>
       <article className="rounded-[22px] border border-[#c7d2fe] bg-[#f5f7ff] p-4 sm:p-6">
         <header className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
@@ -217,14 +217,14 @@ function FlightCard({ plan, from, to, step }: { plan: JetLagPlan; from: Place; t
             <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-[#4f46e5]">
               <PlaneTakeoff className="size-3.5" aria-hidden="true" /> Takes off
             </p>
-            <p className="mt-1 text-[0.9375rem] font-semibold tabular-nums text-tc-ink">{at(start, from.tz)}</p>
+            <p className="mt-1 text-[15px] font-semibold tabular-nums text-tc-ink">{at(start, from.tz)}</p>
             <p className="text-[12.5px] tabular-nums text-tc-mute">{at(start, to.tz)} in {to.city}</p>
           </div>
           <div className="rounded-[14px] bg-white p-3 ring-1 ring-inset ring-[#e0e7ff]">
             <p className="flex items-center gap-1.5 text-[12.5px] font-semibold text-[#4f46e5]">
               <PlaneLanding className="size-3.5" aria-hidden="true" /> Lands
             </p>
-            <p className="mt-1 text-[0.9375rem] font-semibold tabular-nums text-tc-ink">{at(end, to.tz)}</p>
+            <p className="mt-1 text-[15px] font-semibold tabular-nums text-tc-ink">{at(end, to.tz)}</p>
             <p className="text-[12.5px] tabular-nums text-tc-mute">{at(end, from.tz)} on your body clock</p>
           </div>
         </div>
@@ -301,7 +301,7 @@ export function JetLagTimeline({ plan, from, to }: { plan: JetLagPlan; from: Pla
   return (
     <div>
       {/* Phase filter */}
-      <div role="group" aria-label="Show part of the plan" className="mb-8 flex gap-1.5 [overflow-x:auto] rounded-[16px] bg-tc-mist p-1.5 [scrollbar-width:none]">
+      <div role="group" aria-label="Show part of the plan" className="mb-8 flex gap-1.5 overflow-x-auto rounded-[16px] bg-tc-mist p-1.5 [scrollbar-width:none]">
         {[{ key: "all" as const, label: "Whole plan", count: plan.before.length + 1 + plan.after.length }, ...phases].map((phase) => {
           const isActive = active === phase.key
           return (

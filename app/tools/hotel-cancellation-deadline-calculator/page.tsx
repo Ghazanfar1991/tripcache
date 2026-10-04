@@ -1,13 +1,13 @@
 import "../../secondary.css"
+import "../tools.css"
 
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { ArrowRight, BellRing, BookOpen, Check, CheckCircle2, MailCheck, Plus } from "lucide-react"
 
 import { Footer } from "@/components/footer"
-import { SectionContainer } from "@/components/section-container"
 import { HotelCancellationCalculator } from "@/components/seo/hotel-cancellation-calculator"
-import { Button } from "@/components/ui/button"
+import { Breadcrumbs, ButtonLink, Container, CtaBand, DarkPanel, PageHero, Section, SectionHeading, SitePage } from "@/components/site/kit"
 import { createPageMetadata } from "@/lib/seo-metadata"
 
 export const instant = false
@@ -105,7 +105,7 @@ export default async function HotelCancellationDeadlineCalculatorPage({
   }
 
   return (
-    <main className="min-h-screen bg-[#f4f0e8] text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
+    <SitePage>
       <script
         id="hotel-cancellation-calculator-faq-schema"
         type="application/ld+json"
@@ -117,126 +117,153 @@ export default async function HotelCancellationDeadlineCalculatorPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
       />
 
-      <section className="relative overflow-hidden pb-9 pt-28 lg:pb-10 lg:pt-28">
-        <div className="pointer-events-none absolute -inset-inline-start-24 top-28 hidden h-60 w-60 rounded-full border border-[#41382e]/10 sm:block" aria-hidden="true" />
-        <div className="pointer-events-none absolute inset-inline-start-8 top-52 hidden h-20 w-20 rounded-full bg-white/45 shadow-[inset_0_0_0_1px_rgba(65,56,46,0.05)] sm:block" aria-hidden="true" />
-        <div className="pointer-events-none absolute inset-inline-end-[5%] top-24 hidden h-28 w-28 rounded-full border border-[#602ad2]/10 sm:block" aria-hidden="true" />
-        <SectionContainer className="relative">
-          <div className="design-one-calculator-hero">
-            <div className="design-one-calculator-eyebrow inline-flex w-fit items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#4d20af] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)]">
-              <CheckCircle2 className="h-4 w-4" />
-              Free cancellation deadline tool
-            </div>
-            <div className="design-one-calculator-title"><h1 className="design-one-display-feature">
-              Hotel cancellation deadline calculator
-            </h1></div>
-            <p className="design-one-calculator-copy max-w-3xl text-base leading-7 text-[#626262] min-[1100px]:text-lg">
-              Calculate the latest time to cancel a refundable hotel booking using the check-in date, policy window,
-              cutoff time, and hotel time zone.
-            </p>
-            <div className="design-one-calculator-actions flex flex-col gap-3 sm:flex-row min-[900px]:items-start">
-              <Button asChild size="lg" className="rounded-full bg-[#121212] px-6 text-[#f7f2e9] hover:bg-[#242424]">
-                <Link href="/download">
-                  Use TripCache for reminders
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-[#41382e]/15 bg-white/50 px-6 text-[#121212] hover:bg-white/80">
-                <Link href="/features/cancellation-reminders">See cancellation reminders</Link>
-              </Button>
-            </div>
-          </div>
-        </SectionContainer>
-      </section>
+      <PageHero
+        breadcrumb={
+          <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Tools", href: "/tools" }, { name: "Hotel cancellation deadline calculator" }]} />
+        }
+        title="Hotel cancellation deadline calculator"
+        lede={
+          <p>
+            Calculate the latest time to cancel a refundable hotel booking using the check-in date, policy window,
+            cutoff time, and hotel time zone.
+          </p>
+        }
+      >
+        <ButtonLink href="/download" size="lg">
+          Use TripCache for reminders
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </ButtonLink>
+        <ButtonLink href="/features/cancellation-reminders" variant="secondary" size="lg">
+          See cancellation reminders
+        </ButtonLink>
+        <p className="flex basis-full items-center gap-2 pt-1 text-[14px] font-medium text-tc-ink-2">
+          <CheckCircle2 className="size-4 text-[#067647]" aria-hidden="true" />
+          Free cancellation deadline tool
+        </p>
+      </PageHero>
 
-      <section className="pb-24 pt-2 lg:pb-32 lg:pt-4">
-        <SectionContainer>
+      <section className="relative bg-tc-canvas pb-20 pt-2 sm:pb-28">
+        <Container>
           <HotelCancellationCalculator values={calculatorValues} />
-        </SectionContainer>
+        </Container>
       </section>
 
-      <section className="bg-[#121212] py-24 text-[#f7f2e9] lg:py-32">
-        <SectionContainer className="grid gap-12 min-[900px]:grid-cols-[0.8fr_1.2fr] min-[900px]:gap-20">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#a98af0]">How policies usually work</p>
-            <h2 className="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">
+      <section className="bg-white px-3 py-16 sm:px-5 sm:py-24">
+        <DarkPanel className="mx-auto max-w-[1240px]">
+          <div className="grid gap-10 px-6 py-14 sm:px-12 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-16">
+            <h2 className="text-balance font-tc-display text-[clamp(30px,3.8vw,50px)] font-semibold leading-[1.06] tracking-[-0.02em]">
               Most missed deadlines happen because the cutoff is hidden in the confirmation.
             </h2>
+            <div>
+              <h3 className="font-tc-display text-[19px] font-semibold text-white sm:text-[21px]">How policies usually work</h3>
+              <ul className="mt-5 grid gap-2.5">
+                {[
+                  "Free cancellation until 6 PM local hotel time.",
+                  "Cancel 24 hours before check-in.",
+                  "Cancel 48 or 72 hours before arrival.",
+                  "Non-refundable after a specific local date.",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3.5 rounded-[16px] border border-white/10 bg-white/[0.05] px-4 py-4 text-[16px] font-medium leading-7 text-white/90 sm:px-5"
+                  >
+                    <span className="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-[#12b76a]/20 text-[#5ee4a5]">
+                      <Check className="size-3.5" strokeWidth={2.8} aria-hidden="true" />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="grid gap-4">
-            {[
-              "Free cancellation until 6 PM local hotel time.",
-              "Cancel 24 hours before check-in.",
-              "Cancel 48 or 72 hours before arrival.",
-              "Non-refundable after a specific local date.",
-            ].map((item) => (
-              <div key={item} className="grid grid-cols-[auto_1fr] items-start gap-4 rounded-[1.5rem] bg-white/[0.055] p-5 font-medium leading-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6">
-                <CheckCircle2 className="mt-1 h-4 w-4 text-[#a98af0]" />{item}
-              </div>
-            ))}
-          </div>
-        </SectionContainer>
+        </DarkPanel>
       </section>
 
-      <section className="py-24 lg:py-32">
-        <SectionContainer className="grid gap-12 min-[900px]:grid-cols-[0.72fr_1.28fr] min-[900px]:gap-20">
+      <Section className="pt-8 sm:pt-12">
+        <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-4xl font-semibold tracking-[-0.055em] sm:text-6xl">Hotel cancellation FAQ</h2>
-            <p className="mt-5 leading-7 text-[#666666]">
+            <h2 className="text-balance font-tc-display text-[clamp(32px,4vw,50px)] font-semibold leading-[1.05] tracking-[-0.02em] text-tc-ink">
+              Hotel cancellation FAQ
+            </h2>
+            <p className="mt-5 max-w-[42ch] text-[17px] leading-8 text-tc-ink-2">
               Use this calculator as a planning helper, then confirm the final deadline against the provider or hotel
               confirmation. Our{" "}
-              <Link href="/blog/hotel-cancellation-policies" className="font-semibold text-[#4d20af] hover:underline">
+              <Link
+                href="/blog/hotel-cancellation-policies"
+                className="font-semibold text-tc-violet underline decoration-tc-violet/30 underline-offset-4 transition-colors hover:decoration-tc-violet"
+              >
                 hotel cancellation policy guide
               </Link>{" "}
               explains refundable rates, fees and brand rules.
             </p>
           </div>
-          <div className="space-y-3">
+          <div className="border-t border-tc-line">
             {faqs.map((faq) => (
-              <details key={faq.question} className="group rounded-[1.5rem] bg-white/46 px-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_16px_44px_rgba(72,53,33,0.055)] sm:px-8">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-semibold marker:content-none"><span>{faq.question}</span><span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#e5dcff] text-xl font-normal text-[#602ad2] transition-transform duration-150 group-open:rotate-45">+</span></summary>
-                <p className="max-w-3xl pb-7 leading-7 text-[#666666]">{faq.answer}</p>
+              <details key={faq.question} className="tc-faq group border-b border-tc-line">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-tc-display text-[19px] font-semibold text-tc-ink sm:text-[21px] [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <span className="grid size-9 shrink-0 place-items-center rounded-[10px] bg-tc-violet-soft text-tc-violet transition-[transform,background-color,color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-open:rotate-45 group-open:bg-tc-violet group-open:text-white">
+                    <Plus className="size-4" aria-hidden="true" />
+                  </span>
+                </summary>
+                <p className="max-w-[62ch] pb-7 pr-12 text-[16px] leading-7 text-tc-mute">{faq.answer}</p>
               </details>
             ))}
           </div>
-        </SectionContainer>
-      </section>
+        </Container>
+      </Section>
 
-      <section className="pb-24 lg:pb-32">
-        <SectionContainer>
-          <div className="rounded-[2rem] bg-[#602ad2] p-7 text-white shadow-[0_28px_65px_rgba(58,24,135,0.16)] sm:p-10">
-            <h2 className="text-3xl font-semibold tracking-[-0.04em]">Related TripCache resources</h2>
-            <div className="mt-6 grid gap-3 md:grid-cols-3">
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/features/cancellation-reminders">
-                Cancellation reminder feature
-              </Link>
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/blog/hotel-cancellation-reminder-app-2026">
-                Hotel cancellation guide
-              </Link>
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/features/email-to-itinerary">
-                Email-to-itinerary automation
-              </Link>
-            </div>
-            <h3 className="mt-8 text-xl font-semibold tracking-[-0.03em]">More free travel tools</h3>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/flight-arrival-time-calculator">
-                Flight time calculator
-              </Link>
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/layover-calculator">
-                Layover calculator
-              </Link>
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/jet-lag-calculator">
-                Jet lag calculator
-              </Link>
-              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/travel-checklist">
-                Travel checklist generator
-              </Link>
-            </div>
-          </div>
-        </SectionContainer>
-      </section>
+      <Section tone="canvas">
+        <Container>
+          <SectionHeading title="Related TripCache resources" />
+          <ul className="mt-10 grid gap-4 md:grid-cols-3">
+            {[
+              { href: "/features/cancellation-reminders", label: "Cancellation reminder feature", icon: BellRing },
+              { href: "/blog/hotel-cancellation-reminder-app-2026", label: "Hotel cancellation guide", icon: BookOpen },
+              { href: "/features/email-to-itinerary", label: "Email-to-itinerary automation", icon: MailCheck },
+            ].map((link) => {
+              const Icon = link.icon
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="tc-press group flex h-full items-center gap-4 rounded-[22px] border border-tc-line bg-white p-5 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-44px_rgba(45,27,87,0.45)] transition-shadow duration-300 hover:shadow-[0_1px_2px_rgba(14,14,14,0.04),0_36px_70px_-40px_rgba(45,27,87,0.55)] sm:p-6"
+                  >
+                    <span className="grid size-11 shrink-0 place-items-center rounded-[12px] bg-tc-violet-soft text-tc-violet">
+                      <Icon className="size-5" aria-hidden="true" />
+                    </span>
+                    <span className="flex-1 text-[16px] font-semibold leading-6 text-tc-ink">{link.label}</span>
+                    <ArrowRight className="size-4 shrink-0 text-tc-mute transition-[transform,color] duration-300 group-hover:translate-x-1 group-hover:text-tc-violet" aria-hidden="true" />
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
 
+          <h3 className="mt-12 font-tc-display text-[19px] font-semibold text-tc-ink sm:text-[21px]">More free travel tools</h3>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { href: "/tools/flight-arrival-time-calculator", label: "Flight time calculator" },
+              { href: "/tools/layover-calculator", label: "Layover calculator" },
+              { href: "/tools/jet-lag-calculator", label: "Jet lag calculator" },
+              { href: "/tools/travel-checklist", label: "Travel checklist generator" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="tc-press group flex h-full items-center justify-between gap-3 rounded-[16px] border border-tc-line bg-white px-5 py-4 text-[15.5px] font-semibold leading-6 text-tc-ink transition-colors duration-200 hover:text-tc-violet"
+                >
+                  {link.label}
+                  <ArrowRight className="size-4 shrink-0 text-tc-mute transition-[transform,color] duration-300 group-hover:translate-x-1 group-hover:text-tc-violet" aria-hidden="true" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      <CtaBand placement="tools-calculator" />
       <Footer />
-    </main>
+    </SitePage>
   )
 }

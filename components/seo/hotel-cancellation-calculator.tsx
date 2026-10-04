@@ -1,6 +1,8 @@
-import { CalendarClock } from "lucide-react"
+import { BellRing, CalendarClock, ChevronDown } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { buttonClass, cx } from "@/components/site/kit"
+import { ReminderCalendarButton } from "@/components/seo/reminder-calendar-button"
+import { DepartureBoard, type BoardTime } from "@/components/site/tools-departure-board"
 
 const timeZones = [
   "America/New_York",
@@ -119,129 +121,180 @@ function calculateDeadline(values?: CalculatorParams) {
   }
 }
 
+/** Presentation only: the calculated deadline split into the pieces the departure board shows. */
+function boardParts(date: Date, timeZone: string): { dateLine: string; time: BoardTime } {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+      timeZoneName: "short",
+    })
+      .formatToParts(date)
+      .map((part) => [part.type, part.value]),
+  )
+
+  return {
+    dateLine: `${parts.weekday} ${parts.month} ${parts.day} ${parts.year}`,
+    time: {
+      hh: (parts.hour ?? "").padStart(2, "0"),
+      mm: (parts.minute ?? "").padStart(2, "0"),
+      period: (parts.dayPeriod ?? "").toUpperCase(),
+      zone: parts.timeZoneName ?? "",
+    },
+  }
+}
+
+const fieldClass =
+  "tct-field h-12 w-full rounded-[12px] border border-tc-line bg-tc-mist px-4 text-[16px] font-normal text-tc-ink outline-none transition-[border-color,background-color,box-shadow] duration-200 placeholder:text-tc-mute hover:border-[#d5d8dc] focus:border-tc-violet focus:bg-white focus:shadow-[0_0_0_4px_rgba(97,43,211,0.14)]"
+
+const labelClass = "grid gap-2 text-[14.5px] font-semibold text-tc-ink"
+
 export function HotelCancellationCalculator({ values }: HotelCancellationCalculatorProps) {
   const result = calculateDeadline(values)
   const policyHours = values?.policyHours || "24"
   const timeZone = values?.timeZone || "America/New_York"
+  const board = result ? boardParts(result.deadline, result.timeZone) : null
+  const hotelName = values?.hotelName?.trim()
 
   return (
-    <div className="grid gap-5 min-[960px]:grid-cols-[0.88fr_1.12fr] min-[960px]:items-start">
-      <form method="get" className="rounded-[2rem] bg-white/50 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_20px_55px_rgba(72,53,33,0.065)] sm:p-9">
-        <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e8e0ff] text-[#602ad2]">
-            <CalendarClock className="h-5 w-5" />
+    <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-6">
+      <form
+        method="get"
+        className="relative overflow-hidden rounded-[26px] border border-tc-line bg-white p-5 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-44px_rgba(45,27,87,0.45)] sm:rounded-[30px] sm:p-8"
+      >
+        <div className="flex items-start gap-3.5">
+          <div className="grid size-11 shrink-0 place-items-center rounded-[12px] bg-tc-violet-soft text-tc-violet">
+            <CalendarClock className="size-5" aria-hidden="true" />
           </div>
           <div>
-            <h2 className="text-2xl font-semibold tracking-[-0.035em]">Calculate your deadline</h2>
-            <p className="text-sm text-[#666666]">Use the policy wording from your hotel confirmation.</p>
+            <h2 className="font-tc-display text-[24px] font-semibold leading-[1.15] tracking-[-0.015em] text-tc-ink sm:text-[26px]">Calculate your deadline</h2>
+            <p className="mt-1 text-[15px] leading-6 text-tc-mute">Use the policy wording from your hotel confirmation.</p>
           </div>
         </div>
 
-        <div className="mt-8 grid gap-5">
-          <label className="grid gap-2 text-sm font-medium">
+        <div className="mt-7 grid gap-5">
+          <label className={labelClass}>
             Hotel or provider name
-            <input
-              name="hotelName"
-              defaultValue={values?.hotelName ?? ""}
-              placeholder="Hilton Sydney"
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 placeholder:text-[#858585] focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
-            />
+            <input name="hotelName" defaultValue={values?.hotelName ?? ""} placeholder="Hilton Sydney" className={fieldClass} />
           </label>
 
-          <label className="grid gap-2 text-sm font-medium">
-            Check-in date
-            <input
-              name="checkInDate"
-              type="date"
-              defaultValue={values?.checkInDate ?? ""}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
-            />
-          </label>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className={labelClass}>
+              Check-in date
+              <input name="checkInDate" type="date" defaultValue={values?.checkInDate ?? ""} className={fieldClass} />
+            </label>
 
-          <label className="grid gap-2 text-sm font-medium">
+            <label className={labelClass}>
+              Hotel cutoff time
+              <input name="cutoffTime" type="time" defaultValue={values?.cutoffTime ?? "18:00"} className={fieldClass} />
+            </label>
+          </div>
+
+          <label className={labelClass}>
             Cancellation policy window
-            <select
-              name="policyHours"
-              defaultValue={policyHours}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
-            >
-              {policyOptions.map((option) => (
-                <option key={option.hours} value={option.hours}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+            <span className="relative block">
+              <select name="policyHours" defaultValue={policyHours} className={cx(fieldClass, "cursor-pointer appearance-none pr-11")}>
+                {policyOptions.map((option) => (
+                  <option key={option.hours} value={option.hours}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 size-4 -translate-y-1/2 text-tc-mute" aria-hidden="true" />
+            </span>
           </label>
 
-          <label className="grid gap-2 text-sm font-medium">
-            Hotel cutoff time
-            <input
-              name="cutoffTime"
-              type="time"
-              defaultValue={values?.cutoffTime ?? "18:00"}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
-            />
-          </label>
-
-          <label className="grid gap-2 text-sm font-medium">
+          <label className={labelClass}>
             Hotel time zone
-            <select
-              name="timeZone"
-              defaultValue={timeZone}
-              className="min-h-12 rounded-xl border border-[#41382e]/15 bg-[#fbf8f2] px-4 py-3 text-base text-[#121212] outline-none transition-colors duration-150 focus:border-[#602ad2] focus:ring-2 focus:ring-[#602ad2]/15"
-            >
-              {timeZones.map((zone) => (
-                <option key={zone} value={zone}>
-                  {zone.replace("_", " ")}
-                </option>
-              ))}
-            </select>
+            <span className="relative block">
+              <select name="timeZone" defaultValue={timeZone} className={cx(fieldClass, "cursor-pointer appearance-none pr-11")}>
+                {timeZones.map((zone) => (
+                  <option key={zone} value={zone}>
+                    {zone.replace("_", " ")}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 size-4 -translate-y-1/2 text-tc-mute" aria-hidden="true" />
+            </span>
           </label>
 
-          <Button type="submit" className="min-h-12 rounded-full bg-[#121212] text-[#f7f2e9] hover:bg-[#242424]">
+          <button type="submit" className={cx(buttonClass("primary", "lg"), "mt-1 w-full")}>
             Calculate deadline
-          </Button>
+          </button>
         </div>
       </form>
 
-      <section className="rounded-[2rem] bg-[#121212] p-6 text-[#f7f2e9] shadow-[0_30px_70px_rgba(42,20,82,0.18)] sm:p-9 min-[960px]:translate-y-8">
-        <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#a98af0]">Your cancellation deadline</p>
-        {result ? (
-          <div className="mt-5 space-y-6">
-            <div>
-              <div className="text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">{formatInZone(result.deadline, result.timeZone)}</div>
-              <p className="mt-4 leading-7 text-[#b9b0a3]">
+      <section
+        data-nav-theme="dark"
+        aria-labelledby="cancellation-deadline-heading"
+        className="tct-surface relative overflow-hidden rounded-[26px] p-4 text-white sm:rounded-[30px] sm:p-8"
+      >
+        <h2 id="cancellation-deadline-heading" className="sr-only">
+          Your cancellation deadline
+        </h2>
+        {result && board ? (
+          <div className="space-y-6">
+            <DepartureBoard
+              meta={timeZone.replace("_", " ")}
+              label="Your cancellation deadline"
+              rows={[...(hotelName ? [{ text: hotelName }] : []), { text: board.dateLine }]}
+              time={board.time}
+            />
+
+            <div className="px-1 sm:px-0">
+              <div className="font-tc-display text-[26px] font-semibold leading-[1.15] tracking-[-0.015em] [font-variant-numeric:tabular-nums] sm:text-[34px]">
+                {formatInZone(result.deadline, result.timeZone)}
+              </div>
+              <p className="mt-3 max-w-[56ch] text-[15.5px] leading-7 text-white/70">
                 This is the latest calculated cancellation time based on the check-in date, hotel cutoff time, policy
                 window, and hotel time zone you entered.
               </p>
             </div>
 
-            <div className="grid gap-3">
-              <div className="rounded-2xl bg-white/[0.06] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                <div className="text-sm font-semibold">Reminder suggestion 1</div>
-                <div className="mt-1 text-[#b9b0a3]">{formatInZone(result.twoDaysBefore, result.timeZone)}</div>
-              </div>
-              <div className="rounded-2xl bg-white/[0.06] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                <div className="text-sm font-semibold">Reminder suggestion 2</div>
-                <div className="mt-1 text-[#b9b0a3]">{formatInZone(result.oneDayBefore, result.timeZone)}</div>
-              </div>
-              <div className="rounded-2xl bg-white/[0.06] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                <div className="text-sm font-semibold">Day-of backup</div>
-                <div className="mt-1 text-[#b9b0a3]">Set one final reminder a few hours before the deadline.</div>
-              </div>
-            </div>
+            <ReminderCalendarButton
+              title={`${hotelName ? `${hotelName}: ` : ""}free cancellation ends`}
+              deadlineIso={result.deadline.toISOString()}
+              reminderIsos={[result.twoDaysBefore.toISOString(), result.oneDayBefore.toISOString()]}
+            />
 
-            <label className="grid gap-2 text-sm font-medium">
+            <ul className="grid gap-2.5">
+              {[
+                { title: "Reminder suggestion 1", text: formatInZone(result.twoDaysBefore, result.timeZone) },
+                { title: "Reminder suggestion 2", text: formatInZone(result.oneDayBefore, result.timeZone) },
+                { title: "Day-of backup", text: "Set one final reminder a few hours before the deadline." },
+              ].map((item) => (
+                <li key={item.title} className="flex items-start gap-3.5 rounded-[16px] border border-white/10 bg-white/[0.05] px-4 py-3.5">
+                  <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-full bg-[#fff5d6] text-[#b54708]">
+                    <BellRing className="size-4" aria-hidden="true" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[14.5px] font-semibold text-white">{item.title}</span>
+                    <span className="mt-0.5 block text-[14.5px] leading-6 text-white/70 [font-variant-numeric:tabular-nums]">{item.text}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <label className="grid gap-2 text-[14.5px] font-semibold text-white">
               Copyable reminder summary
               <textarea
                 readOnly
                 value={result.summary}
-                className="min-h-28 rounded-2xl border border-white/10 bg-white/[0.06] p-4 leading-7 text-[#b9b0a3] outline-none focus:border-[#a98af0] focus:ring-2 focus:ring-[#a98af0]/15"
+                className="min-h-28 rounded-[16px] border border-white/15 bg-black/25 p-4 text-[15px] font-normal leading-7 text-white/80 outline-none transition-[border-color,box-shadow] duration-200 focus:border-[#a5b4fc] focus:shadow-[0_0_0_4px_rgba(165,180,252,0.18)]"
               />
             </label>
           </div>
         ) : (
-          <p className="mt-5 leading-7 text-[#b9b0a3]">Add the booking details to calculate the deadline.</p>
+          <div className="space-y-6">
+            <DepartureBoard meta={timeZone.replace("_", " ")} label="Your cancellation deadline" rows={[{ text: "" }, { text: "" }]} />
+            <p className="max-w-[46ch] px-1 text-[16px] leading-7 text-white/75 sm:px-0">Add the booking details to calculate the deadline.</p>
+          </div>
         )}
       </section>
     </div>

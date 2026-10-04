@@ -5,7 +5,8 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { Footer } from "@/components/footer"
-import { SectionContainer } from "@/components/section-container"
+import { Breadcrumbs, Card, Container, CtaBand, PageHero, Pill, Section, SitePage } from "@/components/site/kit"
+import { IconTile, PhoneShot, productScreen, productTone } from "@/components/site/product-ui"
 import { createPageMetadata } from "@/lib/seo-metadata"
 import { featurePages } from "@/lib/seo-page-data"
 
@@ -138,83 +139,112 @@ const featuresSchema = {
 
 export default function FeaturesIndexPage() {
   return (
-    <main className="min-h-screen bg-[#f4f0e8] pt-28 text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
-      <script
-        id="features-page-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(featuresSchema).replace(/</g, "\\u003c") }}
-      />
-      <SectionContainer className="pb-20 pt-8 min-[900px]:pb-28 min-[900px]:pt-12">
-        <div className="grid items-end gap-8 min-[880px]:grid-cols-[minmax(0,1.15fr)_minmax(20rem,0.65fr)] min-[880px]:gap-16">
-          <div>
-            <p className="inline-flex items-center rounded-full bg-[#e5dcff] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#602ad2]">TripCache features</p>
-            <h1 className="design-one-display-index mt-6 max-w-4xl">Travel organization built from your inbox</h1>
-          </div>
-          <p className="max-w-xl text-lg leading-8 text-[#626262] min-[880px]:pb-2">
-            Start with confirmed bookings, then keep cancellation deadlines, receipts, documents, and trip records in
-            one organized place. Cancellation reminders, documents, expenses, and exports are free; booking-email
-            import and live flight alerts are part of Pro.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-5 min-[760px]:grid-cols-2 min-[1080px]:grid-cols-3 min-[900px]:mt-14">
-          {featurePages.map((page, index) => (
-            <Link
-              key={page.path}
-              href={page.path}
-              className={`group flex min-h-[22rem] flex-col justify-between rounded-[30px] p-7 shadow-[0_1px_0_rgba(255,255,255,0.7),0_18px_48px_rgba(72,53,33,0.06)] transition-[transform,box-shadow,background-color] duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_1px_0_rgba(255,255,255,0.8),0_26px_60px_rgba(72,53,33,0.1)] sm:p-8 ${index === 0 ? "bg-[#602ad2] text-white min-[760px]:col-span-2 min-[1080px]:col-span-1" : "bg-white/55 text-[#121212]"}`}
-            >
-              <span aria-hidden="true" className={`h-2.5 w-2.5 rounded-full ${index === 0 ? "bg-white/60" : "bg-[#602ad2]"}`} />
-              <div className="mt-16">
-                <h2 className="max-w-sm text-2xl font-semibold leading-tight tracking-[-0.035em] sm:text-3xl">{page.title}</h2>
-                <p className={`mt-4 max-w-md leading-7 ${index === 0 ? "text-white/78" : "text-[#666666]"}`}>{page.description}</p>
-              </div>
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold">
-                Explore feature
-                <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1" />
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        <section id="all-features" aria-labelledby="all-features-heading" className="mt-20 scroll-mt-28 min-[900px]:mt-28">
-          <div className="max-w-3xl">
-            <h2 id="all-features-heading" className="text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl">
-              Every TripCache feature, free or Pro
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-[#626262]">
-              TripCache Basic is free and covers most of the app. TripCache Pro adds three things: booking-email
-              import, live flight-status alerts, and Live Activity and widgets.{" "}
-              <Link href="/pricing" className="font-semibold text-[#4d20af] underline underline-offset-4">
-                Compare plans and prices
-              </Link>
-              .
+    <>
+      <SitePage>
+        <script
+          id="features-page-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(featuresSchema).replace(/</g, "\\u003c") }}
+        />
+        <PageHero
+          align="center"
+          breadcrumb={<Breadcrumbs align="center" items={[{ name: "Home", href: "/" }, { name: "Features" }]} />}
+          title="Travel organization built from your inbox"
+          lede={
+            <p>
+              Start with confirmed bookings, then keep cancellation deadlines, receipts, documents, and trip records in
+              one organized place. Cancellation reminders, documents, expenses, and exports are free; booking-email
+              import and live flight alerts are part of Pro.
             </p>
-          </div>
-          <ul className="mt-10 grid gap-4 min-[760px]:grid-cols-2">
-            {allFeatures.map((feature) => (
-              <li
-                key={feature.name}
-                className="rounded-[1.5rem] bg-white/55 p-6 shadow-[0_1px_0_rgba(255,255,255,0.7),0_14px_40px_rgba(72,53,33,0.05)] sm:p-7"
-              >
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="text-lg font-semibold leading-snug tracking-[-0.02em]">{feature.name}</h3>
-                  <span
-                    className={`rounded-full px-3 py-1 text-xs font-bold ${feature.plan === "Pro" ? "bg-[#602ad2] text-white" : "bg-[#e5dcff] text-[#4d20af]"}`}
-                  >
-                    {feature.plan}
-                  </span>
-                </div>
-                <p className="mt-3 leading-7 text-[#666666]">{feature.description}</p>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 max-w-3xl leading-7 text-[#626262]">
-            TripCache runs on iPhone with iOS 16.4 or later and on Android 7.0 or later. The app is in English.
-          </p>
+          }
+        />
+
+        <section className="bg-tc-canvas pb-24 pt-2 sm:pb-32">
+          <Container>
+            <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {featurePages.map((page) => {
+                const tone = productTone(page.slug)
+                const screen = productScreen(page)
+                return (
+                  <li key={page.path} className="flex">
+                    <Link href={page.path} className="group flex w-full rounded-[26px]">
+                      <Card interactive bloom={tone.bloom} className="flex w-full flex-col [&>div:last-child]:flex [&>div:last-child]:flex-1 [&>div:last-child]:flex-col">
+                        <div className="px-6 pt-7 sm:px-8 sm:pt-8">
+                          <IconTile icon={tone.icon} tone={tone.tile} />
+                          <h2 className="mt-8 text-balance font-tc-display text-[25px] font-semibold leading-[1.15] tracking-[-0.015em] text-tc-ink sm:text-[28px]">
+                            {page.title}
+                          </h2>
+                          <p className="mt-3 text-[15.5px] leading-7 text-tc-mute">{page.description}</p>
+                          <span className="mt-6 inline-flex items-center gap-2 text-[14.5px] font-semibold text-tc-violet">
+                            Explore feature
+                            <ArrowRight
+                              className="size-4 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1 motion-reduce:transition-none"
+                              aria-hidden="true"
+                            />
+                          </span>
+                        </div>
+                        <div aria-hidden="true" className="relative mt-auto h-[260px] overflow-hidden pt-10">
+                          <div className="mx-auto w-[220px] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2 motion-reduce:transition-none">
+                            <PhoneShot src={screen.src} alt="" sizes="220px" />
+                          </div>
+                        </div>
+                      </Card>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </Container>
         </section>
-      </SectionContainer>
+
+        <Section id="all-features" aria-labelledby="all-features-heading" className="scroll-mt-28">
+          <Container>
+            <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-16">
+              <h2
+                id="all-features-heading"
+                className="text-balance font-tc-display text-[clamp(30px,3.8vw,50px)] font-semibold leading-[1.06] tracking-[-0.02em] text-tc-ink"
+              >
+                Every TripCache feature, free or Pro
+              </h2>
+              <p className="max-w-[58ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
+                TripCache Basic is free and covers most of the app. TripCache Pro adds three things: booking-email
+                import, live flight-status alerts, and Live Activity and widgets.{" "}
+                <Link
+                  href="/pricing"
+                  className="font-semibold text-tc-violet underline decoration-tc-violet/30 underline-offset-4 transition-colors hover:decoration-tc-violet"
+                >
+                  Compare plans and prices
+                </Link>
+                .
+              </p>
+            </div>
+            <ul className="mt-12 grid gap-4 md:grid-cols-2">
+              {allFeatures.map((feature) => (
+                <li
+                  key={feature.name}
+                  className="rounded-[22px] border border-tc-line bg-white p-6 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-44px_rgba(45,27,87,0.45)] sm:p-7"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="font-tc-display text-[19px] font-semibold leading-snug tracking-[-0.01em] text-tc-ink sm:text-[21px]">
+                      {feature.name}
+                    </h3>
+                    <Pill tone={feature.plan === "Pro" ? "pro" : "violet"} className="mt-0.5 shrink-0">
+                      {feature.plan}
+                    </Pill>
+                  </div>
+                  <p className="mt-3 text-[15.5px] leading-7 text-tc-mute">{feature.description}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 max-w-[62ch] text-[15.5px] leading-7 text-tc-mute">
+              TripCache runs on iPhone with iOS 16.4 or later and on Android 7.0 or later. The app is in English.
+            </p>
+          </Container>
+        </Section>
+
+        <CtaBand placement="features_index_cta_band" />
+      </SitePage>
       <Footer />
-    </main>
+    </>
   )
 }

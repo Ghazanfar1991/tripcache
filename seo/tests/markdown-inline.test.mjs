@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 
-import { formatInline, normalizeBlogCtaLink } from "../../lib/markdown-inline.mjs"
+import { LINK_CLASS, formatInline, normalizeBlogCtaLink } from "../../lib/markdown-inline.mjs"
 
 const hrefs = (html) => [...html.matchAll(/href="([^"]*)"/g)].map((match) => match[1])
 
@@ -46,7 +46,7 @@ test("markdown links to the homepage or /download become the CTA; other pages ke
 
 test("internal links open in place, external links in a new tab, and link labels never nest anchors", () => {
   const internal = formatInline("[Basic and Pro](https://trip-cache.com/pricing)")
-  assert.equal(internal, '<a href="/pricing" class="text-cyan-500 underline decoration-cyan-500/50 hover:decoration-cyan-500">Basic and Pro</a>')
+  assert.equal(internal, `<a href="/pricing" class="${LINK_CLASS}">Basic and Pro</a>`)
   const external = formatInline("[TripIt pricing](https://www.tripit.com/web/pro/pricing)")
   assert.match(external, /target="_blank" rel="noopener noreferrer"/)
   const mailto = formatInline("[support@trip-cache.com](mailto:support@trip-cache.com)")

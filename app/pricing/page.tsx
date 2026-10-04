@@ -1,11 +1,13 @@
 import "../secondary.css"
 
 import Link from "next/link"
-import { ArrowRight, CheckCircle2, MailCheck, Plane, ShieldCheck, Smartphone } from "lucide-react"
+import { ArrowRight, Check, MailCheck, Plane, ShieldCheck, Smartphone } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { GetStartedModal } from "@/components/get-started-modal"
-import { SectionContainer } from "@/components/section-container"
+import { Bloom } from "@/components/home/category"
+import { Breadcrumbs, Card, Container, CtaBand, PageHero, Section, SitePage, buttonClass, cx } from "@/components/site/kit"
+import { FaqList, IconTile, PlanTable, type PlanRow } from "@/components/site/product-ui"
 
 const basicFeatures = [
   "Cancellation-deadline reminders",
@@ -71,43 +73,46 @@ const reasons = [
     title: "Skip the retyping",
     copy: "Forward supported confirmations, including attached PDFs and screenshots, and review a structured draft. The importer also picks up free-cancellation deadlines.",
     icon: MailCheck,
+    tile: "bg-tc-violet-soft text-tc-violet",
+    bloom: "#8b5cf6",
   },
   {
     title: "Know when a flight changes",
     copy: "Get alerts for departures, arrivals, delays, and gate, terminal, and baggage-belt changes on supported flights. The airline remains the final source.",
     icon: Plane,
+    tile: "bg-[#eef2ff] text-[#4f46e5]",
+    bloom: "#6366f1",
   },
   {
     title: "See the flight at a glance",
     copy: "Follow flight progress in a Live Activity and the Dynamic Island on iPhone, or in a home-screen widget on iPhone and Android.",
     icon: Smartphone,
+    tile: "bg-tc-violet-soft text-tc-violet",
+    bloom: "#d82d7e",
   },
 ]
 
 const PRICE_SUMMARY =
   "TripCache Basic is free. TripCache Pro costs $5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store (US, October 2026)."
 
-const comparisonRows: Array<{ feature: string; basic: string; pro: string }> = [
-  { feature: "Price", basic: "Free", pro: "$5.99 a month, or $49.99 a year (Google Play) / $50.00 a year (App Store)" },
-  {
-    feature: "Trips with flights, stays, rental cars, trains, buses, parking, events, restaurants, tours and meetings",
-    basic: "Included",
-    pro: "Included",
-  },
-  { feature: "Cancellation-deadline reminders (7 days, 2 days, 1 day or on the day)", basic: "Included", pro: "Included" },
-  { feature: "Check-in reminders (48 and 24 hours before departure) and check-in shortcut", basic: "Included", pro: "Included" },
-  { feature: "Boarding-pass barcode scanning", basic: "Included", pro: "Included" },
-  { feature: "Document vault with an optional PIN and Face ID or fingerprint unlock", basic: "Included", pro: "Included" },
-  { feature: "Document storage limits", basic: "Same on every plan", pro: "Same on every plan" },
-  { feature: "Expenses in 153 currencies, with locked exchange rates and category budgets", basic: "Included", pro: "Included" },
-  { feature: "CSV and PDF export, including Travel History and a Visa / Immigration Summary", basic: "Included", pro: "Included" },
-  { feature: "CSV import of past flights", basic: "Included", pro: "Included" },
-  { feature: "Trip map, travel history and offline access", basic: "Included", pro: "Included" },
-  { feature: "Add to calendar and trip-card image sharing", basic: "Included", pro: "Included" },
-  { feature: "Booking-email import (forwarded confirmations, PDFs and screenshots)", basic: "Not included", pro: "Included, with a monthly allowance" },
-  { feature: "Free-cancellation deadlines read from imported confirmations", basic: "Not included", pro: "Included" },
-  { feature: "Live flight-status alerts on supported flights", basic: "Not included", pro: "Included" },
-  { feature: "Live Activity, Dynamic Island and home-screen widgets", basic: "Not included", pro: "Included" },
+/** Basic vs Pro. `true` renders a check ("Included"), `false` a dash ("Not included"); strings show as written. */
+const comparisonRows: PlanRow[] = [
+  { label: "Price", basic: "Free", pro: "$5.99 a month, or $49.99 a year (Google Play) / $50.00 a year (App Store)" },
+  { label: "Trips with flights, stays, rental cars, trains, buses, parking, events, restaurants, tours and meetings", basic: true, pro: true },
+  { label: "Cancellation-deadline reminders (7 days, 2 days, 1 day or on the day)", basic: true, pro: true },
+  { label: "Check-in reminders (48 and 24 hours before departure) and check-in shortcut", basic: true, pro: true },
+  { label: "Boarding-pass barcode scanning", basic: true, pro: true },
+  { label: "Document vault with an optional PIN and Face ID or fingerprint unlock", basic: true, pro: true },
+  { label: "Document storage limits", basic: "Same on every plan", pro: "Same on every plan" },
+  { label: "Expenses in 153 currencies, with locked exchange rates and category budgets", basic: true, pro: true },
+  { label: "CSV and PDF export, including Travel History and a Visa / Immigration Summary", basic: true, pro: true },
+  { label: "CSV import of past flights", basic: true, pro: true },
+  { label: "Trip map, travel history and offline access", basic: true, pro: true },
+  { label: "Add to calendar and trip-card image sharing", basic: true, pro: true },
+  { label: "Booking-email import (forwarded confirmations, PDFs and screenshots)", basic: false, pro: "Included, with a monthly allowance" },
+  { label: "Free-cancellation deadlines read from imported confirmations", basic: false, pro: true },
+  { label: "Live flight-status alerts on supported flights", basic: false, pro: true },
+  { label: "Live Activity, Dynamic Island and home-screen widgets", basic: false, pro: true },
 ]
 
 const pricingFaqs = [
@@ -174,229 +179,219 @@ export default function PricingPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#f4f0e8] pt-[72px] text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
-      <script
-        id="pricing-page-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema).replace(/</g, "\\u003c") }}
-      />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[32rem] overflow-hidden" aria-hidden="true">
-        <div className="absolute -inset-inline-start-24 top-28 hidden h-64 w-64 rounded-full border border-[#41382e]/10 sm:block" />
-        <div className="absolute inset-inline-start-8 top-48 hidden h-24 w-24 rounded-full bg-white/45 shadow-[inset_0_0_0_1px_rgba(65,56,46,0.05)] sm:block" />
-        <div className="absolute inset-inline-end-[6%] top-28 hidden h-28 w-28 rounded-full border border-[#602ad2]/10 sm:block" />
-        <div className="absolute inset-x-0 top-0 h-px bg-[#41382e]/10" />
-      </div>
+    <>
+      <SitePage>
+        <script
+          id="pricing-page-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema).replace(/</g, "\\u003c") }}
+        />
 
-      <section className="relative pb-10 pt-9 lg:pb-12 lg:pt-10">
-        <SectionContainer className="grid items-center gap-7 min-[900px]:grid-cols-[1.16fr_0.84fr] min-[900px]:gap-x-16 min-[900px]:gap-y-5">
-          <div className="min-[900px]:col-start-1 min-[900px]:row-span-2 min-[900px]:row-start-1">
-            <h1 className="design-one-display-feature">
-              Start free. Pay for the post-booking work you want automated.
-            </h1>
-          </div>
-          <p className="max-w-3xl text-lg leading-8 text-[#626262] min-[900px]:col-start-2 min-[900px]:row-start-1 min-[900px]:max-w-sm min-[900px]:text-sm min-[900px]:leading-6 min-[900px]:text-[#666666]">
-            {PRICE_SUMMARY} Basic includes cancellation-deadline and check-in reminders, the document vault, expenses,
-            and CSV or PDF export. Pro adds booking-email import, live flight-status alerts on supported flights, and
-            Live Activity and widgets.
-          </p>
-          <div className="flex flex-wrap gap-2.5 text-sm text-[#5f5f5f] min-[900px]:col-start-2 min-[900px]:row-start-2 min-[900px]:self-start">
+        <PageHero
+          align="center"
+          breadcrumb={<Breadcrumbs align="center" items={[{ name: "Home", href: "/" }, { name: "Pricing" }]} />}
+          title="Start free. Pay for the post-booking work you want automated."
+          lede={
+            <p>
+              {PRICE_SUMMARY} Basic includes cancellation-deadline and check-in reminders, the document vault,
+              expenses, and CSV or PDF export. Pro adds booking-email import, live flight-status alerts on supported
+              flights, and Live Activity and widgets.
+            </p>
+          }
+        >
+          <ul className="flex flex-wrap justify-center gap-2.5">
             {["Free cancellation reminders", "Cancel Pro anytime", "Upgrade in the app"].map((item) => (
-              <span key={item} className="inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)]">
-                <CheckCircle2 className="h-4 w-4 text-[#602ad2]" />
-                {item}
-              </span>
-            ))}
-          </div>
-        </SectionContainer>
-      </section>
-
-      <section className="relative pb-20 lg:pb-28">
-        <SectionContainer className="mx-auto grid max-w-7xl gap-5 min-[760px]:grid-cols-2 min-[1080px]:grid-cols-12 min-[1080px]:items-start">
-          {plans.map((plan) => (
-            <article
-              key={plan.name}
-              className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] p-7 sm:p-9 min-[1080px]:col-span-4 ${
-                plan.highlight
-                  ? "bg-[#121212] text-[#f7f2e9] shadow-[0_30px_70px_rgba(42,20,82,0.18)] min-[760px]:col-span-2 min-[1080px]:col-span-4 min-[1080px]:-translate-y-5"
-                  : "bg-white/45 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_20px_55px_rgba(72,53,33,0.065)]"
-              }`}
-            >
-              <div className="flex min-h-7 flex-wrap items-center justify-between gap-2">
-                <p className={`text-[10px] font-bold uppercase tracking-[0.17em] ${plan.highlight ? "text-[#a98af0]" : "text-[#4d20af]"}`}>{plan.label}</p>
-                {plan.badge ? (
-                  <span className="rounded-full bg-[#602ad2] px-3 py-1 text-xs font-bold text-white shadow-[0_8px_20px_rgba(96,42,210,0.2)]">
-                    {plan.badge}
-                  </span>
-                ) : null}
-              </div>
-              <div className="mt-6 space-y-2">
-                <h2 className="text-3xl font-semibold tracking-[-0.04em]">{plan.name}</h2>
-                <p className={`leading-7 ${plan.highlight ? "text-[#b9b0a3]" : "text-[#666666]"}`}>{plan.description}</p>
-              </div>
-
-              <div className="mt-6">
-                <p className={`text-[10px] font-bold uppercase tracking-[0.16em] ${plan.highlight ? "text-[#a59b8e]" : "text-[#858585]"}`}>Price</p>
-                <p className="mt-2 text-5xl font-semibold tracking-[-0.055em]">
-                  {plan.price}
-                  <span className={`text-base font-semibold tracking-normal ${plan.highlight ? "text-[#b9b0a3]" : "text-[#666666]"}`}> {plan.cadence}</span>
-                </p>
-                <p className={`mt-3 text-sm leading-6 ${plan.highlight ? "text-[#b9b0a3]" : "text-[#666666]"}`}>{plan.meta}</p>
-              </div>
-
-              <div className="mt-6 space-y-3">
-                {plan.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3 text-sm">
-                    <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${plan.highlight ? "bg-white/[0.07] text-[#a98af0]" : "bg-[#e8e0ff] text-[#602ad2]"}`}>
-                      <CheckCircle2 className="h-4 w-4" />
-                    </span>
-                    <span className={`leading-relaxed ${plan.highlight ? "text-[#c3baae]" : "text-[#5f5f5f]"}`}>{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-auto pt-8">
-                <GetStartedModal
-                  triggerLabel={plan.cta}
-                  triggerClassName={`h-11 w-full rounded-full text-sm ${
-                    plan.highlight
-                      ? "bg-[#602ad2] text-white shadow-[0_12px_28px_rgba(58,24,135,0.22)] hover:bg-[#5121b3]"
-                      : "bg-[#121212] text-[#f7f2e9] hover:bg-[#242424]"
-                  }`}
-                />
-              </div>
-            </article>
-          ))}
-        </SectionContainer>
-        <SectionContainer className="mx-auto mt-7 max-w-7xl text-center">
-          <p className="text-sm text-[#666666]">
-            Yearly savings: 12 months at $5.99 is $71.88. Pro Yearly is $49.99 on Google Play and $50.00 on the App
-            Store, about 30% less. US store prices as of October 2026.
-          </p>
-        </SectionContainer>
-      </section>
-
-      <section id="compare" aria-labelledby="compare-heading" className="relative scroll-mt-24 pb-20 lg:pb-28">
-        <SectionContainer className="mx-auto max-w-5xl">
-          <h2 id="compare-heading" className="text-3xl font-semibold tracking-[-0.045em] sm:text-4xl">
-            TripCache Basic vs Pro
-          </h2>
-          <p className="mt-4 max-w-3xl leading-7 text-[#666666]">
-            Pro gates three things: booking-email import, live flight-status alerts, and Live Activity and widgets.
-            Everything else is in Basic, and storage limits are the same on both plans.
-          </p>
-          <div className="mt-8 overflow-x-auto rounded-[1.75rem] bg-white/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_20px_55px_rgba(72,53,33,0.065)]">
-            <table className="w-full border-collapse text-left text-[13px] leading-5 sm:text-sm sm:leading-6">
-              <caption className="sr-only">
-                Features included in TripCache Basic (free) and TripCache Pro, with US prices as of October 2026
-              </caption>
-              <thead>
-                <tr className="border-b border-[#3f352a]/10">
-                  <th scope="col" className="w-[46%] px-3 py-4 font-semibold sm:px-6">
-                    Feature
-                  </th>
-                  <th scope="col" className="w-[24%] px-3 py-4 font-semibold sm:px-6">
-                    Basic (free)
-                  </th>
-                  <th scope="col" className="w-[30%] px-3 py-4 font-semibold text-[#4d20af] sm:px-6">
-                    Pro
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((row) => (
-                  <tr key={row.feature} className="border-b border-[#3f352a]/[0.07] last:border-b-0">
-                    <th scope="row" className="px-3 py-3.5 align-top font-medium text-[#3a3a3a] sm:px-6">
-                      {row.feature}
-                    </th>
-                    <td className={`px-3 py-3.5 align-top sm:px-6 ${row.basic === "Not included" ? "text-[#8a8278]" : "text-[#3a3a3a]"}`}>
-                      {row.basic}
-                    </td>
-                    <td className="px-3 py-3.5 align-top text-[#3a3a3a] sm:px-6">{row.pro}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </SectionContainer>
-      </section>
-
-      <section className="relative bg-[#121212] py-24 text-[#f7f2e9] lg:py-32">
-        <SectionContainer className="mx-auto max-w-6xl">
-          <div className="grid gap-8 min-[860px]:grid-cols-[0.72fr_1.28fr] min-[860px]:items-end min-[860px]:gap-20">
-            <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#a98af0]">Why travelers upgrade</p>
-            <div><h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">Pro imports your bookings and watches your flights.</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#b9b0a3]">
-              Reminders, documents, expenses, and exports are already free. Pro adds the parts that save the most time:
-              turning booking emails into trips and following flights on the day.
-            </p></div>
-          </div>
-
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {reasons.map((reason) => {
-              const Icon = reason.icon
-              return (
-                <article key={reason.title} className="rounded-[1.75rem] bg-white/[0.055] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#602ad2] text-white">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-7 text-xl font-semibold tracking-[-0.025em]">{reason.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[#b2b2b2]">{reason.copy}</p>
-                </article>
-              )
-            })}
-          </div>
-        </SectionContainer>
-      </section>
-
-      <section id="faq" aria-labelledby="pricing-faq-heading" className="relative scroll-mt-24 pt-20 lg:pt-28">
-        <SectionContainer className="mx-auto max-w-5xl">
-          <h2 id="pricing-faq-heading" className="text-3xl font-semibold tracking-[-0.045em] sm:text-4xl">
-            TripCache pricing questions
-          </h2>
-          <div className="mt-8 grid gap-4">
-            {pricingFaqs.map((faq) => (
-              <article
-                key={faq.question}
-                className="rounded-[1.5rem] bg-white/50 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_16px_44px_rgba(72,53,33,0.055)] sm:p-7"
+              <li
+                key={item}
+                className="inline-flex items-center gap-2 rounded-full border border-tc-line bg-white/80 py-1.5 pl-2 pr-3.5 text-[13.5px] font-medium text-tc-ink-2"
               >
-                <h3 className="text-lg font-semibold tracking-[-0.02em]">{faq.question}</h3>
-                <p className="mt-2 leading-7 text-[#666666]">{faq.answer}</p>
-              </article>
+                <span aria-hidden="true" className="grid size-5 place-items-center rounded-full bg-tc-violet-soft text-tc-violet">
+                  <Check className="size-3" strokeWidth={3} />
+                </span>
+                {item}
+              </li>
             ))}
-          </div>
-        </SectionContainer>
-      </section>
+          </ul>
+        </PageHero>
 
-      <section className="relative py-20 lg:py-28">
-        <SectionContainer className="mx-auto max-w-5xl">
-          <div className="overflow-hidden rounded-[2rem] bg-[#602ad2] p-8 text-white shadow-[0_28px_65px_rgba(58,24,135,0.16)] sm:p-12">
-            <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
-              <div>
-                <h2 className="text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Not sure whether Pro fits your travel workflow?</h2>
-                <p className="mt-4 leading-7 text-white/75">
-                  Ask about email import, live flight alerts, or moving your routine from TripCase.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
-                <Link
-                  href="mailto:support@trip-cache.com?subject=TripCache%20pricing%20question"
-                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#121212] transition-colors duration-150 hover:bg-[#f7f2e9]"
+        <section className="relative bg-tc-canvas pb-24 pt-2 sm:pb-32">
+          <Container size="wide">
+            <div className="grid gap-5 lg:grid-cols-3 lg:items-stretch">
+              {plans.map((plan) => (
+                <article
+                  key={plan.name}
+                  className={cx(
+                    "relative flex flex-col overflow-hidden rounded-[30px] p-7 sm:p-9",
+                    plan.highlight
+                      ? "bg-[linear-gradient(150deg,#612bd3_0%,#4a1eac_60%,#2f137c_100%)] text-white shadow-[0_40px_80px_-40px_rgba(97,43,211,0.8)]"
+                      : "border border-tc-line bg-white text-tc-ink shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-40px_rgba(45,27,87,0.4)]",
+                  )}
                 >
-                  Contact support
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <GetStartedModal triggerLabel="Download" triggerClassName="h-11 rounded-full bg-[#121212] px-6 text-white hover:bg-[#242424]" />
-              </div>
-            </div>
-            <div className="mt-7 flex items-start gap-3 border-t border-white/20 pt-7 text-sm leading-6 text-white/75">
-              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-              <p>Review the Privacy Policy and the current App Store or Google Play disclosures before uploading sensitive travel documents.</p>
-            </div>
-          </div>
-        </SectionContainer>
-      </section>
+                  {plan.highlight ? (
+                    <>
+                      <Bloom className="tc-drift -right-24 -top-28 size-80 opacity-55" color="#d82d7e" />
+                      <Bloom className="tc-drift-slow -bottom-32 -left-20 size-72 opacity-30" color="#6366f1" />
+                    </>
+                  ) : null}
 
+                  <div className="relative flex min-h-8 flex-wrap items-center justify-between gap-2">
+                    <h2 className="font-tc-display text-[24px] font-semibold tracking-[-0.01em]">{plan.name}</h2>
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span
+                        className={cx(
+                          "inline-flex items-center rounded-full px-2.5 py-1 text-[12px] font-semibold",
+                          plan.highlight ? "bg-white/15 text-white ring-1 ring-white/20" : "bg-tc-mist text-tc-ink-2",
+                        )}
+                      >
+                        {plan.label}
+                      </span>
+                      {plan.badge ? (
+                        <span className="inline-flex items-center rounded-full bg-[#fec84b] px-2.5 py-1 text-[12px] font-bold text-tc-ink">
+                          {plan.badge}
+                        </span>
+                      ) : null}
+                    </div>
+                  </div>
+                  <p className={cx("relative mt-3 text-[15px] leading-6", plan.highlight ? "text-[#e4dcff]" : "text-tc-mute")}>
+                    {plan.description}
+                  </p>
+
+                  <p className="relative mt-8 flex items-baseline gap-2">
+                    <span className="font-tc-display text-[56px] font-semibold leading-none tracking-[-0.02em] tabular-nums sm:text-[60px]">
+                      {plan.price}
+                    </span>
+                    <span className={cx("text-[16px]", plan.highlight ? "text-[#e4dcff]" : "text-tc-mute")}>{plan.cadence}</span>
+                  </p>
+                  <p className={cx("relative mt-3 text-[14px] leading-6 tabular-nums", plan.highlight ? "text-[#e4dcff]" : "text-tc-mute")}>
+                    {plan.meta}
+                  </p>
+
+                  <ul
+                    className={cx(
+                      "relative mt-8 flex flex-col gap-3.5 border-t pt-7",
+                      plan.highlight ? "border-white/15" : "border-tc-line",
+                    )}
+                  >
+                    {plan.features.map((feature) => (
+                      <li key={feature} className={cx("flex items-start gap-3 text-[15px] leading-6", plan.highlight ? "text-white/90" : "text-tc-ink-2")}>
+                        <Check
+                          className={cx("mt-0.5 size-[18px] shrink-0", plan.highlight ? "text-[#fec84b]" : "text-tc-violet")}
+                          strokeWidth={2.4}
+                          aria-hidden="true"
+                        />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="relative mt-auto pt-9">
+                    <GetStartedModal
+                      triggerLabel={plan.cta}
+                      triggerClassName={cx(
+                        buttonClass(plan.highlight ? "light" : plan.name === "Basic" ? "secondary" : "primary", "lg"),
+                        "w-full",
+                        plan.highlight && "shadow-none",
+                        plan.name === "Basic" && "bg-tc-mist shadow-none hover:bg-tc-line",
+                      )}
+                    />
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mx-auto mt-9 max-w-[70ch] space-y-2 text-center text-[13.5px] leading-6 text-tc-mute">
+              <p className="tabular-nums">
+                Yearly savings: 12 months at $5.99 is $71.88. Pro Yearly is $49.99 on Google Play and $50.00 on the App
+                Store, about 30% less. US store prices as of October 2026.
+              </p>
+              <p>Reminder delivery depends on your device&apos;s notification permissions and settings.</p>
+            </div>
+          </Container>
+        </section>
+
+        <Section tone="white">
+          <Container>
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+              <h2 className="text-balance font-tc-display text-[clamp(34px,4.4vw,56px)] font-semibold leading-[1.04] tracking-[-0.02em] text-tc-ink">
+                Pro imports your bookings and watches your flights.
+              </h2>
+              <p className="max-w-[50ch] text-pretty text-[17px] leading-8 text-tc-ink-2 sm:text-[18px]">
+                Reminders, documents, expenses, and exports are already free. Pro adds the parts that save the most time:
+                turning booking emails into trips and following flights on the day.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-5 md:grid-cols-3">
+              {reasons.map((reason) => (
+                <Card key={reason.title} as="article" bloom={reason.bloom} className="h-full">
+                  <div className="p-6 sm:p-8">
+                    <IconTile icon={reason.icon} tone={reason.tile} />
+                    <h3 className="mt-10 font-tc-display text-[24px] font-semibold leading-[1.15] tracking-[-0.015em] text-tc-ink sm:text-[26px]">
+                      {reason.title}
+                    </h3>
+                    <p className="mt-3 text-[15.5px] leading-7 text-tc-mute">{reason.copy}</p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </Container>
+        </Section>
+
+        <Section id="compare" aria-labelledby="compare-heading" tone="canvas" className="scroll-mt-24">
+          <Container size="narrow">
+            <h2
+              id="compare-heading"
+              className="text-center font-tc-display text-[clamp(32px,4vw,50px)] font-semibold leading-[1.05] tracking-[-0.02em] text-tc-ink"
+            >
+              TripCache Basic vs Pro
+            </h2>
+            <p className="mx-auto mt-4 max-w-[60ch] text-pretty text-center text-[17px] leading-8 text-tc-ink-2">
+              Pro gates three things: booking-email import, live flight-status alerts, and Live Activity and widgets.
+              Everything else is in Basic, and storage limits are the same on both plans.
+            </p>
+            <PlanTable
+              rows={comparisonRows}
+              caption="Features included in TripCache Basic (free) and TripCache Pro, with US prices as of October 2026"
+              basicLabel="Basic (free)"
+              className="mt-10"
+            />
+          </Container>
+        </Section>
+
+        <Section id="faq" aria-labelledby="pricing-faq-heading" tone="white" className="scroll-mt-24">
+          <Container>
+            <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+              <div>
+                <h2
+                  id="pricing-faq-heading"
+                  className="text-balance font-tc-display text-[clamp(30px,3.6vw,46px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink"
+                >
+                  TripCache pricing questions
+                </h2>
+                <p className="mt-5 max-w-[46ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
+                  Not sure whether Pro fits your travel workflow? Ask about email import, live flight alerts, or moving
+                  your routine from TripCase.
+                </p>
+                <div className="mt-8 flex flex-col gap-3 min-[480px]:flex-row">
+                  <Link href="mailto:support@trip-cache.com?subject=TripCache%20pricing%20question" className={buttonClass("secondary", "lg")}>
+                    Contact support
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                  <GetStartedModal triggerLabel="Download" triggerClassName={buttonClass("primary", "lg")} />
+                </div>
+                <div className="mt-10 flex items-start gap-3 rounded-[16px] bg-tc-mist p-5 text-[14px] leading-6 text-tc-ink-2">
+                  <ShieldCheck className="mt-0.5 size-5 shrink-0 text-tc-violet" aria-hidden="true" />
+                  <p>Review the Privacy Policy and the current App Store or Google Play disclosures before uploading sensitive travel documents.</p>
+                </div>
+              </div>
+              <FaqList faqs={pricingFaqs} />
+            </div>
+          </Container>
+        </Section>
+
+        <CtaBand placement="pricing_cta_band" />
+      </SitePage>
       <Footer />
-    </main>
+    </>
   )
 }

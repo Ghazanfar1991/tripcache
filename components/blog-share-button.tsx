@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Share2, Check, AlertCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 interface BlogShareButtonProps {
@@ -44,34 +43,32 @@ export function BlogShareButton({ url, title }: BlogShareButtonProps) {
   }
 
   const iconClass = cn(
-    "me-2 h-4 w-4 transition-colors duration-150",
-    status === "success" ? "text-emerald-600" : status === "error" ? "text-rose-600" : "text-[#444444]",
+    "size-4 shrink-0 transition-colors duration-200",
+    status === "success" ? "text-[#067647]" : status === "error" ? "text-[#b42318]" : "text-tc-violet",
   )
 
   const icon =
     status === "success" ? (
-      <Check className={iconClass} />
+      <Check className={iconClass} aria-hidden="true" />
     ) : status === "error" ? (
-      <AlertCircle className={iconClass} />
+      <AlertCircle className={iconClass} aria-hidden="true" />
     ) : (
-      <Share2 className={iconClass} />
+      <Share2 className={iconClass} aria-hidden="true" />
     )
 
   const label = status === "success" ? "Link copied" : status === "error" ? "Try again" : "Share"
 
   return (
-    <Button
+    <button
       type="button"
-      variant="ghost"
-      size="sm"
       onClick={handleShare}
       className={cn(
-        "min-w-[160px] justify-center rounded-full bg-white/55 text-sm font-semibold text-[#444444] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.09),0_8px_24px_rgba(72,53,33,0.06)] transition-[transform,background-color] duration-150 hover:bg-white/85 active:scale-[0.965]",
+        "tc-press inline-flex h-10 min-w-[132px] items-center justify-center gap-2 rounded-[12px] border px-4 text-[14px] font-semibold transition-colors duration-200",
         status === "success"
-          ? "text-emerald-700 shadow-[inset_0_0_0_1px_rgba(4,120,87,0.35)]"
+          ? "border-[#b7e8cf] bg-[#e8f8f0] text-[#067647]"
           : status === "error"
-            ? "text-rose-700 shadow-[inset_0_0_0_1px_rgba(190,18,60,0.35)]"
-            : "",
+            ? "border-[#fecdca] bg-[#fef3f2] text-[#b42318]"
+            : "border-tc-line bg-white text-tc-ink-2 hover:border-[#d9d2fb] hover:bg-tc-violet-soft hover:text-tc-violet",
       )}
       aria-label={
         status === "success" ? "Link copied to clipboard" : status === "error" ? "Sharing failed, try again" : "Share this article"
@@ -79,6 +76,6 @@ export function BlogShareButton({ url, title }: BlogShareButtonProps) {
     >
       {icon}
       {label}
-    </Button>
+    </button>
   )
 }

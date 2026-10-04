@@ -1,53 +1,61 @@
 import type { MetadataRoute } from "next"
 import { getBlogSummaries } from "@/lib/blog"
 import { seoLandingPages } from "@/lib/seo-page-data"
+import { SITE_URL } from "@/lib/seo-metadata"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://trip-cache.com"
+  const baseUrl = SITE_URL
+  const blogPosts = getBlogSummaries()
   const changed = (date: string) => new Date(`${date}T00:00:00Z`)
-  const latestBlogUpdate = getBlogSummaries().reduce((latest, post) => {
+  const latestBlogUpdate = blogPosts.reduce((latest, post) => {
     const candidate = new Date(post.updatedAt ?? post.date)
     return candidate > latest ? candidate : latest
-  }, changed("2026-08-29"))
+  }, changed("2026-09-11"))
 
-  const blogUrls = getBlogSummaries().map((post) => ({
+  const blogUrls = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt ?? post.date),
+    images: [new URL(post.image, baseUrl).href],
   }))
+
+  // 2026-10-05: the landing redesign rebuilt the home, pricing, features, about, alternatives and tools pages
+  // (and the feature/alternative landing template); keep these dates in step with real changes only.
+  const redesigned = changed("2026-10-05")
 
   const seoUrls = seoLandingPages.map((page) => ({
     url: `${baseUrl}${page.path}`,
-    lastModified: changed("2026-08-29"),
+    lastModified: redesigned,
+    images: [new URL(page.image, baseUrl).href],
   }))
 
   return [
     {
       url: baseUrl,
-      lastModified: changed("2026-08-29"),
+      lastModified: redesigned,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: changed("2026-08-29"),
+      lastModified: redesigned,
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: changed("2026-08-29"),
+      lastModified: redesigned,
     },
     {
       url: `${baseUrl}/features`,
-      lastModified: changed("2026-08-29"),
+      lastModified: redesigned,
     },
     {
       url: `${baseUrl}/alternatives`,
-      lastModified: changed("2026-08-29"),
+      lastModified: redesigned,
     },
     {
       url: `${baseUrl}/tools`,
-      lastModified: changed("2026-10-05"),
+      lastModified: redesigned,
     },
     {
       url: `${baseUrl}/tools/hotel-cancellation-deadline-calculator`,
-      lastModified: changed("2026-10-05"),
+      lastModified: redesigned,
     },
     ...[
       "/tools/flight-arrival-time-calculator",
@@ -56,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/tools/travel-checklist",
     ].map((path) => ({
       url: `${baseUrl}${path}`,
-      lastModified: changed("2026-10-05"),
+      lastModified: redesigned,
     })),
     {
       url: `${baseUrl}/privacy`,
