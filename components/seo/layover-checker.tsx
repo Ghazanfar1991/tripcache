@@ -2,8 +2,8 @@
 
 import { CalendarPlus, Check, Copy, DoorOpen, Info, MoonStar, Plane, PlaneLanding, PlaneTakeoff, TicketsPlane } from "lucide-react"
 import { useEffect, useId, useRef, useState, type ReactNode } from "react"
-import { DepartureBoard, type BoardTime } from "@/components/seo/tools-departure-board"
-import { cx } from "@/components/seo/tool-ui"
+import { DepartureBoard, type BoardTime } from "@/components/site/tools-departure-board"
+import { cx } from "@/components/site/kit"
 import { zoneAbbreviation, type Place } from "@/lib/flight-time"
 import {
   addDays,
@@ -78,7 +78,7 @@ function AirportField({ label, value, onChange }: { label: string; value: Place;
         {label}
       </label>
       <div className="relative">
-        <Plane className="pointer-events-none absolute left-3.5 top-[50%] size-4 -translate-y-1/2 text-tc-violet" aria-hidden="true" />
+        <Plane className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-tc-violet" aria-hidden="true" />
         <input
           id={id}
           role="combobox"
@@ -117,7 +117,7 @@ function AirportField({ label, value, onChange }: { label: string; value: Place;
         <span className="font-semibold text-tc-ink-2">{value.iata}</span> · {value.name}
       </p>
       {showing ? (
-        <ul id={listId} role="listbox" className="absolute inset-x-0 top-[78px] z-[30] max-h-72 overflow-auto rounded-[16px] border border-tc-line bg-white p-1.5 shadow-[0_30px_60px_-30px_rgba(45,27,87,0.5)]">
+        <ul id={listId} role="listbox" className="absolute inset-x-0 top-[78px] z-30 max-h-72 overflow-auto rounded-[16px] border border-tc-line bg-white p-1.5 shadow-[0_30px_60px_-30px_rgba(45,27,87,0.5)]">
           {results.length ? (
             results.map((place, index) => (
               <li
@@ -159,7 +159,7 @@ function Choice<T extends string>({
   options,
   onChange,
   hint,
-  columns = "grid-cols-[repeat(2,minmax(0,1fr))]",
+  columns = "grid-cols-2",
 }: {
   legend: ReactNode
   name: string
@@ -172,17 +172,17 @@ function Choice<T extends string>({
   return (
     <fieldset className="min-w-0">
       <legend className={LABEL}>{legend}</legend>
-      <div className={cx("grid gap-[0.25rem] rounded-[14px] border border-tc-line bg-white p-1", columns)}>
+      <div className={cx("grid gap-1 rounded-[14px] border border-tc-line bg-white p-1", columns)}>
         {options.map((option) => (
           <label
             key={option.value}
             className={cx(
-              "tc-press relative flex min-h-10 cursor-pointer items-center justify-center rounded-[0.625rem] px-2.5 py-2 text-center text-[13.5px] font-semibold leading-tight transition-colors duration-200",
+              "tc-press relative flex min-h-10 cursor-pointer items-center justify-center rounded-[10px] px-2.5 py-2 text-center text-[13.5px] font-semibold leading-tight transition-colors duration-200",
               "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-tc-violet",
               value === option.value ? "bg-tc-violet text-white" : "text-tc-ink-2 hover:bg-tc-mist",
             )}
           >
-            <input type="radio" name={name} value={option.value} checked={value === option.value} onChange={() => onChange(option.value)} className="tct-sr-only" />
+            <input type="radio" name={name} value={option.value} checked={value === option.value} onChange={() => onChange(option.value)} className="sr-only" />
             {option.label}
           </label>
         ))}
@@ -279,7 +279,7 @@ export function LayoverChecker({ defaults }: { defaults: LayoverDefaults }) {
               <PlaneLanding className="size-4 text-tc-violet" aria-hidden="true" />
               First flight lands (local)
             </legend>
-            <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <input aria-label="Landing date" type="date" className={cx(FIELD, "tct-field")} value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)} required />
               <input aria-label="Landing time" type="time" className={cx(FIELD, "tct-field")} value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)} required />
             </div>
@@ -289,7 +289,7 @@ export function LayoverChecker({ defaults }: { defaults: LayoverDefaults }) {
               <PlaneTakeoff className="size-4 text-tc-violet" aria-hidden="true" />
               Next flight departs (local)
             </legend>
-            <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <input aria-label="Departure date" type="date" className={cx(FIELD, "tct-field")} value={departureDate} onChange={(event) => setDepartureDate(event.target.value)} required />
               <input aria-label="Departure time" type="time" className={cx(FIELD, "tct-field")} value={departureTime} onChange={(event) => setDepartureTime(event.target.value)} required />
             </div>
@@ -304,7 +304,7 @@ export function LayoverChecker({ defaults }: { defaults: LayoverDefaults }) {
             <button
               type="button"
               onClick={() => setDepartureDate(nextDay)}
-              className="tc-press inline-flex min-h-9 items-center gap-1.5 rounded-[0.625rem] bg-white px-3 text-[13.5px] font-semibold text-tc-violet ring-1 ring-[#f5d58a] hover:bg-tc-violet-soft"
+              className="tc-press inline-flex min-h-9 items-center gap-1.5 rounded-[10px] bg-white px-3 text-[13.5px] font-semibold text-tc-violet ring-1 ring-[#f5d58a] hover:bg-tc-violet-soft"
             >
               <MoonStar className="size-4" aria-hidden="true" />
               Depart the next day
@@ -317,7 +317,7 @@ export function LayoverChecker({ defaults }: { defaults: LayoverDefaults }) {
             legend="Connection type"
             name="connection-type"
             value={type}
-            columns="grid-cols-[repeat(2,minmax(0,1fr))] sm:grid-cols-4"
+            columns="grid-cols-2 sm:grid-cols-4"
             options={CONNECTION_TYPES.map((item) => ({ value: item.value, label: item.short }))}
             onChange={(next) => {
               setType(next)
@@ -400,13 +400,13 @@ export function LayoverChecker({ defaults }: { defaults: LayoverDefaults }) {
                 {VERDICTS[result.verdict].label}
               </span>
               {result.overnight ? (
-                <span className="inline-flex items-center gap-[0.25rem] rounded-full bg-tc-mist px-2.5 py-1 text-[12.5px] font-semibold text-tc-ink-2">
+                <span className="inline-flex items-center gap-1 rounded-full bg-tc-mist px-2.5 py-1 text-[12.5px] font-semibold text-tc-ink-2">
                   <MoonStar className="size-3.5" aria-hidden="true" />
                   Overnight
                 </span>
               ) : null}
             </div>
-            <p className="mt-1.5 text-[0.9375rem] leading-6 text-tc-ink-2">
+            <p className="mt-1.5 text-[15px] leading-6 text-tc-ink-2">
               {VERDICTS[result.verdict].text}.{" "}
               {result.have >= result.need
                 ? `About ${formatSpan(result.have - result.need)} to spare over the estimated ${formatSpan(result.need)} needed.`
@@ -475,7 +475,7 @@ export function LayoverChecker({ defaults }: { defaults: LayoverDefaults }) {
             </p>
           </div>
         ) : (
-          <p className="rounded-[20px] border border-dashed border-tc-line bg-white px-5 py-4 text-[0.9375rem] text-tc-mute">
+          <p className="rounded-[20px] border border-dashed border-tc-line bg-white px-5 py-4 text-[15px] text-tc-mute">
             {error === "before"
               ? "The next flight’s departure is earlier than the landing time. Check the dates: overnight connections depart the next day."
               : "Add both flights’ dates and local times to check the connection."}
@@ -541,7 +541,7 @@ function Breakdown({
         <span className={cx("block h-full rounded-full", grow)} style={{ width: pct(have), backgroundColor: solid }} />
       </div>
 
-      <ol className="mt-5 grid gap-x-5 gap-y-[0.625rem] sm:grid-cols-2">
+      <ol className="mt-5 grid gap-x-5 gap-y-2.5 sm:grid-cols-2">
         {segments.map((segment, index) => (
           <li key={segment.key} className="flex gap-2.5 text-[13.5px] leading-5">
             <span className="mt-1 size-2.5 shrink-0 rounded-full" style={{ backgroundColor: SEGMENT_COLORS[index % SEGMENT_COLORS.length] }} aria-hidden="true" />

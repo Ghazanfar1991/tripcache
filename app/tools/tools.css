@@ -1,30 +1,7 @@
 /*
- * Imported only by the free travel tool pages (flight arrival, jet lag, layover, travel checklist).
- * Plain CSS, no Tailwind build: every class and keyframe here is namespaced `tct-` / `tc-press`,
- * names nothing else on the site uses, so these rules can't restyle other pages even after a
- * client-side navigation keeps this stylesheet loaded.
+ * Tools routes only. The departure-board pieces of the home page's cancellation countdown
+ * (app/home.css is home-only), namespaced `tct-` so the two never fight when both are loaded.
  */
-
-/* Visually hidden but read by screen readers (the radio and checkbox inputs behind the styled choices). */
-.tct-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Buttons sink slightly on press. */
-.tc-press {
-  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-.tc-press:active {
-  transform: scale(0.97);
-}
 
 .tct-surface {
   background:
@@ -187,9 +164,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tc-press {
-    transition: none;
-  }
   .tct-flap-char {
     animation: none !important;
   }

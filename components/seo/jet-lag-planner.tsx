@@ -3,8 +3,8 @@
 import { ArrowLeftRight, CalendarPlus, Check, Compass, Copy, Info, MoonStar, Plane, PlaneLanding, Sparkles, TimerReset } from "lucide-react"
 import { useCallback, useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react"
 import { JetLagTimeline, Legend } from "@/components/seo/jet-lag-timeline"
-import { DepartureBoard, type BoardRow, type BoardTime } from "@/components/seo/tools-departure-board"
-import { cx } from "@/components/seo/tool-ui"
+import { DepartureBoard, type BoardRow, type BoardTime } from "@/components/site/tools-departure-board"
+import { cx } from "@/components/site/kit"
 import { estimateMinutes, formatDuration, formatIn, greatCircleKm, zoneAbbreviation, type Place } from "@/lib/flight-time"
 import { formatShift, planIcs, planJetLag, planText, sleepLengthMinutes, summaryLine, type JetLagPlan } from "@/lib/jet-lag"
 
@@ -59,7 +59,7 @@ function AirportField({ label, value, onChange, arriving = false }: { label: str
         {label}
       </label>
       <div className="relative">
-        <Plane className={cx("pointer-events-none absolute left-3.5 top-[50%] size-4 -translate-y-1/2 text-tc-violet", arriving && "rotate-90")} aria-hidden="true" />
+        <Plane className={cx("pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-tc-violet", arriving && "rotate-90")} aria-hidden="true" />
         <input
           id={id}
           role="combobox"
@@ -98,7 +98,7 @@ function AirportField({ label, value, onChange, arriving = false }: { label: str
         <span className="font-semibold text-tc-ink-2">{value.iata}</span> · {value.name}
       </p>
       {showing ? (
-        <ul id={listId} role="listbox" className="absolute inset-x-0 top-[78px] z-[30] max-h-72 overflow-auto rounded-[16px] border border-tc-line bg-white p-1.5 shadow-[0_30px_60px_-30px_rgba(45,27,87,0.5)]">
+        <ul id={listId} role="listbox" className="absolute inset-x-0 top-[78px] z-30 max-h-72 overflow-auto rounded-[16px] border border-tc-line bg-white p-1.5 shadow-[0_30px_60px_-30px_rgba(45,27,87,0.5)]">
           {results.length ? (
             results.map((place, index) => (
               <li
@@ -219,7 +219,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
             <AirportField label="To (destination airport)" value={to} onChange={setTo} arriving />
           </div>
 
-          <div className="mt-5 grid grid-cols-[repeat(2,minmax(0,1fr))] gap-4">
+          <div className="mt-5 grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="jetlag-date" className={LABEL}>
                 Departure date
@@ -236,7 +236,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
 
           <fieldset className="mt-5">
             <legend className={LABEL}>Flight duration</legend>
-            <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <div className="relative">
                 <input
                   aria-label="Flight duration hours"
@@ -248,7 +248,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
                   value={hours}
                   onChange={(event) => setHours(event.target.value)}
                 />
-                <span className="pointer-events-none absolute right-3.5 top-[50%] -translate-y-1/2 text-[13.5px] text-tc-mute">hours</span>
+                <span className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-[13.5px] text-tc-mute">hours</span>
               </div>
               <div className="relative">
                 <input
@@ -262,7 +262,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
                   value={minutes}
                   onChange={(event) => setMinutes(event.target.value)}
                 />
-                <span className="pointer-events-none absolute right-3.5 top-[50%] -translate-y-1/2 text-[13.5px] text-tc-mute">minutes</span>
+                <span className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-[13.5px] text-tc-mute">minutes</span>
               </div>
             </div>
             <button
@@ -271,7 +271,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
                 setHours(String(Math.floor(estimate / 60)))
                 setMinutes(String(estimate % 60))
               }}
-              className="tc-press mt-3 inline-flex min-h-10 items-center gap-2 rounded-[0.625rem] px-2 text-[14px] font-semibold text-tc-violet hover:bg-tc-violet-soft"
+              className="tc-press mt-3 inline-flex min-h-10 items-center gap-2 rounded-[10px] px-2 text-[14px] font-semibold text-tc-violet hover:bg-tc-violet-soft"
             >
               <Sparkles className="size-4" aria-hidden="true" />
               Don’t know it? Use an estimate: {formatDuration(estimate)}
@@ -279,8 +279,8 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
           </fieldset>
 
           <fieldset className="mt-5 border-t border-tc-line pt-5">
-            <legend className="tct-sr-only">Your usual sleep at home</legend>
-            <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-4">
+            <legend className="sr-only">Your usual sleep at home</legend>
+            <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="jetlag-bed" className={LABEL}>
                   Usual bedtime
@@ -384,7 +384,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
               </p>
             </div>
           ) : (
-            <p className="rounded-[20px] border border-dashed border-tc-line bg-white px-5 py-4 text-[0.9375rem] text-tc-mute">
+            <p className="rounded-[20px] border border-dashed border-tc-line bg-white px-5 py-4 text-[15px] text-tc-mute">
               {sleepInvalid ? "Check your usual bedtime and wake time to build the plan." : "Add a departure date, time and flight duration to build your jet lag plan."}
             </p>
           )}
@@ -393,7 +393,7 @@ export function JetLagPlanner({ defaults }: { defaults: JetLagDefaults }) {
 
       {plan ? (
         <section aria-labelledby="jetlag-plan-heading" className="rounded-[26px] border border-tc-line bg-tc-mist/60 p-3 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-44px_rgba(45,27,87,0.45)] sm:bg-white sm:p-8 lg:p-10">
-          <div className="flex flex-col gap-5 border-b-[1px] border-tc-line pb-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col gap-5 border-b border-tc-line pb-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <h2 id="jetlag-plan-heading" className="text-balance font-tc-display text-[clamp(26px,3vw,38px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink">
                 Your day-by-day jet lag plan
@@ -421,7 +421,7 @@ function Fact({ icon, label, children }: { icon: ReactNode; label: string; child
       </span>
       <div>
         <dt className="text-[12.5px] font-semibold text-tc-mute">{label}</dt>
-        <dd className="mt-0.5 text-[0.9375rem] leading-6 text-tc-ink">{children}</dd>
+        <dd className="mt-0.5 text-[15px] leading-6 text-tc-ink">{children}</dd>
       </div>
     </div>
   )

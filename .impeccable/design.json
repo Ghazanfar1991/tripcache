@@ -1,0 +1,869 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T14:19:17.917835+00:00",
+  "title": "Design System: TripCache",
+  "extensions": {
+    "colorMeta": {
+      "violet": {
+        "role": "primary",
+        "displayName": "TripCache Violet",
+        "canonical": "#612bd3",
+        "oklch": "oklch(47.5% 0.233 288.7)",
+        "tonalRamp": [
+          "oklch(15% 0.200 288.7)",
+          "oklch(26% 0.200 288.7)",
+          "oklch(38% 0.200 288.7)",
+          "oklch(50% 0.200 288.7)",
+          "oklch(62% 0.200 288.7)",
+          "oklch(74% 0.200 288.7)",
+          "oklch(86% 0.200 288.7)",
+          "oklch(95% 0.200 288.7)"
+        ]
+      },
+      "violet-mid": {
+        "role": "primary",
+        "displayName": "Violet Field Mid",
+        "canonical": "#4a1eac",
+        "oklch": "oklch(40.1% 0.203 287.3)",
+        "tonalRamp": [
+          "oklch(15% 0.200 287.3)",
+          "oklch(26% 0.200 287.3)",
+          "oklch(38% 0.200 287.3)",
+          "oklch(50% 0.200 287.3)",
+          "oklch(62% 0.200 287.3)",
+          "oklch(74% 0.200 287.3)",
+          "oklch(86% 0.200 287.3)",
+          "oklch(95% 0.200 287.3)"
+        ]
+      },
+      "violet-night": {
+        "role": "primary",
+        "displayName": "Violet Field Night",
+        "canonical": "#2a1170",
+        "oklch": "oklch(29.2% 0.148 284.6)",
+        "tonalRamp": [
+          "oklch(15% 0.148 284.6)",
+          "oklch(26% 0.148 284.6)",
+          "oklch(38% 0.148 284.6)",
+          "oklch(50% 0.148 284.6)",
+          "oklch(62% 0.148 284.6)",
+          "oklch(74% 0.148 284.6)",
+          "oklch(86% 0.148 284.6)",
+          "oklch(95% 0.148 284.6)"
+        ]
+      },
+      "violet-deep": {
+        "role": "primary",
+        "displayName": "Violet Deep",
+        "canonical": "#3f1a9a",
+        "oklch": "oklch(36.8% 0.187 285.9)",
+        "tonalRamp": [
+          "oklch(15% 0.187 285.9)",
+          "oklch(26% 0.187 285.9)",
+          "oklch(38% 0.187 285.9)",
+          "oklch(50% 0.187 285.9)",
+          "oklch(62% 0.187 285.9)",
+          "oklch(74% 0.187 285.9)",
+          "oklch(86% 0.187 285.9)",
+          "oklch(95% 0.187 285.9)"
+        ]
+      },
+      "violet-focus": {
+        "role": "primary",
+        "displayName": "Focus Violet",
+        "canonical": "#4d20af",
+        "oklch": "oklch(40.9% 0.204 287.9)",
+        "tonalRamp": [
+          "oklch(15% 0.200 287.9)",
+          "oklch(26% 0.200 287.9)",
+          "oklch(38% 0.200 287.9)",
+          "oklch(50% 0.200 287.9)",
+          "oklch(62% 0.200 287.9)",
+          "oklch(74% 0.200 287.9)",
+          "oklch(86% 0.200 287.9)",
+          "oklch(95% 0.200 287.9)"
+        ]
+      },
+      "violet-soft": {
+        "role": "primary",
+        "displayName": "Violet Soft",
+        "canonical": "#ebe8ff",
+        "oklch": "oklch(94.0% 0.031 291.8)",
+        "tonalRamp": [
+          "oklch(15% 0.031 291.8)",
+          "oklch(26% 0.031 291.8)",
+          "oklch(38% 0.031 291.8)",
+          "oklch(50% 0.031 291.8)",
+          "oklch(62% 0.031 291.8)",
+          "oklch(74% 0.031 291.8)",
+          "oklch(86% 0.031 291.8)",
+          "oklch(95% 0.031 291.8)"
+        ]
+      },
+      "violet-mist-text": {
+        "role": "primary",
+        "displayName": "Violet Mist Text",
+        "canonical": "#e4dcff",
+        "oklch": "oklch(91.2% 0.048 295.9)",
+        "tonalRamp": [
+          "oklch(15% 0.048 295.9)",
+          "oklch(26% 0.048 295.9)",
+          "oklch(38% 0.048 295.9)",
+          "oklch(50% 0.048 295.9)",
+          "oklch(62% 0.048 295.9)",
+          "oklch(74% 0.048 295.9)",
+          "oklch(86% 0.048 295.9)",
+          "oklch(95% 0.048 295.9)"
+        ]
+      },
+      "magenta": {
+        "role": "secondary",
+        "displayName": "App Magenta",
+        "canonical": "#d82d7e",
+        "oklch": "oklch(59.3% 0.213 357.8)",
+        "tonalRamp": [
+          "oklch(15% 0.200 357.8)",
+          "oklch(26% 0.200 357.8)",
+          "oklch(38% 0.200 357.8)",
+          "oklch(50% 0.200 357.8)",
+          "oklch(62% 0.200 357.8)",
+          "oklch(74% 0.200 357.8)",
+          "oklch(86% 0.200 357.8)",
+          "oklch(95% 0.200 357.8)"
+        ]
+      },
+      "bloom-violet": {
+        "role": "secondary",
+        "displayName": "Bloom Violet",
+        "canonical": "#8b5cf6",
+        "oklch": "oklch(60.6% 0.219 292.7)",
+        "tonalRamp": [
+          "oklch(15% 0.200 292.7)",
+          "oklch(26% 0.200 292.7)",
+          "oklch(38% 0.200 292.7)",
+          "oklch(50% 0.200 292.7)",
+          "oklch(62% 0.200 292.7)",
+          "oklch(74% 0.200 292.7)",
+          "oklch(86% 0.200 292.7)",
+          "oklch(95% 0.200 292.7)"
+        ]
+      },
+      "bloom-pink": {
+        "role": "secondary",
+        "displayName": "Bloom Pink",
+        "canonical": "#ec4899",
+        "oklch": "oklch(65.6% 0.212 354.3)",
+        "tonalRamp": [
+          "oklch(15% 0.200 354.3)",
+          "oklch(26% 0.200 354.3)",
+          "oklch(38% 0.200 354.3)",
+          "oklch(50% 0.200 354.3)",
+          "oklch(62% 0.200 354.3)",
+          "oklch(74% 0.200 354.3)",
+          "oklch(86% 0.200 354.3)",
+          "oklch(95% 0.200 354.3)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0e0e0e",
+        "oklch": "oklch(16.4% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(38% 0.000 89.9)",
+          "oklch(50% 0.000 89.9)",
+          "oklch(62% 0.000 89.9)",
+          "oklch(74% 0.000 89.9)",
+          "oklch(86% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#3a3d42",
+        "oklch": "oklch(35.9% 0.010 260.7)",
+        "tonalRamp": [
+          "oklch(15% 0.010 260.7)",
+          "oklch(26% 0.010 260.7)",
+          "oklch(38% 0.010 260.7)",
+          "oklch(50% 0.010 260.7)",
+          "oklch(62% 0.010 260.7)",
+          "oklch(74% 0.010 260.7)",
+          "oklch(86% 0.010 260.7)",
+          "oklch(95% 0.010 260.7)"
+        ]
+      },
+      "mute": {
+        "role": "neutral",
+        "displayName": "Mute",
+        "canonical": "#686d72",
+        "oklch": "oklch(53.2% 0.010 248.0)",
+        "tonalRamp": [
+          "oklch(15% 0.010 248.0)",
+          "oklch(26% 0.010 248.0)",
+          "oklch(38% 0.010 248.0)",
+          "oklch(50% 0.010 248.0)",
+          "oklch(62% 0.010 248.0)",
+          "oklch(74% 0.010 248.0)",
+          "oklch(86% 0.010 248.0)",
+          "oklch(95% 0.010 248.0)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e7e9eb",
+        "oklch": "oklch(93.3% 0.003 247.9)",
+        "tonalRamp": [
+          "oklch(15% 0.003 247.9)",
+          "oklch(26% 0.003 247.9)",
+          "oklch(38% 0.003 247.9)",
+          "oklch(50% 0.003 247.9)",
+          "oklch(62% 0.003 247.9)",
+          "oklch(74% 0.003 247.9)",
+          "oklch(86% 0.003 247.9)",
+          "oklch(95% 0.003 247.9)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Canvas",
+        "canonical": "#f0f2f4",
+        "oklch": "oklch(96.0% 0.003 247.9)",
+        "tonalRamp": [
+          "oklch(15% 0.003 247.9)",
+          "oklch(26% 0.003 247.9)",
+          "oklch(38% 0.003 247.9)",
+          "oklch(50% 0.003 247.9)",
+          "oklch(62% 0.003 247.9)",
+          "oklch(74% 0.003 247.9)",
+          "oklch(86% 0.003 247.9)",
+          "oklch(95% 0.003 247.9)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#f5f7f9",
+        "oklch": "oklch(97.5% 0.003 247.9)",
+        "tonalRamp": [
+          "oklch(15% 0.003 247.9)",
+          "oklch(26% 0.003 247.9)",
+          "oklch(38% 0.003 247.9)",
+          "oklch(50% 0.003 247.9)",
+          "oklch(62% 0.003 247.9)",
+          "oklch(74% 0.003 247.9)",
+          "oklch(86% 0.003 247.9)",
+          "oklch(95% 0.003 247.9)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(38% 0.000 89.9)",
+          "oklch(50% 0.000 89.9)",
+          "oklch(62% 0.000 89.9)",
+          "oklch(74% 0.000 89.9)",
+          "oklch(86% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "hero-wash": {
+        "role": "neutral",
+        "displayName": "Hero Wash",
+        "canonical": "#f7f5ff",
+        "oklch": "oklch(97.5% 0.013 295.3)",
+        "tonalRamp": [
+          "oklch(15% 0.013 295.3)",
+          "oklch(26% 0.013 295.3)",
+          "oklch(38% 0.013 295.3)",
+          "oklch(50% 0.013 295.3)",
+          "oklch(62% 0.013 295.3)",
+          "oklch(74% 0.013 295.3)",
+          "oklch(86% 0.013 295.3)",
+          "oklch(95% 0.013 295.3)"
+        ]
+      },
+      "cat-flight": {
+        "role": "tertiary",
+        "displayName": "Flight Indigo",
+        "canonical": "#6366f1",
+        "oklch": "oklch(58.5% 0.204 277.1)",
+        "tonalRamp": [
+          "oklch(15% 0.200 277.1)",
+          "oklch(26% 0.200 277.1)",
+          "oklch(38% 0.200 277.1)",
+          "oklch(50% 0.200 277.1)",
+          "oklch(62% 0.200 277.1)",
+          "oklch(74% 0.200 277.1)",
+          "oklch(86% 0.200 277.1)",
+          "oklch(95% 0.200 277.1)"
+        ]
+      },
+      "cat-flight-ink": {
+        "role": "tertiary",
+        "displayName": "Flight Indigo Ink",
+        "canonical": "#4f46e5",
+        "oklch": "oklch(51.1% 0.230 277.0)",
+        "tonalRamp": [
+          "oklch(15% 0.200 277.0)",
+          "oklch(26% 0.200 277.0)",
+          "oklch(38% 0.200 277.0)",
+          "oklch(50% 0.200 277.0)",
+          "oklch(62% 0.200 277.0)",
+          "oklch(74% 0.200 277.0)",
+          "oklch(86% 0.200 277.0)",
+          "oklch(95% 0.200 277.0)"
+        ]
+      },
+      "cat-flight-soft": {
+        "role": "tertiary",
+        "displayName": "Flight Indigo Soft",
+        "canonical": "#eef2ff",
+        "oklch": "oklch(96.2% 0.018 272.3)",
+        "tonalRamp": [
+          "oklch(15% 0.018 272.3)",
+          "oklch(26% 0.018 272.3)",
+          "oklch(38% 0.018 272.3)",
+          "oklch(50% 0.018 272.3)",
+          "oklch(62% 0.018 272.3)",
+          "oklch(74% 0.018 272.3)",
+          "oklch(86% 0.018 272.3)",
+          "oklch(95% 0.018 272.3)"
+        ]
+      },
+      "cat-hotel": {
+        "role": "tertiary",
+        "displayName": "Hotel Green",
+        "canonical": "#12b76a",
+        "oklch": "oklch(68.6% 0.167 154.9)",
+        "tonalRamp": [
+          "oklch(15% 0.167 154.9)",
+          "oklch(26% 0.167 154.9)",
+          "oklch(38% 0.167 154.9)",
+          "oklch(50% 0.167 154.9)",
+          "oklch(62% 0.167 154.9)",
+          "oklch(74% 0.167 154.9)",
+          "oklch(86% 0.167 154.9)",
+          "oklch(95% 0.167 154.9)"
+        ]
+      },
+      "cat-hotel-ink": {
+        "role": "tertiary",
+        "displayName": "Hotel Green Ink",
+        "canonical": "#067647",
+        "oklch": "oklch(49.9% 0.117 157.1)",
+        "tonalRamp": [
+          "oklch(15% 0.117 157.1)",
+          "oklch(26% 0.117 157.1)",
+          "oklch(38% 0.117 157.1)",
+          "oklch(50% 0.117 157.1)",
+          "oklch(62% 0.117 157.1)",
+          "oklch(74% 0.117 157.1)",
+          "oklch(86% 0.117 157.1)",
+          "oklch(95% 0.117 157.1)"
+        ]
+      },
+      "cat-hotel-soft": {
+        "role": "tertiary",
+        "displayName": "Hotel Green Soft",
+        "canonical": "#e8f8f0",
+        "oklch": "oklch(96.5% 0.020 164.6)",
+        "tonalRamp": [
+          "oklch(15% 0.020 164.6)",
+          "oklch(26% 0.020 164.6)",
+          "oklch(38% 0.020 164.6)",
+          "oklch(50% 0.020 164.6)",
+          "oklch(62% 0.020 164.6)",
+          "oklch(74% 0.020 164.6)",
+          "oklch(86% 0.020 164.6)",
+          "oklch(95% 0.020 164.6)"
+        ]
+      },
+      "cat-car": {
+        "role": "tertiary",
+        "displayName": "Car Amber",
+        "canonical": "#f59e0b",
+        "oklch": "oklch(76.9% 0.165 70.1)",
+        "tonalRamp": [
+          "oklch(15% 0.165 70.1)",
+          "oklch(26% 0.165 70.1)",
+          "oklch(38% 0.165 70.1)",
+          "oklch(50% 0.165 70.1)",
+          "oklch(62% 0.165 70.1)",
+          "oklch(74% 0.165 70.1)",
+          "oklch(86% 0.165 70.1)",
+          "oklch(95% 0.165 70.1)"
+        ]
+      },
+      "cat-car-ink": {
+        "role": "tertiary",
+        "displayName": "Car Amber Ink",
+        "canonical": "#b54708",
+        "oklch": "oklch(53.9% 0.156 43.0)",
+        "tonalRamp": [
+          "oklch(15% 0.156 43.0)",
+          "oklch(26% 0.156 43.0)",
+          "oklch(38% 0.156 43.0)",
+          "oklch(50% 0.156 43.0)",
+          "oklch(62% 0.156 43.0)",
+          "oklch(74% 0.156 43.0)",
+          "oklch(86% 0.156 43.0)",
+          "oklch(95% 0.156 43.0)"
+        ]
+      },
+      "cat-car-soft": {
+        "role": "tertiary",
+        "displayName": "Car Amber Soft",
+        "canonical": "#fff5d6",
+        "oklch": "oklch(97.0% 0.042 92.2)",
+        "tonalRamp": [
+          "oklch(15% 0.042 92.2)",
+          "oklch(26% 0.042 92.2)",
+          "oklch(38% 0.042 92.2)",
+          "oklch(50% 0.042 92.2)",
+          "oklch(62% 0.042 92.2)",
+          "oklch(74% 0.042 92.2)",
+          "oklch(86% 0.042 92.2)",
+          "oklch(95% 0.042 92.2)"
+        ]
+      },
+      "cat-activity": {
+        "role": "tertiary",
+        "displayName": "Activity Pink",
+        "canonical": "#d82d7e",
+        "oklch": "oklch(59.3% 0.213 357.8)",
+        "tonalRamp": [
+          "oklch(15% 0.200 357.8)",
+          "oklch(26% 0.200 357.8)",
+          "oklch(38% 0.200 357.8)",
+          "oklch(50% 0.200 357.8)",
+          "oklch(62% 0.200 357.8)",
+          "oklch(74% 0.200 357.8)",
+          "oklch(86% 0.200 357.8)",
+          "oklch(95% 0.200 357.8)"
+        ]
+      },
+      "cat-activity-ink": {
+        "role": "tertiary",
+        "displayName": "Activity Pink Ink",
+        "canonical": "#c12570",
+        "oklch": "oklch(54.3% 0.198 357.6)",
+        "tonalRamp": [
+          "oklch(15% 0.198 357.6)",
+          "oklch(26% 0.198 357.6)",
+          "oklch(38% 0.198 357.6)",
+          "oklch(50% 0.198 357.6)",
+          "oklch(62% 0.198 357.6)",
+          "oklch(74% 0.198 357.6)",
+          "oklch(86% 0.198 357.6)",
+          "oklch(95% 0.198 357.6)"
+        ]
+      },
+      "cat-activity-soft": {
+        "role": "tertiary",
+        "displayName": "Activity Pink Soft",
+        "canonical": "#fce7f2",
+        "oklch": "oklch(94.8% 0.027 344.6)",
+        "tonalRamp": [
+          "oklch(15% 0.027 344.6)",
+          "oklch(26% 0.027 344.6)",
+          "oklch(38% 0.027 344.6)",
+          "oklch(50% 0.027 344.6)",
+          "oklch(62% 0.027 344.6)",
+          "oklch(74% 0.027 344.6)",
+          "oklch(86% 0.027 344.6)",
+          "oklch(95% 0.027 344.6)"
+        ]
+      },
+      "gold": {
+        "role": "tertiary",
+        "displayName": "Reminder Gold",
+        "canonical": "#fec84b",
+        "oklch": "oklch(85.9% 0.150 84.7)",
+        "tonalRamp": [
+          "oklch(15% 0.150 84.7)",
+          "oklch(26% 0.150 84.7)",
+          "oklch(38% 0.150 84.7)",
+          "oklch(50% 0.150 84.7)",
+          "oklch(62% 0.150 84.7)",
+          "oklch(74% 0.150 84.7)",
+          "oklch(86% 0.150 84.7)",
+          "oklch(95% 0.150 84.7)"
+        ]
+      },
+      "live-green": {
+        "role": "tertiary",
+        "displayName": "Live Activity Green",
+        "canonical": "#00ff9e",
+        "oklch": "oklch(88.0% 0.209 157.1)",
+        "tonalRamp": [
+          "oklch(15% 0.200 157.1)",
+          "oklch(26% 0.200 157.1)",
+          "oklch(38% 0.200 157.1)",
+          "oklch(50% 0.200 157.1)",
+          "oklch(62% 0.200 157.1)",
+          "oklch(74% 0.200 157.1)",
+          "oklch(86% 0.200 157.1)",
+          "oklch(95% 0.200 157.1)"
+        ]
+      },
+      "live-gate": {
+        "role": "tertiary",
+        "displayName": "Live Activity Gate",
+        "canonical": "#ffc933",
+        "oklch": "oklch(86.1% 0.163 87.1)",
+        "tonalRamp": [
+          "oklch(15% 0.163 87.1)",
+          "oklch(26% 0.163 87.1)",
+          "oklch(38% 0.163 87.1)",
+          "oklch(50% 0.163 87.1)",
+          "oklch(62% 0.163 87.1)",
+          "oklch(74% 0.163 87.1)",
+          "oklch(86% 0.163 87.1)",
+          "oklch(95% 0.163 87.1)"
+        ]
+      },
+      "live-surface": {
+        "role": "tertiary",
+        "displayName": "Live Activity Surface",
+        "canonical": "#0b0b10",
+        "oklch": "oklch(15.2% 0.011 285.1)",
+        "tonalRamp": [
+          "oklch(15% 0.011 285.1)",
+          "oklch(26% 0.011 285.1)",
+          "oklch(38% 0.011 285.1)",
+          "oklch(50% 0.011 285.1)",
+          "oklch(62% 0.011 285.1)",
+          "oklch(74% 0.011 285.1)",
+          "oklch(86% 0.011 285.1)",
+          "oklch(95% 0.011 285.1)"
+        ]
+      },
+      "board-ink": {
+        "role": "tertiary",
+        "displayName": "Departure Board Ink",
+        "canonical": "#17151f",
+        "oklch": "oklch(20.3% 0.020 293.7)",
+        "tonalRamp": [
+          "oklch(15% 0.020 293.7)",
+          "oklch(26% 0.020 293.7)",
+          "oklch(38% 0.020 293.7)",
+          "oklch(50% 0.020 293.7)",
+          "oklch(62% 0.020 293.7)",
+          "oklch(74% 0.020 293.7)",
+          "oklch(86% 0.020 293.7)",
+          "oklch(95% 0.020 293.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "The single scroll-lit statement on the violet field."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Bloom-card and stage titles."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "FAQ questions, panel titles, footer heads, wordmark."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Plan prices and budget figures, tabular."
+      },
+      "script": {
+        "displayName": "Script",
+        "purpose": "The words \"Trip to\" only."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One short paragraph under a heading, ink-2."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Card copy and FAQ answers, mute."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav, list titles."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Meta lines, timestamps, fine print."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 1px 2px rgba(14,14,14,0.04), 0 30px 60px -40px rgba(45,27,87,0.4)",
+        "purpose": "Bloom cards, stage panels, plan cards."
+      },
+      {
+        "name": "floating-object",
+        "value": "0 18px 34px -18px rgba(45,27,87,0.55)",
+        "purpose": "Forwarded-email cards, toast, connector chips."
+      },
+      {
+        "name": "postcard",
+        "value": "0 50px 90px -40px rgba(45,27,87,0.65), inset 0 1px 0 rgba(255,255,255,0.6)",
+        "purpose": "Hero trip postcard."
+      },
+      {
+        "name": "phone",
+        "value": "drop-shadow(0 34px 40px rgba(45,27,87,0.22)) drop-shadow(0 6px 12px rgba(45,27,87,0.12))",
+        "purpose": "App screenshots in device frames (filter)."
+      },
+      {
+        "name": "violet-glow",
+        "value": "0 8px 18px -8px rgba(97,43,211,0.7)",
+        "purpose": "Primary violet CTA."
+      },
+      {
+        "name": "pro-glow",
+        "value": "0 40px 80px -40px rgba(97,43,211,0.8)",
+        "purpose": "Pro plan card."
+      },
+      {
+        "name": "nav-settled",
+        "value": "0 0 0 1px #e7e9eb, 0 18px 40px -24px rgba(45,27,87,0.35)",
+        "purpose": "Scrolled navigation bar (with white 86% + blur(18px) saturate(1.5))."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The one shared ease: entrances, nav width, panels, FAQ height, press."
+      },
+      {
+        "name": "press",
+        "value": "transform scale(0.97) 160ms ease-out-expo",
+        "purpose": "Every pressable (.tc-press)."
+      },
+      {
+        "name": "rise",
+        "value": "1100ms, translateY(16px) + blur(8px) to none",
+        "purpose": "Hero entrance; content is visible from the start and only settles."
+      },
+      {
+        "name": "reveal",
+        "value": "scroll-linked view() timeline, entry 0%-55%, translateY(56px)",
+        "purpose": "Focal objects only (Kept bento)."
+      },
+      {
+        "name": "drift",
+        "value": "22s / 34s ease-in-out alternate, translate(-40px,30px) scale(1.08)",
+        "purpose": "Bloom pools."
+      },
+      {
+        "name": "float",
+        "value": "6.5-8s ease-in-out, 9px",
+        "purpose": "Hero collage layers, phase-offset."
+      },
+      {
+        "name": "parallax-spring",
+        "value": "stiffness 60, damping 18, mass 0.8",
+        "purpose": "Hero pointer parallax (mouse only)."
+      },
+      {
+        "name": "toggle-spring",
+        "value": "stiffness 420, damping 36",
+        "purpose": "Billing segmented pill."
+      },
+      {
+        "name": "letter-settle",
+        "value": "600ms, 35ms stagger, 0.35em rise + 8px blur",
+        "purpose": "Destination names in Trip to ___."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "stage",
+        "value": "768px"
+      },
+      {
+        "name": "nav",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The violet action; nav Download and in-content CTAs.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 17V3\"/><path d=\"m6 11 6 6 6-6\"/><path d=\"M19 21H5\"/></svg>Download</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:0;border-radius:12px;background:#612bd3;color:#fff;font:600 14.5px/1 Inter,ui-sans-serif,system-ui,sans-serif;box-shadow:0 8px 18px -8px rgba(97,43,211,.7);cursor:pointer;transition:background-color .2s ease,transform 160ms cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn-primary:hover{background:#5520cb}.ds-btn-primary:active{transform:scale(.97)}.ds-btn-primary:focus-visible{outline:2px solid #4d20af;outline-offset:3px;box-shadow:0 0 0 2px #fffdf9}"
+    },
+    {
+      "name": "Button on Violet",
+      "kind": "button",
+      "refersTo": "button-on-violet",
+      "description": "Inverted action on the violet field (Pro card, dark nav).",
+      "html": "<div class=\"ds-violet-field\"><button class=\"ds-btn-on-violet\">Get the app</button></div>",
+      "css": ".ds-violet-field{padding:24px;border-radius:22px;background:linear-gradient(150deg,#612bd3 0%,#4a1eac 60%,#2f137c 100%)}.ds-btn-on-violet{height:48px;padding:0 24px;border:0;border-radius:12px;background:#fff;color:#612bd3;font:600 15px/1 Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color .2s ease,transform 160ms cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn-on-violet:hover{background:#ebe8ff}.ds-btn-on-violet:active{transform:scale(.97)}.ds-btn-on-violet:focus-visible{outline:2px solid #fff;outline-offset:3px;box-shadow:0 0 0 2px #4a1eac}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Secondary action on white cards (\"Download free\").",
+      "html": "<button class=\"ds-btn-quiet\">Download free</button>",
+      "css": ".ds-btn-quiet{height:48px;padding:0 24px;border:1px solid #e7e9eb;border-radius:12px;background:#f5f7f9;color:#0e0e0e;font:600 15px/1 Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color .2s ease,transform 160ms cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn-quiet:hover{background:#e7e9eb}.ds-btn-quiet:active{transform:scale(.97)}.ds-btn-quiet:focus-visible{outline:2px solid #4d20af;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Floating bar, settled state after scroll: white glass, 20px corners, violet active link.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-mark\"><span class=\"ds-nav-icon\"></span>TripCache</span><span class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link is-active\">Features</a><a href=\"#\" class=\"ds-nav-link\">Reminders</a><a href=\"#\" class=\"ds-nav-link\">Pricing</a></span><a href=\"#\" class=\"ds-nav-cta\">Download</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 10px;border-radius:20px;background:rgba(255,255,255,.86);box-shadow:0 0 0 1px #e7e9eb,0 18px 40px -24px rgba(45,27,87,.35);backdrop-filter:blur(18px) saturate(1.5);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#0e0e0e}.ds-nav-mark{display:flex;align-items:center;gap:10px;font:600 20px/1 Fraunces,Georgia,serif;letter-spacing:-.01em}.ds-nav-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#612bd3,#6366f1);box-shadow:0 6px 14px -6px rgba(97,43,211,.6)}.ds-nav-links{display:flex;gap:2px}.ds-nav-link{padding:8px 14px;border-radius:10px;font-size:14.5px;font-weight:500;color:#3a3d42;text-decoration:none;transition:background-color .2s,color .2s}.ds-nav-link:hover{background:#f5f7f9;color:#0e0e0e}.ds-nav-link.is-active{background:#ebe8ff;color:#612bd3}.ds-nav-link:focus-visible,.ds-nav-cta:focus-visible{outline:2px solid #4d20af;outline-offset:3px}.ds-nav-cta{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:12px;background:#612bd3;color:#fff;font-size:14.5px;font-weight:600;text-decoration:none}.ds-nav-cta:hover{background:#5520cb}"
+    },
+    {
+      "name": "Category Chips",
+      "kind": "chip",
+      "refersTo": "chip-category-flight",
+      "description": "Booking chips in the four category tints, plus the reminder chip.",
+      "html": "<div class=\"ds-chips\"><span class=\"ds-chip\" style=\"background:#eef2ff;color:#4f46e5\">Flight</span><span class=\"ds-chip\" style=\"background:#e8f8f0;color:#067647\">Hotel</span><span class=\"ds-chip\" style=\"background:#fff5d6;color:#b54708\">Car</span><span class=\"ds-chip\" style=\"background:#fce7f2;color:#c12570\">Activity</span><span class=\"ds-chip ds-chip-reminder\">&#10003; 7 days before</span></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-chip{display:inline-flex;align-items:center;border-radius:9999px;padding:2px 8px;font-size:11px;font-weight:600}.ds-chip-reminder{padding:6px 12px;font-size:12.5px;background:#fff5d6;color:#b54708}"
+    },
+    {
+      "name": "Bloom Card",
+      "kind": "card",
+      "refersTo": "bloom-card",
+      "description": "Feature card: white, hairline, 30px corners, one clipped bloom in its subject colour.",
+      "html": "<article class=\"ds-bloom-card\"><span class=\"ds-bloom\"></span><h3>Documents behind a PIN.</h3><p>Boarding passes, tickets, visas and passport copies attached to the trip they belong to.</p></article>",
+      "css": ".ds-bloom-card{position:relative;overflow:hidden;max-width:420px;padding:32px;border:1px solid #e7e9eb;border-radius:30px;background:#fff;color:#0e0e0e;box-shadow:0 1px 2px rgba(14,14,14,.04),0 30px 60px -40px rgba(45,27,87,.4)}.ds-bloom{position:absolute;right:-96px;top:-112px;width:320px;height:320px;border-radius:9999px;background:#8b5cf6;opacity:.45;filter:blur(72px);pointer-events:none}.ds-bloom-card h3{position:relative;margin:0;font:600 28px/1.15 Fraunces,Georgia,serif;letter-spacing:-.015em}.ds-bloom-card p{position:relative;margin:10px 0 0;max-width:46ch;font:400 15.5px/1.8 Inter,ui-sans-serif,system-ui,sans-serif;color:#686d72}"
+    },
+    {
+      "name": "Billing Segmented Control",
+      "kind": "input",
+      "refersTo": "segmented-control",
+      "description": "The only control on the page: a white track with a violet active pill.",
+      "html": "<div class=\"ds-seg\" role=\"radiogroup\"><button role=\"radio\" aria-checked=\"false\">Monthly</button><button role=\"radio\" aria-checked=\"true\" class=\"is-on\">Yearly · save 30%</button></div>",
+      "css": ".ds-seg{display:inline-flex;padding:4px;border:1px solid #e7e9eb;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(14,14,14,.05)}.ds-seg button{height:40px;padding:0 20px;border:0;border-radius:10px;background:transparent;color:#686d72;font:600 14px/1 Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color .3s,color .3s}.ds-seg button:hover{color:#0e0e0e}.ds-seg button.is-on{background:#612bd3;color:#fff}.ds-seg button:focus-visible{outline:2px solid #4d20af;outline-offset:3px}"
+    },
+    {
+      "name": "FAQ Disclosure",
+      "kind": "custom",
+      "refersTo": "faq-toggle",
+      "description": "Hairline-divided details row with a violet-soft plus toggle.",
+      "html": "<details class=\"ds-faq\"><summary>Is TripCache free?<span class=\"ds-faq-t\">+</span></summary><p>Yes. Basic supports manual trip entry, itinerary viewing, and core trip organization.</p></details>",
+      "css": ".ds-faq{border-block:1px solid #e7e9eb;max-width:560px}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;list-style:none;cursor:pointer;font:600 21px/1.3 Fraunces,Georgia,serif;color:#0e0e0e}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq-t{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:10px;background:#ebe8ff;color:#612bd3;font:500 20px/1 Inter,sans-serif;transition:transform .3s cubic-bezier(0.16, 1, 0.3, 1),background-color .3s,color .3s}.ds-faq[open] .ds-faq-t{transform:rotate(45deg);background:#612bd3;color:#fff}.ds-faq p{margin:0;padding:0 48px 28px 0;font:400 16px/1.75 Inter,ui-sans-serif,system-ui,sans-serif;color:#686d72}.ds-faq summary:focus-visible{outline:2px solid #4d20af;outline-offset:3px}"
+    },
+    {
+      "name": "Trip To Signature",
+      "kind": "custom",
+      "refersTo": "script",
+      "description": "Allura \"Trip to\" followed by a Fraunces destination.",
+      "html": "<p class=\"ds-tripto\"><span class=\"ds-script\">Trip to</span><span class=\"ds-dest\">Lisbon</span></p>",
+      "css": ".ds-tripto{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 16px;margin:0;line-height:1}.ds-script{font:400 64px/0.9 Allura,'Snell Roundhand',cursive;color:#612bd3}.ds-dest{font:600 68px/1 Fraunces,Georgia,serif;letter-spacing:-.02em;color:#0e0e0e}"
+    },
+    {
+      "name": "Live Activity Pill",
+      "kind": "custom",
+      "refersTo": "live-green",
+      "description": "The app's Dynamic Island, quoted as-is.",
+      "html": "<div class=\"ds-island\"><span class=\"ds-island-l\"><span class=\"ds-island-dot\">&#9992;</span>1h 24m</span><span class=\"ds-island-gate\">B7</span></div>",
+      "css": ".ds-island{display:flex;align-items:center;justify-content:space-between;width:226px;height:38px;padding:0 6px 0 8px;border-radius:9999px;background:#000;box-shadow:0 16px 30px -14px rgba(0,0,0,.7);font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-island-l{display:flex;align-items:center;gap:8px;color:#00ff9e;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}.ds-island-dot{display:grid;place-items:center;width:22px;height:22px;border-radius:9999px;background:#00ff9e;color:#000;font-size:12px}.ds-island-gate{padding:3px 8px;border-radius:9999px;background:#ffc933;color:#000;font-size:12px;font-weight:700}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Inbox Becomes the Trip",
+    "overview": "The site is not a brand world invented for marketing; it is the TripCache mobile app (trip-cache-app/lib/theme.tsx) opened up to page scale. A cool grey canvas (#f0f2f4 family) carries white cards with hairline borders; soft, heavily blurred colour pools (\"prismatic bloom\") sit clipped inside sections and cards the way they do in the app; violet carries every action. Bookings are always colour-coded the app's way: flight indigo, hotel green, car amber, activity pink. Fraunces sets every heading, Inter does the work, and Allura appears only to write \"Trip to\" before a destination. Every demonstration on the page is built from the app's own artefacts — its screenshots, its landmarks postcard and 3D suitcase art, its toasts, its black-and-neon-green Live Activity — never from generic illustration.\n\nThe page tells one story: confirmation emails scattered in an inbox are forwarded, reviewed as drafts, and filed into one colour-coded itinerary, with deadlines, documents and receipts kept beside it. Motion is damped and physical (one shared expo-out curve, gentle springs, slow drift), and it always demonstrates the mechanism rather than decorating. Density is relaxed: generous section padding, large Fraunces headings, short ledes, demonstrations doing the persuading.\n\nConfirmed visual rejection: the site must not resemble flighty.com. Flighty was the owner's initial quality reference; on 2026-10-05 the owner asked that nothing read as a copy of it. Its signature devices are out of bounds (listed under Do's and Don'ts). The previous \"design-one\" warm-paper journal look is also retired.",
+    "keyCharacteristics": [
+      "Cool canvas + white hairline cards, the app's surface language, never warm paper.",
+      "Violet is the only action colour; magenta and the category colours are supporting voices.",
+      "Category colour-coding (indigo / green / amber / pink) is the information system, used identically wherever a booking appears.",
+      "Prismatic bloom: blurred colour pools clipped inside their container, never a page-wide gradient wash.",
+      "Fraunces headings, Inter body, Allura only for \"Trip to\".",
+      "App artefacts as evidence: real screenshots, app artwork, Live Activity quoted as-is.",
+      "Damped motion on one ease (cubic-bezier(0.16, 1, 0.3, 1)); everything honours reduced motion and reduced transparency."
+    ],
+    "rules": [
+      {
+        "name": "The One Action Colour Rule",
+        "body": "Violet is the only colour a clickable control may be filled with (white-on-violet surfaces invert to a white button with violet text). Category colours and magenta never fill a button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Category Code Rule",
+        "body": "Wherever a booking appears — inbox avatar, chip, itinerary dot, connector line, glyph — it wears its category colour: flight indigo, hotel green, car amber, activity pink. Never reassign or decorate with these four hues outside a booking context, except as bloom pools.",
+        "section": "colors"
+      },
+      {
+        "name": "The Clipped Bloom Rule",
+        "body": "Colour pools are blurred (72px), clipped by `overflow: hidden` on their section or card, set at 20–55% opacity and drifting slowly. A bloom never escapes its container and never becomes a page background.",
+        "section": "colors"
+      },
+      {
+        "name": "The Script Signature Rule",
+        "body": "Allura sets the words \"Trip to\" and nothing else, always immediately followed by a Fraunces destination name.",
+        "section": "typography"
+      },
+      {
+        "name": "The Headings Stand Alone Rule",
+        "body": "Section headings carry no eyebrow, kicker or label above them; the heading and a one-paragraph lede are the whole header.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Facts Rule",
+        "body": "Prices, times, countdowns, amounts and dates use tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Violet Light Rule",
+        "body": "Shadows on light grounds are tinted rgb(45 27 87), never neutral black, and always use a negative spread so they pool under the object instead of outlining it.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** build new surfaces on the canvas/white alternation with hairline-bordered white cards, 30px corners for feature cards and 12px for controls.",
+      "**Do** use violet for every action and only for actions; invert to a white button on violet fields.",
+      "**Do** colour every booking by its category (flight #6366f1, hotel #12b76a, car #f59e0b, activity #d82d7e) with the matching soft tint and ink shade for chips and text.",
+      "**Do** demonstrate with the app's own material: real screenshots, the landmarks and suitcase artwork, the app's toasts and Live Activity.",
+      "**Do** set headings in Fraunces 600 with -0.02em tracking and keep body copy in Inter at 15.5–19px with mute or ink-2.",
+      "**Do** keep blooms clipped inside their section or card at 20–55% opacity.",
+      "**Do** animate with cubic-bezier(0.16, 1, 0.3, 1), heavily damped springs that settle with little or no overshoot, and provide a static equivalent under `prefers-reduced-motion` and an opaque one under `prefers-reduced-transparency`.",
+      "**Do** mark dark sections with `data-nav-theme=\"dark\"` so the navigation inverts."
+    ],
+    "donts": [
+      "**Don't** reintroduce Flighty's signature devices: a centred phone orbited by floating notifications; a bottom segmented stage switcher; a day-to-night flip that ghosts data across the transition; glow-bordered delay cards; an orbit of planes around an import tile.",
+      "**Don't** use split-flap or flip-clock tiles anywhere except the free-cancellation countdown.",
+      "**Don't** use the retired design-one paper palette (#f4f0e8 paper, #602ad2 accent, warm brown shadows) or its journal styling on new-world surfaces.",
+      "**Don't** use Allura for anything but \"Trip to\".",
+      "**Don't** put eyebrows, kickers or small uppercase labels above section headings.",
+      "**Don't** fill buttons with magenta, gold or a category colour, and don't use neon green outside the quoted Live Activity.",
+      "**Don't** use neutral black drop shadows on light grounds or let a bloom bleed into an adjacent section.",
+      "**Don't** add testimonials, ratings, user counts or press logos; the build demonstrates the product instead."
+    ]
+  }
+}

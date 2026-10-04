@@ -87,6 +87,7 @@ export default function FlightArrivalTimeCalculatorPage() {
       <ToolHero
         eyebrow="Free flight time tool"
         icon={PlaneLanding}
+        crumb="Flight time calculator"
         title="Flight time calculator: when will you land?"
         lede={
           <p>
@@ -122,7 +123,7 @@ export default function FlightArrivalTimeCalculatorPage() {
         </ToolDarkBand>
       ) : null}
 
-      <ToolFaqSection title="Flight time zone questions" intro="Short answers about local times, date changes and flight time estimates." faqs={faqs} />
+      <ToolFaqSection flush title="Flight time zone questions" intro="Short answers about local times, date changes and flight time estimates." faqs={faqs} />
 
       <ToolRelated
         links={[

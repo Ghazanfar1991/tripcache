@@ -26,8 +26,9 @@ import {
   type LucideIcon,
 } from "lucide-react"
 import { useMemo, useState, type ReactNode } from "react"
-import { CategoryGlyph, cx } from "@/components/seo/tool-ui"
-import { DepartureBoard } from "@/components/seo/tools-departure-board"
+import { CategoryGlyph } from "@/components/home/category"
+import { cx } from "@/components/site/kit"
+import { DepartureBoard } from "@/components/site/tools-departure-board"
 import {
   OPTION_LABELS,
   buildChecklist,
@@ -88,24 +89,24 @@ function Segmented<T extends string>({
   return (
     <fieldset>
       <legend className={LEGEND}>{legend}</legend>
-      <div className="grid gap-[0.25rem] rounded-[14px] border border-tc-line bg-white p-1" style={{ gridTemplateColumns: `repeat(${entries.length}, minmax(0, 1fr))` }}>
+      <div className="grid gap-1 rounded-[14px] border border-tc-line bg-white p-1" style={{ gridTemplateColumns: `repeat(${entries.length}, minmax(0, 1fr))` }}>
         {entries.map(([key, label]) => {
           const active = key === value
           return (
             <label
               key={key}
               className={cx(
-                "relative grid h-10 cursor-pointer place-items-center rounded-[0.625rem] px-2 text-center text-[14px] font-semibold transition-colors duration-200",
+                "relative grid h-10 cursor-pointer place-items-center rounded-[10px] px-2 text-center text-[14px] font-semibold transition-colors duration-200",
                 active ? "text-white" : "text-tc-ink-2 hover:bg-tc-mist",
                 FOCUS_RING,
               )}
             >
-              <input type="radio" name={name} value={key} checked={active} onChange={() => onChange(key)} className="tct-sr-only" />
+              <input type="radio" name={name} value={key} checked={active} onChange={() => onChange(key)} className="sr-only" />
               {active ? (
                 <motion.span
                   layoutId={`seg-${name}`}
                   aria-hidden="true"
-                  className="absolute inset-0 rounded-[0.625rem] bg-tc-violet shadow-[0_8px_18px_-10px_rgba(97,43,211,0.8)]"
+                  className="absolute inset-0 rounded-[10px] bg-tc-violet shadow-[0_8px_18px_-10px_rgba(97,43,211,0.8)]"
                   transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 420, damping: 36 }}
                 />
               ) : null}
@@ -145,7 +146,7 @@ function Toggles<T extends string>({
                 FOCUS_RING,
               )}
             >
-              <input type="checkbox" checked={on} onChange={() => onToggle(key)} className="tct-sr-only" />
+              <input type="checkbox" checked={on} onChange={() => onToggle(key)} className="sr-only" />
               {on ? <Check className="size-4" strokeWidth={2.6} aria-hidden="true" /> : Icon ? <Icon className="size-4 text-tc-mute" aria-hidden="true" /> : null}
               {label}
             </label>
@@ -349,7 +350,7 @@ export function TravelChecklistGenerator() {
             >
               <div className="flex items-center justify-between gap-3 px-2 pb-2 pt-1 sm:px-3">
                 <h3 className="flex items-center gap-3 font-tc-display text-[19px] font-semibold text-tc-ink sm:text-[21px] print:text-black">
-                  <span className="grid size-9 place-items-center rounded-[0.625rem] bg-tc-violet-soft text-tc-violet print:hidden" aria-hidden="true">
+                  <span className="grid size-9 place-items-center rounded-[10px] bg-tc-violet-soft text-tc-violet print:hidden" aria-hidden="true">
                     <Icon className="size-[18px]" />
                   </span>
                   {group.title}
@@ -377,7 +378,7 @@ export function TravelChecklistGenerator() {
                             FOCUS_RING,
                           )}
                         >
-                          <input type="checkbox" checked={isChecked} onChange={() => toggleItem(item.id)} className="peer tct-sr-only" />
+                          <input type="checkbox" checked={isChecked} onChange={() => toggleItem(item.id)} className="peer sr-only" />
                           <span
                             aria-hidden="true"
                             className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-[8px] border-2 border-[#b9bdc3] bg-white transition-[background-color,border-color,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] peer-checked:scale-105 peer-checked:border-tc-violet peer-checked:bg-tc-violet motion-reduce:transition-none peer-checked:[&_svg]:scale-100 peer-checked:[&_svg]:opacity-100 print:border-black print:peer-checked:bg-white"

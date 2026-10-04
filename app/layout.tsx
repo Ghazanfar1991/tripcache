@@ -3,9 +3,9 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
+import { Allura, Fraunces, Inter } from "next/font/google"
 import { Navigation } from "@/components/navigation"
 import { StoreLinkAnalytics } from "@/components/store-link-analytics"
-import "@fontsource-variable/plus-jakarta-sans/wght.css"
 import "./globals.css"
 import "./design-one.css"
 
@@ -167,6 +167,11 @@ const mobileApplicationSchema = {
 
 const toJsonLd = (schema: object) => JSON.stringify(schema).replace(/</g, "\\u003c")
 
+// The app's own type system: Fraunces display, Inter body, Allura for the "Trip to" script.
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axes: ["opsz", "SOFT"], display: "swap" })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" })
+const allura = Allura({ subsets: ["latin"], weight: "400", variable: "--font-allura", display: "swap" })
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -260,7 +265,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="light" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" className={`light ${fraunces.variable} ${inter.variable} ${allura.variable}`} suppressHydrationWarning>
       <head>
         <script
           id="organization-schema"

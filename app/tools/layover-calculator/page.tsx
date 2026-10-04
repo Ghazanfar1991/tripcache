@@ -6,6 +6,7 @@ import { Check, Clock, TicketsPlane } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { LayoverChecker, type LayoverDefaults } from "@/components/seo/layover-checker"
+import { Card } from "@/components/site/kit"
 import { ToolBody, ToolCta, ToolDarkBand, ToolFaqSection, ToolHeading, ToolHero, ToolPage, ToolRelated, ToolSchema, ToolSection, type ToolFaq } from "@/components/seo/tool-page"
 import { getAirport } from "@/lib/airports"
 import type { Place } from "@/lib/flight-time"
@@ -130,8 +131,6 @@ const VERDICT_RULES: { verdict: Verdict; rule: string }[] = [
   { verdict: "long", rule: `${GUIDANCE.longLayover / 60} hours or more. We also check whether leaving the airport could be realistic.` },
 ]
 
-const CARD = "rounded-[1.5rem] bg-white/46 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_16px_44px_rgba(72,53,33,0.055)] sm:p-7"
-
 export default function LayoverCalculatorPage() {
   const airport = getAirport(EXAMPLE.airport) as Place
   const defaults: LayoverDefaults = { ...EXAMPLE, airport }
@@ -159,6 +158,7 @@ export default function LayoverCalculatorPage() {
       <ToolHero
         eyebrow="Free connection time tool"
         icon={TicketsPlane}
+        crumb="Layover calculator"
         title="Layover calculator: is your connection time enough?"
         lede={
           <p>
@@ -187,7 +187,7 @@ export default function LayoverCalculatorPage() {
             </p>
             <ul className="mt-8 flex flex-col gap-3">
               {VERDICT_RULES.map((item) => (
-                <li key={item.verdict} className="flex gap-3 text-[0.9375rem] leading-6 text-[#f7f2e9]">
+                <li key={item.verdict} className="flex gap-3 text-[15px] leading-6 text-white/85">
                   <span
                     className="mt-0.5 inline-flex h-6 shrink-0 items-center rounded-full px-2.5 text-[12.5px] font-bold"
                     style={{ backgroundColor: VERDICTS[item.verdict].soft, color: VERDICTS[item.verdict].ink }}
@@ -201,49 +201,49 @@ export default function LayoverCalculatorPage() {
           </>
         }
       >
-        <h3 className="text-xl font-semibold text-[#f7f2e9]">Estimates used (minutes)</h3>
-        <dl className="mt-4 grid gap-3">
+        <h3 className="font-tc-display text-[21px] font-semibold text-white">Estimates used (minutes)</h3>
+        <dl className="mt-4 flex flex-col gap-2.5">
           {estimates.map((item) => (
-            <div key={item.label} className="rounded-[1.25rem] bg-white/[0.055] px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-              <dt className="font-semibold text-[#f7f2e9]">{item.label}</dt>
-              <dd className="mt-0.5 text-sm leading-6 text-[#d9d2c6]">{item.value}</dd>
+            <div key={item.label} className="rounded-[18px] bg-white/[0.06] px-4 py-3.5 ring-1 ring-white/10">
+              <dt className="text-[15px] font-semibold text-white">{item.label}</dt>
+              <dd className="mt-0.5 text-[14.5px] leading-6 text-white/75">{item.value}</dd>
             </div>
           ))}
         </dl>
-        <p className="mt-4 text-sm leading-6 text-[#b9b0a3]">
+        <p className="mt-4 text-[14px] leading-6 text-white/70">
           Delay buffer: {GUIDANCE.bufferSameTicket} minutes on one ticket, {GUIDANCE.bufferSeparateTickets} on separate tickets, because a missed
           connection on separate tickets usually is not the second airline’s problem. Real queues vary by airport, time of day and season.
         </p>
       </ToolDarkBand>
 
-      <ToolSection>
+      <ToolSection flush>
         <ToolHeading
           title="How long should a layover be?"
           lede="Rough layover time guidance by connection type, on one ticket without a terminal change, using the same estimates as the calculator. Add time for terminal changes and separate tickets."
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {CONNECTION_TYPES.map((item) => {
             const guide = guidanceFor(item.value, airport)
             return (
-              <div key={item.value} className={CARD}>
-                <h3 className="text-xl font-semibold tracking-[-0.03em]">{item.label}</h3>
+              <Card key={item.value} className="p-6">
+                <h3 className="font-tc-display text-[21px] font-semibold leading-snug text-tc-ink">{item.label}</h3>
                 {guide ? (
-                  <p className="mt-3">
-                    <span className="block text-sm text-[#666666]">Comfortable from</span>
-                    <span className="mt-1 block whitespace-nowrap text-4xl font-semibold tabular-nums tracking-[-0.04em]">{formatSpan(guide.comfortable)}</span>
+                  <p className="mt-3 text-tc-ink">
+                    <span className="block text-[13.5px] text-tc-mute">Comfortable from</span>
+                    <span className="mt-1 block whitespace-nowrap font-tc-display text-[34px] font-semibold tabular-nums leading-none">{formatSpan(guide.comfortable)}</span>
                   </p>
                 ) : null}
-                {guide ? <p className="mt-2 text-sm text-[#444444]">Estimated minimum: about {formatSpan(guide.need)}</p> : null}
-                <p className="mt-3 leading-7 text-[#666666]">{TYPE_NOTES[item.value]}</p>
-              </div>
+                {guide ? <p className="mt-2 text-[14px] text-tc-ink-2">Estimated minimum: about {formatSpan(guide.need)}</p> : null}
+                <p className="mt-3 text-[15px] leading-7 text-tc-mute">{TYPE_NOTES[item.value]}</p>
+              </Card>
             )
           })}
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h3 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl">Is a 1 hour layover enough?</h3>
-            <p className="mt-3 max-w-[62ch] leading-8 text-[#444444]">
+            <h3 className="font-tc-display text-[26px] font-semibold leading-tight text-tc-ink">Is a 1 hour layover enough?</h3>
+            <p className="mt-3 max-w-[62ch] text-[16px] leading-8 text-tc-ink-2">
               For a domestic connection on one ticket, an hour is usually workable, and an airline generally sells a connection on one
               ticket only if it meets its own minimum connection time. An hour gets tight for international connections that involve
               passport control, collecting bags or changing terminals, and it is risky on separate tickets, where a late first flight is
@@ -251,8 +251,8 @@ export default function LayoverCalculatorPage() {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl">Is 45 minutes enough for a layover?</h3>
-            <p className="mt-3 max-w-[62ch] leading-8 text-[#444444]">
+            <h3 className="font-tc-display text-[26px] font-semibold leading-tight text-tc-ink">Is 45 minutes enough for a layover?</h3>
+            <p className="mt-3 max-w-[62ch] text-[16px] leading-8 text-tc-ink-2">
               Sometimes, for a domestic connection with gates close together and bags checked through. It leaves almost no room for a
               late arrival or a slow deplaning, so sit near the front if you can, check the onward gate before landing and tell the crew
               about a tight connection. For most international connections 45 minutes is tight.
@@ -261,11 +261,13 @@ export default function LayoverCalculatorPage() {
         </div>
       </ToolSection>
 
-      <ToolSection className="pt-0 lg:pt-0">
+      <ToolSection tone="canvas">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
           <article>
-            <h2 className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">Can you leave the airport during a layover?</h2>
-            <p className="mt-4 leading-8 text-[#444444]">
+            <h2 className="text-balance font-tc-display text-[clamp(28px,3.2vw,42px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink">
+              Can you leave the airport during a layover?
+            </h2>
+            <p className="mt-4 text-[16px] leading-8 text-tc-ink-2">
               Often yes, if you have enough time and you are allowed to enter the country. Leaving the airport means going through
               passport control into that country, so you need whatever entry permission your nationality requires there, such as a visa,
               an electronic travel authorisation or visa-free entry. You then need to get back in time to clear security again and, for an
@@ -278,9 +280,9 @@ export default function LayoverCalculatorPage() {
                 "Count the time to clear arrivals, travel to the city and back, and be at the airport about 2 hours before an international departure.",
                 "On a long layover, the calculator estimates how much time you would actually have outside.",
               ].map((point) => (
-                <li key={point} className="flex gap-3 leading-7 text-[#444444]">
-                  <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#e5dcff] text-[#602ad2]" aria-hidden="true">
-                    <Check className="h-3 w-3" />
+                <li key={point} className="flex gap-3 text-[15.5px] leading-7 text-tc-ink-2">
+                  <span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-tc-violet-soft text-tc-violet" aria-hidden="true">
+                    <Check className="size-3" />
                   </span>
                   {point}
                 </li>
@@ -288,20 +290,22 @@ export default function LayoverCalculatorPage() {
             </ul>
           </article>
           <article>
-            <h2 className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">Do you have to go through customs on a layover?</h2>
-            <p className="mt-4 leading-8 text-[#444444]">
+            <h2 className="text-balance font-tc-display text-[clamp(28px,3.2vw,42px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink">
+              Do you have to go through customs on a layover?
+            </h2>
+            <p className="mt-4 text-[16px] leading-8 text-tc-ink-2">
               It depends on where you connect and how you are ticketed. As a general rule, you clear immigration and customs at the first
               airport where you enter a country. If you arrive internationally and connect onward within that country, you usually go
               through passport control and customs at the connecting airport, often collecting and re-checking your bags.
             </p>
-            <p className="mt-4 leading-8 text-[#444444]">
+            <p className="mt-4 text-[16px] leading-8 text-tc-ink-2">
               On an international-to-international connection on one ticket, many large hubs let you stay airside in a transit area,
               usually with a transfer security check but no customs. Some countries do not offer airside transit at all; the United States,
               for example, requires international arrivals to clear immigration and customs even when they are only connecting. Some
               nationalities also need a transit visa to change planes in certain countries.
             </p>
-            <p className={`mt-6 leading-7 text-[#444444] ${CARD}`}>
-              <Clock className="mr-1.5 inline h-4 w-4 -translate-y-px text-[#602ad2]" aria-hidden="true" />
+            <p className="mt-6 rounded-[18px] border border-tc-line bg-white px-5 py-4 text-[15px] leading-7 text-tc-ink-2">
+              <Clock className="mr-1.5 inline size-4 -translate-y-px text-tc-violet" aria-hidden="true" />
               Confirm with your airline and the connecting country’s official transit rules. On separate tickets, expect to go landside,
               collect bags and check in again.
             </p>

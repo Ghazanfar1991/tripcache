@@ -122,12 +122,13 @@ export default function TravelChecklistPage() {
         faqs={faqs}
       />
       {/* Printing prints the checklist only: the fixed navigation lives in the root layout, outside this page. */}
-      <style>{`@media print { body > header, body header.floating-nav-shell, body > a[href="#main-content"] { display: none !important; } @page { margin: 14mm; } }`}</style>
+      <style>{`@media print { body > header, body header.fixed, body > a[href="#main-content"] { display: none !important; } @page { margin: 14mm; } }`}</style>
 
       <div className="print:hidden">
         <ToolHero
           eyebrow="Free travel checklist"
           icon={ListChecks}
+          crumb="Travel checklist generator"
           title="Travel checklist generator"
           lede={
             <p>
@@ -140,7 +141,7 @@ export default function TravelChecklistPage() {
         />
       </div>
 
-      <ToolBody id="generator" className="print:p-0">
+      <ToolBody id="generator" className="print:bg-white print:py-0!">
         <TravelChecklistGenerator />
       </ToolBody>
 
@@ -157,12 +158,12 @@ export default function TravelChecklistPage() {
       >
         <ul className="grid gap-4 sm:grid-cols-2">
           {forgotten.map((item) => (
-            <li key={item.title} className="rounded-[1.5rem] bg-white/[0.055] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-6">
+            <li key={item.title} className="rounded-[18px] bg-white/[0.06] px-5 py-4 ring-1 ring-white/10">
               <span className="flex items-start gap-3">
-                <FileText className="mt-1 h-4 w-4 shrink-0 text-[#a98af0]" aria-hidden="true" />
+                <FileText className="mt-1 size-4 shrink-0 text-[#c4b5fd]" aria-hidden="true" />
                 <span>
-                  <span className="block font-semibold leading-6 text-[#f7f2e9]">{item.title}</span>
-                  <span className="mt-1 block text-sm leading-6 text-[#d9d2c6]">{item.text}</span>
+                  <span className="block text-[15.5px] font-semibold leading-6 text-white">{item.title}</span>
+                  <span className="mt-1 block text-[14.5px] leading-6 text-white/75">{item.text}</span>
                 </span>
               </span>
             </li>
@@ -170,7 +171,7 @@ export default function TravelChecklistPage() {
         </ul>
       </ToolDarkBand>
 
-      <ToolSection id="printable-international-travel-checklist" className="print:hidden">
+      <ToolSection flush id="printable-international-travel-checklist" className="print:hidden">
         <ToolHeading
           title="Printable international travel checklist"
           lede="A complete international travel checklist for a week away by air with a rental car. Use the generator above to tailor it, or print this list as it is."
@@ -178,13 +179,13 @@ export default function TravelChecklistPage() {
         <div className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {printable.map((group) => (
             <div key={group.id}>
-              <h3 className="border-b-[1px] border-[#41382e]/15 pb-3 text-xl font-semibold tracking-[-0.03em]">
+              <h3 className="border-b border-tc-line pb-3 font-tc-display text-[21px] font-semibold text-tc-ink">
                 {group.id === "documents" ? "Travel document checklist" : group.id === "packing" ? "International travel packing list" : group.title}
               </h3>
               <ul className="mt-4 flex flex-col gap-2.5">
                 {group.items.map((item) => (
-                  <li key={item.id} className="flex gap-3 leading-7 text-[#444444]">
-                    <Check className="mt-1.5 h-4 w-4 shrink-0 text-[#602ad2]" aria-hidden="true" />
+                  <li key={item.id} className="flex gap-3 text-[15.5px] leading-7 text-tc-ink-2">
+                    <Check className="mt-1.5 size-4 shrink-0 text-tc-violet" aria-hidden="true" />
                     <span>{item.label}</span>
                   </li>
                 ))}
@@ -195,9 +196,10 @@ export default function TravelChecklistPage() {
       </ToolSection>
 
       <div className="print:hidden">
-        <ToolFaqSection title="Travel checklist questions" intro="Short answers about travel documents, passports, visas and packing." faqs={faqs} />
+        <ToolFaqSection tone="canvas" title="Travel checklist questions" intro="Short answers about travel documents, passports, visas and packing." faqs={faqs} />
 
         <ToolRelated
+          tone="white"
           links={[
             { href: "/blog/save-travel-documents-offline", title: "How to save travel documents offline", text: "Keep passports, tickets and bookings reachable without a signal." },
             { href: "/blog/best-travel-document-organizer-app-2026", title: "Best travel document organizer apps", text: "Compare ways to keep travel documents organized by trip." },

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
-import { DesignOneHome } from "@/components/design-one/home"
+import { HomePage } from "@/components/home/home-page"
+import "./home.css"
 
 export const metadata: Metadata = {
   title: {
@@ -29,5 +30,5 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <DesignOneHome />
+  return <HomePage />
 }

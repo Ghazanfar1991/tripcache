@@ -1,0 +1,28 @@
+/* Shared by globals.css (every route) and secondary.css (non-home routes). */
+/* TripCache brand, taken from the mobile app (lib/theme.tsx): cool canvas, violet action,
+   category colours, Fraunces / Inter / Allura. */
+@theme inline {
+  --font-tc: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-tc-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-tc-script: var(--font-allura), "Snell Roundhand", cursive;
+}
+
+@theme {
+  --color-tc-ink: #0e0e0e;
+  --color-tc-ink-2: #3a3d42;
+  --color-tc-mute: #686d72;
+  --color-tc-line: #e7e9eb;
+  --color-tc-canvas: #f0f2f4;
+  --color-tc-mist: #f5f7f9;
+  --color-tc-violet: #612bd3;
+  --color-tc-violet-deep: #3f1a9a;
+  --color-tc-violet-soft: #ebe8ff;
+  --color-tc-violet-light: #a5b4fc;
+  --color-tc-magenta: #d82d7e;
+  --color-tc-flight: #6366f1;
+  --color-tc-hotel: #12b76a;
+  --color-tc-car: #b54708;
+  --color-tc-activity: #d82d7e;
+  --color-tc-live: #00ff9e;
+  --color-tc-live-gate: #ffc933;
+}

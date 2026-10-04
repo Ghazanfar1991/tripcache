@@ -5,7 +5,7 @@
  * Truth rule: entry, visa, passport-validity and health requirements differ by destination and
  * nationality, so items never state a country rule as fact. They point at the official source.
  */
-import type { Category } from "@/components/seo/tool-ui"
+import type { Category } from "@/components/home/data"
 
 export type TripType = "domestic" | "international"
 export type TripLength = "weekend" | "week" | "long"

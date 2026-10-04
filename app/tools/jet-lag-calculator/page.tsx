@@ -125,6 +125,7 @@ export default function JetLagCalculatorPage() {
       <ToolHero
         eyebrow="Free jet lag tool"
         icon={MoonStar}
+        crumb="Jet lag calculator"
         title="Jet lag calculator and sleep plan"
         lede={
           <p>
@@ -152,7 +153,7 @@ export default function JetLagCalculatorPage() {
                 No black box. Here is every step, using the example above: New York (JFK) to London (LHR) on an overnight flight,
                 sleeping 11 PM to 7 AM at home.
               </p>
-              <p className="mt-5 rounded-[1.25rem] bg-white/[0.055] px-4 py-3.5 text-sm leading-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+              <p className="mt-5 rounded-[18px] bg-white/[0.06] px-4 py-3.5 text-[14px] leading-6 text-white/75 ring-1 ring-white/10">
                 These are widely used rules of thumb, not a medical model. People adjust at different speeds. If you have a sleep
                 condition, are pregnant or take regular medication, ask a doctor before changing your sleep.
               </p>
@@ -163,7 +164,7 @@ export default function JetLagCalculatorPage() {
         </ToolDarkBand>
       ) : null}
 
-      <ToolFaqSection title="How long does jet lag last?" intro="Short answers on recovery time, sleep schedules and beating jet lag." faqs={faqs} />
+      <ToolFaqSection flush title="How long does jet lag last?" intro="Short answers on recovery time, sleep schedules and beating jet lag." faqs={faqs} />
 
       <ToolRelated
         links={[

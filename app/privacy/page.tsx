@@ -1,9 +1,8 @@
 import "../secondary.css"
 
-import Link from "next/link"
-import { SectionContainer } from "@/components/section-container"
 import { Footer } from "@/components/footer"
-import { ArrowLeft } from "lucide-react"
+import { LegalLayout, LegalNote, LegalSection, legalAnchor, legalLinkClass } from "@/components/site/company-legal"
+import { PageHero, SitePage } from "@/components/site/kit"
 import type { Metadata } from "next"
 import { createPageMetadata } from "@/lib/seo-metadata"
 
@@ -51,52 +50,38 @@ const sections = [
 ]
 
 export default function PrivacyPage() {
+  const contents = sections.map((section) => ({ id: legalAnchor(section.heading), title: section.heading }))
+
   return (
-    <main className="journal-paper min-h-screen text-[#121212]">
-      <SectionContainer className="space-y-16 pb-20 pt-32 sm:pt-36">
-        <div className="flex justify-center lg:justify-start">
-          <Link
-            href="/"
-            className="design-one-press inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#5f5f5f] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] transition-colors hover:text-[#4d20af]"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back home
-          </Link>
-        </div>
-        <header className="space-y-4 text-center max-w-3xl mx-auto">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#4d20af]">Privacy Policy</p>
-          <h1 className="text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">Your travel data stays yours.</h1>
-          <p className="text-lg leading-8 text-[#666666]">
+    <SitePage>
+      <PageHero
+        title="Your travel data stays yours."
+        lede={
+          <p>
             Effective July 16, 2026. This page explains how TripCache handles data for travelers using the website and
             mobile apps.
           </p>
-        </header>
+        }
+      />
 
-        <div className="space-y-10">
-          {sections.map((section) => (
-            <section
-              key={section.heading}
-              className="rounded-[28px] bg-white/48 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_20px_55px_rgba(72,53,33,0.06)] sm:p-8"
-            >
-              <h2 className="text-2xl font-semibold">{section.heading}</h2>
-              <div className="mt-3 space-y-3 text-sm leading-relaxed text-[#666666]">
-                {section.copy.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+      <LegalLayout label="Privacy Policy" contents={contents}>
+        {sections.map((section) => (
+          <LegalSection key={section.heading} id={legalAnchor(section.heading)} title={section.heading}>
+            {section.copy.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </LegalSection>
+        ))}
 
-        <footer className="rounded-[28px] bg-[#e8e0ff] p-7 text-center text-sm text-[#666666]">
+        <LegalNote>
           Questions? Email{" "}
-          <a className="font-semibold text-[#4d20af]" href="mailto:privacy@trip-cache.com">
+          <a className={legalLinkClass} href="mailto:privacy@trip-cache.com">
             privacy@trip-cache.com
           </a>{" "}
           or mail TripCache, 440 N Barranca Ave #9933, Covina, CA 91723.
-        </footer>
-      </SectionContainer>
+        </LegalNote>
+      </LegalLayout>
       <Footer />
-    </main>
+    </SitePage>
   )
 }

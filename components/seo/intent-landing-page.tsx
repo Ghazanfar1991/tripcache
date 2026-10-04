@@ -1,11 +1,22 @@
 import Image from "next/image"
 import Link from "next/link"
-import { CheckCircle2, Mail, ShieldCheck, WalletCards } from "lucide-react"
+import { ArrowRight, ArrowUpRight, Check, CheckCircle2, Mail, ShieldCheck, WalletCards } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { SectionContainer } from "@/components/section-container"
 import { Footer } from "@/components/footer"
 import { GetStartedModal } from "@/components/get-started-modal"
+import { Card, Container, CtaBand, Section, SitePage, buttonClass, cx } from "@/components/site/kit"
+import {
+  FaqList,
+  IconTile,
+  PhoneShot,
+  PlanTable,
+  ProductHero,
+  isAppScreen,
+  productScreen,
+  productTone,
+  type PlanRow,
+} from "@/components/site/product-ui"
+import { Bloom } from "@/components/home/category"
 import type { SeoLandingPage } from "@/lib/seo-page-data"
 
 const BASE_URL = "https://trip-cache.com"
@@ -15,6 +26,19 @@ const featureLinks = [
   { href: "/features/cancellation-reminders", label: "Cancellation reminders", icon: ShieldCheck },
   { href: "/features/business-travel-expenses", label: "Business expenses", icon: WalletCards },
 ]
+
+/** Plan facts from seo/research/app-feature-inventory.md: Pro gates only email import, live alerts and Live Activity/widgets. */
+const PLAN_ROWS: PlanRow[] = [
+  { label: "Price", basic: "$0 forever", pro: "$5.99/month, or $49.99–$50.00/year" },
+  { label: "Manual trips, boarding-pass scanning and the document vault", basic: true, pro: true },
+  { label: "Cancellation-deadline and check-in reminders", basic: true, pro: true },
+  { label: "Expenses, CSV and PDF export, and CSV import", basic: true, pro: true },
+  { label: "Booking-email import (monthly allowance)", basic: false, pro: true },
+  { label: "Live flight-status alerts on supported flights", basic: false, pro: true },
+  { label: "Live Activity, Dynamic Island and widgets", basic: false, pro: true },
+]
+
+const BENEFIT_BLOOMS = ["#8b5cf6", "#ec4899", "#6366f1"]
 
 interface IntentLandingPageProps {
   page: SeoLandingPage
@@ -60,185 +84,307 @@ export function IntentLandingPage({ page }: IntentLandingPageProps) {
     ],
   }
 
+  const tone = productTone(page.slug)
+  const screen = productScreen(page)
+  const showCover = !isAppScreen(page.image)
+  const isAlternative = page.kind === "alternative"
+
   return (
-    <main className="min-h-screen bg-[#f4f0e8] text-[#121212] [font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
-      <script
-        id={`${page.slug}-faq-schema`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
-      />
-      <script
-        id={`${page.slug}-breadcrumb-schema`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
-      />
+    <>
+      <SitePage>
+        <script
+          id={`${page.slug}-faq-schema`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
+        />
+        <script
+          id={`${page.slug}-breadcrumb-schema`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
+        />
 
-      <section className="relative overflow-hidden pb-14 pt-28 min-[940px]:flex min-[940px]:min-h-[100svh] min-[940px]:items-center min-[940px]:pb-8 min-[940px]:pt-24">
-        <div className="pointer-events-none absolute inset-inline-end-[-10rem] top-20 h-[32rem] w-[32rem] rounded-full bg-[#e5dac7] min-[940px]:h-[40rem] min-[940px]:w-[40rem]" />
-        <div className="pointer-events-none absolute inset-inline-end-[-6rem] top-32 h-[24rem] w-[24rem] rounded-full border border-[#3b3329]/10 min-[940px]:h-[31rem] min-[940px]:w-[31rem]" />
-
-        <SectionContainer className="relative grid items-center gap-12 min-[940px]:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.62fr)] min-[940px]:gap-10">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#e5dcff] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#602ad2]">
-              <CheckCircle2 className="h-4 w-4" />
-              {page.eyebrow}
-            </div>
-
-            <div>
-              <h1 className="design-one-display-feature mt-6 max-w-4xl">
-                {page.hero}
-              </h1>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-[#626262] sm:text-lg">{page.description}</p>
-            </div>
-
-            <div className="mt-6 flex flex-col gap-3 min-[480px]:flex-row">
-              <GetStartedModal
-                triggerLabel="Download TripCache"
-                triggerClassName="min-h-12 rounded-full bg-[#602ad2] px-7 font-semibold text-white shadow-[0_12px_28px_rgba(96,42,210,0.2)] transition-[transform,background-color,box-shadow] duration-150 ease-out hover:bg-[#5121b3] hover:shadow-[0_15px_34px_rgba(96,42,210,0.27)] active:scale-[0.96]"
+        <ProductHero
+          breadcrumb={
+            <nav aria-label="Breadcrumb" className="mb-6 text-[13.5px] leading-6 text-tc-mute">
+              <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <li>
+                  <Link href="/" className="rounded-[6px] underline-offset-4 transition-colors hover:text-tc-ink hover:underline">
+                    Home
+                  </Link>
+                </li>
+                <li aria-hidden="true" className="text-[#c4c8cc]">
+                  /
+                </li>
+                <li>
+                  <Link
+                    href={page.kind === "feature" ? "/features" : "/alternatives"}
+                    className="rounded-[6px] underline-offset-4 transition-colors hover:text-tc-ink hover:underline"
+                  >
+                    {page.kind === "feature" ? "Features" : "Alternatives"}
+                  </Link>
+                </li>
+                <li aria-hidden="true" className="text-[#c4c8cc]">
+                  /
+                </li>
+                <li aria-current="page" className="text-tc-ink-2">
+                  {page.title}
+                </li>
+              </ol>
+            </nav>
+          }
+          title={page.hero}
+          lede={page.description}
+          actions={
+            <>
+              <GetStartedModal triggerLabel="Download TripCache" triggerClassName={buttonClass("primary", "lg")} />
+              <Link
+                href={page.kind === "feature" ? "/blog" : "/features/email-to-itinerary"}
+                className={buttonClass("secondary", "lg")}
+              >
+                {page.kind === "feature" ? "Read the guides" : "See email automation"}
+              </Link>
+            </>
+          }
+          footnote={
+            <>
+              <ul className="mt-8 flex flex-wrap gap-2">
+                {page.proofPoints.map((point) => (
+                  <li
+                    key={point}
+                    className="inline-flex items-center gap-2 rounded-full border border-tc-line bg-white/80 py-1.5 pl-2 pr-3.5 text-[13.5px] font-medium text-tc-ink-2"
+                  >
+                    <span aria-hidden="true" className="grid size-5 place-items-center rounded-full bg-tc-violet-soft text-tc-violet">
+                      <Check className="size-3" strokeWidth={3} />
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 max-w-[62ch] text-[13.5px] leading-6 text-tc-mute">{page.planNote}</p>
+            </>
+          }
+          aside={
+            <div className="relative mx-auto w-[min(68vw,300px)] lg:w-[min(100%,312px)]">
+              <Bloom className="tc-drift left-1/2 top-1/3 size-[360px] -translate-x-1/2 opacity-40" color={tone.bloom} />
+              <PhoneShot
+                src={screen.src}
+                alt={screen.alt}
+                preload
+                sizes="(min-width: 1024px) 312px, 68vw"
+                className="relative"
               />
-              <Button asChild size="lg" variant="outline" className="min-h-12 rounded-full border-[#121212]/15 bg-white/40 px-7 text-[#121212] shadow-none hover:bg-white/70 hover:text-[#121212]">
-                <Link href={page.kind === "feature" ? "/blog" : "/features/email-to-itinerary"}>
-                  {page.kind === "feature" ? "Read the guides" : "See email automation"}
-                </Link>
-              </Button>
+              <div className="absolute -left-6 bottom-[16%] flex max-w-[240px] -rotate-2 items-center gap-3 rounded-[16px] border border-tc-line bg-white px-3.5 py-3 shadow-[0_24px_44px_-22px_rgba(45,27,87,0.55)] sm:-left-14">
+                <IconTile icon={tone.icon} tone={tone.tile} className="size-9 rounded-full" />
+                <span className="text-[13.5px] font-semibold leading-5 text-tc-ink">{page.eyebrow}</span>
+              </div>
             </div>
+          }
+        />
 
-            <div className="mt-6 grid gap-2.5 min-[620px]:grid-cols-3">
-              {page.proofPoints.map((point) => (
-                <div key={point} className="rounded-[16px] bg-white/48 px-3.5 py-3 text-[13px] font-medium leading-5 text-[#5f584f] shadow-[0_1px_0_rgba(255,255,255,0.72),0_12px_32px_rgba(72,53,33,0.045)]">
-                  {point}
-                </div>
+        <section className="bg-tc-canvas pb-20 pt-2 sm:pb-28">
+          <Container>
+            <div className="grid gap-5 md:grid-cols-3">
+              {page.benefits.map((benefit, index) => (
+                <Card key={benefit.title} as="article" bloom={BENEFIT_BLOOMS[index % BENEFIT_BLOOMS.length]} className="h-full">
+                  <div className="flex h-full flex-col p-6 sm:p-8">
+                    <span aria-hidden="true" className="grid size-9 place-items-center rounded-full bg-tc-violet-soft text-tc-violet">
+                      <CheckCircle2 className="size-[18px]" strokeWidth={2.2} />
+                    </span>
+                    <h2 className="mt-10 font-tc-display text-[24px] font-semibold leading-[1.15] tracking-[-0.015em] text-tc-ink sm:text-[26px]">
+                      {benefit.title}
+                    </h2>
+                    <p className="mt-3 text-[15.5px] leading-7 text-tc-mute">{benefit.copy}</p>
+                  </div>
+                </Card>
               ))}
             </div>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#6b6258]">
-              {page.planNote}
-            </p>
-          </div>
+          </Container>
+        </section>
 
-          <div className="relative mx-auto flex w-full max-w-[19.5rem] items-center justify-center">
-            <div aria-hidden="true" className="absolute inset-inline-start-[-2.5rem] top-[13%] hidden h-40 w-40 -rotate-3 rounded-[20px] bg-[#602ad2] shadow-[0_22px_45px_rgba(96,42,210,0.2)] min-[1120px]:block" />
-            <Image
-              src={page.image}
-              alt={page.imageAlt}
-              width={720}
-              height={960}
-              sizes="(max-width: 939px) min(78vw, 19.5rem), 19.5rem"
-              className="relative mx-auto h-auto max-h-[calc(100svh-10rem)] w-auto max-w-full object-contain drop-shadow-[0_34px_40px_rgba(66,49,31,0.22)]"
-              loading="eager"
-            />
-          </div>
-        </SectionContainer>
-      </section>
-
-      <section className="bg-[#121212] py-20 text-[#f4f0e8] min-[900px]:py-28">
-        <SectionContainer className="grid gap-5 min-[760px]:grid-cols-3">
-          {page.benefits.map((benefit) => (
-            <article key={benefit.title} className="rounded-[26px] bg-white/[0.055] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:p-8">
-              <span aria-hidden="true" className="block h-2.5 w-2.5 rounded-full bg-[#602ad2]" />
-              <h2 className="mt-14 text-2xl font-semibold tracking-[-0.035em]">{benefit.title}</h2>
-              <p className="mt-4 leading-7 text-[#c9c2b8]">{benefit.copy}</p>
-            </article>
-          ))}
-        </SectionContainer>
-      </section>
-
-      <section className="py-20 min-[900px]:py-32">
-        <SectionContainer className="grid gap-12 min-[940px]:grid-cols-[minmax(18rem,0.58fr)_minmax(0,1fr)] min-[940px]:gap-20">
-          <div className="min-[940px]:sticky min-[940px]:top-32 min-[940px]:self-start">
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#602ad2]">{page.primaryKeyword}</p>
-            <h2 className="mt-5 max-w-lg text-4xl font-semibold leading-[1.02] tracking-[-0.05em] text-[#121212] sm:text-5xl">{page.workflowTitle}</h2>
-            <p className="mt-6 max-w-lg leading-7 text-[#666666]">
-              TripCache is built for travelers who already have real bookings and need a calmer way to manage what
-              happens after the confirmation arrives.
-            </p>
-          </div>
-          <div className="grid gap-5">
-            {page.workflow.map((step, index) => (
-              <article key={step.title} className="grid gap-5 rounded-[26px] bg-white/52 p-6 shadow-[0_1px_0_rgba(255,255,255,0.75),0_16px_42px_rgba(72,53,33,0.05)] sm:grid-cols-[auto_1fr] sm:p-8">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#602ad2] text-sm font-bold text-white shadow-[0_8px_20px_rgba(96,42,210,0.2)]">
-                  {index + 1}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold tracking-[-0.025em]">{step.title}</h3>
-                  <p className="mt-3 leading-7 text-[#666666]">{step.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </SectionContainer>
-      </section>
-
-      <section className="pb-20 min-[900px]:pb-32">
-        <SectionContainer>
-          <div className="rounded-[32px] bg-[#602ad2] p-7 text-white shadow-[0_24px_60px_rgba(96,42,210,0.16)] sm:p-10 min-[900px]:p-14">
-            <div className="flex flex-col gap-7 min-[900px]:flex-row min-[900px]:items-end min-[900px]:justify-between">
-              <div>
-                <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Continue with the workflow that fits your trip</h2>
-                <p className="mt-3 max-w-2xl leading-7 text-white/76">
-                  Explore the related feature, comparison, calculator, or guide without losing the post-booking context.
+        <Section tone="white">
+          <Container>
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+              <div className="lg:sticky lg:top-32 lg:self-start">
+                <h2 className="text-balance font-tc-display text-[clamp(32px,4vw,52px)] font-semibold leading-[1.05] tracking-[-0.02em] text-tc-ink">
+                  {page.workflowTitle}
+                </h2>
+                <p className="mt-5 max-w-[46ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
+                  TripCache is built for travelers who already have real bookings and need a calmer way to manage what
+                  happens after the confirmation arrives.
+                </p>
+                <p className="mt-6">
+                  <span className="inline-flex items-center rounded-full bg-tc-violet-soft px-3 py-1 text-[12.5px] font-semibold text-tc-violet">
+                    {page.primaryKeyword}
+                  </span>
                 </p>
               </div>
-              <Button asChild className="min-h-12 shrink-0 rounded-full bg-white px-7 text-[#121212] shadow-[0_10px_25px_rgba(58,24,135,0.16)] hover:bg-[#f4f0e8] hover:text-[#121212]">
-                <Link href={page.resourceCta.href}>{page.resourceCta.label}</Link>
-              </Button>
+
+              {isAlternative ? (
+                <div>
+                  <ol className="overflow-hidden rounded-[26px] border border-tc-line bg-white shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-44px_rgba(45,27,87,0.45)]">
+                    {page.workflow.map((step, index) => (
+                      <li
+                        key={step.title}
+                        className="grid grid-cols-[auto_minmax(0,1fr)_auto] gap-x-4 gap-y-1 border-b border-tc-line px-5 py-6 last:border-b-0 sm:grid-cols-[40px_minmax(0,0.85fr)_minmax(0,1.15fr)_auto] sm:gap-x-6 sm:px-8"
+                      >
+                        <span className="pt-1 font-tc-display text-[17px] font-semibold tabular-nums text-tc-mute">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <h3 className="font-tc-display text-[19px] font-semibold leading-snug text-tc-ink sm:text-[20px]">{step.title}</h3>
+                        <span aria-hidden="true" className="row-span-2 grid size-7 place-items-center self-start rounded-full bg-tc-violet-soft text-tc-violet sm:order-last sm:row-span-1">
+                          <Check className="size-4" strokeWidth={2.6} />
+                        </span>
+                        <p className="col-start-2 text-[15.5px] leading-7 text-tc-mute sm:col-start-3 sm:row-start-1">{step.copy}</p>
+                      </li>
+                    ))}
+                  </ol>
+
+                  <div className="mt-10">
+                    <div className="flex flex-wrap items-end justify-between gap-3">
+                      <h3 className="font-tc-display text-[24px] font-semibold tracking-[-0.015em] text-tc-ink">Compare plans</h3>
+                      <Link
+                        href="/pricing"
+                        className="inline-flex items-center gap-1 rounded-[8px] text-[14.5px] font-semibold text-tc-violet underline-offset-4 hover:underline"
+                      >
+                        Pricing
+                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                      </Link>
+                    </div>
+                    <PlanTable rows={PLAN_ROWS} caption="TripCache Basic and Pro plans" className="mt-5" />
+                  </div>
+                </div>
+              ) : (
+                <Card as="div" className="h-fit">
+                  <ol className="px-6 py-8 sm:px-10 sm:py-10">
+                    {page.workflow.map((step, index) => (
+                      <li key={step.title} className="relative grid grid-cols-[44px_minmax(0,1fr)] gap-5 py-5 first:pt-0 last:pb-0">
+                        {index < page.workflow.length - 1 ? (
+                          <span
+                            aria-hidden="true"
+                            className={cx(
+                              "absolute bottom-[-14px] left-[21px] w-0.5 rounded-full bg-[linear-gradient(to_bottom,#612bd3,#d82d7e)] opacity-50",
+                              index === 0 ? "top-[50px]" : "top-[70px]",
+                            )}
+                          />
+                        ) : null}
+                        <span className="relative grid size-11 place-items-center rounded-full bg-tc-violet text-[15px] font-semibold tabular-nums text-white shadow-[0_8px_18px_-8px_rgba(97,43,211,0.7)]">
+                          {index + 1}
+                        </span>
+                        <div className="pt-1.5">
+                          <h3 className="font-tc-display text-[21px] font-semibold leading-snug text-tc-ink sm:text-[23px]">{step.title}</h3>
+                          <p className="mt-2 max-w-[52ch] text-[15.5px] leading-7 text-tc-mute">{step.copy}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </Card>
+              )}
+            </div>
+          </Container>
+        </Section>
+
+        <Section tone="canvas">
+          <Container>
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
+              <div>
+                <h2 className="text-balance font-tc-display text-[clamp(30px,3.6vw,46px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink">
+                  Continue with the workflow that fits your trip
+                </h2>
+                <p className="mt-4 max-w-[52ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
+                  Explore the related feature, comparison, calculator, or guide without losing the post-booking context.
+                </p>
+                {showCover ? null : (
+                  <Link href={page.resourceCta.href} className={cx(buttonClass("primary", "lg"), "mt-8")}>
+                    {page.resourceCta.label}
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                )}
+              </div>
+
+              <div className="self-start">
+                {showCover ? (
+                  <Link href={page.resourceCta.href} className="group mb-8 block rounded-[26px]">
+                    <Card interactive>
+                      <Image
+                        src={page.image}
+                        alt={page.imageAlt}
+                        width={1200}
+                        height={630}
+                        sizes="(min-width: 1024px) 540px, 100vw"
+                        className="aspect-[1200/630] w-full object-cover"
+                      />
+                      <span className="flex items-center justify-between gap-4 px-6 py-5 text-[15.5px] font-semibold text-tc-ink">
+                        {page.resourceCta.label}
+                        <ArrowRight
+                          className="size-4 shrink-0 text-tc-violet transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </Card>
+                  </Link>
+                ) : null}
+
+                <ul className="border-t border-tc-line">
+                  {page.internalLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="group flex items-center justify-between gap-4 border-b border-tc-line py-5 font-tc-display text-[19px] font-semibold text-tc-ink transition-colors hover:text-tc-violet sm:text-[21px]"
+                      >
+                        {link.label}
+                        <span className="grid size-9 shrink-0 place-items-center rounded-[10px] bg-white text-tc-ink-2 transition-[transform,background-color,color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1 group-hover:bg-tc-violet-soft group-hover:text-tc-violet motion-reduce:transition-none">
+                          <ArrowRight className="size-4" aria-hidden="true" />
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Container>
+        </Section>
+
+        <Section tone="white">
+          <Container>
+            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+              <div>
+                <h2 className="text-balance font-tc-display text-[clamp(32px,4vw,50px)] font-semibold leading-[1.05] tracking-[-0.02em] text-tc-ink">
+                  Frequently asked questions
+                </h2>
+                <p className="mt-5 max-w-[40ch] text-pretty text-[17px] leading-7 text-tc-ink-2">
+                  Clear answers for travelers comparing tools and building better travel organization workflows.
+                </p>
+              </div>
+              <FaqList faqs={page.faqs} />
             </div>
 
-            <div className="mt-10 grid gap-3 min-[760px]:grid-cols-3">
-              {page.internalLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-[18px] bg-white/10 p-5 text-sm font-semibold text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] transition-[background-color,transform] duration-150 ease-out hover:-translate-y-0.5 hover:bg-white/16"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </SectionContainer>
-      </section>
+            <nav aria-label="TripCache features" className="mt-16 grid gap-3 sm:mt-20 md:grid-cols-3">
+              {featureLinks.map((link) => {
+                const Icon = link.icon
+                const current = link.href === page.path
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-current={current ? "page" : undefined}
+                    className="group flex min-h-20 items-center gap-4 rounded-[20px] border border-tc-line bg-white px-5 py-4 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_24px_44px_-36px_rgba(45,27,87,0.45)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 motion-reduce:transition-none"
+                  >
+                    <IconTile icon={Icon} tone="bg-tc-violet-soft text-tc-violet" className="size-10 rounded-full" />
+                    <span className="flex-1 text-[15.5px] font-semibold text-tc-ink">{link.label}</span>
+                    <ArrowRight
+                      className="size-4 shrink-0 text-tc-mute transition-transform duration-300 group-hover:translate-x-1 group-hover:text-tc-violet"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                )
+              })}
+            </nav>
+          </Container>
+        </Section>
 
-      <section className="py-20 min-[900px]:py-28">
-        <SectionContainer className="grid gap-12 min-[900px]:grid-cols-[minmax(17rem,0.62fr)_minmax(0,1fr)] min-[900px]:gap-20">
-          <div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.05em] text-[#121212] sm:text-5xl">Frequently asked questions</h2>
-            <p className="mt-5 max-w-md leading-7 text-[#666666]">
-              Clear answers for travelers comparing tools and building better travel organization workflows.
-            </p>
-          </div>
-          <div className="space-y-3">
-            {page.faqs.map((faq) => (
-              <details key={faq.question} className="group rounded-[22px] bg-white/48 px-6 shadow-[0_1px_0_rgba(255,255,255,0.7),0_14px_36px_rgba(72,53,33,0.04)] sm:px-7">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-semibold marker:content-none">
-                  <span>{faq.question}</span>
-                  <span aria-hidden="true" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#e5dcff] text-xl font-normal text-[#602ad2] transition-transform duration-150 ease-out group-open:rotate-45">+</span>
-                </summary>
-                <p className="max-w-3xl pb-7 leading-7 text-[#666666]">{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </SectionContainer>
-      </section>
-
-      <section className="pb-20 min-[900px]:pb-28">
-        <SectionContainer className="grid gap-4 min-[760px]:grid-cols-3">
-          {featureLinks.map((link) => {
-            const Icon = link.icon
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="group flex min-h-24 items-center gap-4 rounded-[22px] bg-[#121212] p-6 text-[#f4f0e8] shadow-[0_16px_38px_rgba(52,43,33,0.12)] transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:bg-[#242424]"
-              >
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#602ad2]"><Icon className="h-5 w-5" /></span>
-                <span className="font-semibold">{link.label}</span>
-              </Link>
-            )
-          })}
-        </SectionContainer>
-      </section>
-
+        <CtaBand placement={`${page.kind}_${page.slug}_cta_band`} />
+      </SitePage>
       <Footer />
-    </main>
+    </>
   )
 }

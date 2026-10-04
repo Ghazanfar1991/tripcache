@@ -1,7 +1,7 @@
 "use client"
 
 /**
- * A split-flap departure board for the free travel tools.
+ * The departure board from the home page's free-cancellation card, for the tools routes.
  * Split-flap letters shuffle before settling and flip-clock digits fall into place once the board
  * scrolls into view. Purely visual: the board is aria-hidden, so callers must render the same
  * facts as text. Styles live in app/tools/tools.css (imported by the tools routes).
@@ -137,7 +137,7 @@ export function DepartureBoard({
 
   return (
     <div ref={ref} aria-hidden="true" className={`tct-board rounded-[20px] px-3.5 pb-5 pt-3.5 text-white sm:px-5 sm:pt-4 ${className}`}>
-      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b-[1px] border-white/10 pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-white/10 pb-3">
         <span className="flex min-w-0 items-center gap-2 text-[12px] font-semibold text-white/75">
           {icon ?? (
             <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[#12b76a]/20 text-[#5ee4a5]">
@@ -146,7 +146,7 @@ export function DepartureBoard({
           )}
           <span className="truncate">{meta}</span>
         </span>
-        <span className="text-[10.5px] font-semibold uppercase tracking-[.14em] text-[#fec84b] sm:text-[11px]">{label}</span>
+        <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-[#fec84b] sm:text-[11px]">{label}</span>
       </div>
 
       <div className="mt-3.5 flex flex-col gap-1.5 overflow-hidden">
@@ -160,13 +160,13 @@ export function DepartureBoard({
           <span className="flex items-center gap-[3px]">
             <FlipDigit value={time.hh[0]} run={run} delay={0} />
             <FlipDigit value={time.hh[1]} run={run} delay={70} />
-            <span className="px-1 text-[22px] font-bold leading-[100%] text-white/45 sm:text-[30px]">:</span>
+            <span className="px-1 text-[22px] font-bold leading-none text-white/45 sm:text-[30px]">:</span>
             <FlipDigit value={time.mm[0]} run={run} delay={140} />
             <FlipDigit value={time.mm[1]} run={run} delay={210} />
           </span>
           <span className="flex flex-col gap-1.5 pb-0.5">
             <FlapText value={time.period} width={time.period.length || 2} run={seen} delay={380} tone={TONES.gold} />
-            <span className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-white/[0.6]">{time.zone}</span>
+            <span className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-white/60">{time.zone}</span>
           </span>
         </div>
       ) : null}

@@ -1,12 +1,12 @@
 import "../secondary.css"
 
 import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowLeft, CalendarClock, FileSpreadsheet, MailCheck } from "lucide-react"
+import Image from "next/image"
+import { ArrowLeft, CalendarClock, Check, FileSpreadsheet, Mail, MailCheck } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { GetStartedModal } from "@/components/get-started-modal"
-import { SectionContainer } from "@/components/section-container"
+import { ButtonLink, Card, Container, CtaBand, PageHero, Section, SitePage } from "@/components/site/kit"
 import { createPageMetadata } from "@/lib/seo-metadata"
 
 export const metadata: Metadata = createPageMetadata({
@@ -37,6 +37,8 @@ const principles = [
   },
 ]
 
+const principleBlooms = ["#8b5cf6", "#f59e0b", "#12b76a"]
+
 const SITE_URL = "https://trip-cache.com"
 
 const aboutPageSchema = {
@@ -54,134 +56,190 @@ const aboutPageSchema = {
   inLanguage: "en",
 }
 
+const editorialStandards = [
+  "Claims about TripCache, including what is free and what needs Pro, are checked against the current app and its App Store and Google Play listings.",
+  "Prices and features of other apps come from their official websites or store listings, with the date we checked them.",
+  "Material claims link to a source that lets readers verify the detail.",
+  "Because we make TripCache, comparisons say so, explain where TripCache is not the best fit, and avoid unsupported superiority claims.",
+  "We don't publish invented statistics, testimonials or ratings.",
+  "Publication and update dates stay visible, and substantive corrections receive a new review date.",
+  "Product screenshots and descriptions reflect features available in the current app.",
+]
+
+function StandardCheck() {
+  return (
+    <span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-tc-violet-soft text-tc-violet">
+      <Check className="size-3" strokeWidth={3} aria-hidden="true" />
+    </span>
+  )
+}
+
+const mailLinkClass =
+  "font-semibold text-tc-violet underline decoration-tc-violet/30 underline-offset-4 transition-colors hover:decoration-tc-violet"
+
 export default function AboutPage() {
   return (
-    <main className="journal-paper min-h-screen text-[#121212]">
+    <SitePage>
       <script
         id="about-page-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema).replace(/</g, "\\u003c") }}
       />
-      <SectionContainer className="space-y-16 pb-20 pt-32 sm:pt-36">
-        <div className="flex justify-center lg:justify-start">
-          <Link
-            href="/"
-            className="design-one-press inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 text-sm font-semibold text-[#5f5f5f] shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08),0_8px_28px_rgba(72,53,33,0.05)] transition-colors hover:text-[#4d20af]"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back home
-          </Link>
-        </div>
-
-        <header className="mx-auto max-w-3xl space-y-6 text-center">
-          <h1 className="text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">
-            Built for the details that arrive after you book.
-          </h1>
-          <p className="text-lg leading-8 text-[#666666]">
+      <PageHero
+        title="Built for the details that arrive after you book."
+        lede={
+          <p>
             Travel information rarely lives in one place. Confirmations sit in email, cancellation policies hide in
             fine print, receipts land in photo libraries, and trip changes arrive through notifications. TripCache
             brings those post-booking details into one itinerary.
           </p>
-        </header>
+        }
+        aside={
+          <div className="relative mx-auto max-w-[460px] lg:max-w-none">
+            <Image
+              src="/brand-suitcase-pass.webp"
+              alt=""
+              width={900}
+              height={750}
+              priority
+              sizes="(min-width: 1024px) 480px, 90vw"
+              className="h-auto w-full drop-shadow-[0_34px_40px_rgba(45,27,87,0.22)]"
+            />
+          </div>
+        }
+      >
+        <ButtonLink href="/" variant="secondary">
+          <ArrowLeft className="size-4" aria-hidden="true" />
+          Back home
+        </ButtonLink>
+      </PageHero>
 
-        <section
-          id="what-is-tripcache"
-          aria-labelledby="what-is-tripcache-heading"
-          className="mx-auto max-w-3xl scroll-mt-28 space-y-4 text-lg leading-8 text-[#555555]"
-        >
-          <h2 id="what-is-tripcache-heading" className="text-3xl font-semibold tracking-[-0.04em] text-[#121212]">
+      <Section
+        id="what-is-tripcache"
+        aria-labelledby="what-is-tripcache-heading"
+        tone="canvas"
+        className="scroll-mt-28 pb-10 pt-4 sm:pb-12 sm:pt-8"
+      >
+        <Container className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <h2
+            id="what-is-tripcache-heading"
+            className="text-balance font-tc-display text-[clamp(30px,3.8vw,50px)] font-semibold leading-[1.06] tracking-[-0.02em] text-tc-ink"
+          >
             What is TripCache?
           </h2>
-          <p>
-            TripCache is a post-booking travel organizer app for iPhone (iOS 16.4 or later) and Android (7.0 or later).
-            It keeps the details that arrive after you book (flights, stays, cancellation deadlines, travel documents
-            and trip expenses) together in one itinerary.
-          </p>
-          <p>
-            TripCache Basic is free. It includes cancellation-deadline and check-in reminders, boarding-pass scanning, a
-            document vault with an optional PIN and Face ID or fingerprint unlock, expenses in 153 currencies, CSV and
-            PDF export, CSV import of past flights, a trip map and offline access. TripCache Pro adds booking-email
-            import, live flight-status alerts on supported flights, and Live Activity and widgets for $5.99 a month, or
-            $49.99 a year on Google Play and $50.00 on the App Store (US prices, October 2026).
-          </p>
-          <p>
-            TripCache is an independent app. It isn&apos;t made by Sabre and has no connection to TripCase, the Sabre
-            itinerary app that shut down in 2025.
-          </p>
-        </section>
-
-        <section className="grid gap-6 md:grid-cols-3">
-          {principles.map((principle) => {
-            const Icon = principle.icon
-            return (
-              <article key={principle.title} className="rounded-[28px] bg-white/48 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_20px_55px_rgba(72,53,33,0.06)]">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e8e0ff] text-[#602ad2]">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h2 className="mt-5 text-xl font-semibold">{principle.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-[#666666]">{principle.description}</p>
-              </article>
-            )
-          })}
-        </section>
-
-        <section id="editorial-standards" className="scroll-mt-28 rounded-[32px] bg-white/48 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_20px_55px_rgba(72,53,33,0.06)] sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#4d20af]">Editorial standards</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em]">How we write and fact-check TripCache guides</h2>
-            <p className="mt-5 leading-7 text-[#666666]">
-              Guides on trip-cache.com are published by TripCache, the maker of the TripCache app, under the TripCache
-              Editorial Team byline. We write practical guidance about post-booking travel organization, and we check changeable
-              prices, product features, shutdown dates and policies against official product pages, store listings,
-              help centers or government sources before relying on them.
+          <div className="max-w-[62ch] space-y-4 text-pretty text-[17px] leading-8 text-tc-ink-2">
+            <p>
+              TripCache is a post-booking travel organizer app for iPhone (iOS 16.4 or later) and Android (7.0 or
+              later). It keeps the details that arrive after you book (flights, stays, cancellation deadlines, travel
+              documents and trip expenses) together in one itinerary.
             </p>
-            <ul className="mt-6 list-disc space-y-3 ps-5 leading-7 text-[#666666]">
-              <li>
-                Claims about TripCache, including what is free and what needs Pro, are checked against the current app
-                and its App Store and Google Play listings.
-              </li>
-              <li>Prices and features of other apps come from their official websites or store listings, with the date we checked them.</li>
-              <li>Material claims link to a source that lets readers verify the detail.</li>
-              <li>
-                Because we make TripCache, comparisons say so, explain where TripCache is not the best fit, and avoid
-                unsupported superiority claims.
-              </li>
-              <li>We don&apos;t publish invented statistics, testimonials or ratings.</li>
-              <li>Publication and update dates stay visible, and substantive corrections receive a new review date.</li>
-              <li>Product screenshots and descriptions reflect features available in the current app.</li>
-              <li>
-                Questions or correction requests can be sent to{" "}
-                <a className="font-semibold text-[#4d20af] underline underline-offset-4" href="mailto:support@trip-cache.com">
-                  support@trip-cache.com
-                </a>
-                .
+            <p>
+              TripCache Basic is free. It includes cancellation-deadline and check-in reminders, boarding-pass
+              scanning, a document vault with an optional PIN and Face ID or fingerprint unlock, expenses in 153
+              currencies, CSV and PDF export, CSV import of past flights, a trip map and offline access. TripCache Pro
+              adds booking-email import, live flight-status alerts on supported flights, and Live Activity and widgets
+              for $5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store (US prices, October
+              2026).
+            </p>
+            <p>
+              TripCache is an independent app. It isn&apos;t made by Sabre and has no connection to TripCase, the
+              Sabre itinerary app that shut down in 2025.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="canvas" className="pt-4 sm:pt-6">
+        <Container>
+          <ul className="grid gap-5 md:grid-cols-3">
+            {principles.map((principle, index) => {
+              const Icon = principle.icon
+              return (
+                <Card key={principle.title} as="li" bloom={principleBlooms[index]} className="h-full p-6 sm:p-8">
+                  <span className="grid size-11 place-items-center rounded-[12px] bg-tc-violet-soft text-tc-violet">
+                    <Icon className="size-5" aria-hidden="true" />
+                  </span>
+                  <h2 className="mt-6 font-tc-display text-[23px] font-semibold leading-[1.18] tracking-[-0.015em] text-tc-ink sm:text-[25px]">{principle.title}</h2>
+                  <p className="mt-3 text-[15.5px] leading-7 text-tc-mute">{principle.description}</p>
+                </Card>
+              )
+            })}
+          </ul>
+        </Container>
+      </Section>
+
+      <Section id="editorial-standards" className="scroll-mt-28">
+        <Container className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+          <div id="editorial-team" className="scroll-mt-28">
+            <h2 className="text-balance font-tc-display text-[clamp(30px,3.8vw,50px)] font-semibold leading-[1.06] tracking-[-0.02em] text-tc-ink">
+              How we write and fact-check TripCache guides
+            </h2>
+            <p className="mt-5 max-w-[56ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
+              Guides on trip-cache.com are published by TripCache, the maker of the TripCache app, under the TripCache
+              Editorial Team byline. We write practical guidance about post-booking travel organization, and we check
+              changeable prices, product features, shutdown dates and policies against official product pages, store
+              listings, help centers or government sources before relying on them.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-tc-display text-[19px] font-semibold text-tc-ink sm:text-[21px]">Editorial standards</h3>
+            <ul className="mt-4 border-t border-tc-line">
+              {editorialStandards.map((item) => (
+                <li key={item} className="flex gap-3.5 border-b border-tc-line py-4 text-[16px] leading-7 text-tc-ink-2">
+                  <StandardCheck />
+                  {item}
+                </li>
+              ))}
+              <li className="flex gap-3.5 border-b border-tc-line py-4 text-[16px] leading-7 text-tc-ink-2">
+                <StandardCheck />
+                <span>
+                  Questions or correction requests can be sent to{" "}
+                  <a className={mailLinkClass} href="mailto:support@trip-cache.com">
+                    support@trip-cache.com
+                  </a>
+                  .
+                </span>
               </li>
             </ul>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section id="support" className="rounded-[32px] bg-[#121212] p-8 text-[#f7f2e9] shadow-[0_28px_70px_rgba(64,47,30,0.16)] sm:p-10">
-          <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
-            <div>
-              <h2 className="text-3xl font-bold">TripCache is available now on iPhone and Android.</h2>
-              <p className="mt-3 max-w-2xl text-[#b9b0a3]">
-                Start with the free Basic plan, which already includes cancellation-deadline and check-in reminders, the
-                document vault, expenses, and CSV or PDF export. Upgrade to Pro in the app if booking-email import, live
-                flight-status alerts on supported flights, and Live Activity fit your travel routine.
-              </p>
-              <p className="mt-4 text-sm text-[#b9b0a3]">
-                Questions? Email{" "}
-                <a className="font-semibold text-[#a98af0]" href="mailto:support@trip-cache.com">
-                  support@trip-cache.com
-                </a>
-                .
-              </p>
+      <Section id="support" tone="canvas" className="scroll-mt-28">
+        <Container>
+          <Card bloom="#8b5cf6" className="p-6 sm:p-10 lg:p-12">
+            <div className="grid items-center gap-8 md:grid-cols-[1fr_auto] md:gap-12">
+              <div>
+                <h2 className="text-balance font-tc-display text-[clamp(28px,3.2vw,40px)] font-semibold leading-[1.1] tracking-[-0.02em] text-tc-ink">
+                  TripCache is available now on iPhone and Android.
+                </h2>
+                <p className="mt-4 max-w-[60ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
+                  Start with the free Basic plan, which already includes cancellation-deadline and check-in reminders,
+                  the document vault, expenses, and CSV or PDF export. Upgrade to Pro in the app if booking-email
+                  import, live flight-status alerts on supported flights, and Live Activity fit your travel routine.
+                </p>
+                <p className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[15.5px] text-tc-mute">
+                  <Mail className="size-4 text-tc-violet" aria-hidden="true" />
+                  <span>
+                    Questions? Email{" "}
+                    <a className={mailLinkClass} href="mailto:support@trip-cache.com">
+                      support@trip-cache.com
+                    </a>
+                    .
+                  </span>
+                </p>
+              </div>
+              <GetStartedModal
+                triggerLabel="Download TripCache"
+                triggerClassName="tc-press h-12 rounded-[12px] bg-tc-violet px-6 text-[15.5px] shadow-[0_10px_22px_-10px_rgba(97,43,211,0.8)] hover:bg-[#5520cb] hover:shadow-[0_10px_22px_-10px_rgba(97,43,211,0.8)] sm:px-6 sm:text-[15.5px] justify-self-start"
+              />
             </div>
-            <GetStartedModal triggerLabel="Download TripCache" triggerClassName="h-11 rounded-full px-6" />
-          </div>
-        </section>
-      </SectionContainer>
+          </Card>
+        </Container>
+      </Section>
+
+      <CtaBand placement="about" />
       <Footer />
-    </main>
+    </SitePage>
   )
 }
