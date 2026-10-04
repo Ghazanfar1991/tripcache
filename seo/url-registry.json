@@ -84,9 +84,17 @@
       "legacyYearSlug": true
     },
     {
+      "path": "/blog/hotel-cancellation-policies",
+      "status": "live"
+    },
+    {
       "path": "/blog/hotel-cancellation-reminder-app-2026",
       "status": "live",
       "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/how-to-find-your-travel-history",
+      "status": "live"
     },
     {
       "path": "/blog/organize-travel-confirmation-emails-2026",
@@ -144,6 +152,18 @@
       "legacyYearSlug": true
     },
     {
+      "path": "/blog/wanderlog-vs-tripit",
+      "status": "live"
+    },
+    {
+      "path": "/blog/flight-time-zones-arrival-date",
+      "status": "live"
+    },
+    {
+      "path": "/blog/save-travel-documents-offline",
+      "status": "live"
+    },
+    {
       "path": "/features",
       "status": "live"
     },
@@ -177,6 +197,22 @@
     },
     {
       "path": "/tools/hotel-cancellation-deadline-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/flight-arrival-time-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/jet-lag-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/layover-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/travel-checklist",
       "status": "live"
     },
     {
@@ -253,6 +289,11 @@
       "path": "/blog/email-to-itinerary-app",
       "status": "redirected",
       "redirectTo": "/blog/ai-travel-organizer-app-2026"
+    },
+    {
+      "path": "/support",
+      "status": "redirected",
+      "redirectTo": "/about"
     }
   ]
 }

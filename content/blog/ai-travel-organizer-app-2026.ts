@@ -188,7 +188,7 @@ Families need passports, visas, tickets, hotel confirmations, activities, restau
 
 ### Digital Nomad Travel
 
-Nomads need longer-term travel history, accommodation records, visas, insurance, proof of onward travel, and receipts.
+Nomads need longer-term travel history, accommodation records, visas, insurance, proof of onward travel, and receipts. When an application asks where you have been, our guide on [how to find your travel history](/blog/how-to-find-your-travel-history) covers official records and how to fill the gaps.
 
 ### Group and Event Travel
 

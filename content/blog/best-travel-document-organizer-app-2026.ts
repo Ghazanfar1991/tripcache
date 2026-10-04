@@ -119,5 +119,7 @@ Up to 10 files per document, 15 MB per file and 50 MB per document, in PDF, JPEG
 
 The best system is the one you can trust while standing in line. Keep originals with you, keep copies sorted and locked, and keep them in the same place as the trip they belong to. TripCache is free to try on the [App Store](https://apps.apple.com/app/id6758403056) and [Google Play](https://play.google.com/store/apps/details?id=app.tripcache).
 
+If a visa form asks for your past trips, see [how to find your travel history](/blog/how-to-find-your-travel-history), including the US I-94 record. TripCache's free Travel History and Visa / Immigration Summary exports cover trips you've stored in the app.
+
 For entry requirements, check the relevant government and your airline before you travel. The [IATA Travel Centre](https://www.iatatravelcentre.com/) is a useful starting point, not a substitute for official destination guidance.
 `

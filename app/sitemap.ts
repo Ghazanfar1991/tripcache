@@ -43,12 +43,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/tools`,
-      lastModified: changed("2026-08-29"),
+      lastModified: changed("2026-10-05"),
     },
     {
       url: `${baseUrl}/tools/hotel-cancellation-deadline-calculator`,
-      lastModified: changed("2026-08-29"),
+      lastModified: changed("2026-10-05"),
     },
+    ...[
+      "/tools/flight-arrival-time-calculator",
+      "/tools/jet-lag-calculator",
+      "/tools/layover-calculator",
+      "/tools/travel-checklist",
+    ].map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: changed("2026-10-05"),
+    })),
     {
       url: `${baseUrl}/privacy`,
       lastModified: changed("2026-08-29"),

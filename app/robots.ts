@@ -1,12 +1,18 @@
 import type { MetadataRoute } from "next"
 
+// /api/airports feeds the public flight-time, jet-lag and layover calculators,
+// so crawlers that render those pages must be able to fetch it. The longer
+// Allow wins over Disallow: /api/ (RFC 9309).
+const allow = ["/", "/api/airports"]
+const disallow = ["/api/", "/admin/"]
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/admin/"],
+        allow,
+        disallow,
       },
       {
         userAgent: [
@@ -19,12 +25,15 @@ export default function robots(): MetadataRoute.Robots {
           "Claude-SearchBot",
           "Claude-User",
           "PerplexityBot",
+          "Perplexity-User",
           "Applebot",
           "Applebot-Extended",
           "Amazonbot",
+          "DuckAssistBot",
+          "MistralAI-User",
         ],
-        allow: "/",
-        disallow: ["/api/", "/admin/"],
+        allow,
+        disallow,
       },
       {
         userAgent: "Google-Extended",
@@ -32,6 +41,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://trip-cache.com/sitemap.xml",
-    host: "https://trip-cache.com",
   }
 }

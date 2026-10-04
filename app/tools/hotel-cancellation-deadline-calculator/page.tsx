@@ -184,7 +184,11 @@ export default async function HotelCancellationDeadlineCalculatorPage({
             <h2 className="text-4xl font-semibold tracking-[-0.055em] sm:text-6xl">Hotel cancellation FAQ</h2>
             <p className="mt-5 leading-7 text-[#666666]">
               Use this calculator as a planning helper, then confirm the final deadline against the provider or hotel
-              confirmation.
+              confirmation. Our{" "}
+              <Link href="/blog/hotel-cancellation-policies" className="font-semibold text-[#4d20af] hover:underline">
+                hotel cancellation policy guide
+              </Link>{" "}
+              explains refundable rates, fees and brand rules.
             </p>
           </div>
           <div className="space-y-3">
@@ -211,6 +215,21 @@ export default async function HotelCancellationDeadlineCalculatorPage({
               </Link>
               <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/features/email-to-itinerary">
                 Email-to-itinerary automation
+              </Link>
+            </div>
+            <h3 className="mt-8 text-xl font-semibold tracking-[-0.03em]">More free travel tools</h3>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/flight-arrival-time-calculator">
+                Flight time calculator
+              </Link>
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/layover-calculator">
+                Layover calculator
+              </Link>
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/jet-lag-calculator">
+                Jet lag calculator
+              </Link>
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/travel-checklist">
+                Travel checklist generator
               </Link>
             </div>
           </div>
