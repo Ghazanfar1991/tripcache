@@ -78,7 +78,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound()
   }
 
-  const { metadata, Content } = post
+  const { metadata, Content, faq } = post
   const shareUrl = `${BASE_URL}/blog/${slug}`
   const modifiedDate = metadata.updatedAt ?? metadata.date
   const displayDate = new Date(modifiedDate).toLocaleDateString("en-US", { month: "long", year: "numeric" })
@@ -123,6 +123,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           { "@type": "ListItem", position: 3, name: metadata.title, item: shareUrl },
         ],
       },
+      // Only posts that define an FAQ list get this node; it mirrors the visible FAQ section.
+      ...(faq?.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${shareUrl}#faq`,
+              mainEntity: faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            },
+          ]
+        : []),
     ],
   }
 

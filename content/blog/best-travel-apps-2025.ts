@@ -52,7 +52,7 @@ All eight have a free version. Prices and features were checked on each official
 
 Wanderlog puts your itinerary and a map side by side. Add places, drag them into days, see how far apart they are, and plan with friends in real time. The free version includes unlimited places, collaboration, reservation import, recommendations, budgets with expense splitting, and checklists.
 
-Wanderlog Pro (from $39.99 a year) adds offline access, route optimization, export to Google Maps, automatic Gmail scanning for bookings, unlimited attachments and an unlimited AI assistant.
+Wanderlog Pro (from $39.99 a year) adds offline access, route optimization, export to Google Maps, automatic Gmail scanning for bookings, unlimited attachments and an unlimited AI assistant. If you're choosing between Wanderlog and TripIt, our [Wanderlog vs TripIt comparison](/blog/wanderlog-vs-tripit) goes deeper on pricing, free plans and which fits how you travel.
 
 **Tradeoff:** it is built for planning. Once everything is booked, it does less with cancellation deadlines, documents or expense records.
 

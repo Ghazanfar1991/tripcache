@@ -39,7 +39,7 @@ Most travelers book across several places:
 - Airport transfers, trains, ferries, event tickets, restaurants, activities, and tours.
 - Work meetings, visa appointments, parking reservations, and insurance documents.
 
-Each confirmation email has different wording. Some say "cancel by 6 PM local time." Others say "free cancellation until 48 hours before check-in." When those details stay buried in your inbox, you only notice them after the refund window is gone.
+Each confirmation email has different wording. Some say "cancel by 6 PM local time." Others say "free cancellation until 48 hours before check-in." When those details stay buried in your inbox, you only notice them after the refund window is gone. Our [hotel cancellation policy guide](/blog/hotel-cancellation-policies) explains how hotel deadlines, deposits and fees usually work.
 
 ## What a Travel Cancellation Reminder Should Track
 
