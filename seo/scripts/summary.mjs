@@ -51,6 +51,11 @@ const lines = [
         `${indexStatus.indexed}/${indexStatus.sitemapUrls} sitemap URLs indexed (checked ${indexStatus.generatedAt.slice(0, 10)}).`,
         "",
         ...indexStatus.pages.filter((page) => page.indexed === false).map((page) => `- \`${page.path}\` — ${page.coverageState}${page.lastCrawlTime ? ` (last crawl ${page.lastCrawlTime.slice(0, 10)})` : " (never crawled)"}`),
+        "",
+        "Other Search Console issues (structured data, canonicals, fetch, robots, sitemap):",
+        "",
+        ...((indexStatus.issues || []).filter((issue) => issue.kind !== "not-indexed").map((issue) => `- \`${issue.path}\` — ${issue.kind}: ${issue.detail}`)),
+        ...((indexStatus.issues || []).some((issue) => issue.kind !== "not-indexed") ? [] : ["- None reported."]),
       ]
     : ["Not collected yet (first nightly run pending)."]),
   "",
