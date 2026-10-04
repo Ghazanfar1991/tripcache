@@ -19,6 +19,153 @@ const SITE_URL = "https://trip-cache.com"
 const IOS_STORE_URL = "https://apps.apple.com/app/id6758403056"
 const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=app.tripcache"
 const IS_VERCEL_DEPLOYMENT = process.env.VERCEL === "1"
+const INSTAGRAM_URL = "https://www.instagram.com/tripcache/"
+const EDITORIAL_STANDARDS_URL = `${SITE_URL}/about#editorial-standards`
+const PRICING_URL = `${SITE_URL}/pricing`
+const US_REGION = { "@type": "Country", name: "US" }
+
+// Site-wide entity graph. Blog posts reference #organization, #website, #app and
+// /about#editorial-team by @id, so those nodes must be defined here.
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "TripCache",
+      url: SITE_URL,
+      logo: `${SITE_URL}/app-icon-violet-indigo.webp`,
+      description:
+        "TripCache makes a post-booking travel organizer app for iPhone and Android that keeps trips, cancellation deadlines, travel documents and expenses together. Basic is free; TripCache Pro adds booking-email import and live flight-status alerts.",
+      email: "support@trip-cache.com",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "support@trip-cache.com",
+        availableLanguage: "English",
+      },
+      sameAs: [IOS_STORE_URL, ANDROID_STORE_URL, INSTAGRAM_URL],
+      publishingPrinciples: EDITORIAL_STANDARDS_URL,
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/about#editorial-team`,
+      name: "TripCache Editorial Team",
+      url: `${SITE_URL}/about`,
+      description: "The byline TripCache uses for the travel guides and app comparisons it publishes on trip-cache.com.",
+      parentOrganization: { "@id": `${SITE_URL}/#organization` },
+      publishingPrinciples: EDITORIAL_STANDARDS_URL,
+    },
+  ],
+}
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "TripCache",
+  url: SITE_URL,
+  description:
+    "Official product information and travel organization guides for TripCache, a post-booking travel organizer for confirmations, cancellation deadlines, documents, receipts, and expenses.",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: "en",
+}
+
+const proFeatureSummary =
+  "Pro adds booking-email import with a monthly allowance, live flight-status alerts on supported flights, and Live Activity, Dynamic Island and widgets."
+
+const mobileApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "@id": `${SITE_URL}/#app`,
+  name: "TripCache",
+  applicationCategory: "TravelApplication",
+  applicationSubCategory: "Travel itinerary and post-booking organizer",
+  operatingSystem: "iOS 16.4+, Android 7.0+",
+  url: SITE_URL,
+  image: `${SITE_URL}/app-icon-violet-indigo.webp`,
+  description:
+    "TripCache is a post-booking travel organizer for iPhone and Android. The free Basic plan includes cancellation-deadline and check-in reminders, boarding-pass scanning, a document vault, expenses and CSV or PDF export. TripCache Pro adds booking-email import and live flight-status alerts on supported flights.",
+  downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
+  inLanguage: "en",
+  featureList: [
+    "Trips with flights, stays, rental cars, trains, buses, parking, events, restaurants, tours and meetings (Basic, free)",
+    "Cancellation-deadline reminders 7 days, 2 days or 1 day before, or on the day (Basic, free)",
+    "Check-in reminders 48 and 24 hours before departure, with a check-in shortcut (Basic, free)",
+    "Boarding-pass barcode scanning (Basic, free)",
+    "Document vault with an optional PIN and Face ID or fingerprint unlock (Basic, free)",
+    "Expenses in 153 currencies with locked exchange rates and category budgets (Basic, free)",
+    "CSV and PDF export, including Travel History and a Visa / Immigration Summary (Basic, free)",
+    "CSV import of past flights (Basic, free)",
+    "Trip map and travel history (Basic, free)",
+    "Offline access to trips and cached documents (Basic, free)",
+    "Add flights and trips to the phone's calendar (Basic, free)",
+    "Trip-card and flight-card image sharing (Basic, free)",
+    "Booking-email import with a monthly allowance (Pro)",
+    "Live flight-status alerts on supported flights (Pro)",
+    "Live Activity, Dynamic Island and home-screen widgets (Pro)",
+  ],
+  provider: { "@id": `${SITE_URL}/#organization` },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "TripCache Basic",
+      description:
+        "Free plan: cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses in 153 currencies, CSV and PDF export, CSV import, trip map, travel history and offline access. Storage limits are the same on every plan.",
+      price: "0",
+      priceCurrency: "USD",
+      url: PRICING_URL,
+    },
+    {
+      "@type": "Offer",
+      name: "TripCache Pro Monthly",
+      description: `Monthly subscription on the App Store and Google Play. ${proFeatureSummary}`,
+      price: "5.99",
+      priceCurrency: "USD",
+      eligibleRegion: US_REGION,
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "5.99",
+        priceCurrency: "USD",
+        billingDuration: "P1M",
+      },
+      url: PRICING_URL,
+    },
+    {
+      "@type": "Offer",
+      name: "TripCache Pro Yearly (Google Play)",
+      description: `Yearly subscription bought through Google Play. ${proFeatureSummary}`,
+      price: "49.99",
+      priceCurrency: "USD",
+      eligibleRegion: US_REGION,
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "49.99",
+        priceCurrency: "USD",
+        billingDuration: "P1Y",
+      },
+      url: ANDROID_STORE_URL,
+    },
+    {
+      "@type": "Offer",
+      name: "TripCache Pro Yearly (App Store)",
+      description: `Yearly subscription bought through the App Store. ${proFeatureSummary}`,
+      price: "50.00",
+      priceCurrency: "USD",
+      eligibleRegion: US_REGION,
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "50.00",
+        priceCurrency: "USD",
+        billingDuration: "P1Y",
+      },
+      url: IOS_STORE_URL,
+    },
+  ],
+}
+
+const toJsonLd = (schema: object) => JSON.stringify(schema).replace(/</g, "\\u003c")
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -80,7 +227,6 @@ export const metadata: Metadata = {
         alt: "TripCache travel itinerary app for booking emails and cancellation deadlines",
       },
     ],
-    creator: "@tripcache",
   },
   icons: {
     icon: "/app-icon-violet-indigo.webp",
@@ -119,94 +265,17 @@ export default function RootLayout({
         <script
           id="organization-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": `${SITE_URL}/#organization`,
-              name: "TripCache",
-              url: SITE_URL,
-              logo: `${SITE_URL}/app-icon-violet-indigo.webp`,
-              description:
-                "TripCache helps travelers turn confirmation emails into organized itineraries while tracking cancellation reminders, documents, receipts, and expenses.",
-              email: "support@trip-cache.com",
-              contactPoint: {
-                "@type": "ContactPoint",
-                contactType: "customer support",
-                email: "support@trip-cache.com",
-                availableLanguage: "English",
-              },
-            }).replace(/</g, "\\u003c"),
-          }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(organizationSchema) }}
         />
         <script
           id="website-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "@id": `${SITE_URL}/#website`,
-              name: "TripCache",
-              url: SITE_URL,
-              description:
-                "Official product information and travel organization guides for TripCache, a post-booking travel organizer for confirmations, cancellation deadlines, documents, receipts, and expenses.",
-              publisher: { "@id": `${SITE_URL}/#organization` },
-              inLanguage: "en",
-            }).replace(/</g, "\\u003c"),
-          }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(websiteSchema) }}
         />
         <script
           id="software-application-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MobileApplication",
-              "@id": `${SITE_URL}/#app`,
-              name: "TripCache",
-              applicationCategory: "TravelApplication",
-              applicationSubCategory: "Travel itinerary and post-booking organizer",
-              operatingSystem: "iOS, Android",
-              url: SITE_URL,
-              image: `${SITE_URL}/app-icon-violet-indigo.webp`,
-              description:
-                "TripCache turns travel confirmation emails into organized itineraries with cancellation reminders, trip documents, receipts, and expense records.",
-              downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
-              featureList: [
-                "Booking confirmation email import",
-                "Travel itinerary organization",
-                "User-set cancellation deadline reminders",
-                "Travel documents and receipts",
-                "Supported flight-status updates",
-                "Travel expense records and CSV export",
-              ],
-              provider: { "@id": `${SITE_URL}/#organization` },
-              offers: [
-                {
-                  "@type": "Offer",
-                  name: "TripCache Basic",
-                  price: "0",
-                  priceCurrency: "USD",
-                  url: `${SITE_URL}/pricing`,
-                },
-                {
-                  "@type": "Offer",
-                  name: "TripCache Pro Monthly",
-                  price: "5.99",
-                  priceCurrency: "USD",
-                  url: `${SITE_URL}/pricing`,
-                },
-                {
-                  "@type": "Offer",
-                  name: "TripCache Pro Yearly",
-                  price: "49.99",
-                  priceCurrency: "USD",
-                  url: `${SITE_URL}/pricing`,
-                },
-              ],
-            }).replace(/</g, "\\u003c"),
-          }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(mobileApplicationSchema) }}
         />
         <meta name="theme-color" content="#f4f0e8" />
         <meta name="mobile-web-app-capable" content="yes" />

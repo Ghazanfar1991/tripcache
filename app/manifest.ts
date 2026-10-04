@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "TripCache: Smart Trip Planner",
     short_name: "TripCache",
     description:
-      "Organize trips manually on Basic. Paid features add booking-email import, cancellation reminders, supported flight updates, expanded document storage, and CSV expense exports.",
+      "Basic is free: cancellation-deadline and check-in reminders, a document vault, expenses, and CSV or PDF export. Pro adds booking-email import, live flight-status alerts on supported flights, and Live Activity and widgets.",
     start_url: "/",
     scope: "/",
     display: "standalone",
