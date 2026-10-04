@@ -177,7 +177,7 @@ Share only the information each traveler needs. Avoid placing passport numbers, 
 
 ### Local Date and Time
 
-Write the time zone beside important events. Overnight flights can change the calendar date, and hotel cancellation policies often use the property's local time.
+Write the time zone beside important events. Overnight flights can change the calendar date, and hotel cancellation policies often use the property's local time. The [flight time zone guide](/blog/flight-time-zones-arrival-date) shows how to record +1 arrivals, and the free [flight time calculator](/tools/flight-arrival-time-calculator) works out the local landing time and date.
 
 ### Confirmation and Contact
 
@@ -193,7 +193,7 @@ Add refundable booking cutoffs, pay-later dates, ticket collection windows, and 
 
 ### Essential Documents
 
-List what must be available offline or in original form. For international trips, the U.S. Department of State's [traveler checklist](https://travel.state.gov/content/travel/en/international-travel/before-you-go/travelers-checklist.html) is one useful planning reference for U.S. citizens. Use your own government's guidance if you live elsewhere.
+List what must be available offline or in original form. For international trips, the U.S. Department of State's [traveler checklist](https://travel.state.gov/content/travel/en/international-travel/before-you-go/travelers-checklist.html) is one useful planning reference for U.S. citizens. Use your own government's guidance if you live elsewhere. The free [travel checklist generator](/tools/travel-checklist) builds a document and packing list for your trip type, and the [offline travel documents guide](/blog/save-travel-documents-offline) shows how to check each file opens without a signal.
 
 ## Spreadsheet, Document, or Itinerary App?
 

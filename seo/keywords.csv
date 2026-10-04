@@ -17,13 +17,13 @@ travel expense report,Feature: Receipts & expenses: business-travel-expenses,/fe
 i-94 travel history,Feature: Visa/immigration travel-history export: how-to-find-your-travel-history,/blog/how-to-find-your-travel-history,P1,navigational,4400,,,,34,,,,semrush-2026-10-wave2,"Biggest feature-adjacent find. Navigational to CBP I-94 site, but a guide (I-94 lookup + passport stamps + Google Maps Timeline + keep a running log in TripCache, export Visa/Immigration Summary PDF) "
 the us document that shows your travel history,Feature: Visa/immigration travel-history export: how-to-find-your-travel-history,/blog/how-to-find-your-travel-history,P1,informational,320,,,,35,,,,semrush-2026-10-wave2,Question form; answer = I-94 record. Same guide. [src: wave2 raw/47; intl: wave-1 shortlist where present]
 how to check my passport travel history,Feature: Visa/immigration travel-history export: how-to-find-your-travel-history,/blog/how-to-find-your-travel-history,P1,informational,210,,,,29,,,,semrush-2026-10-wave2,KD 29. Same guide; position the export as the fix for future applications. [src: wave2 raw/47; intl: wave-1 shortlist where present]
-flight time calculator,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,informational,3600,210,720,390,31,WINNABLE_NOW,Jun25 Jul25,,semrush-2026-10,
-flight travel time estimator,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,informational,2400,,,,43,WINNABLE_NOW,,,semrush-2026-10,
-flight time estimator,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,commercial,1300,140,170,260,24,WINNABLE_NOW,Aug25,,semrush-2026-10,
-arrival time calculator,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,informational,170,20,20,20,30,WINNABLE_NOW,,,semrush-2026-10,
-flight arrival time calculator,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,informational,70,20,20,20,19,WINNABLE_NOW,Jun25 Jul25,,semrush-2026-10,
-flight time zone calculator,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,informational,50,,,,29,WINNABLE_NOW,,,semrush-2026-10,
-time zone calculator flight,Flight time / arrival time calculator,NEW:/tools/flight-arrival-time-calculator,P1,informational,50,,,,42,WINNABLE_NOW,,,semrush-2026-10,
+flight time calculator,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,informational,3600,210,720,390,31,WINNABLE_NOW,Jun25 Jul25,,semrush-2026-10,
+flight travel time estimator,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,informational,2400,,,,43,WINNABLE_NOW,,,semrush-2026-10,
+flight time estimator,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,commercial,1300,140,170,260,24,WINNABLE_NOW,Aug25,,semrush-2026-10,
+arrival time calculator,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,informational,170,20,20,20,30,WINNABLE_NOW,,,semrush-2026-10,
+flight arrival time calculator,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,informational,70,20,20,20,19,WINNABLE_NOW,Jun25 Jul25,,semrush-2026-10,
+flight time zone calculator,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,informational,50,,,,29,WINNABLE_NOW,,,semrush-2026-10,
+time zone calculator flight,Flight time / arrival time calculator,/tools/flight-arrival-time-calculator,P1,informational,50,,,,42,WINNABLE_NOW,,,semrush-2026-10,
 hotel cancellation policy,Hotel cancellation policy (generic),/blog/hotel-cancellation-policies,P1,informational,1000,20,70,70,17,WINNABLE_WITH_LINKS,Dec25,,semrush-2026-10,
 cancelation policy hotel,Hotel cancellation policy (generic),/blog/hotel-cancellation-policies,P1,informational,480,,,,25,WINNABLE_NOW,,,semrush-2026-10,
 hotel cancellation fee,Hotel cancellation policy (generic),/blog/hotel-cancellation-policies,P1,informational,260,20,20,20,21,WINNABLE_NOW,,,semrush-2026-10,
@@ -110,8 +110,8 @@ business travel app,Business travel app,NEW:/business-travel,P2,commercial,260,5
 corporate travel app,Business travel app,NEW:/business-travel,P2,informational+commercial,140,,,,18,WINNABLE_NOW,,,semrush-2026-10,
 best business travel apps,Business travel app,NEW:/business-travel,P2,commercial,110,30,90,20,19,WINNABLE_NOW,,,semrush-2026-10,
 business travel organizer,Business travel app,NEW:/business-travel,P2,commercial,90,,,,30,WINNABLE_NOW,,,semrush-2026-10,
-apple wallet boarding pass,Digital passport copies / offline documents,NEW:/blog/save-travel-documents-offline,P2,informational,170,20,20,30,50,WINNABLE_WITH_LINKS,,,semrush-2026-10,
-digital copy of passport,Digital passport copies / offline documents,NEW:/blog/save-travel-documents-offline,P2,informational,170,30,20,20,47,WINNABLE_WITH_LINKS,Jun25 Jul25 Aug25 Sep25 Jan26,,semrush-2026-10,
+apple wallet boarding pass,Digital passport copies / offline documents,/blog/save-travel-documents-offline,P2,informational,170,20,20,30,50,WINNABLE_WITH_LINKS,,,semrush-2026-10,
+digital copy of passport,Digital passport copies / offline documents,/blog/save-travel-documents-offline,P2,informational,170,30,20,20,47,WINNABLE_WITH_LINKS,Jun25 Jul25 Aug25 Sep25 Jan26,,semrush-2026-10,
 airbnb email itinerary,Email-to-itinerary / confirmation emails,/features/email-to-itinerary,P2,,20,,,,,,,,semrush-2026-10,
 amadeus email itinerary,Email-to-itinerary / confirmation emails,/features/email-to-itinerary,P2,,20,,,,,,,,semrush-2026-10,
 british airways email itinerary,Email-to-itinerary / confirmation emails,/features/email-to-itinerary,P2,,20,,,,,,,,semrush-2026-10,
@@ -125,7 +125,7 @@ travel history google maps,Feature: Visa/immigration travel-history export: how-
 how to find my travel history,Feature: Visa/immigration travel-history export: how-to-find-your-travel-history,/blog/how-to-find-your-travel-history,P2,,30,,,,n/c,,,,semrush-2026-10-wave2,"Coordinator seed; 30/mo, KD n/c (0 = not computed). [src: wave2 raw/44; intl: wave-1 shortlist where present]"
 travel history for visa application,Feature: Visa/immigration travel-history export: how-to-find-your-travel-history,/blog/how-to-find-your-travel-history,P2,,20,,,,n/c,,,,semrush-2026-10-wave2,Coordinator seed; 20/mo. KD not computed. [src: wave2 raw/44; intl: wave-1 shortlist where present]
 expedia itinerary without email,Find itinerary without confirmation email,NEW:/blog/find-itinerary-without-confirmation-email,P2,informational,720,20,480,20,44,WINNABLE_WITH_LINKS,Jan26,,semrush-2026-10,
-jet lag calculator,Jet lag calculator,NEW:/tools/jet-lag-calculator,P2,informational,1000,170,390,170,22,WINNABLE_NOW,Jun25 Jul25 Mar26 May26,,semrush-2026-10,
+jet lag calculator,Jet lag calculator,/tools/jet-lag-calculator,P2,informational,1000,170,390,170,22,WINNABLE_NOW,Jun25 Jul25 Mar26 May26,,semrush-2026-10,
 travel expense report template,Travel expense report template,NEW:/templates/travel-expense-report,P2,informational,260,30,20,20,24,WINNABLE_WITH_LINKS,May26,,semrush-2026-10,
 trip expense tracker,Travel expense tracking / reports,/features/business-travel-expenses,P2,commercial,110,20,20,20,32,NOT_YET,,,semrush-2026-10,
 travel expense tracker,Travel expense tracking / reports,/features/business-travel-expenses,P2,informational+commercial,110,20,20,20,49,NOT_YET,Jul25 Aug25,,semrush-2026-10,
@@ -360,3 +360,9 @@ wanderlog careers,Wanderlog navigational,SKIP,SKIP,commercial,5400,,,,39,,,,semr
 is tripcase still active,TripCase shutdown / replacement,/blog/tripcase-shutdown-what-now,P2,informational,,,,,,WINNABLE_NOW,,gsc:6.7 (13 impr/28d); best page /blog/tripcase-shutdown-what-now @ 6.7,gsc-2026-10,Answered in the quick answer and FAQ of the shutdown guide
 tripit pro pricing,TripIt Pro cost / free vs Pro,/blog/tripit-vs-tripcache-comparison-2025,P1,informational,,,,,,WINNABLE_NOW,,"gsc:10.2 (86 impr/28d as ""tripit pro pricing official 2026""; 24 impr @ 19.4 as ""tripit pro pricing 2026""), /blog/tripit-vs-tripcache-comparison-2025",gsc-2026-10,Most-seen query on the TripIt Pro page in Sep 2026
 alternatives to tripit,TripIt alternative,/blog/best-tripit-alternatives-2026,P2,informational,,,,,,WINNABLE_NOW,,"gsc:10.5 (4 impr/28d, /blog/best-tripit-alternatives-2026)",gsc-2026-10,
+layover calculator,Layover / connection time calculator,/tools/layover-calculator,P3,informational,,,,,,,,,owner-tool-2026-09,"Tool built before the Semrush research, so no volume was pulled. Mapped so later layover work improves this page instead of adding a competing one."
+how long should a layover be,Layover / connection time calculator,/tools/layover-calculator,P3,informational,,,,,,,,,owner-tool-2026-09,No volume pulled; answered on the layover calculator page.
+travel checklist generator,Travel checklist generator,/tools/travel-checklist,P3,informational,,,,,,,,,owner-tool-2026-09,"Tool built before the Semrush research, so no volume was pulled."
+travel documents checklist,Travel checklist generator,/tools/travel-checklist,P3,informational,30,,,,,,,,semrush-2026-10,US volume from the wave-1 batch validation (raw/30); the page carries a printable travel document checklist.
+flight arrival date,Flight times across time zones (guide),/blog/flight-time-zones-arrival-date,P3,informational,,,,,,,,,owner-guide-2026-09,How-to intent; calculator intent ('flight time zone calculator') stays with /tools/flight-arrival-time-calculator.
+are flight times local,Flight times across time zones (guide),/blog/flight-time-zones-arrival-date,P3,informational,,,,,,,,,owner-guide-2026-09,

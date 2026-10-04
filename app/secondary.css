@@ -23,3 +23,22 @@
 @source "../components/seo";
 @source "../components/ui/button.tsx";
 @source "../hooks";
+
+/*
+ * Tokens for the free travel tool calculators (components/seo/*-calculator, -planner, -checker,
+ * -generator): `text-tc-ink`, `border-tc-line`, `font-tc-display` and so on. Every name is new
+ * (nothing else on the site uses a `tc-` utility), so these only add utilities for the tool pages
+ * and change no existing page. Values follow the live paper / ink / violet palette in globals.css.
+ */
+@theme {
+  --font-tc: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-tc-display: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-tc-ink: #121212;
+  --color-tc-ink-2: #444444;
+  --color-tc-mute: #666666;
+  --color-tc-line: #e6dfd4;
+  --color-tc-mist: #faf7f1;
+  --color-tc-violet: #602ad2;
+  --color-tc-violet-soft: #f0ecff;
+  --color-tc-hotel: #12b76a;
+}

@@ -156,6 +156,14 @@
       "status": "live"
     },
     {
+      "path": "/blog/flight-time-zones-arrival-date",
+      "status": "live"
+    },
+    {
+      "path": "/blog/save-travel-documents-offline",
+      "status": "live"
+    },
+    {
       "path": "/features",
       "status": "live"
     },
@@ -189,6 +197,22 @@
     },
     {
       "path": "/tools/hotel-cancellation-deadline-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/flight-arrival-time-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/jet-lag-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/layover-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/tools/travel-checklist",
       "status": "live"
     },
     {
@@ -265,6 +289,11 @@
       "path": "/blog/email-to-itinerary-app",
       "status": "redirected",
       "redirectTo": "/blog/ai-travel-organizer-app-2026"
+    },
+    {
+      "path": "/support",
+      "status": "redirected",
+      "redirectTo": "/about"
     }
   ]
 }

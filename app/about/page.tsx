@@ -96,7 +96,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="rounded-[32px] bg-[#121212] p-8 text-[#f7f2e9] shadow-[0_28px_70px_rgba(64,47,30,0.16)] sm:p-10">
+        <section id="support" className="rounded-[32px] bg-[#121212] p-8 text-[#f7f2e9] shadow-[0_28px_70px_rgba(64,47,30,0.16)] sm:p-10">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
             <div>
               <h2 className="text-3xl font-bold">TripCache is available now on iPhone and Android.</h2>
