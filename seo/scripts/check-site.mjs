@@ -109,6 +109,10 @@ function duplicateGroups(pages, field) {
 
 try {
   if (local && process.env.START_LOCAL_SITE === "1") {
+    // Refuse to test a server we didn't start: a leftover `next start` on the same
+    // port would serve an old build and make the check meaningless.
+    const alreadyRunning = await fetch(baseUrl, { signal: AbortSignal.timeout(1500) }).then(() => true, () => false)
+    if (alreadyRunning) throw new Error(`Something is already listening on ${baseUrl}; stop it or use another port so the check runs against this build.`)
     server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "-H", "127.0.0.1", "-p", new URL(baseUrl).port || "3000"], {
       stdio: ["ignore", "inherit", "inherit"],
       env: process.env,
