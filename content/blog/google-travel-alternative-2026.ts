@@ -76,7 +76,7 @@ Choose Wanderlog for:
 - Recommendations and saved places.
 - Shared budgets and itineraries.
 
-It is a planning-first choice rather than a narrow post-booking record system.
+It is a planning-first choice rather than a narrow post-booking record system. If you're deciding between it and TripIt, see [Wanderlog vs TripIt](/blog/wanderlog-vs-tripit).
 
 ## Best for Established Itinerary Automation: TripIt
 

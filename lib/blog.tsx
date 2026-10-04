@@ -1,4 +1,4 @@
-import type { BlogPost, BlogSummary } from "@/types/blog"
+import type { BlogFaq, BlogFrontmatter, BlogPost, BlogSummary } from "@/types/blog"
 import { renderMarkdown } from "@/lib/markdown"
 
 import * as BestTravelApps from "@/content/blog/best-travel-apps-2025"
@@ -24,8 +24,16 @@ import * as TripExpenseManagement from "@/content/blog/trip-expense-management-a
 import * as TripMapItineraryPlanner from "@/content/blog/trip-map-itinerary-planner-app-2026"
 import * as BestTripitAlternatives from "@/content/blog/best-tripit-alternatives-2026"
 import * as AiTravelOrganizer from "@/content/blog/ai-travel-organizer-app-2026"
+import * as HotelCancellationPolicies from "@/content/blog/hotel-cancellation-policies"
+import * as TravelHistory from "@/content/blog/how-to-find-your-travel-history"
+import * as WanderlogVsTripit from "@/content/blog/wanderlog-vs-tripit"
 
-const rawPosts = [
+type BlogPostModule = { metadata: BlogFrontmatter; body: string; faq?: BlogFaq[] }
+
+const rawPosts: BlogPostModule[] = [
+  HotelCancellationPolicies,
+  TravelHistory,
+  WanderlogVsTripit,
   BestTripitAlternatives,
   AiTravelOrganizer,
   HotelCancellationReminder,
@@ -51,13 +59,27 @@ const rawPosts = [
   PrivacyAndSecurity,
 ]
 
+// The FAQ is rendered from the same list that feeds the FAQPage JSON-LD, so the visible
+// questions and answers always match the structured data word for word.
+function faqMarkdown(slug: string, faq: BlogFaq[]): string {
+  for (const item of faq) {
+    if (/[[\]*_`|#<>]/.test(`${item.question}${item.answer}`)) {
+      throw new Error(`FAQ text in ${slug} must be plain text (no markdown) so it matches the FAQPage JSON-LD: "${item.question}"`)
+    }
+  }
+  return ["", "## Frequently asked questions", ...faq.flatMap((item) => ["", `### ${item.question}`, "", item.answer])].join("\n")
+}
+
 const posts: BlogPost[] = rawPosts.map((source) => {
   const slug = source.metadata.slug
-  const contentNodes = renderMarkdown(source.body, { skipFirstH1: true })
+  const faq = source.faq
+  const markdown = faq?.length ? `${source.body.trimEnd()}\n${faqMarkdown(slug, faq)}\n` : source.body
+  const contentNodes = renderMarkdown(markdown, { skipFirstH1: true })
 
   return {
     slug,
     metadata: source.metadata,
+    faq,
     Content: () => <>{contentNodes}</>,
   }
 })

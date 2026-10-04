@@ -139,5 +139,5 @@ Review TripCache's current platform disclosures on the official [App Store listi
 
 The best system is the one you can trust while standing in line. TripCache keeps travel documents, bookings, and reminders together so the right file is ready at the right moment.
 
-For international entry requirements, check the relevant government and airline before travel. The [IATA Travel Centre](https://www.iatatravelcentre.com/) is a useful starting point, not a substitute for official destination guidance.
+For international entry requirements, check the relevant government and airline before travel. The [IATA Travel Centre](https://www.iatatravelcentre.com/) is a useful starting point, not a substitute for official destination guidance. If a visa form asks about past trips, see [how to find your travel history](/blog/how-to-find-your-travel-history), including the US I-94 record.
 `

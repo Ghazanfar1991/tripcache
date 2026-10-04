@@ -98,7 +98,7 @@ Choose Wanderlog when the main work is building a day-by-day vacation, planning 
 
 ### Tradeoffs
 
-The breadth that makes Wanderlog powerful can feel heavy if you only want a compact post-booking itinerary or a flight-status tool.
+The breadth that makes Wanderlog powerful can feel heavy if you only want a compact post-booking itinerary or a flight-status tool. Our [Wanderlog vs TripIt comparison](/blog/wanderlog-vs-tripit) goes deeper on pricing, email import and offline access.
 
 ## Flighty: Best for Flight Intelligence
 

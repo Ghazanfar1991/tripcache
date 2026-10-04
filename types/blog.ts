@@ -16,9 +16,16 @@ export interface BlogFrontmatter {
   keywords?: string[]
 }
 
+/** A visible FAQ item. The same text renders on the page and in the FAQPage JSON-LD, so keep it plain (no markdown). */
+export interface BlogFaq {
+  question: string
+  answer: string
+}
+
 export interface BlogPost {
   slug: string
   metadata: BlogFrontmatter
+  faq?: BlogFaq[]
   Content: ComponentType<Record<string, unknown>>
 }
 

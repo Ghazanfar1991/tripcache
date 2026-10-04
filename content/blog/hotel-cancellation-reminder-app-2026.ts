@@ -39,7 +39,7 @@ Hotel cancellation policies vary by provider, property, rate type, and local tim
 - Non-refundable after a specific date.
 - First night charged after the deadline.
 
-Those details are often buried inside a confirmation email or PDF. If the deadline stays in email, it is easy to forget.
+Those details are often buried inside a confirmation email or PDF. If the deadline stays in email, it is easy to forget. For how refundable rates, fees and brand rules work, see our [hotel cancellation policy guide](/blog/hotel-cancellation-policies).
 
 ## What to Track for Every Refundable Hotel
 

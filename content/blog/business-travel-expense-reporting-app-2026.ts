@@ -55,7 +55,7 @@ A useful business travel expense workflow should include:
 - Travel document storage.
 - CSV exports.
 - Cancellation reminders.
-- Travel history.
+- Travel history (see [how to find your travel history](/blog/how-to-find-your-travel-history) for older trips).
 - Notes for clients, projects, or reimbursement categories.
 
 TripCache brings those pieces into the itinerary instead of forcing travelers to rebuild the story later.

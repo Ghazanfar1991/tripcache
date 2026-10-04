@@ -184,7 +184,11 @@ export default async function HotelCancellationDeadlineCalculatorPage({
             <h2 className="text-4xl font-semibold tracking-[-0.055em] sm:text-6xl">Hotel cancellation FAQ</h2>
             <p className="mt-5 leading-7 text-[#666666]">
               Use this calculator as a planning helper, then confirm the final deadline against the provider or hotel
-              confirmation.
+              confirmation. Our{" "}
+              <Link href="/blog/hotel-cancellation-policies" className="font-semibold text-[#4d20af] hover:underline">
+                hotel cancellation policy guide
+              </Link>{" "}
+              explains refundable rates, fees and brand rules.
             </p>
           </div>
           <div className="space-y-3">
