@@ -73,6 +73,18 @@ test("new pages report their first 28 days instead of a before/after comparison"
   assert.equal(outcome.after.impressions, 560)
 })
 
+test("site-wide changes are never credited with the site trend", () => {
+  const { pageRows, siteRows } = history({
+    pageBefore: { clicks: 1, impressions: 50, position: 8 },
+    pageAfter: { clicks: 1, impressions: 50, position: 8 },
+    siteBefore: { clicks: 10, impressions: 1000, position: 10 },
+    siteAfter: { clicks: 20, impressions: 2000, position: 9 },
+  })
+  const { outcome } = evaluate({ ...entry, type: "site-wide", pages: ["*"] }, { pageRows, siteRows })
+  assert.equal(outcome.verdict, "site-wide")
+  assert.equal(outcome.after.clicks, 560)
+})
+
 test("entries must explain what changed and why", () => {
   assert.deepEqual(validateEntry(entry), [])
   const problems = validateEntry({ ...entry, why: "", pages: ["blog/x"] })

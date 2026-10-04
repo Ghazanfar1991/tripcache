@@ -9,6 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Track rental car pickup details, free-cancellation deadlines, prepaid rates, receipts, and travel expense records with a reminder workflow.",
   date: "2026-05-18",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
@@ -58,16 +59,18 @@ Add these details to TripCache:
 
 ## Reminder Timing for Rental Cars
 
-Set reminders based on trip risk:
+TripCache can remind you seven days, two days, or one day before the cancellation deadline, or on the day. Set reminders based on trip risk:
 
-- **Two days before pickup:** compare prices and decide whether to rebook.
-- **One day before pickup:** confirm flight timing and pickup location.
+- **Seven days before:** useful for prepaid international rentals or expensive one-way bookings.
+- **Two days before:** compare prices and decide whether to rebook.
+- **One day before:** confirm flight timing and pickup location.
 - **Day of deadline:** backup reminder for final cancellation.
-- **Custom reminder:** useful for prepaid international rentals or expensive one-way bookings.
 
 ## How TripCache Helps
 
 TripCache lets you keep rental car bookings inside the same trip as flights, hotels, tickets, maps, and expenses. That matters because car decisions often depend on flight delays, hotel location, and meeting schedules.
+
+Cancellation reminders, documents, and expenses are all included in TripCache Basic, the free plan.
 
 For broader booking organization, see our [travel booking organizer app guide](/blog/travel-booking-organizer-app-2026).
 
@@ -83,7 +86,7 @@ Rental cars often create multiple expense records:
 - Late return fees.
 - Airport surcharges.
 
-Save receipts with the rental car item so your expense report is easier later. For more detail, read the [trip expense management app guide](/blog/trip-expense-management-app-2026).
+Log each charge as an expense and save the receipts to the trip's documents so your expense report is easier later. For more detail, read the [trip expense management app guide](/blog/trip-expense-management-app-2026).
 
 ## Rental Car Checklist
 
@@ -100,7 +103,7 @@ After return:
 
 - Upload the final receipt.
 - Note tolls, fuel, and surcharges.
-- Export expenses if needed.
+- Export expenses as CSV or PDF if needed. Exports are free.
 
 ## Avoid Paying for a Car You Do Not Need
 

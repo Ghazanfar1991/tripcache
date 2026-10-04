@@ -27,7 +27,8 @@ export default function FeaturesIndexPage() {
           </div>
           <p className="max-w-xl text-lg leading-8 text-[#626262] min-[880px]:pb-2">
             Start with confirmed bookings, then keep cancellation deadlines, receipts, documents, and trip records in
-            one organized place.
+            one organized place. Cancellation reminders, documents, expenses, and exports are free; booking-email
+            import and live flight alerts are part of Pro.
           </p>
         </div>
 

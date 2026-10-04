@@ -7,7 +7,7 @@ export const metadata: BlogFrontmatter = {
   excerpt:
     "TripCase is gone. Here's what happened to the app and which replacement fits the way you used it: free email forwarding, flight alerts, or deadlines and documents.",
   description:
-    "TripCase shut down on April 1, 2025, and old trips can't be recovered. The closest free match is TripIt; compare Tripsy, TripCache, Flighty and Wanderlog.",
+    "TripCase shut down on April 1, 2025, and old trips can't be recovered. Compare the best replacements: TripIt, Tripsy, TripCache, Flighty and Wanderlog.",
   date: "2025-04-10",
   updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",

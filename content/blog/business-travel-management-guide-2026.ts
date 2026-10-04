@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Use this business travel organization checklist to manage bookings, cancellation deadlines, receipts, trip documents, expense notes, and CSV records.",
   date: "2026-03-18",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Business Travel",
@@ -125,7 +125,7 @@ Compare the itinerary, receipts, and payment records:
 5. Check currency and tax fields required by the employer.
 6. Export the trip record in the format finance expects.
 
-TripCache Pro supports CSV expense exports for travelers who want a structured handoff. The detailed workflow is in the [business travel expense reporting guide](/blog/business-travel-expense-reporting-app-2026).
+TripCache exports expenses as CSV or PDF on the free plan, filtered by dates and by business or personal trips, for travelers who want a structured handoff. The detailed workflow is in the [business travel expense reporting guide](/blog/business-travel-expense-reporting-app-2026).
 
 ### Retain Records Under the Correct Rule
 

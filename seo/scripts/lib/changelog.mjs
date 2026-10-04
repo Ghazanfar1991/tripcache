@@ -83,7 +83,9 @@ export function evaluate(entry, { pageRows, siteRows, allEntries = [] }) {
   const positionDelta = pageBefore.position != null && pageAfter.position != null ? Number((pageAfter.position - pageBefore.position).toFixed(1)) : null
 
   let verdict = "no-clear-change"
-  if (pageBefore.impressions + pageAfter.impressions < minimumImpressions) verdict = "too-little-data"
+  // A site-wide change has no control group: the numbers are just the site trend.
+  if (siteWide) verdict = "site-wide"
+  else if (pageBefore.impressions + pageAfter.impressions < minimumImpressions) verdict = "too-little-data"
   else if ((clickLift >= threshold && (positionDelta ?? 0) < 3) || ((positionDelta ?? 0) <= -2 && clickLift >= 0)) verdict = "better"
   else if (clickLift <= -threshold || ((positionDelta ?? 0) >= 3 && clickLift <= 0)) verdict = "worse"
 

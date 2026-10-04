@@ -5,10 +5,11 @@ export const metadata: BlogFrontmatter = {
   title: "Trip Expense Management App: Track Travel Costs, Receipts, and Reimbursements",
   seoTitle: "Trip Expense Management App for Receipts and Costs",
   excerpt:
-    "Learn how to manage travel costs by trip, attach receipts, organize booking expenses, and prepare cleaner reimbursement records.",
+    "Learn how to manage travel costs by trip, store receipts, organize booking expenses, and prepare cleaner reimbursement records.",
   description:
     "Use TripCache as a trip expense management app to track travel costs, receipts, invoices, cancellation fees, and reimbursement records by itinerary.",
   date: "2026-05-18",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Business Travel",
@@ -27,7 +28,7 @@ export const body = String.raw`# Trip Expense Management App: Track Travel Costs
 
 Travel expenses are easier to manage when they are connected to the trip that created them. Flights, hotels, rental cars, meals, tickets, parking, and receipts should not live in separate places.
 
-TripCache helps you organize travel costs by itinerary, then keep documents and receipts close to the booking they belong to.
+TripCache helps you organize travel costs by itinerary, then keep documents and receipts with the trip they belong to. Expenses, budgets, and CSV or PDF export are all included in the free plan.
 
 ## What Counts as a Trip Expense?
 
@@ -69,11 +70,13 @@ Create the trip before departure so you have a place for every cost.
 
 ### 2. Add Bookings
 
-Add flights, hotels, cars, activities, tickets, restaurants, meetings, parking, and custom items.
+Add flights, hotels, cars, activities, tickets, restaurants, meetings, parking, and notes.
 
-### 3. Attach Receipts
+### 3. Log Costs and Save Receipts
 
-Upload receipts as soon as they arrive. If the expense belongs to a booking, attach it to that item.
+Log each cost as an expense in the currency you paid. TripCache supports 153 currencies, sorts expenses into categories, and locks the exchange rate on each expense, so the trip total in your home currency stays stable. You can also set a budget for each category.
+
+Save receipts to the trip's documents as soon as they arrive. They are stored with the trip rather than on individual expense entries, so make sure the amount is also logged as an expense.
 
 ### 4. Add Notes
 
@@ -81,7 +84,7 @@ Useful notes include client name, business purpose, category, payment method, an
 
 ### 5. Export or Review
 
-At the end of the trip, review the records and export what you need.
+At the end of the trip, review the records and export what you need as CSV or PDF, filtered by dates and by business or personal trips. Exports are free on every plan.
 
 ## Expense Categories to Track
 

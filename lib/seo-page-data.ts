@@ -47,7 +47,7 @@ export const featurePages: SeoLandingPage[] = [
     title: "Email-to-itinerary automation",
     metaTitle: "Email-to-Itinerary App for Booking Confirmations",
     description:
-      "Use TripCache's paid Email Import with supported travel confirmations to create reviewable trip drafts for flights, hotels, rental cars, and tickets.",
+      "Use TripCache Pro Email Import with supported travel confirmations to create reviewable trip drafts for flights, hotels, rental cars, trains, and tickets.",
     eyebrow: "Travel email organizer",
     hero: "Forward supported travel emails. TripCache turns booking confirmations into reviewable itinerary drafts.",
     image: "/app-screenshot-import.webp",
@@ -55,7 +55,7 @@ export const featurePages: SeoLandingPage[] = [
     primaryKeyword: "travel email organizer",
     proofPoints: ["Supported email forwarding", "Reviewable trip drafts", "Flights, stays, cars, and tickets"],
     planNote:
-      "Email Import is included in the paid plan and works with supported booking confirmations. Review each draft before saving.",
+      "Email Import is part of Pro and includes a monthly import allowance. It works with supported booking confirmations; review each draft before saving. Cancellation reminders, documents, and exports are free on every plan.",
     benefits: [
       {
         title: "Stop hunting through your inbox",
@@ -74,11 +74,11 @@ export const featurePages: SeoLandingPage[] = [
     workflow: [
       {
         title: "Forward the confirmation",
-        copy: "With the paid plan, send a supported hotel, flight, rental car, ticket, or reservation confirmation into TripCache.",
+        copy: "With Pro, forward a supported hotel, flight, rental car, ticket, or reservation confirmation, including attached PDFs or screenshots, to your TripCache address.",
       },
       {
         title: "Review the extracted draft",
-        copy: "TripCache organizes the booking details into a trip item that you can confirm or edit.",
+        copy: "TripCache organizes the booking details into a trip item that you can confirm or edit. When the confirmation states a free-cancellation deadline, the draft includes it.",
       },
       {
         title: "Travel from one timeline",
@@ -98,7 +98,12 @@ export const featurePages: SeoLandingPage[] = [
       {
         question: "What kinds of travel emails can TripCache organize?",
         answer:
-          "TripCache's paid Email Import works with supported travel confirmations such as flights, hotel stays, rental cars, tickets, and reservations.",
+          "Pro Email Import works with supported confirmations for flights, hotel stays, rental cars, trains, buses, ferries, parking, events, tours, and restaurant reservations. It also reads attached PDFs and screenshots. Review each draft before saving.",
+      },
+      {
+        question: "Is email import free?",
+        answer:
+          "No. Email import is part of TripCache Pro and has a monthly allowance. On the free plan you can add bookings by hand or scan a boarding pass, and cancellation reminders work on both plans.",
       },
       {
         question: "Is this a generic trip planner?",
@@ -116,26 +121,26 @@ export const featurePages: SeoLandingPage[] = [
     kind: "feature",
     slug: "cancellation-reminders",
     path: "/features/cancellation-reminders",
-    title: "Cancellation deadline reminders",
+    title: "Free cancellation deadline reminders",
     metaTitle: "Hotel Cancellation Reminder and Deadline Tracker",
     description:
-      "Use the paid plan to record hotel, rental-car, and refundable-booking cancellation cutoffs and set reminders; the provider's confirmation remains authoritative.",
-    eyebrow: "Cancellation reminders",
-    hero: "Bring the free-cancellation deadline from the provider's confirmation into your trip.",
+      "Free on every TripCache plan: save hotel, rental-car, and other refundable-booking deadlines and get reminded 7, 2, or 1 day before, or on the day.",
+    eyebrow: "Free cancellation reminders",
+    hero: "Get a free reminder before free cancellation ends.",
     image: "/app-feature-cancellation-reminder.webp",
     imageAlt: "TripCache cancellation reminder feature",
     primaryKeyword: "hotel cancellation reminder",
-    proofPoints: ["Hotel cutoff tracking", "Rental car reminders", "Refundable booking workflows"],
+    proofPoints: ["Free on every plan", "Reminders 7, 2, or 1 day before, or on the day", "Hotels, rental cars, tours, and tickets"],
     planNote:
-      "Cancellation Reminders are included in the paid plan. You enter the cutoff from the original confirmation; the booking provider remains authoritative.",
+      "Cancellation reminders are included free in TripCache Basic. Enter the cutoff from the original confirmation, or let Pro's email import read it for you to check. The booking provider remains authoritative.",
     benefits: [
       {
-        title: "Protect flexible bookings",
-        copy: "Record the deadline, local cutoff time, and cancellation rule beside the booking.",
+        title: "Free, not a Pro upsell",
+        copy: "Cancellation reminders are part of the free plan. You don't need a subscription to protect a refundable booking.",
       },
       {
         title: "Plan before the penalty starts",
-        copy: "Use reminder timing that gives you space to compare prices, confirm plans, or cancel backups.",
+        copy: "Choose a reminder 7 days, 2 days, or 1 day before the cutoff, or on the day, so you have time to compare prices, confirm plans, or cancel backups.",
       },
       {
         title: "Keep context with the alert",
@@ -146,11 +151,11 @@ export const featurePages: SeoLandingPage[] = [
     workflow: [
       {
         title: "Save the refundable booking",
-        copy: "Add the hotel or rental car confirmation to TripCache with the cancellation rule.",
+        copy: "Add the hotel or rental car to the trip by hand, or forward the confirmation with Pro.",
       },
       {
         title: "Set the deadline",
-        copy: "Capture the exact date, cutoff time, local time zone, and penalty notes.",
+        copy: "Enter the date and cutoff time from the confirmation, then pick when to be reminded.",
       },
       {
         title: "Act before the window closes",
@@ -170,7 +175,12 @@ export const featurePages: SeoLandingPage[] = [
       {
         question: "Can TripCache track hotel cancellation deadlines?",
         answer:
-          "Yes. The paid plan lets you store a user-entered cancellation deadline and reminders with the stay. The provider's confirmation remains authoritative.",
+          "Yes, on the free plan. Save the cancellation deadline with the stay and pick reminders 7 days, 2 days, or 1 day before, or on the day. The provider's confirmation remains authoritative.",
+      },
+      {
+        question: "Are cancellation reminders free?",
+        answer:
+          "Yes. Cancellation-deadline reminders are part of TripCache Basic, the free plan. Pro adds booking-email import, which can read the deadline from a forwarded confirmation, plus live flight-status alerts.",
       },
       {
         question: "Does this work for rental cars?",
@@ -182,6 +192,11 @@ export const featurePages: SeoLandingPage[] = [
         answer:
           "TripCache keeps the alert connected to the booking, confirmation number, notes, and trip context.",
       },
+      {
+        question: "Does TripCache also remind me to check in for flights?",
+        answer:
+          "Yes, also free. TripCache sends a reminder 48 hours before departure and another 24 hours before, when many airlines open online check-in. A shortcut copies your booking reference and opens the airline's website. It does not check you in automatically.",
+      },
     ],
   },
   {
@@ -191,23 +206,23 @@ export const featurePages: SeoLandingPage[] = [
     title: "Business travel expense organization",
     metaTitle: "Business Travel Expense and Receipt Organizer",
     description:
-      "Organize business-trip bookings, receipts, documents, and expenses by trip, with paid CSV export for reimbursement review.",
+      "Organize business-trip bookings, receipts, documents, and expenses by trip, with free CSV and PDF export for reimbursement review.",
     eyebrow: "Business travel organizer",
     hero: "Keep business trip bookings, receipts, and expense details ready for reimbursement.",
     image: "/app-screen-expense-management.webp",
     imageAlt: "TripCache expense management screen for business travel",
     primaryKeyword: "business travel organizer",
-    proofPoints: ["Receipt storage", "Trip expense records", "Paid CSV exports"],
+    proofPoints: ["Receipts kept as trip documents", "153 currencies and category budgets", "Free CSV and PDF export"],
     planNote:
-      "Track costs and receipts by trip; CSV export is included in the paid plan. Records are organizational aids, not accounting or tax advice.",
+      "Expenses, budgets, and CSV and PDF export are free on every plan. Records are organizational aids, not accounting or tax advice.",
     benefits: [
       {
-        title: "Attach receipts where they belong",
-        copy: "Keep hotel, transport, meals, and trip documents grouped with the business trip.",
+        title: "Keep receipts with the trip",
+        copy: "Save hotel, transport, and meal receipts as trip documents, next to the bookings and expenses they back up.",
       },
       {
         title: "Reduce reimbursement cleanup",
-        copy: "Capture expense context while traveling instead of reconstructing it from email later.",
+        copy: "Log each cost in the currency you paid while traveling. TripCache locks the exchange rate on each expense, so your home-currency totals don't drift.",
       },
       {
         title: "Built for frequent travelers",
@@ -218,7 +233,7 @@ export const featurePages: SeoLandingPage[] = [
     workflow: [
       {
         title: "Add bookings and receipts",
-        copy: "Forward travel confirmations and save receipts or documents as the trip happens.",
+        copy: "Add bookings by hand or forward confirmations with Pro, and save receipts as trip documents as the trip happens.",
       },
       {
         title: "Review expenses by trip",
@@ -226,7 +241,7 @@ export const featurePages: SeoLandingPage[] = [
       },
       {
         title: "Export when it is time to report",
-        copy: "Use the paid CSV export to prepare organized records for submission or reimbursement review.",
+        copy: "Export expenses as CSV or PDF, filtered by dates and by business or personal trips, to prepare records for submission or reimbursement review.",
       },
     ],
     internalLinks: [
@@ -247,7 +262,7 @@ export const featurePages: SeoLandingPage[] = [
       {
         question: "Can I store receipts with a trip?",
         answer:
-          "Yes. TripCache is designed to keep receipts and travel documents connected to the relevant trip.",
+          "Yes. Save receipts as documents on the trip. They aren't attached to individual expense entries, and TripCache doesn't read amounts from receipt images, so log each amount as an expense.",
       },
       {
         question: "Who is this best for?",
@@ -257,7 +272,7 @@ export const featurePages: SeoLandingPage[] = [
       {
         question: "Does TripCache provide CSV export?",
         answer:
-          "Yes. CSV export is included in the paid plan and can help prepare records for reimbursement review. TripCache is an organizational aid, not accounting or tax advice.",
+          "Yes, on the free plan. Export CSV or PDF records, including an expense report, your travel history, and a Visa / Immigration Summary. TripCache is an organizational aid, not accounting or tax advice.",
       },
     ],
   },
