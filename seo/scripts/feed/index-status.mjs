@@ -86,9 +86,10 @@ try {
   const issues = []
   for (const page of pages) {
     if (page.indexed === false) issues.push({ path: page.path, kind: "not-indexed", detail: page.coverageState })
-    if (page.robotsTxtState && page.robotsTxtState !== "ALLOWED") issues.push({ path: page.path, kind: "robots", detail: page.robotsTxtState })
+    // UNSPECIFIED only means Google hasn't crawled the URL yet; that's covered by not-indexed.
+    if (page.robotsTxtState === "DISALLOWED") issues.push({ path: page.path, kind: "robots", detail: page.robotsTxtState })
     if (page.pageFetchState && !["SUCCESSFUL", "PAGE_FETCH_STATE_UNSPECIFIED"].includes(page.pageFetchState)) issues.push({ path: page.path, kind: "fetch", detail: page.pageFetchState })
-    if (page.googleCanonical && page.userCanonical && page.googleCanonical !== page.userCanonical) issues.push({ path: page.path, kind: "canonical-mismatch", detail: `Google chose ${page.googleCanonical}` })
+    if (page.googleCanonical && page.userCanonical && toPath(page.googleCanonical) !== toPath(page.userCanonical)) issues.push({ path: page.path, kind: "canonical-mismatch", detail: `Google chose ${page.googleCanonical}` })
     for (const item of page.richResults?.items || []) {
       for (const issue of item.issues) issues.push({ path: page.path, kind: `rich-result:${item.type}`, detail: issue })
     }
