@@ -1,0 +1,68 @@
+nn,report,target,database,display_limit,rows_returned,api_units,file
+01,domain_ranks,trip-cache.com,all,50,33,330,raw/01-domain_ranks-trip-cache-com-all.csv
+02,resource_organic,trip-cache.com,us,100,80,800,raw/02-resource_organic-trip-cache-com-us.csv
+03,resource_organic,trip-cache.com,au,50,15,230,raw/03-resource_organic-trip-cache-com-au.csv
+04,resource_organic,trip-cache.com,uk,50,8,1080,raw/04-resource_organic-trip-cache-com-uk.csv
+05,resource_organic,trip-cache.com,ca,50,14,-630,raw/05-resource_organic-trip-cache-com-ca.csv
+06,domain_organic_organic,trip-cache.com,us,25,25,1000,raw/06-domain_organic_organic-trip-cache-com-us.csv
+07,domain_rank,competitor-candidates,us,1,7,180,raw/07-domain_rank-competitor-candidates-us.csv
+08,phrase_fullsearch,itinerary app,us,40,40,800,raw/08-phrase_fullsearch-itinerary-app-us.csv
+09,phrase_fullsearch,travel organizer,us,35,35,700,raw/09-phrase_fullsearch-travel-organizer-us.csv
+10,phrase_fullsearch,organizer app (contains trav),us,30,21,420,raw/10-phrase_fullsearch-organizer-app-contains-trav-us.csv
+11,phrase_fullsearch,trip planner app,us,40,40,800,raw/11-phrase_fullsearch-trip-planner-app-us.csv
+12,phrase_fullsearch,tripit,us,40,40,800,raw/12-phrase_fullsearch-tripit-us.csv
+13,phrase_fullsearch,tripcase,us,30,30,600,raw/13-phrase_fullsearch-tripcase-us.csv
+14,phrase_fullsearch,wanderlog,us,30,30,600,raw/14-phrase_fullsearch-wanderlog-us.csv
+15,phrase_fullsearch,alternative (contains trip),us,30,30,600,raw/15-phrase_fullsearch-alternative-contains-trip-us.csv
+16,phrase_related,tripit alternative,us,30,30,1200,raw/16-phrase_related-tripit-alternative-us.csv
+17,phrase_fullsearch,travel documents (contains app),us,25,25,500,raw/17-phrase_fullsearch-travel-documents-contains-app-us.csv
+18,phrase_related,travel document app,us,25,25,1000,raw/18-phrase_related-travel-document-app-us.csv
+19,phrase_fullsearch,itinerary (contains email),us,25,25,500,raw/19-phrase_fullsearch-itinerary-contains-email-us.csv
+20,phrase_fullsearch,hotel cancellation,us,30,30,600,raw/20-phrase_fullsearch-hotel-cancellation-us.csv
+21,phrase_fullsearch,free cancellation (excl hotel),us,30,30,600,raw/21-phrase_fullsearch-free-cancellation-excl-hotel-us.csv
+22,phrase_fullsearch,best travel apps,us,40,40,800,raw/22-phrase_fullsearch-best-travel-apps-us.csv
+23,phrase_fullsearch,itinerary template,us,30,30,600,raw/23-phrase_fullsearch-itinerary-template-us.csv
+24,phrase_fullsearch,travel expense,us,30,30,600,raw/24-phrase_fullsearch-travel-expense-us.csv
+25,phrase_fullsearch,flight time (excl to-from),us,30,30,600,raw/25-phrase_fullsearch-flight-time-excl-to-from-us.csv
+26,phrase_fullsearch,flight tracker app,us,25,25,500,raw/26-phrase_fullsearch-flight-tracker-app-us.csv
+27,phrase_fullsearch,share itinerary,us,20,20,400,raw/27-phrase_fullsearch-share-itinerary-us.csv
+28,phrase_fullsearch,travel planner app (excl tripit-wanderlog),us,30,30,600,raw/28-phrase_fullsearch-travel-planner-app-excl-tripit-wanderlog-us.csv
+29,phrase_questions,travel itinerary,us,25,25,1000,raw/29-phrase_questions-travel-itinerary-us.csv
+30,phrase_these,batch-validation-1,us,100,79,790,raw/30-phrase_these-batch-validation-1-us.csv
+31,resource_organic,tripit.com (non-brand top20),us,100,100,1000,raw/31-resource_organic-tripit-com-non-brand-top20-us.csv
+32,resource_organic,"tripit.com (contains app, non-brand, top30)",us,40,40,400,raw/32-resource_organic-tripit-com-contains-app-non-brand-top30-us.csv
+33,resource_organic_unique,tripit.com top pages,us,30,30,300,raw/33-resource_organic_unique-tripit-com-top-pages-us.csv
+34,resource_organic,tripit.com-web-tripcase (url),us,40,15,150,raw/34-resource_organic-tripit-com-web-tripcase-url-us.csv
+35,resource_organic_unique,wanderlog.com top pages,us,25,25,250,raw/35-resource_organic_unique-wanderlog-com-top-pages-us.csv
+36,resource_organic,wanderlog.com (contains app - noisy),us,40,40,400,raw/36-resource_organic-wanderlog-com-contains-app-noisy-us.csv
+37,resource_organic,wanderlog.com homepage (non-brand top20),us,40,40,400,raw/37-resource_organic-wanderlog-com-homepage-non-brand-top20-us.csv
+38,resource_organic,tripsy.app,us,60,60,600,raw/38-resource_organic-tripsy-app-us.csv
+39,resource_organic,folio.id,us,40,40,400,raw/39-resource_organic-folio-id-us.csv
+40,phrase_organic,tripcase,us,10,10,100,raw/40-phrase_organic-tripcase-us.csv
+41,phrase_organic,wanderlog vs tripit,us,10,10,100,raw/41-phrase_organic-wanderlog-vs-tripit-us.csv
+42,phrase_organic,best travel apps for planning,us,10,10,200,raw/42-phrase_organic-best-travel-apps-for-planning-us.csv
+43,phrase_organic,travel itinerary template,us,10,10,100,raw/43-phrase_organic-travel-itinerary-template-us.csv
+44,phrase_organic,hotel cancellation policy,us,10,10,300,raw/44-phrase_organic-hotel-cancellation-policy-us.csv
+45,phrase_organic,trip organizer app,us,10,10,100,raw/45-phrase_organic-trip-organizer-app-us.csv
+46,phrase_organic,flight time calculator,us,10,10,100,raw/46-phrase_organic-flight-time-calculator-us.csv
+47,phrase_organic,tripit pro,us,10,10,100,raw/47-phrase_organic-tripit-pro-us.csv
+48,phrase_organic,best travel itinerary app,us,10,10,100,raw/48-phrase_organic-best-travel-itinerary-app-us.csv
+49,phrase_organic,travel document organizer,us,10,10,100,raw/49-phrase_organic-travel-document-organizer-us.csv
+50,phrase_organic,wanderlog reviews,us,10,10,100,raw/50-phrase_organic-wanderlog-reviews-us.csv
+51,phrase_these,intl-shortlist-96,au,96,96,960,raw/51-phrase_these-intl-shortlist-96-au.csv
+52,phrase_these,intl-shortlist-96,uk,96,96,960,raw/52-phrase_these-intl-shortlist-96-uk.csv
+53,phrase_these,intl-shortlist-96,ca,96,96,960,raw/53-phrase_these-intl-shortlist-96-ca.csv
+54,backlinks_overview,trip-cache.com,root,1,1,40,raw/54-backlinks_overview-trip-cache-com-root.csv
+55,backlinks_comparison,tripcache-vs-competitors,root,6,6,240,raw/55-backlinks_comparison-tripcache-vs-competitors-root.csv
+56,backlinks_matrix,gap tripsy-folio-stippl-tripit not tripcache (by matches),root,60,60,2400,raw/56-backlinks_matrix-gap-tripsy-folio-stippl-tripit-not-tripcache-by-matches-root.csv
+57,backlinks_matrix,gap tripsy-folio-stippl not tripcache (by authority),root,50,50,2000,raw/57-backlinks_matrix-gap-tripsy-folio-stippl-not-tripcache-by-authority-root.csv
+58,backlinks_refdomains,trip-cache.com,root,40,40,1600,raw/58-backlinks_refdomains-trip-cache-com-root.csv
+59,backlinks_matrix,gap tripit-wanderlog-tripsy not tripcache (by matches),root,50,50,2000,raw/59-backlinks_matrix-gap-tripit-wanderlog-tripsy-not-tripcache-by-matches-root.csv
+60,phrase_organic,best travel apps for planning,au,10,10,100,raw/60-phrase_organic-best-travel-apps-for-planning-au.csv
+61,phrase_organic,app in the air,us,10,10,100,raw/61-phrase_organic-app-in-the-air-us.csv
+62,domain_rank,flighty.com,us,1,1,10,raw/62-domain_rank-flighty-com-us.csv
+63,resource_organic_unique,flighty.com top pages,us,20,20,200,raw/63-resource_organic_unique-flighty-com-top-pages-us.csv
+E1,phrase_related,travel document organizer app,us,25,0,0,none (ERROR 50 NOTHING FOUND; no units reported)
+E2,phrase_questions,travel itinerary,us,25,0,0,none (validation_failed: export column; retried as call 29)
+E3,domain_domains,tripit+wanderlog+tripsy+folio minus trip-cache,us,40,0,0,none (validation_failed: display_filter bug in MCP)
+E4,domain_domains,same (keyword filter only),us,40,0,0,none (validation_failed: display_filter bug in MCP)

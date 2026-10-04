@@ -1,9 +1,0 @@
-{
-  "currency": "AUD",
-  "northStar": { "metric": "mrr", "target": 5000, "status": "ACTIVE" },
-  "baselines": {
-    "mrr": { "value": 11, "status": "MEASURED_REVENUECAT_AUD_2026-08-23" },
-    "websiteStoreIntentRate": { "value": null, "status": "TRAFFIC_MEASURED_STORE_INTENT_RATE_UNKNOWN" }
-  },
-  "priorities": ["repair measurement", "increase qualified organic discovery", "increase store intent", "improve retained paid conversion"]
-}
