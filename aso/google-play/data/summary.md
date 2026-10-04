@@ -1,6 +1,6 @@
 # Google Play summary — 2026-10-05
 
-Generated 2026-10-04T17:08:22.327Z by `npm run aso:feed`.
+Generated 2026-10-04T17:27:59.095Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 

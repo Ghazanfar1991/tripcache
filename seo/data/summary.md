@@ -1,6 +1,6 @@
 # TripCache SEO summary — 2026-10-05
 
-Generated 2026-10-04T17:07:48.375Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-09-05 → 2026-10-02.
+Generated 2026-10-04T17:27:25.146Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-09-05 → 2026-10-02.
 
 ## Data sources
 
@@ -21,9 +21,9 @@ Change is versus the previous 28 days.
 
 27/39 sitemap URLs indexed (checked 2026-10-04).
 
-- `/account-delete` — URL is unknown to Google (never crawled)
+- `/account-delete` — Discovered - currently not indexed (never crawled)
 - `/blog/ai-trip-planner-2026` — Discovered - currently not indexed (never crawled)
-- `/blog/business-travel-management-guide-2026` — Discovered - currently not indexed (never crawled)
+- `/blog/business-travel-management-guide-2026` — URL is unknown to Google (never crawled)
 - `/blog/email-to-trip-automation` — Discovered - currently not indexed (never crawled)
 - `/blog/flighty-vs-tripcache-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/free-cancellation-reminder-travel-bookings-2026` — Discovered - currently not indexed (never crawled)
@@ -31,8 +31,24 @@ Change is versus the previous 28 days.
 - `/blog/travel-booking-organizer-app-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/travel-itinerary-template-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/tripit-alternative-cancellation-reminders-documents-2026` — Discovered - currently not indexed (never crawled)
-- `/tools` — URL is unknown to Google (never crawled)
-- `/tools/hotel-cancellation-deadline-calculator` — URL is unknown to Google (never crawled)
+- `/tools` — Discovered - currently not indexed (never crawled)
+- `/tools/hotel-cancellation-deadline-calculator` — Discovered - currently not indexed (never crawled)
+
+Other Search Console issues (structured data, canonicals, fetch, robots, sitemap):
+
+- `/` — canonical-mismatch: Google chose https://trip-cache.com
+- `/tools` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/tools/hotel-cancellation-deadline-calculator` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/account-delete` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/travel-booking-organizer-app-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/tripit-alternative-cancellation-reminders-documents-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/free-cancellation-reminder-travel-bookings-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/ai-trip-planner-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/business-travel-management-guide-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/travel-itinerary-template-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/flighty-vs-tripcache-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/google-travel-alternative-2026` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
+- `/blog/email-to-trip-automation` — robots: ROBOTS_TXT_STATE_UNSPECIFIED
 
 ## Top pages
 
@@ -118,6 +134,8 @@ Website store intent: 14.1% of 128 visitors clicked an App Store/Play link (GA4,
 
 ## Changelog
 
+- Measuring: 2026-10-05-plan-claims-match-app — result due 2026-11-05
+- Measuring: 2026-10-05-blog-plan-claim-fixes — result due 2026-11-05
 - Needs a written lesson: 2025-11-09-first-blog-guides (launched)
 - Needs a written lesson: 2026-05-17-six-2026-guides (launched)
 - Needs a written lesson: 2026-06-01-ai-search-readiness (better)
