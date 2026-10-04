@@ -8,7 +8,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Calculate a hotel's free-cancellation cutoff, save confirmation details, and set TripCache reminders before a refundable rate becomes non-refundable.",
   date: "2026-05-18",
-  updatedAt: "2026-08-17",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
@@ -27,7 +27,7 @@ export const body = String.raw`# Hotel Cancellation Reminder + Free Calculator
 
 Refundable hotel bookings are useful because they let you keep flexibility while trip plans are still changing. The risk is simple: if you miss the free-cancellation deadline, the booking can become an expensive commitment.
 
-TripCache helps you save hotel cancellation deadlines beside the stay itself, then reminds you before the refund window closes. You can also use the [hotel cancellation deadline calculator](/tools/hotel-cancellation-deadline-calculator) to work out a cutoff before adding it to TripCache.
+TripCache helps you save hotel cancellation deadlines beside the stay itself, then reminds you before the refund window closes. These reminders are free: they are part of TripCache Basic, not a paid add-on. You can also use the [hotel cancellation deadline calculator](/tools/hotel-cancellation-deadline-calculator) to work out a cutoff before adding it to TripCache.
 
 ## Why Hotel Cancellation Deadlines Are Easy to Miss
 
@@ -59,22 +59,22 @@ TripCache keeps this information connected to the trip, so the reminder has cont
 
 ## Best Reminder Timing
 
-For most hotel bookings, set more than one reminder:
+TripCache can remind you seven days, two days, or one day before the deadline, or on the day. For most hotel bookings, set more than one reminder:
 
+- **Seven days before:** useful for expensive hotels or group travel where several people need to agree.
 - **Two days before:** compare prices, confirm plans, and decide whether to keep the stay.
 - **One day before:** final check before the booking becomes risky.
 - **Day of deadline:** emergency backup for strict local-time rules.
-- **Custom reminder:** useful for expensive hotels or complicated group travel.
 
 ## Example Hotel Workflow
 
 1. Add the hotel as a stay in TripCache.
-2. Upload or forward the booking confirmation.
+2. Upload the booking confirmation to the trip, or forward it with TripCache Pro so the importer can read the deadline for you to check.
 3. Enter the cancellation deadline exactly as shown by the hotel.
 4. Choose your reminder timing.
 5. Add notes such as loyalty number, breakfast, parking, or deposit rules.
 
-When the reminder arrives, you can open the hotel item and cancel with the right details in front of you.
+When the reminder arrives, you can open the trip and cancel with the right details in front of you.
 
 ## Why This Helps Business Travelers
 

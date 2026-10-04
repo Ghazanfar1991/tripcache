@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Find a Google Trips replacement for reservation import, itinerary planning, maps, flight alerts, documents, cancellation reminders, and trip expenses.",
   date: "2026-03-10",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "10 min read",
   category: "Alternatives",
@@ -96,11 +96,11 @@ It is not intended to be a complete organizer for hotel refund deadlines, rental
 
 TripCache is designed for the work after you book:
 
-- Forward selected confirmation emails into reviewable trip drafts.
-- Organize flights, stays, cars, transport, activities, tickets, restaurants, meetings, and custom items.
-- Record free-cancellation deadlines.
+- Organize flights, stays, cars, transport, activities, tickets, restaurants, meetings, and notes.
+- Record free-cancellation deadlines and get reminders, included in the free plan.
 - Keep documents and receipts with the trip.
-- Track expenses and export CSV records on Pro.
+- Track expenses and export CSV or PDF records, also free.
+- With Pro, forward selected confirmation emails into reviewable trip drafts and get live flight-status alerts.
 
 Choose TripCache when the problem is not finding a destination, but keeping confirmed travel accurate and accessible. The [travel booking organizer guide](/blog/travel-booking-organizer-app-2026) shows the complete workflow.
 

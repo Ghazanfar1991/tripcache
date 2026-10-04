@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Organize flight, hotel, rental car, ticket, and other travel confirmation emails into a structured itinerary with a review-first workflow.",
   date: "2026-05-18",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Automation",
@@ -29,7 +29,7 @@ export const body = String.raw`# How to Organize Travel Confirmation Emails Auto
 
 **Quick answer:** keep original travel confirmations in a dedicated inbox label, then forward selected messages to a reviewable itinerary. Check names, local dates, times, locations, references, and cancellation terms before accepting each imported booking.
 
-The problem is that confirmation emails are designed for delivery, not organization. TripCache helps turn those emails into a structured itinerary through its [email-to-itinerary automation](/features/email-to-itinerary).
+The problem is that confirmation emails are designed for delivery, not organization. TripCache helps turn those emails into a structured itinerary through its [email-to-itinerary automation](/features/email-to-itinerary). Email import is part of TripCache Pro and includes a monthly import allowance; cancellation reminders, documents, and exports are free on every plan.
 
 > **Key takeaways**
 > - An inbox label preserves the source message; an itinerary makes the booking usable in trip order.
@@ -53,13 +53,13 @@ If your trip has five or ten bookings, manually searching email becomes unreliab
 
 ### 1. Forward the Confirmation
 
-Forward flight, hotel, rental car, ticket, or booking emails to TripCache.
+Forward flight, hotel, rental car, ticket, or booking emails to your TripCache address. Attached PDFs and screenshots are read too.
 
 If you automate this step in Gmail, follow Google's current [automatic forwarding guidance](https://support.google.com/mail/answer/10957) and keep filters narrow enough to avoid forwarding unrelated messages.
 
 ### 2. Review the Draft
 
-TripCache extracts the important details and creates a draft so you can review before saving.
+TripCache extracts the important details, including a free-cancellation deadline when the email states one, and creates a draft so you can review before saving.
 
 ### 3. Attach It to the Right Trip
 
@@ -67,7 +67,7 @@ Once accepted, the booking sits inside the trip timeline with the rest of your i
 
 ### 4. Add Documents and Reminders
 
-If the booking has a PDF, QR code, receipt, or cancellation deadline, attach it to the same trip item.
+If the booking has a PDF, QR code, or receipt, save it to the same trip. If it has a cancellation deadline, set a reminder on the booking.
 
 ## Which Emails Should You Forward?
 
@@ -83,10 +83,8 @@ Forward anything you may need during travel:
 - Event tickets.
 - Restaurant deposits.
 - Parking reservations.
-- Travel insurance.
-- Receipts and invoices.
 
-For complete trip coverage, pair this with our [travel booking organizer checklist](/blog/travel-booking-organizer-app-2026).
+Save travel insurance, receipts, and invoices to the trip's documents instead. For complete trip coverage, pair this with our [travel booking organizer checklist](/blog/travel-booking-organizer-app-2026).
 
 ## How to Avoid Duplicate Bookings
 
@@ -108,14 +106,13 @@ Business travelers often need a clean record for reimbursement. Email automation
 
 - Flight and hotel details are captured quickly.
 - Receipts stay connected to the trip.
-- Expense exports are easier to prepare.
-- Assistants and teams can review structured information.
+- Free CSV and PDF exports turn the trip into a report.
 
 Read more in our [business travel expense reporting guide](/blog/business-travel-expense-reporting-app-2026).
 
 ## Why This Helps Families
 
-Families often book from several accounts and providers. One parent may book flights, another may book hotels, and tickets may arrive in a separate inbox. TripCache gives the family a single trip view.
+Families often book from several accounts and providers. One parent may book flights, another may book hotels, and tickets may arrive in a separate inbox. Collecting every confirmation in one TripCache trip gives the person organizing it a single view, and a trip-card image is easy to send to everyone else.
 
 ## Travel Email Organization Checklist
 
