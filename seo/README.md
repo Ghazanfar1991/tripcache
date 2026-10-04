@@ -59,6 +59,7 @@ Change types: `title-meta`, `content-update`, `new-page`, `internal-links`, `tec
 - **no clear change:** anything in between.
 - **too little data:** under 200 impressions across both windows.
 - **launched:** new pages, reported with their first 28 days.
+- **site-wide:** template, design or other whole-site changes. There's no control group, so the numbers are just the site trend and can't be credited to the change.
 - **⚠ confounded:** another change touched the same pages (or the whole site) during the window, so the result can't be attributed cleanly.
 
 The verdict is computed; the **lesson** is written by whoever reviews it. Lessons that generalize become rules.

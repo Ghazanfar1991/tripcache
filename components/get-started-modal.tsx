@@ -64,8 +64,8 @@ export function GetStartedModal({ triggerClassName, triggerLabel = "Get Started"
             Get TripCache on your phone
           </h2>
           <p id="download-dialog-description" className="mx-auto mt-4 max-w-md text-base text-[#666666] sm:text-lg">
-            Download the official iPhone or Android app, start with the free plan, and upgrade to Pro in the app when
-            you need automation and exports.
+            Download the official iPhone or Android app and start with the free plan, which includes cancellation
+            reminders and exports. Upgrade to Pro in the app when you want email import and live flight alerts.
           </p>
 
           <div className="mb-4 mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">

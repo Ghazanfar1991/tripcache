@@ -29,9 +29,9 @@ import CursorTrailGate from "@/components/ui/CursorTrailGate";
 
 const heroPoints = [
   "Import supported booking emails",
-  "Track free-cancellation deadlines",
+  "Free cancellation-deadline reminders",
   "Keep travel documents and receipts",
-  "Export business travel expenses",
+  "Export expenses and travel history",
 ];
 
 const heroStories = [
@@ -60,10 +60,10 @@ const heroStories = [
     alt: "",
     label: "Trip Expenses",
     title: "Track costs by trip",
-    description: "Keep receipts and expenses together.",
-    secondLabel: "CSV Export",
+    description: "Log costs in any of 153 currencies.",
+    secondLabel: "CSV and PDF Export",
     secondTitle: "Prepare cleaner records",
-    secondDescription: "Export paid-plan records for review or reimbursement.",
+    secondDescription: "Export expenses or travel history on the free plan.",
   },
   {
     image: "/app-feature-secure-documents.webp",
@@ -83,7 +83,7 @@ const steps = [
     icon: Mail,
     title: "Forward a supported booking",
     description:
-      "With the paid plan, forward a flight, hotel, car, tour, or ticket confirmation to your TripCache address.",
+      "With Pro, forward a flight, hotel, car, tour, or ticket confirmation to your TripCache address.",
     image: "/app-screenshot-import.webp",
   },
   {
@@ -107,7 +107,7 @@ const features = [
     icon: Mail,
     title: "Email Import",
     description:
-      "Forward supported confirmations and review the extracted trip draft before you save it.",
+      "With Pro, forward supported confirmations and review the extracted trip draft before you save it.",
     href: "/features/email-to-itinerary",
     linkLabel: "Explore email import",
     images: ["/app-screenshot-import.webp", "/app-screenshot-drafts.webp"],
@@ -117,7 +117,7 @@ const features = [
     icon: BellRing,
     title: "Cancellation Reminders",
     description:
-      "Save the cutoff from your booking and choose when TripCache should remind you.",
+      "Free on every plan. Save the cutoff from your booking and get reminded 7 days, 2 days, or 1 day before, or on the day.",
     href: "/features/cancellation-reminders",
     linkLabel: "Explore cancellation reminders",
     images: ["/app-feature-cancellation-reminder.webp"],
@@ -127,7 +127,7 @@ const features = [
     icon: FileCheck2,
     title: "Travel Documents",
     description:
-      "Keep tickets, boarding passes, confirmations, visas, and other files attached to the trip.",
+      "Keep tickets, boarding passes, confirmations, visas, and other files with the trip, behind an optional PIN with Face ID or fingerprint unlock.",
     href: "/blog/best-travel-document-organizer-app-2026",
     linkLabel: "Read the document guide",
     images: ["/app-feature-secure-documents.webp"],
@@ -137,7 +137,7 @@ const features = [
     icon: Plane,
     title: "Flight Status Updates",
     description:
-      "See supported flight-status updates alongside the itinerary while checking the provider for final details.",
+      "With Pro, get live alerts for delays and gate, terminal, and baggage-belt changes on supported flights. The airline has the final word.",
     href: "/features",
     linkLabel: "See all features",
     images: ["/app-screenshot-flight-detail.webp"],
@@ -155,9 +155,9 @@ const features = [
   },
   {
     icon: FileSpreadsheet,
-    title: "Trip Expenses and CSV Export",
+    title: "Trip Expenses and Exports",
     description:
-      "Track costs, attach receipts, and use the paid plan to export CSV records for review or reimbursement.",
+      "Track costs in 153 currencies, set budgets by category, and export CSV or PDF records on the free plan. Keep receipts as trip documents.",
     href: "/features/business-travel-expenses",
     linkLabel: "Explore trip expenses",
     images: [
@@ -175,7 +175,7 @@ const deepDives = [
     title: "Set the deadline before the deadline sets the price.",
     subtitle: "Cancellation Reminders",
     description:
-      "Record the free-cancellation cutoff shown in your hotel, rental car, tour, or ticket confirmation, then choose when TripCache should remind you. Your booking provider and confirmation remain the authoritative source for cancellation terms.",
+      "Record the free-cancellation cutoff shown in your hotel, rental car, tour, or ticket confirmation, then choose when TripCache should remind you. Reminders are free on every plan; with Pro, the email importer reads the deadline from the confirmation for you to check. Your booking provider and confirmation remain the authoritative source for cancellation terms.",
     image: "/app-feature-cancellation-reminder.webp",
     href: "/features/cancellation-reminders",
     linkLabel: "See the reminder workflow",
@@ -195,9 +195,9 @@ const deepDives = [
     id: "trip-expenses",
     icon: ReceiptText,
     title: "Close out a trip with cleaner records.",
-    subtitle: "Trip Expenses and CSV Export",
+    subtitle: "Trip Expenses and Exports",
     description:
-      "Track travel costs, attach receipts, and keep the context beside each trip. The paid plan adds CSV exports for reimbursement review, client billing, or personal recordkeeping.",
+      "Track travel costs in your home currency and keep receipts as trip documents. Export CSV or PDF records for reimbursement, client billing, or the travel history a visa application asks for. Exports are free on every plan.",
     image: "/app-screen-expense-management.webp",
     href: "/features/business-travel-expenses",
     linkLabel: "See the expense workflow",
@@ -248,32 +248,32 @@ const faqs = [
   {
     question: "Is TripCache free?",
     answer:
-      "Yes. Basic includes manual trip entry, itinerary viewing, and core trip organization. The paid plan adds email import, reminders, supported flight-status updates, expanded document storage, and CSV exports. Subscriptions are managed in the mobile app.",
+      "Yes. Basic is free and includes manual trips, cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses and budgets, CSV and PDF export, the trip map, and travel history. Pro adds booking-email import, live flight-status alerts, and Live Activity and widgets. Storage limits are the same on both plans. You upgrade to Pro inside the mobile app.",
   },
   {
     question: "How does booking-email import work?",
     answer:
-      "The paid plan gives you a TripCache forwarding address. Send a supported booking confirmation to that address and TripCache extracts the details into a draft. You review and correct the draft before adding it to your itinerary.",
+      "Pro gives you a TripCache forwarding address. Send a supported booking confirmation to that address and TripCache extracts the details, including from attached PDFs and screenshots, into a draft. You review and correct the draft before adding it to your itinerary. Imports count toward a monthly allowance.",
   },
   {
     question: "How do free-cancellation reminders work?",
     answer:
-      "You enter the cutoff from your refundable booking and choose when TripCache should remind you. Always confirm the final deadline and cancellation terms with the hotel, airline, rental company, tour operator, or other booking provider.",
+      "They are free on every plan. You enter the cutoff from your refundable booking and choose a reminder 7 days, 2 days, or 1 day before, or on the day. Always confirm the final deadline and cancellation terms with the hotel, airline, rental company, tour operator, or other booking provider.",
   },
   {
     question: "Can I keep travel documents with an itinerary?",
     answer:
-      "Yes. You can attach boarding passes, tickets, confirmations, visas, passport copies, and other travel files to the relevant trip so they are easier to find in context.",
+      "Yes. You can attach boarding passes, tickets, confirmations, visas, passport copies, and other travel files to the relevant trip so they are easier to find in context. You can also lock documents with a PIN and unlock them with Face ID or a fingerprint.",
   },
   {
     question: "Can I track expenses and export a CSV?",
     answer:
-      "You can track costs and attach receipts to a trip. The paid plan includes CSV exports for reimbursement review, client billing, or personal recordkeeping.",
+      "Yes, on the free plan. Track costs in any of 153 currencies, set category budgets, and export CSV or PDF records for reimbursement review, client billing, or personal recordkeeping. Receipts can be saved as trip documents.",
   },
   {
     question: "Does TripCache replace airline or booking-provider updates?",
     answer:
-      "No. TripCache can show supported flight-status updates, but airline, airport, and booking-provider information remains authoritative and can change or arrive late.",
+      "No. With Pro, TripCache sends live flight-status alerts for supported flights, but airline, airport, and booking-provider information remains authoritative and can change or arrive late.",
   },
   {
     question: "Does TripCache work on iPhone and Android?",
@@ -367,8 +367,9 @@ export function DesignOneHome() {
             </Reveal>
             <Reveal delay={330} className="design-one-hero-reveal">
               <p className="mx-auto mt-5 max-w-[34rem] text-xs leading-5 text-[#746c61] min-[940px]:mx-0">
-                Free to download. Basic supports manual trip entry; the paid
-                plan adds booking-email import and CSV exports.
+                Free to download. Basic includes cancellation reminders,
+                documents, and CSV or PDF export; Pro adds booking-email import
+                and live flight alerts.
               </p>
             </Reveal>
           </div>
@@ -612,13 +613,13 @@ export function DesignOneHome() {
                 Basic
               </p>
               <h3 className="mt-5 text-3xl font-semibold tracking-[-0.04em]">
-                Organize trips manually
+                Organize trips for free
               </h3>
               <ul className="mt-7 space-y-4 text-[#c3baae]">
                 {[
-                  "Manual trip entry",
-                  "Itinerary viewing",
-                  "Core trip organization",
+                  "Manual trips, boarding-pass scanning, and the document vault",
+                  "Cancellation-deadline and check-in reminders",
+                  "Expenses, budgets, and CSV or PDF export",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-[#a98af0]" />
@@ -633,16 +634,16 @@ export function DesignOneHome() {
               className="rounded-[28px] bg-[#602ad2] p-7 text-white sm:p-9"
             >
               <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-white/70">
-                Paid plan
+                Pro
               </p>
               <h3 className="mt-5 text-3xl font-semibold tracking-[-0.04em]">
-                Add automation and exports
+                Add email import and live flight alerts
               </h3>
               <ul className="mt-7 space-y-4 text-white/80">
                 {[
-                  "Booking-email import",
-                  "Cancellation reminders and supported flight-status updates",
-                  "CSV expense exports and expanded document storage",
+                  "Booking-email import with draft review",
+                  "Live flight-status alerts for supported flights",
+                  "Live Activity, Dynamic Island, and widgets",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-white" />
@@ -660,7 +661,7 @@ export function DesignOneHome() {
             </p>
             <p className="flex items-start gap-3">
               <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#a98af0]" />{" "}
-              You choose the cancellation deadline.
+              You confirm every cancellation deadline.
             </p>
             <p className="flex items-start gap-3">
               <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#a98af0]" />{" "}
@@ -834,9 +835,9 @@ export function DesignOneHome() {
               Put the next trip in one organized place.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#b9b0a3]">
-              Download TripCache for iPhone or Android. Start with manual trip
-              entry, then add paid automation and exports if they fit your
-              workflow.
+              Download TripCache for iPhone or Android. Start free with
+              reminders, documents, and exports, then add Pro for email import
+              and live flight alerts if they fit your workflow.
             </p>
             <div className="mt-8 flex justify-center">
               <DesignOneStoreButtons placement="homepage_final_cta" />

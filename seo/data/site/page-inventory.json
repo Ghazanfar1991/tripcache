@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-10-04T13:40:00.979Z",
+  "generatedAt": "2026-10-04T17:27:24.976Z",
   "baseUrl": "https://trip-cache.com",
   "pages": [
     {
       "url": "https://trip-cache.com",
+      "path": "/",
       "status": 200,
       "finalUrl": "https://trip-cache.com/",
       "title": "Travel Itinerary App for Booking Emails | TripCache",
@@ -13,10 +14,13 @@
       "openGraphUrl": "https://trip-cache.com/",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1330,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/about",
+      "path": "/about",
       "status": 200,
       "finalUrl": "https://trip-cache.com/about",
       "title": "About the Post-Booking Travel Organizer | TripCache",
@@ -26,23 +30,29 @@
       "openGraphUrl": "https://trip-cache.com/about",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 406,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/pricing",
+      "path": "/pricing",
       "status": 200,
       "finalUrl": "https://trip-cache.com/pricing",
       "title": "Travel App Pricing | TripCache",
-      "description": "Start with TripCache Basic for free, choose Pro for $5.99/month, or save 30% with Pro Yearly at $49.99/year.",
+      "description": "TripCache Basic is free, with cancellation and check-in reminders, documents, and CSV/PDF export. Pro adds email import and flight alerts from $5.99/month.",
       "canonical": "https://trip-cache.com/pricing",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/pricing",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 829,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/features",
+      "path": "/features",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features",
       "title": "Email Itinerary, Reminder, and Expense Features | TripCache",
@@ -52,10 +62,13 @@
       "openGraphUrl": "https://trip-cache.com/features",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 226,
+      "inboundLinks": 1
     },
     {
       "url": "https://trip-cache.com/alternatives",
+      "path": "/alternatives",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives",
       "title": "Alternatives to TripIt and TripCase | TripCache",
@@ -65,10 +78,13 @@
       "openGraphUrl": "https://trip-cache.com/alternatives",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 180,
+      "inboundLinks": 1
     },
     {
       "url": "https://trip-cache.com/tools",
+      "path": "/tools",
       "status": 200,
       "finalUrl": "https://trip-cache.com/tools",
       "title": "Free Travel Tools | TripCache",
@@ -78,10 +94,13 @@
       "openGraphUrl": "https://trip-cache.com/tools",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 145,
+      "inboundLinks": 1
     },
     {
       "url": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
+      "path": "/tools/hotel-cancellation-deadline-calculator",
       "status": 200,
       "finalUrl": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "title": "Hotel Cancellation Deadline Calculator | TripCache",
@@ -91,10 +110,13 @@
       "openGraphUrl": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "h1Count": 1,
       "jsonLdCount": 5,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 392,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/privacy",
+      "path": "/privacy",
       "status": 200,
       "finalUrl": "https://trip-cache.com/privacy",
       "title": "Privacy Policy | TripCache",
@@ -104,10 +126,13 @@
       "openGraphUrl": "https://trip-cache.com/privacy",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 339,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/terms",
+      "path": "/terms",
       "status": 200,
       "finalUrl": "https://trip-cache.com/terms",
       "title": "Terms of Service | TripCache",
@@ -117,10 +142,13 @@
       "openGraphUrl": "https://trip-cache.com/terms",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 365,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/account-delete",
+      "path": "/account-delete",
       "status": 200,
       "finalUrl": "https://trip-cache.com/account-delete",
       "title": "Delete Your Account | TripCache",
@@ -130,10 +158,13 @@
       "openGraphUrl": "https://trip-cache.com/account-delete",
       "h1Count": 1,
       "jsonLdCount": 3,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 227,
+      "inboundLinks": 1
     },
     {
       "url": "https://trip-cache.com/blog",
+      "path": "/blog",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog",
       "title": "Post-Booking Travel Organization Guides | TripCache",
@@ -143,49 +174,61 @@
       "openGraphUrl": "https://trip-cache.com/blog",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1153,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/features/email-to-itinerary",
+      "path": "/features/email-to-itinerary",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features/email-to-itinerary",
       "title": "Email-to-Itinerary App for Booking Confirmations | TripCache",
-      "description": "Use TripCache&#x27;s paid Email Import with supported travel confirmations to create reviewable trip drafts for flights, hotels, rental cars, and tickets.",
+      "description": "Use TripCache Pro Email Import with supported travel confirmations to create reviewable trip drafts for flights, hotels, rental cars, trains, and tickets.",
       "canonical": "https://trip-cache.com/features/email-to-itinerary",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/features/email-to-itinerary",
       "h1Count": 1,
       "jsonLdCount": 5,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 576,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/features/cancellation-reminders",
+      "path": "/features/cancellation-reminders",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features/cancellation-reminders",
       "title": "Hotel Cancellation Reminder and Deadline Tracker | TripCache",
-      "description": "Use the paid plan to record hotel, rental-car, and refundable-booking cancellation cutoffs and set reminders; the provider&#x27;s confirmation remains authoritative.",
+      "description": "Free on every TripCache plan: save hotel, rental-car, and other refundable-booking deadlines and get reminded 7, 2, or 1 day before, or on the day.",
       "canonical": "https://trip-cache.com/features/cancellation-reminders",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/features/cancellation-reminders",
       "h1Count": 1,
       "jsonLdCount": 5,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 632,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/features/business-travel-expenses",
+      "path": "/features/business-travel-expenses",
       "status": 200,
       "finalUrl": "https://trip-cache.com/features/business-travel-expenses",
       "title": "Business Travel Expense and Receipt Organizer | TripCache",
-      "description": "Organize business-trip bookings, receipts, documents, and expenses by trip, with paid CSV export for reimbursement review.",
+      "description": "Organize business-trip bookings, receipts, documents, and expenses by trip, with free CSV and PDF export for reimbursement review.",
       "canonical": "https://trip-cache.com/features/business-travel-expenses",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/features/business-travel-expenses",
       "h1Count": 1,
       "jsonLdCount": 5,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 564,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/alternatives/tripit",
+      "path": "/alternatives/tripit",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives/tripit",
       "title": "TripIt Alternative with Reminders and Documents | TripCache",
@@ -195,10 +238,13 @@
       "openGraphUrl": "https://trip-cache.com/alternatives/tripit",
       "h1Count": 1,
       "jsonLdCount": 5,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 470,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/alternatives/tripcase",
+      "path": "/alternatives/tripcase",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives/tripcase",
       "title": "TripCase Alternative for Travel Confirmations | TripCache",
@@ -208,10 +254,13 @@
       "openGraphUrl": "https://trip-cache.com/alternatives/tripcase",
       "h1Count": 1,
       "jsonLdCount": 5,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 462,
+      "inboundLinks": 38
     },
     {
       "url": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
+      "path": "/blog/best-tripit-alternatives-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "title": "Best TripIt Alternatives in 2026: 6 Apps Compared",
@@ -221,10 +270,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1660,
+      "inboundLinks": 10
     },
     {
       "url": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
+      "path": "/blog/ai-travel-organizer-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
       "title": "AI Travel Organizer App for Emails, PDFs, and Trips",
@@ -234,10 +286,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1439,
+      "inboundLinks": 10
     },
     {
       "url": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
+      "path": "/blog/hotel-cancellation-reminder-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
       "title": "Hotel Cancellation Reminder + Free Calculator",
@@ -247,10 +302,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 837,
+      "inboundLinks": 9
     },
     {
       "url": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
+      "path": "/blog/rental-car-cancellation-reminder-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
       "title": "Rental Car Cancellation Reminder App and Checklist",
@@ -260,10 +318,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 729,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/trip-expense-management-app-2026",
+      "path": "/blog/trip-expense-management-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/trip-expense-management-app-2026",
       "title": "Trip Expense Management App for Receipts and Costs",
@@ -273,10 +334,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/trip-expense-management-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 758,
+      "inboundLinks": 7
     },
     {
       "url": "https://trip-cache.com/blog/trip-map-itinerary-planner-app-2026",
+      "path": "/blog/trip-map-itinerary-planner-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/trip-map-itinerary-planner-app-2026",
       "title": "Trip Map Itinerary Planner App for Visual Travel Plans",
@@ -286,10 +350,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/trip-map-itinerary-planner-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 700,
+      "inboundLinks": 5
     },
     {
       "url": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
+      "path": "/blog/travel-booking-organizer-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
       "title": "Travel Booking Organizer App for Every Reservation",
@@ -299,10 +366,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1021,
+      "inboundLinks": 13
     },
     {
       "url": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+      "path": "/blog/best-travel-document-organizer-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "title": "Best Travel Document Organizer App: What to Look For",
@@ -312,10 +382,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 929,
+      "inboundLinks": 7
     },
     {
       "url": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
+      "path": "/blog/organize-travel-confirmation-emails-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "title": "How to Organize Travel Confirmation Emails Automatically",
@@ -325,10 +398,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 990,
+      "inboundLinks": 6
     },
     {
       "url": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
+      "path": "/blog/business-travel-expense-reporting-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
       "title": "Business Travel Expense App for Receipts and CSV Exports",
@@ -338,10 +414,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 930,
+      "inboundLinks": 9
     },
     {
       "url": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
+      "path": "/blog/tripit-alternative-cancellation-reminders-documents-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
       "title": "TripIt Alternative for Reminders and Travel Documents",
@@ -351,10 +430,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 758,
+      "inboundLinks": 6
     },
     {
       "url": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
+      "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
       "title": "Free Cancellation Reminder App for Travel Bookings",
@@ -364,10 +446,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1252,
+      "inboundLinks": 11
     },
     {
       "url": "https://trip-cache.com/blog/ai-trip-planner-2026",
+      "path": "/blog/ai-trip-planner-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/ai-trip-planner-2026",
       "title": "AI Trip Planner vs Travel Organizer: Key Differences",
@@ -377,10 +462,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/ai-trip-planner-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1254,
+      "inboundLinks": 7
     },
     {
       "url": "https://trip-cache.com/blog/business-travel-management-guide-2026",
+      "path": "/blog/business-travel-management-guide-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/business-travel-management-guide-2026",
       "title": "Business Travel Organization Checklist for 2026",
@@ -390,10 +478,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/business-travel-management-guide-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1249,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/travel-itinerary-template-2026",
+      "path": "/blog/travel-itinerary-template-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/travel-itinerary-template-2026",
       "title": "Free Travel Itinerary Template: Vacation and Business",
@@ -403,10 +494,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/travel-itinerary-template-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1232,
+      "inboundLinks": 1
     },
     {
       "url": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
+      "path": "/blog/flighty-vs-tripcache-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
       "title": "Flighty vs TripCache: Flight Tracker or Trip Organizer?",
@@ -416,10 +510,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1244,
+      "inboundLinks": 7
     },
     {
       "url": "https://trip-cache.com/blog/google-travel-alternative-2026",
+      "path": "/blog/google-travel-alternative-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/google-travel-alternative-2026",
       "title": "Google Trips Replacement: Best Alternatives for 2026",
@@ -429,10 +526,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/google-travel-alternative-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1335,
+      "inboundLinks": 2
     },
     {
       "url": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "path": "/blog/tripcase-alternative-2025",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/tripcase-alternative-2025",
       "title": "Best TripCase Alternatives After the Shutdown (2026 Guide)",
@@ -442,10 +542,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/tripcase-alternative-2025",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1432,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "path": "/blog/tripcase-shutdown-what-now",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "title": "TripCase Is Gone: 2026 Replacement &amp; Recovery Guide",
@@ -455,10 +558,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1344,
+      "inboundLinks": 3
     },
     {
       "url": "https://trip-cache.com/blog/best-travel-apps-2025",
+      "path": "/blog/best-travel-apps-2025",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/best-travel-apps-2025",
       "title": "Best Travel Apps for Planning in 2026: 4 Top Picks",
@@ -468,10 +574,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/best-travel-apps-2025",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1442,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
+      "path": "/blog/tripit-vs-tripcache-comparison-2025",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "title": "TripIt vs TripCache: Features and Pricing (2026)",
@@ -481,10 +590,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1099,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/email-to-trip-automation",
+      "path": "/blog/email-to-trip-automation",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/email-to-trip-automation",
       "title": "Email to Itinerary App: How Travel Email Automation Works",
@@ -494,10 +606,13 @@
       "openGraphUrl": "https://trip-cache.com/blog/email-to-trip-automation",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1242,
+      "inboundLinks": 9
     },
     {
       "url": "https://trip-cache.com/blog/privacy-and-security",
+      "path": "/blog/privacy-and-security",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/privacy-and-security",
       "title": "Travel App Privacy: What to Check Before Uploading Documents",
@@ -507,7 +622,9 @@
       "openGraphUrl": "https://trip-cache.com/blog/privacy-and-security",
       "h1Count": 1,
       "jsonLdCount": 4,
-      "jsonLdErrors": []
+      "jsonLdErrors": [],
+      "words": 1023,
+      "inboundLinks": 3
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:40:00.979Z",
+  "generatedAt": "2026-10-04T17:27:24.976Z",
   "baseUrl": "https://trip-cache.com",
   "status": "PASS",
   "checks": {
@@ -7,13 +7,13 @@
     "robotsStatus": 200,
     "sitemapStatus": 200,
     "sitemapUrls": 39,
-    "llmsStatus": 200,
-    "llmsFullStatus": 200,
+    "registeredUrls": 54,
+    "redirectsVerified": 15,
     "pagesWithOneH1": 39,
-    "pagesWithSelfOpenGraphUrl": 39,
     "parseableJsonLdBlocks": 155,
     "duplicateTitleGroups": 0,
     "duplicateDescriptionGroups": 0
   },
-  "failures": []
+  "failures": [],
+  "warnings": []
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:38:43.737Z",
+  "generatedAt": "2026-10-04T17:27:18.777Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -36,6 +36,318 @@
       "metrics": {
         "eventCount": 7,
         "activeUsers": 6
+      }
+    }
+  ],
+  "landingPages": [
+    {
+      "dimensions": {
+        "landingPage": "/"
+      },
+      "metrics": {
+        "sessions": 51,
+        "activeUsers": 40,
+        "engagementRate": 0.4117647058823529
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/tripcase-shutdown-what-now"
+      },
+      "metrics": {
+        "sessions": 21,
+        "activeUsers": 21,
+        "engagementRate": 0.5238095238095238
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/best-tripit-alternatives-2026"
+      },
+      "metrics": {
+        "sessions": 12,
+        "activeUsers": 12,
+        "engagementRate": 0.4166666666666667
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/best-travel-apps-2025"
+      },
+      "metrics": {
+        "sessions": 9,
+        "activeUsers": 9,
+        "engagementRate": 0.3333333333333333
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/tripcase-alternative-2025"
+      },
+      "metrics": {
+        "sessions": 9,
+        "activeUsers": 9,
+        "engagementRate": 0.5555555555555556
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "(not set)"
+      },
+      "metrics": {
+        "sessions": 8,
+        "activeUsers": 6,
+        "engagementRate": 0.25
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/best-travel-document-organizer-app-2026"
+      },
+      "metrics": {
+        "sessions": 5,
+        "activeUsers": 5,
+        "engagementRate": 0.4
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 2,
+        "engagementRate": 0.75
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/travel-itinerary-template-2026"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 4,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/ai-travel-organizer-app-2026"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0.5
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/ai-trip-planner-2026"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/hotel-cancellation-reminder-app-2026"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0.5
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/privacy-and-security"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/trip-expense-management-app-2026"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/tripit-vs-tripcache-comparison-2025"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": ""
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/about"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/alternatives/tripcase"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 1
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/business-travel-expense-reporting-app-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/business-travel-management-guide-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/email-to-trip-automation"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/flight-time-zones-arrival-date"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 1
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/free-cancellation-reminder-travel-bookings-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/google-travel-alternative-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/organize-travel-confirmation-emails-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/travel-booking-organizer-app-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/trip-map-itinerary-planner-app-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/features/business-travel-expenses"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 1
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/features/cancellation-reminders"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 1
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/pricing"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 1
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/tools/hotel-cancellation-deadline-calculator"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 1
       }
     }
   ],

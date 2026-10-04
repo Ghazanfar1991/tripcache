@@ -4,7 +4,6 @@ import { renderMarkdown } from "@/lib/markdown"
 import * as BestTravelApps from "@/content/blog/best-travel-apps-2025"
 import * as EmailToTripAutomation from "@/content/blog/email-to-trip-automation"
 import * as PrivacyAndSecurity from "@/content/blog/privacy-and-security"
-import * as TripcaseAlternative from "@/content/blog/tripcase-alternative-2025"
 import * as TripcaseShutdown from "@/content/blog/tripcase-shutdown-what-now"
 import * as TripitComparison from "@/content/blog/tripit-vs-tripcache-comparison-2025"
 import * as AiTripPlanner from "@/content/blog/ai-trip-planner-2026"
@@ -17,7 +16,6 @@ import * as TravelBookingOrganizer from "@/content/blog/travel-booking-organizer
 import * as TravelDocumentOrganizer from "@/content/blog/best-travel-document-organizer-app-2026"
 import * as ConfirmationEmailOrganizer from "@/content/blog/organize-travel-confirmation-emails-2026"
 import * as BusinessTravelExpenseReporting from "@/content/blog/business-travel-expense-reporting-app-2026"
-import * as TripitAlternativeReminders from "@/content/blog/tripit-alternative-cancellation-reminders-documents-2026"
 import * as HotelCancellationReminder from "@/content/blog/hotel-cancellation-reminder-app-2026"
 import * as RentalCarCancellationReminder from "@/content/blog/rental-car-cancellation-reminder-app-2026"
 import * as TripExpenseManagement from "@/content/blog/trip-expense-management-app-2026"
@@ -44,7 +42,6 @@ const rawPosts: BlogPostModule[] = [
   TravelDocumentOrganizer,
   ConfirmationEmailOrganizer,
   BusinessTravelExpenseReporting,
-  TripitAlternativeReminders,
   CancellationReminder,
   AiTripPlanner,
   BusinessTravelManagement,
@@ -52,7 +49,6 @@ const rawPosts: BlogPostModule[] = [
   FlightyComparison,
   GoogleTravelAlternative,
   TripitComparison,
-  TripcaseAlternative,
   TripcaseShutdown,
   BestTravelApps,
   EmailToTripAutomation,

@@ -5,223 +5,165 @@ export const metadata: BlogFrontmatter = {
   title: "Best TripIt Alternatives in 2026: Email Import, Documents, Reminders, and Expenses",
   seoTitle: "Best TripIt Alternatives in 2026: 6 Apps Compared",
   excerpt:
-    "Compare the best TripIt alternatives for travelers who want email import, document storage, cancellation reminders, maps, expense exports, and modern mobile workflows.",
+    "Compare the best TripIt alternatives for email import, travel documents, cancellation reminders, expenses, Android support and price, with honest tradeoffs for each app.",
   description:
-    "Compare TripIt alternatives in 2026 by email import, travel documents, cancellation reminders, maps, flight tools, and expense workflows.",
+    "Compare the best TripIt alternatives in 2026: TripCache, Tripsy, Wanderlog, Flighty and more, by email import, documents, reminders, expenses and price.",
   date: "2026-06-01",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "12 min read",
   category: "Comparison",
   image: "/blog-cover-travel-booking-organizer.webp",
   imageAlt: "TripIt alternatives compared for itinerary import, maps, documents, reminders, and expenses",
   keywords: [
-    "best TripIt alternatives 2026",
     "TripIt alternative",
+    "TripIt alternatives",
+    "best TripIt alternatives 2026",
+    "apps like TripIt",
     "TripIt competitors",
-    "travel itinerary app with email import",
-    "travel organizer app with documents",
-    "travel app with cancellation reminders",
-    "TripIt vs Wanderlog",
-    "TripIt vs TripCache",
+    "TripIt alternative with cancellation reminders",
+    "TripIt alternative with documents",
   ],
 }
 
 export const body = String.raw`# Best TripIt Alternatives in 2026: Email Import, Documents, Reminders, and Expenses
 
-**Quick answer:** TripIt remains a strong choice for established itinerary automation and travel-day tools. Compare TripCache for post-booking deadlines, documents, and records; Wanderlog for collaborative planning and maps; Tripsy for an Apple-focused itinerary; Google Travel for Google search and reservation context; or TravelPerk and Navan for managed corporate travel.
+**Quick answer:** TripIt is still the most established way to forward confirmation emails into an itinerary, and that forwarding is free. Look elsewhere when you need something TripIt doesn't focus on: **TripCache** for free cancellation-deadline reminders, a locked document vault and expense exports; **Tripsy** for a polished Apple-only itinerary; **Wanderlog** for planning places with friends; **Flighty** for flight detail; or **TravelPerk** and **Navan** when a company manages travel.
 
-If you are comparing TripIt alternatives in 2026, the best choice depends on what you need the app to do after the booking is made.
+Prices and features were checked on each official website and app-store listing on October 5, 2026. If you are weighing TripIt's paid plan, read our [TripIt Pro pricing and free vs Pro breakdown](/blog/tripit-vs-tripcache-comparison-2025) first.
 
-For a direct two-product decision, use the [TripIt vs TripCache feature and pricing comparison](/blog/tripit-vs-tripcache-comparison-2025).
+## Best TripIt alternative by use case
 
-## Quick Answer: Best TripIt Alternative by Use Case
+| If you want | Best fit |
+|---|---|
+| Free reminders before refundable bookings stop being free to cancel, plus documents and expenses | TripCache |
+| A polished itinerary on iPhone, iPad, Mac and Apple Watch | Tripsy |
+| Planning places on a map with friends or family | Wanderlog |
+| The most detail about flights only | Flighty |
+| Reservations from Gmail inside Google Search and Maps | Google |
+| Company booking, approvals and travel policy | TravelPerk or Navan |
 
-| Use case | Best fit |
-| --- | --- |
-| Email import plus documents, cancellation reminders, maps, and expenses | TripCache |
-| Vacation planning with friends and visual maps | Wanderlog |
-| Existing Gmail-only trip view | Google Travel |
-| Apple-focused itinerary organization | Tripsy |
-| Enterprise booking, approvals, and travel policy | TravelPerk or Navan |
-| Lightweight travel document bundling | A dedicated document organizer |
+## What TripIt does well (and what it costs)
 
-## What TripIt Does Well
+TripIt made email forwarding mainstream: send a confirmation to plans@tripit.com and it becomes part of a master itinerary. Its official [how it works page](https://www.tripit.com/en-us/web/how-it-works) still describes that workflow.
 
-TripIt became popular because it solved a real problem: travelers could forward confirmation emails to one address and receive an organized itinerary. TripIt still documents that workflow on its official [how it works page](https://www.tripit.com/en-us/web/how-it-works).
+TripIt's free plan includes email forwarding, inbox sync, calendar sync, plan sharing, airport and terminal maps, travel stats and 3 document uploads per trip. TripIt Pro costs $49 a year after a 30-day free trial and adds real-time flight alerts, check-in reminders, alternate flights, fare and seat trackers, points tracking and 25 documents per trip.
 
-TripIt is strongest if you want:
+That makes TripIt hard to beat if free email import is what you need. The reasons people look for a TripIt alternative are usually different:
 
-- Email forwarding for flights, hotels, cars, and reservations.
-- A familiar itinerary timeline.
-- Calendar sync and sharing.
-- Paid flight alerts and travel-monitoring features.
-- A long-established brand.
+- They want a reminder before a hotel or rental car stops being free to cancel.
+- They keep passports, visas and tickets on their phone and want them locked and organized.
+- They need trip expenses in more than one currency, or an export for reimbursement or a visa application.
+- They prefer an app designed for planning places, or one that goes deeper on flights.
 
-The gap is that many travelers now want a wider trip system. They do not only need to know the flight number. They need the hotel cancellation deadline, the rental car pickup note, the passport scan, the dinner deposit, the QR code, the receipt, and the expense export.
+## What to look for in a TripIt alternative
 
-## What to Look For in a TripIt Alternative
+- **Email import:** can you forward confirmations, and is it free or paid?
+- **Booking coverage:** flights only, or also hotels, cars, trains, events, restaurants, parking and custom items?
+- **Documents:** can you keep passports, visas, boarding passes and tickets with the trip, and lock them?
+- **Cancellation deadlines:** can you save a refundable booking's cutoff and get reminded before it passes?
+- **Expenses:** can you track costs in different currencies and export them?
+- **Offline access:** do your trips and files open without a signal?
+- **Platforms:** is there a native Android app, or only iPhone?
+- **Privacy:** does the workflow let you forward specific emails instead of granting access to your whole inbox?
 
-Before choosing an app, compare these features:
+## Where travelers need more than an itinerary
 
-- Email-to-itinerary import: can you forward confirmations, or do you need to type everything manually?
-- Booking coverage: does it support flights only, or also hotels, cars, activities, restaurants, trains, parking, and custom items?
-- Document storage: can you keep PDFs, tickets, visas, passports, and boarding passes with the trip?
-- Cancellation reminders: can you save refundable booking deadlines before they expire?
-- Map view: can you see stays, destinations, and activities in context?
-- Expense tracking: can you save receipts and export useful reports?
-- Mobile access: does the app work well while you are moving through airports and hotels?
-- Privacy: does the workflow avoid giving broad inbox access when forwarding specific emails is enough?
+**Hotels and stays** come with cancellation windows, deposits and check-in rules that belong with the stay, not buried in email. **Rental cars** add pickup times, return locations and their own cancellation terms. **Tickets, tours and restaurants** often have QR codes and refund rules that are easy to miss. **Documents** such as passports, visas, boarding passes and insurance should be one tap away at the airport. And **cancellation deadlines** decide whether a change of plans costs nothing or the full price.
 
-## 1. TripCache
+A timeline that shows the booking date but not the free-cancellation cutoff leaves the most expensive detail out. That gap is why TripCache exists.
 
-TripCache is built for travelers who want a complete trip organizer instead of a flight-only timeline. It supports confirmation email forwarding, trip drafts, booking items, travel documents, cancellation reminders, trip maps, expenses, and CSV exports.
+## 1. TripCache: best for deadlines, documents and expenses
 
-Review current features and pricing on the [TripCache pricing page](/pricing), then check platform disclosures through the official [App Store listing](https://apps.apple.com/app/id6758403056) or [Google Play listing](https://play.google.com/store/apps/details?id=app.tripcache).
+TripCache is built for the work after you book. Most of it is free on the Basic plan:
 
-### Where TripCache Is Strong
+- Trips with flights, hotels, rental cars, trains, buses, parking, events, restaurants, tours, meetings and notes.
+- **Cancellation-deadline reminders** at 7 days, 2 days, 1 day or on the day a refundable booking's free cancellation ends. The free [hotel cancellation deadline calculator](/tools/hotel-cancellation-deadline-calculator) works out the cutoff for you.
+- **Check-in reminders** 48 hours and 24 hours before departure, with a shortcut that copies your booking reference and opens the airline's website.
+- **Boarding-pass scanning** that adds or updates a flight from the barcode.
+- **A document vault** sorted into tickets, boarding passes, passport, visa, insurance and hotel, with an optional PIN and Face ID or fingerprint unlock. Read the [travel document app guide](/blog/best-travel-document-organizer-app-2026) for how it works.
+- **Expenses in 153 currencies**, each with its exchange rate locked when you add it, plus budgets by category.
+- **CSV and PDF export** of travel history, expenses or a visa and immigration summary.
+- **CSV import** of past flights, and offline access to trips and cached documents.
 
-- Forward booking confirmation emails and review trip drafts.
-- Organize flights, hotels, rental cars, transport, activities, tickets, restaurants, parking, documents, notes, and custom items.
-- Save free-cancellation deadlines for hotels, cars, tours, tickets, and other refundable bookings.
-- Store passports, boarding passes, visas, PDFs, tickets, and travel confirmations with the trip.
-- Track expenses, attach receipts, and export CSV reports.
-- Use trip maps to understand where stays and activities are located.
+**Pro** ($5.99 a month or about $50 a year) adds forwarding confirmation emails, including attached PDFs and screenshots, to your own TripCache address, with a monthly import allowance; live flight-status alerts for delays, gates and baggage belts; and Live Activities and widgets on iPhone, with an ongoing notification and widget on Android.
 
-### Best For
+**Main tradeoff:** email import is free in TripIt but Pro-only in TripCache. TripCache is also a newer app with a much shorter track record.
 
-TripCache is a strong fit for business travelers, frequent travelers, digital nomads, family travel planners, and anyone replacing TripIt or TripCase with a broader itinerary app.
+**Best for:** travelers with refundable bookings, frequent and business travelers who need expense records, and anyone who wants documents locked inside the trip. Get it on the [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache).
 
-### Main Tradeoff
+## 2. Tripsy: best for Apple users
 
-TripCache is newer than TripIt, so travelers who prefer the oldest established brand may still want to compare both apps side by side.
+Tripsy is a polished itinerary app for iPhone, iPad, Mac and Apple Watch. You can forward booking emails, keep documents, notes and links with each trip, see your calendars beside the itinerary, and track expenses in several currencies. It can import trips from TripIt. Tripsy is free to download; some features, including its Smart Import, need Tripsy Pro (annual plans from $39.99 in the US App Store). Check the [Tripsy website](https://tripsy.app/) for the current plans.
 
-## 2. Wanderlog
+**Main tradeoff:** there is no native Android app yet. Android users can view itineraries in a browser but can't create or edit trips there.
 
-Wanderlog is strong for vacation planning. It is especially useful when the trip is still being designed and you want maps, attractions, collaborative planning, and day-by-day ideas.
+**Best for:** households where everyone uses Apple devices.
 
-The official [Wanderlog Pro page](https://wanderlog.com/pro) lists its current free and paid planning, map, collaboration, import, offline, and route features.
+## 3. Wanderlog: best for planning places together
 
-### Where Wanderlog Is Strong
+Wanderlog combines an itinerary with a map, recommendations, budgets and real-time collaboration, so it shines while a trip is still being planned. The [Wanderlog Pro page](https://wanderlog.com/pro) lists offline access, route optimization, Google Maps export, automatic Gmail scanning and unlimited attachments as paid features, from $39.99 a year.
 
-- Visual vacation planning.
-- Map-based itinerary building.
-- Collaboration with friends or family.
-- Budget planning and activity organization.
+**Main tradeoff:** it is planning-first. Booking deadlines, document storage and expense exports are not its focus.
 
-### Best For
+**Best for:** leisure trips planned with friends or family.
 
-Wanderlog is a good fit for leisure travelers planning a vacation before everything is booked.
+## 4. Flighty: best for flight detail
 
-### Main Tradeoff
+Flighty concentrates on flights: live status, early delay alerts, airport delay trends and a detailed flight history. Flight tracking is free, and Flighty Pro costs $59.99 a year. It can import flights from email or TripIt on Pro.
 
-If your main problem is organizing existing booking confirmations, cancellation deadlines, documents, and business travel records, a dedicated travel organizer may be a better fit.
+**Main tradeoff:** it doesn't organize hotels, cars or other bookings, and it runs only on Apple devices.
 
-## 3. Google Travel
+**Best for:** frequent flyers who want flight data and are happy to keep a separate itinerary app.
 
-Google Travel can be useful if your bookings already live in Gmail and you want Google-based search and reservation context. Current capabilities are documented through [Google Travel Help](https://support.google.com/travel/).
+## 5. Google: best for Gmail users who want the basics
 
-### Where Google Travel Is Strong
+If your bookings arrive in Gmail, Google can surface reservations in Search and Maps when you're signed in, and Google Flights and Hotels handle searching and price tracking. Current features are documented in [Google Travel Help](https://support.google.com/travel/).
 
-- Gmail-based reservation detection.
-- Connection to Google Maps and Google travel search surfaces.
-- No separate subscription for basic trip visibility.
+**Main tradeoff:** there is no dedicated itinerary app, document storage, cancellation-deadline reminder or expense export.
 
-### Best For
+**Best for:** occasional travelers who only need to see what's booked.
 
-Google Travel is best for travelers who use Gmail and only need a lightweight view of detected bookings.
+## 6. TravelPerk and Navan: best for company-managed travel
 
-### Main Tradeoff
+[TravelPerk](https://www.travelperk.com/) and [Navan](https://navan.com/) are business travel and expense platforms: booking, approvals, travel policy, support and company spend reporting.
 
-It is not a full replacement for a dedicated itinerary app if you need trip document storage, expense exports, manual custom items, or cancellation reminder workflows.
+**Main tradeoff:** they are built for companies, not for one traveler organizing their own trips.
 
-## 4. Tripsy
+**Best for:** companies with enough travel to run a managed program.
 
-Tripsy is a polished itinerary app, especially for travelers who are deep in the Apple ecosystem. It focuses on keeping flights, stays, activities, documents, notes, and routes organized.
+## TripIt alternatives compared
 
-Check current platform support and features on the official [Tripsy website](https://tripsy.app/).
+| | TripCache | TripIt | Tripsy | Wanderlog | Flighty |
+|---|---|---|---|---|---|
+| Email import | Pro (monthly allowance) | Free | Yes; some import features need Pro | Reservation import; Gmail scanning on Pro | Pro |
+| Native Android app | Yes | Yes | No | Yes | No |
+| Documents with the trip | Vault on every plan, with PIN and Face ID lock | 3 per trip free, 25 on Pro | Yes | Attachments; unlimited on Pro | Not a focus |
+| Expenses | Multi-currency, budgets, CSV and PDF export (free) | Not listed on its pricing page | Multi-currency | Budgets and splitting | Not a focus |
+| Live flight alerts | Pro | Pro | Check current plan | Not a focus | Yes; earliest alerts on Pro |
+| Paid plan | $5.99/month or about $50/year | $49/year | Annual plans from $39.99 | From $39.99/year | $59.99/year |
 
-### Where Tripsy Is Strong
+TripIt's pricing page doesn't list reminders tied to a booking's free-cancellation deadline. In TripCache they are part of the free Basic plan.
 
-- Clean travel timeline.
-- Apple-focused user experience.
-- Calendar and sharing workflows.
-- Documents and travel history features.
+## Which TripIt alternative should you choose?
 
-### Best For
+- **Business travelers:** TripCache if you organize your own trips and need expense exports; TravelPerk or Navan if your company manages travel.
+- **Families:** Wanderlog while you plan, then an itinerary app such as TripCache or Tripsy once things are booked.
+- **Digital nomads:** TripCache, for documents, travel history exports for visa applications, and multi-currency expenses.
+- **Android users:** TripCache, Wanderlog or TripIt, since Tripsy and Flighty are Apple-only.
+- **Former TripCase users:** read [what to use now that TripCase is gone](/blog/tripcase-shutdown-what-now).
 
-Tripsy is a good choice for iPhone-first travelers who want a polished itinerary experience.
+## How to switch from TripIt
 
-### Main Tradeoff
+1. Start with upcoming trips. Old trips can wait unless you need them for expenses or a visa application.
+2. Forward active confirmations to the new app, or add them by hand.
+3. Fill in hotels, rental cars, tickets and activities that came through incomplete.
+4. Add the documents you need, such as passports, visas, tickets and insurance.
+5. Set cancellation deadlines for every refundable booking.
+6. Add expenses as you go if you need reimbursement records.
+7. Keep TripIt for one trip while you test the new app, and only cancel a paid plan once you're sure.
 
-If your priority is cancellation deadline management and export-ready expense records, compare those workflows carefully before choosing.
+## Bottom line
 
-## 5. TravelPerk and Navan
-
-TravelPerk and Navan are not simple consumer itinerary apps. They are business travel and expense platforms for companies that need booking, approvals, policies, support, and spend visibility.
-
-Use the official [TravelPerk](https://www.travelperk.com/) and [Navan](https://navan.com/) product pages when evaluating current company-level features.
-
-### Where They Are Strong
-
-- Corporate travel booking.
-- Policy and approval workflows.
-- Centralized invoicing or company spend reporting.
-- Travel support and duty-of-care features.
-
-### Best For
-
-Companies with enough travel volume to need a managed travel program.
-
-### Main Tradeoff
-
-They are usually more platform than an individual traveler needs. If you only want to organize your own trips, confirmations, documents, reminders, and expense exports, a lighter travel organizer is usually simpler.
-
-## Feature Comparison
-
-| Feature | TripCache | TripIt | Wanderlog | Google Travel | Tripsy | TravelPerk/Navan |
-| --- | --- | --- | --- | --- | --- | --- |
-| Email forwarding/import | Yes | Yes | Varies by workflow | Gmail-based | Yes | Platform-based |
-| Full itinerary organization | Yes | Yes | Yes | Basic | Yes | Yes |
-| Documents connected to trips | Yes | Yes | Limited/varies | Limited | Yes | Yes |
-| Free-cancellation reminders | Yes | Limited/varies | Limited/varies | No | Limited/varies | Business-policy focused |
-| Expense exports | Yes, CSV | Limited/varies | Budget-focused | No | Varies | Enterprise reporting |
-| Map context | Yes | Yes | Strong | Google Maps ecosystem | Yes | Business trip context |
-| Best audience | Frequent and business travelers | Established itinerary users | Vacation planners | Gmail users | Apple-focused travelers | Companies |
-
-## The Best TripIt Alternative for Different Travelers
-
-### Business Travelers
-
-Choose an app that can keep bookings, receipts, documents, and exports together. TripCache is a strong fit for individual business travelers who do not need a full corporate booking platform.
-
-### Families
-
-Look for support beyond flights: hotels, cars, activities, restaurant reservations, tickets, documents, and reminders. TripCache and Wanderlog are both useful, depending on whether you care more about booked-trip organization or collaborative vacation planning.
-
-### Digital Nomads
-
-Prioritize trip history, documents, map context, visas, receipts, and flexible booking reminders. TripCache is useful when travel records need to remain searchable after the trip.
-
-### Former TripCase Users
-
-Look for an app that supports both automation and manual trip building. TripCache is built around that mix: forward confirmations when possible, then add custom items, documents, and reminders where needed.
-
-## Migration Checklist from TripIt
-
-1. Decide which upcoming trips matter most.
-2. Forward active booking confirmations to the new app.
-3. Add hotels, rental cars, activities, and tickets that were missing or incomplete.
-4. Upload important documents such as passports, visas, PDFs, tickets, and insurance.
-5. Add cancellation deadlines for refundable bookings.
-6. Add receipt or expense details if you need reimbursement records.
-7. Keep both apps for one trip if you want a low-risk transition.
-
-## Bottom Line
-
-The best TripIt alternative is not simply the app with the longest feature list. It is the app that matches your real travel workflow.
-
-If you mostly want vacation planning with friends, start with Wanderlog. If your company needs managed booking and policies, look at TravelPerk or Navan. If you want a modern travel organizer for confirmation emails, documents, cancellation reminders, maps, and expense exports, TripCache is built for that 2026 workflow.
-
-For a narrower checklist, see the [TripIt alternative for documents and cancellation reminders](/blog/tripit-alternative-cancellation-reminders-documents-2026).
+The best TripIt alternative is the one that covers the job TripIt leaves to you. For free email forwarding, TripIt itself is hard to beat. For planning with friends, use Wanderlog. For flight detail, use Flighty. For company travel, use TravelPerk or Navan. If you want reminders before refundable bookings lock in, documents you can open offline behind a PIN, and expenses you can export, try TripCache. Compare [Basic and Pro](/pricing) to see what's free.
 `

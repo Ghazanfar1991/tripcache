@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Organize business travel receipts, booking confirmations, cancellation reminders, and CSV exports into a cleaner expense-reporting workflow.",
   date: "2026-05-18",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "10 min read",
   category: "Business Travel",
@@ -64,11 +64,11 @@ TripCache brings those pieces into the itinerary instead of forcing travelers to
 
 ### 1. Build the Trip Before Departure
 
-Add flights, hotel, rental car, meetings, parking, and expected activities. Forward travel confirmation emails so the trip starts with accurate details.
+Add flights, hotel, rental car, meetings, parking, and expected activities by hand, or forward travel confirmation emails with TripCache Pro so the trip starts from the original details.
 
-### 2. Attach Receipts as They Arrive
+### 2. Save Receipts as They Arrive
 
-Attach receipts to the trip while they are fresh:
+Save receipts to the trip's documents while they are fresh, and log each amount as an expense:
 
 - Airline receipt.
 - Hotel invoice.
@@ -87,7 +87,7 @@ The IRS also lists receipts, invoices, account statements, and proof of payment 
 
 ### 4. Export When the Trip Ends
 
-Use CSV export to create a cleaner handoff for finance, accounting, or your own tax records.
+Export a CSV or PDF expense report, filtered by dates and by business or personal trips, to create a cleaner handoff for finance, accounting, or your own tax records. Exports are included in the free plan.
 
 ## Prevent Avoidable Costs With Cancellation Reminders
 
@@ -101,7 +101,7 @@ Before departure:
 
 - Add the trip.
 - Add flights, hotel, rental car, meetings, tickets, and parking.
-- Forward confirmation emails.
+- Forward confirmation emails (Pro) or add bookings by hand.
 - Upload important documents.
 - Add cancellation reminders.
 - Add project or client notes.
@@ -143,7 +143,7 @@ TripCache keeps that context together.
 
 You cannot remove every administrative task from business travel. But you can stop rebuilding the trip from scattered emails and receipts.
 
-Use TripCache to organize the trip while it happens, then export cleaner records when it is time to report. Pair it with [email-to-itinerary automation](/features/email-to-itinerary) so booking confirmations and receipts start in the right trip.
+Use TripCache to organize the trip while it happens, then export cleaner records when it is time to report. With Pro, add [email-to-itinerary import](/features/email-to-itinerary) so booking confirmations start in the right trip.
 
 For the full before, during, and after sequence, use the [business travel organization checklist](/blog/business-travel-management-guide-2026). This article is organizational guidance, not tax advice.
 `

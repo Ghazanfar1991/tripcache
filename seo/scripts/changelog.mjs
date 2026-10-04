@@ -21,7 +21,7 @@ function pct(value) {
 }
 
 function render() {
-  const icon = { better: "✅ better", worse: "❌ worse", "no-clear-change": "➖ no clear change", "too-little-data": "… too little data", "no-baseline-data": "… no baseline" }
+  const icon = { better: "✅ better", worse: "❌ worse", "no-clear-change": "➖ no clear change", "too-little-data": "… too little data", "no-baseline-data": "… no baseline", "site-wide": "🌐 site-wide (no control; can't attribute)" }
   const rows = [...entries].sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id)).map((entry) => {
     const outcome = entry.outcome
     const result = outcome?.verdict === "launched"

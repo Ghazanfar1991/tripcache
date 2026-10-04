@@ -9,6 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Track hotel, rental car, tour, ticket, and transport cancellation deadlines with a free-cancellation reminder workflow organized by trip.",
   date: "2026-05-17",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Guide",
@@ -27,7 +28,7 @@ export const body = String.raw`# Free Cancellation Reminder App for Hotels, Cars
 
 Free cancellation is one of the best travel deals available, but only if you remember the deadline. A refundable hotel, rental car, activity, or event ticket can quietly become a paid commitment when the cancellation window closes.
 
-TripCache helps you turn those scattered booking rules into clear reminders attached to the trip they belong to. For a hotel-specific workflow, start with the [hotel cancellation reminder and free calculator](/blog/hotel-cancellation-reminder-app-2026).
+TripCache helps you turn those scattered booking rules into clear reminders attached to the trip they belong to. Cancellation reminders are included in TripCache Basic, the free plan, so you don't need a subscription to use them. For a hotel-specific workflow, start with the [hotel cancellation reminder and free calculator](/blog/hotel-cancellation-reminder-app-2026).
 
 ## Why Cancellation Deadlines Get Missed
 
@@ -49,10 +50,10 @@ A useful cancellation reminder system should store more than a date. It should k
 - Confirmation number.
 - Local deadline date and time.
 - Refund rule or cancellation policy.
-- Reminder timing, such as two days before, one day before, day of deadline, or custom.
+- Reminder timing, such as seven days before, two days before, one day before, or the day of the deadline.
 - Related documents, tickets, and receipts.
 
-TripCache is designed around that workflow. You can attach the reminder to the exact hotel, car, transport, ticket, activity, restaurant, parking reservation, or custom item inside a trip.
+TripCache is designed around that workflow. You can attach the reminder to the exact hotel, car, transport, ticket, activity, restaurant, parking reservation, or other booking inside a trip.
 
 ## How to Use TripCache for Free-Cancellation Reminders
 
@@ -68,8 +69,6 @@ Open your trip and add the item type that matches the booking:
 - Restaurant.
 - Meeting.
 - Parking.
-- Document.
-- Custom item.
 
 This keeps the reminder connected to the real thing you may need to cancel.
 
@@ -77,18 +76,20 @@ This keeps the reminder connected to the real thing you may need to cancel.
 
 Add the provider's free-cancellation cutoff exactly as shown in the booking confirmation. If the email gives a local hotel time, use that local time. If the booking says "48 hours before pickup," calculate the exact date and time before saving it.
 
+With TripCache Pro, you can forward the confirmation instead. The importer reads the free-cancellation deadline when the email states one, and you check it in the draft before saving.
+
 ### 3. Choose When to Be Reminded
 
-Most travelers should set at least one reminder before the final day:
+TripCache offers reminders seven days, two days, or one day before the deadline, or on the day itself. Most travelers should set at least one reminder before the final day:
 
+- **Seven days before:** useful for expensive bookings or trips where several people need to agree.
 - **Two days before:** best for hotels, tours, and rental cars where you may need to compare alternatives.
 - **One day before:** useful when you are waiting on a cheaper price or a team decision.
 - **Day of deadline:** a final backup before the booking locks in.
-- **Custom reminder:** useful for expensive bookings, strict local-time rules, or trips across time zones.
 
-### 4. Keep Documents with the Booking
+### 4. Keep Documents with the Trip
 
-Upload the hotel confirmation, rental agreement, ticket, or receipt into TripCache. When the reminder fires, you can open the document and cancel with the right confirmation number instead of searching your inbox.
+Upload the hotel confirmation, rental agreement, ticket, or receipt to the trip's documents in TripCache. When the reminder fires, you can open the document and cancel with the right confirmation number instead of searching your inbox.
 
 ## Example: Hotel Free-Cancellation Reminder
 
@@ -97,7 +98,7 @@ Imagine you booked a refundable hotel in Sydney:
 - Hotel: Fairfield by Marriott.
 - Cancellation deadline: 18 May 2026, 8:00 AM.
 - Reminder: two days before.
-- Attached document: booking confirmation PDF.
+- Saved document: booking confirmation PDF.
 
 TripCache keeps the hotel, deadline, document, and reminder in the same trip. When the reminder arrives, you can decide whether to keep the stay or cancel while the free window is still open.
 
@@ -122,9 +123,9 @@ For consultants, founders, sales teams, and frequent flyers, missed cancellation
 TripCache helps business travelers keep a cleaner record:
 
 - Itineraries stay organized by trip.
-- Documents stay attached to the right booking.
-- Cancellation reminders protect flexible bookings.
-- CSV exports help with reimbursement and month-end reporting.
+- Documents stay with the right trip.
+- Free cancellation reminders protect flexible bookings.
+- Free CSV and PDF exports help with reimbursement and month-end reporting.
 
 ## Why This Matters for Families and Leisure Trips
 
@@ -141,14 +142,14 @@ Before every trip, review these items:
 - Are tours and tickets refundable?
 - Are airport transfers cancellable?
 - Are restaurant deposits tracked?
-- Are documents attached to the right booking?
+- Are documents saved to the right trip?
 - Is there at least one reminder before each deadline?
 
 ## Use TripCache as Your Travel Safety Net
 
 TripCache is more than a flight itinerary app. It is a place to manage the details that cost real money when they go missing: hotels, cars, tickets, documents, reminders, expenses, and the timeline of your trip.
 
-Add your next refundable booking to TripCache, set the cancellation deadline, and let the app remind you before "free cancellation" becomes a missed opportunity.
+Add your next refundable booking to TripCache, set the cancellation deadline, and let the app remind you before "free cancellation" becomes a missed opportunity. The reminders cost nothing on the free plan.
 
 If you already have confirmations in email, use the [travel confirmation email organizer workflow](/blog/organize-travel-confirmation-emails-2026) to bring bookings into one trip before adding deadlines.
 `

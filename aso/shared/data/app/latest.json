@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-10-04T13:38:43.737Z",
+  "generatedAt": "2026-10-04T17:27:58.476Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -36,52 +36,12 @@
     },
     {
       "dimensions": {
-        "eventName": "page_view",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 210,
-        "activeUsers": 123
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "user_engagement",
         "platform": "Android"
       },
       "metrics": {
         "eventCount": 202,
         "activeUsers": 12
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "session_start",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 143,
-        "activeUsers": 123
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "first_visit",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 119,
-        "activeUsers": 119
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "user_engagement",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 74,
-        "activeUsers": 53
       }
     },
     {
@@ -106,52 +66,12 @@
     },
     {
       "dimensions": {
-        "eventName": "scroll",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 23,
-        "activeUsers": 18
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 22,
-        "activeUsers": 18
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "download_modal_open",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 21,
-        "activeUsers": 16
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "first_open",
         "platform": "iOS"
       },
       "metrics": {
         "eventCount": 20,
         "activeUsers": 20
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_store_click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 18,
-        "activeUsers": 13
       }
     },
     {
@@ -171,36 +91,6 @@
       },
       "metrics": {
         "eventCount": 7,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "play_store_click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 7,
-        "activeUsers": 6
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "form_start",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 3,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "form_submit",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 3,
         "activeUsers": 2
       }
     },
