@@ -41,7 +41,7 @@ All eight have a free version. Prices and features were checked on each official
 | **Rome2Rio** | Getting between two places | Yes, fully free | None | Yes | Yes |
 | **TripIt** | Turning confirmation emails into an itinerary | Yes, including email forwarding | Pro $49/year | Yes | Yes |
 | **Tripsy** | A polished itinerary on Apple devices | Yes, with limits | Pro: annual plans from $39.99 | Yes | No (browser view only) |
-| **TripCache** | After you book: deadlines, documents, expenses | Yes (Basic) | Pro $5.99/month or about $50/year | Yes | Yes |
+| **TripCache** | After you book: deadlines, documents, expenses | Yes (Basic), including cancellation and check-in reminders | Pro $5.99/month; $49.99/year on Google Play or $50.00/year on the App Store | Yes | Yes |
 | **Flighty** | Detailed flight tracking | Yes, flight tracking | Pro $59.99/year | Yes | No |
 
 **How we chose:** we compared what each app is built to do, what its free version includes, what the paid plan costs, and whether it runs on both iPhone and Android, using each company's own website and app-store listing. We make TripCache, so we've placed it where it genuinely fits (organizing a trip after you book) rather than at the top of every category.
@@ -52,7 +52,7 @@ All eight have a free version. Prices and features were checked on each official
 
 Wanderlog puts your itinerary and a map side by side. Add places, drag them into days, see how far apart they are, and plan with friends in real time. The free version includes unlimited places, collaboration, reservation import, recommendations, budgets with expense splitting, and checklists.
 
-Wanderlog Pro (from $39.99 a year) adds offline access, route optimization, export to Google Maps, automatic Gmail scanning for bookings, unlimited attachments and an unlimited AI assistant. If you're choosing between Wanderlog and TripIt, our [Wanderlog vs TripIt comparison](/blog/wanderlog-vs-tripit) goes deeper on pricing, free plans and which fits how you travel.
+Wanderlog Pro (from $39.99 a year, according to the [Wanderlog Pro page](https://wanderlog.com/pro)) adds offline access, route optimization, export to Google Maps, automatic Gmail scanning for bookings, unlimited attachments and unlimited AI assistance. If you're choosing between Wanderlog and TripIt, our [Wanderlog vs TripIt comparison](/blog/wanderlog-vs-tripit) goes deeper on pricing, free plans and which fits how you travel.
 
 **Tradeoff:** it is built for planning. Once everything is booked, it does less with cancellation deadlines, documents or expense records.
 
@@ -90,9 +90,9 @@ Enter any two places and Rome2Rio shows the ways to travel between them (plane, 
 
 Forward a confirmation to plans@tripit.com, or connect your inbox, and TripIt builds one itinerary across flights, hotels, cars and other bookings. The free plan also includes calendar sync, plan sharing, airport and terminal maps, and 3 document uploads per trip.
 
-TripIt Pro ($49 a year after a 30-day free trial) adds real-time flight alerts, check-in reminders, alternate flights and fare, seat and points trackers. See our [TripIt Pro free vs Pro breakdown](/blog/tripit-vs-tripcache-comparison-2025).
+TripIt Pro ($49 a year after a 30-day free trial, according to the [TripIt pricing page](https://www.tripit.com/web/pro/pricing)) adds real-time flight alerts, check-in reminders, alternate flights and fare, seat and points trackers. See our [TripIt Pro free vs Pro breakdown](/blog/tripit-vs-tripcache-comparison-2025).
 
-**Tradeoff:** the free plan doesn't send flight alerts or check-in reminders.
+**Tradeoff:** the free plan doesn't send flight alerts or check-in reminders. (TripCache's check-in reminders are free.)
 
 **Best for:** anyone with bookings spread across many confirmation emails.
 
@@ -110,12 +110,12 @@ TripCache organizes the details that cost money or time when they're missed. Its
 
 - Trips with flights, hotels, rental cars, trains, buses, parking, events, restaurants, tours and meetings.
 - Reminders before a refundable hotel, car, tour or ticket stops being free to cancel, at 7 days, 2 days, 1 day or on the day.
-- Check-in reminders 48 and 24 hours before departure, and boarding-pass scanning to add a flight.
+- Free check-in reminders 48 and 24 hours before departure, and boarding-pass scanning to add a flight.
 - A document vault for passports, visas, tickets and insurance, with an optional PIN and Face ID or fingerprint unlock.
 - Expenses in 153 currencies, budgets, and CSV or PDF export, including a visa travel-history summary.
 - Offline access to trips and cached documents.
 
-TripCache Pro ($5.99 a month or about $50 a year) adds forwarding confirmation emails into reviewable drafts, live flight-status alerts, and Live Activities and widgets.
+TripCache Pro ($5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store) adds booking-email import into reviewable drafts with a monthly allowance, live flight-status alerts on supported flights, and Live Activities and widgets.
 
 **Tradeoff:** it isn't for choosing destinations, and email import is a paid feature (it's free in TripIt). It is also a newer app with a much shorter track record than the others here.
 
@@ -125,7 +125,7 @@ TripCache Pro ($5.99 a month or about $50 a year) adds forwarding confirmation e
 
 ### 8. Flighty: best for flight tracking
 
-Flighty tracks flights in detail: live status, early delay alerts, airport delay trends and a full flight history. Tracking is free, and Flighty Pro costs $59.99 a year.
+Flighty tracks flights in detail: live status, early delay alerts, airport delay trends and a full flight history. Tracking is free, and Flighty Pro costs $59.99 a year, according to the [Flighty pricing page](https://flighty.com/pricing).
 
 **Tradeoff:** flights only, and only on Apple devices.
 

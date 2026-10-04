@@ -16,7 +16,7 @@ const seoRelevant = [
   /^app\/(.*\/)?(page|layout)\.(tsx|ts|mdx)$/,
   /^app\/(sitemap|robots)\.ts$/,
   /^next\.config\.mjs$/,
-  /^lib\/(seo-page-data|blog|markdown)\.(ts|tsx)$/,
+  /^lib\/(seo-page-data|blog|markdown|markdown-inline)\.(ts|tsx|mjs)$/,
   /^components\/seo\//,
   /^public\/llms(-full)?\.txt$/,
 ]

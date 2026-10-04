@@ -27,8 +27,33 @@ import {
 import { Footer } from "@/components/footer";
 import CursorTrailGate from "@/components/ui/CursorTrailGate";
 
+// Product screenshots show the app working, so they carry descriptive alt text.
+const screenshotAlt: Record<string, string> = {
+  "/app-screenshot-import.webp":
+    "TripCache Import Flights screen with a personal forwarding address for booking emails and a CSV bulk import option",
+  "/app-screenshot-drafts.webp":
+    "TripCache Drafts tab with a flight extracted from a forwarded e-ticket email and its review confidence score",
+  "/app-screenshot-home.webp":
+    "TripCache home screen with the next flight and an upcoming trip to Sydney",
+  "/app-feature-cancellation-reminder.webp":
+    "TripCache Set Reminders screen for a hotel cancellation deadline with 7-day, 2-day, 1-day and day-of options",
+  "/app-screen-expense-management.webp":
+    "TripCache Expense Management screen showing a trip budget, the amount spent so far and a daily spending chart",
+  "/app-screenshot-export.webp":
+    "TripCache Export Data screen for choosing trips, a date range and columns for a CSV export",
+  "/app-feature-secure-documents.webp":
+    "TripCache document vault asking for a 4-digit PIN before showing travel documents",
+  "/app-screenshot-flight-detail.webp":
+    "TripCache flight detail screen with the route on a map, departure gate, terminal and seat",
+  "/app-screen-trip-map.webp":
+    "TripCache trip map with flight and hotel stops pinned across the Philippines",
+};
+
+const whatIsTripCache =
+  "TripCache is a post-booking travel organizer app for iPhone and Android. It keeps flights, stays, cancellation deadlines, travel documents and trip expenses together in one itinerary. The free Basic plan includes cancellation-deadline and check-in reminders, a document vault and CSV or PDF export; TripCache Pro adds booking-email import and live flight-status alerts on supported flights.";
+
 const heroPoints = [
-  "Import supported booking emails",
+  "Import booking emails with Pro",
   "Free cancellation-deadline reminders",
   "Keep travel documents and receipts",
   "Export expenses and travel history",
@@ -37,7 +62,7 @@ const heroPoints = [
 const heroStories = [
   {
     image: "/app-screenshot-import.webp",
-    alt: "",
+    alt: screenshotAlt["/app-screenshot-import.webp"],
     label: "Email Import",
     title: "Forward confirmations",
     description: "Turn supported booking emails into trip drafts.",
@@ -47,7 +72,7 @@ const heroStories = [
   },
   {
     image: "/app-feature-cancellation-reminder.webp",
-    alt: "",
+    alt: screenshotAlt["/app-feature-cancellation-reminder.webp"],
     label: "Cancellation Reminders",
     title: "Keep deadlines visible",
     description: "Set reminders for refundable booking cutoffs.",
@@ -57,7 +82,7 @@ const heroStories = [
   },
   {
     image: "/app-screen-expense-management.webp",
-    alt: "",
+    alt: screenshotAlt["/app-screen-expense-management.webp"],
     label: "Trip Expenses",
     title: "Track costs by trip",
     description: "Log costs in any of 153 currencies.",
@@ -67,7 +92,7 @@ const heroStories = [
   },
   {
     image: "/app-feature-secure-documents.webp",
-    alt: "",
+    alt: screenshotAlt["/app-feature-secure-documents.webp"],
     label: "Travel Documents",
     title: "Files beside the trip",
     description: "Keep tickets, passes, and confirmations close.",
@@ -246,6 +271,11 @@ const resourceHubs = [
 
 const faqs = [
   {
+    question: "What is TripCache?",
+    answer:
+      "TripCache is a post-booking travel organizer app for iPhone and Android. It keeps flights, stays, cancellation deadlines, travel documents and expenses in one itinerary. Basic is free; Pro adds booking-email import, live flight-status alerts on supported flights, and Live Activity and widgets. TripCache is an independent app and has no connection to Sabre's TripCase.",
+  },
+  {
     question: "Is TripCache free?",
     answer:
       "Yes. Basic is free and includes manual trips, cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses and budgets, CSV and PDF export, the trip map, and travel history. Pro adds booking-email import, live flight-status alerts, and Live Activity and widgets. Storage limits are the same on both plans. You upgrade to Pro inside the mobile app.",
@@ -278,7 +308,7 @@ const faqs = [
   {
     question: "Does TripCache work on iPhone and Android?",
     answer:
-      "Yes. TripCache is available from the Apple App Store and Google Play, and this page links directly to both official listings.",
+      "Yes. TripCache is available on the Apple App Store for iPhone with iOS 16.4 or later, and on Google Play for Android 7.0 or later. This page links directly to both official listings. The app is in English.",
   },
 ];
 
@@ -343,9 +373,10 @@ export function DesignOneHome() {
             </Reveal>
             <Reveal delay={150} className="design-one-hero-reveal">
               <p className="design-one-hero-lede mx-auto mt-6 max-w-[590px] text-base leading-7 sm:text-lg sm:leading-8 min-[940px]:mx-0">
-                Forward flight, hotel, car, tour, and ticket confirmations to
-                TripCache. Review your itinerary, track free-cancellation
-                deadlines, and keep documents, receipts, and expenses together.
+                With Pro, forward flight, hotel, car, tour, and ticket
+                confirmations to TripCache and review the itinerary it builds.
+                Free on every plan: track cancellation deadlines and keep
+                documents, receipts, and expenses together.
               </p>
             </Reveal>
             <Reveal
@@ -385,6 +416,24 @@ export function DesignOneHome() {
       </div>
 
       <section
+        id="what-is-tripcache"
+        aria-labelledby="what-is-tripcache-heading"
+        className="scroll-mt-24 px-5 pb-20 pt-16 sm:px-8 min-[940px]:pb-24 min-[940px]:pt-20"
+      >
+        <Reveal className="mx-auto max-w-[820px] text-center">
+          <h2
+            id="what-is-tripcache-heading"
+            className="text-3xl font-semibold tracking-[-0.045em] sm:text-4xl"
+          >
+            What is TripCache?
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-[#5f5a54]">
+            {whatIsTripCache}
+          </p>
+        </Reveal>
+      </section>
+
+      <section
         id="how-it-works"
         className="bg-[#121212] px-5 py-24 text-[#f7f2e9] sm:px-8 min-[940px]:py-32"
       >
@@ -414,7 +463,7 @@ export function DesignOneHome() {
                   <div className="relative flex h-[310px] items-start justify-center overflow-hidden rounded-[22px] bg-[#2b175b] pt-7">
                     <Image
                       src={step.image}
-                      alt=""
+                      alt={screenshotAlt[step.image] ?? ""}
                       width={1250}
                       height={2700}
                       sizes="164px"
@@ -472,7 +521,7 @@ export function DesignOneHome() {
                       <>
                         <Image
                           src={feature.images[0]}
-                          alt=""
+                          alt={screenshotAlt[feature.images[0]] ?? ""}
                           width={1250}
                           height={2700}
                           sizes="(min-width: 980px) 165px, (min-width: 680px) 135px, 145px"
@@ -480,7 +529,7 @@ export function DesignOneHome() {
                         />
                         <Image
                           src={feature.images[1]}
-                          alt=""
+                          alt={screenshotAlt[feature.images[1]] ?? ""}
                           width={1250}
                           height={2700}
                           sizes="(min-width: 980px) 165px, (min-width: 680px) 135px, 145px"
@@ -490,7 +539,7 @@ export function DesignOneHome() {
                     ) : (
                       <Image
                         src={feature.images[0]}
-                        alt=""
+                        alt={screenshotAlt[feature.images[0]] ?? ""}
                         width={1250}
                         height={2700}
                         sizes="165px"
@@ -572,7 +621,7 @@ export function DesignOneHome() {
                     <div className="absolute inset-[12%] rounded-full border border-[#3f352a]/10" />
                     <Image
                       src={item.image}
-                      alt=""
+                      alt={screenshotAlt[item.image] ?? ""}
                       width={1250}
                       height={2700}
                       sizes="(min-width: 640px) 250px, 220px"

@@ -86,7 +86,7 @@ TripCache is built for the work after you book. Most of it is free on the Basic 
 - **CSV and PDF export** of travel history, expenses or a visa and immigration summary.
 - **CSV import** of past flights, and offline access to trips and cached documents.
 
-**Pro** ($5.99 a month or about $50 a year) adds forwarding confirmation emails, including attached PDFs and screenshots, to your own TripCache address, with a monthly import allowance; live flight-status alerts for delays, gates and baggage belts; and Live Activities and widgets on iPhone, with an ongoing notification and widget on Android.
+**Pro** ($5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store) adds forwarding confirmation emails, including attached PDFs and screenshots, to your own TripCache address, with a monthly import allowance; live flight-status alerts on supported flights for delays, gates and baggage belts; and Live Activities and widgets on iPhone, with an ongoing notification and widget on Android. Receipts are saved as trip documents; they aren't attached to individual expenses.
 
 **Main tradeoff:** email import is free in TripIt but Pro-only in TripCache. TripCache is also a newer app with a much shorter track record.
 
@@ -136,14 +136,16 @@ If your bookings arrive in Gmail, Google can surface reservations in Search and 
 
 | | TripCache | TripIt | Tripsy | Wanderlog | Flighty |
 |---|---|---|---|---|---|
+| Platforms | iPhone (iOS 16.4+) and Android (7.0+) | iPhone, Android, web | iPhone, iPad, Mac, Apple Watch; Android only in a browser | iPhone, Android, web | iPhone, iPad, Mac, Apple Watch |
 | Email import | Pro (monthly allowance) | Free | Yes; some import features need Pro | Reservation import; Gmail scanning on Pro | Pro |
-| Native Android app | Yes | Yes | No | Yes | No |
+| Check-in reminders | Free (48 and 24 hours before departure) | Pro | Not listed | Not listed | Not listed |
 | Documents with the trip | Vault on every plan, with PIN and Face ID lock | 3 per trip free, 25 on Pro | Yes | Attachments; unlimited on Pro | Not a focus |
-| Expenses | Multi-currency, budgets, CSV and PDF export (free) | Not listed on its pricing page | Multi-currency | Budgets and splitting | Not a focus |
-| Live flight alerts | Pro | Pro | Check current plan | Not a focus | Yes; earliest alerts on Pro |
-| Paid plan | $5.99/month or about $50/year | $49/year | Annual plans from $39.99 | From $39.99/year | $59.99/year |
+| Expenses | 153 currencies and category budgets (free) | Not listed on its pricing page | Multi-currency | Budgets and splitting | Not a focus |
+| Export | CSV and PDF (free) | Not listed on its pricing page | Data export listed; check current plan | Places export to Google Maps (Pro) | Not listed on its pricing page |
+| Live flight alerts | Pro, on supported flights | Pro | Check current plan | Not a focus | Yes; earliest alerts on Pro |
+| Paid plan | $5.99/month; $49.99/year (Google Play) or $50.00/year (App Store) | $49/year | Annual plans from $39.99 | From $39.99/year | $59.99/year |
 
-TripIt's pricing page doesn't list reminders tied to a booking's free-cancellation deadline. In TripCache they are part of the free Basic plan.
+"Not listed" means the feature isn't on the app's official plans or pricing page as of October 5, 2026. TripIt's pricing page doesn't list reminders tied to a booking's free-cancellation deadline either. In TripCache they are part of the free Basic plan.
 
 ## Which TripIt alternative should you choose?
 
