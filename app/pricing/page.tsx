@@ -1,20 +1,30 @@
 import "../secondary.css"
 
 import Link from "next/link"
-import { ArrowRight, CheckCircle2, Clock3, FileSpreadsheet, MailCheck, ShieldCheck } from "lucide-react"
+import { ArrowRight, CheckCircle2, MailCheck, Plane, ShieldCheck, Smartphone } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { GetStartedModal } from "@/components/get-started-modal"
 import { SectionContainer } from "@/components/section-container"
 
+const basicFeatures = [
+  "Cancellation-deadline reminders",
+  "Check-in reminders and a check-in shortcut",
+  "Manual trips: flights, stays, cars, trains, events, and more",
+  "Boarding-pass barcode scanning",
+  "Document vault with a PIN, Face ID, or fingerprint lock",
+  "Expenses in 153 currencies, with category budgets",
+  "CSV and PDF export, including travel history and a Visa / Immigration Summary",
+  "Trip map, travel history, CSV import, and offline access",
+  "Add trips to your phone's calendar and share a trip-card image",
+]
+
 const proFeatures = [
-  "Email-to-trip automation",
-  "Automatic flight status updates",
-  "Free-cancellation deadline reminders",
-  "CSV expense export",
-  "Expanded document storage",
-  "Calendar integration and trip sharing",
-  "Priority support",
+  "Everything in Basic",
+  "Booking-email import with a monthly allowance: forward supported confirmations and review each draft",
+  "Free-cancellation deadlines read from imported confirmations",
+  "Live flight-status alerts on supported flights: delays and gate, terminal, and baggage-belt changes",
+  "Live Activity and Dynamic Island on iPhone; home-screen widgets on iPhone and Android",
 ]
 
 const plans = [
@@ -22,55 +32,55 @@ const plans = [
     name: "Basic",
     price: "$0",
     cadence: "forever",
-    description: "For travelers who want a clear itinerary and prefer to enter trip details manually.",
+    description: "For travelers who add bookings themselves and want reminders, documents, and records in one place.",
     label: "Free plan",
     badge: null,
     highlight: false,
-    features: ["Manual trip entry", "View and organize itineraries", "Core trip organization"],
-    meta: "No credit card needed. Upgrade in the app when automation becomes useful.",
+    features: basicFeatures,
+    meta: "No credit card needed. Storage limits are the same on every plan.",
     cta: "Download free",
   },
   {
     name: "Pro Monthly",
     price: "$5.99",
     cadence: "/month",
-    description: "For frequent and business travelers who want confirmations, reminders, and records handled faster.",
+    description: "For travelers who want booking emails turned into trips and live flight alerts on travel day.",
     label: "Flexible billing",
     badge: null,
     highlight: false,
     features: proFeatures,
-    meta: "$71.88 over 12 months. Cancel anytime in the mobile app.",
+    meta: "$71.88 over 12 months. Cancel anytime in your App Store or Google Play subscriptions.",
     cta: "Choose monthly",
   },
   {
     name: "Pro Yearly",
     price: "$49.99",
     cadence: "/year",
-    description: "The complete Pro experience at the lowest price for travelers who plan to use TripCache year-round.",
+    description: "The same Pro features at the lowest price, for travelers who use TripCache all year.",
     label: "Best value",
     badge: "Save 30%",
     highlight: true,
     features: proFeatures,
-    meta: "$4.17/month effective. Save $21.89 each year compared with monthly billing.",
+    meta: "$49.99 on Google Play and $50.00 on the App Store: about $4.17 a month, 30% less than monthly billing.",
     cta: "Choose yearly",
   },
 ]
 
 const reasons = [
   {
-    title: "Save time after booking",
-    copy: "Forward confirmation emails and review a structured draft instead of retyping every reservation.",
+    title: "Skip the retyping",
+    copy: "Forward supported confirmations, including attached PDFs and screenshots, and review a structured draft. The importer also picks up free-cancellation deadlines.",
     icon: MailCheck,
   },
   {
-    title: "Protect flexible bookings",
-    copy: "Track refundable booking cutoffs and get reminded before a hotel, car, tour, or ticket becomes non-refundable.",
-    icon: Clock3,
+    title: "Know when a flight changes",
+    copy: "Get alerts for departures, arrivals, delays, and gate, terminal, and baggage-belt changes on supported flights. The airline remains the final source.",
+    icon: Plane,
   },
   {
-    title: "Close out work trips faster",
-    copy: "Keep receipts and trip costs together, then export a CSV for reimbursement, client review, or your own records.",
-    icon: FileSpreadsheet,
+    title: "See the flight at a glance",
+    copy: "Follow flight progress in a Live Activity and the Dynamic Island on iPhone, or in a home-screen widget on iPhone and Android.",
+    icon: Smartphone,
   },
 ]
 
@@ -80,6 +90,8 @@ export default function PricingPage() {
     "@type": "WebPage",
     name: "TripCache Pricing",
     url: "https://trip-cache.com/pricing",
+    description:
+      "TripCache Basic is free and includes cancellation-deadline reminders, check-in reminders, the document vault, expenses, and CSV and PDF export. Pro adds booking-email import, live flight-status alerts, and Live Activity and widgets.",
     mainEntity: {
       "@id": "https://trip-cache.com/#app",
     },
@@ -103,8 +115,9 @@ export default function PricingPage() {
         <SectionContainer className="grid items-center gap-8 min-[900px]:grid-cols-[1.16fr_0.84fr] min-[900px]:gap-x-16 min-[900px]:gap-y-5">
           <div className="hidden min-[900px]:col-start-2 min-[900px]:row-start-1 min-[900px]:block">
             <p className="max-w-sm text-sm leading-6 text-[#666666]">
-              Basic keeps trips organized manually. Pro adds email import, cancellation reminders, flight updates,
-              documents, and expense exports from $5.99 per month—or save 30% with yearly billing.
+              Basic is free and includes cancellation-deadline and check-in reminders, the document vault, expenses,
+              and CSV or PDF export. Pro adds booking-email import, live flight alerts, and Live Activity from $5.99 a
+              month, or save 30% with yearly billing.
             </p>
           </div>
           <div className="min-[900px]:col-start-1 min-[900px]:row-span-2 min-[900px]:row-start-1">
@@ -112,12 +125,13 @@ export default function PricingPage() {
               Start free. Pay for the post-booking work you want automated.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-[#626262] min-[900px]:hidden">
-              Basic keeps trips organized manually. Pro adds email import, cancellation reminders, flight updates,
-              documents, and expense exports from $5.99 per month—or save 30% with yearly billing.
+              Basic is free and includes cancellation-deadline and check-in reminders, the document vault, expenses,
+              and CSV or PDF export. Pro adds booking-email import, live flight alerts, and Live Activity from $5.99 a
+              month, or save 30% with yearly billing.
             </p>
           </div>
           <div className="flex flex-wrap gap-2.5 text-sm text-[#5f5f5f] min-[900px]:col-start-2 min-[900px]:row-start-2 min-[900px]:self-start">
-            {["Cancel anytime", "No hidden website fees", "Upgrade in the app"].map((item) => (
+            {["Free cancellation reminders", "Cancel Pro anytime", "Upgrade in the app"].map((item) => (
               <span key={item} className="inline-flex items-center gap-2 rounded-full bg-white/55 px-4 py-2 shadow-[inset_0_0_0_1px_rgba(58,48,38,0.08)]">
                 <CheckCircle2 className="h-4 w-4 text-[#602ad2]" />
                 {item}
@@ -186,7 +200,8 @@ export default function PricingPage() {
         </SectionContainer>
         <SectionContainer className="mx-auto mt-7 max-w-7xl text-center">
           <p className="text-sm text-[#666666]">
-            Yearly savings: 12 months at $5.99 is $71.88. Pay $49.99 yearly and keep $21.89—a 30% saving.
+            Yearly savings: 12 months at $5.99 is $71.88. Pro Yearly is $49.99 on Google Play and $50.00 on the App
+            Store, about 30% less. US store prices as of October 2026.
           </p>
         </SectionContainer>
       </section>
@@ -195,9 +210,10 @@ export default function PricingPage() {
         <SectionContainer className="mx-auto max-w-6xl">
           <div className="grid gap-8 min-[860px]:grid-cols-[0.72fr_1.28fr] min-[860px]:items-end min-[860px]:gap-20">
             <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#a98af0]">Why travelers upgrade</p>
-            <div><h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">Pro is for costly details, not decorative extras.</h2>
+            <div><h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl">Pro imports your bookings and watches your flights.</h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#b9b0a3]">
-              The paid plan is focused on the work that can consume time or money after a booking is confirmed.
+              Reminders, documents, expenses, and exports are already free. Pro adds the parts that save the most time:
+              turning booking emails into trips and following flights on the day.
             </p></div>
           </div>
 
@@ -225,7 +241,7 @@ export default function PricingPage() {
               <div>
                 <h2 className="text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Not sure whether Pro fits your travel workflow?</h2>
                 <p className="mt-4 leading-7 text-white/75">
-                  Ask about email import, cancellation reminders, expense exports, or moving your routine from TripCase.
+                  Ask about email import, live flight alerts, or moving your routine from TripCase.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row md:justify-end">

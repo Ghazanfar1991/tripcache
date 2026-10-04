@@ -8,7 +8,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Compare Flighty and TripCache for flight alerts, itinerary import, cancellation reminders, documents, receipts, expenses, platforms, and current pricing.",
   date: "2026-03-12",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Comparison",
@@ -38,16 +38,16 @@ These apps overlap at flights, but they are not designed to solve the same job.
 
 | Need | Flighty | TripCache |
 |---|---|---|
-| Detailed flight alerts and predictions | Primary focus | Flight updates within the trip |
+| Detailed flight alerts and predictions | Primary focus | Live status alerts for supported flights in TripCache Pro |
 | Aircraft, airport, and disruption context | Strong focus | Not the primary focus |
 | Email or calendar flight import | Available in Flighty Pro | Confirmation forwarding in TripCache Pro |
 | Hotels, cars, transport, activities, and meetings | Limited compared with a broad organizer | Core trip item types |
-| Free-cancellation deadline reminders | Not the main workflow | Core Pro workflow |
+| Free-cancellation deadline reminders | Not the main workflow | Included free in TripCache Basic |
 | Travel documents and receipts | Not the main workflow | Stored with the trip |
-| Expense-oriented CSV export | Not the main workflow | Available in TripCache Pro |
+| Expense-oriented CSV export | Not the main workflow | CSV and PDF export included free in TripCache Basic |
 | Platform emphasis | Apple ecosystem | iPhone and Android |
 
-Features and prices can change. This comparison was checked against official product pages on August 26, 2026.
+Features and prices can change. Flighty details were checked against its official product pages on August 26, 2026; TripCache plan details were updated on October 5, 2026.
 
 ## Where Flighty Is Stronger
 
@@ -101,7 +101,7 @@ Keep the airline's official app or website accessible for final operational and 
 Flighty and TripCache use different feature bundles, so an annual price comparison by itself is misleading.
 
 - Flighty's official site currently lists Pro at $59.99 per year and offers the Pro experience on a first flight, with some import features excluded from that complimentary flight.
-- TripCache offers Basic and Pro tiers. Check the current [TripCache pricing page](/pricing) or in-app store sheet before subscribing.
+- TripCache Basic is free and includes cancellation-deadline reminders, check-in reminders, documents, expenses, and CSV and PDF export. TripCache Pro costs $5.99 a month, or $49.99 a year on Google Play and $50.00 a year on the App Store, and adds email import, live flight-status alerts, and Live Activity and widgets. Check the current [TripCache pricing page](/pricing) or in-app store sheet before subscribing.
 
 Value depends on the job. A traveler who wants early disruption context may find Flighty's specialist tools more valuable. A traveler who wants to organize refundable hotels, tickets, documents, and receipts may get more value from TripCache's broader workflow.
 
@@ -117,7 +117,7 @@ The [business travel organization checklist](/blog/business-travel-management-gu
 
 ## Which App Is Better for Documents and Refund Deadlines?
 
-TripCache is the better fit for this specific workflow. You can keep documents and receipts with the itinerary item and record a cancellation cutoff for a refundable stay, car, tour, ticket, or other booking.
+TripCache is the better fit for this specific workflow. You can keep documents and receipts with the trip and record a cancellation cutoff, with a reminder, for a refundable stay, car, tour, ticket, or other booking. Both are included in the free plan.
 
 For hotels, the [cancellation reminder and calculator guide](/blog/hotel-cancellation-reminder-app-2026) walks through policy wording, local time, and reminder timing.
 

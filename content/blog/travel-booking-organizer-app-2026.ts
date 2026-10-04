@@ -9,6 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Use a travel booking organizer app to keep flights, hotels, rental cars, activities, tickets, documents, notes, and reminders in one itinerary.",
   date: "2026-05-18",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
   readTime: "10 min read",
   category: "Guide",
@@ -42,7 +43,7 @@ A useful travel organizer should let you save:
 - Meetings and appointments.
 - Parking reservations.
 - Travel documents and PDFs.
-- Notes, custom items, and reminders.
+- Notes and reminders.
 
 When these items are stored separately, travelers waste time searching inboxes and screenshots. When they are stored together, the itinerary becomes a real command center.
 
@@ -69,7 +70,7 @@ Start with the destination and travel dates. This creates the container for ever
 
 ### 2. Add Flights, Stays, Cars, and Tickets
 
-Add each item as the correct booking type. TripCache supports flights, stays, rental cars, transport, activities, events, tickets, restaurants, meetings, parking, documents, notes, and custom items.
+Add each item as the correct booking type. TripCache supports flights, stays, rental cars, transport, activities, events, tickets, restaurants, meetings, parking, and notes. You can also add a flight by scanning the barcode on a boarding pass.
 
 ### 3. Attach Documents
 
@@ -77,7 +78,7 @@ Upload confirmations, QR codes, receipts, passports, visas, and boarding passes.
 
 ### 4. Add Cancellation Deadlines
 
-If a hotel, car, ticket, or tour has a free-cancellation window, add the deadline to the booking. TripCache can remind you before that window closes. See the full workflow in our [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026).
+If a hotel, car, ticket, or tour has a free-cancellation window, add the deadline to the booking. TripCache can remind you seven days, two days, or one day before that window closes, or on the day, and these reminders are free. See the full workflow in our [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026).
 
 ### 5. Review Before Departure
 
@@ -86,7 +87,7 @@ Before leaving, open the trip and confirm:
 - Every booking is listed.
 - Every important document is attached.
 - Every cancellation deadline has a reminder.
-- Every expense or receipt can be exported later.
+- Every expense is logged so it can be exported later.
 
 ## Best Use Cases for a Booking Organizer
 
@@ -122,15 +123,18 @@ Use this checklist for your next trip:
 
 ## Why TripCache Works Well for This
 
-TripCache combines the features travelers usually split across several apps:
+TripCache combines the features travelers usually split across several apps. On the free plan:
 
-- Itinerary organization.
-- Email-to-trip automation.
-- Manual booking entry.
+- Itinerary organization and manual booking entry.
+- Boarding-pass scanning.
 - Trip-linked document organization.
-- Cancellation deadline reminders.
-- Flight tracking.
-- CSV export for expense reports.
+- Cancellation deadline and check-in reminders.
+- CSV and PDF export for expense reports and travel history.
+
+TripCache Pro adds:
+
+- Email-to-trip import for supported confirmations.
+- Live flight-status alerts for supported flights.
 
 If your trip is more than one flight, TripCache gives you a cleaner place to manage it.
 
