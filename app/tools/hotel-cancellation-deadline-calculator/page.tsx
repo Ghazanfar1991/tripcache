@@ -217,6 +217,21 @@ export default async function HotelCancellationDeadlineCalculatorPage({
                 Email-to-itinerary automation
               </Link>
             </div>
+            <h3 className="mt-8 text-xl font-semibold tracking-[-0.03em]">More free travel tools</h3>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/flight-arrival-time-calculator">
+                Flight time calculator
+              </Link>
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/layover-calculator">
+                Layover calculator
+              </Link>
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/jet-lag-calculator">
+                Jet lag calculator
+              </Link>
+              <Link className="rounded-2xl bg-white/[0.12] p-5 font-semibold leading-6 transition-colors duration-150 hover:bg-white/[0.18]" href="/tools/travel-checklist">
+                Travel checklist generator
+              </Link>
+            </div>
           </div>
         </SectionContainer>
       </section>

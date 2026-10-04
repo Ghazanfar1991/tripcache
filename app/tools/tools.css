@@ -1,0 +1,202 @@
+/*
+ * Imported only by the free travel tool pages (flight arrival, jet lag, layover, travel checklist).
+ * Plain CSS, no Tailwind build: every class and keyframe here is namespaced `tct-` / `tc-press`,
+ * names nothing else on the site uses, so these rules can't restyle other pages even after a
+ * client-side navigation keeps this stylesheet loaded.
+ */
+
+/* Visually hidden but read by screen readers (the radio and checkbox inputs behind the styled choices). */
+.tct-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Buttons sink slightly on press. */
+.tc-press {
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tc-press:active {
+  transform: scale(0.97);
+}
+
+.tct-surface {
+  background:
+    radial-gradient(80% 70% at 50% 0%, rgb(97 43 211 / 0.3), transparent 70%),
+    linear-gradient(to bottom, #17151f, #0f0e14);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.06),
+    0 40px 80px -40px rgb(20 10 60 / 0.75);
+}
+
+.tct-board {
+  --flap-w: 15px;
+  --flap-h: 22px;
+  --flip-w: 30px;
+  --flip-h: 44px;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.32), rgb(0 0 0 / 0.18));
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.05),
+    inset 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+@media (min-width: 400px) {
+  .tct-board {
+    --flap-w: 17px;
+    --flap-h: 25px;
+  }
+}
+@media (min-width: 640px) {
+  .tct-board {
+    --flap-w: 21px;
+    --flap-h: 30px;
+    --flip-w: 40px;
+    --flip-h: 58px;
+  }
+}
+
+/* Split-flap letters */
+.tct-flap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--flap-w);
+  height: var(--flap-h);
+  overflow: hidden;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #2a2833 0 49%, #22202a 51% 100%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.07),
+    0 2px 3px rgb(0 0 0 / 0.45);
+  font-size: calc(var(--flap-h) * 0.6);
+  font-weight: 700;
+  line-height: 1;
+  perspective: 120px;
+}
+.tct-flap::after,
+.tct-flip::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  z-index: 3;
+  height: 1px;
+  background: rgb(0 0 0 / 0.6);
+}
+.tct-flap-char {
+  display: block;
+  transform-origin: 50% 100%;
+  animation: tct-flap 140ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+@keyframes tct-flap {
+  from {
+    transform: rotateX(70deg);
+    opacity: 0.4;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Flip-clock digits: two resting halves, plus two leaves that fall when the board runs. */
+.tct-flip {
+  position: relative;
+  display: block;
+  width: var(--flip-w);
+  height: var(--flip-h);
+  perspective: 260px;
+  font-size: calc(var(--flip-h) * 0.68);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #ffffff;
+}
+.tct-flip-half {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  overflow: hidden;
+  background: #26242e;
+  backface-visibility: hidden;
+}
+.tct-flip-top {
+  top: 0;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(to bottom, #2e2c38, #27252f);
+}
+.tct-flip-bottom {
+  bottom: 0;
+  border-radius: 0 0 6px 6px;
+  background: linear-gradient(to bottom, #222029, #1c1b22);
+  box-shadow: 0 3px 4px rgb(0 0 0 / 0.45);
+}
+.tct-flip-face {
+  display: block;
+  height: var(--flip-h);
+  line-height: var(--flip-h);
+  text-align: center;
+}
+.tct-flip-bottom .tct-flip-face {
+  transform: translateY(-50%);
+}
+.tct-flip-under {
+  z-index: 1;
+}
+.tct-flip-leaf-top {
+  z-index: 2;
+  transform-origin: 50% 100%;
+  animation: tct-leaf-top 260ms cubic-bezier(0.55, 0, 0.9, 0.4) forwards;
+}
+.tct-flip-leaf-bottom {
+  z-index: 2;
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg);
+  animation: tct-leaf-bottom 280ms cubic-bezier(0.2, 0.7, 0.3, 1) 240ms forwards;
+}
+@keyframes tct-leaf-top {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-90deg);
+  }
+}
+@keyframes tct-leaf-bottom {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+/* Calculator fields: native date / time pickers keep the app's violet. */
+.tct-field {
+  color-scheme: light;
+  accent-color: #612bd3;
+}
+.tct-field::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-press {
+    transition: none;
+  }
+  .tct-flap-char {
+    animation: none !important;
+  }
+  /* A static board: the resting halves already show the final value. */
+  .tct-flip-leaf-top,
+  .tct-flip-leaf-bottom,
+  .tct-flip-under {
+    display: none !important;
+  }
+}

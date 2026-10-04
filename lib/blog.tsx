@@ -25,6 +25,8 @@ import * as AiTravelOrganizer from "@/content/blog/ai-travel-organizer-app-2026"
 import * as HotelCancellationPolicies from "@/content/blog/hotel-cancellation-policies"
 import * as TravelHistory from "@/content/blog/how-to-find-your-travel-history"
 import * as WanderlogVsTripit from "@/content/blog/wanderlog-vs-tripit"
+import * as FlightTimeZones from "@/content/blog/flight-time-zones-arrival-date"
+import * as OfflineTravelDocuments from "@/content/blog/save-travel-documents-offline"
 
 type BlogPostModule = { metadata: BlogFrontmatter; body: string; faq?: BlogFaq[] }
 
@@ -32,6 +34,8 @@ const rawPosts: BlogPostModule[] = [
   HotelCancellationPolicies,
   TravelHistory,
   WanderlogVsTripit,
+  FlightTimeZones,
+  OfflineTravelDocuments,
   BestTripitAlternatives,
   AiTravelOrganizer,
   HotelCancellationReminder,
