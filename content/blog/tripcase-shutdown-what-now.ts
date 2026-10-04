@@ -2,191 +2,195 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "tripcase-shutdown-what-now",
-  title: "TripCase Is Gone: 2026 Replacement & Recovery Guide",
+  title: "TripCase Shut Down: What Happened and the Best Replacement Apps in 2026",
+  seoTitle: "TripCase Shut Down: The 5 Best Replacement Apps in 2026",
   excerpt:
-    "TripCase is gone and its export window has ended. Rebuild upcoming trips from original confirmations, then choose a replacement workflow that fits.",
+    "TripCase is gone. Here's what happened to the app and which replacement fits the way you used it: free email forwarding, flight alerts, or deadlines and documents.",
   description:
-    "TripCase shut down in 2025. Rebuild upcoming trips from confirmation emails and compare 2026 replacements for itineraries, planning, flights, and reminders.",
+    "TripCase shut down on April 1, 2025, and old trips can't be recovered. The closest free match is TripIt; compare Tripsy, TripCache, Flighty and Wanderlog.",
   date: "2025-04-10",
-  updatedAt: "2026-08-17",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
-  readTime: "8 min read",
+  readTime: "10 min read",
   category: "Migration Guide",
   image: "/blog-migration-guide.webp",
+  imageAlt: "Rebuilding a travel itinerary after the TripCase app shut down",
   keywords: [
+    "TripCase",
     "TripCase shutdown",
-    "TripCase data export",
-    "TripCase replacement",
     "TripCase alternative",
-    "rebuild travel itinerary",
+    "TripCase replacement",
+    "TripCase app",
+    "apps like TripCase",
+    "what happened to TripCase",
   ],
 }
 
-export const body = String.raw`# TripCase Is Gone: 2026 Replacement & Recovery Guide
+export const body = String.raw`# TripCase Shut Down: What Happened and the Best Replacement Apps in 2026
 
-**Quick answer:** TripCase no longer works, and its official data-export deadline has passed. Rebuild upcoming trips from the original confirmation emails and provider accounts; then choose a replacement based on whether you need broad itinerary automation, collaborative planning, flight intelligence, or cancellation-deadline organization.
+**Quick answer:** TripCase no longer exists. Sabre switched the app off on April 1, 2025, kept a download-only window open until June 30, 2025, and said it would then delete TripCase trip data. There is nothing left to sign in to, and old trips can't be recovered from TripCase. For the closest like-for-like replacement (forwarding confirmation emails for free), use **TripIt**. If you mainly want reminders before refundable bookings stop being free to cancel, plus documents and expenses kept with the trip, try **TripCache**.
 
-| Your immediate need | Best starting point |
-|---|---|
-| Recover an upcoming booking | Original airline, hotel, agency, calendar, and confirmation-email records |
-| Broad confirmation-to-itinerary automation | TripIt |
-| Collaborative planning, maps, and routes | Wanderlog |
-| Deep flight status and operational alerts | Flighty |
-| Cancellation deadlines, documents, receipts, and post-booking organization | TripCache |
+## The 5 best TripCase replacements at a glance
 
-If the last workflow matches your problem, TripCache is available on the [App Store](https://apps.apple.com/app/id6758403056) and [Google Play](https://play.google.com/store/apps/details?id=app.tripcache). Continue below for the recovery steps and verification checklist before importing anything.
+Prices and plans were checked on each official website and app-store listing on October 5, 2026.
 
-TripCase ended access to its app and web experience on April 1, 2025. The [official TripCase website](https://www.tripcase.com/) says previous trip data was available for download only until June 30, 2025.
+| App | Closest to TripCase for | Free plan | Paid plan | Devices |
+|---|---|---|---|---|
+| **TripIt** | Forwarding confirmations to build an itinerary | Yes, including email forwarding and inbox sync | TripIt Pro: $49/year after a 30-day free trial | iPhone, Android, web |
+| **Tripsy** | A polished itinerary on Apple devices | Free to download; some features need Pro | Tripsy Pro: annual plans from $39.99 in the US App Store | iPhone, iPad, Mac, Apple Watch; no native Android app |
+| **TripCache** | Deadlines, documents and expenses after you book | Yes (Basic) | Pro: $5.99/month or about $50/year | iPhone, Android |
+| **Flighty** | Detailed flight tracking only | Yes, flight tracking | Pro: $59.99/year | iPhone, iPad, Mac, Apple Watch; no Android app |
+| **Wanderlog** | Planning places, maps and routes with others | Yes | Pro: from $39.99/year | iPhone, Android, web |
 
-That export period has passed. If you did not download an archive, the practical path in 2026 is to rebuild the trips that still matter from the original sources: confirmation emails, calendars, airline accounts, hotel accounts, receipts, and travel-agency documents.
+If your employer or travel agency set TripCase up for you, ask them first. TripIt says companies that use SAP Concur may give employees TripIt Pro at no cost.
 
-This guide explains how to do that without wasting time recreating every old itinerary.
+## What happened to TripCase?
 
-## First: Decide What Is Worth Rebuilding
+TripCase was Sabre's free itinerary app. Travel agencies and airlines used it to send trips to travelers, and individuals forwarded their own confirmations to it.
 
-Most travelers do not need a complete copy of every past TripCase trip. Separate the work into three groups.
+- **April 1, 2025:** Sabre shut down the TripCase app worldwide and pulled it from the app stores.
+- **April 1 to June 30, 2025:** former users could sign in on the website only to download their trip information.
+- **After June 30, 2025:** Sabre said it would delete TripCase trip and traveler data as part of the shutdown.
+- **Today:** tripcase.com forwards to Sabre's website. There is no TripCase account to sign in to and no export to download.
 
-### Upcoming trips
+Sabre described the decision as a strategic shift to other products. It didn't hand TripCase users to a named successor, so every former user has to choose a replacement and rebuild upcoming trips.
 
-Rebuild these first. Collect every active flight, hotel, rental car, rail ticket, tour, meeting, restaurant, and event confirmation.
+## Can I still recover my TripCase trips?
 
-### Recent business trips
+Not from TripCase. If you didn't download your trips before June 30, 2025, rebuild what you still need from the original sources:
 
-Rebuild only the details required for reimbursement, client billing, tax preparation, or company records. A receipt, invoice, or card statement may matter more than a perfect itinerary.
+- **Confirmation emails.** Search your inbox and archive for the airline, hotel or destination, plus words like "booking confirmed", "reservation", "itinerary", "e-ticket" and "confirmation number".
+- **Airline and hotel accounts.** Loyalty accounts usually list upcoming reservations and recent stays or flights.
+- **Your travel agency or company travel desk.** If an agency booked the trip, ask it to resend the itinerary or passenger receipt.
+- **Your calendar.** Events created by TripCase or a booking site help you find dates, but check the times against the airline.
+- **Card statements and expense reports.** Useful for rebuilding business trips you still need to claim.
 
-### Old leisure trips
+Be wary of any service that claims it can restore deleted TripCase data, and never upload your passport or payment details to an unfamiliar "migration" tool.
 
-Recreate these only if the history has personal value. Photos, calendar events, and email confirmations may already provide enough of a record.
+### If an agency or airline sent you a TripCase itinerary
 
-## Where to Recover Your Booking Details
+Some travelers only knew TripCase because their agency or airline sent trips through it. To check a booking now, use the airline's "manage booking" page with your booking reference (PNR) and last name, or ask the agency that booked it for a fresh itinerary.
 
-### Search your email
+## Which replacement fits the way you used TripCase?
 
-Use combinations of the destination, airline, hotel, booking provider, and common confirmation terms:
+TripCase did several jobs at once. Pick the replacement by the job you miss most.
 
-- “booking confirmed”
-- “reservation”
-- “itinerary”
-- “ticket” or “e-ticket”
-- “check-in”
-- “rental car”
-- “confirmation number”
-- “cancellation policy”
+| What you used TripCase for | Best replacement | Why |
+|---|---|---|
+| Forwarding confirmation emails for free | TripIt | Email forwarding and inbox sync are on TripIt's free plan |
+| Agency or company trips | TripIt through SAP Concur, or your company's travel tool | Some companies give TripIt Pro to SAP Concur users |
+| Flight alerts on travel day | TripIt Pro, Flighty or TripCache Pro | All three send flight-status alerts on paid plans |
+| An Android app | TripIt or TripCache | Tripsy and Flighty have no native Android apps |
+| Remembering when a refundable booking stops being free to cancel | TripCache | Cancellation-deadline reminders are in the free Basic plan |
+| Passports, visas and tickets kept with the trip | TripCache or TripIt | TripCache's PIN-locked vault is on every plan; TripIt allows 3 documents per trip free and 25 on Pro |
+| A record of past flights | TripCache | Import past flights from a CSV file, then export your travel history as CSV or PDF |
 
-Search both your inbox and archived mail. If you travel for work, check the account used by your employer or travel agency too.
+## 1. TripIt: the closest free replacement
 
-### Check airline and hotel accounts
+TripIt works the way most TripCase users expect: forward a confirmation to plans@tripit.com and it builds the itinerary. TripIt's free plan includes email forwarding, inbox sync, calendar sync, plan sharing and 3 document uploads per trip.
 
-An airline or hotel loyalty account may show upcoming reservations and recent history. Confirm local departure times, terminal details, and confirmation numbers against the original email.
+TripIt Pro costs $49 a year on tripit.com after a 30-day free trial. It adds real-time flight alerts, check-in reminders, alternate flights, gate and baggage-claim information, fare and seat trackers, and 25 documents per trip. Our [TripIt Pro pricing breakdown](/blog/tripit-vs-tripcache-comparison-2025) has the full free vs Pro list.
 
-### Review your calendar
+**Choose TripIt if** you want free email forwarding from a long-established product.
 
-TripCase or a booking provider may have added events to your calendar. Calendar entries can help identify travel dates, but they should not be the only source for current flight or cancellation information.
+## 2. Tripsy: best for iPhone and Mac users
 
-### Review card statements and expense systems
+Tripsy is a polished itinerary app for iPhone, iPad, Mac and Apple Watch. You can forward booking emails to it, keep documents and notes with each trip, and track expenses in more than one currency. It is free to download, and some features need Tripsy Pro.
 
-For business trips, card transactions, expense reports, and reimbursement submissions can help reconstruct vendors, dates, and amounts. Keep sensitive payment information out of a general itinerary.
+Tripsy built a TripCase importer before the shutdown, but it needed TripCase to still be running, so it can't help now. Tripsy has no native Android app yet; Android users can only view their itineraries in a browser.
 
-### Ask the travel agency or booking owner
+**Choose Tripsy if** everyone on the trip uses Apple devices.
 
-If an employer, assistant, or travel agency made the booking, ask for the current itinerary or passenger receipt. The agency's record may be more accurate than an old calendar event.
+## 3. TripCache: best for deadlines, documents and expenses
 
-## Build a Minimum Reliable Itinerary
+TripCache is built for the work after you book. It isn't a copy of TripCase: it puts more weight on refundable-booking deadlines, travel documents and what a trip costs.
 
-For each upcoming trip, capture the details you will actually need while traveling.
+**Free on Basic:**
 
-### Flights
+- Trips with flights, hotels, rental cars, trains, buses, parking, events, restaurants, tours and meetings.
+- Cancellation-deadline reminders 7 days, 2 days, 1 day or on the day a refundable booking's free cancellation ends.
+- Check-in reminders 48 hours and 24 hours before departure, plus a shortcut that copies your booking reference and opens the airline's website.
+- Boarding-pass barcode scanning to add or update a flight.
+- A document vault for passports, visas, tickets, boarding passes, insurance and hotel files, with an optional PIN and Face ID or fingerprint unlock.
+- Expenses in 153 currencies with budgets by category, and CSV or PDF export, including a visa travel-history summary.
+- CSV import of past flights, so you can rebuild your flight history from a spreadsheet.
+- Offline access to your trips and cached documents.
 
-- Airline and flight number
-- Travel date and local departure time
-- Origin and destination airports
-- Booking reference
-- Passenger name
-- Terminal or gate only when current
+**Pro adds:** forwarding confirmation emails (with attached PDFs and screenshots) to your own TripCache address to create drafts you review, with a monthly import allowance; live flight-status alerts for delays, gate changes and baggage belts; and Live Activities, the Dynamic Island and home-screen widgets on iPhone, with an ongoing notification and widget on Android.
 
-### Hotels and stays
+One honest difference: TripCase and TripIt let you forward emails for free, but email import is a Pro feature in TripCache. If free forwarding is all you need, TripIt is the better match.
 
-- Property name and address
-- Check-in and check-out dates
-- Confirmation number
-- Payment status
-- Free-cancellation cutoff, including the property's local time zone
+**Choose TripCache if** your bookings are refundable, you carry documents you need to find fast, or you track what trips cost. Get it on the [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache), or compare [Basic and Pro](/pricing).
 
-### Rental cars and transport
+## 4. Flighty: best for flight tracking only
 
-- Pickup and return location
-- Local pickup and return time
-- Confirmation number
-- Cancellation terms
+Flighty focuses on flights: live status, early delay alerts and a detailed flight history. Its free plan tracks flights, and Flighty Pro costs $59.99 a year. It runs on iPhone, iPad, Mac and Apple Watch, with no Android app.
 
-### Meetings, tours, and tickets
+Flighty doesn't organize hotels, rental cars or other bookings, so most former TripCase users pair it with an itinerary app.
 
-- Venue or meeting location
-- Start time in the local time zone
-- Booking or ticket reference
-- Contact details
-- Cancellation or change policy
+**Choose Flighty if** flights are the only part of the trip you need help with.
 
-## Verify Before You Travel
+## 5. Wanderlog: best for planning places and routes
 
-Rebuilt itineraries can contain mistakes. Before relying on the new app or document:
+Wanderlog combines an itinerary with a map, so it is strongest before the trip, while you are still choosing where to go. It supports planning with friends, budgets and reservation import. Wanderlog Pro (from $39.99 a year) adds offline access, route optimization and automatic Gmail scanning.
 
-1. Compare flight details with the airline.
-2. Confirm hotel dates and the cancellation cutoff with the property or booking provider.
-3. Check whether a booking is prepaid, pay-at-property, refundable, or non-refundable.
-4. Test that notifications are enabled on your phone.
-5. Keep official tickets, passports, visas, and immigration records available from their authoritative source.
+**Choose Wanderlog if** you plan leisure trips with other people.
 
-An itinerary app is an organizer. It should not replace the airline, hotel, travel agency, government, or original ticket issuer as the final authority.
+### For business travelers: your company's travel tool
 
-## Choosing a TripCase Replacement
+If your company booked travel through an agency, check whether it now uses a managed platform such as Navan or TravelPerk, or SAP Concur with TripIt. A company tool is usually the right replacement for agency-booked trips because it receives the bookings directly.
 
-Different apps replace different parts of TripCase.
+## How to move to a new app in an afternoon
 
-- **TripIt** is a mature choice for broad confirmation-email organization and travel-day alerts.
-- **Wanderlog** is strong for collaborative planning, maps, recommendations, and route optimization.
-- **Flighty** focuses deeply on flight status, delays, airports, and frequent-flyer history.
-- **TripCache** focuses on post-booking organization: confirmation emails, cancellation deadlines, documents, receipts, and expense records.
+1. **Rebuild upcoming trips first.** Skip old trips unless you need them for expenses, tax or a visa application.
+2. **Forward or add each booking.** Use email import where your app supports it, and add anything unusual by hand.
+3. **Check every local time.** Overnight flights and time-zone changes are where rebuilt itineraries usually go wrong.
+4. **Record cancellation cutoffs.** Hotel and rental-car "free cancellation until" dates are easy to lose when you switch apps. The free [hotel cancellation deadline calculator](/tools/hotel-cancellation-deadline-calculator) works out the exact cutoff.
+5. **Add only the documents you need.** Read the app's privacy policy and store disclosures before uploading identity documents.
+6. **Test notifications before travel day.** Make sure check-in, flight and deadline reminders actually reach your phone.
+7. **Keep the originals.** The airline, hotel or agency record stays the authority, not the app.
 
-See the full [TripCase alternatives comparison](/blog/tripcase-alternative-2025) before choosing.
+### What to rebuild for each booking
 
-## Rebuilding Upcoming Trips in TripCache
+- **Flights:** airline, flight number, date, local departure time, airports and booking reference.
+- **Hotels:** property, address, check-in and check-out dates, confirmation number, payment status and the free-cancellation cutoff in the hotel's local time.
+- **Rental cars and transport:** pickup and return place and time, confirmation number and cancellation terms.
+- **Tickets, tours and meetings:** venue, start time, booking reference and the change or refund policy.
 
-If TripCache fits your workflow, use this order:
+## Rebuilding your trips in TripCache
 
-1. Download TripCache from the official [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache) listing.
-2. Create the upcoming trip with the correct destination and dates.
-3. Manually add the essential bookings, or use Pro email forwarding to create reviewable drafts from confirmations.
-4. Check each draft before saving it.
-5. Add hotel, car, tour, and ticket cancellation deadlines.
-6. Attach only the travel documents you need, after reviewing the [Privacy Policy](/privacy) and current app-store disclosures.
-7. Add receipts and expenses that will matter after the trip.
-8. Export important business records separately when required.
+1. Download TripCache from the [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache).
+2. Create the upcoming trip, then add each booking by hand, scan a boarding pass, or forward the confirmation with Pro. See how [email-to-itinerary import](/features/email-to-itinerary) works.
+3. Review each imported draft before saving it.
+4. Add cancellation reminders to refundable hotels, cars, tours and tickets. The [cancellation reminders page](/features/cancellation-reminders) explains the timing options.
+5. Add the documents you need to the vault and turn on the PIN lock.
+6. Import past flights from a CSV file if you want your flight history back.
 
-The [email-to-itinerary feature page](/features/email-to-itinerary) explains the forwarding workflow. The [cancellation reminder page](/features/cancellation-reminders) covers refundable booking deadlines.
+## TripCase FAQ
 
-## What Not to Do
+### Is TripCase still working?
 
-- Do not pay a third party that claims it can restore deleted TripCase account data without clear evidence.
-- Do not upload passport or payment information to an unfamiliar migration service.
-- Do not assume an old flight time or gate is still current.
-- Do not recreate years of history before securing upcoming travel.
-- Do not treat a comparison article as a substitute for checking the current product and store pages.
+No. TripCase shut down on April 1, 2025. The app is gone from the app stores, and tripcase.com now forwards to Sabre's website.
 
-## A Simple Recovery Checklist
+### Can I get my old TripCase trips back?
 
-- [ ] Collect upcoming confirmation emails
-- [ ] Check airline, hotel, agency, and calendar records
-- [ ] Rebuild future trips first
-- [ ] Verify local dates and time zones
-- [ ] Record free-cancellation deadlines
-- [ ] Test notifications
-- [ ] Keep authoritative tickets and documents accessible
-- [ ] Export required business records
+No. The download window closed on June 30, 2025, and Sabre said it would delete TripCase trip data after that. Rebuild upcoming trips from your confirmation emails and your airline, hotel or agency accounts.
 
-## Bottom Line
+### What is the best free TripCase alternative?
 
-The official TripCase export window is over, but most travelers can rebuild what they need from the original booking sources. Focus on upcoming travel, verify every important detail, and choose a replacement based on the workflow you actually need.
+TripIt is the closest free match because its free plan includes email forwarding. TripCache's free Basic plan is the better fit if you want cancellation-deadline reminders, check-in reminders, a document vault and expense exports without paying.
 
-For TripCache questions, email support@trip-cache.com or compare the current [Basic and Pro plans](/pricing).
+### Can I import TripCase trips into TripIt or Tripsy?
+
+Not anymore. TripIt suggested printing TripCase itineraries to PDF and emailing them in, and Tripsy built a direct importer, but both needed TripCase to still be running.
+
+### Is TripCache the same as TripCase?
+
+No. TripCache is an independent app with a similar name. It isn't made by Sabre and has no connection to TripCase.
+
+## Bottom line
+
+TripCase is gone, and its data went with it. Rebuild upcoming trips from the original confirmations, then pick the replacement that matches how you travel: TripIt for free email forwarding, Tripsy for Apple-only households, Flighty for flight detail, Wanderlog for planning, and TripCache for deadlines, documents and trip costs. For a wider comparison, see the [best TripIt alternatives](/blog/best-tripit-alternatives-2026).
+
+Questions about TripCache? Email support@trip-cache.com.
 `

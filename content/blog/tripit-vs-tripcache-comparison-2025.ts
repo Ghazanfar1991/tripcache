@@ -2,122 +2,154 @@ import type { BlogFrontmatter } from "@/types/blog"
 
 export const metadata: BlogFrontmatter = {
   slug: "tripit-vs-tripcache-comparison-2025",
-  title: "TripIt vs TripCache: Features and Pricing Compared",
-  seoTitle: "TripIt vs TripCache: Features and Pricing (2026)",
+  title: "TripIt Pro in 2026: What It Costs, What You Get, and Free vs Pro",
+  seoTitle: "TripIt Pro Pricing 2026: $49/Year, Free vs Pro Compared",
   excerpt:
-    "An objective TripIt and TripCache comparison for travelers choosing between mature flight tools and cancellation, document, and expense workflows.",
+    "What TripIt Pro costs as of October 2026, everything the free plan already includes, what Pro adds, whether it's worth it, and how it compares with TripCache.",
   description:
-    "Compare TripIt and TripCache pricing, email itinerary tools, flight alerts, cancellation reminders, document organization, and expense exports in 2026.",
+    "TripIt Pro costs $49 a year after a 30-day free trial and adds flight alerts, check-in reminders and 25 documents per trip. Free vs Pro, plus TripCache.",
   date: "2025-01-15",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-05",
   author: "TripCache Editorial Team",
-  readTime: "6 min read",
+  readTime: "8 min read",
   category: "Comparison",
   image: "/blog-cover-flighty-comparison.webp",
   imageAlt: "Flight itinerary, travel wallet, boarding passes, and route map at an airport",
   keywords: [
-    "TripIt alternative",
+    "TripIt Pro",
+    "what is TripIt Pro",
+    "TripIt Pro cost",
+    "TripIt Pro pricing",
+    "TripIt Pro vs free",
+    "is TripIt free",
     "TripIt vs TripCache",
-    "TripCache pricing",
-    "travel itinerary app comparison",
-    "TripIt Pro alternative",
   ],
 }
 
-export const body = String.raw`# TripIt vs TripCache: Features and Pricing Compared
+export const body = String.raw`# TripIt Pro in 2026: What It Costs, What You Get, and Free vs Pro
 
-TripIt and TripCache both turn travel details into organized itineraries, but they are designed around different priorities. TripIt is the more established product for travel-day flight tools. TripCache focuses on the work after booking: confirmation import, cancellation deadlines, trip documents, receipts, and expense exports.
+**Quick answer:** TripIt Pro is the paid upgrade to the TripIt itinerary app. As of October 2026 it costs **$49 a year** on tripit.com, after a **30-day free trial**, and $48.99 a year as an in-app purchase in the US App Store. TripIt doesn't list a monthly plan. Pro adds real-time flight alerts, check-in reminders, alternate flights, gate and baggage-claim information, fare, seat and points trackers, disruption alerts and 25 document uploads per trip instead of 3. Email forwarding and inbox sync are already free. If your company uses SAP Concur, you may get TripIt Pro at no cost.
 
-## Quick answer
+## TripIt Pro price (checked October 5, 2026)
 
-**Choose TripIt if** you want a mature travel organizer with deep Pro flight, airport, check-in, fare, seat, points, and disruption features.
-
-**Consider TripCache if** your priority is keeping confirmation emails, cancellation cutoffs, documents, receipts, and exportable trip records together.
-
-TripCache is an early-stage product, so travelers who value a long operating history or extensive public reviews may prefer TripIt.
-
-## Pricing Checked in August 2026
-
-| Product | Free option | Paid option |
+| Where you get it | Price | Notes |
 |---|---|---|
-| **TripCache** | Basic trip organization | Pro: $5.99/month or $49.99/year |
-| **TripIt** | Free itinerary organizer | TripIt Pro: $49/year |
+| tripit.com | $49 per year | 30-day free trial, then billed yearly |
+| US App Store (in-app purchase) | $48.99 per year | Renews every year until you turn off auto-renew |
+| Through your employer | May be free | TripIt says some companies that use SAP Concur give employees Pro |
 
-The annual plans are nearly the same price, so price should not be the deciding factor by itself. Check the current [TripIt pricing page](https://www.tripit.com/web/pro/pricing) and [TripCache pricing page](/pricing) before subscribing.
+Prices in other countries and currencies differ. Check the official [TripIt Pro pricing page](https://www.tripit.com/web/pro/pricing) before you subscribe.
 
-## Capability comparison
+## What is TripIt Pro?
 
-| Need | TripCache | TripIt |
+The free TripIt app organizes your plans: forward a confirmation email to plans@tripit.com, or connect your inbox, and TripIt builds one itinerary for flights, hotels, cars and other bookings.
+
+TripIt Pro is about travel day. It watches your flights and tells you when something changes, reminds you when to check in and when to leave for the airport, guides you through terminals and connections, and tracks fares, seats and reward points in the background.
+
+## TripIt free vs Pro
+
+| Feature | TripIt (free) | TripIt Pro |
 |---|---|---|
-| Confirmation email to itinerary | Pro | Free and Pro |
-| Manual trip organization | Basic and Pro | Free and Pro |
-| Cancellation deadline reminders | Dedicated booking cutoffs and reminder timing | Not listed on TripIt's official pricing page as of August 26, 2026 |
-| Trip documents | Documents stay connected to a trip | 3 uploads per trip on Free; 25 on Pro |
-| Expense-oriented CSV exports | Included with Pro | Not listed on TripIt's official pricing page as of August 26, 2026 |
-| Flight and airport intelligence | Flight-status updates and supported notifications | Pro includes real-time alerts, alternate flights, gate, baggage, and airport guidance |
-| Public operating history | Early-stage | Established |
-| iOS and Android apps | Available | Available |
+| Forward confirmation emails to build an itinerary | Yes | Yes |
+| Inbox sync (adds plans from your inbox automatically) | Yes | Yes |
+| Calendar sync and plan sharing | Yes | Yes |
+| Airport and terminal maps | Yes | Yes, plus airport navigation and connecting-gate guidance |
+| Travel stats and carbon footprint | Yes | Yes |
+| Document uploads | 3 per trip | 25 per trip |
+| Real-time flight alerts | No | Yes |
+| Check-in reminders | No | Yes |
+| "Go Now" alert for when to leave for the airport | No | Yes |
+| Terminal, gate and baggage-claim information | No | Yes |
+| Alternate flights when plans change | No | Yes |
+| Fare tracker (tells you if you may be owed a refund after a price drop) | No | Yes |
+| Seat tracker | No | Yes |
+| Reward-points tracker | No | Yes |
+| Trip disruption and risk alerts | No | Yes |
+| Sharing live travel updates with your Inner Circle | No | Yes |
+| Passport renewal reminder | No | Yes |
 
-The TripIt entries above come from its current official pricing and feature page. TripCache feature availability is documented in the [email-to-itinerary workflow](/features/email-to-itinerary) and [cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026).
+Source: TripIt's official pricing and Pro pages, October 5, 2026.
 
-## Email-to-itinerary workflow
+## Is TripIt Pro worth it?
 
-TripIt popularized forwarding booking confirmations to build a master itinerary. Its official [how it works page](https://www.tripit.com/en-us/web/how-it-works) documents the current confirmation-forwarding workflow, and its long operating history is a meaningful advantage.
+**It's worth paying for if** you fly often, make tight connections, or want one app to warn you about delays, gate changes and check-in times. The fare tracker can also pay for itself if it catches a price drop you're eligible to claim.
 
-TripCache also imports supported confirmation emails. It creates a trip draft for review, which is helpful when a traveler wants to verify extracted dates and booking details before adding them to an itinerary.
+**The free plan is enough if** you take a few trips a year and mainly want your bookings in one place. Email forwarding, inbox sync, calendar sync and sharing are all free, and many airline apps already send their own delay and gate notifications.
 
-No parser is perfect. Keep the original confirmation and verify names, dates, airports, cancellation terms, and booking references in the airline, hotel, or rental provider's official channel.
+## How to get TripIt Pro free or try it first
 
-## Where TripIt is stronger
+- **Free trial:** tripit.com offers 30 days of Pro before the first yearly charge.
+- **SAP Concur:** if your employer uses SAP Concur, connect TripIt to it and check whether you qualify for complimentary Pro.
+- **Promo codes:** TripIt's official pricing page doesn't list one. The trial and SAP Concur are the official ways to use Pro without paying.
 
-TripIt Pro is built for travelers who value detailed travel-day assistance. Its official pricing and feature page lists flight alerts, check-in reminders, alternate-flight information, gate and baggage details, fare tracking, seat tracking, points tracking, and airport guidance.
+## How to cancel TripIt Pro
 
-For a frequent flyer who primarily wants disruption and airport intelligence from a well-established product, TripIt is likely the better fit.
+If you subscribed in the iPhone app, turn off auto-renew in your Apple ID subscription settings at least 24 hours before the renewal date. On Android, use Google Play subscriptions. If you subscribed on tripit.com, follow TripIt's help center instructions for your account.
 
-## Where TripCache is different
+## TripIt Pro vs TripCache
 
-TripCache is most useful as a post-booking travel workspace:
+We make TripCache, so here is a straight comparison using TripIt's published features and TripCache's actual Basic and Pro plans. The two apps overlap on itineraries and flight alerts but differ on almost everything else.
 
-- Record refundable booking and cancellation deadlines
-- Keep confirmation details, documents, and receipts with the trip
-- Review itinerary information in one place
-- Export travel records for expense workflows on Pro
-- Organize flights, hotels, rental cars, and activities together
+| | TripIt Pro | TripCache |
+|---|---|---|
+| Price | $49/year (no monthly plan listed) | Basic is free. Pro is $5.99/month, or $49.99/year on Google Play ($50.00 in the US App Store) |
+| Free trial | 30 days on tripit.com | None advertised; Basic is free to use |
+| Email forwarding | Included in TripIt's free plan | Pro only, with a monthly import allowance |
+| Real-time flight alerts | Pro | Pro: delays, gate and terminal changes and baggage belts, from a third-party flight-data provider (coverage varies) |
+| Check-in reminders | Pro | Free: 48 and 24 hours before departure, with a shortcut to the airline's site |
+| Free-cancellation deadline reminders | Not listed on TripIt's pricing page | Free: 7 days, 2 days, 1 day or on the day |
+| Travel documents | 3 per trip free, 25 per trip on Pro | Free vault with the same limits on every plan (10 files per document, 15 MB per file) and an optional PIN with Face ID or fingerprint unlock |
+| Expenses and exports | Not listed on TripIt's pricing page | Free: expenses in 153 currencies, budgets, and CSV or PDF export including a visa travel-history summary |
+| Live Activity and widgets | Not listed on TripIt's pricing page | Pro: Live Activities, Dynamic Island and widgets on iPhone; ongoing notification and widget on Android |
+| Airport maps, alternate flights, fare, seat and points trackers | Yes | No |
+| Apps | iPhone, Android and web | iPhone and Android |
+| Track record | Long-established; owned by SAP Concur | Newer app with a short public history |
 
-This makes the comparison less about replacing every TripIt feature and more about choosing the workflow you need.
+### Choose TripIt Pro if
 
-## Business travel records
+- You want the most travel-day help: airport navigation, alternate flights, fare refunds, seat and points tracking.
+- You want email forwarding without paying, and Pro features on top.
+- Your employer gives you Pro through SAP Concur.
 
-Consultants, contractors, and small-business travelers often need a clean record after the trip. TripCache Pro's expense and CSV workflow is aimed at that use case. It is not a corporate booking, approval, duty-of-care, or travel-policy platform.
+### Choose TripCache if
 
-If your employer requires a managed travel system, use its approved booking and expense tools. TripCache can be a personal organizer where company policy allows it.
+- You hold refundable hotels, rental cars, tours or tickets and want a reminder before free cancellation ends. That's free in TripCache. See [how cancellation reminders work](/features/cancellation-reminders).
+- You want check-in reminders, a locked document vault and expense exports without a subscription.
+- You'd rather pay monthly, or only want Pro for live flight alerts and email import during busy travel months.
 
-## Privacy and trust checks
+You can also use both: TripIt's free plan for forwarding and TripCache Basic for deadlines, documents and expenses.
 
-Before using either service, review its current privacy policy and app-store data disclosures. Travel confirmations can contain names, dates, locations, booking references, and loyalty details.
+## TripIt Pro FAQ
 
-For TripCache, the current [App Store listing](https://apps.apple.com/app/id6758403056) and [Google Play listing](https://play.google.com/store/apps/details?id=app.tripcache) are the most direct sources for platform-specific collection and security information. Avoid uploading passports or other sensitive identity documents unless you have reviewed those disclosures and are comfortable with them.
+### How much is TripIt Pro?
 
-## Migration checklist
+$49 a year on tripit.com, or $48.99 a year as an in-app purchase in the US App Store, as of October 2026.
 
-If you want to test TripCache alongside TripIt:
+### Does TripIt Pro have a monthly plan?
 
-1. Install TripCache from its official iOS or Android listing.
-2. Add one upcoming trip or forward a supported confirmation.
-3. Compare the extracted details with the original booking.
-4. Add a cancellation cutoff and one receipt or document.
-5. Test the export workflow if you are considering Pro.
-6. Keep both products until you know which workflow is more reliable for your bookings.
+TripIt's pricing page lists only the yearly plan.
 
-Do not cancel a paid service until you have confirmed that the replacement covers the functions you actually use.
+### Is TripIt free?
 
-## Verdict
+Yes. The free plan organizes your itinerary from forwarded emails or inbox sync, syncs your calendar, shares plans and stores up to 3 documents per trip.
 
-TripIt is the stronger choice for mature flight and airport assistance. TripCache is the more focused choice for travelers who care about cancellation deadlines, documents, receipts, and exportable trip records. Neither is universally better.
+### What's the difference between TripIt and TripIt Pro?
 
-See the current [TripIt alternative overview](/alternatives/tripit), review the [business travel record workflow](/blog/business-travel-expense-reporting-app-2026), or download TripCache from the official store links on the site.
+Free TripIt organizes your plans. Pro adds travel-day help: real-time flight alerts, check-in reminders, gate and baggage information, alternate flights, fare, seat and points trackers, disruption alerts and 25 documents per trip.
+
+### Is there a TripIt Pro free trial?
+
+Yes. tripit.com offers a 30-day free trial before the first yearly charge.
+
+### Is TripCache cheaper than TripIt Pro?
+
+The yearly prices are about the same. TripCache also has a $5.99 monthly plan, and its Basic plan includes check-in reminders, cancellation-deadline reminders, the document vault and expense exports for free.
+
+## Bottom line
+
+TripIt Pro is a solid $49-a-year upgrade for frequent flyers who want alerts and airport help. If your gap is something else (deadlines on refundable bookings, documents, or what a trip costs), TripCache covers that for free. Compare all the options in our [best TripIt alternatives](/blog/best-tripit-alternatives-2026), see [what changes when you switch from TripIt](/alternatives/tripit), or compare TripCache [Basic and Pro](/pricing).
 
 ---
 
-*Last reviewed August 26, 2026. Competitor pricing and features can change; verify them on the official product sites.*
+*Last reviewed October 5, 2026. TripIt prices and features were checked on tripit.com and the US App Store; they can change, so confirm them on the official site.*
 `
