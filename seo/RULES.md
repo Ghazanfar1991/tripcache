@@ -36,9 +36,17 @@ Read this before changing anything that search engines see. Every rule exists be
 - *Why:* our top query, "tripcase", produced 1,054 impressions and 7 clicks in 28 days. Impressions aren't the goal; installs are.
 - *Manual.*
 
-**R8. Claims must match the app and the stores.** Plans, prices and features come from `PRODUCT.md` (Basic free; Pro $5.99/month or $49.99/year) and must agree with the App Store and Google Play listings.
-- *Why:* the site said cancellation reminders were Pro-only while the Play listing said Basic. A stale "$9.99/month" claim was found in an external post.
-- *Manual.*
+**R8. Claims must match the app's code and the store listings.** Plans and features come from [`research/app-feature-inventory.md`](research/app-feature-inventory.md), which was checked against the app's code. Update it when the app changes. Pro gates only three things: email import (with a monthly AI quota), live flight-status alerts, and Live Activity/widgets. Everything else is in Basic. Prices ($5.99/month, $49.99/year) live in RevenueCat and the stores; check the current listing before quoting them. Never claim:
+- support for "all" or any named airline/hotel/OTA
+- inbox scanning
+- automatic check-in
+- encryption
+- unlimited storage
+- shareable trip links, collaboration or calendar sync
+- receipt OCR
+- ratings or download counts
+- *Why:* in October 2026 the pricing, home and features pages sold cancellation reminders, CSV export, extra storage, calendar and sharing as Pro, but the code gives all of them to Basic. The Play listing already said Basic. Retired blog posts claimed "unlimited cloud storage", "secure encryption" and "works with ALL airlines". The app's share link points at `trip-cache.com/shared/…`, which returns 404.
+- *Manual:* the seo-change skill checks claims against the inventory.
 
 ## Judging results
 

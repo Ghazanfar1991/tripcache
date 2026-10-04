@@ -11,7 +11,7 @@ When this runs as the scheduled task, it works in the dedicated `tripcache-seo-a
 
 ## 1. Read
 
-- `seo/RULES.md`, `seo/STRATEGY.md`, `seo/backlog.md`, `PRODUCT.md`
+- `seo/RULES.md`, `seo/STRATEGY.md`, `seo/backlog.md`, `seo/research/app-feature-inventory.md`
 - `seo/data/summary.md`. Check its date: if the nightly feed hasn't run for 3+ days, say so at the top of the report and don't draw trend conclusions.
 - `seo/CHANGELOG.md` and `seo/changelog.jsonl`
 - `seo/data/search-console/{queries,opportunities,keyword-map,index-status}.json`, `seo/data/website/funnel.json`, `seo/data/site/technical-health.json`

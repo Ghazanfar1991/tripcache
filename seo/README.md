@@ -29,7 +29,7 @@ The scheduled tasks are Claude desktop-app tasks, so they use the owner's Claude
 | [`STRATEGY.md`](STRATEGY.md) | Audience, positioning, markets, and the keyword clusters we're going after. |
 | [`keywords.csv`](keywords.csv) | Keyword map. Each keyword belongs to a cluster, and each cluster has exactly one owner page (`/path`, `NEW:/path`, or `SKIP`). |
 | [`changelog.jsonl`](changelog.jsonl) → [`CHANGELOG.md`](CHANGELOG.md) | Every change search can see, with its automatically computed 28-day result and the lesson. |
-| [`backlog.md`](backlog.md) | Ranked next actions. |
+| [`backlog.md`](backlog.md) | **The roadmap checklist:** what's done `[x]` and what's next `[ ]`, in order. |
 | [`url-registry.json`](url-registry.json) | Every URL we've ever published, and whether it's live or redirected. |
 | [`backlinks.json`](backlinks.json) | Backlink opportunities and their outreach status. |
 | [`research/`](research/) | Keyword and competitor research. `semrush-2026-10/` is the one-time Semrush trial export; Semrush isn't available after 2026-10-12. |

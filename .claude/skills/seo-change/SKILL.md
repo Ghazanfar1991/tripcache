@@ -9,7 +9,7 @@ The system lives in `seo/` (see `seo/README.md`). These steps keep every change 
 
 ## 1. Load context
 
-Read `seo/RULES.md`, `seo/STRATEGY.md`, `seo/data/summary.md` and `PRODUCT.md` (product facts, plans and prices, voice; never contradict it). If you're writing Next.js code, follow `AGENTS.md` first.
+Read `seo/RULES.md`, `seo/STRATEGY.md`, `seo/data/summary.md` and `seo/research/app-feature-inventory.md`. The inventory has what the app really does, Basic vs Pro, and claims to avoid; never contradict it (R8). `PRODUCT.md`, when present, covers voice and design. If you're writing Next.js code, follow `AGENTS.md` first.
 
 ## 2. Pin the target
 
@@ -38,7 +38,7 @@ Use the installed SEO skills where they fit. Base the work on our data (Search C
 Quality bar:
 - Answer the searcher's question in the first screen.
 - Show the product working; use real screenshots from `public/`.
-- Make no claim that the app or the stores don't back up (R8).
+- Make no claim the app inventory or the stores don't back up (R8). Check its "Claims to avoid" list.
 - No invented statistics, testimonials or ratings.
 - Keep the title ≤ 60 characters, put the main keyword near the start, and make it specific enough to earn the click. Keep the meta description ≤ 155 characters.
 
