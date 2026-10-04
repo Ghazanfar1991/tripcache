@@ -13,8 +13,8 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Editorial Team",
   readTime: "11 min read",
   category: "Comparison",
-  image: "/blog-app-comparison.webp",
-  imageAlt: "Tablet comparing travel apps side by side next to a passport and coffee",
+  image: "/blog-cover-wanderlog-vs-tripit.webp",
+  imageAlt: "Cut-paper illustration of two open notebooks: a route map with pins beside a timeline of tickets, comparing trip planning with booking organization",
   keywords: [
     "wanderlog vs tripit",
     "tripit vs wanderlog",

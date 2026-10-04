@@ -13,8 +13,8 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Editorial Team",
   readTime: "12 min read",
   category: "Guide",
-  image: "/app-screenshot-history.webp",
-  imageAlt: "TripCache Travel History screen listing past personal and business trips with routes and dates",
+  image: "/blog-cover-travel-history.webp",
+  imageAlt: "Cut-paper illustration of an open passport with travel stamps in front of a globe and a dotted flight path",
   keywords: [
     "i-94 travel history",
     "us travel history i94",

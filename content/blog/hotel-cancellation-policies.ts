@@ -13,8 +13,8 @@ export const metadata: BlogFrontmatter = {
   author: "TripCache Editorial Team",
   readTime: "13 min read",
   category: "Guide",
-  image: "/app-feature-cancellation-reminder.webp",
-  imageAlt: "TripCache Set Reminders screen for a hotel cancellation deadline with 7-day, 2-day, 1-day and day-of options",
+  image: "/blog-cover-hotel-cancellation-policies.webp",
+  imageAlt: "Cut-paper illustration of a hotel key card, alarm clock and desk calendar with one day circled, representing a cancellation deadline",
   keywords: [
     "hotel cancellation policy",
     "cancelation policy hotel",
