@@ -46,12 +46,15 @@ From the October 2026 Semrush research (`research/semrush-2026-10/SUMMARY.md`). 
 
 | Play | Clusters (owner page) | Why it's winnable |
 | --- | --- | --- |
-| **Dead and pricey competitors** | TripCase (`/blog/tripcase-shutdown-what-now`), App in the Air (new), TripIt Pro (`/blog/tripit-vs-tripcache-comparison-2025`), Wanderlog reviews/cost (new) | KD 4–33; searchers are actively switching. Highest install intent we have. |
-| **Free templates** | Google Docs/Sheets itinerary templates (new), itinerary template hub (`/blog/travel-itinerary-template-2026`), travel expense report template (new) | KD 10–20 on the Docs/Sheets variants; huge head volume (90.5K) behind them. Real downloadable files beat thin listicles. |
-| **Free tools** | Flight arrival time calculator (built locally, unshipped), hotel cancellation deadline calculator (live), jet lag calculator (new) | Results held by small tool sites (KD 22–31); tools earn links. |
-| **Cancellation policies** | Hotel cancellation policies hub (new), then per-brand pages | KD 17 for the hub; each page sells the deadline-reminder feature directly. |
-| **Comparison and app lists** | Wanderlog vs TripIt (new), best travel apps for planning (`/blog/best-travel-apps-2025`), TripIt alternatives (`/blog/best-tripit-alternatives-2026`) | Forums and tiny blogs in the top 10; we already sit at positions 6–12 on some. |
+| **Dead and pricey competitors** | TripCase (`/blog/tripcase-shutdown-what-now`), TripIt alternatives (`/blog/best-tripit-alternatives-2026`), TripIt Pro (`/blog/tripit-vs-tripcache-comparison-2025`), App in the Air (new), Wanderlog vs TripIt (new) | KD 3–33 with 5–8 weak slots; searchers are actively switching. Highest install intent we have. TripCase demand is falling, so act first. |
+| **Free tools** | Flight arrival time calculator, jet lag calculator, layover calculator (all built locally, unshipped); hotel cancellation deadline calculator (live) | Small tool sites hold the top 10 (KD 22–31). Tools earn links. |
+| **Things only our app does** | Travel history for visas / I-94 (new guide), free cancellation reminders | "i-94 travel history" 4,400 at KD 34, with no app competing. The free Visa / Immigration Summary export answers it. |
+| **Cancellation policies** | Hotel cancellation policies hub (new; brand sections inside), car-rental hub later | KD 17 for the hub; forums fill the results. Per-brand pages mostly lose to the brands themselves. |
+| **Free templates** | Google Sheets / Docs itinerary templates (new), template hub with .xlsx (`/blog/travel-itinerary-template-2026`), expense report template (new) | KD 14–25; another small app blog (tripstone.app, Authority Score 11) ranks #2 with exactly this. Real copyable files win. Peak is July. |
+| **App lists** | best travel apps for planning (`/blog/best-travel-apps-2025`) | Small blogs (Authority Score 12–22) hold #1–4; we already sit at ~6. |
+
+Timing matters. Searches for hotel cancellation peak in December; templates, flight tools and app lists peak in June–August. The roadmap's dates are set so pages are indexed before the peak.
 
 **Not now:** head terms (KD 60–82), navigational searches for other brands, and wrong-intent searches (physical organizers, immigration documents, booking-intent "free cancellation hotels", B2B expense software). The full list with reasons is at the bottom of `backlog.md`.
 
-The full keyword map is `keywords.csv`: 332 keywords, 61 clusters, one owner page per cluster. `owner` is a live path, `NEW:/path` for pages still to build, or `SKIP`.
+The full keyword map is `keywords.csv`: 358 keywords, 74 clusters, one owner page per cluster, each with a winnability verdict and peak months. `owner` is a live path, `NEW:/path` for pages still to build, or `SKIP`.

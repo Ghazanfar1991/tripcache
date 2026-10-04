@@ -1,9 +1,10 @@
 # TripCache SEO summary — 2026-10-05
 
-Generated 2026-10-04T16:04:30.073Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-09-04 → 2026-10-01.
+Generated 2026-10-04T16:49:15.696Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-09-04 → 2026-10-01.
 
 ## Data sources
 
+- Not collected yet (first nightly run pending).
 
 ## Google Search, last 28 days
 
@@ -64,9 +65,40 @@ Website store intent: 14.1% of 128 visitors clicked an App Store/Play link (GA4,
 | %tripnest travel app privacy policy security passport document storage | `/blog/privacy-and-security` | 27 | 0.0% | 7.1 |
 | tripcase corporate pricing | `/blog/tripcase-alternative-2025` | 26 | 0.0% | 5.5 |
 
-## Target keywords (seo/keywords.csv, P1)
+## Target keywords (seo/keywords.csv: the 30 largest P1 keywords)
 
-No keyword map yet.
+| Keyword | Owner page | US volume | GSC impr | GSC pos |
+| --- | --- | ---: | ---: | ---: |
+| travel itinerary template | `/blog/travel-itinerary-template-2026` | 90500 | 0 | not ranking |
+| itinerary template | `/blog/travel-itinerary-template-2026` | 14800 | 0 | not ranking |
+| itinerary format template | `/blog/travel-itinerary-template-2026` | 9900 | 0 | not ranking |
+| trip itinerary template | `/blog/travel-itinerary-template-2026` | 9900 | 0 | not ranking |
+| i-94 travel history | `NEW:/guides/how-to-find-your-travel-history` | 4400 | 0 | not ranking |
+| wanderlog vs tripit | `NEW:/compare/wanderlog-vs-tripit` | 4400 | 0 | not ranking |
+| flight time calculator | `NEW:/tools/flight-arrival-time-calculator` | 3600 | 0 | not ranking |
+| best travel apps for planning | `/blog/best-travel-apps-2025` | 2900 | 493 | 6.1 |
+| flight travel time estimator | `NEW:/tools/flight-arrival-time-calculator` | 2400 | 0 | not ranking |
+| google doc itinerary template | `NEW:/templates/travel-itinerary-google-docs` | 1900 | 0 | not ranking |
+| travel itinerary template google docs | `NEW:/templates/travel-itinerary-google-docs` | 1900 | 0 | not ranking |
+| tripit pro | `/blog/tripit-vs-tripcache-comparison-2025` | 1900 | 0 | not ranking |
+| itinerary template google docs | `NEW:/templates/travel-itinerary-google-docs` | 1600 | 0 | not ranking |
+| free itinerary template | `/blog/travel-itinerary-template-2026` | 1600 | 0 | not ranking |
+| vacation itinerary template | `/blog/travel-itinerary-template-2026` | 1600 | 0 | not ranking |
+| best travel apps | `/blog/best-travel-apps-2025` | 1300 | 0 | not ranking |
+| best travel planning apps | `/blog/best-travel-apps-2025` | 1300 | 23 | 50.7 |
+| flight time estimator | `NEW:/tools/flight-arrival-time-calculator` | 1300 | 0 | not ranking |
+| google docs itinerary template | `NEW:/templates/travel-itinerary-google-docs` | 1300 | 0 | not ranking |
+| travel itinerary template google sheets | `NEW:/templates/travel-itinerary-google-sheets` | 1300 | 0 | not ranking |
+| free travel itinerary template | `/blog/travel-itinerary-template-2026` | 1300 | 0 | not ranking |
+| tripcase | `/blog/tripcase-shutdown-what-now` | 1300 | 1054 | 11.5 |
+| best trip planning app | `/blog/best-travel-apps-2025` | 1000 | 5 | 52.4 |
+| hotel cancellation policy | `NEW:/guides/hotel-cancellation-policies` | 1000 | 0 | not ranking |
+| itinerary template free | `/blog/travel-itinerary-template-2026` | 1000 | 0 | not ranking |
+| google docs travel itinerary template | `NEW:/templates/travel-itinerary-google-docs` | 880 | 0 | not ranking |
+| best travel app | `/blog/best-travel-apps-2025` | 720 | 0 | not ranking |
+| google sheets travel itinerary template | `NEW:/templates/travel-itinerary-google-sheets` | 720 | 0 | not ranking |
+| itinerary template google sheets | `NEW:/templates/travel-itinerary-google-sheets` | 720 | 0 | not ranking |
+| travel itinerary template free | `/blog/travel-itinerary-template-2026` | 720 | 0 | not ranking |
 
 ## Changelog
 

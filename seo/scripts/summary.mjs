@@ -68,13 +68,13 @@ const lines = [
   "| --- | --- | ---: | ---: | ---: |",
   ...opportunities.queryPageOpportunities.filter((row) => row.position >= 4).slice(0, 15).map((row) => `| ${row.query} | \`${toPath(row.page)}\` | ${row.impressions} | ${pct(row.ctr)} | ${pos(row.position)} |`),
   "",
-  "## Target keywords (seo/keywords.csv, P1)",
+  "## Target keywords (seo/keywords.csv: the 30 largest P1 keywords)",
   "",
   ...(keywords.length
     ? [
         "| Keyword | Owner page | US volume | GSC impr | GSC pos |",
         "| --- | --- | ---: | ---: | ---: |",
-        ...keywords.filter((row) => row.priority === "P1").map((row) => {
+        ...keywords.filter((row) => row.priority === "P1").sort((a, b) => Number(b.volume_us || 0) - Number(a.volume_us || 0)).slice(0, 30).map((row) => {
           const gsc = queryByText.get(row.keyword.toLowerCase())
           return `| ${row.keyword} | \`${row.owner}\` | ${row.volume_us || "–"} | ${gsc?.impressions ?? 0} | ${gsc ? pos(gsc.position) : "not ranking"} |`
         }),
