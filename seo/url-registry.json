@@ -1,0 +1,256 @@
+{
+  "description": "Every URL trip-cache.com has ever published. check-site.mjs fails if a live URL vanishes from the sitemap without a permanent redirect, if a sitemap URL is unregistered, or if a new URL has a year in its slug. legacyYearSlug marks year-stamped URLs that already rank: keep them, never rename them just to change the year.",
+  "urls": [
+    {
+      "path": "/",
+      "status": "live"
+    },
+    {
+      "path": "/about",
+      "status": "live"
+    },
+    {
+      "path": "/account-delete",
+      "status": "live"
+    },
+    {
+      "path": "/alternatives",
+      "status": "live"
+    },
+    {
+      "path": "/alternatives/tripcase",
+      "status": "live"
+    },
+    {
+      "path": "/alternatives/tripit",
+      "status": "live"
+    },
+    {
+      "path": "/blog",
+      "status": "live"
+    },
+    {
+      "path": "/blog/ai-travel-organizer-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/ai-trip-planner-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/best-travel-apps-2025",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/best-travel-document-organizer-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/best-tripit-alternatives-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/business-travel-expense-reporting-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/business-travel-management-guide-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/email-to-trip-automation",
+      "status": "live"
+    },
+    {
+      "path": "/blog/flighty-vs-tripcache-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/google-travel-alternative-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/hotel-cancellation-reminder-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/organize-travel-confirmation-emails-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/privacy-and-security",
+      "status": "live"
+    },
+    {
+      "path": "/blog/rental-car-cancellation-reminder-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/travel-booking-organizer-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/travel-itinerary-template-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/trip-expense-management-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/trip-map-itinerary-planner-app-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/tripcase-alternative-2025",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/tripcase-shutdown-what-now",
+      "status": "live"
+    },
+    {
+      "path": "/blog/tripit-alternative-cancellation-reminders-documents-2026",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/blog/tripit-vs-tripcache-comparison-2025",
+      "status": "live",
+      "legacyYearSlug": true
+    },
+    {
+      "path": "/features",
+      "status": "live"
+    },
+    {
+      "path": "/features/business-travel-expenses",
+      "status": "live"
+    },
+    {
+      "path": "/features/cancellation-reminders",
+      "status": "live"
+    },
+    {
+      "path": "/features/email-to-itinerary",
+      "status": "live"
+    },
+    {
+      "path": "/pricing",
+      "status": "live"
+    },
+    {
+      "path": "/privacy",
+      "status": "live"
+    },
+    {
+      "path": "/terms",
+      "status": "live"
+    },
+    {
+      "path": "/tools",
+      "status": "live"
+    },
+    {
+      "path": "/tools/hotel-cancellation-deadline-calculator",
+      "status": "live"
+    },
+    {
+      "path": "/blog/best-travel-apps-2026",
+      "status": "redirected",
+      "redirectTo": "/blog/best-travel-apps-2025"
+    },
+    {
+      "path": "/blog/tripcase-shutdown-legacy-migration",
+      "status": "redirected",
+      "redirectTo": "/blog/tripcase-shutdown-what-now"
+    },
+    {
+      "path": "/blog/tripcase-alternative-2026",
+      "status": "redirected",
+      "redirectTo": "/blog/tripcase-alternative-2025"
+    },
+    {
+      "path": "/blog/tripit-vs-tripcache-comparison-2026",
+      "status": "redirected",
+      "redirectTo": "/blog/tripit-vs-tripcache-comparison-2025"
+    },
+    {
+      "path": "/blog/travel-document-organization-guide-2026",
+      "status": "redirected",
+      "redirectTo": "/blog/best-travel-document-organizer-app-2026"
+    },
+    {
+      "path": "/blog/travel-document-organization-guide-2025",
+      "status": "redirected",
+      "redirectTo": "/blog/best-travel-document-organizer-app-2026"
+    },
+    {
+      "path": "/blog/travel-expense-tracking",
+      "status": "redirected",
+      "redirectTo": "/blog/business-travel-expense-reporting-app-2026"
+    },
+    {
+      "path": "/blog/digital-nomad-organization",
+      "status": "redirected",
+      "redirectTo": "/blog/business-travel-management-guide-2026"
+    },
+    {
+      "path": "/blog/getting-started-with-tripcache",
+      "status": "redirected",
+      "redirectTo": "/features"
+    },
+    {
+      "path": "/blog/frequent-flyer-tips",
+      "status": "redirected",
+      "redirectTo": "/blog/organize-travel-confirmation-emails-2026"
+    },
+    {
+      "path": "/blog/how-to-automatically-track-flights-2025",
+      "status": "redirected",
+      "redirectTo": "/blog/organize-travel-confirmation-emails-2026"
+    },
+    {
+      "path": "/blog/tripit-alternatives",
+      "status": "redirected",
+      "redirectTo": "/blog/best-tripit-alternatives-2026"
+    },
+    {
+      "path": "/blog/best-tripit-alternatives",
+      "status": "redirected",
+      "redirectTo": "/blog/best-tripit-alternatives-2026"
+    },
+    {
+      "path": "/blog/ai-travel-organizer",
+      "status": "redirected",
+      "redirectTo": "/blog/ai-travel-organizer-app-2026"
+    },
+    {
+      "path": "/blog/email-to-itinerary-app",
+      "status": "redirected",
+      "redirectTo": "/blog/ai-travel-organizer-app-2026"
+    }
+  ]
+}

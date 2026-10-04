@@ -4,6 +4,9 @@ on:
   pull_request:
   push:
     branches: [main]
+    paths-ignore:
+      - "seo/data/**"
+      - "aso/*/data/**"
 
 permissions:
   contents: read
@@ -14,13 +17,18 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run growth:validate
+      - run: npm run seo:test
+      - name: SEO rules (changelog, keyword map, URL registry)
+        run: node seo/scripts/check-repo.mjs --base "${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || github.event.before }}"
       - run: npm run build
-      - run: npm run growth:health -- --base-url http://127.0.0.1:3000
+      - name: SEO site check (local build)
+        run: node seo/scripts/check-site.mjs --base-url http://127.0.0.1:3000 --no-write
         env:
           START_LOCAL_SITE: "1"

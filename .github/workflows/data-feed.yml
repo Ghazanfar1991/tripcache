@@ -1,0 +1,85 @@
+name: Data feed
+
+# Nightly: pulls Search Console / GA4 / store / revenue data, re-checks production SEO health,
+# scores changelog entries whose 28-day window has finished, and commits the sanitized results.
+on:
+  schedule:
+    - cron: "0 19 * * *"
+      timezone: "Australia/Sydney"
+  workflow_dispatch:
+
+concurrency:
+  group: data-feed
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+      GSC_SITE_URL: sc-domain:trip-cache.com
+      GA4_PROPERTY_ID: "514130776"
+      REVENUECAT_PROJECT_ID: "82e83e04"
+      REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_API_KEY }}
+      GOOGLE_PLAY_REPORT_BUCKET: ${{ vars.GOOGLE_PLAY_REPORT_BUCKET }}
+      GOOGLE_PLAY_PACKAGE_NAME: app.tripcache
+      FIREBASE_CRASHLYTICS_DATASET: firebase_crashlytics
+      APP_STORE_APP_ID: "6758403056"
+      APP_STORE_CONNECT_ISSUER_ID: ${{ vars.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_KEY_ID: ${{ vars.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_VENDOR_NUMBER: ${{ vars.APP_STORE_CONNECT_VENDOR_NUMBER }}
+      APP_STORE_CONNECT_PRIVATE_KEY_BASE64: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY_BASE64 }}
+      TZ: Australia/Sydney
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - id: google-auth
+        if: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '' && vars.GCP_SERVICE_ACCOUNT != '' }}
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          project_id: ${{ vars.GCP_PROJECT_ID }}
+          token_format: access_token
+          access_token_scopes: >-
+            https://www.googleapis.com/auth/cloud-platform,
+            https://www.googleapis.com/auth/analytics.readonly,
+            https://www.googleapis.com/auth/webmasters.readonly,
+            https://www.googleapis.com/auth/devstorage.read_only
+
+      - if: ${{ steps.google-auth.outcome == 'success' }}
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: SEO (landing page)
+        run: npm run seo:feed
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
+
+      - name: ASO (app stores)
+        if: ${{ always() }}
+        run: npm run aso:feed
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
+
+      - name: Commit snapshots
+        if: ${{ always() }}
+        run: |
+          git add seo/data seo/changelog.jsonl seo/CHANGELOG.md aso
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "tripcache-data-bot"
+          git config user.email "tripcache-data-bot@users.noreply.github.com"
+          git commit -m "data: nightly SEO and app-store snapshots"
+          git pull --rebase origin main
+          git push
