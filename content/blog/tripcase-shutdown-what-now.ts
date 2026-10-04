@@ -159,12 +159,14 @@ If your company booked travel through an agency, check whether it now uses a man
 
 ## Rebuilding your trips in TripCache
 
+Everything below is free on TripCache Basic except email import, which needs Pro.
+
 1. Download TripCache from the [App Store](https://apps.apple.com/app/id6758403056) or [Google Play](https://play.google.com/store/apps/details?id=app.tripcache).
-2. Create the upcoming trip, then add each booking by hand, scan a boarding pass, or forward the confirmation with Pro. See how [email-to-itinerary import](/features/email-to-itinerary) works.
-3. Review each imported draft before saving it.
-4. Add cancellation reminders to refundable hotels, cars, tours and tickets. The [cancellation reminders page](/features/cancellation-reminders) explains the timing options.
-5. Add the documents you need to the vault and turn on the PIN lock.
-6. Import past flights from a CSV file if you want your flight history back.
+2. Create the upcoming trip, then add each booking by hand or scan the barcode on a boarding pass to add the flight, both free. With Pro, you can forward the confirmation email instead; see how [email-to-itinerary import](/features/email-to-itinerary) works and review each imported draft before saving it.
+3. Rebuild your flight history with the free CSV import. TripCache gives you a sample CSV template: fill it in with past flights from your confirmation emails, airline accounts or any TripCase download you saved, then upload it. There's no direct import of TripCase files, so the template is the way in.
+4. Add cancellation reminders to refundable hotels, cars, tours and tickets. They're free, and the [cancellation reminders page](/features/cancellation-reminders) explains the timing options.
+5. Check-in reminders are free too: TripCache sends a heads-up 48 hours before each flight and another alert at 24 hours, with a shortcut that copies your booking reference and opens the airline's website.
+6. Add the documents you need to the vault and turn on the PIN lock.
 
 ## TripCase FAQ
 
@@ -180,9 +182,9 @@ No. The download window closed on June 30, 2025, and Sabre said it would delete 
 
 TripIt is the closest free match because its free plan includes email forwarding. TripCache's free Basic plan is the better fit if you want cancellation-deadline reminders, check-in reminders, a document vault and expense exports without paying.
 
-### Can I import TripCase trips into TripIt or Tripsy?
+### Can I import TripCase trips into TripIt, Tripsy or TripCache?
 
-Not anymore. TripIt suggested printing TripCase itineraries to PDF and emailing them in, and Tripsy built a direct importer, but both needed TripCase to still be running.
+Not directly anymore. TripIt suggested printing TripCase itineraries to PDF and emailing them in, and Tripsy built a direct importer, but both needed TripCase to still be running. TripCache has no TripCase importer either, but its free CSV import accepts past flights you copy into its sample template.
 
 ### Is TripCache the same as TripCase?
 
