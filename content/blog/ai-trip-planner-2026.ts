@@ -114,7 +114,7 @@ Ask whether the app requires full inbox access or lets you forward selected mess
 
 ### Match the Specialist to the Job
 
-Do not expect one app to lead every category. Flighty focuses on detailed flight status and airport intelligence, TripIt on established itinerary automation and travel-day tools, Wanderlog on collaborative planning and maps, and TripCache on post-booking organization.
+Do not expect one app to lead every category. Flighty focuses on detailed flight status and airport intelligence, TripIt on established itinerary automation and travel-day tools, Wanderlog on collaborative planning and maps, and TripCache on post-booking organization. The [Wanderlog vs TripIt comparison](/blog/wanderlog-vs-tripit) shows where the two most common choices overlap.
 
 ### Keep Primary Sources Close
 
