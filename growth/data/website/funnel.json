@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T14:07:36.323Z",
+  "generatedAt": "2026-10-04T13:38:43.737Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -25,7 +25,7 @@
       },
       "metrics": {
         "eventCount": 19,
-        "activeUsers": 13
+        "activeUsers": 14
       }
     },
     {
@@ -48,7 +48,7 @@
       },
       "metrics": {
         "sessions": 22,
-        "activeUsers": 14
+        "activeUsers": 13
       }
     },
     {
@@ -186,6 +186,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/ai-trip-planner-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/privacy-and-security",
         "platform": "web"
       },
@@ -252,7 +263,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(data not available)",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR58TI83U9DeAY1BgalijfIKS2fvaLf-3i4IiymdaAfqJ-oA6FL6SVYqETA19Q_aem_8i0GvBS3DBJPIYdQaobMMw",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
       },
       "metrics": {
@@ -297,17 +308,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/ai-trip-planner-2026",
         "platform": "web"
       },
       "metrics": {
@@ -691,6 +691,17 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "m.facebook.com / referral",
+        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR58TI83U9DeAY1BgalijfIKS2fvaLf-3i4IiymdaAfqJ-oA6FL6SVYqETA19Q_aem_8i0GvBS3DBJPIYdQaobMMw",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "yahoo / organic",
         "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
@@ -704,11 +715,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 127,
-    "landingSessions": 148,
-    "storeIntentUsers": 17,
+    "landingUsers": 128,
+    "landingSessions": 150,
+    "storeIntentUsers": 18,
     "storeIntentEvents": 26,
-    "rate": 0.13385826771653545,
+    "rate": 0.140625,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -722,7 +733,7 @@
         },
         "metrics": {
           "eventCount": 12,
-          "activeUsers": 6
+          "activeUsers": 7
         }
       },
       {

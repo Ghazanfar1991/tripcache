@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T14:07:43.122Z",
+  "generatedAt": "2026-10-04T13:38:50.650Z",
   "currency": "AUD",
   "reportingWindow": {
     "startDate": "2026-07-06",
-    "endDate": "2026-10-04"
+    "endDate": "2026-10-05"
   },
   "charts": {
     "mrr": {
@@ -1691,7 +1691,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1791072000,
+        "end_date": 1791158400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1713,7 +1713,7 @@
         "start_date": 1783296000,
         "summary": {
           "average": {
-            "MRR": 14.08
+            "MRR": 14.2
           }
         },
         "unsupported_params": null,
@@ -2257,12 +2257,18 @@
           },
           {
             "cohort": 1790985600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 25.8
           },
           {
             "cohort": 1791072000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 25.8
+          },
+          {
+            "cohort": 1791158400,
             "incomplete": true,
             "measure": 0,
             "value": 25.8
@@ -4017,7 +4023,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1791072000,
+        "end_date": 1791158400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -5674,19 +5680,19 @@
           },
           {
             "cohort": 1790985600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1790985600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1790985600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5704,6 +5710,24 @@
           },
           {
             "cohort": 1791072000,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7377,7 +7401,7 @@
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1791072000,
+        "end_date": 1791158400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7399,7 +7423,7 @@
         "start_date": 1783296000,
         "summary": {
           "average": {
-            "Actives": 1.4
+            "Actives": 1.41
           }
         },
         "unsupported_params": null,
@@ -7941,12 +7965,18 @@
           },
           {
             "cohort": 1790985600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 3
           },
           {
             "cohort": 1791072000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 3
+          },
+          {
+            "cohort": 1791158400,
             "incomplete": true,
             "measure": 0,
             "value": 3
@@ -9582,7 +9612,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1791072000,
+        "end_date": 1791158400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -10146,12 +10176,18 @@
           },
           {
             "cohort": 1790985600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1791072000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
             "incomplete": true,
             "measure": 0,
             "value": 0

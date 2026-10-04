@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-10-03T14:07:36.323Z",
+  "generatedAt": "2026-10-04T13:38:43.737Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,17 +10,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 453,
-        "activeUsers": 23
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "screen_view",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 381,
+        "eventCount": 421,
         "activeUsers": 23
       }
     },
@@ -36,12 +26,22 @@
     },
     {
       "dimensions": {
+        "eventName": "screen_view",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 335,
+        "activeUsers": 23
+      }
+    },
+    {
+      "dimensions": {
         "eventName": "page_view",
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 211,
-        "activeUsers": 121
+        "eventCount": 210,
+        "activeUsers": 123
       }
     },
     {
@@ -60,8 +60,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 141,
-        "activeUsers": 121
+        "eventCount": 143,
+        "activeUsers": 123
       }
     },
     {
@@ -70,8 +70,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 117,
-        "activeUsers": 117
+        "eventCount": 119,
+        "activeUsers": 119
       }
     },
     {
@@ -100,7 +100,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 34,
+        "eventCount": 33,
         "activeUsers": 23
       }
     },
@@ -140,8 +140,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 21,
-        "activeUsers": 21
+        "eventCount": 20,
+        "activeUsers": 20
       }
     },
     {
@@ -166,22 +166,22 @@
     },
     {
       "dimensions": {
+        "eventName": "app_remove",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 7,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
         "eventName": "play_store_click",
         "platform": "web"
       },
       "metrics": {
         "eventCount": 7,
         "activeUsers": 6
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_remove",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 6,
-        "activeUsers": 2
       }
     },
     {
@@ -285,7 +285,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 90,
+        "eventCount": 93,
         "activeUsers": 15
       }
     },
@@ -296,7 +296,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 52,
+        "eventCount": 53,
         "activeUsers": 8
       }
     },
@@ -307,19 +307,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 35,
-        "activeUsers": 9
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RNSScreen",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 33,
-        "activeUsers": 1
+        "eventCount": 37,
+        "activeUsers": 10
       }
     },
     {
@@ -362,8 +351,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 26,
-        "activeUsers": 9
+        "eventCount": 27,
+        "activeUsers": 10
       }
     },
     {
@@ -412,17 +401,6 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "UIViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 15,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
         "unifiedScreenName": "SignUp",
         "unifiedScreenClass": "SignUp",
         "platform": "iOS"
@@ -430,17 +408,6 @@
       "metrics": {
         "eventCount": 15,
         "activeUsers": 14
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RNSTabsScreenViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 13,
-        "activeUsers": 1
       }
     },
     {
@@ -467,17 +434,6 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTFabricModalHostViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 10,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
         "unifiedScreenName": "FlightDetail",
         "unifiedScreenClass": "FlightDetail",
         "platform": "iOS"
@@ -485,6 +441,28 @@
       "metrics": {
         "eventCount": 10,
         "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSScreen",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 9,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "RNSTabsScreenViewController",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 9,
+        "activeUsers": 1
       }
     },
     {
@@ -523,22 +501,22 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "RCTAlertController",
+        "unifiedScreenClass": "RCTFabricModalHostViewController",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 5,
+        "eventCount": 7,
         "activeUsers": 1
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "SFAuthenticationViewController",
+        "unifiedScreenClass": "UIViewController",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 5,
+        "eventCount": 4,
         "activeUsers": 1
       }
     },
@@ -578,17 +556,6 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "ICDocCamViewController",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "(not set)",
         "unifiedScreenClass": "MainActivity",
         "platform": "Android"
       },
@@ -600,7 +567,7 @@
     {
       "dimensions": {
         "unifiedScreenName": "(not set)",
-        "unifiedScreenClass": "VNDocumentCameraViewController_InProcess",
+        "unifiedScreenClass": "SFAuthenticationViewController",
         "platform": "iOS"
       },
       "metrics": {
@@ -616,7 +583,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "newUsers": 21,
+        "newUsers": 20,
         "activeUsers": 23
       }
     },
