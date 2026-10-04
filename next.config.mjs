@@ -44,7 +44,17 @@ const nextConfig = {
       },
       {
         source: '/blog/tripcase-alternative-2026',
-        destination: '/blog/tripcase-alternative-2025',
+        destination: '/blog/tripcase-shutdown-what-now',
+        permanent: true,
+      },
+      {
+        source: '/blog/tripcase-alternative-2025',
+        destination: '/blog/tripcase-shutdown-what-now',
+        permanent: true,
+      },
+      {
+        source: '/blog/tripit-alternative-cancellation-reminders-documents-2026',
+        destination: '/blog/best-tripit-alternatives-2026',
         permanent: true,
       },
       {

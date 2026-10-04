@@ -124,7 +124,8 @@
     },
     {
       "path": "/blog/tripcase-alternative-2025",
-      "status": "live",
+      "status": "redirected",
+      "redirectTo": "/blog/tripcase-shutdown-what-now",
       "legacyYearSlug": true
     },
     {
@@ -133,7 +134,8 @@
     },
     {
       "path": "/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "status": "live",
+      "status": "redirected",
+      "redirectTo": "/blog/best-tripit-alternatives-2026",
       "legacyYearSlug": true
     },
     {
@@ -190,7 +192,7 @@
     {
       "path": "/blog/tripcase-alternative-2026",
       "status": "redirected",
-      "redirectTo": "/blog/tripcase-alternative-2025"
+      "redirectTo": "/blog/tripcase-shutdown-what-now"
     },
     {
       "path": "/blog/tripit-vs-tripcache-comparison-2026",
