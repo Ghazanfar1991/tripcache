@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T17:27:24.976Z",
+  "generatedAt": "2026-10-05T16:42:58.014Z",
   "baseUrl": "https://trip-cache.com",
   "pages": [
     {
@@ -15,8 +15,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1330,
-      "inboundLinks": 38
+      "words": 1708,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/about",
@@ -29,10 +29,10 @@
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/about",
       "h1Count": 1,
-      "jsonLdCount": 3,
+      "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 406,
-      "inboundLinks": 38
+      "words": 634,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/pricing",
@@ -47,8 +47,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 829,
-      "inboundLinks": 38
+      "words": 1172,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/features",
@@ -61,10 +61,10 @@
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/features",
       "h1Count": 1,
-      "jsonLdCount": 3,
+      "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 226,
-      "inboundLinks": 1
+      "words": 725,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/alternatives",
@@ -79,8 +79,8 @@
       "h1Count": 1,
       "jsonLdCount": 3,
       "jsonLdErrors": [],
-      "words": 180,
-      "inboundLinks": 1
+      "words": 228,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/tools",
@@ -88,15 +88,15 @@
       "status": 200,
       "finalUrl": "https://trip-cache.com/tools",
       "title": "Free Travel Tools | TripCache",
-      "description": "Free TripCache tools for travelers, starting with a hotel cancellation deadline calculator for refundable bookings.",
+      "description": "Free TripCache travel tools: flight time, jet lag and layover calculators, a travel checklist generator and a hotel cancellation deadline calculator.",
       "canonical": "https://trip-cache.com/tools",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/tools",
       "h1Count": 1,
       "jsonLdCount": 3,
       "jsonLdErrors": [],
-      "words": 145,
-      "inboundLinks": 1
+      "words": 372,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
@@ -111,8 +111,72 @@
       "h1Count": 1,
       "jsonLdCount": 5,
       "jsonLdErrors": [],
-      "words": 392,
-      "inboundLinks": 38
+      "words": 449,
+      "inboundLinks": 45
+    },
+    {
+      "url": "https://trip-cache.com/tools/flight-arrival-time-calculator",
+      "path": "/tools/flight-arrival-time-calculator",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/tools/flight-arrival-time-calculator",
+      "title": "Flight Time Calculator: Local Arrival Time | TripCache",
+      "description": "Free flight time calculator. Enter two airports, the departure time and duration, or use the estimate, to see your local arrival time, date and time zone.",
+      "canonical": "https://trip-cache.com/tools/flight-arrival-time-calculator",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/tools/flight-arrival-time-calculator",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 798,
+      "inboundLinks": 45
+    },
+    {
+      "url": "https://trip-cache.com/tools/jet-lag-calculator",
+      "path": "/tools/jet-lag-calculator",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/tools/jet-lag-calculator",
+      "title": "Jet Lag Calculator: Recovery Time &amp; Sleep Plan | TripCache",
+      "description": "Free jet lag calculator. Enter your flight to see how long jet lag will last, then get a day-by-day sleep and light plan for before, during and after it.",
+      "canonical": "https://trip-cache.com/tools/jet-lag-calculator",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/tools/jet-lag-calculator",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 1895,
+      "inboundLinks": 45
+    },
+    {
+      "url": "https://trip-cache.com/tools/layover-calculator",
+      "path": "/tools/layover-calculator",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/tools/layover-calculator",
+      "title": "Layover Calculator: Is Your Connection Enough? | TripCache",
+      "description": "Is your layover long enough? Enter the connecting airport and both flight times to get your connection time, a verdict and a time-needed breakdown.",
+      "canonical": "https://trip-cache.com/tools/layover-calculator",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/tools/layover-calculator",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 1792,
+      "inboundLinks": 45
+    },
+    {
+      "url": "https://trip-cache.com/tools/travel-checklist",
+      "path": "/tools/travel-checklist",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/tools/travel-checklist",
+      "title": "Travel Checklist Generator: Documents &amp; Packing | TripCache",
+      "description": "Build a travel checklist in seconds: documents for international travel, money, tech, health and a packing list. Tick items off, then print or download it.",
+      "canonical": "https://trip-cache.com/tools/travel-checklist",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/tools/travel-checklist",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 1741,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/privacy",
@@ -127,8 +191,8 @@
       "h1Count": 1,
       "jsonLdCount": 3,
       "jsonLdErrors": [],
-      "words": 339,
-      "inboundLinks": 38
+      "words": 345,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/terms",
@@ -143,8 +207,8 @@
       "h1Count": 1,
       "jsonLdCount": 3,
       "jsonLdErrors": [],
-      "words": 365,
-      "inboundLinks": 38
+      "words": 373,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/account-delete",
@@ -159,7 +223,7 @@
       "h1Count": 1,
       "jsonLdCount": 3,
       "jsonLdErrors": [],
-      "words": 227,
+      "words": 225,
       "inboundLinks": 1
     },
     {
@@ -175,8 +239,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1153,
-      "inboundLinks": 38
+      "words": 1378,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/features/email-to-itinerary",
@@ -191,8 +255,8 @@
       "h1Count": 1,
       "jsonLdCount": 5,
       "jsonLdErrors": [],
-      "words": 576,
-      "inboundLinks": 38
+      "words": 558,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/features/cancellation-reminders",
@@ -207,8 +271,8 @@
       "h1Count": 1,
       "jsonLdCount": 5,
       "jsonLdErrors": [],
-      "words": 632,
-      "inboundLinks": 38
+      "words": 615,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/features/business-travel-expenses",
@@ -223,40 +287,120 @@
       "h1Count": 1,
       "jsonLdCount": 5,
       "jsonLdErrors": [],
-      "words": 564,
-      "inboundLinks": 38
+      "words": 548,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/alternatives/tripit",
       "path": "/alternatives/tripit",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives/tripit",
-      "title": "TripIt Alternative with Reminders and Documents | TripCache",
-      "description": "Compare TripCache with TripIt if you want travel email organization, cancellation deadline tracking, documents, and business travel expense workflows.",
+      "title": "Moving From TripIt? What Changes in TripCache | TripCache",
+      "description": "What changes when you move from TripIt to TripCache: free cancellation and check-in reminders, a PIN-locked document vault, and expense exports.",
       "canonical": "https://trip-cache.com/alternatives/tripit",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/alternatives/tripit",
       "h1Count": 1,
       "jsonLdCount": 5,
       "jsonLdErrors": [],
-      "words": 470,
-      "inboundLinks": 38
+      "words": 645,
+      "inboundLinks": 45
     },
     {
       "url": "https://trip-cache.com/alternatives/tripcase",
       "path": "/alternatives/tripcase",
       "status": 200,
       "finalUrl": "https://trip-cache.com/alternatives/tripcase",
-      "title": "TripCase Alternative for Travel Confirmations | TripCache",
-      "description": "Use TripCache as a TripCase alternative for organizing travel confirmations, trip timelines, cancellation reminders, documents, and expenses.",
+      "title": "Moving From TripCase? How TripCache Works | TripCache",
+      "description": "How TripCache covers the jobs TripCase did: free check-in and cancellation reminders, CSV import of past flights, a document vault, and Pro email import.",
       "canonical": "https://trip-cache.com/alternatives/tripcase",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/alternatives/tripcase",
       "h1Count": 1,
       "jsonLdCount": 5,
       "jsonLdErrors": [],
-      "words": 462,
-      "inboundLinks": 38
+      "words": 616,
+      "inboundLinks": 45
+    },
+    {
+      "url": "https://trip-cache.com/blog/hotel-cancellation-policies",
+      "path": "/blog/hotel-cancellation-policies",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/blog/hotel-cancellation-policies",
+      "title": "Hotel Cancellation Policy Guide: Fees, Deadlines, Brands",
+      "description": "Learn how hotel cancellation policies work: refundable vs prepaid rates, local-time deadlines, fees, booking sites, and Hilton, IHG, Disney and Vrbo rules.",
+      "canonical": "https://trip-cache.com/blog/hotel-cancellation-policies",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/hotel-cancellation-policies",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 4015,
+      "inboundLinks": 6
+    },
+    {
+      "url": "https://trip-cache.com/blog/how-to-find-your-travel-history",
+      "path": "/blog/how-to-find-your-travel-history",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/blog/how-to-find-your-travel-history",
+      "title": "I-94 Travel History: How to Find All Your Past Trips",
+      "description": "Get your I-94 travel history from CBP step by step, see what it leaves out, and find older trips with FOIA, passport stamps, emails and Google Maps.",
+      "canonical": "https://trip-cache.com/blog/how-to-find-your-travel-history",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/how-to-find-your-travel-history",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 3495,
+      "inboundLinks": 8
+    },
+    {
+      "url": "https://trip-cache.com/blog/wanderlog-vs-tripit",
+      "path": "/blog/wanderlog-vs-tripit",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/blog/wanderlog-vs-tripit",
+      "title": "Wanderlog vs TripIt: Features, Pricing and Which to Pick",
+      "description": "Wanderlog vs TripIt compared: free plans, Pro prices ($39.99 vs $49 a year), email import, offline use, flight alerts, and who should pick which app.",
+      "canonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/wanderlog-vs-tripit",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 3130,
+      "inboundLinks": 6
+    },
+    {
+      "url": "https://trip-cache.com/blog/flight-time-zones-arrival-date",
+      "path": "/blog/flight-time-zones-arrival-date",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/blog/flight-time-zones-arrival-date",
+      "title": "Flight Time Zones: Check Your Local Arrival Date",
+      "description": "Check flight time zones, +1 arrival dates, midnight departures, and calendar settings with a worked example and a practical itinerary checklist.",
+      "canonical": "https://trip-cache.com/blog/flight-time-zones-arrival-date",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/flight-time-zones-arrival-date",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 1774,
+      "inboundLinks": 6
+    },
+    {
+      "url": "https://trip-cache.com/blog/save-travel-documents-offline",
+      "path": "/blog/save-travel-documents-offline",
+      "status": 200,
+      "finalUrl": "https://trip-cache.com/blog/save-travel-documents-offline",
+      "title": "Save Travel Documents Offline: iPhone &amp; Android Guide",
+      "description": "Save travel documents offline on iPhone and Android, check which tickets need a wallet or app, and test your files in airplane mode before departure.",
+      "canonical": "https://trip-cache.com/blog/save-travel-documents-offline",
+      "robots": "index, follow",
+      "openGraphUrl": "https://trip-cache.com/blog/save-travel-documents-offline",
+      "h1Count": 1,
+      "jsonLdCount": 4,
+      "jsonLdErrors": [],
+      "words": 1910,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
@@ -264,15 +408,15 @@
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "title": "Best TripIt Alternatives in 2026: 6 Apps Compared",
-      "description": "Compare TripIt alternatives in 2026 by email import, travel documents, cancellation reminders, maps, flight tools, and expense workflows.",
+      "description": "Compare the best TripIt alternatives in 2026: TripCache, Tripsy, Wanderlog, Flighty and more, by email import, documents, reminders, expenses and price.",
       "canonical": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1660,
-      "inboundLinks": 10
+      "words": 2426,
+      "inboundLinks": 8
     },
     {
       "url": "https://trip-cache.com/blog/ai-travel-organizer-app-2026",
@@ -287,8 +431,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1439,
-      "inboundLinks": 10
+      "words": 1584,
+      "inboundLinks": 13
     },
     {
       "url": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
@@ -303,8 +447,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 837,
-      "inboundLinks": 9
+      "words": 892,
+      "inboundLinks": 11
     },
     {
       "url": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
@@ -319,8 +463,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 729,
-      "inboundLinks": 4
+      "words": 764,
+      "inboundLinks": 5
     },
     {
       "url": "https://trip-cache.com/blog/trip-expense-management-app-2026",
@@ -335,7 +479,7 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 758,
+      "words": 796,
       "inboundLinks": 7
     },
     {
@@ -351,8 +495,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 700,
-      "inboundLinks": 5
+      "words": 735,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/travel-booking-organizer-app-2026",
@@ -367,7 +511,7 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1021,
+      "words": 1056,
       "inboundLinks": 13
     },
     {
@@ -375,16 +519,16 @@
       "path": "/blog/best-travel-document-organizer-app-2026",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "title": "Best Travel Document Organizer App: What to Look For",
-      "description": "A guide to choosing a travel document organizer app for passports, visas, boarding passes, flight tickets, hotel confirmations, receipts, and trip documents.",
+      "title": "Travel Document App: Passports, Visas &amp; Tickets Offline",
+      "description": "What an app for travel documents should do: lock with Face ID, sort passports, visas and tickets, and work offline. Plus how TripCache&#x27;s free vault works.",
       "canonical": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 929,
-      "inboundLinks": 7
+      "words": 1766,
+      "inboundLinks": 10
     },
     {
       "url": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
@@ -399,8 +543,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 990,
-      "inboundLinks": 6
+      "words": 1025,
+      "inboundLinks": 10
     },
     {
       "url": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
@@ -415,24 +559,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 930,
+      "words": 978,
       "inboundLinks": 9
-    },
-    {
-      "url": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "path": "/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "status": 200,
-      "finalUrl": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "title": "TripIt Alternative for Reminders and Travel Documents",
-      "description": "Compare a TripIt alternative focused on cancellation reminders, trip-linked documents, booking emails, receipts, and travel expense exports.",
-      "canonical": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "robots": "index, follow",
-      "openGraphUrl": "https://trip-cache.com/blog/tripit-alternative-cancellation-reminders-documents-2026",
-      "h1Count": 1,
-      "jsonLdCount": 4,
-      "jsonLdErrors": [],
-      "words": 758,
-      "inboundLinks": 6
     },
     {
       "url": "https://trip-cache.com/blog/free-cancellation-reminder-travel-bookings-2026",
@@ -447,8 +575,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1252,
-      "inboundLinks": 11
+      "words": 1301,
+      "inboundLinks": 10
     },
     {
       "url": "https://trip-cache.com/blog/ai-trip-planner-2026",
@@ -463,8 +591,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1254,
-      "inboundLinks": 7
+      "words": 1409,
+      "inboundLinks": 6
     },
     {
       "url": "https://trip-cache.com/blog/business-travel-management-guide-2026",
@@ -479,7 +607,7 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1249,
+      "words": 1399,
       "inboundLinks": 4
     },
     {
@@ -495,8 +623,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1232,
-      "inboundLinks": 1
+      "words": 1504,
+      "inboundLinks": 2
     },
     {
       "url": "https://trip-cache.com/blog/flighty-vs-tripcache-2026",
@@ -511,7 +639,7 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1244,
+      "words": 1430,
       "inboundLinks": 7
     },
     {
@@ -527,72 +655,56 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1335,
+      "words": 1517,
       "inboundLinks": 2
-    },
-    {
-      "url": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "path": "/blog/tripcase-alternative-2025",
-      "status": 200,
-      "finalUrl": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "title": "Best TripCase Alternatives After the Shutdown (2026 Guide)",
-      "description": "Compare TripCase alternatives in 2026 for itinerary import, flight alerts, cancellation reminders, travel documents, maps, and expenses.",
-      "canonical": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "robots": "index, follow",
-      "openGraphUrl": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "h1Count": 1,
-      "jsonLdCount": 4,
-      "jsonLdErrors": [],
-      "words": 1432,
-      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "path": "/blog/tripcase-shutdown-what-now",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "title": "TripCase Is Gone: 2026 Replacement &amp; Recovery Guide",
-      "description": "TripCase shut down in 2025. Rebuild upcoming trips from confirmation emails and compare 2026 replacements for itineraries, planning, flights, and reminders.",
+      "title": "TripCase Shut Down: The 5 Best Replacement Apps in 2026",
+      "description": "TripCase shut down on April 1, 2025, and old trips can&#x27;t be recovered. Compare the best replacements: TripIt, Tripsy, TripCache, Flighty and Wanderlog.",
       "canonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1344,
-      "inboundLinks": 3
+      "words": 2825,
+      "inboundLinks": 4
     },
     {
       "url": "https://trip-cache.com/blog/best-travel-apps-2025",
       "path": "/blog/best-travel-apps-2025",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/best-travel-apps-2025",
-      "title": "Best Travel Apps for Planning in 2026: 4 Top Picks",
-      "description": "Compare TripCache, TripIt, Wanderlog, and Flighty for itinerary planning, booking imports, maps, flight alerts, cancellation reminders, and documents.",
+      "title": "Best Travel Apps for Planning in 2026: 8 Picks Compared",
+      "description": "Google Maps, Wanderlog, Skyscanner, Rome2Rio, TripIt, Tripsy, Flighty and TripCache: what each planning app does best, what&#x27;s free and what Pro costs.",
       "canonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/blog/best-travel-apps-2025",
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1442,
-      "inboundLinks": 4
+      "words": 1987,
+      "inboundLinks": 6
     },
     {
       "url": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "path": "/blog/tripit-vs-tripcache-comparison-2025",
       "status": 200,
       "finalUrl": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-      "title": "TripIt vs TripCache: Features and Pricing (2026)",
-      "description": "Compare TripIt and TripCache pricing, email itinerary tools, flight alerts, cancellation reminders, document organization, and expense exports in 2026.",
+      "title": "TripIt Pro Pricing 2026: $49/Year, Free vs Pro Compared",
+      "description": "TripIt Pro costs $49 a year after a 30-day free trial and adds flight alerts, check-in reminders and 25 documents per trip. Free vs Pro, plus TripCache.",
       "canonical": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "robots": "index, follow",
       "openGraphUrl": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1099,
-      "inboundLinks": 4
+      "words": 2148,
+      "inboundLinks": 6
     },
     {
       "url": "https://trip-cache.com/blog/email-to-trip-automation",
@@ -607,8 +719,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1242,
-      "inboundLinks": 9
+      "words": 1383,
+      "inboundLinks": 10
     },
     {
       "url": "https://trip-cache.com/blog/privacy-and-security",
@@ -623,8 +735,8 @@
       "h1Count": 1,
       "jsonLdCount": 4,
       "jsonLdErrors": [],
-      "words": 1023,
-      "inboundLinks": 3
+      "words": 1062,
+      "inboundLinks": 4
     }
   ]
 }
