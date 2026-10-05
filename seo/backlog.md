@@ -52,13 +52,15 @@ Targets come from `keywords.csv` (one owner page per cluster, with a `winnabilit
 - [x] **Instagram confirmed by the owner** and linked in the footer, on /about and in llms.txt — **done 2026-10-05**.
 - [ ] Add any real X, LinkedIn or YouTube profiles to the footer and `sameAs` when they exist.
 - [ ] **Re-check Tripsy's price** in older posts: "$39.99/yr in the US App Store" vs $59/yr on tripsy.app.
-- [ ] **Homepage meta description** still implies email import is free; make it say Pro or lead with the free features.
+- [x] **Homepage meta description** still implies email import is free; make it say Pro or lead with the free features. — **done 2026-10-06** (weekly PR; now leads with the free features and says email forwarding is Pro)
 - [ ] **Indexing gate (R6).** For each page in the nightly "not indexed" list, decide: improve, merge into its cluster owner (with a redirect), or remove.
-- [ ] **Stray URLs** with impressions (`/blog/best-travel-5d5d2b`, `/blog/best-travel-id-2025`): find the source; redirect if they resolve.
+- [x] **Stray URLs** with impressions (`/blog/best-travel-5d5d2b`, `/blog/best-travel-id-2025`): find the source; redirect if they resolve. — **checked 2026-10-06, no action:** neither was ever published (not in the registry, no source in the repo or its history), each had 1 impression on one day in September, and both correctly return 404. Re-open only if they gain impressions.
 
 ## Phase 2 — Win low-competition pages (2026-10-19 → 2026-11-30)
 
 New pages only while the indexing gate is green. One or two a week, each logged.
+
+_2026-10-06 review: the gate is red (12 of 39 sitemap URLs not indexed, 31%), and every page is inside a 28-day window from the 2026-10-05 changes until about 2026-11-02. Hold new pages and page edits until then; the next useful work is indexing requests and the R6 decisions above._
 
 - [x] **By 2026-11-07: `/guides/hotel-cancellation-policies`.** — **done 2026-10-05** (published early as /blog/hotel-cancellation-policies, PR #39)
   - "hotel cancellation policy" 1,000 (KD 17), plus "cancelation policy hotel" 480, "hotel cancellation fee" 260, "can you cancel hotel reservations" 210 (five Reddit/Quora slots).
