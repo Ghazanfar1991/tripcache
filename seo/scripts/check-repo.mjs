@@ -14,7 +14,7 @@ const failures = []
 const seoRelevant = [
   /^content\//,
   /^app\/(.*\/)?(page|layout)\.(tsx|ts|mdx)$/,
-  /^app\/(sitemap|robots)\.ts$/,
+  /^app\/(sitemap|robots)\.(ts|txt)$/,
   /^next\.config\.mjs$/,
   /^lib\/(seo-page-data|blog|markdown|markdown-inline)\.(ts|tsx|mjs)$/,
   /^components\/seo\//,

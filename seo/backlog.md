@@ -42,16 +42,15 @@ Targets come from `keywords.csv` (one owner page per cluster, with a `winnabilit
 - [x] **Travel document app terms** (positions 14–18): strengthen `/blog/best-travel-document-organizer-app-2026`. — **done 2026-10-05** (PR #36)
 - [ ] **Broken share link.** The app shares `trip-cache.com/shared/{token}`, which returns 404. Add a `/shared/[token]` page (noindex) or remove the link option from the app. This is an app-owner decision.
 - [x] **Delete the retired blog source files** that still contain overclaims ("unlimited cloud storage", "secure encryption", "works with ALL airlines"). The URLs already redirect, but the files remain in `content/blog/`. — **done 2026-10-05** (PR #34 deleted six)
-- [ ] **Search Console: request indexing** for the new and never-crawled pages (needs the owner's Chrome, or the Claude in Chrome extension connected):
-  - `/tools`, `/tools/hotel-cancellation-deadline-calculator` (both "unknown to Google")
-  - the four new tools
-  - the five new guides
-  - `/blog/travel-itinerary-template-2026` (owner of the 90,500-search cluster, not indexed)
-- [ ] **Cloudflare, owner only:**
-  - Turn off Scrape Shield → Email Address Obfuscation; crawlers see "[email protected]" instead of the support address.
-  - In AI Crawl Control / Bot Fight Mode, allow verified GPTBot, ClaudeBot, CCBot and Amazonbot. `robots.txt` invites them, but unverified tests got 403.
+- [x] **Search Console:** requested indexing for `/tools`, the hotel calculator and the three new guides, and resubmitted the sitemap (46 URLs) — **done 2026-10-05**. The daily quota ran out after 5 requests.
+- [ ] **Search Console, next days (about 5 a day):** `/tools/flight-arrival-time-calculator`, `/blog/travel-itinerary-template-2026`, `/tools/jet-lag-calculator`, `/tools/layover-calculator`, `/tools/travel-checklist`, `/blog/flight-time-zones-arrival-date`, `/blog/save-travel-documents-offline`, `/` and `/pricing` (both redesigned).
+- [x] **Cloudflare** — **done 2026-10-05**:
+  - The AI bot policy's Training category moved from Disallow to Allow, so GPTBot, ClaudeBot, Claude-User, CCBot, Meta and Amazonbot get 200 instead of 403.
+  - Email Address Obfuscation is off.
+  - The managed ruleset still blocks attack probes.
 - [ ] **Store price parity:** the App Store yearly price is $50.00, Google Play's is $49.99. Align them in App Store Connect, or keep stating both.
-- [ ] **Confirm instagram.com/tripcache is the official account** (it's in the site's Organization `sameAs`). Add any real X, LinkedIn or YouTube profiles.
+- [x] **Instagram confirmed by the owner** and linked in the footer, on /about and in llms.txt — **done 2026-10-05**.
+- [ ] Add any real X, LinkedIn or YouTube profiles to the footer and `sameAs` when they exist.
 - [ ] **Re-check Tripsy's price** in older posts: "$39.99/yr in the US App Store" vs $59/yr on tripsy.app.
 - [ ] **Homepage meta description** still implies email import is free; make it say Pro or lead with the free features.
 - [ ] **Indexing gate (R6).** For each page in the nightly "not indexed" list, decide: improve, merge into its cluster owner (with a redirect), or remove.

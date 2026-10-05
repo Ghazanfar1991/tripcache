@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Instagram } from "lucide-react"
 
 const COPYRIGHT_YEAR = 2026
 
@@ -8,6 +9,7 @@ const DEFAULT_DESCRIPTION =
 
 const IOS_STORE_URL = "https://apps.apple.com/app/id6758403056"
 const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=app.tripcache"
+const INSTAGRAM_URL = "https://www.instagram.com/tripcache/"
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
   {
@@ -76,6 +78,15 @@ export function Footer({ description = DEFAULT_DESCRIPTION }: { description?: st
                 <Image src="/play-store-v3.svg" alt="" width={540} height={160} unoptimized className="h-10 w-auto" />
               </a>
             </div>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="me noopener noreferrer"
+              className="tc-press mt-5 inline-flex items-center gap-2 rounded-full text-[14px] text-tc-mute transition-colors hover:text-tc-ink"
+            >
+              <Instagram className="size-[18px]" aria-hidden="true" />
+              Follow @tripcache on Instagram
+            </a>
           </div>
 
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">

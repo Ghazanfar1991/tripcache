@@ -70,3 +70,8 @@ Read this before changing anything that search engines see. Every rule exists be
 **R13. Every store button is measured.** Use the tracked store-link components (`data-store-placement`), including the `/download` route.
 - *Why:* `/download` clicks weren't counted until 2026-08-27, so store intent was under-reported.
 - *Manual.*
+
+**R14. Crawler access must agree everywhere.** `app/robots.txt`, `public/llms.txt` and Cloudflare (AI Crawl Control → Security, and Security → Settings → "Configure AI bot policies") must give the same answer about which bots may read the site.
+- *Why:* in October 2026, `robots.txt` explicitly invited GPTBot, ClaudeBot and Claude-User, but Cloudflare's AI bot policy (Training: Disallow) returned 403 to them. That was about 12,000 refused AI-crawler requests in 7 days. The support email was also hidden from crawlers by Cloudflare's email obfuscation.
+- *Manual:* after any Cloudflare or robots change, check AI Crawl Control → Metrics → Status codes. 403s should only come from attack probes (`.env`, `/actuator`), not from named crawlers.
+
