@@ -224,6 +224,10 @@ export default function AboutPage() {
                     Questions? Email{" "}
                     <a className={mailLinkClass} href="mailto:support@trip-cache.com">
                       support@trip-cache.com
+                    </a>{" "}
+                    or follow{" "}
+                    <a className={mailLinkClass} href="https://www.instagram.com/tripcache/" target="_blank" rel="me noopener noreferrer">
+                      @tripcache on Instagram
                     </a>
                     .
                   </span>

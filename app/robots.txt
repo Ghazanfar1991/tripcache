@@ -1,0 +1,47 @@
+# TripCache welcomes search engines, AI assistants and AI crawlers.
+# Content signals (https://contentsignals.org): search indexing, AI answers and AI training are all allowed.
+# Crawlers not named below (for example xAI/Grok or news aggregators) follow the * group, which allows everything except private paths.
+
+User-Agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+Allow: /api/airports
+Disallow: /api/
+Disallow: /admin/
+
+User-Agent: Googlebot
+User-Agent: Googlebot-News
+User-Agent: Googlebot-Image
+User-Agent: GoogleOther
+User-Agent: Google-Extended
+User-Agent: Google-CloudVertexBot
+User-Agent: Bingbot
+User-Agent: DuckDuckBot
+User-Agent: DuckAssistBot
+User-Agent: Applebot
+User-Agent: Applebot-Extended
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: GPTBot
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Claude-User
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: Amazonbot
+User-Agent: Meta-ExternalAgent
+User-Agent: Meta-ExternalFetcher
+User-Agent: FacebookBot
+User-Agent: CCBot
+User-Agent: MistralAI-User
+User-Agent: cohere-ai
+User-Agent: YouBot
+User-Agent: Bytespider
+User-Agent: PetalBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+Allow: /api/airports
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://trip-cache.com/sitemap.xml
