@@ -1,6 +1,6 @@
-# Google Play summary — 2026-10-06
+# Google Play summary — 2026-10-07
 
-Generated 2026-10-05T16:43:35.303Z by `npm run aso:feed`.
+Generated 2026-10-06T14:42:14.754Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
@@ -11,7 +11,7 @@ Generated 2026-10-05T16:43:35.303Z by `npm run aso:feed`.
 ## Quality (store ranking factor)
 
 - Crash-free users: 89.29% (dashboard baseline 2026-07-19–2026-08-17)
-- Automated 30 days: 34 fatal/ANR events on 5 installs across 2 issues
+- Automated 30 days: 13 fatal/ANR events on 3 installs across 2 issues
 
 ## In-app funnel (GA4)
 
@@ -31,12 +31,12 @@ Generated 2026-10-05T16:43:35.303Z by `npm run aso:feed`.
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$25 · active subscriptions 3 · active trials 0 · new customers (28d) 22
+- MRR A$25 · active subscriptions 3 · active trials 0 · new customers (28d) 23
 
 ## Data sources
 
 - app-store-connect: **SUCCESS** (fresh) — 21 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-04.
-- google-play: **SUCCESS** (stale) — Play export fetched successfully, but the latest reported date (2026-09-25) is 10 days old; treat install totals as stale.
+- google-play: **SUCCESS** (stale) — Play export fetched successfully, but the latest reported date (2026-09-25) is 11 days old; treat install totals as stale.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.

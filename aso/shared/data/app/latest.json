@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-10-05T16:43:34.582Z",
+  "generatedAt": "2026-10-06T14:42:14.106Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,8 +10,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 383,
-        "activeUsers": 22
+        "eventCount": 385,
+        "activeUsers": 23
       }
     },
     {
@@ -30,8 +30,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 280,
-        "activeUsers": 22
+        "eventCount": 281,
+        "activeUsers": 23
       }
     },
     {
@@ -60,8 +60,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 32,
-        "activeUsers": 22
+        "eventCount": 33,
+        "activeUsers": 23
       }
     },
     {
@@ -100,8 +100,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 2,
-        "activeUsers": 2
+        "eventCount": 3,
+        "activeUsers": 3
       }
     },
     {
@@ -110,8 +110,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 2,
-        "activeUsers": 2
+        "eventCount": 3,
+        "activeUsers": 3
       }
     },
     {
@@ -226,6 +226,17 @@
     },
     {
       "dimensions": {
+        "unifiedScreenName": "Onboarding",
+        "unifiedScreenClass": "Onboarding",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 21,
+        "activeUsers": 21
+      }
+    },
+    {
+      "dimensions": {
         "unifiedScreenName": "Drafts",
         "unifiedScreenClass": "Drafts",
         "platform": "iOS"
@@ -233,17 +244,6 @@
       "metrics": {
         "eventCount": 20,
         "activeUsers": 9
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Onboarding",
-        "unifiedScreenClass": "Onboarding",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 20,
-        "activeUsers": 20
       }
     },
     {
@@ -464,7 +464,7 @@
       },
       "metrics": {
         "newUsers": 20,
-        "activeUsers": 22
+        "activeUsers": 23
       }
     },
     {
