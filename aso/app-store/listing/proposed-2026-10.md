@@ -53,6 +53,16 @@ Apple combines words across the name, subtitle and keyword field, and a storefro
 
 Same subtitle, keywords and promotional text as en-US.
 
+### App preview video (iPhone 6.9"/6.7", all four locales)
+
+`videos/final/TripCache-appstore-preview-886x1920-28s.mp4`: 886×1920, 30 fps, H.264 + AAC stereo, 28.5 s. Uploaded 2026-10-06 to the 1.4.1 draft (en-AU, en-US, en-CA, en-GB); poster frame at 0:03. It's a cut of the HyperFrames promo (`videos/tripcache-promo-appstore/`, a copy of `videos/tripcache-promo/`) with:
+- frames one-trip → email import → free cancellation → live flight → expenses → end card;
+- each frame's content scaled to 82% so nothing is cut at 886 wide (backgrounds stay full-bleed);
+- the original music cut per frame on downbeats, plus each frame's own sound effects;
+- end card without store badges, and "Free to start." instead of "iPhone & Android" (Apple doesn't allow naming other platforms).
+
+Review risk: guideline 2.3.4 says previews should use screen captures of the app. This cut shows real app UI, but inside phone mockups and alongside an email mock, so App Review could ask for a plain screen-recording version. If that happens, record the same flow in the simulator (needs a fresh dev build) and keep this file for social and the website.
+
 ### Description (all English locales)
 
 The description isn't used for App Store search ranking, but it drives conversion and Google indexes it. Every claim below was checked against `seo/research/app-feature-inventory.md` (Basic vs Pro per the code).
