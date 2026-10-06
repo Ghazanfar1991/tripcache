@@ -1,6 +1,12 @@
 # Google Play optimization (Android)
 
-Not started yet; data is collecting nightly.
+Listing draft saved in Play Console 2026-10-06 (not sent for review); data is collecting nightly.
+
+**Listing and research (2026-10-06)**
+- [`listing/proposed-2026-10.md`](listing/proposed-2026-10.md): live vs draft listing, baseline, and trust fixes still open.
+- [`research/keyword-data-2026-10-06.csv`](research/keyword-data-2026-10-06.csv): Play autocomplete demand and US/AU/GB rankings for 100 keywords.
+- [`research/play-competitors-and-rules-2026-10-06.md`](research/play-competitors-and-rules-2026-10-06.md): 15 competitor listings and the current Play metadata/graphics rules.
+- [`screenshots/`](screenshots/README.md): generator for the 8 frameless phone screenshots and the feature graphic.
 
 **Data**
 - `data/installs.json`: user installs/uninstalls per day and country (Play Console bulk reports; 3–7 day lag).
