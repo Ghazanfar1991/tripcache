@@ -9,7 +9,7 @@ Two separate projects, one per store, plus the app data they share. Landing-page
 | `shared/data/` | Data covering both platforms: RevenueCat revenue (`revenue/`), Crashlytics quality and GA4 in-app usage (`app/`) | — |
 | `scripts/` | Nightly collectors (`npm run aso:feed`, run by `.github/workflows/data-feed.yml`) | — |
 
-Both store projects are set up for data only. Strategy, rules, keyword maps and changelogs get built per store in their own sessions, using `../seo/` as the template.
+The App Store project has its first research pass (`app-store/research/`, `app-store/listing/`, `app-store/keywords.csv`); Google Play has research only. Rules and changelogs still get built per store, using `../seo/` as the template.
 
 It lives in this repo because the nightly collectors use credentials stored on this GitHub repository: keyless Google sign-in, plus the App Store Connect and RevenueCat keys. To move a store project to its own repo, copy its folder plus `scripts/` and `shared/`. Then re-add those secrets and grant the new repo access in the Google Cloud workload-identity settings.
 
