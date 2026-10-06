@@ -70,12 +70,13 @@ Terms: https://trip-cache.com/terms
 - **Phone screenshots:** 8 new frameless 1080×1920 frames (`../screenshots/out/play-*.jpg`). They replace the 8 old ones, which used the old UI, AI scenery, "ultimate" and captions over 20%.
 - **Feature graphic:** new 1024×500 (`../screenshots/out/play-feature-graphic.jpg`).
 - **Tablet screenshots:** the old 7" and 10" sets (iPad-sized canvases with the typos "Securly" and "conneted ot") were removed from the draft. Add real Android tablet captures later if tablet layouts ship.
+- **Promo video:** https://www.youtube.com/watch?v=Lh2qlNdYeTE, added to the draft 2026-10-06. It's the 52.5 s horizontal 16:9 voiceover cut (`videos/final/TripCache-promo-horizontal-16x9-voiceover.mp4`), uploaded **unlisted** to the Ghazanfar Naseer channel (@drghazanfarnaseer). YouTube's checks found no issues; the channel isn't monetized, so no ads run (Play requires ads off). The cut shows iPhone mockups and the iOS Live Activity, which is acceptable for a promo but not Android-specific. An Android-framed recut would be stronger later.
 - **Icon:** unchanged.
 
 ## Not changed, but worth fixing (trust and conversion)
 
 1. **Data safety says "Data isn't encrypted — your data isn't transferred over a secure connection."** That's a strong warning on a document-vault app. Check with the app owner whether all traffic (Supabase, flight API, analytics SDKs) uses HTTPS. If it does, correct the form. Don't change it without that evidence.
-2. **Store contact email is a personal Gmail** (saraebay11@gmail.com). Use a branded address you monitor, e.g. support@trip-cache.com.
+2. ~~Store contact email was a personal Gmail.~~ **Done 2026-10-06:** changed to support@trip-cache.com (Store settings → Store listing contact details; app-specific, published immediately).
 3. **Tags:** Air travel, Productivity, Travel & local, Travel guide. "Travel guide" doesn't describe TripCache, so consider removing it. Tag changes are under Store settings and may apply without the listing review, so I left them alone.
 4. **No ratings yet.** The rating-prompt change recommended for iOS applies to Android too (Play's in-app review API).
-5. **Promo video:** none. The promo-video project in `videos/tripcache-promo/` could supply one (YouTube, ads off, real UI in the first 10 s).
+5. **App Store preview video:** the promo can't be used on iOS. Apple previews must be 15–30 s, 886×1920 (6.9") and real screen recordings only. Recording one needs a fresh simulator dev build (the installed dev client lacks the ExpoSecureStore native module), so it's waiting on that.
