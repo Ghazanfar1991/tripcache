@@ -154,7 +154,7 @@ Apple has read the text in screenshot captions since mid-2025. It counts for les
 | 9 | Travel Budget in 150+ Currencies | Budget and expenses |
 | 10 | Export Travel History for Visas | Export: visa/immigration summary (CSV/PDF) |
 
-For en-AU and en-GB, use "Organised" in frame 1 and "Holiday" where it reads naturally. Redo the iPad set with the same story. No app preview video exists. Add a 15–20-second one later; it autoplays in search results.
+For en-AU and en-GB, use "Organised" in frame 1 and "Holiday" where it reads naturally. TripCache is iPhone-only (builds report `IPHONE` only), so the App Store shows the iPhone set on iPad; no iPad set is needed unless the app adds an iPad layout. No app preview video exists. Add a 15–20-second one later; it autoplays in search results.
 
 ## 6. Other App Store features to use
 

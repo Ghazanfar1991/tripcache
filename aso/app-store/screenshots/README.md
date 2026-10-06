@@ -12,4 +12,8 @@ python3 aso/app-store/screenshots/build.py            # both locales
 python3 aso/app-store/screenshots/sheet.py en-US      # contact sheet in build/
 ```
 
+**Layout:** headline and subtext sit at the top, and the phone follows directly underneath (`STAGE_GAP`, 64px) and runs off the bottom edge. Text and screen are the focus; the destination photo shows behind the headline and at the sides. Headline 128px Fraunces, subtext 58px Inter.
+
+**No iPad set.** TripCache ships iPhone-only (`TARGETED_DEVICE_FAMILY = 1`; App Store Connect lists builds 78–82 as `IPHONE` only). On iPad the App Store shows these iPhone screenshots, and the app runs in an iPhone-sized window. iPad screenshots would only apply if the app turns on tablet support with an iPad layout; then capture real iPad screens and add a 2064×2752 set.
+
 To change a caption or the order, edit `FRAMES` in `build.py`. Apple allows up to 10 per device size; keep the first three strongest because they show in search results.

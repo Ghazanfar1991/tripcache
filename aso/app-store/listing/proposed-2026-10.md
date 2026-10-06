@@ -1,6 +1,6 @@
 # App Store listing: live (2026-10-06) vs proposed
 
-**Status 2026-10-06:** entered in App Store Connect as draft version **1.4.1** (Prepare for Submission, not submitted). The draft holds every field below for en-AU, en-US, en-GB and en-CA, plus the new 10-frame iPhone screenshot set (`../screenshots/out/`). The live 1.4.0 listing is unchanged until 1.4.1 is submitted with a build and approved. Still to do before submitting: What's New text, a build, and new iPad screenshots (the iPad set is still the old one).
+**Status 2026-10-06:** entered in App Store Connect as draft version **1.4.1** (Prepare for Submission, not submitted). The draft holds every field below for en-AU, en-US, en-GB and en-CA, plus the new 10-frame iPhone screenshot set (`../screenshots/out/`). The live 1.4.0 listing is unchanged until 1.4.1 is submitted with a build and approved. Still to do before submitting: What's New text and a build. The app is iPhone-only (builds 78–82 report `IPHONE` only), so iPad screenshots aren't shown to anyone. The old iPad set left over in the draft can be deleted.
 
 Character counts were checked against Apple's limits: name 30, subtitle 30, keywords 100 bytes, promotional text 170, description 4,000. Reasoning and evidence: [`../research/app-store-aso-2026-10-06.md`](../research/app-store-aso-2026-10-06.md).
 

@@ -18,15 +18,15 @@ ROOT = Path(__file__).resolve().parent
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 W, H = 1290, 2796
 FRAMED_W, FRAMED_H = 1322, 2720
-PHONE_W = 1040
-PHONE_TOP = 1060  # phone bleeds off the bottom; the destination shows between headline and phone
+PHONE_W = 1100
+STAGE_GAP = 64  # space between the subtext and the top of the phone
 K = PHONE_W / FRAMED_W  # framed-screen px -> canvas px
 
-# (crop box in framed-screen px, callout width on canvas, canvas top)
+# (screen, crop box in framed-screen px, callout width, top relative to the phone top or None = pop out in place)
 CALLOUTS = {
-    "reminder": ("set-reminders", (116, 1779, 1206, 2186), 1140, 2050),
-    "inbox": ("smart-inbox", (106, 827, 1215, 1290), 1120, 1120),
-    "visa": ("export-visa", (140, 1120, 1180, 1312), 1150, None),
+    "reminder": ("set-reminders", (116, 1779, 1206, 2186), 1160, 1010),
+    "inbox": ("smart-inbox", (106, 827, 1215, 1290), 1150, 40),
+    "visa": ("export-visa", (140, 1120, 1180, 1312), 1170, None),
 }
 
 # Background per frame: blue-hour destination photos generated with ChatGPT (gpt-image via Codex),
@@ -84,21 +84,23 @@ body{position:relative;font-family:Inter,system-ui,sans-serif;color:#fff;backgro
   radial-gradient(120%% 80%% at 50%% 60%%, transparent 55%%, rgba(10,4,30,.45) 100%%)}
 .grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%%3E%%3Cfilter id='n'%%3E%%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%%3E%%3C/filter%%3E%%3Crect width='300' height='300' filter='url(%%23n)'/%%3E%%3C/svg%%3E")}
-.glow{position:absolute;left:50%%;top:1700px;width:1300px;height:1500px;transform:translateX(-50%%);
+.glow{position:absolute;left:50%%;top:1300px;width:1300px;height:1500px;transform:translateX(-50%%);
   background:radial-gradient(closest-side, rgba(139,92,246,.45), transparent);filter:blur(30px)}
-.copy{position:absolute;left:0;right:0;top:150px;text-align:center;padding:0 90px}
+.wrap{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;align-items:center}
+.copy{text-align:center;padding:0 80px}
+.stage{position:relative;width:%(PW)dpx;margin-top:%(GAP)dpx}
 .pill{display:inline-block;font:800 30px/1 Inter;letter-spacing:.14em;color:#2a1170;background:#fec84b;
   padding:14px 26px 13px;border-radius:999px;margin-bottom:34px}
-h1{font-family:Fraunces,serif;font-weight:600;font-size:122px;line-height:1.0;letter-spacing:-.025em;
+h1{font-family:Fraunces,serif;font-weight:600;font-size:128px;line-height:1.0;letter-spacing:-.025em;
   font-variation-settings:"SOFT" 50;text-wrap:balance}
 h1 em{font-style:normal;color:#fec84b}
 h1,p{text-shadow:0 4px 30px rgba(10,4,30,.55)}
-p{margin:34px auto 0;max-width:1000px;font:500 46px/1.32 Inter;color:rgba(255,255,255,.84);text-wrap:balance}
-.phone{position:absolute;left:%(PX)dpx;top:%(PT)dpx;width:%(PW)dpx;filter:drop-shadow(0 50px 70px rgba(12,2,40,.55))}
+p{margin:30px auto 0;max-width:1100px;font:500 58px/1.28 Inter;color:rgba(255,255,255,.92);letter-spacing:-.005em;text-wrap:balance}
+.phone{display:block;width:%(PW)dpx;filter:drop-shadow(0 50px 70px rgba(12,2,40,.55))}
 .callout{position:absolute;border-radius:46px;background-repeat:no-repeat;overflow:hidden;
   box-shadow:0 40px 90px rgba(12,2,40,.55),0 0 0 3px rgba(255,255,255,.65)}
 /* Lock-screen Live Activity, rebuilt from live-activity-spec.md at x3 */
-.la{position:absolute;left:90px;width:1110px;top:2210px;border-radius:84px;padding:30px 54px 36px;isolation:isolate;
+.la{position:absolute;left:-5px;width:1110px;top:1180px;border-radius:84px;padding:30px 54px 36px;isolation:isolate;
   background:linear-gradient(135deg, #080809, #0e0e0f);
   box-shadow:0 0 0 2px rgba(255,255,255,.09),0 40px 90px rgba(0,0,0,.6);
   font-family:-apple-system,"SF Pro Text",Inter,sans-serif;font-variant-numeric:tabular-nums}
@@ -145,8 +147,8 @@ def callout_html(key):
     s = width / (x1 - x0)
     h = round((y1 - y0) * s)
     if top is None:  # pop out of the same spot on the phone
-        top = round(PHONE_TOP + (y0 + y1) / 2 * K - h / 2)
-    left = (W - width) // 2
+        top = round((y0 + y1) / 2 * K - h / 2)
+    left = (PHONE_W - width) // 2
     return (f'<div class="callout" style="left:{left}px;top:{top}px;width:{width}px;height:{h}px;'
             f"background-image:url('../assets/screens/{screen}.png');"
             f'background-size:{round(FRAMED_W * s)}px {round(FRAMED_H * s)}px;'
@@ -156,15 +158,14 @@ def callout_html(key):
 def page(frame, locale):
     name, screen, pro, h_us, h_au, sub, extra = frame
     head = h_au if (locale in ("en-AU", "en-GB") and h_au) else h_us
-    css = CSS % {"W": W, "H": H, "PX": (W - PHONE_W) // 2, "PT": PHONE_TOP, "PW": PHONE_W}
+    css = CSS % {"W": W, "H": H, "PW": PHONE_W, "GAP": STAGE_GAP}
     extra_html = LIVE if extra == "live" else (callout_html(extra) if extra else "")
     pill = '<div class="pill">PRO</div><br>' if pro else ""
-    copy_top = "110px" if pro else "150px"
-    return f"""<!doctype html><html><head><meta charset="utf-8"><style>{css}.copy{{top:{copy_top}}}</style></head>
+    copy_top = "96px" if pro else "140px"
+    return f"""<!doctype html><html><head><meta charset="utf-8"><style>{css}.wrap{{top:{copy_top}}}</style></head>
 <body><div class="bg" style="background-image:url('../assets/backgrounds/{BACKGROUNDS[name]}.webp')"></div><div class="shade"></div><div class="grain"></div><div class="glow"></div>
-<div class="copy">{pill}<h1>{head}</h1><p>{sub}</p></div>
-<img class="phone" src="../assets/screens/{screen}.png" alt="">
-{extra_html}
+<div class="wrap"><div class="copy">{pill}<h1>{head}</h1><p>{sub}</p></div>
+<div class="stage"><img class="phone" src="../assets/screens/{screen}.png" alt="">{extra_html}</div></div>
 </body></html>"""
 
 
