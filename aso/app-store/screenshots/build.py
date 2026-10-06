@@ -4,7 +4,7 @@ Every frame is a real TripCache screen (assets/screens, captured from the iOS si
 latest UI and framed by videos/tripcache-promo/scripts/frame_phone.py) plus a caption set in the
 brand fonts. Callouts are enlarged crops of those same screens, and the Live Activity card is
 rebuilt from videos/tripcache-promo/live-activity-spec.md (taken from WidgetLiveActivity.swift).
-No generated imagery, so every word on screen is real UI or our own caption.
+Only the scenery behind the phone is generated (assets/backgrounds); every word on screen is real UI or our own caption.
 
 Usage: python3 aso/app-store/screenshots/build.py [en-US|en-AU ...]
 Output: aso/app-store/screenshots/out/<locale>/NN-<name>.jpg
@@ -19,14 +19,22 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 W, H = 1290, 2796
 FRAMED_W, FRAMED_H = 1322, 2720
 PHONE_W = 1040
-PHONE_TOP = 720
+PHONE_TOP = 1060  # phone bleeds off the bottom; the destination shows between headline and phone
 K = PHONE_W / FRAMED_W  # framed-screen px -> canvas px
 
 # (crop box in framed-screen px, callout width on canvas, canvas top)
 CALLOUTS = {
-    "reminder": ("set-reminders", (116, 1779, 1206, 2186), 1140, None),
-    "inbox": ("smart-inbox", (106, 827, 1215, 1290), 1120, 700),
+    "reminder": ("set-reminders", (116, 1779, 1206, 2186), 1140, 2050),
+    "inbox": ("smart-inbox", (106, 827, 1215, 1290), 1120, 1120),
     "visa": ("export-visa", (140, 1120, 1180, 1312), 1150, None),
+}
+
+# Background per frame: blue-hour destination photos generated with ChatGPT (gpt-image via Codex),
+# matched to the trip on each screen and to the app's own trip-cover art direction.
+BACKGROUNDS = {
+    "itinerary": "01-sydney", "free-cancellation": "02-newyork", "email-import": "03-singapore",
+    "flight-tracker": "04-flight", "timeline": "05-melbourne-tram", "documents": "06-documents",
+    "budget": "07-southbank", "map": "08-coast", "visa-export": "09-london", "history": "10-bangkok",
 }
 
 FRAMES = [
@@ -34,7 +42,7 @@ FRAMES = [
     ("itinerary", "home", False,
      "Your travel itinerary, <em>organized</em>", "Your travel itinerary, <em>organised</em>",
      "Flights, hotels, cars and plans for every trip you've booked.", None),
-    ("free-cancellation", "set-reminders", False,
+    ("free-cancellation", "hotel-detail-cancellation", False,
      "Never miss a <em>free cancellation</em>", None,
      "Get reminded 7 days, 2 days, 1 day or on the day. Free.", "reminder"),
     ("email-import", "draft-review", True,
@@ -67,26 +75,30 @@ CSS = """
 @import url('../assets/fonts.css');
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:%(W)dpx;height:%(H)dpx;overflow:hidden}
-body{position:relative;font-family:Inter,system-ui,sans-serif;color:#fff;
-  background:
-    radial-gradient(900px 700px at 8%% 4%%, rgba(139,92,246,.55), transparent 70%%),
-    radial-gradient(1000px 900px at 105%% 92%%, rgba(236,72,153,.38), transparent 70%%),
-    radial-gradient(800px 600px at -10%% 70%%, rgba(97,43,211,.55), transparent 70%%),
-    linear-gradient(172deg, #1d0b52 0%%, #2a1170 38%%, #4a1eac 78%%, #5a26c6 100%%);}
-.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.6px, transparent 1.7px);
-  background-size:38px 38px;mask-image:linear-gradient(180deg,#000 0%%,transparent 34%%)}
+body{position:relative;font-family:Inter,system-ui,sans-serif;color:#fff;background:#160a3d}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center top}
+/* readability: deep indigo at the top for the headline, darker edges, brand-violet tint */
+.shade{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(14,6,42,.85) 0%%, rgba(20,8,60,.55) 14%%, rgba(28,10,80,.12) 24%%, rgba(28,10,80,0) 32%%),
+  linear-gradient(0deg, rgba(10,4,30,.55) 0%%, rgba(10,4,30,0) 22%%),
+  radial-gradient(120%% 80%% at 50%% 60%%, transparent 55%%, rgba(10,4,30,.45) 100%%)}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%%3E%%3Cfilter id='n'%%3E%%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%%3E%%3C/filter%%3E%%3Crect width='300' height='300' filter='url(%%23n)'/%%3E%%3C/svg%%3E")}
+.glow{position:absolute;left:50%%;top:1700px;width:1300px;height:1500px;transform:translateX(-50%%);
+  background:radial-gradient(closest-side, rgba(139,92,246,.45), transparent);filter:blur(30px)}
 .copy{position:absolute;left:0;right:0;top:150px;text-align:center;padding:0 90px}
 .pill{display:inline-block;font:800 30px/1 Inter;letter-spacing:.14em;color:#2a1170;background:#fec84b;
   padding:14px 26px 13px;border-radius:999px;margin-bottom:34px}
 h1{font-family:Fraunces,serif;font-weight:600;font-size:122px;line-height:1.0;letter-spacing:-.025em;
   font-variation-settings:"SOFT" 50;text-wrap:balance}
 h1 em{font-style:normal;color:#fec84b}
+h1,p{text-shadow:0 4px 30px rgba(10,4,30,.55)}
 p{margin:34px auto 0;max-width:1000px;font:500 46px/1.32 Inter;color:rgba(255,255,255,.84);text-wrap:balance}
 .phone{position:absolute;left:%(PX)dpx;top:%(PT)dpx;width:%(PW)dpx;filter:drop-shadow(0 50px 70px rgba(12,2,40,.55))}
 .callout{position:absolute;border-radius:46px;background-repeat:no-repeat;overflow:hidden;
   box-shadow:0 40px 90px rgba(12,2,40,.55),0 0 0 3px rgba(255,255,255,.65)}
 /* Lock-screen Live Activity, rebuilt from live-activity-spec.md at x3 */
-.la{position:absolute;left:90px;width:1110px;top:2160px;border-radius:84px;padding:30px 54px 36px;isolation:isolate;
+.la{position:absolute;left:90px;width:1110px;top:2210px;border-radius:84px;padding:30px 54px 36px;isolation:isolate;
   background:linear-gradient(135deg, #080809, #0e0e0f);
   box-shadow:0 0 0 2px rgba(255,255,255,.09),0 40px 90px rgba(0,0,0,.6);
   font-family:-apple-system,"SF Pro Text",Inter,sans-serif;font-variant-numeric:tabular-nums}
@@ -149,7 +161,7 @@ def page(frame, locale):
     pill = '<div class="pill">PRO</div><br>' if pro else ""
     copy_top = "110px" if pro else "150px"
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{css}.copy{{top:{copy_top}}}</style></head>
-<body><div class="dots"></div>
+<body><div class="bg" style="background-image:url('../assets/backgrounds/{BACKGROUNDS[name]}.webp')"></div><div class="shade"></div><div class="grain"></div><div class="glow"></div>
 <div class="copy">{pill}<h1>{head}</h1><p>{sub}</p></div>
 <img class="phone" src="../assets/screens/{screen}.png" alt="">
 {extra_html}

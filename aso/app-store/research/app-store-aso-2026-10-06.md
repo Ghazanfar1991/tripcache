@@ -137,7 +137,7 @@ Apple has read the text in screenshot captions since mid-2025. It counts for les
 - Frame 4 shows the PIN pad rather than the document wallet itself.
 - Current size is 1290×2796 (6.7"). Apple now leads with 6.9" (1320×2868); 6.7" assets are still accepted and scaled.
 
-**Built 2026-10-06** (`../screenshots/`, uploaded to the 1.4.1 draft). Real iOS captures of the latest UI from the promo-video session, framed and captioned in code (no generated imagery). Final order: itinerary, free cancellation, email import (Pro), Live Activity flight tracker (Pro), trip timeline, documents, budget, map, visa export, history. Boarding-pass scan and check-in reminders weren't captured yet; add them on the next capture pass.
+**Built 2026-10-06** (`../screenshots/`, uploaded to the 1.4.1 draft). Real iOS captures of the latest UI from the promo-video session, framed and captioned in code. Revised the same day with blue-hour destination backgrounds generated in ChatGPT (category research: Tripsy leads with full-bleed destination photography, Flighty with dark cinematic frames, Wanderlog/TripIt with bleeding phones). Final order: itinerary (Sydney), free cancellation (New York), email import (Pro), Live Activity flight tracker (Pro), trip timeline, documents, budget, map, visa export, history. Boarding-pass scan and check-in reminders weren't captured yet; add them on the next capture pass.
 
 **Original proposal** (order and captions):
 
