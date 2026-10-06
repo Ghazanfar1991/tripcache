@@ -1,6 +1,6 @@
 # Google Play listing: live vs draft (2026-10-06)
 
-**Status:** saved as a **store-listing draft** in Play Console (Default listing, en-US) on 2026-10-06. Nothing has been sent for review. To publish, open the listing, check it, click **Save** (this moves the changes to Publishing overview), then **Send for review**. Evidence: [`../research/keyword-data-2026-10-06.csv`](../research/keyword-data-2026-10-06.csv) and [`../research/play-competitors-and-rules-2026-10-06.md`](../research/play-competitors-and-rules-2026-10-06.md).
+**Status (2026-10-07):** sent to Google for review together with release **1.4.1 (61)** on the production track (full rollout once approved). Advertising ID declaration: "Yes – Analytics" (still true for build 60 on internal testing) with "Turn off release errors" ticked, because 1.4.1 removes the AD_ID permission on purpose (`app.json` blockedPermissions). Listing assets labeled as AI-created: feature graphic, 8 screenshots (ChatGPT backgrounds), promo video (HeyGen voice). Earlier status: saved as a **store-listing draft** in Play Console (Default listing, en-US) on 2026-10-06. Nothing has been sent for review. To publish, open the listing, check it, click **Save** (this moves the changes to Publishing overview), then **Send for review**. Evidence: [`../research/keyword-data-2026-10-06.csv`](../research/keyword-data-2026-10-06.csv) and [`../research/play-competitors-and-rules-2026-10-06.md`](../research/play-competitors-and-rules-2026-10-06.md).
 
 ## Baseline (Play Console, last 28 days to 2026-10-02)
 

@@ -9,3 +9,11 @@
 - [ ] 28 days after 1.4.1 goes live: compare search impressions per day with the Sep 7–Oct 1 baseline (28.4/day)
 - [ ] Later: localized captions if more languages are added; product page optimization test of the static vs video header
 - [ ] Later: custom product pages for flight-tracking and travel-documents searches
+
+## Google Play
+
+- [x] 2026-10-07 Android 1.4.1 (61) built on EAS, uploaded in Play Console, sent for review with the new listing (9 changes)
+- [ ] After it's live: update `app_runtime_config` (android: latest_version 1.4.1, latest_build 61)
+- [ ] Once build 60 is off internal testing, change the advertising ID declaration to "No" (1.4.1+ block AD_ID)
+- [ ] Set up a Google Play service account in EAS so `eas submit -p android` works next time
+- [ ] Fix the Data safety answer "Data isn't encrypted" after confirming all traffic is HTTPS
