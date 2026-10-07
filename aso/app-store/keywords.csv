@@ -1,0 +1,35 @@
+keyword,priority,role,covered_by_us,covered_by_au_uk,evidence,notes
+itinerary planner,P1,head (keep),name,name,"Autocomplete after 2-4 chars in US/AU/UK/CA; top-10 median ratings 14.3k US, 713 AU",In the name since 2026-09-07; impressions per day rose ~3.3x after that release
+travel planner,P1,head,subtitle travel + name planner,subtitle travel + name planner,"Autocomplete after 7 chars, #2-4; top-10 median 61.5k US, 5.3k AU; web 8.1k US",'travel' was missing from every indexed field before this proposal
+trip planner,P1,head,subtitle trip + name planner,en-GB subtitle trip + name planner,"Autocomplete after 4-6 chars; top-10 median 35.7k US, 5.3k AU; web 33.1k US",Too competitive to win soon; keep for relevance
+travel itinerary,P1,head,subtitle travel + name itinerary,subtitle travel + name itinerary,"Autocomplete after 8 chars, #1-9; top-10 median 5.2k; web 5.4k US / 1.3k AU",
+trip itinerary,P1,winnable,subtitle trip + name itinerary,en-GB subtitle trip + name itinerary,"Only head term where TripCache already ranks (#12 US); autocomplete after 6 chars",Protect this one
+trip organizer,P1,winnable,subtitle,keywords organizer + en-GB subtitle trip,"US autocomplete #1 after 'trip o'; top-10 median 5.6k US, 709 AU",
+travel organizer,P1,winnable,subtitle,keywords organizer + subtitle travel,"US autocomplete after 8 chars; top-10 median 5.2k US, 994 AU",
+trip organiser,P2,winnable,keywords? (not needed in US),subtitle organiser + en-GB subtitle trip,"Ranks #34 US today; top-10 median 480 US, 709 AU",UK/AU spelling
+holiday planner,P2,AU/UK head,—,subtitle holiday + name planner,top-10 median 5.6k US / 5.3k AU,AU/UK wording for vacation
+holiday itinerary,P2,AU/UK long tail,—,subtitle holiday + name itinerary,Appears in AU autocomplete for 'itin',
+vacation planner,P2,US head,keywords vacation + name planner,—,Ranks #34 US today,US wording for holiday
+itinerary maker,P2,winnable,keywords maker + name itinerary,keywords maker,"US autocomplete #6 after 4 chars; top-10 median 627 AU; web 2.4k US",
+itinerary app,P3,long tail,name itinerary,name itinerary,US autocomplete after 11 chars; AU after 3 chars,Apple treats 'app' as implied; no field needed
+flight tracker,P3,support,keywords flight+tracker,en-GB subtitle flights + keywords tracker,"Top-10 median 93k US; 9 of top 10 have it in the title",Not winnable now; keep words for combinations
+trip tracker,P3,long tail,subtitle trip + keywords tracker,keywords tracker,top-10 median 9.7k US / 424 AU,
+travel documents,P2,feature,subtitle travel + keywords documents,subtitle travel + keywords documents,top-10 median 45.6k US (TripIt/CheckMyTrip rank),
+travel document wallet,P2,feature,keywords wallet+documents,keywords wallet+documents,"Top-10 median 2.9k US; #1 result has 0 ratings",Low competition
+passport wallet,P3,feature,keywords passport+wallet,keywords passport+wallet,top-10 median 2.9k US / 363 AU,
+boarding pass wallet,P3,feature,—,en-GB keywords boarding+pass + keywords wallet,top-10 median 287 US / 44 AU,Low competition
+travel budget,P2,feature,keywords budget,keywords budget,"Top-10 median 919 US / 926 AU; 7 of top 10 have it in the title",Winnable with ratings
+trip budget,P2,feature,keywords budget,keywords budget,top-10 median 2k US / 188 AU,
+travel expense tracker,P3,feature,keywords expense+tracker,keywords expense+tracker,top-10 median 6.4k US / 926 AU (Expensify/Concur),
+booking manager,P3,feature,keywords booking+manager,keywords booking+manager,top-10 median 231 US / 46 AU (mostly salon/rental apps),Low competition but mixed intent
+travel reminder,P3,feature,keywords reminder,keywords reminder,top-10 median 2.6k US / 540 AU,
+check in reminder,P3,feature,keywords reminder,keywords reminder,top-10 median 1.5k US,
+travel history,P3,feature,—,en-GB keywords history,top-10 median 5k US / 424 AU,Visa travel-history export
+cancellation reminder,P3,differentiator,screenshot caption + description,en-GB keywords cancellation + keywords reminder,Results are subscription-cancel apps; low search intent for travel,Sell it in screenshots rather than spend US keyword space
+tripit,SKIP,competitor brand,—,—,top-10 median 61.5k,Apple guideline 2.3.7: no competitor names in metadata
+tripcase,SKIP,competitor brand,—,—,Discontinued app; web 1.3k US,Was in the 1.0 keyword field; do not reuse. Cover via website article instead
+wanderlog,SKIP,competitor brand,—,—,,
+flighty,SKIP,competitor brand,—,—,,
+travel app,SKIP,head,—,—,top-10 median 497k US,Unwinnable; Expedia/Booking
+hotel booking,SKIP,wrong intent,—,—,top-10 median 1.1M US,TripCache does not sell bookings
+email import,SKIP,wrong intent,—,—,Results are mail clients,

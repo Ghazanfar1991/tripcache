@@ -11,13 +11,18 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion"
-import { BellRing, Check, FileText, Mail, Paperclip, Receipt, Send, Sparkles } from "lucide-react"
+import { Armchair, BellRing, Check, FileText, Mail, Paperclip, Plane, Receipt, Send, Sparkles, Ticket } from "lucide-react"
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore, type RefObject } from "react"
 import { Bloom, CategoryGlyph } from "./category"
 import { CATEGORY, EMAILS, STEPS } from "./data"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 const SHARE = 1 / STEPS.length
+/** Scroll length of each step, in viewports. Review gets the most so the draft card fills slowly enough to read. */
+const STEP_SCROLL = [1, 3.5, 1, 1]
+const SCROLL_TOTAL = STEP_SCROLL.reduce((sum, value) => sum + value, 0)
+/** Cumulative raw-scroll position at which each step starts (0 … 1). */
+const BREAKS = STEP_SCROLL.reduce<number[]>((acc, value, index) => [...acc, acc[index] + value / SCROLL_TOTAL], [0])
 const ADDRESS = "you@in.trip-cache.com"
 
 type Point = { x: number; y: number }
@@ -49,7 +54,7 @@ const TOKENS = [
   { id: "dep", text: "13:25", label: "Departs", value: "13:25" },
   { id: "arr", text: "18:05", label: "Arrives", value: "18:05" },
   { id: "ref", text: "DB4YDR", label: "Booking ref.", value: "DB4YDR" },
-  { id: "class", text: "Economy", label: "Class", value: "Economy" },
+  { id: "seat", text: "14C", label: "Seat", value: "14C" },
 ] as const
 
 const MOBILE_QUERY = "(max-width: 767px)"
@@ -177,7 +182,7 @@ function EmailCard({
         </p>
         <p className={`mt-3 text-tc-ink-2 ${layout.compact ? "text-[12.5px] leading-[1.75]" : "text-[15px] leading-[1.95]"}`}>
           Thank you for booking. Your flight {tok(0)} from {tok(1)} to {tok(2)} departs on {tok(3)} at {tok(4)} and lands at{" "}
-          {tok(5)}. Booking reference {tok(6)}. Class: {tok(7)}.
+          {tok(5)}. Booking reference {tok(6)}. Seat: {tok(7)}.
         </p>
         {layout.compact ? null : (
           <div aria-hidden="true" className="mt-5 flex flex-col gap-2">
@@ -369,64 +374,78 @@ function DraftPass({
     return () => window.cancelAnimationFrame(frame)
   }, [progress, update])
 
+  const has = (id: (typeof TOKENS)[number]["id"]) => TOKENS.findIndex((token) => token.id === id) < filled
+  /** A value slot: a grey placeholder until the scanned value lands, then the value itself. */
+  const slot = (id: (typeof TOKENS)[number]["id"], value: string, className: string, empty: string) => (
+    <span ref={(element) => register(`field-${id}`, element)} className={`inline-block transition-colors duration-300 ${className}`}>
+      {has(id) ? value : <span className={`inline-block rounded-md bg-[#e6e8f0] align-middle ${empty}`} />}
+    </span>
+  )
+  const code = compact ? "text-[30px]" : "text-[40px]"
+  const time = compact ? "text-[13px]" : "text-[15px]"
+
   return (
     <div className="flex h-full items-center">
       <div className="relative w-full">
-        <div className="relative overflow-hidden rounded-[22px] bg-white shadow-[0_40px_80px_-36px_rgba(0,0,0,0.9)]">
-          <div className={`flex items-center justify-between bg-tc-violet text-white ${compact ? "px-4 py-2.5" : "px-5 py-3.5"}`}>
-            <span className="flex items-center gap-2 text-[14px] font-semibold">
-              <Sparkles className="size-4" aria-hidden="true" />
-              Review draft
+        {/* The app's Drafts-tab card: airline, extraction confidence, route, times, seat and booking reference. */}
+        <div
+          className={`relative overflow-hidden rounded-[28px] border border-[#e6e8f0] bg-[linear-gradient(135deg,#ffffff_45%,#eeeefe)] shadow-[0_40px_80px_-36px_rgba(0,0,0,0.9)] ${compact ? "p-4" : "p-6"}`}
+        >
+          <div className="flex items-center gap-3">
+            <span className={`grid shrink-0 place-items-center rounded-[16px] border-2 border-tc-violet bg-white text-tc-violet ${compact ? "size-11" : "size-14"}`}>
+              <Plane className={compact ? "size-5" : "size-6"} aria-hidden="true" />
             </span>
-            <span className="text-[12px] text-white/75">From your email</span>
-          </div>
-          <div className={`flex items-center justify-between ${compact ? "px-4 pt-3" : "px-5 pt-4"}`}>
-            <div>
-              <p className={`font-tc-display font-semibold text-tc-ink ${compact ? "text-[26px]" : "text-[38px]"}`}>BKK</p>
-              <p className="text-[11.5px] text-tc-mute">Bangkok</p>
+            <div className="min-w-0 flex-1">
+              <p className={`truncate font-bold text-tc-ink ${compact ? "text-[15px]" : "text-[19px]"}`}>Philippine Airlines</p>
+              <p className="truncate text-[12.5px] text-tc-mute">
+                {slot("flight", "PR 731", "", "h-3 w-12")} · 1 flight
+              </p>
             </div>
-            <div className="flex flex-1 items-center gap-2 px-4">
-              <span className="h-px flex-1 border-t border-dashed border-tc-flight/50" />
-              <CategoryGlyph category="flight" className="size-8" />
-              <span className="h-px flex-1 border-t border-dashed border-tc-flight/50" />
+            <span className="shrink-0 rounded-full bg-[linear-gradient(135deg,#6f72f5,#4f46e5)] px-3 py-1.5 text-[12px] font-semibold text-white">
+              {filled >= TOKENS.length ? "94% extracted" : "Extracting…"}
+            </span>
+          </div>
+
+          <div className={`flex items-start justify-between ${compact ? "mt-4" : "mt-6"}`}>
+            <div>
+              <p className={`font-bold leading-none text-tc-ink ${code}`}>{slot("from", "BKK", "", compact ? "h-7 w-16" : "h-9 w-20")}</p>
+              <p className={`mt-1.5 font-medium text-tc-mute ${time}`}>{slot("dep", "13:25", "", "h-3.5 w-10")}</p>
+              <p className={`text-tc-mute ${time}`}>{slot("date", "Wed, 13 May", "", "h-3.5 w-20")}</p>
+            </div>
+            <div className="flex flex-1 flex-col items-center px-3 pt-3">
+              <div className="flex w-full items-center gap-2">
+                <span className="h-px flex-1 bg-tc-line" />
+                <Plane className={`shrink-0 text-tc-ink ${compact ? "size-5" : "size-6"}`} fill="currentColor" aria-hidden="true" />
+                <span className="h-px flex-1 bg-tc-line" />
+              </div>
+              <p className="mt-1.5 text-[12px] text-tc-mute">Nonstop</p>
             </div>
             <div className="text-right">
-              <p className={`font-tc-display font-semibold text-tc-ink ${compact ? "text-[26px]" : "text-[38px]"}`}>MNL</p>
-              <p className="text-[11.5px] text-tc-mute">Manila</p>
+              <p className={`font-bold leading-none text-tc-ink ${code}`}>{slot("to", "MNL", "", compact ? "h-7 w-16" : "h-9 w-20")}</p>
+              <p className={`mt-1.5 font-medium text-tc-mute ${time}`}>{slot("arr", "18:05", "", "h-3.5 w-10")}</p>
+              <p className={`text-tc-mute ${time}`}>{has("date") ? "Wed, 13 May" : <span className="inline-block h-3.5 w-20 rounded-md bg-[#e6e8f0] align-middle" />}</p>
             </div>
           </div>
-          {/* Perforation */}
-          <div aria-hidden="true" className="relative my-3 h-4">
-            <span className="absolute -left-2 top-0 size-4 rounded-full bg-[#140f2a]" />
-            <span className="absolute -right-2 top-0 size-4 rounded-full bg-[#140f2a]" />
-            <span className="absolute inset-x-4 top-1/2 border-t border-dashed border-tc-line" />
+
+          <div className={`flex flex-wrap items-center gap-2 ${compact ? "mt-4" : "mt-5"}`}>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e6e8f0] bg-white px-3 py-1.5 text-[13px] font-semibold text-tc-ink">
+              <Ticket className="size-3.5 text-tc-mute" aria-hidden="true" />
+              PNR {slot("ref", "DB4YDR", "", "h-3 w-14")}
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e6e8f0] bg-white px-3 py-1.5 text-[13px] font-semibold text-tc-ink">
+              <Armchair className="size-3.5 text-tc-mute" aria-hidden="true" />
+              Seat {slot("seat", "14C", "", "h-3 w-6")}
+            </span>
           </div>
-          <dl className={`grid grid-cols-4 gap-2 ${compact ? "px-3 pb-3" : "px-5 pb-5"}`}>
-            {TOKENS.map((token, index) => {
-              const done = index < filled
-              return (
-                <div
-                  key={token.id}
-                  ref={(element) => register(`field-${token.id}`, element)}
-                  className={`rounded-[10px] border px-2 py-1.5 transition-colors duration-300 ${
-                    done ? "border-[#c7d2fe] bg-[#eef2ff]" : "border-dashed border-tc-line bg-tc-mist"
-                  }`}
-                >
-                  <dt className={`truncate text-tc-mute ${compact ? "text-[9.5px]" : "text-[11px]"}`}>{token.label}</dt>
-                  <dd className={`h-5 truncate font-semibold text-tc-ink ${compact ? "text-[11px]" : "text-[13.5px]"}`}>{done ? token.value : ""}</dd>
-                </div>
-              )
-            })}
-          </dl>
-          <div className={compact ? "px-3 pb-3" : "px-5 pb-5"}>
-            <div
-              className={`flex h-11 items-center justify-center gap-2 rounded-[12px] text-[14px] font-semibold text-white transition-colors duration-500 ${
-                saved ? "bg-tc-hotel" : "bg-tc-violet"
-              }`}
-            >
-              {saved ? <Check className="size-4" strokeWidth={3} aria-hidden="true" /> : null}
-              {saved ? "Saved to Trip to Manila" : `Approve & save · ${filled}/${TOKENS.length} fields`}
-            </div>
+          <p className="mt-3 truncate text-[12.5px] text-tc-mute">Fwd: Your e-ticket receipt · PR 731</p>
+
+          <div
+            className={`flex h-11 items-center justify-center gap-2 rounded-[14px] text-[14px] font-semibold text-white transition-colors duration-500 ${compact ? "mt-3" : "mt-4"} ${
+              saved ? "bg-tc-hotel" : "bg-tc-violet"
+            }`}
+          >
+            {saved ? <Check className="size-4" strokeWidth={3} aria-hidden="true" /> : null}
+            {saved ? "Saved to Trip to Manila" : `Review draft · ${filled}/${TOKENS.length} fields`}
           </div>
         </div>
         <AnimatePresence>
@@ -507,7 +526,7 @@ function KeptWithTrip({ compact, reduce }: { compact: boolean; reduce: boolean }
   const width = compact ? 340 : 560
   const height = compact ? 322 : 540
   const phoneW = compact ? 140 : 238
-  const phoneH = phoneW / 0.463
+  const phoneH = phoneW / 0.486
   const chipW = compact ? 172 : 250
   const phoneX = width - phoneW
   const phoneY = (height - phoneH) / 2
@@ -541,7 +560,7 @@ function KeptWithTrip({ compact, reduce }: { compact: boolean; reduce: boolean }
         animate={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{ duration: 0.8, ease: EASE }}
       >
-        <Image src="/app-screenshot-trip-detail.webp" alt="TripCache Trip to Manila itinerary in the app" fill sizes="260px" className="object-contain" />
+        <Image src="/app-ui-trip-detail.webp" alt="TripCache Trip to Melbourne itinerary with flight, hotel and activity counts" fill sizes="260px" className="object-contain" />
       </motion.div>
       {ATTACHMENTS.map((item, index) => {
         const Icon = item.icon
@@ -637,7 +656,9 @@ export function InboxToTrip() {
   const [stage, setStage] = useState(0)
   const [geo, setGeo] = useState<Geometry>({ tokens: [], fields: [], send: null, icon: null })
 
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"] })
+  const { scrollYProgress: rawScroll } = useScroll({ target: sectionRef, offset: ["start start", "end end"] })
+  // Remap raw scroll so every step still owns a quarter of the animation, but not a quarter of the scrolling.
+  const scrollYProgress = useTransform(rawScroll, BREAKS, STEPS.map((_, index) => index * SHARE).concat(1))
   const smooth = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.5 })
   const progress = reduce ? scrollYProgress : smooth
   const railFill = useTransform(scrollYProgress, [0, 1], [0, 1])
@@ -683,7 +704,7 @@ export function InboxToTrip() {
       if (!section) return
       const top = section.getBoundingClientRect().top + window.scrollY
       const distance = section.offsetHeight - window.innerHeight
-      window.scrollTo({ top: top + distance * ((index + 0.95) / STEPS.length), behavior: reduce ? "auto" : "smooth" })
+      window.scrollTo({ top: top + distance * (BREAKS[index] + (BREAKS[index + 1] - BREAKS[index]) * 0.95), behavior: reduce ? "auto" : "smooth" })
     },
     [reduce],
   )
@@ -697,7 +718,7 @@ export function InboxToTrip() {
       id="how-it-works"
       aria-labelledby="how-title"
       className="relative bg-tc-canvas"
-      style={{ height: `calc(100svh + ${STEPS.length} * 100svh)` }}
+      style={{ height: `calc(100svh + ${SCROLL_TOTAL} * 100svh)` }}
     >
       <h2 id="how-title" className="sr-only">
         How TripCache turns booking emails into one trip

@@ -11,22 +11,22 @@ const DESTINATIONS = ["Lisbon", "Manila", "Kyoto", "Sydney", "Bangkok", "Melbour
 
 const PHONES = [
   {
-    src: "/app-screenshot-documents.webp",
-    alt: "TripCache Documents screen with a passport and flight ticket",
+    src: "/app-ui-docs-pin.webp",
+    alt: "TripCache document vault asking for a 4-digit PIN",
     className: "left-[4%] z-0 sm:left-[14%]",
     rotate: [-14, -7],
     y: [220, 70],
   },
   {
-    src: "/app-screenshot-home.webp",
-    alt: "TripCache home screen with the next flight and an upcoming trip to Sydney",
+    src: "/app-ui-home.webp",
+    alt: "TripCache home screen with the next flight and upcoming trips",
     className: "left-1/2 z-10 -ml-[clamp(105px,15vw,150px)]",
     rotate: [0, 0],
     y: [160, 0],
   },
   {
-    src: "/app-screen-trip-map.webp",
-    alt: "TripCache trip map with flight and hotel stops pinned across the Philippines",
+    src: "/app-ui-trip-map.webp",
+    alt: "TripCache trip map with flight and hotel stops pinned across Australia",
     className: "right-[4%] z-0 sm:right-[14%]",
     rotate: [14, 7],
     y: [240, 70],
@@ -44,8 +44,8 @@ function RisingPhone({ phone, progress, reduce }: { phone: (typeof PHONES)[numbe
       <Image
         src={phone.src}
         alt={phone.alt}
-        width={1250}
-        height={2700}
+        width={1322}
+        height={2720}
         sizes="(min-width: 1024px) 290px, 30vw"
         className="h-auto w-full drop-shadow-[0_40px_50px_rgba(45,27,87,0.25)]"
       />

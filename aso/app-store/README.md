@@ -1,6 +1,14 @@
 # App Store optimization (iOS)
 
-Not started yet; data is collecting nightly.
+Research done 2026-10-06; no listing change published yet. Data is collecting nightly.
+
+**Research and listing**
+- [`research/app-store-aso-2026-10-06.md`](research/app-store-aso-2026-10-06.md): analytics baseline, rankings, competitors, metadata/screenshot/ratings findings and the order of work.
+- [`listing/proposed-2026-10.md`](listing/proposed-2026-10.md): live listing vs ready-to-paste proposed copy per locale (en-US, en-AU, en-GB, en-CA).
+- [`keywords.csv`](keywords.csv): target keywords, priority and which field covers each one.
+- `research/keyword-data-2026-10-06.csv`: raw autocomplete, rank and competition measurements.
+- [`creative/`](creative/README.md): iOS 27 product page header video, search-results asset and the real-UI App Preview (2026-10-07).
+- [`backlog.md`](backlog.md): what's done and what's next.
 
 **Data**
 - `data/downloads.json`: first-time downloads, redownloads and updates per day (App Store Connect Sales & Trends).
