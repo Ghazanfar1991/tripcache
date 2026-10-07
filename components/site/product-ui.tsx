@@ -45,8 +45,8 @@ export function productTone(slug: string): ProductTone {
  * (the cover is still shown beside the related article link).
  */
 const SCREEN_FALLBACK: Record<string, { src: string; alt: string }> = {
-  tripit: { src: "/app-screenshot-documents.webp", alt: "TripCache Documents screen with a passport and flight ticket" },
-  tripcase: { src: "/app-screenshot-trip-detail.webp", alt: "TripCache Trip to Manila itinerary in the app" },
+  tripit: { src: "/app-ui-docs-pin.webp", alt: "TripCache document vault asking for a 4-digit PIN" },
+  tripcase: { src: "/app-ui-trip-detail.webp", alt: "TripCache Trip to Melbourne itinerary with flight, hotel and activity counts" },
 }
 
 export function isAppScreen(src: string) {
@@ -55,7 +55,7 @@ export function isAppScreen(src: string) {
 
 export function productScreen(page: Pick<SeoLandingPage, "slug" | "image" | "imageAlt">) {
   if (isAppScreen(page.image)) return { src: page.image, alt: page.imageAlt }
-  return SCREEN_FALLBACK[page.slug] ?? { src: "/app-screenshot-trip-detail.webp", alt: "TripCache Trip to Manila itinerary in the app" }
+  return SCREEN_FALLBACK[page.slug] ?? { src: "/app-ui-trip-detail.webp", alt: "TripCache Trip to Melbourne itinerary with flight, hotel and activity counts" }
 }
 
 /* ------------------------------------------------------------------ */
@@ -88,8 +88,8 @@ export function PhoneShot({
     <Image
       src={src}
       alt={alt}
-      width={1250}
-      height={2700}
+      width={1322}
+      height={2720}
       sizes={sizes}
       preload={preload}
       className={cx(

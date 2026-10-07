@@ -26,8 +26,8 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     screenshots: [
       {
-        src: "/app-screenshot-home.webp",
-        sizes: "1250x2700",
+        src: "/app-ui-home.webp",
+        sizes: "1322x2720",
         type: "image/webp",
         form_factor: "narrow",
         label: "TripCache itinerary home screen",
