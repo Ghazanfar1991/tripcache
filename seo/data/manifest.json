@@ -1,54 +1,54 @@
 {
-  "generatedAt": "2026-10-06T14:41:38.986Z",
+  "generatedAt": "2026-10-07T15:01:22.206Z",
   "sources": [
     {
       "id": "search-console",
       "status": "SUCCESS",
       "freshness": "fresh",
       "reportingLagDays": 3,
-      "latestSyncTime": "2026-10-06T14:36:21.325Z",
+      "latestSyncTime": "2026-10-07T14:56:02.715Z",
       "coveredDateRange": {
-        "startDate": "2026-09-07",
-        "endDate": "2026-10-04"
+        "startDate": "2026-09-08",
+        "endDate": "2026-10-05"
       },
       "history": {
         "site": {
-          "rows": 321,
+          "rows": 322,
           "from": "2025-11-17",
-          "to": "2026-10-03"
+          "to": "2026-10-04"
         },
         "pages": {
-          "rows": 3274,
+          "rows": 3295,
           "from": "2025-11-19",
-          "to": "2026-10-03"
+          "to": "2026-10-04"
         }
       },
       "note": "Search Console API via the repository-scoped short-lived Google token.",
-      "checkedAt": "2026-10-06T14:36:21.558Z"
+      "checkedAt": "2026-10-07T14:56:03.572Z"
     },
     {
       "id": "index-status",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-06T14:41:26.377Z",
-      "note": "33/46 sitemap URLs indexed.",
-      "checkedAt": "2026-10-06T14:41:26.384Z"
+      "latestSyncTime": "2026-10-07T15:01:11.923Z",
+      "note": "35/46 sitemap URLs indexed.",
+      "checkedAt": "2026-10-07T15:01:11.930Z"
     },
     {
       "id": "ga4-web",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-06T14:41:26.415Z",
-      "note": "Store intent 11.9% (18/151 users, 28 days).",
-      "checkedAt": "2026-10-06T14:41:27.625Z"
+      "latestSyncTime": "2026-10-07T15:01:11.962Z",
+      "note": "Store intent 11.4% (18/158 users, 28 days).",
+      "checkedAt": "2026-10-07T15:01:14.624Z"
     },
     {
       "id": "site-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-06T14:41:38.984Z",
+      "latestSyncTime": "2026-10-07T15:01:22.204Z",
       "note": "46 sitemap URLs verified; 0 warnings.",
-      "checkedAt": "2026-10-06T14:41:38.986Z"
+      "checkedAt": "2026-10-07T15:01:22.206Z"
     }
   ]
 }

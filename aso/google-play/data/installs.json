@@ -1,6 +1,6 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-10-06T14:42:00.435Z",
+  "generatedAt": "2026-10-07T15:01:52.822Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
@@ -10,12 +10,12 @@
   ],
   "totals28Days": {
     "userInstalls": 11,
-    "userUninstalls": 4,
+    "userUninstalls": 6,
     "deviceInstalls": 10,
     "deviceUninstalls": 0
   },
-  "latestReportedDate": "2026-09-25",
-  "latestInstalledAudience": 23,
+  "latestReportedDate": "2026-09-30",
+  "latestInstalledAudience": 21,
   "daily": [
     {
       "date": "2026-07-01",
@@ -712,13 +712,63 @@
       "dailyDeviceInstalls": 0,
       "dailyDeviceUninstalls": 0,
       "activeDeviceInstalls": 23
+    },
+    {
+      "date": "2026-09-26",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 20
+    },
+    {
+      "date": "2026-09-27",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 20
+    },
+    {
+      "date": "2026-09-28",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 26
+    },
+    {
+      "date": "2026-09-29",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 2,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 20
+    },
+    {
+      "date": "2026-09-30",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 21
     }
   ],
   "countries": [
     {
       "country": "GB",
       "dailyUserInstalls": 4,
-      "dailyUserUninstalls": 1
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "ID",
+      "dailyUserInstalls": 4,
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "US",
+      "dailyUserInstalls": 4,
+      "dailyUserUninstalls": 2
     },
     {
       "country": "BD",
@@ -726,19 +776,9 @@
       "dailyUserUninstalls": 2
     },
     {
-      "country": "ID",
-      "dailyUserInstalls": 3,
-      "dailyUserUninstalls": 2
-    },
-    {
-      "country": "US",
-      "dailyUserInstalls": 3,
-      "dailyUserUninstalls": 1
-    },
-    {
       "country": "PH",
       "dailyUserInstalls": 2,
-      "dailyUserUninstalls": 1
+      "dailyUserUninstalls": 2
     },
     {
       "country": "AR",
