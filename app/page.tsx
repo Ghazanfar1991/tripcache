@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "Travel Itinerary App for Booking Emails | TripCache",
   },
   description:
-    "Turn booking emails into one organized travel itinerary. Track cancellation deadlines and keep documents, receipts, flights, stays, and expenses together.",
+    "Keep every booking in one travel itinerary. Free cancellation and check-in reminders, document vault and expenses; forward confirmation emails with Pro.",
   alternates: {
     canonical: "/",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     siteName: "TripCache",
     title: "Travel Itinerary App for Booking Emails | TripCache",
     description:
-      "Turn booking emails into one organized travel itinerary, track cancellation deadlines, and keep documents, receipts, and expenses together.",
+      "Keep every booking in one travel itinerary, with free cancellation and check-in reminders, documents and expenses. Forward confirmation emails with Pro.",
     url: "https://trip-cache.com",
   },
   twitter: {
     card: "summary_large_image",
     title: "Travel Itinerary App for Booking Emails | TripCache",
     description:
-      "Turn booking emails into one organized travel itinerary, with cancellation reminders, documents, receipts, and expenses together.",
+      "Keep every booking in one travel itinerary, with free cancellation and check-in reminders, documents and expenses. Forward confirmation emails with Pro.",
   },
 }
 
