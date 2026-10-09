@@ -1,6 +1,6 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-10-08T15:09:30.519Z",
+  "generatedAt": "2026-10-09T14:53:27.145Z",
   "sitemapUrls": 46,
   "indexed": 35,
   "notIndexed": 11,
@@ -302,7 +302,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-07T07:13:10Z",
+      "lastCrawlTime": "2026-10-09T12:53:25Z",
       "googleCanonical": "https://trip-cache.com",
       "userCanonical": "https://trip-cache.com/",
       "robotsTxtState": "ALLOWED",
@@ -415,7 +415,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-30T18:30:28Z",
+      "lastCrawlTime": "2026-10-09T01:06:07Z",
       "googleCanonical": "https://trip-cache.com/blog",
       "userCanonical": "https://trip-cache.com/blog",
       "robotsTxtState": "ALLOWED",
@@ -454,7 +454,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-30T16:35:36Z",
+      "lastCrawlTime": "2026-10-09T14:33:24Z",
       "googleCanonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "userCanonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "robotsTxtState": "ALLOWED",
@@ -565,14 +565,16 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-05T04:54:10Z",
+      "lastCrawlTime": "2026-10-08T21:00:08Z",
       "googleCanonical": "https://trip-cache.com/blog/hotel-cancellation-policies",
       "userCanonical": "https://trip-cache.com/blog/hotel-cancellation-policies",
       "robotsTxtState": "ALLOWED",
       "pageFetchState": "SUCCESSFUL",
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
-      "referringUrls": [],
+      "referringUrls": [
+        "/tools/hotel-cancellation-deadline-calculator"
+      ],
       "richResults": {
         "verdict": "PASS",
         "items": [
@@ -869,7 +871,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-27T21:35:17Z",
+      "lastCrawlTime": "2026-10-09T08:17:19Z",
       "googleCanonical": "https://trip-cache.com/features",
       "userCanonical": "https://trip-cache.com/features",
       "robotsTxtState": "ALLOWED",
@@ -879,7 +881,15 @@
       "referringUrls": [
         "/features/business-travel-expenses"
       ],
-      "richResults": null,
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
       "firstSeenAt": "2026-10-04T17:03:42.998Z",
       "indexedSince": "2026-10-04T17:03:42.998Z"
     },
