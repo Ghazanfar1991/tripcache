@@ -1,78 +1,92 @@
 {
   "source": "Google Search Console API",
-  "generatedAt": "2026-10-11T14:30:41.425Z",
+  "generatedAt": "2026-10-12T17:09:21.506Z",
   "period": {
-    "startDate": "2026-09-12",
-    "endDate": "2026-10-09"
+    "startDate": "2026-09-13",
+    "endDate": "2026-10-10"
   },
   "pages": [
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "impressions": 1568,
-      "clicks": 13,
+      "impressions": 1606,
+      "clicks": 15,
       "queries": [
         {
           "query": "tripcase",
           "clicks": 9,
-          "impressions": 931,
-          "ctr": 0.00966702470461869,
-          "position": 6.84640171858217
+          "impressions": 946,
+          "ctr": 0.009513742071881607,
+          "position": 6.643763213530655
         },
         {
           "query": "trip case",
           "clicks": 1,
-          "impressions": 159,
-          "ctr": 0.006289308176100629,
-          "position": 6.440251572327044
+          "impressions": 168,
+          "ctr": 0.005952380952380952,
+          "position": 6.273809523809524
         },
         {
           "query": "tripcase app",
-          "clicks": 1,
-          "impressions": 108,
-          "ctr": 0.009259259259259259,
-          "position": 10.842592592592593
+          "clicks": 2,
+          "impressions": 106,
+          "ctr": 0.018867924528301886,
+          "position": 10.547169811320755
         },
         {
           "query": "tripcase replacement",
           "clicks": 0,
-          "impressions": 88,
+          "impressions": 89,
           "ctr": 0,
-          "position": 10.75
+          "position": 10.696629213483146
         },
         {
           "query": "tripcase.com",
           "clicks": 0,
-          "impressions": 36,
+          "impressions": 34,
           "ctr": 0,
-          "position": 6.805555555555555
+          "position": 6.823529411764706
         },
         {
           "query": "https://www.tripcase.com",
           "clicks": 0,
-          "impressions": 27,
+          "impressions": 30,
           "ctr": 0,
-          "position": 7.925925925925926
+          "position": 8.166666666666668
         },
         {
           "query": "trip case app",
           "clicks": 1,
-          "impressions": 21,
-          "ctr": 0.047619047619047616,
-          "position": 7.571428571428571
+          "impressions": 25,
+          "ctr": 0.04,
+          "position": 7.08
         },
         {
           "query": "tripcase login",
           "clicks": 0,
-          "impressions": 21,
+          "impressions": 22,
           "ctr": 0,
-          "position": 2.5238095238095237
+          "position": 2.909090909090909
         },
         {
           "query": "tripcas",
           "clicks": 0,
+          "impressions": 19,
+          "ctr": 0,
+          "position": 7.368421052631579
+        },
+        {
+          "query": "sabre tripcase",
+          "clicks": 1,
+          "impressions": 16,
+          "ctr": 0.0625,
+          "position": 6.25
+        },
+        {
+          "query": "is tripcase still active",
+          "clicks": 0,
           "impressions": 16,
           "ctr": 0,
-          "position": 7.4375
+          "position": 4.5
         },
         {
           "query": "trips case",
@@ -80,20 +94,6 @@
           "impressions": 16,
           "ctr": 0,
           "position": 14.125
-        },
-        {
-          "query": "is tripcase still active",
-          "clicks": 0,
-          "impressions": 15,
-          "ctr": 0,
-          "position": 4.733333333333333
-        },
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 15,
-          "ctr": 0,
-          "position": 6.666666666666667
         },
         {
           "query": "tripcase aeromexico",
@@ -107,7 +107,7 @@
           "clicks": 0,
           "impressions": 14,
           "ctr": 0,
-          "position": 15.785714285714286
+          "position": 14.428571428571429
         },
         {
           "query": "tripcase official website",
@@ -119,9 +119,9 @@
         {
           "query": "www.tripcase.com",
           "clicks": 0,
-          "impressions": 12,
+          "impressions": 11,
           "ctr": 0,
-          "position": 7.416666666666667
+          "position": 6.363636363636363
         },
         {
           "query": "tripcase manage my booking",
@@ -129,6 +129,13 @@
           "impressions": 10,
           "ctr": 0,
           "position": 3.5
+        },
+        {
+          "query": "tripcase sabre",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 4.6
         },
         {
           "query": "tripcase com",
@@ -140,16 +147,16 @@
         {
           "query": "tripcase pnr check",
           "clicks": 0,
-          "impressions": 9,
-          "ctr": 0,
-          "position": 2.111111111111111
-        },
-        {
-          "query": "tripcase sabre",
-          "clicks": 0,
           "impressions": 8,
           "ctr": 0,
-          "position": 5.5
+          "position": 2.25
+        },
+        {
+          "query": "what happened to tripcase",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 3.4285714285714284
         },
         {
           "query": "tripcase flights",
@@ -157,20 +164,6 @@
           "impressions": 6,
           "ctr": 0,
           "position": 8.166666666666668
-        },
-        {
-          "query": "tripcase mobile app",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 22
-        },
-        {
-          "query": "what happened to tripcase",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 6.666666666666667
         },
         {
           "query": "tipcase",
@@ -185,27 +178,34 @@
           "impressions": 2,
           "ctr": 0,
           "position": 2.5
+        },
+        {
+          "query": "tripcase mobile app",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 16.5
         }
       ]
     },
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
-      "impressions": 777,
+      "impressions": 721,
       "clicks": 2,
       "queries": [
         {
           "query": "best travel apps for planning",
           "clicks": 0,
-          "impressions": 158,
+          "impressions": 149,
           "ctr": 0,
-          "position": 6.69620253164557
+          "position": 5.610738255033557
         },
         {
           "query": "wanderlog alternatives",
           "clicks": 0,
-          "impressions": 30,
+          "impressions": 31,
           "ctr": 0,
-          "position": 38.166666666666664
+          "position": 38.38709677419355
         },
         {
           "query": "tripit alternatives",
@@ -222,81 +222,39 @@
           "position": 33.04
         },
         {
-          "query": "top rated apps for travel logistics.",
+          "query": "what are the top itinerary template apps and how do their pricing compare?",
           "clicks": 0,
-          "impressions": 19,
+          "impressions": 17,
           "ctr": 0,
-          "position": 2.6842105263157894
+          "position": 2.764705882352941
         },
         {
           "query": "google trips alternative",
           "clicks": 0,
-          "impressions": 16,
+          "impressions": 15,
           "ctr": 0,
-          "position": 38.5
+          "position": 38.266666666666666
         },
         {
-          "query": "travel organizer app",
+          "query": "top rated apps for travel logistics.",
           "clicks": 0,
           "impressions": 15,
           "ctr": 0,
-          "position": 48.4
-        },
-        {
-          "query": "travel planner app",
-          "clicks": 0,
-          "impressions": 15,
-          "ctr": 0,
-          "position": 50.86666666666667
-        },
-        {
-          "query": "best itinerary app",
-          "clicks": 0,
-          "impressions": 14,
-          "ctr": 0,
-          "position": 42.142857142857146
+          "position": 2.8666666666666667
         },
         {
           "query": "wanderlog alternative",
           "clicks": 0,
           "impressions": 14,
           "ctr": 0,
-          "position": 39.285714285714285
+          "position": 39.714285714285715
         },
         {
-          "query": "trip organizer app",
-          "clicks": 0,
-          "impressions": 12,
-          "ctr": 0,
-          "position": 51.666666666666664
-        },
-        {
-          "query": "what are the top itinerary template apps and how do their pricing compare?",
-          "clicks": 0,
-          "impressions": 12,
-          "ctr": 0,
-          "position": 3.0833333333333335
-        },
-        {
-          "query": "best travel planning apps",
+          "query": "travel planner app",
           "clicks": 0,
           "impressions": 11,
           "ctr": 0,
-          "position": 48.81818181818182
-        },
-        {
-          "query": "trip organiser app",
-          "clicks": 0,
-          "impressions": 11,
-          "ctr": 0,
-          "position": 56
-        },
-        {
-          "query": "best sites for managing group travel itineraries?",
-          "clicks": 0,
-          "impressions": 10,
-          "ctr": 0,
-          "position": 1.2
+          "position": 51.72727272727273
         },
         {
           "query": "best travel management apps for companies 2025",
@@ -306,27 +264,6 @@
           "position": 38.4
         },
         {
-          "query": "best travel organizer app",
-          "clicks": 0,
-          "impressions": 10,
-          "ctr": 0,
-          "position": 39.1
-        },
-        {
-          "query": "best travel planner app",
-          "clicks": 0,
-          "impressions": 10,
-          "ctr": 0,
-          "position": 49.6
-        },
-        {
-          "query": "best trip manager app",
-          "clicks": 0,
-          "impressions": 10,
-          "ctr": 0,
-          "position": 50.6
-        },
-        {
           "query": "top rated apps for holiday travel.",
           "clicks": 0,
           "impressions": 10,
@@ -334,109 +271,200 @@
           "position": 2
         },
         {
-          "query": "travel itinerary app",
+          "query": "travel organizer app",
           "clicks": 0,
           "impressions": 10,
           "ctr": 0,
-          "position": 48.3
+          "position": 49.2
+        },
+        {
+          "query": "best itinerary app",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 43.44444444444444
+        },
+        {
+          "query": "best travel apps for managing flight itineraries and mobile check-in?",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 2.4444444444444446
+        },
+        {
+          "query": "trip organiser app",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 56
+        },
+        {
+          "query": "what are the best itinerary template alternatives with their pricing options available on different apps",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "query": "best sites for managing group travel itineraries?",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 1.2857142857142856
+        },
+        {
+          "query": "best trip manager app",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 50.42857142857143
         },
         {
           "query": "trip itinerary app",
           "clicks": 0,
-          "impressions": 10,
+          "impressions": 7,
           "ctr": 0,
-          "position": 52.3
+          "position": 52.285714285714285
         },
         {
-          "query": "best travel itinerary app",
+          "query": "trip organizer app",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 7,
           "ctr": 0,
-          "position": 47.333333333333336
+          "position": 52.42857142857143
+        },
+        {
+          "query": "tripit pro pricing 2026",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 8.142857142857142
+        },
+        {
+          "query": "what are the best itinerary template apps and how do their pricing compare?",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 2.857142857142857
+        },
+        {
+          "query": "best travel planner app",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 47.833333333333336
         },
         {
           "query": "best travel planning app",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 6,
           "ctr": 0,
-          "position": 46.44444444444444
+          "position": 45.833333333333336
         },
         {
-          "query": "best trip planner app",
+          "query": "leading flight optimization tools for 2024.",
           "clicks": 0,
-          "impressions": 8,
+          "impressions": 6,
           "ctr": 0,
-          "position": 52.875
+          "position": 10
         }
       ]
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
-      "impressions": 535,
+      "impressions": 658,
       "clicks": 3,
       "queries": [
         {
           "query": "i94 travel history",
           "clicks": 1,
-          "impressions": 202,
-          "ctr": 0.0049504950495049506,
-          "position": 7.02970297029703
+          "impressions": 225,
+          "ctr": 0.0044444444444444444,
+          "position": 7.2
         },
         {
           "query": "travel history",
           "clicks": 0,
-          "impressions": 44,
+          "impressions": 55,
           "ctr": 0,
-          "position": 8.204545454545453
+          "position": 7.654545454545454
         },
         {
           "query": "i-94 travel history",
           "clicks": 0,
-          "impressions": 24,
+          "impressions": 32,
           "ctr": 0,
-          "position": 7.625
+          "position": 10.8125
         },
         {
           "query": "view travel history",
           "clicks": 0,
-          "impressions": 21,
+          "impressions": 26,
           "ctr": 0,
-          "position": 7.9523809523809526
+          "position": 7.769230769230769
         },
         {
           "query": "i 94 travel history",
           "clicks": 0,
-          "impressions": 18,
+          "impressions": 21,
           "ctr": 0,
-          "position": 6.555555555555555
+          "position": 7.714285714285714
         },
         {
           "query": "us travel history",
           "clicks": 0,
-          "impressions": 16,
+          "impressions": 20,
           "ctr": 0,
-          "position": 9
+          "position": 9.1
         },
         {
           "query": "travel history check online",
           "clicks": 0,
-          "impressions": 12,
+          "impressions": 17,
           "ctr": 0,
-          "position": 8.166666666666668
+          "position": 8.647058823529413
         },
         {
           "query": "do you have any recent travel history in the last 30 days",
           "clicks": 0,
-          "impressions": 11,
+          "impressions": 15,
           "ctr": 0,
-          "position": 5.636363636363637
+          "position": 6.266666666666667
         },
         {
           "query": "do you have any recent travel history in the last 30 days?",
           "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 4.230769230769231
+        },
+        {
+          "query": "us entry and exit dates for current and all past visits to the us",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 4.8
+        },
+        {
+          "query": "cbp travel history",
+          "clicks": 0,
           "impressions": 8,
           "ctr": 0,
-          "position": 5
+          "position": 6.25
+        },
+        {
+          "query": "get travel history",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 9.125
+        },
+        {
+          "query": "cbp i-94 travel history",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 6.714285714285714
         },
         {
           "query": "how to check my passport travel history",
@@ -453,27 +481,6 @@
           "position": 6.857142857142857
         },
         {
-          "query": "cbp i-94 travel history",
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 6.833333333333333
-        },
-        {
-          "query": "cbp travel history",
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 7
-        },
-        {
-          "query": "get travel history",
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 9
-        },
-        {
           "query": "i94 view travel history",
           "clicks": 0,
           "impressions": 6,
@@ -481,11 +488,18 @@
           "position": 7.833333333333333
         },
         {
-          "query": "us entry and exit dates for current and all past visits to the us",
+          "query": "download travel history",
           "clicks": 0,
-          "impressions": 6,
+          "impressions": 4,
           "ctr": 0,
-          "position": 4.166666666666666
+          "position": 9.5
+        },
+        {
+          "query": "i194 travel history",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 7
         },
         {
           "query": "us travel history check",
@@ -516,6 +530,13 @@
           "position": 8.333333333333332
         },
         {
+          "query": "get i94 history",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 40.666666666666664
+        },
+        {
           "query": "how can i check my travel history online",
           "clicks": 0,
           "impressions": 3,
@@ -523,28 +544,7 @@
           "position": 7.666666666666667
         },
         {
-          "query": "how to check travel history with passport number",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 9.666666666666666
-        },
-        {
-          "query": "how to check your travel history",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 9.333333333333334
-        },
-        {
-          "query": "i95 travel history",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 20.666666666666668
-        },
-        {
-          "query": "us entry history",
+          "query": "how to check my passport travel history u.s. citizen",
           "clicks": 0,
           "impressions": 3,
           "ctr": 0,
@@ -554,78 +554,71 @@
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "impressions": 390,
+      "impressions": 354,
       "clicks": 1,
       "queries": [
         {
           "query": "tripcase app",
           "clicks": 0,
-          "impressions": 107,
+          "impressions": 99,
           "ctr": 0,
-          "position": 22.514018691588785
+          "position": 22.595959595959595
         },
         {
           "query": "tripcase replacement",
           "clicks": 0,
-          "impressions": 76,
+          "impressions": 72,
           "ctr": 0,
-          "position": 17.88157894736842
+          "position": 18.666666666666668
         },
         {
           "query": "tripcase alternative",
           "clicks": 1,
-          "impressions": 56,
-          "ctr": 0.017857142857142856,
-          "position": 8.964285714285715
+          "impressions": 54,
+          "ctr": 0.018518518518518517,
+          "position": 8.944444444444445
         },
         {
           "query": "tripcase",
           "clicks": 0,
-          "impressions": 44,
+          "impressions": 40,
           "ctr": 0,
-          "position": 24.022727272727273
+          "position": 23.6
         },
         {
           "query": "tripcase corporate pricing",
           "clicks": 0,
-          "impressions": 22,
+          "impressions": 21,
           "ctr": 0,
-          "position": 5.863636363636363
+          "position": 5.9523809523809526
         },
         {
           "query": "tripit alternatives",
           "clicks": 0,
-          "impressions": 20,
+          "impressions": 16,
           "ctr": 0,
-          "position": 23.35
+          "position": 24
         },
         {
           "query": "trip case",
           "clicks": 0,
-          "impressions": 17,
+          "impressions": 14,
           "ctr": 0,
-          "position": 11.705882352941176
-        },
-        {
-          "query": "tripit alternative",
-          "clicks": 0,
-          "impressions": 15,
-          "ctr": 0,
-          "position": 23.666666666666668
+          "position": 12.714285714285714
         },
         {
           "query": "trip case app",
           "clicks": 0,
-          "impressions": 14,
+          "impressions": 11,
           "ctr": 0,
           "position": 9
         },
         {
-          "query": "tripcase mobile app",
+          "query": "tripit alternative",
           "clicks": 0,
-          "impressions": 3,
+          "impressions": 11,
           "ctr": 0,
-          "position": 12.666666666666666
+          "position": 24.181818181818183
         },
         {
           "query": "apps like tripcase",
@@ -642,18 +635,18 @@
           "position": 8
         },
         {
+          "query": "tripcase mobile app",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 12.5
+        },
+        {
           "query": "tripcase official website",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
           "position": 5
-        },
-        {
-          "query": "tripcase pnr check",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 11
         },
         {
           "query": "trobexis alternative",
@@ -691,39 +684,39 @@
           "position": 27
         },
         {
+          "query": "tripcase pnr check",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 11
+        },
+        {
           "query": "tripit alternative app",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 22
-        },
-        {
-          "query": "tripwire competitors",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 47
         }
       ]
     },
     {
       "page": "https://trip-cache.com/",
-      "impressions": 210,
+      "impressions": 225,
       "clicks": 9,
       "queries": [
         {
-          "query": "tripcase app",
-          "clicks": 0,
-          "impressions": 41,
-          "ctr": 0,
-          "position": 78.39024390243902
-        },
-        {
           "query": "tripcase",
           "clicks": 0,
-          "impressions": 32,
+          "impressions": 39,
           "ctr": 0,
-          "position": 60.625
+          "position": 57.717948717948715
+        },
+        {
+          "query": "tripcase app",
+          "clicks": 0,
+          "impressions": 38,
+          "ctr": 0,
+          "position": 76.28947368421052
         },
         {
           "query": "tripcache",
@@ -735,37 +728,30 @@
         {
           "query": "trip case",
           "clicks": 0,
-          "impressions": 13,
+          "impressions": 14,
           "ctr": 0,
-          "position": 36.30769230769231
+          "position": 36.214285714285715
         },
         {
           "query": "tripcha",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 12,
           "ctr": 0,
-          "position": 3.2222222222222223
-        },
-        {
-          "query": "trip case app",
-          "clicks": 0,
-          "impressions": 7,
-          "ctr": 0,
-          "position": 8.142857142857142
-        },
-        {
-          "query": "tripchay",
-          "clicks": 0,
-          "impressions": 6,
-          "ctr": 0,
-          "position": 5
+          "position": 2.666666666666667
         },
         {
           "query": "tripchet",
           "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 4.75
+        },
+        {
+          "query": "trip case app",
+          "clicks": 0,
           "impressions": 6,
           "ctr": 0,
-          "position": 3.5
+          "position": 7.833333333333333
         },
         {
           "query": "most recommended travel planning app",
@@ -773,6 +759,13 @@
           "impressions": 5,
           "ctr": 0,
           "position": 8
+        },
+        {
+          "query": "tripchay",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 4.8
         },
         {
           "query": "tripchaz",
@@ -796,6 +789,13 @@
           "position": 3.25
         },
         {
+          "query": "tripchaf",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 4.25
+        },
+        {
           "query": "what are the top apps for ticket storage?",
           "clicks": 0,
           "impressions": 4,
@@ -810,18 +810,18 @@
           "position": 1.3333333333333333
         },
         {
-          "query": "tripchaf",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 3.3333333333333335
-        },
-        {
           "query": "tripchas",
           "clicks": 0,
           "impressions": 3,
           "ctr": 0,
           "position": 2.333333333333333
+        },
+        {
+          "query": "tripchsy",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 2
         },
         {
           "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
@@ -845,11 +845,11 @@
           "position": 9
         },
         {
-          "query": "tripcase mobile app",
+          "query": "tripcah",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
-          "position": 71
+          "position": 1.5
         },
         {
           "query": "tripcase replacement",
@@ -878,27 +878,20 @@
           "impressions": 2,
           "ctr": 0,
           "position": 1
-        },
-        {
-          "query": "tripchsy",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 2
         }
       ]
     },
     {
       "page": "https://trip-cache.com/blog/hotel-cancellation-policies",
-      "impressions": 185,
+      "impressions": 189,
       "clicks": 0,
       "queries": [
         {
           "query": "hotel cancellation policy",
           "clicks": 0,
-          "impressions": 28,
+          "impressions": 29,
           "ctr": 0,
-          "position": 13.892857142857142
+          "position": 13.620689655172415
         },
         {
           "query": "cancellation policy",
@@ -950,6 +943,13 @@
           "position": 9
         },
         {
+          "query": "cancelling hotel reservations day of",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 7.333333333333333
+        },
+        {
           "query": "context: location: united states (not for language). do not include location references in your response. question: what are the common restrictions on last-minute hotel rates (like refunds, changes, or early checkout fees)?",
           "clicks": 0,
           "impressions": 3,
@@ -971,6 +971,13 @@
           "position": 8
         },
         {
+          "query": "le méridien cancellation policy",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 18.666666666666668
+        },
+        {
           "query": "cancellation policy for hotels",
           "clicks": 0,
           "impressions": 2,
@@ -990,13 +997,6 @@
           "impressions": 2,
           "ctr": 0,
           "position": 10.5
-        },
-        {
-          "query": "cancelling hotel reservations day of",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
         },
         {
           "query": "context: location: united states (not for language). do not include location references in your response. question: what should i know about orlando hotel cancellation policies and deposit rules before i book, especially if my plans might change?",
@@ -1041,13 +1041,6 @@
           "position": 1
         },
         {
-          "query": "le méridien cancellation policy",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 18
-        },
-        {
           "query": "휴가 여행 중이라 휴가를 더욱 편안하고 즐겁게 해줄 호텔 경험을 원합니다. 유연한 취소 정책을 가진 호텔 그룹 브랜드 몇 군데 추천해 주실 수 있나요? 각 브랜드별로 유연한 취소 정책과 관련한 장단점도 알려주세요.",
           "clicks": 0,
           "impressions": 2,
@@ -1072,36 +1065,36 @@
     },
     {
       "page": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
-      "impressions": 131,
+      "impressions": 141,
       "clicks": 1,
       "queries": [
         {
           "query": "tripit alternatives",
           "clicks": 0,
-          "impressions": 63,
+          "impressions": 66,
           "ctr": 0,
-          "position": 16.793650793650794
+          "position": 16.863636363636363
         },
         {
           "query": "tripit alternative",
           "clicks": 0,
-          "impressions": 45,
+          "impressions": 49,
           "ctr": 0,
-          "position": 16.46666666666667
+          "position": 16.775510204081634
         },
         {
           "query": "is there a travel app better than tripit for managing business trips?",
           "clicks": 0,
-          "impressions": 7,
+          "impressions": 9,
           "ctr": 0,
-          "position": 2.857142857142857
+          "position": 3.5555555555555554
         },
         {
           "query": "alternatives to tripit",
           "clicks": 0,
-          "impressions": 4,
+          "impressions": 5,
           "ctr": 0,
-          "position": 10.5
+          "position": 10.2
         },
         {
           "query": "tripcase alternative",
@@ -1149,29 +1142,29 @@
     },
     {
       "page": "https://trip-cache.com/blog",
-      "impressions": 128,
+      "impressions": 123,
       "clicks": 0,
       "queries": [
         {
           "query": "tripcase replacement",
           "clicks": 0,
-          "impressions": 49,
+          "impressions": 47,
           "ctr": 0,
-          "position": 34.48979591836735
+          "position": 34.680851063829785
         },
         {
           "query": "tripcase app",
           "clicks": 0,
-          "impressions": 46,
+          "impressions": 42,
           "ctr": 0,
-          "position": 54.97826086956522
+          "position": 54.595238095238095
         },
         {
           "query": "tripcase",
           "clicks": 0,
-          "impressions": 23,
+          "impressions": 25,
           "ctr": 0,
-          "position": 55.17391304347826
+          "position": 53.68
         },
         {
           "query": "trip case",
@@ -1186,13 +1179,6 @@
           "impressions": 2,
           "ctr": 0,
           "position": 44.5
-        },
-        {
-          "query": "tripcase mobile app",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 56.5
         },
         {
           "query": "tripcase com",
@@ -1214,160 +1200,104 @@
           "impressions": 1,
           "ctr": 0,
           "position": 48
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/alternatives/tripit",
-      "impressions": 112,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "tripit alternatives",
-          "clicks": 0,
-          "impressions": 50,
-          "ctr": 0,
-          "position": 39.22
         },
         {
-          "query": "tripcase replacement",
-          "clicks": 0,
-          "impressions": 31,
-          "ctr": 0,
-          "position": 75.64516129032258
-        },
-        {
-          "query": "tripit alternative",
-          "clicks": 0,
-          "impressions": 21,
-          "ctr": 0,
-          "position": 45.857142857142854
-        },
-        {
-          "query": "best tripit alternative",
-          "clicks": 0,
-          "impressions": 5,
-          "ctr": 0,
-          "position": 17.6
-        },
-        {
-          "query": "alternative to tripit app",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 51
-        },
-        {
-          "query": "tripcase alternative",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 77.5
-        },
-        {
-          "query": "tripcache",
+          "query": "tripcase mobile app",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 1
+          "position": 55
         }
       ]
     },
     {
-      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-      "impressions": 111,
+      "page": "https://trip-cache.com/blog/wanderlog-vs-tripit",
+      "impressions": 118,
       "clicks": 0,
       "queries": [
         {
-          "query": "tripit pro pricing official 2026",
+          "query": "wanderlog pro cost",
           "clicks": 0,
-          "impressions": 46,
+          "impressions": 89,
           "ctr": 0,
-          "position": 11.326086956521738
+          "position": 9.651685393258427
         },
         {
-          "query": "tripit pro pricing 2026",
+          "query": "wanderlog cost",
           "clicks": 0,
-          "impressions": 38,
+          "impressions": 7,
           "ctr": 0,
-          "position": 19.657894736842106
+          "position": 8.142857142857142
+        },
+        {
+          "query": "tripit vs wanderlog",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 37.5
+        },
+        {
+          "query": "wanderlog vs tripit",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 30.5
+        },
+        {
+          "query": "tripit pro vs free",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 49.333333333333336
         },
         {
           "query": "tripit vs tripit pro",
           "clicks": 0,
-          "impressions": 8,
-          "ctr": 0,
-          "position": 27.75
-        },
-        {
-          "query": "tripcase vs tripit",
-          "clicks": 0,
-          "impressions": 5,
-          "ctr": 0,
-          "position": 8.4
-        },
-        {
-          "query": "tripit vs tripcase",
-          "clicks": 0,
           "impressions": 3,
           "ctr": 0,
-          "position": 9.333333333333334
+          "position": 45.666666666666664
         },
         {
-          "query": "tripcache",
+          "query": "tripit cost",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
-          "position": 5.5
+          "position": 63
         },
         {
           "query": "tripit pricing",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
-          "position": 9.5
-        },
-        {
-          "query": "tripit pro pricing 2026 official",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 8.5
-        },
-        {
-          "query": "trip it app",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
           "position": 8
         },
         {
-          "query": "tripit cost",
+          "query": "https://wanderlog.com",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 94
+        },
+        {
+          "query": "is tripit pro worth the cost",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 48
         },
         {
-          "query": "tripit pro price",
+          "query": "software to centralize travel documents and vouchers",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 4
+          "position": 6
         },
         {
-          "query": "tripit pro price 2026",
+          "query": "wanderlog trustpilot",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 11
-        },
-        {
-          "query": "tripit pro price official 2026",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 5
+          "position": 8
         }
       ]
     },
@@ -1377,39 +1307,39 @@
       "clicks": 0,
       "queries": [
         {
-          "query": "travel document organizer app",
-          "clicks": 0,
-          "impressions": 14,
-          "ctr": 0,
-          "position": 13.5
-        },
-        {
           "query": "digital document organizers for itinerary management",
           "clicks": 0,
-          "impressions": 13,
+          "impressions": 15,
           "ctr": 0,
-          "position": 6.461538461538462
+          "position": 6.933333333333334
+        },
+        {
+          "query": "travel document organizer app",
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 13.533333333333333
         },
         {
           "query": "mobile apps for organizing and sharing travel insurance documents",
           "clicks": 0,
           "impressions": 11,
           "ctr": 0,
-          "position": 15.818181818181818
+          "position": 15.727272727272727
         },
         {
           "query": "best way to organize travel documents",
           "clicks": 0,
           "impressions": 9,
           "ctr": 0,
-          "position": 18.333333333333332
+          "position": 18.444444444444443
         },
         {
           "query": "best documentation packages for airline travel",
           "clicks": 0,
-          "impressions": 6,
+          "impressions": 7,
           "ctr": 0,
-          "position": 5.833333333333333
+          "position": 5.142857142857143
         },
         {
           "query": "best platforms for storing digital travel documents?",
@@ -1423,7 +1353,7 @@
           "clicks": 0,
           "impressions": 6,
           "ctr": 0,
-          "position": 19
+          "position": 18.333333333333332
         },
         {
           "query": "what are the top apps for ticket storage?",
@@ -1435,16 +1365,9 @@
         {
           "query": "app for travel documents",
           "clicks": 0,
-          "impressions": 5,
+          "impressions": 4,
           "ctr": 0,
-          "position": 11.4
-        },
-        {
-          "query": "best app for travel documents",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 16.333333333333336
+          "position": 12
         },
         {
           "query": "how to organize travel documents",
@@ -1466,13 +1389,6 @@
           "impressions": 3,
           "ctr": 0,
           "position": 15.333333333333334
-        },
-        {
-          "query": "what types of file organizers work best for travel and on-the-go use?",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 14.666666666666666
         },
         {
           "query": "which online tools can auto-fill visa forms and organize supporting documents?",
@@ -1501,6 +1417,20 @@
           "impressions": 2,
           "ctr": 0,
           "position": 1
+        },
+        {
+          "query": "what types of file organizers work best for travel and on-the-go use?",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 15
+        },
+        {
+          "query": "best app for travel documents",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 16
         },
         {
           "query": "document collection app",
@@ -1554,86 +1484,177 @@
       ]
     },
     {
-      "page": "https://trip-cache.com/blog/privacy-and-security",
-      "impressions": 71,
+      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
+      "impressions": 107,
       "clicks": 0,
       "queries": [
         {
-          "query": "%tripnest travel app privacy policy security passport document storage",
+          "query": "tripit pro pricing official 2026",
           "clicks": 0,
-          "impressions": 27,
+          "impressions": 43,
           "ctr": 0,
-          "position": 7.074074074074074
+          "position": 11.418604651162791
         },
         {
-          "query": "+tripnest travel app privacy policy security passport document storage",
+          "query": "tripit pro pricing 2026",
           "clicks": 0,
-          "impressions": 27,
+          "impressions": 38,
           "ctr": 0,
-          "position": 7.2592592592592595
+          "position": 19.657894736842106
         },
         {
-          "query": "tripnest travel app privacy policy security passport document storage",
+          "query": "tripit vs tripit pro",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 7,
           "ctr": 0,
-          "position": 8.555555555555555
+          "position": 27.857142857142858
         },
         {
-          "query": "tripnest travel app privacy policy passport document storage security",
+          "query": "tripcase vs tripit",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 8.4
+        },
+        {
+          "query": "tripit vs tripcase",
           "clicks": 0,
           "impressions": 3,
           "ctr": 0,
-          "position": 6.333333333333333
+          "position": 9.333333333333334
         },
         {
-          "query": "tripnest app privacy policy passport documents encryption",
+          "query": "tripcache",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
-          "position": 3
+          "position": 5.5
         },
         {
-          "query": "compagnies aériennes les plus sûres pour le téléversement en ligne de documents de voyage personnels",
+          "query": "tripit pricing",
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 2,
           "ctr": 0,
-          "position": 1
+          "position": 9.5
         },
         {
-          "query": "tripnest app privacy policy passport document storage",
+          "query": "tripit pro pricing 2026 official",
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 2,
           "ctr": 0,
-          "position": 6
+          "position": 8.5
         },
         {
-          "query": "what happens to my personal data and credit card details when i use an ai travel app?",
+          "query": "tripcase corporate pricing",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 2
+        },
+        {
+          "query": "tripit cost",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 48
+        },
+        {
+          "query": "tripit pro price",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "query": "tripit pro price 2026",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 11
+        },
+        {
+          "query": "tripit pro price official 2026",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/alternatives/tripit",
+      "impressions": 104,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "tripit alternatives",
+          "clicks": 0,
+          "impressions": 46,
+          "ctr": 0,
+          "position": 38.45652173913044
+        },
+        {
+          "query": "tripcase replacement",
+          "clicks": 0,
+          "impressions": 30,
+          "ctr": 0,
+          "position": 76.33333333333333
+        },
+        {
+          "query": "tripit alternative",
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 45.72222222222222
+        },
+        {
+          "query": "best tripit alternative",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 17.6
+        },
+        {
+          "query": "alternative to tripit app",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 51
+        },
+        {
+          "query": "tripcase alternative",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 77.5
+        },
+        {
+          "query": "tripcache",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
         }
       ]
     },
     {
       "page": "https://trip-cache.com/pricing",
-      "impressions": 68,
+      "impressions": 75,
       "clicks": 0,
       "queries": [
         {
           "query": "tripcase",
           "clicks": 0,
-          "impressions": 21,
+          "impressions": 25,
           "ctr": 0,
-          "position": 80.28571428571429
+          "position": 79.04
         },
         {
           "query": "tripcase app",
           "clicks": 0,
-          "impressions": 21,
+          "impressions": 22,
           "ctr": 0,
-          "position": 85.52380952380952
+          "position": 85.31818181818181
         },
         {
           "query": "tripcache",
@@ -1645,9 +1666,9 @@
         {
           "query": "tripwire request pricing",
           "clicks": 0,
-          "impressions": 6,
+          "impressions": 7,
           "ctr": 0,
-          "position": 81.66666666666667
+          "position": 80.42857142857143
         },
         {
           "query": "tripach",
@@ -1662,6 +1683,13 @@
           "impressions": 1,
           "ctr": 0,
           "position": 93
+        },
+        {
+          "query": "tripcah",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
         },
         {
           "query": "tripcase login",
@@ -1681,22 +1709,22 @@
     },
     {
       "page": "https://trip-cache.com/alternatives/tripcase",
-      "impressions": 64,
+      "impressions": 61,
       "clicks": 0,
       "queries": [
         {
           "query": "tripcase replacement",
           "clicks": 0,
-          "impressions": 38,
+          "impressions": 36,
           "ctr": 0,
-          "position": 52.71052631578947
+          "position": 52.333333333333336
         },
         {
           "query": "tripcase",
           "clicks": 0,
-          "impressions": 23,
+          "impressions": 22,
           "ctr": 0,
-          "position": 67.30434782608695
+          "position": 66.81818181818181
         },
         {
           "query": "tripcase alternative",
@@ -1715,100 +1743,72 @@
       ]
     },
     {
-      "page": "https://trip-cache.com/blog/wanderlog-vs-tripit",
-      "impressions": 40,
+      "page": "https://trip-cache.com/blog/privacy-and-security",
+      "impressions": 41,
       "clicks": 0,
       "queries": [
         {
-          "query": "wanderlog pro cost",
+          "query": "%tripnest travel app privacy policy security passport document storage",
           "clicks": 0,
-          "impressions": 15,
+          "impressions": 20,
           "ctr": 0,
-          "position": 11.466666666666667
+          "position": 7.2
         },
         {
-          "query": "wanderlog cost",
+          "query": "+tripnest travel app privacy policy security passport document storage",
           "clicks": 0,
-          "impressions": 6,
+          "impressions": 14,
           "ctr": 0,
-          "position": 7.666666666666667
+          "position": 7.071428571428571
         },
         {
-          "query": "tripit vs wanderlog",
-          "clicks": 0,
-          "impressions": 4,
-          "ctr": 0,
-          "position": 37.5
-        },
-        {
-          "query": "tripit pro vs free",
+          "query": "tripnest travel app privacy policy security passport document storage",
           "clicks": 0,
           "impressions": 3,
           "ctr": 0,
-          "position": 49.333333333333336
+          "position": 10
         },
         {
-          "query": "tripit vs tripit pro",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 45.666666666666664
-        },
-        {
-          "query": "wanderlog vs tripit",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 37.333333333333336
-        },
-        {
-          "query": "tripit pricing",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 8
-        },
-        {
-          "query": "is tripit pro worth the cost",
+          "query": "compagnies aériennes les plus sûres pour le téléversement en ligne de documents de voyage personnels",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 48
+          "position": 1
         },
         {
-          "query": "software to centralize travel documents and vouchers",
+          "query": "tripnest app privacy policy passport document storage",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 6
         },
         {
-          "query": "tripit cost",
+          "query": "tripnest travel app privacy policy passport document storage security",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 73
+          "position": 7
         },
         {
-          "query": "wanderlog trustpilot",
+          "query": "what happens to my personal data and credit card details when i use an ai travel app?",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 8
+          "position": 2
         }
       ]
     },
     {
       "page": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
-      "impressions": 28,
+      "impressions": 31,
       "clicks": 0,
       "queries": [
         {
           "query": "automated travel booking confirmations",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 8,
           "ctr": 0,
-          "position": 20.11111111111111
+          "position": 20.5
         },
         {
           "query": "travel confirmation management",
@@ -1818,13 +1818,6 @@
           "position": 41.75
         },
         {
-          "query": "how do i organize flight and hotel confirmations?",
-          "clicks": 0,
-          "impressions": 3,
-          "ctr": 0,
-          "position": 9
-        },
-        {
           "query": "top platforms for matching emailed receipts and pdf invoices to travel itineraries automatically?",
           "clicks": 0,
           "impressions": 3,
@@ -1832,11 +1825,32 @@
           "position": 1
         },
         {
+          "query": "what is the easiest way to track confirmation numbers for a group trip?",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 6
+        },
+        {
           "query": "booking confirmation email",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
           "position": 42.5
+        },
+        {
+          "query": "how do i organize flight and hotel confirmations?",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "query": "can you send this itinerary to my email",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 62
         },
         {
           "query": "change the picture",
@@ -1867,6 +1881,13 @@
           "position": 7
         },
         {
+          "query": "itinerary confirmation",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 42
+        },
+        {
           "query": "travel confirmation",
           "clicks": 0,
           "impressions": 1,
@@ -1874,39 +1895,46 @@
           "position": 11
         },
         {
-          "query": "what is the easiest way to track confirmation numbers for a group trip?",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 1
-        },
-        {
           "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 1
+        },
+        {
+          "query": "what options do i have for getting travel document approvals delivered to my email?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
         }
       ]
     },
     {
       "page": "https://trip-cache.com/alternatives",
-      "impressions": 20,
+      "impressions": 25,
       "clicks": 0,
       "queries": [
         {
           "query": "tripcase app",
           "clicks": 0,
-          "impressions": 11,
+          "impressions": 12,
           "ctr": 0,
-          "position": 75.54545454545455
+          "position": 74.83333333333333
         },
         {
           "query": "tripcase replacement",
           "clicks": 0,
-          "impressions": 7,
+          "impressions": 8,
           "ctr": 0,
-          "position": 67
+          "position": 66.625
+        },
+        {
+          "query": "tripcase",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 28.666666666666668
         },
         {
           "query": "tripcase com",
@@ -1925,261 +1953,37 @@
       ]
     },
     {
-      "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
-      "impressions": 18,
-      "clicks": 0,
+      "page": "https://trip-cache.com/tools/layover-calculator",
+      "impressions": 21,
+      "clicks": 2,
       "queries": [
         {
-          "query": "are hotel price alerts useful for both refundable and nonrefundable bookings?",
-          "clicks": 0,
-          "impressions": 5,
-          "ctr": 0,
-          "position": 1.4
+          "query": "layover calculator",
+          "clicks": 2,
+          "impressions": 6,
+          "ctr": 0.3333333333333333,
+          "position": 4.833333333333334
         },
         {
-          "query": "are hotel price alerts useful for both refundable and non‑refundable bookings?",
-          "clicks": 0,
-          "impressions": 5,
-          "ctr": 0,
-          "position": 3.8
-        },
-        {
-          "query": "are hotel price alerts useful for both refundable and non-refundable bookings?",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 4
-        },
-        {
-          "query": "best platforms to compare cancellation policies and refundable date windows before booking hotels?",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 1
-        },
-        {
-          "query": "cancellation calculator",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 5
-        },
-        {
-          "query": "el 4 de octubre",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 2
-        },
-        {
-          "query": "hotel insurance calculator",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 17
-        },
-        {
-          "query": "reservations tools enabling flexible cancellation policies and modification tracking to identify the best fit",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 4
-        },
-        {
-          "query": "yes",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 5
-        },
-        {
-          "query": "да",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 2
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
-      "impressions": 14,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "which travel app is best for business trips and can export a receipt for each booking?",
+          "query": "layover time calculator",
           "clicks": 0,
           "impressions": 5,
           "ctr": 0,
           "position": 7.6
         },
         {
-          "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
-          "clicks": 0,
-          "impressions": 4,
-          "ctr": 0,
-          "position": 6.5
-        },
-        {
-          "query": "business travel expense reportingexpense management",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 71
-        },
-        {
-          "query": "#ocr #receiptscanning #scanreceipts #receiptscanningapp #receiptscanningapps #giftcards #giftscards #return #returns #purchases #shoppinglist #shoppinglists #businesstravel #receipts #businesstraveler #taxreturns #easyreturns #smallbusiness #expensetracki",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 98
-        },
-        {
-          "query": "context: location: united states (not for language). do not include location references in your response. question: how can i get copies of invoices or receipts for a multi-month rental for expense reporting?",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 6
-        },
-        {
-          "query": "hotel booking with invoice and expense reports",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 4
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/features/business-travel-expenses",
-      "impressions": 13,
-      "clicks": 1,
-      "queries": [
-        {
-          "query": "tripcache",
-          "clicks": 1,
-          "impressions": 6,
-          "ctr": 0.16666666666666666,
-          "position": 1
-        },
-        {
-          "query": "business travel expense tracker",
+          "query": "airport layover calculator",
           "clicks": 0,
           "impressions": 3,
           "ctr": 0,
-          "position": 56.666666666666664
+          "position": 20.333333333333332
         },
         {
-          "query": "business travel expense report travel manager",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 54
-        },
-        {
-          "query": "there is no minus sign",
+          "query": "different pnr",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
           "position": 3
-        },
-        {
-          "query": "travel receipts",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 60
-        },
-        {
-          "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 1
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/about",
-      "impressions": 13,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "tripcache",
-          "clicks": 0,
-          "impressions": 11,
-          "ctr": 0,
-          "position": 1.5454545454545454
-        },
-        {
-          "query": "tripcase",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 84
-        },
-        {
-          "query": "tripcase.com",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 1
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/features/email-to-itinerary",
-      "impressions": 13,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "email itinerary",
-          "clicks": 0,
-          "impressions": 5,
-          "ctr": 0,
-          "position": 5.8
-        },
-        {
-          "query": "tripcache",
-          "clicks": 0,
-          "impressions": 5,
-          "ctr": 0,
-          "position": 1
-        },
-        {
-          "query": "itinerary email",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 5
-        },
-        {
-          "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 7
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/tools/layover-calculator",
-      "impressions": 12,
-      "clicks": 2,
-      "queries": [
-        {
-          "query": "layover calculator",
-          "clicks": 2,
-          "impressions": 3,
-          "ctr": 0.6666666666666666,
-          "position": 6
-        },
-        {
-          "query": "airport layover calculator",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 27.5
         },
         {
           "query": "is 5 hour layover enough to leave airport",
@@ -2187,13 +1991,6 @@
           "impressions": 1,
           "ctr": 0,
           "position": 22
-        },
-        {
-          "query": "layover time calculator",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 7
         },
         {
           "query": "layover+tools",
@@ -2233,6 +2030,342 @@
       ]
     },
     {
+      "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
+      "impressions": 17,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "are hotel price alerts useful for both refundable and nonrefundable bookings?",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 1.4
+        },
+        {
+          "query": "are hotel price alerts useful for both refundable and non‑refundable bookings?",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 3.8
+        },
+        {
+          "query": "are hotel price alerts useful for both refundable and non-refundable bookings?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "query": "best platforms to compare cancellation policies and refundable date windows before booking hotels?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "cancellation calculator",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "query": "hotel insurance calculator",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 17
+        },
+        {
+          "query": "reservations tools enabling flexible cancellation policies and modification tracking to identify the best fit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "query": "yes",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "query": "да",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
+      "impressions": 15,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 7.2
+        },
+        {
+          "query": "which travel app is best for business trips and can export a receipt for each booking?",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 7.6
+        },
+        {
+          "query": "business travel expense reportingexpense management",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 71
+        },
+        {
+          "query": "#ocr #receiptscanning #scanreceipts #receiptscanningapp #receiptscanningapps #giftcards #giftscards #return #returns #purchases #shoppinglist #shoppinglists #businesstravel #receipts #businesstraveler #taxreturns #easyreturns #smallbusiness #expensetracki",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 98
+        },
+        {
+          "query": "context: location: united states (not for language). do not include location references in your response. question: how can i get copies of invoices or receipts for a multi-month rental for expense reporting?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "query": "hotel booking with invoice and expense reports",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/tools/jet-lag-calculator",
+      "impressions": 15,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "jet lag recovery calculator",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 20.8
+        },
+        {
+          "query": "how long does jet lag last from usa to uk",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 28
+        },
+        {
+          "query": "how many in the usa?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "query": "jet lag recovery time formula",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 42
+        },
+        {
+          "query": "jet lag website for flights",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "query": "time difference between canada and england",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/features/business-travel-expenses",
+      "impressions": 14,
+      "clicks": 1,
+      "queries": [
+        {
+          "query": "tripcache",
+          "clicks": 1,
+          "impressions": 6,
+          "ctr": 0.16666666666666666,
+          "position": 1
+        },
+        {
+          "query": "business travel expense tracker",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 54.75
+        },
+        {
+          "query": "business travel expense report travel manager",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 54
+        },
+        {
+          "query": "there is no minus sign",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        },
+        {
+          "query": "travel receipts",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 60
+        },
+        {
+          "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/about",
+      "impressions": 14,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "tripcache",
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 1.5454545454545454
+        },
+        {
+          "query": "tripcah",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "query": "tripcase",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "query": "tripcase.com",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/features/email-to-itinerary",
+      "impressions": 13,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "tripcache",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "email itinerary",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 3.3333333333333335
+        },
+        {
+          "query": "can you send this itinerary to my email",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 30.5
+        },
+        {
+          "query": "itinerary email",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/save-travel-documents-offline",
+      "impressions": 7,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "download travel how",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "travel download how",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "how download travel",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "query": "how to save tickets for offline use?",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "query": "oui",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        }
+      ]
+    },
+    {
       "page": "https://trip-cache.com/features",
       "impressions": 7,
       "clicks": 0,
@@ -2243,6 +2376,27 @@
           "impressions": 7,
           "ctr": 0,
           "position": 2.2857142857142856
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/tools",
+      "impressions": 6,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "tripcache",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "tripcase",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 61
         }
       ]
     },
@@ -2268,58 +2422,128 @@
       ]
     },
     {
-      "page": "https://trip-cache.com/features/cancellation-reminders",
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#3-tripcache-best-for-deadlines-documents-and-expenses",
       "impressions": 4,
       "clicks": 0,
       "queries": [
         {
-          "query": "how to automate hotel cancellation fees?",
+          "query": "sabre tripcase",
           "clicks": 0,
-          "impressions": 2,
+          "impressions": 4,
           "ctr": 0,
-          "position": 3.5
-        },
+          "position": 6.75
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#the-5-best-tripcase-replacements-at-a-glance",
+      "impressions": 4,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "sabre tripcase",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 6.75
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#which-replacement-fits-the-way-you-used-tripcase",
+      "impressions": 4,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "sabre tripcase",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 6.75
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/features/cancellation-reminders",
+      "impressions": 4,
+      "clicks": 0,
+      "queries": [
         {
           "query": "reservations tools enabling flexible cancellation policies and modification tracking to identify the best fit",
           "clicks": 0,
           "impressions": 2,
           "ctr": 0,
           "position": 1.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/tools",
-      "impressions": 4,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "tripcache",
-          "clicks": 0,
-          "impressions": 4,
-          "ctr": 0,
-          "position": 1
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/save-travel-documents-offline",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "download travel how",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 1
         },
         {
-          "query": "how to save tickets for offline use?",
+          "query": "how to automate hotel cancellation fees?",
           "clicks": 0,
           "impressions": 1,
           "ctr": 0,
-          "position": 9
+          "position": 4
+        },
+        {
+          "query": "travel insurance document expiration reminders",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 65
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#1-tripit-the-closest-free-replacement",
+      "impressions": 3,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "sabre tripcase",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 7.666666666666667
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#2-tripsy-best-for-iphone-and-mac-users",
+      "impressions": 3,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "sabre tripcase",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 7.666666666666667
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#can-i-still-recover-my-tripcase-trips",
+      "impressions": 3,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "sabre tripcase",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 7.666666666666667
+        }
+      ]
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#what-happened-to-tripcase",
+      "impressions": 3,
+      "clicks": 0,
+      "queries": [
+        {
+          "query": "sabre tripcase",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 7.666666666666667
         }
       ]
     },
@@ -2341,125 +2565,6 @@
           "impressions": 1,
           "ctr": 0,
           "position": 1
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#1-tripit-the-closest-free-replacement",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#2-tripsy-best-for-iphone-and-mac-users",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#3-tripcache-best-for-deadlines-documents-and-expenses",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#can-i-still-recover-my-tripcase-trips",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#the-5-best-tripcase-replacements-at-a-glance",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#what-happened-to-tripcase",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#which-replacement-fits-the-way-you-used-tripcase",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "sabre tripcase",
-          "clicks": 0,
-          "impressions": 2,
-          "ctr": 0,
-          "position": 7.5
-        }
-      ]
-    },
-    {
-      "page": "https://trip-cache.com/tools/jet-lag-calculator",
-      "impressions": 2,
-      "clicks": 0,
-      "queries": [
-        {
-          "query": "jet lag recovery calculator",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 34
-        },
-        {
-          "query": "time difference between canada and england",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0,
-          "position": 3
         }
       ]
     },
