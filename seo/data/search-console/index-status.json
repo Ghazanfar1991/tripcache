@@ -1,6 +1,6 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-10-12T17:14:21.090Z",
+  "generatedAt": "2026-10-13T15:30:47.555Z",
   "sitemapUrls": 46,
   "indexed": 35,
   "notIndexed": 11,
@@ -28,12 +28,12 @@
     {
       "path": "/blog/travel-booking-organizer-app-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/ai-trip-planner-2026",
@@ -43,7 +43,7 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/travel-itinerary-template-2026",
@@ -63,7 +63,7 @@
     {
       "path": "/blog/email-to-trip-automation",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     }
   ],
   "sitemaps": [
@@ -128,23 +128,6 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-10-04T17:06:38.035Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/email-to-trip-automation",
-      "verdict": "NEUTRAL",
       "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
@@ -158,6 +141,23 @@
         "/blog",
         "/sitemap.xml"
       ],
+      "richResults": null,
+      "firstSeenAt": "2026-10-04T17:06:38.035Z",
+      "indexedSince": null
+    },
+    {
+      "path": "/blog/email-to-trip-automation",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexed": false,
+      "lastCrawlTime": null,
+      "googleCanonical": null,
+      "userCanonical": null,
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:07:29.963Z",
       "indexedSince": null
@@ -203,7 +203,7 @@
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -211,10 +211,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:24.667Z",
       "indexedSince": null
@@ -241,7 +239,7 @@
     {
       "path": "/blog/travel-booking-organizer-app-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -249,8 +247,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/sitemap.xml"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:05:50.124Z",
       "indexedSince": null
@@ -357,7 +357,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-27T19:21:32Z",
+      "lastCrawlTime": "2026-10-13T05:55:21Z",
       "googleCanonical": "https://trip-cache.com/alternatives/tripcase",
       "userCanonical": "https://trip-cache.com/alternatives/tripcase",
       "robotsTxtState": "ALLOWED",
@@ -505,7 +505,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-19T23:33:55Z",
+      "lastCrawlTime": "2026-10-13T10:05:21Z",
       "googleCanonical": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "userCanonical": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
       "robotsTxtState": "ALLOWED",
@@ -788,7 +788,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-06T16:37:09Z",
+      "lastCrawlTime": "2026-10-13T11:45:26Z",
       "googleCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "userCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "robotsTxtState": "ALLOWED",
@@ -815,7 +815,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-25T19:13:28Z",
+      "lastCrawlTime": "2026-10-13T10:55:22Z",
       "googleCanonical": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "userCanonical": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
       "robotsTxtState": "ALLOWED",
