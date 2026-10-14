@@ -1,19 +1,20 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-10-13T15:30:47.555Z",
+  "generatedAt": "2026-10-14T13:16:59.948Z",
   "sitemapUrls": 46,
-  "indexed": 35,
+  "indexed": 34,
   "notIndexed": 11,
   "byCoverageState": {
-    "Submitted and indexed": 35,
-    "Discovered - currently not indexed": 9,
-    "URL is unknown to Google": 2
+    "Submitted and indexed": 34,
+    "INSPECTION_ERROR: 500": 1,
+    "URL is unknown to Google": 3,
+    "Discovered - currently not indexed": 8
   },
   "issues": [
     {
       "path": "/tools/flight-arrival-time-calculator",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/account-delete",
@@ -23,7 +24,7 @@
     {
       "path": "/blog/flight-time-zones-arrival-date",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/travel-booking-organizer-app-2026",
@@ -33,7 +34,7 @@
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/ai-trip-planner-2026",
@@ -43,7 +44,7 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/travel-itinerary-template-2026",
@@ -63,7 +64,7 @@
     {
       "path": "/blog/email-to-trip-automation",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     }
   ],
   "sitemaps": [
@@ -89,6 +90,12 @@
     }
   ],
   "pages": [
+    {
+      "path": "/about",
+      "verdict": null,
+      "coverageState": "INSPECTION_ERROR: 500",
+      "indexed": null
+    },
     {
       "path": "/account-delete",
       "verdict": "NEUTRAL",
@@ -128,6 +135,23 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexed": false,
+      "lastCrawlTime": null,
+      "googleCanonical": null,
+      "userCanonical": null,
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "crawledAs": null,
+      "referringUrls": [],
+      "richResults": null,
+      "firstSeenAt": "2026-10-04T17:06:38.035Z",
+      "indexedSince": null
+    },
+    {
+      "path": "/blog/email-to-trip-automation",
+      "verdict": "NEUTRAL",
       "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
@@ -142,11 +166,11 @@
         "/sitemap.xml"
       ],
       "richResults": null,
-      "firstSeenAt": "2026-10-04T17:06:38.035Z",
+      "firstSeenAt": "2026-10-04T17:07:29.963Z",
       "indexedSince": null
     },
     {
-      "path": "/blog/email-to-trip-automation",
+      "path": "/blog/flight-time-zones-arrival-date",
       "verdict": "NEUTRAL",
       "coverageState": "URL is unknown to Google",
       "indexed": false,
@@ -158,25 +182,6 @@
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "crawledAs": null,
       "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-10-04T17:07:29.963Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/flight-time-zones-arrival-date",
-      "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/sitemap.xml"
-      ],
       "richResults": null,
       "firstSeenAt": "2026-10-05T16:40:25.458Z",
       "indexedSince": null
@@ -203,7 +208,7 @@
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -211,8 +216,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:24.667Z",
       "indexedSince": null
@@ -278,7 +285,7 @@
     {
       "path": "/tools/flight-arrival-time-calculator",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -286,10 +293,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-05T16:38:43.041Z",
       "indexedSince": null
@@ -313,25 +318,6 @@
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:03:23.807Z",
       "indexedSince": "2026-10-04T17:03:23.807Z"
-    },
-    {
-      "path": "/about",
-      "verdict": "PASS",
-      "coverageState": "Submitted and indexed",
-      "indexed": true,
-      "lastCrawlTime": "2026-10-04T23:36:21Z",
-      "googleCanonical": "https://trip-cache.com/about",
-      "userCanonical": "https://trip-cache.com/about",
-      "robotsTxtState": "ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "indexingState": "INDEXING_ALLOWED",
-      "crawledAs": "MOBILE",
-      "referringUrls": [
-        "/blog/tripcase-shutdown-what-now"
-      ],
-      "richResults": null,
-      "firstSeenAt": "2026-10-04T17:03:30.226Z",
-      "indexedSince": "2026-10-04T17:03:30.226Z"
     },
     {
       "path": "/alternatives",
@@ -478,7 +464,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-04T03:21:37Z",
+      "lastCrawlTime": "2026-10-13T23:25:21Z",
       "googleCanonical": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "userCanonical": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "robotsTxtState": "ALLOWED",
@@ -589,7 +575,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-08-17T03:00:38Z",
+      "lastCrawlTime": "2026-10-14T03:12:41Z",
       "googleCanonical": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
       "userCanonical": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
       "robotsTxtState": "ALLOWED",
@@ -597,7 +583,15 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [],
-      "richResults": null,
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
       "firstSeenAt": "2026-10-04T17:05:24.672Z",
       "indexedSince": "2026-10-04T17:05:24.672Z"
     },
@@ -633,7 +627,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-04T02:44:07Z",
+      "lastCrawlTime": "2026-10-13T19:40:22Z",
       "googleCanonical": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "userCanonical": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "robotsTxtState": "ALLOWED",
@@ -1048,7 +1042,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-05T04:50:08Z",
+      "lastCrawlTime": "2026-10-13T15:55:22Z",
       "googleCanonical": "https://trip-cache.com/tools",
       "userCanonical": "https://trip-cache.com/tools",
       "robotsTxtState": "ALLOWED",
@@ -1095,7 +1089,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-07T09:56:01Z",
+      "lastCrawlTime": "2026-10-13T20:55:24Z",
       "googleCanonical": "https://trip-cache.com/tools/jet-lag-calculator",
       "userCanonical": "https://trip-cache.com/tools/jet-lag-calculator",
       "robotsTxtState": "ALLOWED",

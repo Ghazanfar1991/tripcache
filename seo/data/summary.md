@@ -1,12 +1,12 @@
-# TripCache SEO summary — 2026-10-14
+# TripCache SEO summary — 2026-10-15
 
-Generated 2026-10-13T15:31:01.771Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-09-14 → 2026-10-11.
+Generated 2026-10-14T13:17:12.323Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-09-14 → 2026-10-12.
 
 ## Data sources
 
 - search-console: **SUCCESS** (fresh) — Search Console API via the repository-scoped short-lived Google token.
-- index-status: **SUCCESS** (fresh) — 35/46 sitemap URLs indexed.
-- ga4-web: **SUCCESS** (fresh) — Store intent 8.3% (19/229 users, 28 days).
+- index-status: **SUCCESS** (fresh) — 34/46 sitemap URLs indexed; 1 inspections failed.
+- ga4-web: **SUCCESS** (fresh) — Store intent 8.5% (20/235 users, 28 days).
 - site-health: **SUCCESS** (fresh) — 46 sitemap URLs verified; 0 warnings.
 
 ## Google Search, last 28 days
@@ -19,19 +19,19 @@ Change is versus the previous 28 days.
 
 ## Indexing
 
-35/46 sitemap URLs indexed (checked 2026-10-13).
+34/46 sitemap URLs indexed (checked 2026-10-14).
 
 - `/account-delete` — Discovered - currently not indexed (never crawled)
 - `/blog/ai-trip-planner-2026` — Discovered - currently not indexed (never crawled)
-- `/blog/business-travel-management-guide-2026` — Discovered - currently not indexed (never crawled)
-- `/blog/email-to-trip-automation` — URL is unknown to Google (never crawled)
-- `/blog/flight-time-zones-arrival-date` — Discovered - currently not indexed (never crawled)
+- `/blog/business-travel-management-guide-2026` — URL is unknown to Google (never crawled)
+- `/blog/email-to-trip-automation` — Discovered - currently not indexed (never crawled)
+- `/blog/flight-time-zones-arrival-date` — URL is unknown to Google (never crawled)
 - `/blog/flighty-vs-tripcache-2026` — Discovered - currently not indexed (never crawled)
-- `/blog/free-cancellation-reminder-travel-bookings-2026` — URL is unknown to Google (never crawled)
+- `/blog/free-cancellation-reminder-travel-bookings-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/google-travel-alternative-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/travel-booking-organizer-app-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/travel-itinerary-template-2026` — Discovered - currently not indexed (never crawled)
-- `/tools/flight-arrival-time-calculator` — Discovered - currently not indexed (never crawled)
+- `/tools/flight-arrival-time-calculator` — URL is unknown to Google (never crawled)
 
 Other Search Console issues (structured data, canonicals, fetch, robots, sitemap):
 
@@ -41,7 +41,7 @@ Other Search Console issues (structured data, canonicals, fetch, robots, sitemap
 
 | Page | Clicks | Impr | CTR | Pos | Store-click users |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| `/blog/tripcase-shutdown-what-now` | 23 | 2385 | 1.0% | 6.3 | 2 |
+| `/blog/tripcase-shutdown-what-now` | 23 | 2385 | 1.0% | 6.3 | 3 |
 | `/blog/how-to-find-your-travel-history` | 16 | 2122 | 0.8% | 7.2 | 1 |
 | `/` | 13 | 453 | 2.9% | 15.5 | 8 |
 | `/blog/best-travel-apps-2025` | 8 | 1218 | 0.7% | 13.8 | 2 |
@@ -62,7 +62,7 @@ Other Search Console issues (structured data, canonicals, fetch, robots, sitemap
 | `/alternatives/tripit` | 0 | 106 | 0.0% | 45.7 | 0 |
 | `/blog` | 0 | 144 | 0.0% | 38.1 | 0 |
 
-Website store intent: 8.3% of 229 visitors clicked an App Store/Play link (GA4, 28 days).
+Website store intent: 8.5% of 235 visitors clicked an App Store/Play link (GA4, 28 days).
 
 ## Quick wins (position 4–20, weak CTR)
 
@@ -159,4 +159,4 @@ Website store intent: 8.3% of 229 visitors clicked an App Store/Play link (GA4, 
 
 ## Site health
 
-PASS — 0 failures, 0 warnings (https://trip-cache.com, 2026-10-13).
+PASS — 0 failures, 0 warnings (https://trip-cache.com, 2026-10-14).
