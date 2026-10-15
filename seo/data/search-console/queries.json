@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-14T13:11:56.304Z",
+  "generatedAt": "2026-10-15T12:58:27.458Z",
   "period": {
-    "startDate": "2026-09-14",
+    "startDate": "2026-09-15",
     "endDate": "2026-10-12"
   },
   "topQueries": [
@@ -15,30 +15,37 @@
     {
       "query": "tripcase",
       "clicks": 9,
-      "impressions": 1027,
-      "ctr": 0.008763388510223954,
-      "position": 9.78286270691334
+      "impressions": 1030,
+      "ctr": 0.008737864077669903,
+      "position": 9.609708737864077
     },
     {
       "query": "layover calculator",
       "clicks": 2,
-      "impressions": 9,
-      "ctr": 0.2222222222222222,
-      "position": 5
+      "impressions": 14,
+      "ctr": 0.14285714285714285,
+      "position": 4.714285714285714
+    },
+    {
+      "query": "trip case app",
+      "clicks": 2,
+      "impressions": 43,
+      "ctr": 0.046511627906976744,
+      "position": 7.627906976744186
     },
     {
       "query": "tripcase alternative",
       "clicks": 2,
-      "impressions": 55,
-      "ctr": 0.03636363636363636,
-      "position": 10.927272727272728
+      "impressions": 56,
+      "ctr": 0.03571428571428571,
+      "position": 10.785714285714286
     },
     {
       "query": "tripcase app",
       "clicks": 2,
       "impressions": 149,
       "ctr": 0.013422818791946308,
-      "position": 11.268456375838927
+      "position": 11.10738255033557
     },
     {
       "query": "alternative",
@@ -46,13 +53,6 @@
       "impressions": 3,
       "ctr": 0.3333333333333333,
       "position": 5
-    },
-    {
-      "query": "alternative to wanderlog",
-      "clicks": 1,
-      "impressions": 1,
-      "ctr": 1,
-      "position": 4
     },
     {
       "query": "check travel history",
@@ -71,30 +71,23 @@
     {
       "query": "i94 travel history",
       "clicks": 1,
-      "impressions": 234,
-      "ctr": 0.004273504273504274,
-      "position": 7.337606837606837
+      "impressions": 245,
+      "ctr": 0.004081632653061225,
+      "position": 7.457142857142857
     },
     {
       "query": "sabre tripcase",
       "clicks": 1,
-      "impressions": 16,
-      "ctr": 0.0625,
-      "position": 6.25
+      "impressions": 15,
+      "ctr": 0.06666666666666667,
+      "position": 5.933333333333334
     },
     {
       "query": "trip case",
       "clicks": 1,
-      "impressions": 189,
-      "ctr": 0.005291005291005291,
-      "position": 9.317460317460318
-    },
-    {
-      "query": "trip case app",
-      "clicks": 1,
-      "impressions": 42,
-      "ctr": 0.023809523809523808,
-      "position": 7.761904761904762
+      "impressions": 186,
+      "ctr": 0.005376344086021506,
+      "position": 9.365591397849462
     },
     {
       "query": "tripcase manage my booking",
@@ -104,11 +97,18 @@
       "position": 3
     },
     {
+      "query": "tripit vs wanderlog",
+      "clicks": 1,
+      "impressions": 6,
+      "ctr": 0.16666666666666666,
+      "position": 26
+    },
+    {
       "query": "yes",
       "clicks": 1,
-      "impressions": 9,
-      "ctr": 0.1111111111111111,
-      "position": 6.222222222222222
+      "impressions": 8,
+      "ctr": 0.125,
+      "position": 7.125
     },
     {
       "query": "#ocr #receiptscanning #scanreceipts #receiptscanningapp #receiptscanningapps #giftcards #giftscards #return #returns #purchases #shoppinglist #shoppinglists #businesstravel #receipts #businesstraveler #taxreturns #easyreturns #smallbusiness #expensetracki",
@@ -127,9 +127,16 @@
     {
       "query": "+tripnest travel app privacy policy security passport document storage",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0,
-      "position": 6.571428571428571
+      "position": 6.4
+    },
+    {
+      "query": "1 94 travel history",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "query": "101hotel",
@@ -183,9 +190,16 @@
     {
       "query": "alternatives to tripit",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 9.166666666666666
+      "position": 8.8
+    },
+    {
+      "query": "and bookings in one place",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 19.5
     },
     {
       "query": "any other ideas",
@@ -218,9 +232,9 @@
     {
       "query": "app for travel documents",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 12
+      "position": 10.333333333333334
     },
     {
       "query": "app that organizes all travel in emails",
@@ -342,11 +356,11 @@
       "position": 49
     },
     {
-      "query": "best app for planning trips",
+      "query": "best app for planning travel itinerary",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 48.5
+      "position": 64
     },
     {
       "query": "best app for travel day flight updates",
@@ -354,13 +368,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 11
-    },
-    {
-      "query": "best app for travel documents",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 16
     },
     {
       "query": "best app for travel itinerary",
@@ -375,13 +382,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
-    },
-    {
-      "query": "best app to organize travel plans",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 56
     },
     {
       "query": "best app to organize your travel itinerary",
@@ -421,16 +421,9 @@
     {
       "query": "best itinerary app",
       "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 43.833333333333336
-    },
-    {
-      "query": "best itinerary planner app",
-      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 55
+      "position": 51
     },
     {
       "query": "best offline travel planners for iphone",
@@ -452,13 +445,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 9
-    },
-    {
-      "query": "best personalized trip planning services and booking support for efficient itineraries",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
     },
     {
       "query": "best planning apps",
@@ -484,9 +470,9 @@
     {
       "query": "best sites for managing group travel itineraries?",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 1.3333333333333333
+      "position": 1.4
     },
     {
       "query": "best travel",
@@ -498,23 +484,23 @@
     {
       "query": "best travel apps 2026",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 20
+      "position": 13.5
     },
     {
       "query": "best travel apps for managing flight itineraries and mobile check-in?",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 12,
       "ctr": 0,
-      "position": 2.4
+      "position": 2.583333333333333
     },
     {
       "query": "best travel apps for planning",
       "clicks": 0,
-      "impressions": 135,
+      "impressions": 103,
       "ctr": 0,
-      "position": 4.637037037037037
+      "position": 3.2135922330097086
     },
     {
       "query": "best travel arrangement software for duty of care and traveler safety tracking during business trips?",
@@ -540,9 +526,9 @@
     {
       "query": "best travel itinerary app",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 1,
       "ctr": 0,
-      "position": 47.2
+      "position": 43
     },
     {
       "query": "best travel itinerary apps",
@@ -594,18 +580,11 @@
       "position": 42
     },
     {
-      "query": "best travel organizer app",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 40
-    },
-    {
       "query": "best travel planner app",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 48
+      "position": 50.5
     },
     {
       "query": "best travel planning and booking apps 2026",
@@ -617,16 +596,16 @@
     {
       "query": "best travel planning app",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 46.5
+      "position": 47
     },
     {
       "query": "best travel planning apps",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 1,
       "ctr": 0,
-      "position": 50.4
+      "position": 64
     },
     {
       "query": "best travel planning apps 2026",
@@ -634,13 +613,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 54
-    },
-    {
-      "query": "best travel planning websites 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 49
     },
     {
       "query": "best trip itinerary app",
@@ -652,16 +624,16 @@
     {
       "query": "best trip management app",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 56
+      "position": 55
     },
     {
       "query": "best trip manager app",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 50
+      "position": 50.5
     },
     {
       "query": "best trip organizer app",
@@ -673,16 +645,16 @@
     {
       "query": "best trip planner app",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 50
+      "position": 49.5
     },
     {
       "query": "best trip planning app",
       "clicks": 0,
       "impressions": 3,
       "ctr": 0,
-      "position": 49.666666666666664
+      "position": 47.666666666666664
     },
     {
       "query": "best tripit alternative",
@@ -710,7 +682,7 @@
       "clicks": 0,
       "impressions": 9,
       "ctr": 0,
-      "position": 18.444444444444443
+      "position": 18.77777777777778
     },
     {
       "query": "beware of cancelation policy!",
@@ -725,6 +697,13 @@
       "impressions": 2,
       "ctr": 0,
       "position": 42.5
+    },
+    {
+      "query": "border crossing record",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "query": "business travel expense management",
@@ -781,6 +760,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 9
+    },
+    {
+      "query": "can i check travel history with passport number",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "query": "can i get my money back if i check out early from a hotel",
@@ -930,6 +916,13 @@
       "position": 1
     },
     {
+      "query": "cbp history travel",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
       "query": "cbp i 94 travel history",
       "clicks": 0,
       "impressions": 2,
@@ -939,9 +932,9 @@
     {
       "query": "cbp i-94 travel history",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 6.714285714285714
+      "position": 10.625
     },
     {
       "query": "cbp i94 travel history",
@@ -953,9 +946,9 @@
     {
       "query": "cbp travel history",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 11,
       "ctr": 0,
-      "position": 6.25
+      "position": 6.545454545454546
     },
     {
       "query": "cbp view travel history",
@@ -972,11 +965,25 @@
       "position": 5
     },
     {
+      "query": "check my travel history",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
       "query": "check my us entry dates",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 8
+    },
+    {
+      "query": "check my us travel history",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
     },
     {
       "query": "check travel dates",
@@ -988,9 +995,23 @@
     {
       "query": "check travel history by passport number",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.666666666666667
+    },
+    {
+      "query": "check us entry and exit dates",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "check us entry dates",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
     },
     {
       "query": "check us travel history",
@@ -1005,6 +1026,13 @@
       "impressions": 5,
       "ctr": 0,
       "position": 7.4
+    },
+    {
+      "query": "check usa travel history",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
     },
     {
       "query": "compare itinerary template options available through google with other alternatives to help determine the best choice for your travel planning needs.",
@@ -1077,6 +1105,13 @@
       "position": 1
     },
     {
+      "query": "context: location: united states (not for language). do not include location references in your response. question: what are the most innovative travel apps currently available?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
       "query": "context: location: united states (not for language). do not include location references in your response. question: what should i know about orlando hotel cancellation policies and deposit rules before i book, especially if my plans might change?",
       "clicks": 0,
       "impressions": 2,
@@ -1100,9 +1135,9 @@
     {
       "query": "digital document organizers for itinerary management",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 20,
       "ctr": 0,
-      "position": 6.411764705882353
+      "position": 6.35
     },
     {
       "query": "do hotels have cancellation fees",
@@ -1114,9 +1149,9 @@
     {
       "query": "do you have any recent travel history in the last 30 days",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 16,
       "ctr": 0,
-      "position": 6.266666666666667
+      "position": 6.25
     },
     {
       "query": "do you have any recent travel history in the last 30 days?",
@@ -1131,6 +1166,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 18
+    },
+    {
+      "query": "does it cost money?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "query": "does the novotel hotel in toronto allow free cancellation up to the day of arrival if plans change?",
@@ -1156,9 +1198,9 @@
     {
       "query": "download travel how",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 1.3333333333333333
+      "position": 5
     },
     {
       "query": "easiest platforms for managing travel bookings?",
@@ -1170,9 +1212,9 @@
     {
       "query": "email itinerary",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 4.25
+      "position": 9.4
     },
     {
       "query": "en la pagina web",
@@ -1182,11 +1224,18 @@
       "position": 15
     },
     {
-      "query": "est-ce que je peux gérer tout mon itinéraire dans une seule app de réservation de voyage ?",
+      "query": "entry and exit records united states",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 1
+      "position": 48
+    },
+    {
+      "query": "est-ce que je peux gérer tout mon itinéraire dans une seule app de réservation de voyage ?",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
     },
     {
       "query": "evaluate the online travel platform google travel on mobile app competitor comparison",
@@ -1222,6 +1271,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 35
+    },
+    {
+      "query": "fix history travel",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "query": "free travel history",
@@ -1273,11 +1329,18 @@
       "position": 9
     },
     {
+      "query": "gezilecek yerler arasındaki yürüme sürelerini de hesaba katarak bir gezi rotası planlamak için en iyi araç hangisi?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
       "query": "google trips alternative",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 37.92857142857143
+      "position": 37.61538461538461
     },
     {
       "query": "google trips alternatives",
@@ -1315,6 +1378,13 @@
       "position": 40
     },
     {
+      "query": "history travel how",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
       "query": "history travel usa",
       "clicks": 0,
       "impressions": 2,
@@ -1331,9 +1401,9 @@
     {
       "query": "holiday planner app",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 58.5
+      "position": 60
     },
     {
       "query": "hotel booking with invoice and expense reports",
@@ -1422,9 +1492,9 @@
     {
       "query": "how can a business traveler track all hotel and flight bookings made across expedia and trip.com in one place?",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 8
+      "position": 6.5
     },
     {
       "query": "how can i check my travel history online",
@@ -1432,6 +1502,13 @@
       "impressions": 3,
       "ctr": 0,
       "position": 7.666666666666667
+    },
+    {
+      "query": "how can i check my us travel history",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
     },
     {
       "query": "how can i find out my travel history",
@@ -1446,6 +1523,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 8
+    },
+    {
+      "query": "how can i simplify logistics with trusted trip management tools?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "query": "how do i check my travel history",
@@ -1464,9 +1548,9 @@
     {
       "query": "how do i organize flight and hotel confirmations?",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 11
+      "position": 10
     },
     {
       "query": "how does a non-refundable booking typically affect cancellation policies? * 1 point full refund if cancelled within 24 hours refund only if rescheduled no refund is given regardless of cancellation timing partial refund after a cancellation fee",
@@ -1588,6 +1672,13 @@
       "position": 6
     },
     {
+      "query": "how to check my us entry record",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
       "query": "how to check travel history",
       "clicks": 0,
       "impressions": 3,
@@ -1618,9 +1709,9 @@
     {
       "query": "how to check us entry record",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 15.5
+      "position": 21.666666666666668
     },
     {
       "query": "how to check us visit history",
@@ -1663,134 +1754,43 @@
       "impressions": 1,
       "ctr": 0,
       "position": 8
-    },
-    {
-      "query": "how to get travel history",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    {
-      "query": "how to get us travel history",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "query": "how to get your travel history",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "query": "how to keep track of travel itineraries for multiple employees",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    {
-      "query": "how to organize travel documents",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 19
-    },
-    {
-      "query": "how to save tickets for offline use?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "query": "how to see my travel history",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "query": "how well do travel planning apps integrate with booking services?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "query": "https://wanderlog.com",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 94
-    },
-    {
-      "query": "https://www.tripcase.com",
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 8.28125
-    },
-    {
-      "query": "i 94 history",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 61
-    },
-    {
-      "query": "i 94 travel history",
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 7.714285714285714
-    },
-    {
-      "query": "i am a us citizen",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 3
     }
   ],
   "ctrOpportunities": [
     {
       "query": "tripcase",
       "clicks": 9,
-      "impressions": 1027,
-      "ctr": 0.008763388510223954,
-      "position": 9.78286270691334
+      "impressions": 1030,
+      "ctr": 0.008737864077669903,
+      "position": 9.609708737864077
     },
     {
       "query": "i94 travel history",
       "clicks": 1,
-      "impressions": 234,
-      "ctr": 0.004273504273504274,
-      "position": 7.337606837606837
+      "impressions": 245,
+      "ctr": 0.004081632653061225,
+      "position": 7.457142857142857
     },
     {
       "query": "trip case",
       "clicks": 1,
-      "impressions": 189,
-      "ctr": 0.005291005291005291,
-      "position": 9.317460317460318
+      "impressions": 186,
+      "ctr": 0.005376344086021506,
+      "position": 9.365591397849462
     },
     {
       "query": "best travel apps for planning",
       "clicks": 0,
-      "impressions": 135,
+      "impressions": 103,
       "ctr": 0,
-      "position": 4.637037037037037
+      "position": 3.2135922330097086
     },
     {
       "query": "tripcase replacement",
       "clicks": 0,
-      "impressions": 109,
+      "impressions": 103,
       "ctr": 0,
-      "position": 11.65137614678899
+      "position": 11.79611650485437
     },
     {
       "query": "wanderlog pro cost",
@@ -1802,23 +1802,23 @@
     {
       "query": "travel history",
       "clicks": 0,
-      "impressions": 61,
+      "impressions": 71,
       "ctr": 0,
-      "position": 7.836065573770492
+      "position": 7.492957746478873
     },
     {
       "query": "tripit pro pricing official 2026",
       "clicks": 0,
-      "impressions": 41,
+      "impressions": 38,
       "ctr": 0,
-      "position": 11.341463414634147
+      "position": 11.447368421052632
     },
     {
       "query": "tripcase.com",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 35,
       "ctr": 0,
-      "position": 6.588235294117647
+      "position": 6.428571428571429
     },
     {
       "query": "i-94 travel history",
@@ -1844,37 +1844,51 @@
     {
       "query": "view travel history",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 29,
       "ctr": 0,
-      "position": 7.769230769230769
-    },
-    {
-      "query": "tripcase corporate pricing",
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 5.7727272727272725
+      "position": 7.482758620689655
     },
     {
       "query": "tripcase login",
       "clicks": 0,
-      "impressions": 22,
+      "impressions": 25,
       "ctr": 0,
-      "position": 3.227272727272727
-    },
-    {
-      "query": "i 94 travel history",
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 7.714285714285714
+      "position": 3.24
     },
     {
       "query": "what are the top itinerary template apps and how do their pricing compare?",
       "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 2.04
+    },
+    {
+      "query": "i 94 travel history",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 7.681818181818182
+    },
+    {
+      "query": "us travel history",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 9.090909090909092
+    },
+    {
+      "query": "tripcase corporate pricing",
+      "clicks": 0,
       "impressions": 21,
       "ctr": 0,
-      "position": 2.428571428571429
+      "position": 5.857142857142857
+    },
+    {
+      "query": "digital document organizers for itinerary management",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 6.35
     },
     {
       "query": "tripcas",
@@ -1882,64 +1896,50 @@
       "impressions": 20,
       "ctr": 0,
       "position": 7.05
-    },
-    {
-      "query": "us travel history",
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 9.1
     }
   ],
   "rankingOpportunities": [
     {
       "query": "tripcase",
       "clicks": 9,
-      "impressions": 1027,
-      "ctr": 0.008763388510223954,
-      "position": 9.78286270691334
+      "impressions": 1030,
+      "ctr": 0.008737864077669903,
+      "position": 9.609708737864077
     },
     {
       "query": "i94 travel history",
       "clicks": 1,
-      "impressions": 234,
-      "ctr": 0.004273504273504274,
-      "position": 7.337606837606837
+      "impressions": 245,
+      "ctr": 0.004081632653061225,
+      "position": 7.457142857142857
     },
     {
       "query": "trip case",
       "clicks": 1,
-      "impressions": 189,
-      "ctr": 0.005291005291005291,
-      "position": 9.317460317460318
+      "impressions": 186,
+      "ctr": 0.005376344086021506,
+      "position": 9.365591397849462
     },
     {
       "query": "tripcase app",
       "clicks": 2,
       "impressions": 149,
       "ctr": 0.013422818791946308,
-      "position": 11.268456375838927
-    },
-    {
-      "query": "best travel apps for planning",
-      "clicks": 0,
-      "impressions": 135,
-      "ctr": 0,
-      "position": 4.637037037037037
+      "position": 11.10738255033557
     },
     {
       "query": "tripit alternatives",
       "clicks": 0,
       "impressions": 112,
       "ctr": 0,
-      "position": 19.669642857142858
+      "position": 19.544642857142858
     },
     {
       "query": "tripcase replacement",
       "clicks": 0,
-      "impressions": 109,
+      "impressions": 103,
       "ctr": 0,
-      "position": 11.65137614678899
+      "position": 11.79611650485437
     },
     {
       "query": "wanderlog pro cost",
@@ -1951,30 +1951,30 @@
     {
       "query": "tripit alternative",
       "clicks": 0,
-      "impressions": 86,
+      "impressions": 88,
       "ctr": 0,
-      "position": 21.767441860465116
+      "position": 21.295454545454547
     },
     {
       "query": "travel history",
       "clicks": 0,
-      "impressions": 61,
+      "impressions": 71,
       "ctr": 0,
-      "position": 7.836065573770492
+      "position": 7.492957746478873
     },
     {
       "query": "tripcase alternative",
       "clicks": 2,
-      "impressions": 55,
-      "ctr": 0.03636363636363636,
-      "position": 10.927272727272728
+      "impressions": 56,
+      "ctr": 0.03571428571428571,
+      "position": 10.785714285714286
     },
     {
       "query": "trip case app",
-      "clicks": 1,
-      "impressions": 42,
-      "ctr": 0.023809523809523808,
-      "position": 7.761904761904762
+      "clicks": 2,
+      "impressions": 43,
+      "ctr": 0.046511627906976744,
+      "position": 7.627906976744186
     },
     {
       "query": "tripit pro pricing 2026",
@@ -1986,16 +1986,16 @@
     {
       "query": "tripit pro pricing official 2026",
       "clicks": 0,
-      "impressions": 41,
+      "impressions": 38,
       "ctr": 0,
-      "position": 11.341463414634147
+      "position": 11.447368421052632
     },
     {
       "query": "tripcase.com",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 35,
       "ctr": 0,
-      "position": 6.588235294117647
+      "position": 6.428571428571429
     },
     {
       "query": "i-94 travel history",
@@ -2021,23 +2021,37 @@
     {
       "query": "view travel history",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 29,
       "ctr": 0,
-      "position": 7.769230769230769
-    },
-    {
-      "query": "tripcase corporate pricing",
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 5.7727272727272725
+      "position": 7.482758620689655
     },
     {
       "query": "i 94 travel history",
       "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 7.681818181818182
+    },
+    {
+      "query": "us travel history",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 9.090909090909092
+    },
+    {
+      "query": "tripcase corporate pricing",
+      "clicks": 0,
       "impressions": 21,
       "ctr": 0,
-      "position": 7.714285714285714
+      "position": 5.857142857142857
+    },
+    {
+      "query": "digital document organizers for itinerary management",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 6.35
     },
     {
       "query": "tripcas",
@@ -2047,11 +2061,11 @@
       "position": 7.05
     },
     {
-      "query": "us travel history",
+      "query": "travel history check online",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 18,
       "ctr": 0,
-      "position": 9.1
+      "position": 8.722222222222221
     },
     {
       "query": "trips case",
@@ -2061,46 +2075,25 @@
       "position": 13
     },
     {
-      "query": "digital document organizers for itinerary management",
+      "query": "do you have any recent travel history in the last 30 days",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 16,
       "ctr": 0,
-      "position": 6.411764705882353
-    },
-    {
-      "query": "travel history check online",
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 8.647058823529413
+      "position": 6.25
     },
     {
       "query": "sabre tripcase",
       "clicks": 1,
-      "impressions": 16,
-      "ctr": 0.0625,
-      "position": 6.25
-    },
-    {
-      "query": "is tripcase still active",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 4.8125
-    },
-    {
-      "query": "do you have any recent travel history in the last 30 days",
-      "clicks": 0,
       "impressions": 15,
-      "ctr": 0,
-      "position": 6.266666666666667
+      "ctr": 0.06666666666666667,
+      "position": 5.933333333333334
     },
     {
       "query": "travel document organizer app",
       "clicks": 0,
       "impressions": 15,
       "ctr": 0,
-      "position": 13.533333333333333
+      "position": 13.733333333333333
     },
     {
       "query": "tripcase official website",
@@ -2110,6 +2103,13 @@
       "position": 5.733333333333333
     },
     {
+      "query": "layover calculator",
+      "clicks": 2,
+      "impressions": 14,
+      "ctr": 0.14285714285714285,
+      "position": 4.714285714285714
+    },
+    {
       "query": "do you have any recent travel history in the last 30 days?",
       "clicks": 0,
       "impressions": 14,
@@ -2117,18 +2117,32 @@
       "position": 4.714285714285714
     },
     {
+      "query": "is tripcase still active",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 4.357142857142858
+    },
+    {
       "query": "tripcase com",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 16.615384615384613
+    },
+    {
+      "query": "wanderlog cost",
       "clicks": 0,
       "impressions": 12,
       "ctr": 0,
-      "position": 17.25
+      "position": 11.25
     },
     {
-      "query": "mobile apps for organizing and sharing travel insurance documents",
+      "query": "cbp travel history",
       "clicks": 0,
       "impressions": 11,
       "ctr": 0,
-      "position": 15.727272727272727
+      "position": 6.545454545454546
     },
     {
       "query": "tripcase sabre",
@@ -2152,11 +2166,11 @@
       "position": 20.8
     },
     {
-      "query": "wanderlog cost",
+      "query": "mobile apps for organizing and sharing travel insurance documents",
       "clicks": 0,
       "impressions": 10,
       "ctr": 0,
-      "position": 11.7
+      "position": 15.9
     },
     {
       "query": "what kinds of solutions capture receipts from third-party booking platforms and attach them to trips?",
@@ -2170,7 +2184,7 @@
       "clicks": 0,
       "impressions": 10,
       "ctr": 0,
-      "position": 6.1
+      "position": 5.4
     }
   ]
 }
