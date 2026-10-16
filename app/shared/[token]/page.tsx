@@ -7,6 +7,7 @@ import { BedDouble, CarFront, Plane, Ticket, TrainFront, UtensilsCrossed, type L
 
 import { Footer } from "@/components/footer"
 import { SitePage } from "@/components/site/kit"
+import { getAirlineLogoUrl } from "@/lib/airline-logos"
 import { getSharedTrip, type SharedFlight, type SharedPlan } from "@/lib/shared-trip"
 
 // Private, view-only itineraries: never indexed (robots.txt also disallows /shared/).
@@ -242,16 +243,30 @@ function SectionHead({ title, count }: { title: string; count: number }) {
   )
 }
 
-function BoardingPass({ flight }: { flight: SharedFlight }) {
+// Same carrier-code rule as the app: the stored IATA, else the flight number's prefix.
+function carrierCode(flight: SharedFlight) {
+  if (flight.airline_iata && flight.airline_iata.length >= 2) return flight.airline_iata.slice(0, 2).toUpperCase()
+  return flight.flight_number?.match(/^[A-Za-z0-9]{2}/)?.[0].toUpperCase() ?? null
+}
+
+async function BoardingPass({ flight }: { flight: SharedFlight }) {
   const duration = formatDuration(flight.duration)
   const date = formatDay(flight.departure_date, { weekday: "short", month: "short", day: "numeric" })
-  const monogram = (flight.airline_iata || flight.flight_number?.slice(0, 2) || "✈").toUpperCase()
+  const code = carrierCode(flight)
+  const logoUrl = await getAirlineLogoUrl(code)
 
   return (
     <article className="relative grid overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.045] sm:grid-cols-[1fr_132px]">
       <div className="flex flex-col gap-4 px-5 pb-5 pt-[18px] sm:px-[22px]">
         <div className="flex items-center gap-3">
-          <span className="grid size-[34px] place-items-center rounded-[10px] bg-white text-[12px] font-bold text-[#3949D6]">{monogram}</span>
+          <span className="grid size-[34px] shrink-0 place-items-center overflow-hidden rounded-[10px] bg-white text-[12px] font-bold text-[#3949D6]">
+            {logoUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element -- remote catalog logo (jsDelivr), already a small optimized PNG.
+              <img src={logoUrl} alt={flight.airline ? `${flight.airline} logo` : ""} width={26} height={26} loading="lazy" decoding="async" className="size-[26px] object-contain" />
+            ) : (
+              code || "✈"
+            )}
+          </span>
           <div className="min-w-0">
             <div className="truncate text-[14.5px] font-semibold">{flight.airline || "Flight"}</div>
             {flight.aircraft ? <div className="truncate text-[11.5px] font-medium text-white/40">{flight.aircraft}</div> : null}
