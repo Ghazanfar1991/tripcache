@@ -8,6 +8,7 @@ Allow: /
 Allow: /api/airports
 Disallow: /api/
 Disallow: /admin/
+Disallow: /shared/
 
 User-Agent: Googlebot
 User-Agent: Googlebot-News
@@ -43,5 +44,6 @@ Allow: /
 Allow: /api/airports
 Disallow: /api/
 Disallow: /admin/
+Disallow: /shared/
 
 Sitemap: https://trip-cache.com/sitemap.xml
