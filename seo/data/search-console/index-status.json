@@ -1,6 +1,6 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-10-15T13:03:21.787Z",
+  "generatedAt": "2026-10-16T12:57:25.269Z",
   "sitemapUrls": 46,
   "indexed": 35,
   "notIndexed": 11,
@@ -38,7 +38,7 @@
     {
       "path": "/blog/ai-trip-planner-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/business-travel-management-guide-2026",
@@ -53,7 +53,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/google-travel-alternative-2026",
@@ -70,7 +70,7 @@
     {
       "path": "https://trip-cache.com/sitemap.xml",
       "lastSubmitted": "2026-10-05T04:55:42.801Z",
-      "lastDownloaded": "2026-10-05T04:55:43.927Z",
+      "lastDownloaded": "2026-10-15T13:50:10.781Z",
       "isPending": false,
       "errors": 0,
       "warnings": 0,
@@ -109,7 +109,7 @@
     {
       "path": "/blog/ai-trip-planner-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -117,8 +117,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/blog"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:31.055Z",
       "indexedSince": null
@@ -185,7 +187,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -193,10 +195,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/sitemap.xml"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:50.827Z",
       "indexedSince": null
@@ -318,7 +318,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-04T23:36:21Z",
+      "lastCrawlTime": "2026-10-16T00:55:43Z",
       "googleCanonical": "https://trip-cache.com/about",
       "userCanonical": "https://trip-cache.com/about",
       "robotsTxtState": "ALLOWED",
@@ -450,7 +450,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-09T14:33:24Z",
+      "lastCrawlTime": "2026-10-16T00:36:51Z",
       "googleCanonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "userCanonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "robotsTxtState": "ALLOWED",
@@ -686,7 +686,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-30T03:59:25Z",
+      "lastCrawlTime": "2026-10-16T01:33:15Z",
       "googleCanonical": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
       "userCanonical": "https://trip-cache.com/blog/rental-car-cancellation-reminder-app-2026",
       "robotsTxtState": "ALLOWED",
@@ -713,7 +713,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-06T05:04:14Z",
+      "lastCrawlTime": "2026-10-16T05:43:06Z",
       "googleCanonical": "https://trip-cache.com/blog/save-travel-documents-offline",
       "userCanonical": "https://trip-cache.com/blog/save-travel-documents-offline",
       "robotsTxtState": "ALLOWED",
@@ -902,7 +902,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-09-30T03:35:29Z",
+      "lastCrawlTime": "2026-10-15T19:56:38Z",
       "googleCanonical": "https://trip-cache.com/features/business-travel-expenses",
       "userCanonical": "https://trip-cache.com/features/business-travel-expenses",
       "robotsTxtState": "ALLOWED",
@@ -1055,7 +1055,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-13T15:55:22Z",
+      "lastCrawlTime": "2026-10-16T02:23:05Z",
       "googleCanonical": "https://trip-cache.com/tools",
       "userCanonical": "https://trip-cache.com/tools",
       "robotsTxtState": "ALLOWED",
