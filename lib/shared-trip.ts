@@ -42,6 +42,8 @@ export type SharedPlan = {
 }
 
 export type SharedTrip = {
+  /** 'flight' links show one flight only (no trip name, dates or plans). Absent on older responses. */
+  scope?: "trip" | "flight"
   trip: { name: string; start_date: string | null; end_date: string | null }
   flights: SharedFlight[]
   plans: SharedPlan[]
