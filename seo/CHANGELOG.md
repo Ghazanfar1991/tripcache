@@ -6,6 +6,7 @@ Each change is judged 28 days after it ships: the 28 days before vs the 28 days 
 
 | Shipped | Type | Pages | Change | Result (28d before → after) |
 | --- | --- | --- | --- | --- |
+| 2026-10-17 | technical | `*` | Shared viewer (/shared/<token>, noindex) now renders single-flight links from the app's flight Share action: route title, date/times/duration strip, one boarding pass, no trip name, dates or plans. Overnight arrivals show +1. | measuring… |
 | 2026-10-16 | technical | `*` | Added the private view-only trip viewer at /shared/<token> (links minted by the app's Share action). Pages are noindex/nofollow, not in the sitemap, and /shared/ is disallowed in robots.txt for every crawler group. | measuring… |
 | 2026-10-16 | technical | `*` | Shared trip viewer (/shared/<token>, noindex) now shows airline logos from the app's asset catalog, falling back to the carrier code. | measuring… |
 | 2026-10-07 | content-update | `/` `/features/email-to-itinerary` `/features/cancellation-reminders` `/features/business-travel-expenses` | Replaced the old app screenshots with the new framed captures from the App Store research (app-ui-*.webp); updated image alt text to describe the new screens (Smart Inbox forwarding address, Set Reminders, Melbourne itinerary, PIN-locked vault); rebuilt the homepage inbox-to-trip draft card to match the in-app Drafts card from the promo video. No titles, headings, URLs or keyword targets changed. | measuring… |

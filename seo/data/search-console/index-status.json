@@ -1,13 +1,12 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-10-16T12:57:25.269Z",
+  "generatedAt": "2026-10-17T11:57:49.085Z",
   "sitemapUrls": 46,
   "indexed": 35,
   "notIndexed": 11,
   "byCoverageState": {
     "Submitted and indexed": 35,
-    "Discovered - currently not indexed": 8,
-    "URL is unknown to Google": 3
+    "Discovered - currently not indexed": 11
   },
   "issues": [
     {
@@ -33,7 +32,7 @@
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/ai-trip-planner-2026",
@@ -53,12 +52,12 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/google-travel-alternative-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/email-to-trip-automation",
@@ -187,7 +186,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -195,8 +194,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/sitemap.xml"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:50.827Z",
       "indexedSince": null
@@ -204,7 +205,7 @@
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -212,8 +213,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:24.667Z",
       "indexedSince": null
@@ -221,7 +224,7 @@
     {
       "path": "/blog/google-travel-alternative-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -229,8 +232,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/blog"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:57.179Z",
       "indexedSince": null
@@ -850,7 +855,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-05T04:54:10Z",
+      "lastCrawlTime": "2026-10-13T09:15:23Z",
       "googleCanonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "userCanonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "robotsTxtState": "ALLOWED",
@@ -929,7 +934,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-05T00:37:54Z",
+      "lastCrawlTime": "2026-10-16T08:12:58Z",
       "googleCanonical": "https://trip-cache.com/features/cancellation-reminders",
       "userCanonical": "https://trip-cache.com/features/cancellation-reminders",
       "robotsTxtState": "ALLOWED",
@@ -956,7 +961,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-04T20:52:48Z",
+      "lastCrawlTime": "2026-10-15T12:45:50Z",
       "googleCanonical": "https://trip-cache.com/features/email-to-itinerary",
       "userCanonical": "https://trip-cache.com/features/email-to-itinerary",
       "robotsTxtState": "ALLOWED",

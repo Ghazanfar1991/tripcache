@@ -1,6 +1,6 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-10-16T12:58:21.445Z",
+  "generatedAt": "2026-10-17T11:58:20.942Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
@@ -11,21 +11,13 @@
   ],
   "totals28Days": {
     "userInstalls": 10,
-    "userUninstalls": 10,
+    "userUninstalls": 11,
     "deviceInstalls": 10,
     "deviceUninstalls": 0
   },
-  "latestReportedDate": "2026-10-11",
-  "latestInstalledAudience": 21,
+  "latestReportedDate": "2026-10-12",
+  "latestInstalledAudience": 19,
   "daily": [
-    {
-      "date": "2026-07-12",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 1,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 10
-    },
     {
       "date": "2026-07-13",
       "dailyUserInstalls": 0,
@@ -753,6 +745,14 @@
       "dailyDeviceInstalls": 1,
       "dailyDeviceUninstalls": 0,
       "activeDeviceInstalls": 21
+    },
+    {
+      "date": "2026-10-12",
+      "dailyUserInstalls": 1,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 1,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 19
     }
   ],
   "countries": [
@@ -775,6 +775,11 @@
       "country": "BD",
       "dailyUserInstalls": 3,
       "dailyUserUninstalls": 2
+    },
+    {
+      "country": "IN",
+      "dailyUserInstalls": 2,
+      "dailyUserUninstalls": 1
     },
     {
       "country": "PH",
@@ -808,11 +813,6 @@
     },
     {
       "country": "IL",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 0
-    },
-    {
-      "country": "IN",
       "dailyUserInstalls": 1,
       "dailyUserUninstalls": 0
     },
