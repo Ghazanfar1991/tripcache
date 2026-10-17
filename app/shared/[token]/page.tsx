@@ -147,11 +147,34 @@ async function SharedTripContent({ params }: { params: Promise<{ token: string }
   }
 
   const { trip, flights, plans } = data
+  // A flight link carries exactly one flight and nothing else about the trip.
+  const single = data.scope === "flight" && flights.length === 1 ? flights[0] : null
   const nights = daysBetween(trip.start_date, trip.end_date)
   const destination = flights[0]?.arrival_city || flights[0]?.arrival_airport || ""
   const when = formatDay(trip.start_date || flights[0]?.departure_date, { month: "long", year: "numeric" })
-  const eyebrow = [destination, when].filter(Boolean).join(" · ") || "Trip itinerary"
   const range = formatRange(trip.start_date, trip.end_date)
+
+  const eyebrow = single
+    ? [single.airline, single.flight_number].filter(Boolean).join(" · ") || "Flight"
+    : [destination, when].filter(Boolean).join(" · ") || "Trip itinerary"
+  const fromName = single ? single.departure_city || single.departure_airport || "" : ""
+  const toName = single ? single.arrival_city || single.arrival_airport || "" : ""
+  const flightDuration = single ? formatDuration(single.duration) : ""
+  const stats = single
+    ? [
+        formatDay(single.departure_date, { weekday: "short", month: "short", day: "numeric" })
+          ? { label: "Date", value: formatDay(single.departure_date, { weekday: "short", month: "short", day: "numeric" }) }
+          : null,
+        single.departure_time ? { label: "Departs", value: single.departure_time.slice(0, 5) } : null,
+        single.arrival_time ? { label: "Arrives", value: single.arrival_time.slice(0, 5) } : null,
+        flightDuration ? { label: "Duration", value: flightDuration } : null,
+      ]
+    : [
+        range ? { label: "Dates", value: range } : null,
+        nights ? { label: "Duration", value: `${nights} ${nights === 1 ? "night" : "nights"}` } : null,
+        { label: "Flights", value: String(flights.length) },
+        { label: "Plans", value: String(plans.length) },
+      ]
 
   return (
     <div className="flex flex-col gap-8">
@@ -166,28 +189,31 @@ async function SharedTripContent({ params }: { params: Promise<{ token: string }
           />
           <div>
             <div className="text-[17px] font-bold tracking-[-0.01em]">TripCache</div>
-            <div className="text-[11px] font-medium text-white/40">View-only itinerary</div>
+            <div className="text-[11px] font-medium text-white/40">{single ? "View-only flight" : "View-only itinerary"}</div>
           </div>
         </div>
         <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.15em] text-white/60">
-          Shared trip
+          {single ? "Shared flight" : "Shared trip"}
         </span>
       </div>
 
       <header className="flex flex-col gap-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#A99BFF]">{eyebrow}</p>
         <h1 className="font-tc-display text-[44px] font-semibold leading-[1.05] tracking-[-0.03em] sm:text-[60px]">
-          {trip.name.split(/(&)/).map((part, i) =>
-            part === "&" ? <span key={i} className="font-normal text-[#A99BFF]">&amp;</span> : part,
+          {single ? (
+            <>
+              {fromName}
+              <span className="font-normal text-[#A99BFF]"> to </span>
+              {toName}
+            </>
+          ) : (
+            trip.name.split(/(&)/).map((part, i) =>
+              part === "&" ? <span key={i} className="font-normal text-[#A99BFF]">&amp;</span> : part,
+            )
           )}
         </h1>
         <dl className="grid grid-cols-2 overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.045] sm:grid-cols-4">
-          {[
-            range ? { label: "Dates", value: range } : null,
-            nights ? { label: "Duration", value: `${nights} ${nights === 1 ? "night" : "nights"}` } : null,
-            { label: "Flights", value: String(flights.length) },
-            { label: "Plans", value: String(plans.length) },
-          ]
+          {stats
             .filter((s): s is { label: string; value: string } => !!s)
             .map((stat) => (
               <div key={stat.label} className="flex flex-col gap-1 border-white/10 px-4 py-3.5 [&:not(:first-child)]:border-l">
@@ -200,7 +226,7 @@ async function SharedTripContent({ params }: { params: Promise<{ token: string }
 
       {flights.length > 0 ? (
         <section className="flex flex-col gap-3.5">
-          <SectionHead title="Flights" count={flights.length} />
+          <SectionHead title={single ? "Flight" : "Flights"} count={single ? undefined : flights.length} />
           {flights.map((flight, i) => (
             <BoardingPass key={i} flight={flight} />
           ))}
@@ -227,17 +253,19 @@ async function SharedTripContent({ params }: { params: Promise<{ token: string }
 
       <GetTheApp />
       <p className="-mt-3 text-center text-[11px] font-medium tracking-[0.02em] text-white/40">
-        Shared with TripCache · booking references, notes and documents stay private
+        {single
+          ? "Shared with TripCache · booking details stay private"
+          : "Shared with TripCache · booking references, notes and documents stay private"}
       </p>
     </div>
   )
 }
 
-function SectionHead({ title, count }: { title: string; count: number }) {
+function SectionHead({ title, count }: { title: string; count?: number }) {
   return (
     <div className="flex items-center gap-3">
       <h2 className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">{title}</h2>
-      <span className="text-[11px] font-semibold text-white/40">{count}</span>
+      {count != null ? <span className="text-[11px] font-semibold text-white/40">{count}</span> : null}
       <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-white/15 to-transparent" />
     </div>
   )
@@ -254,6 +282,8 @@ async function BoardingPass({ flight }: { flight: SharedFlight }) {
   const date = formatDay(flight.departure_date, { weekday: "short", month: "short", day: "numeric" })
   const code = carrierCode(flight)
   const logoUrl = await getAirlineLogoUrl(code)
+  // An overnight arrival reads "+1" so 07:40 isn't mistaken for the same day.
+  const arrivalDayOffset = daysBetween(flight.departure_date, flight.arrival_date)
 
   return (
     <article className="relative grid overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.045] sm:grid-cols-[1fr_132px]">
@@ -287,7 +317,7 @@ async function BoardingPass({ flight }: { flight: SharedFlight }) {
               </span>
             ) : null}
           </div>
-          <Endpoint code={flight.arrival_airport} city={flight.arrival_city} time={flight.arrival_time} alignEnd />
+          <Endpoint code={flight.arrival_airport} city={flight.arrival_city} time={flight.arrival_time} dayOffset={arrivalDayOffset} alignEnd />
         </div>
       </div>
       <div className="relative flex items-center justify-between gap-4 border-t border-dashed border-white/15 px-5 py-4 sm:flex-col sm:items-start sm:justify-between sm:border-t-0 sm:px-4 sm:py-[18px]">
@@ -301,12 +331,17 @@ async function BoardingPass({ flight }: { flight: SharedFlight }) {
   )
 }
 
-function Endpoint({ code, city, time, alignEnd }: { code: string | null; city: string | null; time: string | null; alignEnd?: boolean }) {
+function Endpoint({ code, city, time, dayOffset, alignEnd }: { code: string | null; city: string | null; time: string | null; dayOffset?: number | null; alignEnd?: boolean }) {
   return (
     <div className={alignEnd ? "text-right" : undefined}>
       <div className="text-[34px] font-bold leading-none tracking-[-0.04em] sm:text-[44px]">{(code || "--").toUpperCase()}</div>
       {city ? <div className="mt-1.5 max-w-[120px] truncate text-[12px] font-medium text-white/60">{city}</div> : null}
-      {time ? <div className="mt-0.5 text-[15px] font-semibold tabular-nums">{time}</div> : null}
+      {time ? (
+        <div className="mt-0.5 text-[15px] font-semibold tabular-nums">
+          {time}
+          {dayOffset ? <span className="ml-1 text-[11px] font-bold text-[#A99BFF]">+{dayOffset}</span> : null}
+        </div>
+      ) : null}
     </div>
   )
 }
