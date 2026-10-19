@@ -1,11 +1,11 @@
-# App Store summary — 2026-10-18
+# App Store summary — 2026-10-20
 
-Generated 2026-10-18T12:24:05.786Z by `npm run aso:feed`.
+Generated 2026-10-19T15:15:17.087Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
 - First-time downloads: 18 · redownloads 2 · updates 27
-- Latest report: 2026-10-17
+- Latest report: 2026-10-18
 
 ## Quality (store ranking factor)
 
@@ -14,7 +14,7 @@ Generated 2026-10-18T12:24:05.786Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 26 users
+- installProxy: 27 users
 - signUp: not instrumented
 - onboardingComplete: not instrumented
 - activation: not instrumented
@@ -24,15 +24,15 @@ Generated 2026-10-18T12:24:05.786Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 26 new users
+- (direct) / (none): 27 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$34 · active subscriptions 4 · active trials 0 · new customers (28d) 41
+- MRR A$34 · active subscriptions 4 · active trials 0 · new customers (28d) 42
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 18 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-17.
+- app-store-connect: **SUCCESS** (fresh) — 18 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-18.
 - google-play: **SUCCESS** (fresh) — 9 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
