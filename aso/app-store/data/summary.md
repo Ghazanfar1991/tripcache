@@ -1,10 +1,10 @@
-# App Store summary — 2026-10-20
+# App Store summary — 2026-10-21
 
-Generated 2026-10-19T15:15:17.087Z by `npm run aso:feed`.
+Generated 2026-10-20T13:15:20.486Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
-- First-time downloads: 18 · redownloads 2 · updates 27
+- First-time downloads: 16 · redownloads 2 · updates 27
 - Latest report: 2026-10-18
 
 ## Quality (store ranking factor)
@@ -32,8 +32,8 @@ Generated 2026-10-19T15:15:17.087Z by `npm run aso:feed`.
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 18 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-18.
-- google-play: **SUCCESS** (fresh) — 9 official Play user installs in the latest 28 reported days.
+- app-store-connect: **SUCCESS** (fresh) — 16 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-18.
+- google-play: **SUCCESS** (fresh) — 11 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
