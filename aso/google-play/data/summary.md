@@ -1,11 +1,11 @@
-# Google Play summary — 2026-10-21
+# Google Play summary — 2026-10-22
 
-Generated 2026-10-20T13:15:20.486Z by `npm run aso:feed`.
+Generated 2026-10-21T13:25:44.259Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
-- User installs: 11 · uninstalls 12 · installed audience 21
-- Latest report: 2026-10-15 (Play reports lag 3–7 days)
+- User installs: 11 · uninstalls 14 · installed audience 20
+- Latest report: 2026-10-16 (Play reports lag 3–7 days)
 - Top countries: US 6, GB 4, ID 4, BD 3, IN 2, PH 2, AR 2, AU 1
 
 ## Quality (store ranking factor)
@@ -25,8 +25,8 @@ Generated 2026-10-20T13:15:20.486Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 17 new users
-- google-play / organic: 16 new users
+- google-play / organic: 17 new users
+- (direct) / (none): 16 new users
 - google / organic: 1 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
@@ -35,7 +35,7 @@ Generated 2026-10-20T13:15:20.486Z by `npm run aso:feed`.
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 16 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-18.
+- app-store-connect: **SUCCESS** (fresh) — 17 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-19.
 - google-play: **SUCCESS** (fresh) — 11 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
