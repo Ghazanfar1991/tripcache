@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T13:24:50.860Z",
+  "generatedAt": "2026-10-22T13:24:45.249Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -55,9 +55,9 @@
         "landingPage": "/"
       },
       "metrics": {
-        "sessions": 71,
-        "activeUsers": 47,
-        "engagementRate": 0.6619718309859155
+        "sessions": 75,
+        "activeUsers": 51,
+        "engagementRate": 0.6533333333333333
       }
     },
     {
@@ -75,9 +75,9 @@
         "landingPage": "/blog/tripcase-shutdown-what-now"
       },
       "metrics": {
-        "sessions": 42,
-        "activeUsers": 36,
-        "engagementRate": 0.5952380952380952
+        "sessions": 47,
+        "activeUsers": 40,
+        "engagementRate": 0.5319148936170213
       }
     },
     {
@@ -85,9 +85,9 @@
         "landingPage": "/blog/best-travel-apps-2025"
       },
       "metrics": {
-        "sessions": 26,
-        "activeUsers": 20,
-        "engagementRate": 0.19230769230769232
+        "sessions": 27,
+        "activeUsers": 21,
+        "engagementRate": 0.18518518518518517
       }
     },
     {
@@ -102,22 +102,22 @@
     },
     {
       "dimensions": {
-        "landingPage": "/blog/best-tripit-alternatives-2026"
+        "landingPage": "/blog/hotel-cancellation-policies"
       },
       "metrics": {
-        "sessions": 14,
-        "activeUsers": 14,
-        "engagementRate": 0.2857142857142857
+        "sessions": 15,
+        "activeUsers": 15,
+        "engagementRate": 0.2
       }
     },
     {
       "dimensions": {
-        "landingPage": "/blog/hotel-cancellation-policies"
+        "landingPage": "/blog/best-tripit-alternatives-2026"
       },
       "metrics": {
-        "sessions": 14,
-        "activeUsers": 14,
-        "engagementRate": 0.14285714285714285
+        "sessions": 13,
+        "activeUsers": 13,
+        "engagementRate": 0.3076923076923077
       }
     },
     {
@@ -525,23 +525,23 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
+        "landingPagePlusQueryString": "/",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 35,
-        "activeUsers": 33
+        "sessions": 36,
+        "activeUsers": 17
       }
     },
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 34,
-        "activeUsers": 15
+        "sessions": 36,
+        "activeUsers": 34
       }
     },
     {
@@ -645,13 +645,13 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/tools/jet-lag-calculator",
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 8,
-        "activeUsers": 6
+        "sessions": 9,
+        "activeUsers": 4
       }
     },
     {
@@ -661,8 +661,19 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 7,
-        "activeUsers": 7
+        "sessions": 8,
+        "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/tools/jet-lag-calculator",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 8,
+        "activeUsers": 6
       }
     },
     {
@@ -685,17 +696,6 @@
       "metrics": {
         "sessions": 7,
         "activeUsers": 7
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "bing / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 7,
-        "activeUsers": 3
       }
     },
     {
@@ -855,6 +855,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/pricing",
         "platform": "web"
       },
@@ -889,6 +900,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/tools/layover-calculator",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
         "platform": "web"
       },
       "metrics": {
@@ -1240,17 +1262,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "bing / organic",
-        "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "bing / organic",
         "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
         "platform": "web"
       },
@@ -1350,7 +1361,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "facebook.com / referral",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR7HqXS3d-AvkAROSL0FUFh8VPTfpN28bEI9DXvKXPObLFD3eR5Xp4Z4WUo2ng_aem_hCbs_V65WKoS_nEt9uw-UQ",
+        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR6SWOQ_k0dJeltaZiWNSgfN_lxrDek98TUn99NP49MlRMV9YSqpx8TTgrWqtw_aem_kRXy9ojhaqz57uAe34zytg",
         "platform": "web"
       },
       "metrics": {
@@ -1360,8 +1371,8 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "gemini / (not set)",
-        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
+        "sessionSourceMedium": "facebook.com / referral",
+        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR7HqXS3d-AvkAROSL0FUFh8VPTfpN28bEI9DXvKXPObLFD3eR5Xp4Z4WUo2ng_aem_hCbs_V65WKoS_nEt9uw-UQ",
         "platform": "web"
       },
       "metrics": {
@@ -1460,6 +1471,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "m.facebook.com / referral",
+        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR55puwhTlJj2hwjrlRJc8UT0mNOpK_bDy7jH32AE5HR5EosJlcUiiegYR4Fbw_aem_ebcIWHtm4GLQebSGKs6XwQ",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "m.facebook.com / referral",
         "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR58TI83U9DeAY1BgalijfIKS2fvaLf-3i4IiymdaAfqJ-oA6FL6SVYqETA19Q_aem_8i0GvBS3DBJPIYdQaobMMw",
         "platform": "web"
       },
@@ -1483,11 +1505,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 277,
-    "landingSessions": 350,
+    "landingUsers": 286,
+    "landingSessions": 360,
     "storeIntentUsers": 22,
     "storeIntentEvents": 37,
-    "rate": 0.07942238267148015,
+    "rate": 0.07692307692307693,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -1642,8 +1664,8 @@
   "aiAssistantReferrals": {
     "measurable": true,
     "status": "MEASURED",
-    "sessions": 7,
-    "activeUsers": 7,
+    "sessions": 6,
+    "activeUsers": 6,
     "landingPages": [
       {
         "dimensions": {
@@ -1670,17 +1692,6 @@
       {
         "dimensions": {
           "sessionSourceMedium": "copilot.com / ai-assistant",
-          "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
-          "platform": "web"
-        },
-        "metrics": {
-          "sessions": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "sessionSourceMedium": "gemini / (not set)",
           "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
           "platform": "web"
         },
