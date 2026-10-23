@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-22T13:24:58.604Z",
+  "generatedAt": "2026-10-23T13:03:43.218Z",
   "sources": [
     {
       "id": "search-console",
       "status": "SUCCESS",
       "freshness": "fresh",
       "reportingLagDays": 3,
-      "latestSyncTime": "2026-10-22T13:19:51.320Z",
+      "latestSyncTime": "2026-10-23T12:58:32.332Z",
       "coveredDateRange": {
-        "startDate": "2026-09-22",
+        "startDate": "2026-09-23",
         "endDate": "2026-10-20"
       },
       "history": {
@@ -24,31 +24,31 @@
         }
       },
       "note": "Search Console API via the repository-scoped short-lived Google token.",
-      "checkedAt": "2026-10-22T13:19:51.720Z"
+      "checkedAt": "2026-10-23T12:58:32.557Z"
     },
     {
       "id": "index-status",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-22T13:24:45.206Z",
+      "latestSyncTime": "2026-10-23T13:03:27.308Z",
       "note": "36/46 sitemap URLs indexed.",
-      "checkedAt": "2026-10-22T13:24:45.216Z"
+      "checkedAt": "2026-10-23T13:03:27.314Z"
     },
     {
       "id": "ga4-web",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-22T13:24:45.249Z",
-      "note": "Store intent 7.7% (22/286 users, 28 days).",
-      "checkedAt": "2026-10-22T13:24:46.577Z"
+      "latestSyncTime": "2026-10-23T13:03:27.338Z",
+      "note": "Store intent 7.1% (21/294 users, 28 days).",
+      "checkedAt": "2026-10-23T13:03:29.658Z"
     },
     {
       "id": "site-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-22T13:24:58.601Z",
+      "latestSyncTime": "2026-10-23T13:03:43.215Z",
       "note": "46 sitemap URLs verified; 0 warnings.",
-      "checkedAt": "2026-10-22T13:24:58.604Z"
+      "checkedAt": "2026-10-23T13:03:43.218Z"
     }
   ]
 }

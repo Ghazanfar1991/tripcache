@@ -1,8 +1,8 @@
 {
   "source": "Google Search Console API",
-  "generatedAt": "2026-10-22T13:19:51.320Z",
+  "generatedAt": "2026-10-23T12:58:32.332Z",
   "period": {
-    "startDate": "2026-09-22",
+    "startDate": "2026-09-23",
     "endDate": "2026-10-20"
   },
   "pageOpportunities": [
@@ -16,9 +16,9 @@
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "clicks": 35,
-      "impressions": 2612,
-      "ctr": 0.01339969372128637,
-      "position": 5.539050535987749
+      "impressions": 2531,
+      "ctr": 0.01382852627419992,
+      "position": 5.467404188067957
     },
     {
       "page": "https://trip-cache.com/blog/hotel-cancellation-policies",
@@ -30,9 +30,9 @@
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
       "clicks": 11,
-      "impressions": 1059,
-      "ctr": 0.010387157695939566,
-      "position": 10.380547686496694
+      "impressions": 1036,
+      "ctr": 0.010617760617760617,
+      "position": 10.157335907335908
     },
     {
       "page": "https://trip-cache.com/tools/jet-lag-calculator",
@@ -42,13 +42,6 @@
       "position": 7.13915857605178
     },
     {
-      "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "clicks": 3,
-      "impressions": 532,
-      "ctr": 0.005639097744360902,
-      "position": 10.723684210526315
-    },
-    {
       "page": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "clicks": 2,
       "impressions": 518,
@@ -56,11 +49,18 @@
       "position": 11.527027027027026
     },
     {
+      "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "clicks": 2,
+      "impressions": 491,
+      "ctr": 0.004073319755600814,
+      "position": 10.629327902240325
+    },
+    {
       "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "clicks": 7,
-      "impressions": 497,
-      "ctr": 0.014084507042253521,
-      "position": 8.835010060362173
+      "clicks": 6,
+      "impressions": 483,
+      "ctr": 0.012422360248447204,
+      "position": 8.840579710144928
     },
     {
       "page": "https://trip-cache.com/tools/layover-calculator",
@@ -71,17 +71,17 @@
     },
     {
       "page": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
-      "clicks": 3,
-      "impressions": 361,
-      "ctr": 0.008310249307479225,
-      "position": 12.191135734072022
+      "clicks": 2,
+      "impressions": 355,
+      "ctr": 0.005633802816901409,
+      "position": 12.256338028169013
     },
     {
       "page": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "clicks": 1,
-      "impressions": 292,
-      "ctr": 0.003424657534246575,
-      "position": 7.6061643835616435
+      "impressions": 279,
+      "ctr": 0.0035842293906810036,
+      "position": 7.451612903225806
     },
     {
       "page": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
@@ -93,16 +93,9 @@
     {
       "page": "https://trip-cache.com/blog/hotel-cancellation-reminder-app-2026",
       "clicks": 0,
-      "impressions": 124,
+      "impressions": 120,
       "ctr": 0,
-      "position": 5.846774193548387
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-      "clicks": 0,
-      "impressions": 119,
-      "ctr": 0,
-      "position": 12.008403361344538
+      "position": 5.891666666666667
     },
     {
       "page": "https://trip-cache.com/blog/save-travel-documents-offline",
@@ -112,11 +105,18 @@
       "position": 4.44954128440367
     },
     {
+      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
+      "clicks": 0,
+      "impressions": 96,
+      "ctr": 0,
+      "position": 11.385416666666666
+    },
+    {
       "page": "https://trip-cache.com/features/email-to-itinerary",
       "clicks": 1,
-      "impressions": 76,
-      "ctr": 0.013157894736842105,
-      "position": 6.526315789473684
+      "impressions": 75,
+      "ctr": 0.013333333333333334,
+      "position": 6.493333333333333
     },
     {
       "page": "https://trip-cache.com/features/cancellation-reminders",
@@ -149,9 +149,9 @@
     {
       "page": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
       "clicks": 0,
-      "impressions": 52,
+      "impressions": 49,
       "ctr": 0,
-      "position": 11.423076923076923
+      "position": 11.755102040816327
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#what-happened-to-tripcase",
@@ -163,9 +163,9 @@
     {
       "page": "https://trip-cache.com/about",
       "clicks": 0,
-      "impressions": 39,
+      "impressions": 38,
       "ctr": 0,
-      "position": 7.076923076923077
+      "position": 7.2105263157894735
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#can-i-still-recover-my-tripcase-trips",
@@ -208,9 +208,9 @@
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "query": "tripcase",
       "clicks": 13,
-      "impressions": 980,
-      "ctr": 0.013265306122448979,
-      "position": 5.328571428571428
+      "impressions": 950,
+      "ctr": 0.01368421052631579,
+      "position": 5.285263157894737
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
@@ -224,9 +224,9 @@
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "query": "trip case",
       "clicks": 1,
-      "impressions": 172,
-      "ctr": 0.005813953488372093,
-      "position": 5.784883720930233
+      "impressions": 168,
+      "ctr": 0.005952380952380952,
+      "position": 5.738095238095238
     },
     {
       "page": "https://trip-cache.com/blog/wanderlog-vs-tripit",
@@ -245,22 +245,6 @@
       "position": 9.79816513761468
     },
     {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "tripcase replacement",
-      "clicks": 1,
-      "impressions": 90,
-      "ctr": 0.011111111111111112,
-      "position": 9.166666666666666
-    },
-    {
-      "page": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
-      "query": "tripit alternatives",
-      "clicks": 0,
-      "impressions": 85,
-      "ctr": 0,
-      "position": 17.823529411764707
-    },
-    {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
       "query": "travel history",
       "clicks": 0,
@@ -270,19 +254,27 @@
     },
     {
       "page": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
-      "query": "tripit alternative",
+      "query": "tripit alternatives",
       "clicks": 0,
-      "impressions": 81,
+      "impressions": 82,
       "ctr": 0,
-      "position": 18.530864197530864
+      "position": 18.085365853658537
     },
     {
-      "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "query": "tripcase replacement",
+      "clicks": 1,
+      "impressions": 80,
+      "ctr": 0.0125,
+      "position": 9.05
+    },
+    {
+      "page": "https://trip-cache.com/blog/best-tripit-alternatives-2026",
+      "query": "tripit alternative",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 80,
       "ctr": 0,
-      "position": 18.61904761904762
+      "position": 18.6625
     },
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
@@ -301,12 +293,20 @@
       "position": 10.243243243243244
     },
     {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "tripcase login",
+      "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "query": "tripcase replacement",
       "clicks": 0,
       "impressions": 36,
       "ctr": 0,
-      "position": 2.861111111111111
+      "position": 19.083333333333332
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "query": "tripcase login",
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 2.9142857142857146
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
@@ -320,9 +320,9 @@
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "query": "tripcase.com",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 33,
       "ctr": 0,
-      "position": 5.705882352941177
+      "position": 5.636363636363637
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
@@ -331,14 +331,6 @@
       "impressions": 30,
       "ctr": 0,
       "position": 7.533333333333333
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-      "query": "tripit pro pricing 2026",
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 19.633333333333333
     },
     {
       "page": "https://trip-cache.com/blog/hotel-cancellation-policies",
@@ -352,17 +344,9 @@
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "query": "https://www.tripcase.com",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 26,
       "ctr": 0,
-      "position": 8.071428571428571
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "tripcas",
-      "clicks": 0,
-      "impressions": 25,
-      "ctr": 0,
-      "position": 5.44
+      "position": 7.961538461538462
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
@@ -381,28 +365,20 @@
       "position": 9.08695652173913
     },
     {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "query": "tripcas",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 5.3478260869565215
+    },
+    {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
       "query": "i 94 travel history",
       "clicks": 0,
       "impressions": 22,
       "ctr": 0,
       "position": 7.681818181818182
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
-      "query": "tripit pro pricing official 2026",
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 12.681818181818182
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "tripcase alternative",
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 8.523809523809524
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
@@ -413,12 +389,12 @@
       "position": 5.65
     },
     {
-      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "query": "digital document organizers for itinerary management",
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "query": "tripcase alternative",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 20,
       "ctr": 0,
-      "position": 6.473684210526316
+      "position": 8.1
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
@@ -429,20 +405,20 @@
       "position": 8.722222222222221
     },
     {
+      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+      "query": "digital document organizers for itinerary management",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 6.823529411764706
+    },
+    {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
       "query": "do you have any recent travel history in the last 30 days?",
       "clicks": 0,
       "impressions": 16,
       "ctr": 0,
       "position": 4.25
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "www.tripcase.com",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 5.1875
     },
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
@@ -462,19 +438,19 @@
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "tripcase com",
+      "query": "www.tripcase.com",
       "clicks": 0,
       "impressions": 15,
       "ctr": 0,
-      "position": 7.8
+      "position": 5
     },
     {
-      "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
-      "query": "tripcase corporate pricing",
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "query": "tripcase com",
       "clicks": 0,
       "impressions": 14,
       "ctr": 0,
-      "position": 6.571428571428571
+      "position": 7.642857142857143
     },
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
@@ -509,6 +485,14 @@
       "position": 3.4615384615384617
     },
     {
+      "page": "https://trip-cache.com/blog/tripit-vs-tripcache-comparison-2025",
+      "query": "tripit pro pricing official 2026",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 13.615384615384615
+    },
+    {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
       "query": "best travel apps for managing flight itineraries and mobile check-in?",
       "clicks": 0,
@@ -533,28 +517,12 @@
       "position": 4.5
     },
     {
-      "page": "https://trip-cache.com/",
-      "query": "tripcha",
+      "page": "https://trip-cache.com/blog/tripcase-alternative-2025",
+      "query": "tripcase corporate pricing",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 12,
       "ctr": 0,
-      "position": 2.3636363636363633
-    },
-    {
-      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "query": "best documentation packages for airline travel",
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 6.636363636363637
-    },
-    {
-      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "query": "travel document organizer app",
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 13.727272727272727
+      "position": 6.833333333333333
     },
     {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
@@ -563,14 +531,6 @@
       "impressions": 11,
       "ctr": 0,
       "position": 5.090909090909091
-    },
-    {
-      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
-      "query": "trips case",
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 14.363636363636363
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#3-tripcache-best-for-deadlines-documents-and-expenses",
@@ -605,12 +565,28 @@
       "position": 1.4545454545454546
     },
     {
-      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
-      "query": "mobile apps for organizing and sharing travel insurance documents",
+      "page": "https://trip-cache.com/",
+      "query": "tripcha",
       "clicks": 0,
       "impressions": 10,
       "ctr": 0,
-      "position": 16
+      "position": 2.2
+    },
+    {
+      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+      "query": "best documentation packages for airline travel",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+      "query": "travel document organizer app",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 13.8
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
@@ -619,6 +595,14 @@
       "impressions": 10,
       "ctr": 0,
       "position": 3.4
+    },
+    {
+      "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
+      "query": "trips case",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 14.6
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#1-tripit-the-closest-free-replacement",
@@ -661,6 +645,14 @@
       "position": 5.888888888888889
     },
     {
+      "page": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
+      "query": "mobile apps for organizing and sharing travel insurance documents",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 15.88888888888889
+    },
+    {
       "page": "https://trip-cache.com/blog/how-to-find-your-travel-history",
       "query": "get travel history",
       "clicks": 0,
@@ -691,14 +683,6 @@
       "impressions": 9,
       "ctr": 0,
       "position": 6.333333333333333
-    },
-    {
-      "page": "https://trip-cache.com/blog/best-travel-apps-2025",
-      "query": "top rated apps for travel logistics.",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 3.875
     },
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
@@ -755,6 +739,14 @@
       "impressions": 7,
       "ctr": 0,
       "position": 1.8571428571428572
+    },
+    {
+      "page": "https://trip-cache.com/blog/best-travel-apps-2025",
+      "query": "top rated apps for travel logistics.",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 4.285714285714286
     },
     {
       "page": "https://trip-cache.com/blog/best-travel-apps-2025",
@@ -854,22 +846,6 @@
     },
     {
       "page": "https://trip-cache.com/",
-      "query": "trip case app",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 8.333333333333332
-    },
-    {
-      "page": "https://trip-cache.com/",
-      "query": "tripchay",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 3.8333333333333335
-    },
-    {
-      "page": "https://trip-cache.com/",
       "query": "tripchet",
       "clicks": 0,
       "impressions": 6,
@@ -966,6 +942,14 @@
     },
     {
       "page": "https://trip-cache.com/",
+      "query": "trip case app",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "https://trip-cache.com/",
       "query": "tripchas",
       "clicks": 0,
       "impressions": 5,
@@ -974,11 +958,11 @@
     },
     {
       "page": "https://trip-cache.com/",
-      "query": "tripchaz",
+      "query": "tripchay",
       "clicks": 0,
       "impressions": 5,
       "ctr": 0,
-      "position": 3.2
+      "position": 4.2
     },
     {
       "page": "https://trip-cache.com/alternatives/tripit",
@@ -1067,14 +1051,6 @@
       "impressions": 5,
       "ctr": 0,
       "position": 7.6
-    },
-    {
-      "page": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
-      "query": "how do i organize flight and hotel confirmations?",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 9.2
     },
     {
       "page": "https://trip-cache.com/blog/tripcase-shutdown-what-now#1-tripit-the-closest-free-replacement",
