@@ -1,54 +1,54 @@
 {
-  "generatedAt": "2026-10-23T13:03:43.218Z",
+  "generatedAt": "2026-10-24T12:27:10.691Z",
   "sources": [
     {
       "id": "search-console",
       "status": "SUCCESS",
       "freshness": "fresh",
       "reportingLagDays": 3,
-      "latestSyncTime": "2026-10-23T12:58:32.332Z",
+      "latestSyncTime": "2026-10-24T12:22:05.573Z",
       "coveredDateRange": {
-        "startDate": "2026-09-23",
-        "endDate": "2026-10-20"
+        "startDate": "2026-09-24",
+        "endDate": "2026-10-21"
       },
       "history": {
         "site": {
-          "rows": 338,
+          "rows": 339,
           "from": "2025-11-17",
-          "to": "2026-10-20"
+          "to": "2026-10-21"
         },
         "pages": {
-          "rows": 3857,
+          "rows": 3889,
           "from": "2025-11-19",
-          "to": "2026-10-20"
+          "to": "2026-10-21"
         }
       },
       "note": "Search Console API via the repository-scoped short-lived Google token.",
-      "checkedAt": "2026-10-23T12:58:32.557Z"
+      "checkedAt": "2026-10-24T12:22:06.017Z"
     },
     {
       "id": "index-status",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-23T13:03:27.308Z",
+      "latestSyncTime": "2026-10-24T12:26:59.052Z",
       "note": "36/46 sitemap URLs indexed.",
-      "checkedAt": "2026-10-23T13:03:27.314Z"
+      "checkedAt": "2026-10-24T12:26:59.061Z"
     },
     {
       "id": "ga4-web",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-23T13:03:27.338Z",
+      "latestSyncTime": "2026-10-24T12:26:59.096Z",
       "note": "Store intent 7.1% (21/294 users, 28 days).",
-      "checkedAt": "2026-10-23T13:03:29.658Z"
+      "checkedAt": "2026-10-24T12:27:00.155Z"
     },
     {
       "id": "site-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-10-23T13:03:43.215Z",
+      "latestSyncTime": "2026-10-24T12:27:10.688Z",
       "note": "46 sitemap URLs verified; 0 warnings.",
-      "checkedAt": "2026-10-23T13:03:43.218Z"
+      "checkedAt": "2026-10-24T12:27:10.691Z"
     }
   ]
 }

@@ -1,10 +1,10 @@
 # App Store summary — 2026-10-24
 
-Generated 2026-10-23T13:04:23.741Z by `npm run aso:feed`.
+Generated 2026-10-24T12:27:46.960Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
-- First-time downloads: 19 · redownloads 3 · updates 28
+- First-time downloads: 21 · redownloads 3 · updates 28
 - Latest report: 2026-10-22
 
 ## Quality (store ranking factor)
@@ -28,11 +28,11 @@ Generated 2026-10-23T13:04:23.741Z by `npm run aso:feed`.
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$34 · active subscriptions 4 · active trials 1 · new customers (28d) 52
+- MRR A$34 · active subscriptions 4 · active trials 1 · new customers (28d) 54
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 19 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-22.
+- app-store-connect: **SUCCESS** (fresh) — 21 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-22.
 - google-play: **SUCCESS** (fresh) — 11 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.

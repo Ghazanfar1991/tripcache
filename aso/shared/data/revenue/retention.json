@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-23T13:04:06.454Z",
+  "generatedAt": "2026-10-24T12:27:31.641Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-07-25",
+    "startDate": "2026-07-26",
     "endDate": "2026-10-24"
   },
   "charts": {
@@ -1729,10 +1729,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
-            "Actives": 1.9,
+            "Actives": 1.91,
             "Churn Rate": 0,
             "Churned Actives": 0
           }
@@ -1741,24 +1741,6 @@
         "user_selectors": {},
         "values": [
           {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
-          {
             "cohort": 1785024000,
             "incomplete": false,
             "measure": 0,
@@ -3362,19 +3344,19 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 4
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5097,12 +5079,12 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
             "Conversion Rate (7 days)": 3.2,
             "Initial Conversions (7 days)": 0.04,
-            "New Customers": 1.36
+            "New Customers": 1.37
           },
           "total": {
             "Conversion Rate (7 days)": 3.2,
@@ -5115,24 +5097,6 @@
           "conversion_timeframe": "7_days"
         },
         "values": [
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 2
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1785024000,
             "incomplete": false,
@@ -6617,13 +6581,13 @@
           },
           {
             "cohort": 1792108800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1792108800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -6737,7 +6701,7 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 7
           },
@@ -6757,7 +6721,7 @@
             "cohort": 1792800000,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 2
           },
           {
             "cohort": 1792800000,
@@ -8472,11 +8436,11 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
             "Conversion Rate (7 days)": 2.4,
-            "New Customers": 1.36,
+            "New Customers": 1.37,
             "Paying Customers (7 days)": 0.03
           },
           "total": {
@@ -8490,24 +8454,6 @@
           "conversion_timeframe": "7_days"
         },
         "values": [
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 2
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1785024000,
             "incomplete": false,
@@ -9992,13 +9938,13 @@
           },
           {
             "cohort": 1792108800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1792108800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -10112,7 +10058,7 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 7
           },
@@ -10132,7 +10078,7 @@
             "cohort": 1792800000,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 2
           },
           {
             "cohort": 1792800000,
@@ -11900,49 +11846,6 @@
             "value": "Incomplete"
           },
           {
-            "cohort": 1784937600,
-            "period": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "period": 1,
-            "scale": "absolute",
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "period": 2,
-            "scale": "relative",
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "period": 3,
-            "scale": "absolute",
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "period": 4,
-            "scale": "relative",
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": true,
-            "period": 5,
-            "scale": "absolute",
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": true,
-            "period": 6,
-            "scale": "relative",
-            "value": 0
-          },
-          {
             "cohort": 1785024000,
             "period": 0,
             "value": 0
@@ -13165,15 +13068,27 @@
           },
           {
             "cohort": 1787443200,
-            "incomplete": true,
             "period": 3,
             "scale": "absolute",
             "value": 0
           },
           {
             "cohort": 1787443200,
-            "incomplete": true,
             "period": 4,
+            "scale": "relative",
+            "value": 0
+          },
+          {
+            "cohort": 1787443200,
+            "incomplete": true,
+            "period": 5,
+            "scale": "absolute",
+            "value": 0
+          },
+          {
+            "cohort": 1787443200,
+            "incomplete": true,
+            "period": 6,
             "scale": "relative",
             "value": 0
           },
@@ -14114,15 +14029,27 @@
           },
           {
             "cohort": 1790121600,
-            "incomplete": true,
             "period": 1,
             "scale": "absolute",
             "value": 0
           },
           {
             "cohort": 1790121600,
-            "incomplete": true,
             "period": 2,
+            "scale": "relative",
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "period": 3,
+            "scale": "absolute",
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": true,
+            "period": 4,
             "scale": "relative",
             "value": 0
           },
@@ -14679,8 +14606,21 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
             "period": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1792713600,
+            "incomplete": true,
+            "period": 1,
+            "scale": "absolute",
+            "value": 0
+          },
+          {
+            "cohort": 1792713600,
+            "incomplete": true,
+            "period": 2,
+            "scale": "relative",
             "value": 0
           },
           {

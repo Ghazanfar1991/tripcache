@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-23T13:04:06.454Z",
+  "generatedAt": "2026-10-24T12:27:31.641Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-07-25",
+    "startDate": "2026-07-26",
     "endDate": "2026-10-24"
   },
   "charts": {
@@ -1772,10 +1772,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
-            "MRR": 18.09
+            "MRR": 18.16
           }
         },
         "unsupported_params": null,
@@ -1783,12 +1783,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1785024000,
             "incomplete": false,
@@ -2325,7 +2319,7 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 34.39
           },
@@ -4178,11 +4172,11 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
             "Ad Impressions": 0,
-            "Revenue": 0.94,
+            "Revenue": 0.95,
             "Transactions": 0.03
           },
           "total": {
@@ -4196,24 +4190,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1785024000,
             "incomplete": false,
@@ -5818,19 +5794,19 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -7564,21 +7540,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
-            "Actives": 1.93
+            "Actives": 1.95
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
           {
             "cohort": 1785024000,
             "incomplete": false,
@@ -8115,7 +8085,7 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 4
           },
@@ -9837,7 +9807,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1784937600,
+        "start_date": 1785024000,
         "summary": {
           "average": {
             "Active Trials": 0.07
@@ -9846,12 +9816,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1784937600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1785024000,
             "incomplete": false,
@@ -10388,7 +10352,7 @@
           },
           {
             "cohort": 1792713600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 1
           },
