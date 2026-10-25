@@ -1,6 +1,6 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-10-24T12:27:31.596Z",
+  "generatedAt": "2026-10-25T12:58:23.659Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
@@ -15,25 +15,9 @@
     "deviceInstalls": 12,
     "deviceUninstalls": 0
   },
-  "latestReportedDate": "2026-10-19",
+  "latestReportedDate": "2026-10-21",
   "latestInstalledAudience": 21,
   "daily": [
-    {
-      "date": "2026-07-20",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 13
-    },
-    {
-      "date": "2026-07-21",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 1,
-      "dailyDeviceInstalls": 1,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 14
-    },
     {
       "date": "2026-07-22",
       "dailyUserInstalls": 1,
@@ -751,6 +735,22 @@
       "dailyUserInstalls": 1,
       "dailyUserUninstalls": 1,
       "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 21
+    },
+    {
+      "date": "2026-10-20",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 24
+    },
+    {
+      "date": "2026-10-21",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
       "dailyDeviceUninstalls": 0,
       "activeDeviceInstalls": 21
     }

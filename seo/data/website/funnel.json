@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T12:26:59.096Z",
+  "generatedAt": "2026-10-25T12:57:50.792Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -10,22 +10,22 @@
   "events": [
     {
       "dimensions": {
-        "eventName": "app_store_click",
-        "platform": "web"
-      },
-      "metrics": {
-        "eventCount": 20,
-        "activeUsers": 14
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "download_cta_click",
         "platform": "web"
       },
       "metrics": {
         "eventCount": 20,
         "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_store_click",
+        "platform": "web"
+      },
+      "metrics": {
+        "eventCount": 19,
+        "activeUsers": 13
       }
     },
     {
@@ -55,9 +55,9 @@
         "landingPage": "/"
       },
       "metrics": {
-        "sessions": 75,
-        "activeUsers": 51,
-        "engagementRate": 0.6533333333333333
+        "sessions": 69,
+        "activeUsers": 46,
+        "engagementRate": 0.6666666666666666
       }
     },
     {
@@ -65,9 +65,9 @@
         "landingPage": "/blog/how-to-find-your-travel-history"
       },
       "metrics": {
-        "sessions": 52,
-        "activeUsers": 50,
-        "engagementRate": 0.46153846153846156
+        "sessions": 53,
+        "activeUsers": 51,
+        "engagementRate": 0.4528301886792453
       }
     },
     {
@@ -75,9 +75,9 @@
         "landingPage": "/blog/tripcase-shutdown-what-now"
       },
       "metrics": {
-        "sessions": 50,
-        "activeUsers": 41,
-        "engagementRate": 0.5
+        "sessions": 47,
+        "activeUsers": 38,
+        "engagementRate": 0.5106382978723404
       }
     },
     {
@@ -95,9 +95,9 @@
         "landingPage": "(not set)"
       },
       "metrics": {
-        "sessions": 18,
+        "sessions": 19,
         "activeUsers": 12,
-        "engagementRate": 0.05555555555555555
+        "engagementRate": 0.05263157894736842
       }
     },
     {
@@ -529,8 +529,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 38,
-        "activeUsers": 35
+        "sessions": 36,
+        "activeUsers": 33
       }
     },
     {
@@ -540,7 +540,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 36,
+        "sessions": 35,
         "activeUsers": 17
       }
     },
@@ -584,7 +584,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 15,
+        "sessions": 16,
         "activeUsers": 10
       }
     },
@@ -595,8 +595,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 13,
-        "activeUsers": 13
+        "sessions": 14,
+        "activeUsers": 14
       }
     },
     {
@@ -634,17 +634,6 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "bing / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 10,
-        "activeUsers": 4
-      }
-    },
-    {
-      "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
         "platform": "web"
@@ -652,6 +641,17 @@
       "metrics": {
         "sessions": 9,
         "activeUsers": 9
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 9,
+        "activeUsers": 3
       }
     },
     {
@@ -1317,62 +1317,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "facebook.com / referral",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR4jmcnCJeTSD3we-0hofHEdCBi7NLra9pGHLk3qYh0r6q1xQX1OmwzxuPPL6w_aem_xf6zE98bNZT1fTKQtgth5w",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "facebook.com / referral",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR5Br0aAcpSsomYGhba9cpuyyN1dpzeyDNgOPmgbwTdYKSYHFUvWd4Z0TGzDeQ_aem_hIlM6ANPZgVkrm_-zKNldg",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "facebook.com / referral",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR5D7kHry-ZgEeah0mt3XS3-2ybcoiOtw1K9Gf1NED_EicZNeKBH6jNa1mT3JQ_aem_yyr0ukV-XcF9I3hXqVaezg",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "facebook.com / referral",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR5V5PGpSOQLYF6iv745-FM08DA4c5yhIDSPGK_w2VnhOseY26FzZid8Ws9wxw_aem_1wjJMFV3_Y_usP5I2f41dA",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "facebook.com / referral",
         "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR6SWOQ_k0dJeltaZiWNSgfN_lxrDek98TUn99NP49MlRMV9YSqpx8TTgrWqtw_aem_kRXy9ojhaqz57uAe34zytg",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "facebook.com / referral",
-        "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR7HqXS3d-AvkAROSL0FUFh8VPTfpN28bEI9DXvKXPObLFD3eR5Xp4Z4WUo2ng_aem_hCbs_V65WKoS_nEt9uw-UQ",
         "platform": "web"
       },
       "metrics": {
@@ -1516,11 +1461,11 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 294,
-    "landingSessions": 372,
-    "storeIntentUsers": 21,
-    "storeIntentEvents": 36,
-    "rate": 0.07142857142857142,
+    "landingUsers": 287,
+    "landingSessions": 365,
+    "storeIntentUsers": 20,
+    "storeIntentEvents": 35,
+    "rate": 0.06968641114982578,
     "eventNames": [
       "app_store_click",
       "play_store_click"
@@ -1579,17 +1524,6 @@
         "metrics": {
           "eventCount": 2,
           "activeUsers": 2
-        }
-      },
-      {
-        "dimensions": {
-          "eventName": "app_store_click",
-          "pagePathPlusQueryString": "/blog/tripcase-alternative-2025",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
         }
       },
       {
