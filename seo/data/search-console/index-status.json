@@ -1,20 +1,19 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-10-25T12:57:50.754Z",
+  "generatedAt": "2026-10-26T14:46:48.717Z",
   "sitemapUrls": 46,
-  "indexed": 35,
+  "indexed": 36,
   "notIndexed": 10,
   "byCoverageState": {
-    "Submitted and indexed": 35,
-    "URL is unknown to Google": 1,
-    "Discovered - currently not indexed": 9,
-    "INSPECTION_ERROR: 500": 1
+    "Submitted and indexed": 36,
+    "Discovered - currently not indexed": 8,
+    "URL is unknown to Google": 2
   },
   "issues": [
     {
       "path": "/tools/flight-arrival-time-calculator",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/account-delete",
@@ -34,7 +33,7 @@
     {
       "path": "/blog/ai-trip-planner-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/business-travel-management-guide-2026",
@@ -49,7 +48,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/google-travel-alternative-2026",
@@ -103,15 +102,9 @@
       "indexedSince": null
     },
     {
-      "path": "/blog",
-      "verdict": null,
-      "coverageState": "INSPECTION_ERROR: 500",
-      "indexed": null
-    },
-    {
       "path": "/blog/ai-trip-planner-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -119,10 +112,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/blog"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:31.055Z",
       "indexedSince": null
@@ -170,7 +161,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -178,10 +169,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/sitemap.xml"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:50.827Z",
       "indexedSince": null
@@ -266,7 +255,7 @@
     {
       "path": "/tools/flight-arrival-time-calculator",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -274,8 +263,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-05T16:38:43.041Z",
       "indexedSince": null
@@ -370,7 +361,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-20T23:05:48Z",
+      "lastCrawlTime": "2026-10-26T02:49:26Z",
       "googleCanonical": "https://trip-cache.com/alternatives/tripit",
       "userCanonical": "https://trip-cache.com/alternatives/tripit",
       "robotsTxtState": "ALLOWED",
@@ -392,6 +383,26 @@
       },
       "firstSeenAt": "2026-10-04T17:04:56.137Z",
       "indexedSince": "2026-10-04T17:04:56.137Z"
+    },
+    {
+      "path": "/blog",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-10-23T01:16:15Z",
+      "googleCanonical": "https://trip-cache.com/blog",
+      "userCanonical": "https://trip-cache.com/blog",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog/flight-time-zones-arrival-date",
+        "/sitemap.xml"
+      ],
+      "richResults": null,
+      "firstSeenAt": "2026-10-26T14:43:29.295Z",
+      "indexedSince": "2026-10-26T14:43:29.295Z"
     },
     {
       "path": "/blog/ai-travel-organizer-app-2026",

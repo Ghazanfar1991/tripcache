@@ -1,6 +1,6 @@
 {
   "source": "Firebase Crashlytics dashboard and BigQuery export",
-  "generatedAt": "2026-10-25T12:58:35.443Z",
+  "generatedAt": "2026-10-26T14:47:34.517Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -50,15 +50,15 @@
     {
       "platform": "ANDROID",
       "table": "app_tripcache_ANDROID",
-      "fatalOrAnrEvents": 68,
-      "impactedInstallations": 10,
+      "fatalOrAnrEvents": 79,
+      "impactedInstallations": 11,
       "fatalOrAnrIssues": 3,
       "topIssues": [
         {
           "issueId": "951757a123c3bbe9542453cf8634abd8",
           "errorType": "FATAL",
-          "events": 65,
-          "impactedInstallations": 7
+          "events": 76,
+          "impactedInstallations": 8
         },
         {
           "issueId": "faab73ef600b81ad35a1eb9b283d6b76",
@@ -77,10 +77,17 @@
     {
       "platform": "IOS",
       "table": "app_tripcache_IOS",
-      "fatalOrAnrEvents": 0,
-      "impactedInstallations": 0,
-      "fatalOrAnrIssues": 0,
-      "topIssues": []
+      "fatalOrAnrEvents": 1,
+      "impactedInstallations": 1,
+      "fatalOrAnrIssues": 1,
+      "topIssues": [
+        {
+          "issueId": "7e2b818bf4473416664caa1a438ad737",
+          "errorType": "FATAL",
+          "events": 1,
+          "impactedInstallations": 1
+        }
+      ]
     }
   ]
 }
