@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-26T14:47:21.794Z",
+  "generatedAt": "2026-10-27T13:52:43.793Z",
   "currency": "AUD",
   "reportingWindow": {
     "startDate": "2026-07-29",
-    "endDate": "2026-10-27"
+    "endDate": "2026-10-28"
   },
   "charts": {
     "mrr": {
@@ -1753,7 +1753,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1793059200,
+        "end_date": 1793145600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1775,7 +1775,7 @@
         "start_date": 1785283200,
         "summary": {
           "average": {
-            "MRR": 18.84
+            "MRR": 18.99
           }
         },
         "unsupported_params": null,
@@ -2319,12 +2319,18 @@
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 32.13
           },
           {
             "cohort": 1793059200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 32.13
+          },
+          {
+            "cohort": 1793145600,
             "incomplete": true,
             "measure": 0,
             "value": 32.13
@@ -4133,11 +4139,11 @@
       },
       "data": {
         "category": "revenue",
-        "description": "Revenue displays the revenue generated during a period. This number will usually be a little higher than MRR as it is un-normalized and all the revenue from an annual subscription is charted the period it starts or is renewed. This chart also displays all revenue from non-consumable and consumable purchases, non-renewing subscriptions, and ads. You can select between Revenue, Revenue (net of taxes), Proceeds, or Gross revenue before refunds as the revenue definition to visualize in the chart.",
+        "description": "Revenue displays the revenue generated during a period. This number will usually be a little higher than MRR as it is un-normalized and all the revenue from an annual subscription is charted the period it starts or is renewed. This chart also displays all revenue from non-consumable and consumable purchases, non-renewing subscriptions, and ads. You can select between Revenue, Revenue (net of taxes), Proceeds, or Gross revenue before refunds as the revenue definition to visualize in the chart. When filtering or segmenting by Renewal Cycle, each transaction uses the cycle that applied when it occurred, so later renewals do not move earlier revenue to another cycle.",
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1793059200,
+        "end_date": 1793145600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4176,7 +4182,7 @@
         "summary": {
           "average": {
             "Ad Impressions": 0,
-            "Revenue": 1.78,
+            "Revenue": 1.76,
             "Transactions": 0.04
           },
           "total": {
@@ -5794,19 +5800,19 @@
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5824,6 +5830,24 @@
           },
           {
             "cohort": 1793059200,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7521,7 +7545,7 @@
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1793059200,
+        "end_date": 1793145600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7543,7 +7567,7 @@
         "start_date": 1785283200,
         "summary": {
           "average": {
-            "Actives": 2.04
+            "Actives": 2.07
           }
         },
         "unsupported_params": null,
@@ -8085,12 +8109,18 @@
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 4
           },
           {
             "cohort": 1793059200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 4
+          },
+          {
+            "cohort": 1793145600,
             "incomplete": true,
             "measure": 0,
             "value": 4
@@ -9788,7 +9818,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1793059200,
+        "end_date": 1793145600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -10352,12 +10382,18 @@
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1793059200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
             "incomplete": true,
             "measure": 0,
             "value": 0
@@ -12187,7 +12223,7 @@
       },
       "data": {
         "category": "actives",
-        "description": "The Subscription Status chart breaks down Active Subscriptions, Active Trials, MRR, ARR, or Subscription Revenue by the current status of the underlying subscription contributing to that measure.\n\nA subscription will have a status of Billing Issue if it's currently in a grace period or billing retry. Set to Cancel includes subscriptions that will not renew, will pause, or require price-increase consent. Set to Renew includes subscriptions that will renew, change products, or have already renewed. Other states are shown as Unknown.\n\nEach measure can then be filtered or segmented by values like Product Duration, Expiration Month, and more to understand how the portion Set to Cancel or in a Billing Issue state is affected by these dimensions.",
+        "description": "The Subscription Status chart breaks down Active Subscriptions, Active Trials, MRR, ARR, or Subscription Revenue by the current status of the underlying subscription that currently grants access and contributes to that measure.\n\nA subscription will have a status of Billing Issue if it's currently in a grace period or a billing retry where access remains active. Billing retries where access has ended are not included in the chart. Set to Cancel includes subscriptions that will not renew, will pause, or require price-increase consent. Set to Renew includes subscriptions that will renew, change products, or have already renewed. Other states are shown as Unknown.\n\nEach measure can then be filtered or segmented by values like Product Duration, Expiration Month, and more to understand how the portion Set to Cancel or in a Billing Issue state is affected by these dimensions.\n\nWhen filtering or segmenting by Renewal Cycle, the chart uses the cycle from each subscription's latest current event.",
         "display_name": "Subscription Status",
         "display_type": "conversion",
         "documentation_link": "dashboard-and-metrics/charts/subscription-status-chart",
@@ -12224,7 +12260,7 @@
           {
             "chartable": true,
             "decimal_precision": 0,
-            "description": "The number of currently active subscriptions that were set to renew at the end of their prior period, but failed to do so due to a billing issue, and are currently in a grace period or billing retry.",
+            "description": "The number of currently active subscriptions that were set to renew at the end of their prior period, but failed to do so due to a billing issue, and whose access remains active during a grace period or billing retry.",
             "display_name": "Active Subscriptions Billing Issue",
             "scale": "absolute",
             "tabulable": true,
@@ -12251,7 +12287,7 @@
           {
             "chartable": true,
             "decimal_precision": 1,
-            "description": "The portion of currently active subscriptions that were set to renew at the end of their prior period, but failed to do so due to a billing issue, and are currently in a grace period or billing retry.",
+            "description": "The portion of currently active subscriptions that were set to renew at the end of their prior period, but failed to do so due to a billing issue, and whose access remains active during a grace period or billing retry.",
             "display_name": "Active Subscriptions Billing Issue Percentage",
             "scale": "relative",
             "tabulable": true,

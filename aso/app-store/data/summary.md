@@ -1,11 +1,11 @@
-# App Store summary — 2026-10-27
+# App Store summary — 2026-10-28
 
-Generated 2026-10-26T14:47:42.139Z by `npm run aso:feed`.
+Generated 2026-10-27T13:53:05.429Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
-- First-time downloads: 22 · redownloads 4 · updates 54
-- Latest report: 2026-10-25
+- First-time downloads: 20 · redownloads 4 · updates 55
+- Latest report: 2026-10-26
 
 ## Quality (store ranking factor)
 
@@ -14,7 +14,7 @@ Generated 2026-10-26T14:47:42.139Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 33 users
+- installProxy: 37 users
 - signUp: not instrumented
 - onboardingComplete: not instrumented
 - activation: not instrumented
@@ -24,16 +24,16 @@ Generated 2026-10-26T14:47:42.139Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 33 new users
+- (direct) / (none): 37 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$32 · active subscriptions 4 · active trials 0 · new customers (28d) 60
+- MRR A$32 · active subscriptions 4 · active trials 0 · new customers (28d) 61
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 22 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-25.
-- google-play: **SUCCESS** (fresh) — 11 official Play user installs in the latest 28 reported days.
+- app-store-connect: **SUCCESS** (fresh) — 20 official App Store first-time downloads in the latest 28 reported days; latest report 2026-10-26.
+- google-play: **SUCCESS** (fresh) — 13 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
