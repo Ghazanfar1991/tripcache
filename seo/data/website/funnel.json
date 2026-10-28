@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T13:52:08.839Z",
+  "generatedAt": "2026-10-28T14:47:27.866Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -20,22 +20,22 @@
     },
     {
       "dimensions": {
-        "eventName": "app_store_click",
+        "eventName": "play_store_click",
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 18,
+        "eventCount": 20,
         "activeUsers": 13
       }
     },
     {
       "dimensions": {
-        "eventName": "play_store_click",
+        "eventName": "app_store_click",
         "platform": "web"
       },
       "metrics": {
         "eventCount": 17,
-        "activeUsers": 11
+        "activeUsers": 13
       }
     },
     {
@@ -44,8 +44,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 8,
-        "activeUsers": 4
+        "eventCount": 7,
+        "activeUsers": 3
       }
     }
   ],
@@ -55,9 +55,9 @@
         "landingPage": "/"
       },
       "metrics": {
-        "sessions": 69,
-        "activeUsers": 47,
-        "engagementRate": 0.6376811594202898
+        "sessions": 71,
+        "activeUsers": 49,
+        "engagementRate": 0.647887323943662
       }
     },
     {
@@ -65,9 +65,9 @@
         "landingPage": "/blog/tripcase-shutdown-what-now"
       },
       "metrics": {
-        "sessions": 56,
-        "activeUsers": 44,
-        "engagementRate": 0.5178571428571429
+        "sessions": 58,
+        "activeUsers": 45,
+        "engagementRate": 0.5
       }
     },
     {
@@ -75,9 +75,9 @@
         "landingPage": "/blog/how-to-find-your-travel-history"
       },
       "metrics": {
-        "sessions": 54,
-        "activeUsers": 52,
-        "engagementRate": 0.46296296296296297
+        "sessions": 55,
+        "activeUsers": 53,
+        "engagementRate": 0.45454545454545453
       }
     },
     {
@@ -92,6 +92,16 @@
     },
     {
       "dimensions": {
+        "landingPage": "/blog/hotel-cancellation-policies"
+      },
+      "metrics": {
+        "sessions": 19,
+        "activeUsers": 19,
+        "engagementRate": 0.15789473684210525
+      }
+    },
+    {
+      "dimensions": {
         "landingPage": "(not set)"
       },
       "metrics": {
@@ -102,22 +112,12 @@
     },
     {
       "dimensions": {
-        "landingPage": "/blog/hotel-cancellation-policies"
-      },
-      "metrics": {
-        "sessions": 17,
-        "activeUsers": 17,
-        "engagementRate": 0.17647058823529413
-      }
-    },
-    {
-      "dimensions": {
         "landingPage": "/tools/jet-lag-calculator"
       },
       "metrics": {
-        "sessions": 15,
-        "activeUsers": 13,
-        "engagementRate": 0.7333333333333333
+        "sessions": 16,
+        "activeUsers": 14,
+        "engagementRate": 0.75
       }
     },
     {
@@ -125,9 +125,9 @@
         "landingPage": "/blog/best-tripit-alternatives-2026"
       },
       "metrics": {
-        "sessions": 13,
-        "activeUsers": 13,
-        "engagementRate": 0.3076923076923077
+        "sessions": 12,
+        "activeUsers": 12,
+        "engagementRate": 0.3333333333333333
       }
     },
     {
@@ -145,8 +145,8 @@
         "landingPage": "/blog/travel-itinerary-template-2026"
       },
       "metrics": {
-        "sessions": 11,
-        "activeUsers": 11,
+        "sessions": 10,
+        "activeUsers": 10,
         "engagementRate": 0
       }
     },
@@ -165,9 +165,9 @@
         "landingPage": "/blog/best-travel-document-organizer-app-2026"
       },
       "metrics": {
-        "sessions": 7,
-        "activeUsers": 7,
-        "engagementRate": 0.8571428571428571
+        "sessions": 8,
+        "activeUsers": 8,
+        "engagementRate": 0.875
       }
     },
     {
@@ -175,19 +175,9 @@
         "landingPage": "/tools/layover-calculator"
       },
       "metrics": {
-        "sessions": 7,
-        "activeUsers": 7,
-        "engagementRate": 0.7142857142857143
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/ai-travel-organizer-app-2026"
-      },
-      "metrics": {
-        "sessions": 6,
-        "activeUsers": 3,
-        "engagementRate": 0.5
+        "sessions": 8,
+        "activeUsers": 8,
+        "engagementRate": 0.75
       }
     },
     {
@@ -195,9 +185,19 @@
         "landingPage": "/blog/organize-travel-confirmation-emails-2026"
       },
       "metrics": {
+        "sessions": 6,
+        "activeUsers": 6,
+        "engagementRate": 0.16666666666666666
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/ai-travel-organizer-app-2026"
+      },
+      "metrics": {
         "sessions": 5,
-        "activeUsers": 5,
-        "engagementRate": 0
+        "activeUsers": 3,
+        "engagementRate": 0.4
       }
     },
     {
@@ -268,16 +268,6 @@
         "sessions": 2,
         "activeUsers": 2,
         "engagementRate": 0.5
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/ai-trip-planner-2026"
-      },
-      "metrics": {
-        "sessions": 2,
-        "activeUsers": 2,
-        "engagementRate": 0
       }
     },
     {
@@ -372,6 +362,16 @@
     },
     {
       "dimensions": {
+        "landingPage": "/blog/ai-trip-planner-2026"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
         "landingPage": "/blog/business-travel-expense-reporting-app-2026"
       },
       "metrics": {
@@ -403,16 +403,6 @@
     {
       "dimensions": {
         "landingPage": "/blog/privacy-and-security"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1,
-        "engagementRate": 0
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/trip-expense-management-app-2026"
       },
       "metrics": {
         "sessions": 1,
@@ -520,8 +510,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 35,
-        "activeUsers": 18
+        "sessions": 36,
+        "activeUsers": 19
       }
     },
     {
@@ -531,8 +521,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 27,
-        "activeUsers": 22
+        "sessions": 28,
+        "activeUsers": 23
       }
     },
     {
@@ -564,6 +554,17 @@
         "platform": "web"
       },
       "metrics": {
+        "sessions": 15,
+        "activeUsers": 15
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
+        "platform": "web"
+      },
+      "metrics": {
         "sessions": 14,
         "activeUsers": 14
       }
@@ -586,18 +587,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 13,
-        "activeUsers": 11
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 12,
+        "sessions": 14,
         "activeUsers": 12
       }
     },
@@ -608,7 +598,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 12,
+        "sessions": 13,
         "activeUsers": 3
       }
     },
@@ -630,8 +620,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 11,
-        "activeUsers": 11
+        "sessions": 10,
+        "activeUsers": 10
       }
     },
     {
@@ -652,8 +642,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 9,
-        "activeUsers": 9
+        "sessions": 8,
+        "activeUsers": 8
       }
     },
     {
@@ -685,6 +675,17 @@
         "platform": "web"
       },
       "metrics": {
+        "sessions": 7,
+        "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/tools/layover-calculator",
+        "platform": "web"
+      },
+      "metrics": {
         "sessions": 6,
         "activeUsers": 6
       }
@@ -696,19 +697,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 5,
+        "sessions": 4,
         "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/tools/layover-calculator",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 5,
-        "activeUsers": 5
       }
     },
     {
@@ -726,6 +716,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
       },
       "metrics": {
@@ -835,17 +836,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/ai-trip-planner-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 2,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/business-travel-management-guide-2026",
         "platform": "web"
       },
@@ -858,17 +848,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/google-travel-alternative-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 2,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
         "platform": "web"
       },
       "metrics": {
@@ -924,6 +903,17 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/tools/layover-calculator",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
         "platform": "web"
       },
       "metrics": {
@@ -1011,6 +1001,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/ai-trip-planner-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/business-travel-expense-reporting-app-2026",
         "platform": "web"
       },
@@ -1078,17 +1079,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/save-travel-documents-offline",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -1352,17 +1342,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/features/email-to-itinerary",
         "platform": "web"
       },
@@ -1441,16 +1420,27 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 303,
-    "landingSessions": 382,
-    "storeIntentUsers": 21,
-    "storeIntentEvents": 35,
-    "rate": 0.06930693069306931,
+    "landingUsers": 309,
+    "landingSessions": 388,
+    "storeIntentUsers": 23,
+    "storeIntentEvents": 37,
+    "rate": 0.0744336569579288,
     "eventNames": [
       "app_store_click",
       "play_store_click"
     ],
     "byPage": [
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 12,
+          "activeUsers": 6
+        }
+      },
       {
         "dimensions": {
           "eventName": "app_store_click",
@@ -1464,19 +1454,19 @@
       },
       {
         "dimensions": {
-          "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/",
+          "eventName": "app_store_click",
+          "pagePathPlusQueryString": "/blog/tripcase-shutdown-what-now",
           "platform": "web"
         },
         "metrics": {
-          "eventCount": 11,
-          "activeUsers": 5
+          "eventCount": 3,
+          "activeUsers": 2
         }
       },
       {
         "dimensions": {
-          "eventName": "app_store_click",
-          "pagePathPlusQueryString": "/blog/tripcase-shutdown-what-now",
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/blog/best-travel-document-organizer-app-2026",
           "platform": "web"
         },
         "metrics": {
@@ -1502,7 +1492,7 @@
           "platform": "web"
         },
         "metrics": {
-          "eventCount": 2,
+          "eventCount": 1,
           "activeUsers": 1
         }
       },
@@ -1532,17 +1522,6 @@
         "dimensions": {
           "eventName": "play_store_click",
           "pagePathPlusQueryString": "/blog/best-travel-apps-2025",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/blog/best-travel-document-organizer-app-2026",
           "platform": "web"
         },
         "metrics": {
