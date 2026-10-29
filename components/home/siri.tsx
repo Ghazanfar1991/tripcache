@@ -12,7 +12,7 @@ import { useInViewPlaying } from "./use-in-view-playing"
  */
 
 const QUESTION = "When’s my next flight in TripCache?"
-const ANSWER = "Your flight QF401 to Melbourne leaves on Tuesday 10 November at 8:00 am, on time."
+const ANSWER = "Your flight QF 9401 to Melbourne leaves on Tuesday 10 November at 9:10 am, on time."
 const QUESTION_WORDS = QUESTION.split(" ")
 
 const PHRASES = [
@@ -59,8 +59,8 @@ function SiriPhone() {
     <div ref={ref} className="relative mx-auto w-full max-w-[290px] sm:max-w-[330px]">
       <figure className="relative aspect-[393/852] overflow-hidden rounded-[52px] border-[10px] border-[#101014] bg-[#101014] shadow-[0_50px_90px_-40px_rgba(45,27,87,0.65)]">
         <figcaption className="sr-only">
-          On iPhone, someone asks Siri “{QUESTION}”. Siri answers “{ANSWER}” and shows the TripCache flight card: QF401, Sydney 8:00 AM to Melbourne
-          9:35 AM, 6 days 14 hours until gate departure.
+          On iPhone, someone asks Siri “{QUESTION}”. Siri answers “{ANSWER}” and shows the TripCache flight card: QF 9401, Sydney 9:10 AM to Melbourne
+          10:45 AM, 11 days until gate departure.
         </figcaption>
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[42px]">
           <img src="/agents/siri-wallpaper.webp" alt="" width={560} height={1217} loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" />
@@ -106,7 +106,7 @@ function SiriPhone() {
 function SpotlightCard() {
   return (
     <figure className="rounded-[22px] border border-tc-line bg-white p-4 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-40px_rgba(45,27,87,0.4)]">
-      <figcaption className="sr-only">Searching Spotlight for Melbourne shows the TripCache trip “Melbourne weekend, 10 to 11 Nov 2026”.</figcaption>
+      <figcaption className="sr-only">Searching Spotlight for Melbourne shows the TripCache trip “Melbourne, 10 to 14 Nov 2026”.</figcaption>
       <div aria-hidden="true">
         <div className="flex items-center gap-2 rounded-full bg-tc-mist px-3.5 py-2 text-[14.5px] text-tc-ink">
           <Search className="size-4 text-tc-mute" strokeWidth={2.2} />
@@ -116,8 +116,8 @@ function SpotlightCard() {
         <div className="mt-2 flex items-center gap-3 rounded-[14px] bg-tc-mist px-3 py-2.5">
           <img src="/app-icon-violet-indigo.webp" alt="" width={36} height={36} loading="lazy" decoding="async" className="size-9 rounded-[10px]" />
           <div className="min-w-0">
-            <p className="truncate text-[15px] font-semibold text-tc-ink">Melbourne weekend</p>
-            <p className="text-[13px] tabular-nums text-tc-mute">Melbourne · 10 – 11 Nov 2026</p>
+            <p className="truncate text-[15px] font-semibold text-tc-ink">Melbourne</p>
+            <p className="text-[13px] tabular-nums text-tc-mute">SYD → SYD · 10 – 14 Nov 2026</p>
           </div>
         </div>
       </div>

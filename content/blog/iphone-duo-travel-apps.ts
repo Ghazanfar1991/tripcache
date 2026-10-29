@@ -36,7 +36,7 @@ iPhone Duo went on sale on 23 October 2026. Apple said the day before that more 
 > - Unoptimized apps still run, but in a smaller box on the inner display.
 > - TripCache keeps what you were looking at in place when you open the phone and adds a second page beside it.
 
-![TripCache on iPhone Duo's inner display: a flight board on the left page and the Qantas QF 9401 flight details with a route map on the right](/blog-media/iphone-duo-flight-two-panes.webp 1100x762 "TripCache's flight page on the open Duo: the board on the left, the flight you were viewing on the right.")
+![TripCache on iPhone Duo's inner display: an airport arrivals board for Virgin Australia VA 419 from Adelaide on the left page, and the flight's route map, times, boarding time and seat on the right](/blog-media/iphone-duo-flight-two-panes.webp 1100x774 "A flight on the open Duo: the arrivals board on the left, the flight you were viewing on the right.")
 
 ## How to tell if an app is built for iPhone Duo
 
@@ -66,13 +66,13 @@ The new page fades in from a soft blur as the hinge opens, so nothing flashes or
 
 ### Trips: a cover and its contents
 
-Open a trip with the phone held sideways and it becomes two pages. The left page is the cover: the destination photo, dates, counts of flights, stays and documents, and the trip budget. The right page is the itinerary. The map, budget and documents slide in over the itinerary while the cover stays put.
+Open a trip with the phone held sideways and it becomes two pages. The left page is the cover: the destination photo, dates, counts of flights, hotels, cars and activities, and buttons for the budget, map and documents. The right page is the itinerary. The map, budget and documents slide in over the itinerary while the cover stays put.
 
-![TripCache trip view on iPhone Duo: the Melbourne trip cover with flight, stay and document counts and booked costs on the left, and the trip itinerary on the right](/blog-media/iphone-duo-trip-two-panes.webp 1100x762 "A trip on the open Duo: the cover on the left, the itinerary on the right.")
+![TripCache trip view on iPhone Duo: the Adelaide trip cover with its dates and counts of flights, hotels, cars and activities on the left, and the day-by-day itinerary on the right](/blog-media/iphone-duo-trip-two-panes.webp 1100x774 "A trip on the open Duo: the cover on the left, the itinerary on the right.")
 
 ### Flights: board, map and detail
 
-The flight page you were reading stays on the right. The left page shows a departure board style view of the flight with its countdown, and the right page keeps the flight details with the route map, times, boarding time and seat.
+The flight page you were reading stays on the right. The left page shows the flight as an airport departures or arrivals board, with what's next and the belt and terminal underneath. The right page keeps the flight details with the route map, times, boarding time and seat.
 
 Stand the phone half open on a table, like a small laptop, and TripCache splits the flight the other way: the top half is something to glance at, and the bottom half holds large controls you can reach without picking the phone up.
 
@@ -82,7 +82,7 @@ Stand the phone half open on a table, like a small laptop, and TripCache splits 
 - **Imports:** a forwarded confirmation's draft opens on one page while the list of drafts stays on the other, so you can check the booking against the [email it came from](/features/email-to-itinerary).
 - **History:** past trips are listed on one page, with a globe of everywhere you've been on the other.
 
-![TripCache documents on iPhone Duo: a locked vault illustration on the left page and the document PIN pad on the right](/blog-media/iphone-duo-documents-two-panes.webp 1100x762 "With the vault locked, you enter your PIN on one page and your documents open on the other.")
+![TripCache documents on iPhone Duo: two protected documents shown sealed on the left page and the document PIN pad on the right](/blog-media/iphone-duo-documents-two-panes.webp 1100x774 "With the vault locked, you enter your PIN on the right and your documents open on the left.")
 
 ### Held upright
 

@@ -1,15 +1,15 @@
 "use client"
 
 import { useReducedMotion } from "framer-motion"
-import { useState } from "react"
-import { Bloom } from "./category"
+import { useEffect, useState } from "react"
 import { useInViewPlaying } from "./use-in-view-playing"
 
 /*
- * "Made for iPhone Duo." Frames are the app's own Duo simulator captures (inner display, landscape flat;
- * trip-cache-app/design-assets/duo-implementation-2026-10-27). The fold follows the app's fold study: the
- * right page is the closed screen and never moves, the left page swings in under a blur-and-darken veil.
- * Transform and opacity only; the loop pauses off screen and is a still, open device under reduced motion.
+ * "Made for iPhone Duo." The video is rendered frame by frame from the iphone-duo fold study
+ * (github.com/chuspeeism/iphone-duo: Apple's iPhone Duo model and the reference blur-and-darken shader), with
+ * TripCache's own inner-display captures from the iPhone Duo simulator loaded as the screen. One clip per
+ * screen, joined into a single video; the tabs seek to a screen's chapter. It plays only on screen; under
+ * reduced motion each tab shows that screen's open still instead.
  */
 
 type Screen = { id: string; label: string; closed: string; open: string; alt: string }
@@ -18,89 +18,103 @@ const SCREENS: Screen[] = [
   {
     id: "trips",
     label: "Trips",
-    closed: "Closed, your next flight and its countdown.",
-    open: "Open, the trip after it and every flight on it, beside the same screen.",
-    alt: "TripCache on iPhone Duo, open: the upcoming Trip to Adelaide and its flights on the left, the next flight to Melbourne on the right.",
+    closed: "Closed, your trips and the flight you’ve just taken.",
+    open: "Open, every upcoming trip on a map. Pick one and its next flight appears.",
+    alt: "TripCache on iPhone Duo folding closed and opening again: a map of Melbourne with the QF 9401 Sydney to Melbourne flight card on the left, the trips list on the right.",
   },
   {
     id: "trip",
     label: "Trip",
-    closed: "Closed, the itinerary for the trip.",
-    open: "Open, its overview, costs and map on the left page.",
-    alt: "TripCache on iPhone Duo, open: Melbourne trip overview with flights, stay, plan and booked costs on the left, the itinerary on the right.",
+    closed: "Closed, the trip’s day-by-day itinerary.",
+    open: "Open, the trip cover with flights, hotel, budget, map and documents beside it.",
+    alt: "TripCache on iPhone Duo folding closed and opening again: the Trip to Melbourne cover on the left, the itinerary with flight QF 9401 and the hotel on the right.",
   },
   {
     id: "flight",
     label: "Flight",
-    closed: "Closed, the flight card you need at the gate: boarding time, seat and class.",
-    open: "Open, the route and timings for the whole journey.",
-    alt: "TripCache on iPhone Duo, open: Sydney to Melbourne route, seat and distance on the left, flight QF 9401 details on the right.",
+    closed: "Closed, the flight card you need at the gate: boarding time, seat, class and check-in.",
+    open: "Open, a departures board for your flight, with the countdown, seat and terminal.",
+    alt: "TripCache on iPhone Duo folding closed and opening again: a departures board for QF 9401 to Melbourne on the left, the flight details and route map on the right.",
   },
   {
     id: "documents",
     label: "Documents",
     closed: "Closed, the PIN pad for your document vault.",
-    open: "Open, the vault stays locked until the PIN is entered on the right.",
-    alt: "TripCache on iPhone Duo, open: a locked document vault on the left and the document PIN pad on the right.",
+    open: "Open, your documents stay sealed until the PIN is entered, then open beside it.",
+    alt: "TripCache on iPhone Duo folding closed and opening again: 2 documents protected on the left and the document PIN pad on the right.",
   },
 ]
 
-/* Inner display 951 × 669 pt; the continuity page plus the rail is the trailing 466 pt (49%). */
-const LEFT_W = 764
-const RIGHT_W = 734
-const H = 1054
-
-function DuoDevice({ screen, still, playing, onCycle }: { screen: Screen; still: boolean; playing: boolean; onCycle: () => void }) {
-  return (
-    <div
-      className={`tc-duo ${still ? "tc-duo-still" : ""}`}
-      data-playing={playing ? "true" : "false"}
-      onAnimationIteration={(event) => {
-        if (event.animationName === "tc-duo-shift") onCycle()
-      }}
-    >
-      <div className="tc-duo-body">
-        <span className="tc-duo-frame" />
-        <div className="tc-duo-page tc-duo-left">
-          {SCREENS.map((item) => (
-            <div key={item.id} className={`tc-duo-layer ${item.id === screen.id ? "" : "tc-duo-layer-off"}`}>
-              <img src={`/duo/${item.id}-left.webp`} alt="" width={LEFT_W} height={H} loading="lazy" decoding="async" className="tc-duo-img" />
-              <img src={`/duo/${item.id}-left-blur.webp`} alt="" width={160} height={221} loading="lazy" decoding="async" className="tc-duo-img tc-duo-blur" />
-            </div>
-          ))}
-          <span className="tc-duo-shade" />
-        </div>
-        <div className="tc-duo-page tc-duo-right">
-          {SCREENS.map((item) => (
-            <div key={item.id} className={`tc-duo-layer ${item.id === screen.id ? "" : "tc-duo-layer-off"}`}>
-              <img src={`/duo/${item.id}-right.webp`} alt="" width={RIGHT_W} height={H} loading="lazy" decoding="async" className="tc-duo-img" />
-            </div>
-          ))}
-          <span className="tc-duo-outer-veil" />
-        </div>
-      </div>
-    </div>
-  )
-}
+/* Each chapter: open 1.4 s, close 2.6 s, closed 1.2 s, open 2.6 s, then a 0.4 s crossfade into the next screen. */
+const CHAPTER_S = 8
+const VIDEO_W = 1440
+const VIDEO_H = 1264
 
 const POINTS = [
   { title: "Nothing jumps", text: "The screen you were on stays exactly where it was as you open the phone. The next page appears beside it." },
   { title: "The cover screen at the gate", text: "Keep it closed for the flight card, the countdown and the check-in button, one-handed." },
-  { title: "The big screen for planning", text: "Open it for the trip overview, the route map, the budget and your drafts, side by side." },
+  { title: "The big screen for planning", text: "Open it for every trip on a map, a departures board for your flight, and the budget, side by side." },
 ]
 
-export function Duo() {
+function DuoVideo({ index, onChapter, seek }: { index: number; onChapter: (index: number) => void; seek: { chapter: number } | null }) {
   const reduce = useReducedMotion()
-  const still = Boolean(reduce)
-  const { ref, playing } = useInViewPlaying<HTMLDivElement>()
+  const { ref, playing } = useInViewPlaying<HTMLVideoElement>()
+  useEffect(() => {
+    const video = ref.current
+    if (!video || reduce) return
+    if (playing) void video.play().catch(() => {})
+    else video.pause()
+  }, [playing, reduce, ref])
+
+  // Only a tab press seeks (not the chapter changes the video reports as it plays).
+  useEffect(() => {
+    const video = ref.current
+    if (!video || !seek || reduce) return
+    video.currentTime = seek.chapter * CHAPTER_S
+  }, [seek, reduce, ref])
+
+  if (reduce) {
+    return (
+      <img
+        src={`/duo/${SCREENS[index].id}-open.webp`}
+        alt=""
+        width={VIDEO_W}
+        height={VIDEO_H}
+        loading="lazy"
+        decoding="async"
+        className="h-auto w-full"
+      />
+    )
+  }
+
+  return (
+    <video
+      ref={ref}
+      muted
+      loop
+      playsInline
+      preload="none"
+      poster="/duo/trips-open.webp"
+      width={VIDEO_W}
+      height={VIDEO_H}
+      onTimeUpdate={(event) => onChapter(Math.min(SCREENS.length - 1, Math.floor(event.currentTarget.currentTime / CHAPTER_S)))}
+      className="h-auto w-full"
+    >
+      <source media="(max-width: 767px)" src="/duo/duo-fold-720.webm" type="video/webm" />
+      <source media="(max-width: 767px)" src="/duo/duo-fold-720.mp4" type="video/mp4" />
+      <source src="/duo/duo-fold-1200.webm" type="video/webm" />
+      <source src="/duo/duo-fold-1200.mp4" type="video/mp4" />
+    </video>
+  )
+}
+
+export function Duo() {
   const [index, setIndex] = useState(0)
-  const [cycle, setCycle] = useState(0)
-  const [manual, setManual] = useState(false)
+  const [seek, setSeek] = useState<{ chapter: number } | null>(null)
   const screen = SCREENS[index]
 
   return (
     <section id="iphone-duo" aria-labelledby="iphone-duo-heading" className="relative scroll-mt-24 overflow-hidden bg-white py-24 sm:py-32">
-      <Bloom className="tc-drift-slow -right-40 top-40 size-[520px] opacity-25" color="#ec4899" />
       <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <h2
@@ -115,20 +129,18 @@ export function Duo() {
           </p>
         </div>
 
-        <div ref={ref} className="mt-14">
-          <figure className="relative mx-auto max-w-[860px]">
+        <div className="mt-10">
+          <figure className="relative mx-auto max-w-[820px]">
             <div role="img" aria-label={screen.alt}>
-              <DuoDevice
-                key={cycle}
-                screen={screen}
-                still={still}
-                playing={playing}
-                onCycle={() => {
-                  if (!manual) setIndex((value) => (value + 1) % SCREENS.length)
+              <DuoVideo
+                index={index}
+                seek={seek}
+                onChapter={(chapter) => {
+                  if (chapter !== index) setIndex(chapter)
                 }}
               />
             </div>
-            <figcaption className="mx-auto mt-8 grid max-w-[720px] gap-1 text-center text-[15.5px] leading-7 text-tc-mute" aria-live="polite">
+            <figcaption className="mx-auto mt-4 grid max-w-[720px] gap-1 text-center text-[15.5px] leading-7 text-tc-mute">
               <span className="text-tc-ink-2">{screen.closed}</span>
               <span>{screen.open}</span>
             </figcaption>
@@ -141,9 +153,8 @@ export function Duo() {
                 type="button"
                 aria-pressed={i === index}
                 onClick={() => {
-                  setManual(true)
                   setIndex(i)
-                  setCycle((value) => value + 1)
+                  setSeek({ chapter: i })
                 }}
                 className={`tc-press min-h-10 rounded-full border px-4 text-[14px] font-medium transition-colors duration-200 ${
                   i === index ? "border-tc-violet bg-tc-violet-soft text-tc-violet" : "border-tc-line bg-white text-tc-ink-2 hover:bg-tc-mist"
