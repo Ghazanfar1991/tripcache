@@ -124,8 +124,33 @@ const nextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        // Calendar subscription feeds (webcal/https) served by the calendar-feed edge function.
+        source: '/calendar/:token.ics',
+        destination: 'https://jvwnjqiypayicqfgvdyo.supabase.co/functions/v1/calendar-feed/:token.ics',
+      },
+    ]
+  },
   async headers() {
     return [
+      {
+        // OAuth consent: never framed (clickjacking), never indexed or cached.
+        source: '/oauth/:path*',
+        headers: [
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'none'" },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+          { key: 'Cache-Control', value: 'no-store' },
+        ],
+      },
+      {
+        source: '/calendar/:path*',
+        // The calendar-feed function sets Content-Type: text/calendar itself.
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
       {
         source: '/:all*(svg|jpg|jpeg|png|webp|avif|gif|ico)',
         headers: [

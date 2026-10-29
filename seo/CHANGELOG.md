@@ -6,6 +6,7 @@ Each change is judged 28 days after it ships: the 28 days before vs the 28 days 
 
 | Shipped | Type | Pages | Change | Result (28d before → after) |
 | --- | --- | --- | --- | --- |
+| 2026-10-29 | technical | `*` | New /oauth/consent page (noindex, X-Robots-Tag, frame-ancestors 'none') where AI apps connect to a TripCache account via Supabase OAuth; hidden site nav on /oauth/. New /calendar/:token.ics rewrite to the calendar-feed edge function (X-Robots-Tag noindex). robots.txt disallows /oauth/ and /calendar/. | measuring… |
 | 2026-10-17 | technical | `*` | Shared viewer (/shared/<token>, noindex) now renders single-flight links from the app's flight Share action: route title, date/times/duration strip, one boarding pass, no trip name, dates or plans. Overnight arrivals show +1. | measuring… |
 | 2026-10-16 | technical | `*` | Added the private view-only trip viewer at /shared/<token> (links minted by the app's Share action). Pages are noindex/nofollow, not in the sitemap, and /shared/ is disallowed in robots.txt for every crawler group. | measuring… |
 | 2026-10-16 | technical | `*` | Shared trip viewer (/shared/<token>, noindex) now shows airline logos from the app's asset catalog, falling back to the carrier code. | measuring… |

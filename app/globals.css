@@ -13,6 +13,7 @@
 @source "./privacy";
 @source "./terms";
 @source "./shared";
+@source "./oauth";
 @source "./tools";
 @source "./not-found.tsx";
 @source "../components/blog-card-premium.tsx";

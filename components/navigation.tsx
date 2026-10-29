@@ -144,6 +144,9 @@ export function Navigation() {
     setPanel((current) => (current === "get" ? "none" : "get"))
   }
 
+  // The OAuth consent screen stands alone: no site navigation around a sign-in decision.
+  if (pathname.startsWith("/oauth/")) return null
+
   const compact = scrolled || panel !== "none"
   const panelMotion = {
     initial: reduce ? { opacity: 0 } : { opacity: 0, y: -8, scale: 0.97, filter: "blur(6px)" },
