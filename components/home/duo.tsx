@@ -18,30 +18,30 @@ const SCREENS: Screen[] = [
   {
     id: "trips",
     label: "Trips",
-    closed: "Closed, your next flight and its countdown.",
-    open: "Open, the trip after it and every flight on it, beside the same screen.",
-    alt: "TripCache on iPhone Duo, open: the upcoming Trip to Adelaide and its flights on the left, the next flight to Melbourne on the right.",
+    closed: "Closed, your trips and the flight you’ve just taken.",
+    open: "Open, every upcoming trip on a map. Pick one and its next flight appears.",
+    alt: "TripCache on iPhone Duo, open: a map of Melbourne with the QF 9401 Sydney to Melbourne flight card on the left, the trips list on the right.",
   },
   {
     id: "trip",
     label: "Trip",
-    closed: "Closed, the itinerary for the trip.",
-    open: "Open, its overview, costs and map on the left page.",
-    alt: "TripCache on iPhone Duo, open: Melbourne trip overview with flights, stay, plan and booked costs on the left, the itinerary on the right.",
+    closed: "Closed, the trip’s day-by-day itinerary.",
+    open: "Open, the trip cover with flights, hotel, budget, map and documents beside it.",
+    alt: "TripCache on iPhone Duo, open: the Trip to Melbourne cover with 3 flights and 1 hotel on the left, the itinerary with flight QF 9401 and the hotel on the right.",
   },
   {
     id: "flight",
     label: "Flight",
-    closed: "Closed, the flight card you need at the gate: boarding time, seat and class.",
-    open: "Open, the route and timings for the whole journey.",
-    alt: "TripCache on iPhone Duo, open: Sydney to Melbourne route, seat and distance on the left, flight QF 9401 details on the right.",
+    closed: "Closed, the flight card you need at the gate: boarding time, seat, class and check-in.",
+    open: "Open, a departures board for your flight, with the countdown, seat and terminal.",
+    alt: "TripCache on iPhone Duo, open: a departures board for QF 9401 to Melbourne at 09:10, on time, on the left, the flight details and route map on the right.",
   },
   {
     id: "documents",
     label: "Documents",
     closed: "Closed, the PIN pad for your document vault.",
-    open: "Open, the vault stays locked until the PIN is entered on the right.",
-    alt: "TripCache on iPhone Duo, open: a locked document vault on the left and the document PIN pad on the right.",
+    open: "Open, your documents stay sealed until the PIN is entered, then open beside it.",
+    alt: "TripCache on iPhone Duo, open: 2 documents protected on the left and the document PIN pad on the right.",
   },
 ]
 
@@ -86,7 +86,7 @@ function DuoDevice({ screen, still, playing, onCycle }: { screen: Screen; still:
 const POINTS = [
   { title: "Nothing jumps", text: "The screen you were on stays exactly where it was as you open the phone. The next page appears beside it." },
   { title: "The cover screen at the gate", text: "Keep it closed for the flight card, the countdown and the check-in button, one-handed." },
-  { title: "The big screen for planning", text: "Open it for the trip overview, the route map, the budget and your drafts, side by side." },
+  { title: "The big screen for planning", text: "Open it for every trip on a map, a departures board for your flight, and the budget, side by side." },
 ]
 
 export function Duo() {
