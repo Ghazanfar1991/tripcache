@@ -40,7 +40,7 @@ Inline images are real app UI, resized or cropped with sharp, no content edits. 
 | `ai-agent-trip-card-claude.webp`, `ai-agent-car-added-claude.webp`, `ai-agent-car-booking-chatgpt.webp` | `trip-cache-app/audits/agent-cards/` (MCP Apps cards rendered in the local Claude/ChatGPT host harness from fixtures, 2026-10-29) |
 | `ai-agent-flight-card.webp` | `trip-cache-app/audits/mcp-flight-card/progress-widget/airport.png`, dark-host card |
 | `siri-next-flight-card.webp`, `siri-hotel-card.webp`, `siri-baggage-belt-card.webp` | `trip-cache-app/audits/siri-app-intents/` 15, 16 and 06 (iOS 27 simulator, cropped to the Siri result) |
-| `iphone-duo-*-two-panes.webp` | The left and right inner-display panes in `public/duo/` on the site-features branch (`claude/site-agent-siri-duo-bf92a9`), joined side by side with a 24 px hinge gap |
+| `iphone-duo-*-two-panes.webp` | Inner-display screenshots from the iPhone Duo simulator (iOS 27.1), app running the trip-cache-app `main` JS bundle (1b44de5) on 2026-10-30, phone open flat and sideways. Expo tools button turned off; each shot taken after the screen finished drawing. The traveler's name in the flight page's "Booked for" row is blurred. Resized to 1100 px wide |
 
 ## Covers for the 2026-10-29 guides
 
