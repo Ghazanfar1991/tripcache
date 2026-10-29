@@ -7,7 +7,7 @@ import { useState } from "react"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/** Plan facts follow seo/research/app-feature-inventory.md: Pro gates only email import, live alerts and Live Activity/widgets. */
+/** Plan facts follow seo/research/app-feature-inventory.md: Pro gates email import, live alerts, Live Activity/widgets and the AI assistant connector. */
 const BASIC = [
   "Manual trips, boarding-pass scanning and the document vault",
   "Cancellation-deadline and check-in reminders",
@@ -19,6 +19,7 @@ const PRO = [
   "Booking-email import with draft review (monthly allowance)",
   "Live flight-status alerts on supported flights",
   "Live Activity, Dynamic Island and widgets",
+  "Connect AI assistants such as Claude and ChatGPT",
 ]
 
 export function Plans() {

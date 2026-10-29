@@ -38,6 +38,18 @@
         "3101"
       ],
       "port": 3101
+    },
+    {
+      "name": "landing-features-review",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--",
+        "-p",
+        "3140"
+      ],
+      "port": 3140
     }
   ]
 }

@@ -19,6 +19,8 @@
  * FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
  */
 import { Footer } from "@/components/footer"
+import { Assistants } from "./assistants"
+import { Duo } from "./duo"
 import { Faq } from "./faq"
 import { FinalCta } from "./final-cta"
 import { Hero } from "./hero"
@@ -26,6 +28,7 @@ import { InboxToTrip } from "./inbox-to-trip"
 import { Kept } from "./kept"
 import { Plans } from "./plans"
 import { Reasons } from "./reasons"
+import { Siri } from "./siri"
 import { Statement } from "./statement"
 import { WhatIs } from "./what-is"
 
@@ -37,6 +40,9 @@ export function HomePage() {
         <WhatIs />
         <InboxToTrip />
         <Kept />
+        <Assistants />
+        <Siri />
+        <Duo />
         <Statement />
         <Reasons />
         <Plans />
