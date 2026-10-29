@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { useCallback, useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from "react"
-import { AlertTriangle, Check, Globe, Loader2, Lock, Mail, Smartphone } from "lucide-react"
+import { AlertTriangle, Check, Globe, Loader2, Lock, Mail, Smartphone, Sparkles } from "lucide-react"
 import type { OAuthAuthorizationDetails, Session } from "@supabase/supabase-js"
 import { buttonClass, cx } from "@/components/site/kit"
 import { getBrowserSupabase } from "@/lib/supabase-browser"
@@ -21,6 +21,10 @@ import {
 // record_mcp_grant(p_client_id text, p_client_name text, p_scopes text[]) RPC.
 const SCOPE_TRIPS_READ = "trips:read"
 const SCOPE_BOOKINGS_DRAFT = "bookings:draft"
+
+// Connecting AI assistants is a TripCache Pro feature (checked again by the MCP server on
+// every call). The app's /paywall route opens the Pro plans.
+const PRO_PAYWALL_URL = "tripcache:///paywall"
 
 // supabase-js puts the id straight into the request path, so only accept plain ids.
 const AUTHORIZATION_ID_PATTERN = /^[A-Za-z0-9_-]{6,128}$/
@@ -44,6 +48,7 @@ type View =
   | { name: "sign-in" }
   | { name: "consent"; request: ConsentRequest }
   | { name: "redirecting"; host: string | null }
+  | { name: "pro-required"; clientName: string; returnUrl: string | null }
   | { name: "error"; kind: ErrorKind; message?: string }
 
 function hostOf(url: string | undefined | null) {
@@ -115,6 +120,26 @@ async function checkConsentedClient(redirectUrl: string): Promise<ConsentedCheck
   return { kind: "reconnect" }
 }
 
+type ProCheck = { kind: "pro" } | { kind: "free" } | { kind: "failed"; message: string }
+
+/** Whether the signed-in account has TripCache Pro (has_my_pro_subscription, own account only). */
+async function checkPro(): Promise<ProCheck> {
+  const { data, error } = await getBrowserSupabase().rpc("has_my_pro_subscription")
+  if (error) return { kind: "failed", message: error.message }
+  return data === true ? { kind: "pro" } : { kind: "free" }
+}
+
+/**
+ * A free account can't connect an assistant: deny the request so the assistant gets a clean
+ * access_denied, and return where its Back button should go. A request Supabase already
+ * approved can't be denied any more; send the same error to its callback instead.
+ */
+async function denyWithoutPro(data: { redirect_url: string } | OAuthAuthorizationDetails, authorizationId: string): Promise<string | null> {
+  if ("redirect_url" in data && !("authorization_id" in data)) return deniedRedirect(data.redirect_url)
+  const { data: denied } = await getBrowserSupabase().auth.oauth.denyAuthorization(authorizationId, { skipBrowserRedirect: true })
+  return denied?.redirect_url ?? null
+}
+
 /** Drops the OAuth return parameters (code, error) a provider sign-in leaves in the URL. */
 function cleanReturnParams() {
   const url = new URL(window.location.href)
@@ -148,6 +173,17 @@ export function ConsentFlow() {
       if (error || !data) {
         loadedFor.current = null
         setView(isExpiredError(error) ? { name: "error", kind: "expired" } : { name: "error", kind: "failed", message: error?.message })
+        return
+      }
+      const pro = await checkPro()
+      if (pro.kind === "failed") {
+        loadedFor.current = null
+        setView({ name: "error", kind: "failed", message: pro.message })
+        return
+      }
+      if (pro.kind === "free") {
+        const clientName = ("client" in data && data.client?.name) || "this app"
+        setView({ name: "pro-required", clientName, returnUrl: await denyWithoutPro(data, authorizationId) })
         return
       }
       if ("redirect_url" in data && !("authorization_id" in data)) {
@@ -245,6 +281,13 @@ export function ConsentFlow() {
         p_client_name: grant.client.name || "This app",
         p_scopes: grant.scopes,
       })
+      if (record.error?.hint === "pro_required") {
+        const returnUrl = await denyWithoutPro(data, authorizationId)
+        clearAppApproval(authorizationId)
+        await fail("")
+        setView({ name: "pro-required", clientName: grant.client.name || "this app", returnUrl })
+        return null
+      }
       if (record.error) return fail("We couldn't save your choices, so nothing was connected. Please try again in a moment.")
 
       let redirectUrl: string
@@ -275,7 +318,17 @@ export function ConsentFlow() {
     case "loading":
       return <ConsentSkeleton />
     case "sign-in":
-      return <SignInCard initialError={providerError} authorizationId={authorizationId} onAppApproved={finishFromApp} />
+      return (
+        <SignInCard
+          initialError={providerError}
+          authorizationId={authorizationId}
+          onAppApproved={finishFromApp}
+          onProRequired={() => {
+            clearAppApproval(authorizationId)
+            setView({ name: "pro-required", clientName: "this app", returnUrl: null })
+          }}
+        />
+      )
     case "consent":
       return (
         <ConsentCard
@@ -286,6 +339,8 @@ export function ConsentFlow() {
       )
     case "redirecting":
       return <RedirectingCard host={view.host} />
+    case "pro-required":
+      return <ProRequiredCard clientName={view.clientName} returnUrl={view.returnUrl} />
     case "error":
       return <ErrorCard kind={view.kind} message={view.message} />
   }
@@ -364,10 +419,12 @@ function SignInCard({
   initialError,
   authorizationId,
   onAppApproved,
+  onProRequired,
 }: {
   initialError: string | null
   authorizationId: string
   onAppApproved: (grant: AppApprovalGrant) => Promise<string | null>
+  onProRequired: () => void
 }) {
   const id = useId()
   const [mode, setMode] = useState<"password" | "code">("password")
@@ -452,6 +509,7 @@ function SignInCard({
       <AppApprovalWaiting
         approval={approval}
         onApproved={onAppApproved}
+        onProRequired={onProRequired}
         onCancel={(message) => {
           clearAppApproval(authorizationId)
           setApproval(null)
@@ -634,18 +692,22 @@ const POLL_MS = 2000
 function AppApprovalWaiting({
   approval,
   onApproved,
+  onProRequired,
   onCancel,
 }: {
   approval: AppApproval
   onApproved: (grant: AppApprovalGrant) => Promise<string | null>
+  onProRequired: () => void
   onCancel: (message?: string) => void
 }) {
   const [now, setNow] = useState(() => Date.now())
   const [finishing, setFinishing] = useState(false)
   const onApprovedRef = useRef(onApproved)
+  const onProRequiredRef = useRef(onProRequired)
   const onCancelRef = useRef(onCancel)
   useEffect(() => {
     onApprovedRef.current = onApproved
+    onProRequiredRef.current = onProRequired
     onCancelRef.current = onCancel
   })
 
@@ -666,6 +728,7 @@ function AppApprovalWaiting({
         if (!stopped && message !== null && message !== "") onCancelRef.current(message)
         return
       }
+      if (result.kind === "pro_required") return onProRequiredRef.current()
       if (result.kind === "denied") return onCancelRef.current("The request was denied in the TripCache app. If that was a mistake, send it again.")
       if (result.kind === "expired" || result.kind === "used") return onCancelRef.current("The request expired before it was approved. Send it again to try once more.")
       if (result.kind === "invalid") return onCancelRef.current("This request is no longer valid. Send it again.")
@@ -769,7 +832,11 @@ function ConsentCard({
     })
     if (grant.error) {
       setBusy(null)
-      setError("We couldn't save your choices, so nothing was connected. Please try again in a moment.")
+      setError(
+        grant.error.hint === "pro_required"
+          ? "Connecting AI assistants is a TripCache Pro feature. Upgrade in the TripCache app (Profile → Pro) to use it."
+          : "We couldn't save your choices, so nothing was connected. Please try again in a moment.",
+      )
       return
     }
     if (mode.kind === "reconsent") {
@@ -882,8 +949,8 @@ function ConsentCard({
               <Check className="size-3.5" strokeWidth={3} />
             </span>
             <span className="grid gap-0.5">
-              <span className="text-[14.5px] leading-[22px] text-tc-ink">Add bookings and expenses as drafts you confirm in the app</span>
-              <span className="text-[12.5px] leading-5 text-tc-mute">Optional. Nothing is added to a trip until you approve it.</span>
+              <span className="text-[14.5px] leading-[22px] text-tc-ink">Add plans and expenses to your trips, and import bookings as drafts</span>
+              <span className="text-[12.5px] leading-5 text-tc-mute">Optional. You can edit or delete anything it adds; imported bookings wait for you in the app.</span>
             </span>
           </label>
         </li>
@@ -936,6 +1003,36 @@ function RedirectingCard({ host }: { host: string | null }) {
         <p className="text-[14.5px] leading-6 text-tc-ink-2">
           Returning you to <span className="break-all font-semibold text-tc-ink">{host || "the app"}</span>. You can close this page if nothing happens.
         </p>
+      </div>
+    </Shell>
+  )
+}
+
+/** Free account: the request was denied; point to Pro in the app. */
+function ProRequiredCard({ clientName, returnUrl }: { clientName: string; returnUrl: string | null }) {
+  return (
+    <Shell>
+      <div className="flex flex-col items-start gap-4" data-testid="pro-required">
+        <span className="grid size-12 place-items-center rounded-[14px] bg-tc-violet-soft text-tc-violet">
+          <Sparkles className="size-6" aria-hidden="true" />
+        </span>
+        <Title>Connecting AI assistants is a TripCache Pro feature</Title>
+        <p className="text-[15px] leading-6 text-tc-ink-2">
+          With Pro, {clientName} can read your trips and live flight status and add plans for you. Upgrade in the TripCache app,
+          then connect again. Nothing was connected this time.
+        </p>
+        <a href={PRO_PAYWALL_URL} className={cx(buttonClass("primary", "lg"), "w-full")} data-testid="open-pro">
+          <Sparkles className="size-[18px]" aria-hidden="true" />
+          Open TripCache Pro
+        </a>
+        <p className="text-[12.5px] leading-5 text-tc-mute">On a computer? Open TripCache on your phone and go to Profile → Pro.</p>
+        {returnUrl ? (
+          <button type="button" onClick={() => window.location.assign(returnUrl)} className={cx(buttonClass("secondary", "lg"), "w-full")}>
+            Back to {clientName}
+          </button>
+        ) : (
+          <p className="text-[13px] leading-5 text-tc-ink-2">You can close this page.</p>
+        )}
       </div>
     </Shell>
   )

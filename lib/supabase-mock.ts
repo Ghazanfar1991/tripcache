@@ -6,6 +6,7 @@
 //   consented-revoked   → already approved in Supabase, but mcp_grants was revoked: consent again
 //   consented-ambiguous → two revoked clients, neither matches the callback: "connect again"
 //   rpc-fails  → record_mcp_grant fails (e.g. migration not deployed)
+//   not-pro    → the account has no TripCache Pro: the request is denied and the Pro card shows
 //   anything else → a pending request from "Claude"
 import type { SupabaseClient } from "@supabase/supabase-js"
 
@@ -127,6 +128,7 @@ export function createMockSupabase(): SupabaseClient {
     async rpc(name: string, args: Record<string, unknown>) {
       await wait()
       console.info("[mock supabase] rpc", name, args)
+      if (name === "has_my_pro_subscription") return { data: currentId() !== "not-pro", error: null }
       if (new URLSearchParams(window.location.search).get("authorization_id") === "rpc-fails") {
         return { data: null, error: { message: "function record_mcp_grant does not exist", code: "PGRST202" } }
       }

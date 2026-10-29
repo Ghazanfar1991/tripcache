@@ -26,7 +26,7 @@ export type AppApprovalGrant = {
 
 export type PollResult =
   | { kind: "approved"; grant: AppApprovalGrant }
-  | { kind: "pending" | "denied" | "expired" | "used" | "invalid" | "retry" }
+  | { kind: "pending" | "denied" | "expired" | "used" | "invalid" | "retry" | "pro_required" }
 
 function toBase64Url(bytes: Uint8Array) {
   let binary = ""
@@ -96,13 +96,24 @@ export async function startAppApproval(
   if (response.status === 429) return { kind: "rate_limited" }
   if (response.status === 400) return { kind: "invalid" }
   if (!response.ok) return { kind: "failed" }
-  const data = (await response.json().catch(() => null)) as { request_id?: string; match_number?: number; expires_at?: string } | null
+  const data = (await response.json().catch(() => null)) as {
+    request_id?: string
+    match_number?: number
+    expires_at?: string
+    expires_in_seconds?: number
+  } | null
   if (!data?.request_id || typeof data.match_number !== "number" || !data.expires_at) return { kind: "failed" }
+  // The request ends with the OAuth authorization (never later). The server says how many
+  // seconds are left, so the countdown doesn't depend on this computer's clock.
+  const expiresAt =
+    typeof data.expires_in_seconds === "number" && Number.isFinite(data.expires_in_seconds)
+      ? new Date(Date.now() + Math.max(0, data.expires_in_seconds) * 1000).toISOString()
+      : data.expires_at
   const approval: AppApproval = {
     authorizationId,
     requestId: data.request_id,
     matchNumber: data.match_number,
-    expiresAt: data.expires_at,
+    expiresAt,
     secret,
   }
   try {
@@ -143,6 +154,8 @@ export async function claimAppApproval(approval: AppApproval): Promise<PollResul
       },
     }
   }
-  if (data?.status === "pending" || data?.status === "denied" || data?.status === "expired" || data?.status === "used") return { kind: data.status }
+  if (data?.status === "pending" || data?.status === "denied" || data?.status === "expired" || data?.status === "used" || data?.status === "pro_required") {
+    return { kind: data.status }
+  }
   return { kind: "retry" }
 }
