@@ -8,7 +8,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Compare Flighty and TripCache for flight alerts, itinerary import, cancellation reminders, documents, receipts, expenses, platforms, and current pricing.",
   date: "2026-03-12",
-  updatedAt: "2026-10-05",
+  updatedAt: "2026-10-29",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Comparison",
@@ -130,6 +130,8 @@ Before importing travel data, review both products' current privacy policies and
 - What data is stored and for how long?
 - Can you export or delete the account?
 - Does the app support the devices you travel with?
+
+Both apps are built for the foldable iPhone; see [iPhone Duo travel apps](/blog/iphone-duo-travel-apps). TripCache also answers Siri for free: [ask Siri about your flight](/blog/ask-siri-about-your-flight).
 
 TripCache's current platform disclosures are available on its official [App Store listing](https://apps.apple.com/app/id6758403056) and [Google Play listing](https://play.google.com/store/apps/details?id=app.tripcache).
 

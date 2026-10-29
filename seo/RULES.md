@@ -36,7 +36,7 @@ Read this before changing anything that search engines see. Every rule exists be
 - *Why:* our top query, "tripcase", produced 1,054 impressions and 7 clicks in 28 days. Impressions aren't the goal; installs are.
 - *Manual.*
 
-**R8. Claims must match the app's code and the store listings.** Plans and features come from [`research/app-feature-inventory.md`](research/app-feature-inventory.md), which was checked against the app's code. Update it when the app changes. Pro gates only three things: email import (with a monthly AI quota), live flight-status alerts, and Live Activity/widgets. Everything else is in Basic. Prices ($5.99/month, $49.99/year) live in RevenueCat and the stores; check the current listing before quoting them. Never claim:
+**R8. Claims must match the app's code and the store listings.** Plans and features come from [`research/app-feature-inventory.md`](research/app-feature-inventory.md), which was checked against the app's code. Update it when the app changes. Pro gates four things: email import (with a monthly AI quota), live flight-status alerts, Live Activity/widgets, and (since 2026-10-29) connecting AI assistants through the MCP connector. Everything else is in Basic, including Siri, Shortcuts, Spotlight and the iPhone Duo layouts. Prices ($5.99/month, $49.99/year) live in RevenueCat and the stores; check the current listing before quoting them. Never claim:
 - support for "all" or any named airline/hotel/OTA
 - inbox scanning
 - automatic check-in

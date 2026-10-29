@@ -27,10 +27,18 @@ import * as TravelHistory from "@/content/blog/how-to-find-your-travel-history"
 import * as WanderlogVsTripit from "@/content/blog/wanderlog-vs-tripit"
 import * as FlightTimeZones from "@/content/blog/flight-time-zones-arrival-date"
 import * as OfflineTravelDocuments from "@/content/blog/save-travel-documents-offline"
+import * as ConnectChatgptClaude from "@/content/blog/connect-chatgpt-claude-to-travel-app"
+import * as AiTravelAssistantBookings from "@/content/blog/ai-travel-assistant-for-your-bookings"
+import * as AskSiriFlight from "@/content/blog/ask-siri-about-your-flight"
+import * as IphoneDuoTravelApps from "@/content/blog/iphone-duo-travel-apps"
 
 type BlogPostModule = { metadata: BlogFrontmatter; body: string; faq?: BlogFaq[] }
 
 const rawPosts: BlogPostModule[] = [
+  ConnectChatgptClaude,
+  AiTravelAssistantBookings,
+  AskSiriFlight,
+  IphoneDuoTravelApps,
   HotelCancellationPolicies,
   TravelHistory,
   WanderlogVsTripit,

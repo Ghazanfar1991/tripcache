@@ -91,3 +91,16 @@ Visa/immigration travel-history PDF · boarding-pass barcode scan · free check-
 - Receipt scanning or OCR, expense splitting, Apple or Google Wallet, packing lists, journals, travel advisories.
 - Flight-number auto-fill, localized (non-English) app, iPad, Watch or web app.
 - Ratings, download counts, testimonials, or a guaranteed free trial.
+
+## Added 2026-10-29: AI assistants, Siri, iPhone Duo
+
+Checked against the app's branches (`claude/connector-pro-9f39dd`, `claude/agent-cards-1e602e`, `claude/siri-routing-fix`, `claude/agent-screen-0ea9d6`) and `main` (`lib/duo`, `components/duo-screens`). App-side work was committed but not all of it released when this was written; confirm the release before quoting it.
+
+| Feature | What it does (proof) | Tier |
+| --- | --- | --- |
+| AI assistant connector (MCP) | Remote MCP server (`supabase/functions/mcp`). Tools: list_trips, get_trip, next_flight, get_flight, get_booking, list_documents (metadata only), list_expenses, add_plan_item, add_expense, import_booking (creates a draft, uses the AI import allowance). Plan items never return notes, confirmation numbers or price; flights carry no booking reference. Scopes: `trips:read` (always), `bookings:draft` (optional). Approve on the consent page or "Approve with the TripCache app" (number match). Revoke in Profile → AI agents. MCP Apps cards for Claude/ChatGPT (`cards.ts`, `flightCard.ts`). Per-agent steps in `lib/connectedApps.ts` (Claude, ChatGPT/Dots, Gemini limited, Grok paid, Perplexity Pro/Max, Hermes, OpenClaw self-hosted, Muse not yet). | **Pro** (`mcp_authorize_call` returns `pro_required`; grants survive a lapse) |
+| Siri / App Intents | Next Flight, Flight Gate (gate, terminal, belt after landing), Hotel, Car Rental, What's Next, Open Trip, Add Expense (opens a prefilled form; user saves), in-app search on iOS 27. Phrases need the app name: iOS has no travel app-schema domain. First run shows iOS's "Turn on Trip Cache shortcuts" prompt. Answers come from an on-device snapshot (≤15 trips, flights until 6 h after arrival; no prices, documents or PNRs). Cards reuse the medium widget. Spotlight indexes trips and bookings. | Basic |
+| iPhone Duo layouts | Continuity pane (current screen kept in place) plus a reveal pane on the inner display: home map/globe, trip cover + itinerary, flight board + detail, tabletop controls, drafts source + review, documents details/viewer, history globe. Off Duo, nothing changes. | Basic |
+| Android shortcuts / Gemini | In progress (`claude/android-agents-1c37db`, uncommitted). Don't claim it ships. | — |
+
+Claims to avoid: that assistants can book or pay; that Siri answers without the app name; that Gemini or Muse connect today; that the calendar (ICS) subscription is live (not confirmed deployed, and `llms.txt` still lists calendar subscriptions as unsupported).

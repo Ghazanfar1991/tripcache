@@ -58,6 +58,18 @@ export const blogTopics: BlogTopic[] = [
     resource: { href: "/features/business-travel-expenses", label: "See expenses and CSV export" },
   },
   {
+    id: "assistants-and-devices",
+    title: "Ask Siri, ChatGPT or Claude about your trip",
+    description: "Get answers about flights, hotels and cars from your own bookings, by voice, in a chat, or on a foldable iPhone.",
+    slugs: [
+      "ask-siri-about-your-flight",
+      "connect-chatgpt-claude-to-travel-app",
+      "ai-travel-assistant-for-your-bookings",
+      "iphone-duo-travel-apps",
+    ],
+    resource: { href: "/pricing", label: "See what's free and what's in Pro" },
+  },
+  {
     id: "compare-travel-apps",
     title: "Choose a travel app",
     description: "Compare itinerary organizers, planning tools, and flight trackers by the work you need done.",
