@@ -807,7 +807,7 @@ function ConsentCard({
 
   const switchAccount = async () => {
     setBusy("switch")
-    await supabase.auth.signOut()
+    await supabase.auth.signOut({ scope: "local" })
   }
 
   const disabled = busy !== null
