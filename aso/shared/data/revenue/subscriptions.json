@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-28T14:48:05.582Z",
+  "generatedAt": "2026-10-29T14:54:07.975Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-07-31",
-    "endDate": "2026-10-29"
+    "startDate": "2026-08-01",
+    "endDate": "2026-10-30"
   },
   "charts": {
     "mrr": {
@@ -1753,7 +1753,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1793232000,
+        "end_date": 1793318400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1772,10 +1772,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1785456000,
+        "start_date": 1785542400,
         "summary": {
           "average": {
-            "MRR": 19.3
+            "MRR": 19.53
           }
         },
         "unsupported_params": null,
@@ -1783,12 +1783,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1785456000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1785542400,
             "incomplete": false,
@@ -2319,12 +2313,18 @@
           },
           {
             "cohort": 1793145600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 32.13
           },
           {
             "cohort": 1793232000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 32.13
+          },
+          {
+            "cohort": 1793318400,
             "incomplete": true,
             "measure": 0,
             "value": 32.13
@@ -4137,7 +4137,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1793232000,
+        "end_date": 1793318400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4172,7 +4172,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1785456000,
+        "start_date": 1785542400,
         "summary": {
           "average": {
             "Ad Impressions": 0,
@@ -4190,24 +4190,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1785456000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1785456000,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1785456000,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1785542400,
             "incomplete": false,
@@ -5794,19 +5776,19 @@
           },
           {
             "cohort": 1793145600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1793145600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1793145600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5824,6 +5806,24 @@
           },
           {
             "cohort": 1793232000,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7559,7 +7559,7 @@
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1793232000,
+        "end_date": 1793318400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7578,21 +7578,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1785456000,
+        "start_date": 1785542400,
         "summary": {
           "average": {
-            "Actives": 2.11
+            "Actives": 2.14
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1785456000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
           {
             "cohort": 1785542400,
             "incomplete": false,
@@ -8123,12 +8117,18 @@
           },
           {
             "cohort": 1793145600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 4
           },
           {
             "cohort": 1793232000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 4
+          },
+          {
+            "cohort": 1793318400,
             "incomplete": true,
             "measure": 0,
             "value": 4
@@ -9826,7 +9826,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1793232000,
+        "end_date": 1793318400,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9845,7 +9845,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1785456000,
+        "start_date": 1785542400,
         "summary": {
           "average": {
             "Active Trials": 0.07
@@ -9854,12 +9854,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1785456000,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1785542400,
             "incomplete": false,
@@ -10390,12 +10384,18 @@
           },
           {
             "cohort": 1793145600,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1793232000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
             "incomplete": true,
             "measure": 0,
             "value": 0
