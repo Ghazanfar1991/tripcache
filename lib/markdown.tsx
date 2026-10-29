@@ -304,6 +304,36 @@ export function renderMarkdown(markdown: string, options: RenderMarkdownOptions 
       continue
     }
 
+    // A line holding only an image: ![alt](/path.webp 1200x630 "Caption"). Size and caption are optional;
+    // the size is written out so the browser can reserve the space before the image loads.
+    const image = trimmed.match(/^!\[([^\]]*)\]\((\/[^\s)]+)(?:\s+(\d+)x(\d+))?(?:\s+"([^"]*)")?\)$/)
+    if (image) {
+      flushList()
+      flushQuote()
+      const [, alt, src, width, height, caption] = image
+      elements.push(
+        <figure key={nextKey()} className="my-9">
+          {/* eslint-disable-next-line @next/next/no-img-element -- static screenshots from public/, sized inline */}
+          <img
+            src={src}
+            alt={alt}
+            width={width ? Number(width) : undefined}
+            height={height ? Number(height) : undefined}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto h-auto max-h-[760px] w-auto max-w-full rounded-[18px] border border-tc-line bg-tc-mist object-contain"
+          />
+          {caption ? (
+            <figcaption
+              className="mt-3 text-center text-[14px] leading-6 text-tc-mute"
+              dangerouslySetInnerHTML={{ __html: formatInline(caption) }}
+            />
+          ) : null}
+        </figure>,
+      )
+      continue
+    }
+
     if (/^---+$/.test(trimmed)) {
       flushList()
       flushQuote()

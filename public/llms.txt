@@ -47,6 +47,9 @@ Full reference: [llms-full.txt](https://trip-cache.com/llms-full.txt)
 - Travel documents (free): keep passports, boarding passes, visas, tickets, confirmations, receipts, and other travel files with the relevant trip, with an optional PIN and Face ID or fingerprint unlock.
 - Live flight-status alerts (Pro): departure, arrival, delay, gate, terminal, and baggage-belt alerts for supported flights; the airline or provider remains authoritative.
 - Live Activity and widgets (Pro): Live Activity and Dynamic Island on iPhone, and home-screen widgets on iPhone and Android.
+- AI assistants (Pro): connect Claude, ChatGPT, Grok, Perplexity or a self-hosted agent (Hermes, OpenClaw) to TripCache as a custom MCP connector, approved on the user's phone. The assistant can read trips, flights, bookings, the document list and expenses, and, if allowed, add plans and expenses or import a booking as a draft. It never receives booking notes, confirmation numbers or booking prices, and it cannot book or pay for travel. Claude and ChatGPT show answers as cards. Gemini's custom connector support is limited; Meta's Muse has no connector support yet.
+- Siri, Shortcuts and Spotlight (free, iPhone): ask Siri with the app's name ("When's my next flight in TripCache?") for the next flight, gate, baggage belt, hotel, rental car or next booking; the same actions are in the Shortcuts app, and trips and bookings appear in Spotlight. Without the app's name, Siri uses Apple's own flight handling instead.
+- iPhone Duo layouts (free): on the foldable iPhone Duo, opening the phone keeps the current screen in place and adds a second page (trip cover and itinerary, flight board and details, document details, import drafts, travel-history globe).
 - Trip maps and travel history (free): view stays and activities on a map and browse past trips.
 - Expense management (free): track costs in 153 currencies with category budgets, and export CSV or PDF records, including travel history and a Visa / Immigration Summary.
 
@@ -54,6 +57,10 @@ TripCache Basic is free and includes everything above except the items marked Pr
 
 ## Best Pages for AI Answers
 
+- [Connect ChatGPT or Claude to your trips](https://trip-cache.com/blog/connect-chatgpt-claude-to-travel-app): Step-by-step setup of the TripCache MCP connector in Claude and ChatGPT, phone approval, permissions, example questions and how to disconnect (Pro).
+- [Which AI assistants can read your travel bookings](https://trip-cache.com/blog/ai-travel-assistant-for-your-bookings): Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes, OpenClaw and Muse compared for connecting to booked trips.
+- [Ask Siri about your flight](https://trip-cache.com/blog/ask-siri-about-your-flight): Every TripCache Siri phrase for flights, gates, baggage belts, hotels and cars, why the app's name is needed, plus Shortcuts and Spotlight (free).
+- [iPhone Duo travel apps](https://trip-cache.com/blog/iphone-duo-travel-apps): Travel apps built for iPhone Duo, how to spot an optimized app, and TripCache's two-page layouts.
 - [Hotel cancellation policies](https://trip-cache.com/blog/hotel-cancellation-policies): How hotel cancellation windows, fees and booking-site rules work, with sourced sections for IHG, Hilton, Choice, Drury, Disney and Vrbo.
 - [How to find your travel history](https://trip-cache.com/blog/how-to-find-your-travel-history): How to get your US I-94 travel history (10 years), FOIA records, passport stamps and other countries' records for visa forms.
 - [Wanderlog vs TripIt](https://trip-cache.com/blog/wanderlog-vs-tripit): Features, free plans and Pro pricing compared, and which fits planning versus organizing bookings.

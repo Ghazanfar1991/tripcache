@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Google Maps, Wanderlog, Skyscanner, Rome2Rio, TripIt, Tripsy, Flighty and TripCache: what each planning app does best, what's free and what Pro costs.",
   date: "2025-04-05",
-  updatedAt: "2026-10-05",
+  updatedAt: "2026-10-29",
   author: "TripCache Editorial Team",
   readTime: "11 min read",
   category: "Comparison",
@@ -130,6 +130,8 @@ Flighty tracks flights in detail: live status, early delay alerts, airport delay
 **Tradeoff:** flights only, and only on Apple devices.
 
 **Best for:** frequent flyers on iPhone.
+
+On a foldable iPhone, Flighty and TripCache both use the larger screen; see [iPhone Duo travel apps](/blog/iphone-duo-travel-apps).
 
 ## Which travel planning app should you use?
 
