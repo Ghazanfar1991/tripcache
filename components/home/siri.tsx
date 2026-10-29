@@ -12,7 +12,7 @@ import { useInViewPlaying } from "./use-in-view-playing"
  */
 
 const QUESTION = "When’s my next flight in TripCache?"
-const ANSWER = "Your flight QF401 to Melbourne leaves on Tuesday 10 November at 8:00 am, on time."
+const ANSWER = "Your flight QF 9401 to Melbourne leaves on Tuesday 10 November at 9:10 am, on time."
 const QUESTION_WORDS = QUESTION.split(" ")
 
 const PHRASES = [
@@ -59,8 +59,8 @@ function SiriPhone() {
     <div ref={ref} className="relative mx-auto w-full max-w-[290px] sm:max-w-[330px]">
       <figure className="relative aspect-[393/852] overflow-hidden rounded-[52px] border-[10px] border-[#101014] bg-[#101014] shadow-[0_50px_90px_-40px_rgba(45,27,87,0.65)]">
         <figcaption className="sr-only">
-          On iPhone, someone asks Siri “{QUESTION}”. Siri answers “{ANSWER}” and shows the TripCache flight card: QF401, Sydney 8:00 AM to Melbourne
-          9:35 AM, 6 days 14 hours until gate departure.
+          On iPhone, someone asks Siri “{QUESTION}”. Siri answers “{ANSWER}” and shows the TripCache flight card: QF 9401, Sydney 9:10 AM to Melbourne
+          10:45 AM, 11 days until gate departure.
         </figcaption>
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[42px]">
           <img src="/agents/siri-wallpaper.webp" alt="" width={560} height={1217} loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" />

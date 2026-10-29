@@ -28,12 +28,12 @@ const EXCHANGES: Exchange[] = [
     label: "Next flight",
     prompt: "When’s my next flight?",
     tool: "next_flight",
-    reply: "QF401 to Melbourne, Tuesday at 8:00 am from Terminal 3. It’s on schedule.",
+    reply: "QF 9401 to Melbourne, Tuesday 10 November at 9:10 am. It’s on schedule.",
     card: {
       src: "/agents/card-next-flight.webp",
       width: 840,
       height: 480,
-      alt: "TripCache flight card: QF401 Sydney 8:00 AM to Melbourne 9:35 AM, Terminal 3, scheduled, 6 days 14 hours until gate departure.",
+      alt: "TripCache flight card: QF 9401 Sydney 9:10 AM to Melbourne 10:45 AM, scheduled, 11 days until gate departure.",
     },
   },
   {
@@ -69,12 +69,12 @@ const EXCHANGES: Exchange[] = [
     label: "Add a booking",
     prompt: "Add a Hertz car to my Melbourne trip",
     tool: "add_plan_item",
-    reply: "Done. The Hertz rental is on your Melbourne weekend, picked up at the airport on Tuesday.",
+    reply: "Done. The Hertz rental is on your Melbourne weekend, picked up at the airport on Tuesday at 11:30 am.",
     card: {
       src: "/agents/card-plan-added.webp",
       width: 840,
       height: 413,
-      alt: "TripCache confirmation card: Hertz rental car added to Melbourne weekend, pick-up Tue 10 Nov 10:30 AM, drop-off Wed 11 Nov 5:00 PM.",
+      alt: "TripCache confirmation card: Hertz rental car added to Melbourne weekend, pick-up Tue 10 Nov 11:30 AM, drop-off Wed 11 Nov 5:00 PM.",
     },
   },
 ]
