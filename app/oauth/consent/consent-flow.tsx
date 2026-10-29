@@ -4,10 +4,18 @@ import Image from "next/image"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { useCallback, useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from "react"
-import { AlertTriangle, Check, Globe, Loader2, Lock, Mail } from "lucide-react"
+import { AlertTriangle, Check, Globe, Loader2, Lock, Mail, Smartphone } from "lucide-react"
 import type { OAuthAuthorizationDetails, Session } from "@supabase/supabase-js"
 import { buttonClass, cx } from "@/components/site/kit"
 import { getBrowserSupabase } from "@/lib/supabase-browser"
+import {
+  claimAppApproval,
+  clearAppApproval,
+  loadAppApproval,
+  startAppApproval,
+  type AppApproval,
+  type AppApprovalGrant,
+} from "@/lib/connect-approval"
 
 // Contract with trip-cache-app (MCP server): app-level scopes stored by the
 // record_mcp_grant(p_client_id text, p_client_name text, p_scopes text[]) RPC.
@@ -127,6 +135,8 @@ export function ConsentFlow() {
   const [view, setView] = useState<View>(() => (validId ? { name: "loading" } : { name: "error", kind: "missing" }))
   const [providerError] = useState(() => params.get("error_description"))
   const loadedFor = useRef<string | null>(null)
+  // While an approval from the app signs in and finishes, auth events must not redraw the page.
+  const finishingFromApp = useRef(false)
 
   const loadDetails = useCallback(
     async (current: Session) => {
@@ -182,14 +192,14 @@ export function ConsentFlow() {
     let active = true
 
     supabase.auth.getSession().then(({ data }) => {
-      if (!active) return
+      if (!active || finishingFromApp.current) return
       cleanReturnParams()
       if (data.session) loadDetails(data.session)
       else setView({ name: "sign-in" })
     })
 
     const { data: listener } = supabase.auth.onAuthStateChange((event, next) => {
-      if (!active) return
+      if (!active || finishingFromApp.current) return
       if (event === "SIGNED_OUT" || !next) {
         loadedFor.current = null
         setView({ name: "sign-in" })
@@ -204,11 +214,68 @@ export function ConsentFlow() {
     }
   }, [validId, loadDetails])
 
+  /**
+   * Approved in the TripCache app: sign in with the one-time token, record the scopes the
+   * user picked in the app, approve, and go back to the agent. The session only exists for
+   * these calls; it is signed out before the redirect.
+   */
+  const finishFromApp = useCallback(
+    async (grant: AppApprovalGrant): Promise<string | null> => {
+      finishingFromApp.current = true
+      const supabase = getBrowserSupabase()
+      const fail = async (message: string) => {
+        await supabase.auth.signOut({ scope: "local" }).catch(() => undefined)
+        finishingFromApp.current = false
+        return message
+      }
+      const signIn = await supabase.auth.verifyOtp({ token_hash: grant.tokenHash, type: "magiclink" })
+      if (signIn.error || !signIn.data.session) return fail("We couldn't sign you in from the app. Please try again.")
+
+      const { data, error } = await supabase.auth.oauth.getAuthorizationDetails(authorizationId)
+      if (error || !data) {
+        if (isExpiredError(error)) {
+          await fail("")
+          setView({ name: "error", kind: "expired" })
+          return null
+        }
+        return fail(error?.message || "We couldn't load this connection request.")
+      }
+      const record = await supabase.rpc("record_mcp_grant", {
+        p_client_id: grant.client.id,
+        p_client_name: grant.client.name || "This app",
+        p_scopes: grant.scopes,
+      })
+      if (record.error) return fail("We couldn't save your choices, so nothing was connected. Please try again in a moment.")
+
+      let redirectUrl: string
+      if ("redirect_url" in data && !("authorization_id" in data)) {
+        redirectUrl = data.redirect_url
+      } else {
+        const approved = await supabase.auth.oauth.approveAuthorization(authorizationId, { skipBrowserRedirect: true })
+        if (approved.error || !approved.data?.redirect_url) {
+          if (isExpiredError(approved.error)) {
+            await fail("")
+            setView({ name: "error", kind: "expired" })
+            return null
+          }
+          return fail(approved.error?.message || "We couldn't finish connecting. Please try again.")
+        }
+        redirectUrl = approved.data.redirect_url
+      }
+      clearAppApproval(authorizationId)
+      setView({ name: "redirecting", host: hostOf(redirectUrl) })
+      await supabase.auth.signOut({ scope: "local" }).catch(() => undefined)
+      window.location.assign(redirectUrl)
+      return null
+    },
+    [authorizationId],
+  )
+
   switch (view.name) {
     case "loading":
       return <ConsentSkeleton />
     case "sign-in":
-      return <SignInCard initialError={providerError} />
+      return <SignInCard initialError={providerError} authorizationId={authorizationId} onAppApproved={finishFromApp} />
     case "consent":
       return (
         <ConsentCard
@@ -293,15 +360,26 @@ export function ConsentSkeleton() {
 const fieldClass =
   "h-12 w-full rounded-[12px] border border-tc-line bg-white px-3.5 text-[16px] text-tc-ink outline-none transition-[border-color,box-shadow] placeholder:text-[#9aa0a6] focus:border-tc-violet focus:shadow-[0_0_0_3px_rgba(97,43,211,0.15)]"
 
-function SignInCard({ initialError }: { initialError: string | null }) {
+function SignInCard({
+  initialError,
+  authorizationId,
+  onAppApproved,
+}: {
+  initialError: string | null
+  authorizationId: string
+  onAppApproved: (grant: AppApprovalGrant) => Promise<string | null>
+}) {
   const id = useId()
   const [mode, setMode] = useState<"password" | "code">("password")
   const [email, setEmail] = useState("")
+  const [approval, setApproval] = useState<AppApproval | null>(() => loadAppApproval(authorizationId))
   const [password, setPassword] = useState("")
   const [code, setCode] = useState("")
   const [codeSent, setCodeSent] = useState(false)
   const [busy, setBusy] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(initialError)
+  // Which form the error belongs to: the app-approval box or the other sign-in methods.
+  const [errorAt, setErrorAt] = useState<"app" | "other">("other")
   const [info, setInfo] = useState<string | null>(null)
 
   const supabase = getBrowserSupabase()
@@ -309,6 +387,7 @@ function SignInCard({ initialError }: { initialError: string | null }) {
   const withBusy = async (key: string, action: () => Promise<void>) => {
     setBusy(key)
     setError(null)
+    setErrorAt(key === "app" ? "app" : "other")
     setInfo(null)
     try {
       await action()
@@ -319,7 +398,18 @@ function SignInCard({ initialError }: { initialError: string | null }) {
     }
   }
 
-  const signInWithProvider = (provider: "google" | "apple") =>
+  const onSendToApp = (event: FormEvent) => {
+    event.preventDefault()
+    withBusy("app", async () => {
+      const result = await startAppApproval(authorizationId, email.trim())
+      if (result.kind === "rate_limited") throw new Error("Too many requests. Wait a few minutes, or sign in with your password below.")
+      if (result.kind === "invalid") throw new Error("This connection request has expired. Go back to the app you were connecting and start again.")
+      if (result.kind !== "ok") throw new Error("We couldn't reach TripCache. Check your connection and try again.")
+      setApproval(result.approval)
+    })
+  }
+
+  const signInWithProvider = (provider: "google") =>
     withBusy(provider, async () => {
       const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.href } })
       if (error) throw error
@@ -357,27 +447,68 @@ function SignInCard({ initialError }: { initialError: string | null }) {
 
   const disabled = busy !== null
 
+  if (approval) {
+    return (
+      <AppApprovalWaiting
+        approval={approval}
+        onApproved={onAppApproved}
+        onCancel={(message) => {
+          clearAppApproval(authorizationId)
+          setApproval(null)
+          setError(message ?? null)
+          setErrorAt("app")
+          setInfo(null)
+        }}
+      />
+    )
+  }
+
   return (
     <Shell>
       <Title>Sign in to continue</Title>
       <p className="mt-2 text-[15px] leading-6 text-tc-ink-2">An app wants to connect to your TripCache account. Sign in to review what it can do.</p>
 
-      <div className="mt-6 grid gap-2.5">
-        <button type="button" disabled={disabled} onClick={() => signInWithProvider("apple")} className={cx(buttonClass("secondary", "lg"), "w-full disabled:opacity-60")}>
-          {busy === "apple" ? <Loader2 className="size-[18px] animate-spin" aria-hidden="true" /> : <AppleLogo />}
-          Continue with Apple
+      <form onSubmit={onSendToApp} className="mt-6 grid gap-3 rounded-[18px] border border-tc-violet/30 bg-tc-violet-soft/40 p-4">
+        <div className="flex items-start gap-3">
+          <span className="grid size-10 shrink-0 place-items-center rounded-[12px] bg-tc-violet text-white">
+            <Smartphone className="size-5" aria-hidden="true" />
+          </span>
+          <div className="grid gap-0.5">
+            <span className="text-[15px] font-semibold text-tc-ink">Approve with the TripCache app</span>
+            <span className="text-[13px] leading-5 text-tc-ink-2">No password. We&apos;ll send a request to your phone.</span>
+          </div>
+        </div>
+        <label className="grid gap-1.5" htmlFor={`${id}-app-email`}>
+          <span className="text-[13.5px] font-semibold text-tc-ink">Email</span>
+          <input
+            id={`${id}-app-email`}
+            type="email"
+            required
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={fieldClass}
+            data-testid="app-approval-email"
+          />
+        </label>
+        {error && errorAt === "app" ? <Notice>{error}</Notice> : null}
+        <button type="submit" disabled={disabled} className={cx(buttonClass("primary", "lg"), "w-full disabled:opacity-60")} data-testid="app-approval-send">
+          {busy === "app" ? <Loader2 className="size-[18px] animate-spin" aria-hidden="true" /> : <Smartphone className="size-[18px]" aria-hidden="true" />}
+          Approve with the TripCache app
         </button>
-        <button type="button" disabled={disabled} onClick={() => signInWithProvider("google")} className={cx(buttonClass("secondary", "lg"), "w-full disabled:opacity-60")}>
-          {busy === "google" ? <Loader2 className="size-[18px] animate-spin" aria-hidden="true" /> : <GoogleLogo />}
-          Continue with Google
-        </button>
-      </div>
+      </form>
 
       <div className="my-6 flex items-center gap-3 text-[12.5px] text-tc-mute" aria-hidden="true">
         <span className="h-px flex-1 bg-tc-line" />
-        or with email
+        or sign in another way
         <span className="h-px flex-1 bg-tc-line" />
       </div>
+
+      {/* Apple sign-in isn't set up for the web, so only Google is offered here. */}
+      <button type="button" disabled={disabled} onClick={() => signInWithProvider("google")} className={cx(buttonClass("secondary", "lg"), "mb-4 w-full disabled:opacity-60")}>
+        {busy === "google" ? <Loader2 className="size-[18px] animate-spin" aria-hidden="true" /> : <GoogleLogo />}
+        Continue with Google
+      </button>
 
       <div role="tablist" aria-label="Email sign-in method" className="grid grid-cols-2 gap-1 rounded-[14px] border border-tc-line bg-tc-mist p-1">
         {(
@@ -406,9 +537,9 @@ function SignInCard({ initialError }: { initialError: string | null }) {
         ))}
       </div>
 
-      {error || info ? (
+      {(error && errorAt === "other") || info ? (
         <div className="mt-4 grid gap-3">
-          {error ? <Notice>{error}</Notice> : null}
+          {error && errorAt === "other" ? <Notice>{error}</Notice> : null}
           {info ? <Notice tone="info">{info}</Notice> : null}
         </div>
       ) : null}
@@ -493,6 +624,109 @@ function SignInCard({ initialError }: { initialError: string | null }) {
           Get the TripCache app
         </a>
       </p>
+    </Shell>
+  )
+}
+
+const POLL_MS = 2000
+
+/** "Check your phone": polls until the request is answered in the app or expires. */
+function AppApprovalWaiting({
+  approval,
+  onApproved,
+  onCancel,
+}: {
+  approval: AppApproval
+  onApproved: (grant: AppApprovalGrant) => Promise<string | null>
+  onCancel: (message?: string) => void
+}) {
+  const [now, setNow] = useState(() => Date.now())
+  const [finishing, setFinishing] = useState(false)
+  const onApprovedRef = useRef(onApproved)
+  const onCancelRef = useRef(onCancel)
+  useEffect(() => {
+    onApprovedRef.current = onApproved
+    onCancelRef.current = onCancel
+  })
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 1000)
+    return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    let stopped = false
+    let timer: ReturnType<typeof setTimeout> | null = null
+    const tick = async () => {
+      const result = await claimAppApproval(approval)
+      if (stopped) return
+      if (result.kind === "approved") {
+        setFinishing(true)
+        const message = await onApprovedRef.current(result.grant)
+        if (!stopped && message !== null && message !== "") onCancelRef.current(message)
+        return
+      }
+      if (result.kind === "denied") return onCancelRef.current("The request was denied in the TripCache app. If that was a mistake, send it again.")
+      if (result.kind === "expired" || result.kind === "used") return onCancelRef.current("The request expired before it was approved. Send it again to try once more.")
+      if (result.kind === "invalid") return onCancelRef.current("This request is no longer valid. Send it again.")
+      timer = setTimeout(tick, POLL_MS)
+    }
+    timer = setTimeout(tick, POLL_MS)
+    return () => {
+      stopped = true
+      if (timer) clearTimeout(timer)
+    }
+  }, [approval])
+
+  const secondsLeft = Math.max(0, Math.floor((Date.parse(approval.expiresAt) - now) / 1000))
+  useEffect(() => {
+    if (secondsLeft === 0 && !finishing) onCancelRef.current("The request expired before it was approved. Send it again to try once more.")
+  }, [secondsLeft, finishing])
+
+  if (finishing) {
+    return (
+      <Shell footer={false}>
+        <div role="status" className="flex flex-col items-center gap-3 py-8 text-center">
+          <Loader2 className="size-7 animate-spin text-tc-violet" aria-hidden="true" />
+          <Title>Approved</Title>
+          <p className="text-[14.5px] leading-6 text-tc-ink-2">Finishing the connection…</p>
+        </div>
+      </Shell>
+    )
+  }
+
+  return (
+    <Shell>
+      <div className="flex flex-col items-center text-center" aria-live="polite">
+        <span className="grid size-14 place-items-center rounded-[18px] bg-tc-violet-soft text-tc-violet">
+          <Smartphone className="size-7" aria-hidden="true" />
+        </span>
+        <div className="mt-5">
+          <Title>Check your phone</Title>
+        </div>
+        <p className="mt-2 text-[15px] leading-6 text-tc-ink-2">
+          Open the TripCache notification, or the app itself, and tap this number:
+        </p>
+        <div
+          className="mt-5 grid h-24 w-32 place-items-center rounded-[22px] border-2 border-tc-violet bg-tc-violet-soft/50 font-tc-display text-[52px] font-semibold tracking-[0.02em] text-tc-violet-deep [font-variant-numeric:tabular-nums]"
+          data-testid="app-approval-number"
+          aria-label={`Number ${approval.matchNumber}`}
+        >
+          {approval.matchNumber}
+        </div>
+        <p className="mt-4 flex items-center gap-2 text-[13px] text-tc-mute">
+          <Loader2 className="size-3.5 animate-spin" aria-hidden="true" />
+          Waiting for approval · {Math.floor(secondsLeft / 60)}:{String(secondsLeft % 60).padStart(2, "0")}
+        </p>
+      </div>
+
+      <p className="mt-6 text-[12.5px] leading-5 text-tc-mute">
+        No notification? Open TripCache on your phone; the request shows up there while this page is open. It only works if this email has a TripCache account.
+      </p>
+
+      <button type="button" onClick={() => onCancel()} className={cx(buttonClass("secondary", "lg"), "mt-5 w-full")}>
+        Use a password or email code instead
+      </button>
     </Shell>
   )
 }
@@ -750,14 +984,6 @@ function ErrorCard({ kind, message }: { kind: ErrorKind; message?: string }) {
 /* ------------------------------------------------------------------ */
 /* Provider marks                                                      */
 /* ------------------------------------------------------------------ */
-
-function AppleLogo() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="size-[18px]" fill="currentColor">
-      <path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66ZM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28Z" />
-    </svg>
-  )
-}
 
 function GoogleLogo() {
   return (
