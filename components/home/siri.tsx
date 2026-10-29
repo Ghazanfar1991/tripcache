@@ -106,7 +106,7 @@ function SiriPhone() {
 function SpotlightCard() {
   return (
     <figure className="rounded-[22px] border border-tc-line bg-white p-4 shadow-[0_1px_2px_rgba(14,14,14,0.04),0_30px_60px_-40px_rgba(45,27,87,0.4)]">
-      <figcaption className="sr-only">Searching Spotlight for Melbourne shows the TripCache trip “Melbourne weekend, 10 to 11 Nov 2026”.</figcaption>
+      <figcaption className="sr-only">Searching Spotlight for Melbourne shows the TripCache trip “Melbourne, 10 to 14 Nov 2026”.</figcaption>
       <div aria-hidden="true">
         <div className="flex items-center gap-2 rounded-full bg-tc-mist px-3.5 py-2 text-[14.5px] text-tc-ink">
           <Search className="size-4 text-tc-mute" strokeWidth={2.2} />
@@ -116,8 +116,8 @@ function SpotlightCard() {
         <div className="mt-2 flex items-center gap-3 rounded-[14px] bg-tc-mist px-3 py-2.5">
           <img src="/app-icon-violet-indigo.webp" alt="" width={36} height={36} loading="lazy" decoding="async" className="size-9 rounded-[10px]" />
           <div className="min-w-0">
-            <p className="truncate text-[15px] font-semibold text-tc-ink">Melbourne weekend</p>
-            <p className="text-[13px] tabular-nums text-tc-mute">Melbourne · 10 – 11 Nov 2026</p>
+            <p className="truncate text-[15px] font-semibold text-tc-ink">Melbourne</p>
+            <p className="text-[13px] tabular-nums text-tc-mute">SYD → SYD · 10 – 14 Nov 2026</p>
           </div>
         </div>
       </div>

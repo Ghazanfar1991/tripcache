@@ -41,13 +41,13 @@ const EXCHANGES: Exchange[] = [
     label: "Show a trip",
     prompt: "Show my Melbourne trip",
     tool: "get_trip",
-    reply: "Here’s your Melbourne weekend: two flights, one hotel night and four plans.",
+    reply: "Here’s your Melbourne trip: two flights, a night at Collins Street Hotel and four plans.",
     card: {
       src: "/agents/card-trip.webp",
       width: 840,
       height: 1150,
       clip: true,
-      alt: "TripCache trip card: Melbourne weekend, 10 to 11 Nov 2026, 2 flights, 1 stay, A$1.2K spent, 3 documents, with a day-by-day itinerary.",
+      alt: "TripCache trip card: Melbourne, 10 to 11 Nov 2026, 2 flights, 1 stay, A$1.2K spent, 3 documents, with a day-by-day itinerary.",
     },
   },
   {
@@ -69,12 +69,12 @@ const EXCHANGES: Exchange[] = [
     label: "Add a booking",
     prompt: "Add a Hertz car to my Melbourne trip",
     tool: "add_plan_item",
-    reply: "Done. The Hertz rental is on your Melbourne weekend, picked up at the airport on Tuesday at 11:30 am.",
+    reply: "Done. The Hertz rental is on your Melbourne trip, picked up at the airport on Tuesday at 11:30 am.",
     card: {
       src: "/agents/card-plan-added.webp",
       width: 840,
       height: 413,
-      alt: "TripCache confirmation card: Hertz rental car added to Melbourne weekend, pick-up Tue 10 Nov 11:30 AM, drop-off Wed 11 Nov 5:00 PM.",
+      alt: "TripCache confirmation card: Hertz rental car added to the Melbourne trip, pick-up Tue 10 Nov 11:30 AM, drop-off Wed 11 Nov 5:00 PM.",
     },
   },
 ]
