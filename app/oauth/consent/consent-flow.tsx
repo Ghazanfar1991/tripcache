@@ -17,12 +17,24 @@ const SCOPE_BOOKINGS_DRAFT = "bookings:draft"
 // supabase-js puts the id straight into the request path, so only accept plain ids.
 const AUTHORIZATION_ID_PATTERN = /^[A-Za-z0-9_-]{6,128}$/
 
-type ErrorKind = "missing" | "expired" | "failed"
+type ErrorKind = "missing" | "expired" | "failed" | "reconnect"
+
+/**
+ * What the consent card decides on. "pending" is a normal request; "reconsent" is one
+ * Supabase already auto-approved (it holds the code-bearing redirect) for a client
+ * whose mcp_grants row was revoked, so the grant must be recorded again first.
+ */
+type ConsentRequest = {
+  client: { id: string; name: string }
+  redirectHost: string | null
+  email: string
+  mode: { kind: "pending"; authorizationId: string } | { kind: "reconsent"; redirectUrl: string }
+}
 
 type View =
   | { name: "loading" }
   | { name: "sign-in" }
-  | { name: "consent"; details: OAuthAuthorizationDetails }
+  | { name: "consent"; request: ConsentRequest }
   | { name: "redirecting"; host: string | null }
   | { name: "error"; kind: ErrorKind; message?: string }
 
@@ -39,6 +51,60 @@ function isExpiredError(error: { status?: number; code?: string; message?: strin
   if (!error) return false
   if (error.status === 404 || error.status === 410) return true
   return /not.?found|expired|invalid authorization|already (been )?(approved|denied|used|processed)/i.test(error.message ?? "")
+}
+
+/** The access_denied redirect for a request Supabase already approved: same callback and state, no code. */
+function deniedRedirect(redirectUrl: string) {
+  const url = new URL(redirectUrl)
+  const state = url.searchParams.get("state")
+  url.search = ""
+  url.searchParams.set("error", "access_denied")
+  url.searchParams.set("error_description", "The user denied access")
+  if (state) url.searchParams.set("state", state)
+  return url.toString()
+}
+
+type ConsentedCheck =
+  | { kind: "ok" }
+  | { kind: "reconsent"; client: { id: string; name: string } }
+  | { kind: "reconnect" }
+  | { kind: "failed"; message: string }
+
+/**
+ * Supabase auto-approves clients it thinks the user already consented to, but revoking a
+ * connection in the app (mcp_grants.revoked_at) only revokes the Supabase grant best-effort.
+ * So before following an auto-approval, make sure this client still has an active
+ * mcp_grants row. The auto-approval doesn't say which client it is for, so it is matched
+ * against the user's Supabase grants.
+ */
+async function checkConsentedClient(redirectUrl: string): Promise<ConsentedCheck> {
+  const supabase = getBrowserSupabase()
+  const [grants, active] = await Promise.all([
+    supabase.auth.oauth.listGrants(),
+    supabase.from("mcp_grants").select("client_id").is("revoked_at", null),
+  ])
+  if (grants.error || active.error) return { kind: "failed", message: (grants.error ?? active.error)?.message ?? "" }
+
+  const activeIds = new Set((active.data ?? []).map((row: { client_id: string }) => row.client_id))
+  const all = grants.data ?? []
+  const stale = all.filter((grant) => !activeIds.has(grant.client.id))
+  if (stale.length === 0) return { kind: "ok" }
+
+  // Which client is this? Match the callback host against each client's site; if every
+  // Supabase grant is stale and there is only one, it must be this one.
+  const host = hostOf(redirectUrl)
+  const byHost = all.filter((grant) => {
+    const site = hostOf(grant.client.uri)
+    return !!site && !!host && (host === site || host.endsWith(`.${site}`) || site.endsWith(`.${host}`))
+  })
+  const current = byHost.length === 1 ? byHost[0] : all.length === 1 ? all[0] : null
+  if (current && activeIds.has(current.client.id)) return { kind: "ok" }
+  if (current) return { kind: "reconsent", client: { id: current.client.id, name: current.client.name } }
+
+  // Can't tell which stale client this is: revoke the stale Supabase grants so the next
+  // attempt shows the consent screen, and ask the user to start again.
+  await Promise.all(stale.map((grant) => supabase.auth.oauth.revokeGrant({ clientId: grant.client.id })))
+  return { kind: "reconnect" }
 }
 
 /** Drops the OAuth return parameters (code, error) a provider sign-in leaves in the URL. */
@@ -59,7 +125,6 @@ export function ConsentFlow() {
   const authorizationId = params.get("authorization_id") ?? ""
   const validId = AUTHORIZATION_ID_PATTERN.test(authorizationId)
   const [view, setView] = useState<View>(() => (validId ? { name: "loading" } : { name: "error", kind: "missing" }))
-  const [session, setSession] = useState<Session | null>(null)
   const [providerError] = useState(() => params.get("error_description"))
   const loadedFor = useRef<string | null>(null)
 
@@ -76,12 +141,37 @@ export function ConsentFlow() {
         return
       }
       if ("redirect_url" in data && !("authorization_id" in data)) {
-        // Already approved earlier for these scopes: Supabase sends the user straight back.
-        setView({ name: "redirecting", host: hostOf(data.redirect_url) })
-        window.location.assign(data.redirect_url)
+        // Already approved earlier: Supabase sends the user straight back, unless the
+        // TripCache grant for this client was revoked since.
+        const check = await checkConsentedClient(data.redirect_url)
+        if (check.kind === "ok") {
+          setView({ name: "redirecting", host: hostOf(data.redirect_url) })
+          window.location.assign(data.redirect_url)
+        } else if (check.kind === "reconsent") {
+          setView({
+            name: "consent",
+            request: {
+              client: check.client,
+              redirectHost: hostOf(data.redirect_url),
+              email: current.user.email ?? "",
+              mode: { kind: "reconsent", redirectUrl: data.redirect_url },
+            },
+          })
+        } else {
+          setView(check.kind === "reconnect" ? { name: "error", kind: "reconnect" } : { name: "error", kind: "failed", message: check.message })
+        }
         return
       }
-      setView({ name: "consent", details: data as OAuthAuthorizationDetails })
+      const details = data as OAuthAuthorizationDetails
+      setView({
+        name: "consent",
+        request: {
+          client: { id: details.client.id, name: details.client.name },
+          redirectHost: hostOf(details.redirect_uri),
+          email: details.user?.email || current.user.email || "",
+          mode: { kind: "pending", authorizationId: details.authorization_id },
+        },
+      })
     },
     [authorizationId],
   )
@@ -94,14 +184,12 @@ export function ConsentFlow() {
     supabase.auth.getSession().then(({ data }) => {
       if (!active) return
       cleanReturnParams()
-      setSession(data.session)
       if (data.session) loadDetails(data.session)
       else setView({ name: "sign-in" })
     })
 
     const { data: listener } = supabase.auth.onAuthStateChange((event, next) => {
       if (!active) return
-      setSession(next)
       if (event === "SIGNED_OUT" || !next) {
         loadedFor.current = null
         setView({ name: "sign-in" })
@@ -124,8 +212,7 @@ export function ConsentFlow() {
     case "consent":
       return (
         <ConsentCard
-          details={view.details}
-          email={view.details.user?.email || session?.user.email || ""}
+          request={view.request}
           onRedirect={(host) => setView({ name: "redirecting", host })}
           onExpired={() => setView({ name: "error", kind: "expired" })}
         />
@@ -415,13 +502,11 @@ function SignInCard({ initialError }: { initialError: string | null }) {
 /* ------------------------------------------------------------------ */
 
 function ConsentCard({
-  details,
-  email,
+  request,
   onRedirect,
   onExpired,
 }: {
-  details: OAuthAuthorizationDetails
-  email: string
+  request: ConsentRequest
   onRedirect: (host: string | null) => void
   onExpired: () => void
 }) {
@@ -431,8 +516,8 @@ function ConsentCard({
   const [error, setError] = useState<string | null>(null)
 
   const supabase = getBrowserSupabase()
-  const clientName = details.client?.name?.trim() || "This app"
-  const redirectHost = hostOf(details.redirect_uri)
+  const { email, mode, redirectHost } = request
+  const clientName = request.client.name?.trim() || "This app"
 
   const follow = (redirectUrl: string) => {
     onRedirect(hostOf(redirectUrl))
@@ -444,7 +529,7 @@ function ConsentCard({
     setError(null)
     const scopes = allowDrafts ? [SCOPE_TRIPS_READ, SCOPE_BOOKINGS_DRAFT] : [SCOPE_TRIPS_READ]
     const grant = await supabase.rpc("record_mcp_grant", {
-      p_client_id: details.client.id,
+      p_client_id: request.client.id,
       p_client_name: clientName,
       p_scopes: scopes,
     })
@@ -453,7 +538,11 @@ function ConsentCard({
       setError("We couldn't save your choices, so nothing was connected. Please try again in a moment.")
       return
     }
-    const { data, error } = await supabase.auth.oauth.approveAuthorization(details.authorization_id, { skipBrowserRedirect: true })
+    if (mode.kind === "reconsent") {
+      follow(mode.redirectUrl)
+      return
+    }
+    const { data, error } = await supabase.auth.oauth.approveAuthorization(mode.authorizationId, { skipBrowserRedirect: true })
     if (error || !data?.redirect_url) {
       setBusy(null)
       if (isExpiredError(error)) onExpired()
@@ -466,7 +555,13 @@ function ConsentCard({
   const deny = async () => {
     setBusy("deny")
     setError(null)
-    const { data, error } = await supabase.auth.oauth.denyAuthorization(details.authorization_id, { skipBrowserRedirect: true })
+    if (mode.kind === "reconsent") {
+      // Supabase still counts this client as consented; drop that too so it can't auto-approve again.
+      await supabase.auth.oauth.revokeGrant({ clientId: request.client.id })
+      follow(deniedRedirect(mode.redirectUrl))
+      return
+    }
+    const { data, error } = await supabase.auth.oauth.denyAuthorization(mode.authorizationId, { skipBrowserRedirect: true })
     if (error || !data?.redirect_url) {
       setBusy(null)
       if (isExpiredError(error)) onExpired()
@@ -620,6 +715,10 @@ const ERROR_COPY: Record<ErrorKind, { title: string; body: string }> = {
   expired: {
     title: "This request has expired",
     body: "Connection requests only last a few minutes and can be used once. Go back to the app you were connecting and start again.",
+  },
+  reconnect: {
+    title: "Please connect again",
+    body: "This app's access to TripCache was turned off. Go back to the app you were connecting and start again to review what it can do.",
   },
   failed: {
     title: "Something went wrong",
