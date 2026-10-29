@@ -48,8 +48,15 @@ type View =
   | { name: "sign-in" }
   | { name: "consent"; request: ConsentRequest }
   | { name: "redirecting"; host: string | null }
+  | { name: "connected"; connection: Connection }
   | { name: "pro-required"; clientName: string; returnUrl: string | null }
   | { name: "error"; kind: ErrorKind; message?: string }
+
+/** A finished approval, shown on our own page before handing the browser to the agent. */
+type Connection = { clientName: string; redirectUrl: string; allowDrafts: boolean }
+
+/** How long the "Connected" card stays before following the agent's callback. */
+const CONNECTED_REDIRECT_MS = 2600
 
 function hostOf(url: string | undefined | null) {
   if (!url) return null
@@ -306,9 +313,15 @@ export function ConsentFlow() {
         redirectUrl = approved.data.redirect_url
       }
       clearAppApproval(authorizationId)
-      setView({ name: "redirecting", host: hostOf(redirectUrl) })
       await supabase.auth.signOut({ scope: "local" }).catch(() => undefined)
-      window.location.assign(redirectUrl)
+      setView({
+        name: "connected",
+        connection: {
+          clientName: grant.client.name || "your AI assistant",
+          redirectUrl,
+          allowDrafts: grant.scopes.includes(SCOPE_BOOKINGS_DRAFT),
+        },
+      })
       return null
     },
     [authorizationId],
@@ -334,11 +347,14 @@ export function ConsentFlow() {
         <ConsentCard
           request={view.request}
           onRedirect={(host) => setView({ name: "redirecting", host })}
+          onConnected={(connection) => setView({ name: "connected", connection })}
           onExpired={() => setView({ name: "error", kind: "expired" })}
         />
       )
     case "redirecting":
       return <RedirectingCard host={view.host} />
+    case "connected":
+      return <ConnectedCard connection={view.connection} />
     case "pro-required":
       return <ProRequiredCard clientName={view.clientName} returnUrl={view.returnUrl} />
     case "error":
@@ -801,10 +817,12 @@ function AppApprovalWaiting({
 function ConsentCard({
   request,
   onRedirect,
+  onConnected,
   onExpired,
 }: {
   request: ConsentRequest
   onRedirect: (host: string | null) => void
+  onConnected: (connection: Connection) => void
   onExpired: () => void
 }) {
   const draftsId = useId()
@@ -840,7 +858,7 @@ function ConsentCard({
       return
     }
     if (mode.kind === "reconsent") {
-      follow(mode.redirectUrl)
+      onConnected({ clientName, redirectUrl: mode.redirectUrl, allowDrafts })
       return
     }
     const { data, error } = await supabase.auth.oauth.approveAuthorization(mode.authorizationId, { skipBrowserRedirect: true })
@@ -850,7 +868,7 @@ function ConsentCard({
       else setError(error?.message || "We couldn't finish connecting. Please try again.")
       return
     }
-    follow(data.redirect_url)
+    onConnected({ clientName, redirectUrl: data.redirect_url, allowDrafts })
   }
 
   const deny = async () => {
@@ -993,6 +1011,108 @@ function ConsentCard({
 /* ------------------------------------------------------------------ */
 /* Redirecting and errors                                              */
 /* ------------------------------------------------------------------ */
+
+/** Loopback callbacks belong to desktop agents (Codex, Claude Code…), whose own page is a bare line of text. */
+function isLoopback(host: string | null) {
+  const name = (host ?? "").replace(/:\d+$/, "").replace(/^\[|\]$/g, "")
+  return name === "localhost" || name === "::1" || /^127(\.\d{1,3}){3}$/.test(name)
+}
+
+/**
+ * Approved: our own confirmation first, then the agent's callback (which carries the
+ * authorization code and must be a top-level navigation). Desktop agents open a
+ * localhost page of their own afterwards, so say so here.
+ */
+function ConnectedCard({ connection }: { connection: Connection }) {
+  const { clientName, redirectUrl, allowDrafts } = connection
+  const host = hostOf(redirectUrl)
+  const loopback = isLoopback(host)
+  const [leaving, setLeaving] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLeaving(true)
+      window.location.assign(redirectUrl)
+    }, CONNECTED_REDIRECT_MS)
+    return () => clearTimeout(timer)
+  }, [redirectUrl])
+
+  const continueNow = () => {
+    setLeaving(true)
+    window.location.assign(redirectUrl)
+  }
+
+  return (
+    <Shell>
+      <div role="status" aria-live="polite" className="flex flex-col items-center text-center" data-testid="connected">
+        <div className="flex items-center gap-3">
+          <span
+            aria-hidden="true"
+            className="grid size-14 shrink-0 place-items-center rounded-[16px] bg-tc-violet-soft font-tc-display text-[24px] font-semibold text-tc-violet"
+          >
+            {clientName.charAt(0).toUpperCase()}
+          </span>
+          <span aria-hidden="true" className="grid size-8 place-items-center rounded-full bg-[#12b76a] text-white shadow-[0_6px_14px_-6px_rgba(18,183,106,0.8)]">
+            <Check className="size-[18px]" strokeWidth={3} />
+          </span>
+          <Image src="/app-icon-violet-indigo.png" alt="" width={56} height={56} className="size-14 rounded-[16px] shadow-[0_6px_14px_-6px_rgba(97,43,211,0.6)]" />
+        </div>
+        <div className="mt-6">
+          <Title>{clientName} is connected</Title>
+        </div>
+        <p className="mt-2 text-[15px] leading-6 text-tc-ink-2">
+          {clientName} can now use your TripCache account. Ask it about your next trip or flight.
+        </p>
+      </div>
+
+      <ul className="mt-6 grid gap-2.5">
+        <li className="flex items-start gap-3 rounded-[16px] border border-tc-line px-4 py-3">
+          <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-tc-violet text-white">
+            <Check className="size-3.5" strokeWidth={3} aria-hidden="true" />
+          </span>
+          <span className="text-[14px] leading-[21px] text-tc-ink">See your trips, flights, live flight status, document names and expenses</span>
+        </li>
+        <li className="flex items-start gap-3 rounded-[16px] border border-tc-line px-4 py-3">
+          <span
+            className={cx(
+              "mt-0.5 grid size-6 shrink-0 place-items-center rounded-full",
+              allowDrafts ? "bg-tc-violet text-white" : "bg-tc-mist text-[#9aa0a6]",
+            )}
+          >
+            {allowDrafts ? <Check className="size-3.5" strokeWidth={3} aria-hidden="true" /> : <Lock className="size-3" aria-hidden="true" />}
+          </span>
+          <span className="text-[14px] leading-[21px] text-tc-ink">
+            {allowDrafts ? "Add plans and expenses as drafts you confirm in the app" : "Can't add or change anything"}
+          </span>
+        </li>
+      </ul>
+      <p className="mt-3 text-[12.5px] leading-5 text-tc-mute">Change or remove this any time in the app: Profile → Connected apps.</p>
+
+      <div className="mt-6 rounded-[16px] bg-tc-mist px-4 py-3.5">
+        <div className="flex items-center gap-2 text-[13.5px] font-semibold text-tc-ink">
+          <Loader2 className="size-4 animate-spin text-tc-violet" aria-hidden="true" />
+          {leaving ? `Handing over to ${clientName}…` : `Returning you to ${clientName}…`}
+        </div>
+        <div className="mt-2.5 h-1 overflow-hidden rounded-full bg-white">
+          <div
+            className="h-full rounded-full bg-tc-violet motion-safe:animate-[tc-connected-progress_var(--tc-connected-ms)_linear_forwards]"
+            style={{ ["--tc-connected-ms" as string]: `${CONNECTED_REDIRECT_MS}ms`, width: leaving ? "100%" : undefined }}
+          />
+        </div>
+        <p className="mt-2.5 text-[12.5px] leading-5 text-tc-mute">
+          {loopback
+            ? `${clientName} confirms in its own window. After that you can close this tab.`
+            : `You'll be back in ${host || clientName} in a moment.`}
+        </p>
+      </div>
+      <style>{`@keyframes tc-connected-progress { from { width: 0% } to { width: 100% } }`}</style>
+
+      <button type="button" onClick={continueNow} disabled={leaving} className={cx(buttonClass("primary", "lg"), "mt-5 w-full disabled:opacity-60")} data-testid="connected-continue">
+        Continue to {clientName}
+      </button>
+    </Shell>
+  )
+}
 
 function RedirectingCard({ host }: { host: string | null }) {
   return (
