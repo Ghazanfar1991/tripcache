@@ -19,6 +19,7 @@
  * FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
  */
 import { Footer } from "@/components/footer"
+import { getAgentVideos } from "./agent-videos"
 import { Assistants } from "./assistants"
 import { Duo } from "./duo"
 import { Faq } from "./faq"
@@ -40,7 +41,7 @@ export function HomePage() {
         <WhatIs />
         <InboxToTrip />
         <Kept />
-        <Assistants />
+        <Assistants videos={getAgentVideos()} />
         <Siri />
         <Duo />
         <Statement />

@@ -3,6 +3,7 @@
 import { useReducedMotion } from "framer-motion"
 import { ArrowUp, Check } from "lucide-react"
 import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import type { AgentVideo, AgentVideos } from "./agent-videos"
 import { Bloom } from "./category"
 import { useInViewPlaying } from "./use-in-view-playing"
 
@@ -248,7 +249,84 @@ function ChatDemo() {
   )
 }
 
-export function Assistants() {
+/** The 8–12 s "connect your agent" loop: muted, plays only on screen, the poster under reduced motion. */
+function HeroLoop({ video }: { video: AgentVideo }) {
+  const reduce = useReducedMotion()
+  const { ref, playing } = useInViewPlaying<HTMLVideoElement>()
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+    if (playing && !reduce) void node.play().catch(() => {})
+    else node.pause()
+  }, [playing, reduce, ref])
+
+  return (
+    <video
+      ref={ref}
+      muted
+      loop
+      playsInline
+      preload="none"
+      poster={video.poster}
+      aria-hidden="true"
+      className="mb-8 aspect-video w-full rounded-[22px] border border-tc-line bg-tc-mist object-cover"
+    >
+      {video.webm ? <source src={video.webm} type="video/webm" /> : null}
+      {video.mp4 ? <source src={video.mp4} type="video/mp4" /> : null}
+    </video>
+  )
+}
+
+/** "Watch how to connect": one walkthrough per assistant, loaded only when someone presses play. */
+function Walkthrough({ videos }: { videos: { key: string; label: string; video: AgentVideo }[] }) {
+  const [active, setActive] = useState(videos[0].key)
+  const current = videos.find((item) => item.key === active) ?? videos[0]
+
+  return (
+    <div className="mt-10">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h3 className="text-[15px] font-semibold text-tc-ink">Watch how to connect</h3>
+        {videos.length > 1 ? (
+          <div className="flex gap-1 rounded-[14px] border border-tc-line bg-white p-1" role="group" aria-label="Walkthrough for">
+            {videos.map((item) => (
+              <button
+                key={item.key}
+                type="button"
+                aria-pressed={item.key === current.key}
+                onClick={() => setActive(item.key)}
+                className={`tc-press min-h-9 rounded-[10px] px-3.5 text-[14px] font-medium transition-colors duration-200 ${
+                  item.key === current.key ? "bg-tc-violet text-white" : "text-tc-ink-2 hover:bg-tc-mist"
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+      <video
+        key={current.key}
+        controls
+        playsInline
+        preload="none"
+        poster={current.video.poster}
+        aria-label={`How to connect TripCache to ${current.label}`}
+        className="mt-3 aspect-video w-full rounded-[18px] border border-tc-line bg-tc-mist object-cover"
+      >
+        {current.video.webm ? <source src={current.video.webm} type="video/webm" /> : null}
+        {current.video.mp4 ? <source src={current.video.mp4} type="video/mp4" /> : null}
+        {current.video.captions ? <track kind="captions" src={current.video.captions} srcLang="en" label="English" default /> : null}
+      </video>
+    </div>
+  )
+}
+
+export function Assistants({ videos = {} }: { videos?: AgentVideos }) {
+  const walkthroughs = [
+    { key: "claude", label: "Claude", video: videos.claude },
+    { key: "chatgpt", label: "ChatGPT", video: videos.chatgpt },
+  ].filter((item): item is { key: string; label: string; video: AgentVideo } => Boolean(item.video))
   return (
     <section id="ai-assistants" aria-labelledby="ai-assistants-heading" className="relative scroll-mt-24 overflow-hidden bg-white py-24 sm:py-32">
       <Bloom className="tc-drift -left-40 top-24 size-[460px] opacity-20" color="#8b5cf6" />
@@ -272,6 +350,7 @@ export function Assistants() {
           </div>
 
           <div className="lg:col-span-5 lg:pt-2">
+            {videos.hero ? <HeroLoop video={videos.hero} /> : null}
             <div className="flex items-center gap-3">
               <h3 className="font-tc-display text-[25px] font-semibold leading-[1.15] tracking-[-0.015em] text-tc-ink sm:text-[28px]">
                 Connect in a minute
@@ -291,6 +370,7 @@ export function Assistants() {
                 </li>
               ))}
             </ol>
+            {walkthroughs.length ? <Walkthrough videos={walkthroughs} /> : null}
 
             <h3 className="mt-10 text-[15px] font-semibold text-tc-ink">Works with</h3>
             <ul className="mt-3 flex flex-wrap gap-2">
