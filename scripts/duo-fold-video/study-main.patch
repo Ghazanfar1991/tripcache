@@ -1,0 +1,104 @@
+diff --git a/main.js b/main.js
+index 976b61f..5a9a5e2 100644
+--- a/main.js
++++ b/main.js
+@@ -11,7 +11,8 @@ const scene = new THREE.Scene();
+ const camera = new THREE.PerspectiveCamera(32, 1, .1, 250);
+ camera.position.set(0, 0, 40);
+ const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
++const __q = new URLSearchParams(location.search);
++renderer.setPixelRatio(Number(__q.get('dpr')) || Math.min(devicePixelRatio, 2));
+ renderer.setClearColor(0xf6f6f3, 0);
+ renderer.toneMapping = THREE.ACESFilmicToneMapping;
+ renderer.toneMappingExposure = 1.18;
+@@ -39,6 +40,7 @@ controls.update();
+ const phone = new THREE.Group();
+ scene.add(phone);
+ const bend = { value: 0 };
++const coverSurface = { value: 0 };
+ let angle = 180;
+ let playing = false;
+ let phase = 0;
+@@ -152,7 +154,7 @@ function resize() {
+   const { width, height } = viewport.getBoundingClientRect();
+   renderer.setSize(width, height);
+   camera.aspect = width / height;
+-  const pixelsPerUnit = Math.min(width / 25, height / 17, 37);
++  const pixelsPerUnit = Math.min(width / 25, height / 17, Number(__q.get('ppu')) || 37);
+   camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(height / pixelsPerUnit / 2 / 40));
+   camera.updateProjectionMatrix();
+ }
+@@ -164,6 +166,7 @@ uniform vec2 uiPixel;
+ uniform vec4 uiFrame;
+ uniform vec2 uiGradient;
+ uniform vec3 uiReferenceEye;
++uniform float uiSurface;
+ varying vec3 vUIPosition;
+ vec3 screenColor() {
+   // Intersect the fixed front-view ray with the unfolded inner-screen plane.
+@@ -182,6 +185,10 @@ vec3 screenColor() {
+     float anchorX = uiReferenceEye.x + (foldedEdge.x - uiReferenceEye.x) * edgeDepth;
+     sourceUV.x = uiGradient.x + (projected.x - anchorX) / uiFrame.z;
+     float progress = clamp((3.141592654 - foldAngle) / 1.570796327, 0.0, 1.0);
++    // Recording: blend to the cover's own surface mapping (sharp, no reveal) for poses like the tent.
++    vec2 surfaceUV = vec2(uiGradient.x + vMapUv.x * (1.0 - uiGradient.x), vMapUv.y);
++    sourceUV = mix(sourceUV, surfaceUV, uiSurface);
++    progress *= 1.0 - uiSurface;
+   #endif
+   float edge = (sourceUV.x - uiGradient.x) / (uiGradient.y - uiGradient.x);
+   float motion = smoothstep(0.0, 1.0, progress);
+@@ -275,6 +282,7 @@ try {
+           shader.uniforms.uiGradient = screens[kind].gradient;
+           shader.uniforms.uiReferenceEye = { value: uiReferenceEye };
+           shader.uniforms.uiPixel = screens[kind].pixel;
++          shader.uniforms.uiSurface = coverSurface;
+           shader.fragmentShader = shader.fragmentShader.replace('#include <map_pars_fragment>', `
+             #include <map_pars_fragment>
+             ${kind === 'inner' ? '#define INNER_UI' : ''}
+@@ -319,6 +327,45 @@ try {
+   console.error(error);
+ }
+ let lastTime = performance.now();
++// Recording hooks: a cover-only canvas (the inner capture with a second image, e.g. the tent screen, faded into the
++// half the cover samples, rotated for a landscape pose) and the phone group for posing.
++const coverCanvas = document.createElement('canvas');
++coverCanvas.width = uiCanvas.width;
++coverCanvas.height = uiCanvas.height;
++const coverTexture = new THREE.CanvasTexture(coverCanvas);
++coverTexture.colorSpace = THREE.SRGBColorSpace;
++coverTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
++let coverImage = null;
++async function loadCover(url) {
++  const img = new Image();
++  img.src = url;
++  await img.decode();
++  coverImage = img;
++}
++function setCoverMix(mix, turn = -90, region = [800, 0, 800, 1125]) {
++  const c = coverCanvas.getContext('2d');
++  c.globalAlpha = 1;
++  c.drawImage(uiCanvas, 0, 0);
++  if (coverImage && mix > 0) {
++    const [x, y, w, h] = region;
++    c.save();
++    c.beginPath();
++    c.rect(x, y, w, h);
++    c.clip();
++    c.globalAlpha = mix;
++    c.translate(x + w / 2, y + h / 2);
++    c.rotate(turn * Math.PI / 180);
++    const W = Math.abs(turn) === 90 ? h : w, H = Math.abs(turn) === 90 ? w : h;
++    const scale = Math.max(W / coverImage.width, H / coverImage.height);
++    c.fillStyle = '#000';
++    c.fillRect(-W / 2, -H / 2, W, H);
++    c.drawImage(coverImage, -coverImage.width * scale / 2, -coverImage.height * scale / 2, coverImage.width * scale, coverImage.height * scale);
++    c.restore();
++  }
++  coverTexture.needsUpdate = true;
++  screens.outer.material.map = coverTexture;
++}
++window.__duo = { setAngle: (v) => setAngle(v), stop: () => { setPlaying(false); transition = null; }, camera, controls, phone, scene, renderer, loadCover, setCoverMix, setSurface: (v) => { coverSurface.value = v; }, ready: () => ready };
+ renderer.setAnimationLoop(now => {
+   const delta = Math.min((now - lastTime) / 1000, .05);
+   lastTime = now;

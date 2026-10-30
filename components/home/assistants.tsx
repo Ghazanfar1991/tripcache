@@ -463,10 +463,11 @@ function Walkthrough({ videos }: { videos: { key: AgentId; label: string; video:
 }
 
 export function Assistants({ videos = {} }: { videos?: AgentVideos }) {
-  const walkthroughs = [
-    { key: "claude" as const, label: "Claude", video: videos.claude },
-    { key: "chatgpt" as const, label: "ChatGPT", video: videos.chatgpt },
-  ].filter((item): item is { key: AgentId; label: string; video: AgentVideo } => Boolean(item.video))
+  const all: { key: AgentId; label: string; video?: AgentVideo }[] = [
+    { key: "claude", label: "Claude", video: videos.claude },
+    { key: "chatgpt", label: "ChatGPT", video: videos.chatgpt },
+  ]
+  const walkthroughs = all.filter((item): item is { key: AgentId; label: string; video: AgentVideo } => Boolean(item.video))
   return (
     <section id="ai-assistants" aria-labelledby="ai-assistants-heading" className="relative scroll-mt-24 overflow-hidden bg-white py-24 sm:py-32">
       <Bloom className="tc-drift -left-40 top-24 size-[460px] opacity-20" color="#8b5cf6" />
