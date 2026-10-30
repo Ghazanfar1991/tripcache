@@ -3,12 +3,12 @@ import path from "node:path"
 
 /*
  * "How to connect your AI agent" videos, made in their own session and dropped into
- * public/videos/agent-connect/. Files are matched by prefix (hero*, claude*, chatgpt*) and extension, so the
+ * public/videos/agent-connect/. Files are matched by prefix (claude*, chatgpt*) and extension, so the
  * section shows each video as soon as its files exist and shows nothing for one that doesn't.
  */
 
 export type AgentVideo = { mp4?: string; webm?: string; poster?: string; captions?: string }
-export type AgentVideos = { hero?: AgentVideo; claude?: AgentVideo; chatgpt?: AgentVideo }
+export type AgentVideos = { claude?: AgentVideo; chatgpt?: AgentVideo }
 
 const DIR = "videos/agent-connect"
 
@@ -30,5 +30,5 @@ export function getAgentVideos(): AgentVideos {
     }
     return video.mp4 || video.webm ? video : undefined
   }
-  return { hero: find("hero"), claude: find("claude"), chatgpt: find("chatgpt") }
+  return { claude: find("claude"), chatgpt: find("chatgpt") }
 }

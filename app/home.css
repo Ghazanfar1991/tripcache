@@ -300,6 +300,62 @@
   }
 }
 
+/* ---------- Agent orbit: the ring turns slowly, a beam draws to the selected agent, its tile pops in the centre ---------- */
+.tc-orbit-spin {
+  transform-origin: 50px 50px;
+  animation: tc-orbit-spin 60s linear infinite;
+}
+@keyframes tc-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.tc-orbit-beam {
+  stroke: #b79bff;
+  stroke-width: 0.6;
+  stroke-dasharray: 0.02 0.035;
+  animation:
+    tc-orbit-beam-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both,
+    tc-orbit-beam-flow 1.2s linear infinite;
+}
+@keyframes tc-orbit-beam-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes tc-orbit-beam-flow {
+  to {
+    stroke-dashoffset: -0.055;
+  }
+}
+.tc-orbit-pop {
+  animation: tc-orbit-pop 520ms cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+@keyframes tc-orbit-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+.tc-hub-ring {
+  animation: tc-hub-ring 2.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+@keyframes tc-hub-ring {
+  from {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+.tc-hub[data-paused] .tc-orbit-spin,
+.tc-hub[data-paused] .tc-orbit-beam,
+.tc-hub[data-paused] .tc-hub-ring {
+  animation-play-state: paused;
+}
+
 /* ---------- Siri: edge glow while listening, then the answer sheet ---------- */
 .tc-siri-glow {
   padding: 7px;
@@ -340,7 +396,11 @@
   .tc-chat-pulse,
   .tc-caret,
   .tc-chat-in,
-  .tc-chat-card {
+  .tc-chat-card,
+  .tc-orbit-spin,
+  .tc-orbit-beam,
+  .tc-orbit-pop,
+  .tc-hub-ring {
     animation: none !important;
   }
   .tc-siri-glow,
