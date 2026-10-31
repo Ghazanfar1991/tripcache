@@ -78,7 +78,7 @@ Upload confirmations, QR codes, receipts, passports, visas, and boarding passes.
 
 ### 4. Add Cancellation Deadlines
 
-If a hotel, car, ticket, or tour has a free-cancellation window, add the deadline to the booking. TripCache can remind you seven days, two days, or one day before that window closes, or on the day, and these reminders are free. See the full workflow in our [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026).
+If a hotel, car, ticket, or tour has a free-cancellation window, add the deadline to the booking. TripCache can remind you seven days, two days, or one day before that window closes, or on the day, and these reminders are free. See the full workflow in our [free cancellation reminder guide](/features/cancellation-reminders).
 
 ### 5. Review Before Departure
 

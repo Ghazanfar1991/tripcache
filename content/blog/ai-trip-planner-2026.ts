@@ -131,7 +131,7 @@ An itinerary is a convenient view, not a replacement for the provider. Keep the 
 7. Record refundable booking deadlines.
 8. Recheck live status in the provider's official app before travel.
 
-For step-by-step import guidance, see [how email-to-itinerary automation works](/blog/email-to-trip-automation). For refundable stays, use the [hotel cancellation reminder workflow](/blog/hotel-cancellation-reminder-app-2026).
+For step-by-step import guidance, see [how email-to-itinerary automation works](/features/email-to-itinerary). For refundable stays, use the [hotel cancellation reminder workflow](/blog/hotel-cancellation-reminder-app-2026).
 
 ## Bottom Line
 

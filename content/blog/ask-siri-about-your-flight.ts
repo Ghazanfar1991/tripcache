@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Ask Siri for your flight time, gate, baggage belt, hotel or rental car with TripCache. Every phrase, why you say the app's name, and free Shortcuts.",
   date: "2026-10-29",
-  updatedAt: "2026-10-29",
+  updatedAt: "2026-11-01",
   author: "TripCache Editorial Team",
   readTime: "7 min read",
   category: "Guide",
@@ -133,7 +133,11 @@ Swipe down on the Home Screen and type a destination, such as "Adelaide". The tr
 
 ## Android
 
-On Android, TripCache is adding home-screen shortcuts, and support for asking Gemini is in progress. Until then, TripCache Pro's Android home-screen widget and ongoing notification show your next flight at a glance.
+On Android, touch and hold the TripCache icon for three free app shortcuts: **your next flight**, **your current trip** and **add an expense**. Drag one onto the home screen to pin it; pinned shortcuts update their label as your trips change (for example "QF 9401 to Melbourne").
+
+You can't ask Gemini about TripCache yet. Google only lets Gemini call other apps' actions for apps in its early-access programme, and TripCache isn't in it yet. For flight details at a glance, TripCache Pro also has an Android home-screen widget and an ongoing notification.
+
+To see your flights in Google Calendar instead, [subscribe to a live trip calendar](/blog/sync-travel-itinerary-to-calendar). It's free.
 
 If you'd rather ask in a chat than by voice, [connect ChatGPT or Claude to your trips](/blog/connect-chatgpt-claude-to-travel-app) (TripCache Pro).
 
@@ -173,6 +177,6 @@ export const faq: BlogFaq[] = [
   {
     question: "Does TripCache work with Gemini on Android?",
     answer:
-      "Not yet. TripCache is adding Android home-screen shortcuts, and support for asking Gemini is in progress. On Android today, the TripCache Pro home-screen widget and ongoing notification show your next flight at a glance.",
+      "Not yet. Gemini can only call actions in apps that are in Google's early-access programme, and TripCache isn't in it yet. On Android you can touch and hold the TripCache icon for free shortcuts to your next flight, your current trip or a new expense, and TripCache Pro adds a home-screen widget and an ongoing notification.",
   },
 ]

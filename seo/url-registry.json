@@ -18,6 +18,10 @@
       "status": "live"
     },
     {
+      "path": "/alternatives/app-in-the-air",
+      "status": "live"
+    },
+    {
       "path": "/alternatives/tripcase",
       "status": "live"
     },
@@ -45,6 +49,10 @@
     },
     {
       "path": "/blog/ask-siri-about-your-flight",
+      "status": "live"
+    },
+    {
+      "path": "/blog/sync-travel-itinerary-to-calendar",
       "status": "live"
     },
     {
@@ -82,7 +90,8 @@
     },
     {
       "path": "/blog/email-to-trip-automation",
-      "status": "live"
+      "status": "redirected",
+      "redirectTo": "/features/email-to-itinerary"
     },
     {
       "path": "/blog/flighty-vs-tripcache-2026",
@@ -91,8 +100,9 @@
     },
     {
       "path": "/blog/free-cancellation-reminder-travel-bookings-2026",
-      "status": "live",
-      "legacyYearSlug": true
+      "status": "redirected",
+      "legacyYearSlug": true,
+      "redirectTo": "/features/cancellation-reminders"
     },
     {
       "path": "/blog/google-travel-alternative-2026",

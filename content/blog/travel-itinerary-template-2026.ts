@@ -189,7 +189,7 @@ Use terminals, stations, hotel addresses, rental desks, meeting venues, and park
 
 ### Cancellation and Payment Deadlines
 
-Add refundable booking cutoffs, pay-later dates, ticket collection windows, and expense submission dates. The [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026) explains how to turn policy wording into an actionable reminder.
+Add refundable booking cutoffs, pay-later dates, ticket collection windows, and expense submission dates. The [free cancellation reminder guide](/features/cancellation-reminders) explains how to turn policy wording into an actionable reminder.
 
 ### Essential Documents
 
@@ -206,7 +206,7 @@ List what must be available offline or in original form. For international trips
 
 A template is enough for a short, stable trip. An itinerary app becomes more useful when confirmations arrive from several providers, plans change, or documents and deadlines need to stay attached to each booking.
 
-TripCache can turn selected confirmation emails into reviewable trip drafts. Learn how in the [email-to-itinerary automation guide](/blog/email-to-trip-automation), or use the [travel document organizer checklist](/blog/best-travel-document-organizer-app-2026) to prepare files for airport day.
+TripCache can turn selected confirmation emails into reviewable trip drafts. Learn how in the [email-to-itinerary automation guide](/features/email-to-itinerary), or use the [travel document organizer checklist](/blog/best-travel-document-organizer-app-2026) to prepare files for airport day.
 
 ## Final Review Before Departure
 

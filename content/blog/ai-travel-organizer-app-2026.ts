@@ -65,7 +65,7 @@ The core feature is email-to-itinerary automation. A traveler forwards a booking
 
 TripCache creates trip drafts so users can review details before saving them.
 
-TripIt documents the established confirmation-forwarding model on its official [how it works page](https://www.tripit.com/en-us/web/how-it-works). For a review-first workflow, see [how email-to-itinerary automation works](/blog/email-to-trip-automation).
+TripIt documents the established confirmation-forwarding model on its official [how it works page](https://www.tripit.com/en-us/web/how-it-works). For a review-first workflow, see [how email-to-itinerary automation works](/features/email-to-itinerary).
 
 ### 2. Handle PDFs and Attachments
 

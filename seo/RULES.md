@@ -42,7 +42,8 @@ Read this before changing anything that search engines see. Every rule exists be
 - automatic check-in
 - encryption
 - unlimited storage
-- shareable trip links, collaboration or calendar sync
+- shareable trip links or collaboration
+- calendar sync beyond what the live calendar does: since 2026-11-01 the free live calendar is a read-only ICS subscription whose refresh timing is set by the calendar app (Google can take hours). Never say it updates "instantly" or that Basic users get automatic delay/gate changes (those come from Pro flight status)
 - receipt OCR
 - ratings or download counts
 - *Why:* in October 2026 the pricing, home and features pages sold cancellation reminders, CSV export, extra storage, calendar and sharing as Pro, but the code gives all of them to Basic. The Play listing already said Basic. Retired blog posts claimed "unlimited cloud storage", "secure encryption" and "works with ALL airlines". The app's share link points at `trip-cache.com/shared/…`, which returns 404.

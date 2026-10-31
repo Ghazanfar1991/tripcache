@@ -88,7 +88,7 @@ export const featurePages: SeoLandingPage[] = [
     internalLinks: [
       { href: "/features/cancellation-reminders", label: "Cancellation reminders" },
       { href: "/blog/organize-travel-confirmation-emails-2026", label: "Confirmation email guide" },
-      { href: "/blog/email-to-trip-automation", label: "Email automation workflow" },
+      { href: "/blog/sync-travel-itinerary-to-calendar", label: "Sync trips to your calendar" },
     ],
     resourceCta: {
       href: "/blog/organize-travel-confirmation-emails-2026",
@@ -165,7 +165,7 @@ export const featurePages: SeoLandingPage[] = [
     internalLinks: [
       { href: "/tools/hotel-cancellation-deadline-calculator", label: "Deadline calculator" },
       { href: "/blog/hotel-cancellation-reminder-app-2026", label: "Hotel reminder guide" },
-      { href: "/blog/free-cancellation-reminder-travel-bookings-2026", label: "Free cancellation reminders" },
+      { href: "/blog/hotel-cancellation-policies", label: "Hotel cancellation policies" },
     ],
     resourceCta: {
       href: "/tools/hotel-cancellation-deadline-calculator",
@@ -424,6 +424,88 @@ export const alternativePages: SeoLandingPage[] = [
         question: "What can I do on the free plan?",
         answer:
           "Basic includes trips, check-in and cancellation-deadline reminders, boarding-pass scanning, the document vault, expenses, CSV import of past flights, CSV and PDF export, and offline access.",
+      },
+    ],
+  },
+  {
+    kind: "alternative",
+    slug: "app-in-the-air",
+    path: "/alternatives/app-in-the-air",
+    title: "TripCache for former App in the Air users",
+    metaTitle: "App in the Air Alternative: Where to Move Your Trips",
+    description:
+      "App in the Air shut down on September 19, 2024. How TripCache covers the same jobs: check-in reminders, flight history, live flight alerts and trips.",
+    eyebrow: "For former App in the Air users",
+    hero: "App in the Air is gone. Here's how the same jobs work in TripCache.",
+    image: "/blog-media/blog-cover-app-in-the-air-alternative.webp",
+    imageAlt: "Cut-paper illustration of boarding passes and a map travelling from an old journal into a new folder",
+    primaryKeyword: "App in the Air alternative",
+    proofPoints: ["Free check-in reminders", "Flight history and countries visited", "Live flight alerts with Pro"],
+    planNote:
+      "Basic is free and includes trips, check-in and cancellation reminders, travel history, CSV import of past flights, CSV and PDF export, the live calendar and Siri. Pro adds live flight-status alerts, Live Activities and widgets, email import with a monthly allowance, and connecting AI assistants.",
+    benefits: [
+      {
+        title: "Check-in reminders and flight alerts",
+        copy: "Get free check-in reminders 48 and 24 hours before departure. With Pro, get departure, delay, gate, terminal, arrival and baggage-belt alerts, plus a Live Activity on iPhone.",
+      },
+      {
+        title: "Your flight history, kept",
+        copy: "Import past flights from a CSV file, see your trips and countries visited in travel history, and export it as CSV or PDF, including a visa travel-history summary.",
+      },
+      {
+        title: "The whole trip, not just the flight",
+        copy: "Keep hotels, rental cars, documents, cancellation deadlines and expenses with each trip, and subscribe your calendar to a live trip calendar for free.",
+      },
+    ],
+    workflowTitle: "How to move from App in the Air",
+    workflow: [
+      {
+        title: "Find your export",
+        copy: "App in the Air emailed a data export to users who requested it before October 19, 2024. If you have it, keep a copy somewhere safe.",
+      },
+      {
+        title: "Bring over past flights",
+        copy: "Copy your past flights into TripCache's sample CSV template and import them, so your history and countries visited carry on.",
+      },
+      {
+        title: "Add upcoming trips",
+        copy: "Add the next flights by hand or by scanning a boarding pass, or forward the confirmation emails with Pro, then turn on check-in reminders.",
+      },
+    ],
+    internalLinks: [
+      { href: "/blog/how-to-find-your-travel-history", label: "Find your past travel history" },
+      { href: "/blog/flighty-vs-tripcache-2026", label: "Flighty vs TripCache" },
+      { href: "/blog/best-tripit-alternatives-2026", label: "TripIt alternatives" },
+      { href: "/blog/sync-travel-itinerary-to-calendar", label: "Sync trips to your calendar" },
+    ],
+    resourceCta: {
+      href: "/blog/how-to-find-your-travel-history",
+      label: "Rebuild your travel history",
+    },
+    faqs: [
+      {
+        question: "Is App in the Air still available?",
+        answer:
+          "No. App in the Air stopped operating on September 19, 2024 and was removed from the App Store and Google Play. Users could request a data export until October 19, 2024.",
+      },
+      {
+        question: "Is TripCache connected to App in the Air?",
+        answer:
+          "No. TripCache is an independent app. It can't access App in the Air accounts or data, so you bring your history over yourself from your export.",
+      },
+      {
+        question: "Can I import my App in the Air flight history?",
+        answer:
+          "Yes, by CSV. TripCache imports past flights from a CSV file that follows its sample template, so copy the flights from your App in the Air export into that template first. There is no direct import of App in the Air files.",
+      },
+      {
+        question: "Does TripCache track flights like App in the Air did?",
+        answer:
+          "With TripCache Pro, yes: live alerts for departure, delays, gate and terminal changes, arrival and baggage belt, plus a Live Activity and widgets. Coverage depends on the flight-data provider. Check-in reminders are free.",
+      },
+      {
+        question: "Is TripCache on Android?",
+        answer: "Yes. TripCache is available on iPhone and Android.",
       },
     ],
   },

@@ -52,3 +52,11 @@ Generated 2026-10-29 with the OpenAI image tool via Codex (`codex-imagegen` skil
 | `public/blog-media/blog-cover-ai-assistants-bookings.webp` | Several different speech bubbles threaded to one folded itinerary card; one bubble unconnected |
 | `public/blog-media/blog-cover-ask-siri-flight.webp` | Sound waves reaching a boarding pass, a plane taking off, a suitcase on a carousel |
 | `public/blog-media/blog-cover-iphone-duo-travel.webp` | A half-open pop-up book, coastline on one page and city on the other, a paper plane crossing the fold |
+
+## 2026-11-01 additions
+
+| File | Concept / source | How |
+| --- | --- | --- |
+| `public/blog-media/blog-cover-live-travel-calendar.webp` | Cover: a calendar grid where a boarding-pass block slides to a later slot beside a refresh arrow | OpenAI image generation via Codex (`codex-imagegen` skill, model `gpt-6-luna`; the owner's default `gpt-6.1-sol` is refused for ChatGPT-account Codex), 1536×1024 PNG cropped to 1200×630 WebP; hotel-cancellation and Siri covers as style references |
+| `public/blog-media/blog-cover-app-in-the-air-alternative.webp` | Cover: boarding passes and a map travelling from an old journal into a new folder | Same as above; Wanderlog-vs-TripIt and travel-history covers as style references |
+| `public/blog-media/live-calendar-sheet.webp`, `live-calendar-synced.webp`, `live-calendar-ios-subscribe.webp` | Real app UI from the calendar-ux session's iOS simulator captures (`side-session-notes/…/calendar-ux-shots/v3/01, 04, 03`, trip-cache-app main, 2026-10-30) | Cropped with sharp to the Calendar sheet so the profile header (owner's name and email) is excluded; on the iOS subscribe screen the feed token was covered with a plain `https://trip-cache.com/calendar/…` label. No other edits. |

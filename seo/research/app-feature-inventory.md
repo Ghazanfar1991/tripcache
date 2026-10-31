@@ -107,3 +107,13 @@ Checked against the app's branches (`claude/connector-pro-9f39dd`, `claude/agent
 | Android shortcuts / Gemini | In progress (`claude/android-agents-1c37db`, uncommitted). Don't claim it ships. | — |
 
 Claims to avoid: that assistants can book or pay; that Siri answers without the app name; that Gemini or Muse connect today; that the calendar (ICS) subscription is live (not confirmed deployed, and `llms.txt` still lists calendar subscriptions as unsupported).
+
+## 2026-11-01: live calendar, Android shortcuts (checked against trip-cache-app `main` b828a75)
+
+| Feature | What the code does | Plan | Status |
+| --- | --- | --- | --- |
+| Live calendar (ICS subscription) | `components/CalendarSheet.tsx` "Live calendar" tab (all trips or one trip) creates a tokenized feed (`lib/calendarFeed.ts`); served by `supabase/functions/calendar-feed` at `trip-cache.com/calendar/<token>.ics` (rewrite in `next.config.mjs`, preview branch only). Events: flights (timed, route, terminal and gate in location, cancelled status), stays (all-day), other plans, trip banner. No booking refs, seats, tickets, prices, notes or addresses (`ics.ts` header). `REFRESH-INTERVAL` hint 1 h; response cached 15 min. New link / Turn off. "Add once" tab copies events into chosen device calendars. | **Basic** (no gate) | Merged in app main 2026-10-30, not in a store build yet (last build 1.4.4, 2026-10-23). The Supabase function is deployed (answers its own 404 on 2026-11-01); the trip-cache.com rewrite ships with the landing preview. |
+| Android app shortcuts | Long-press launcher shortcuts `next_flight`, `current_trip`, `add_expense`, rebuilt from the on-device snapshot; pinnable. | Basic | Merged 2026-10-30, not in a store build yet. |
+| Android AppFunctions / Gemini | `getNextFlight`, `getFlightGate`, `getUpcomingTrips`, `openTrip`, `addExpense` on API 36+. Gemini only calls AppFunctions for apps in Google's Early Access Program; TripCache is not in it. | — | **Don't claim Gemini works.** |
+
+Supersedes the 2026-10-05 row "ICS feed has no UI … not found" and the 2026-10-29 note that the ICS subscription isn't live.

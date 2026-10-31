@@ -53,6 +53,17 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // 2026-11-01: merged into the cluster owners (R5/R6); both were never indexed.
+        source: '/blog/email-to-trip-automation',
+        destination: '/features/email-to-itinerary',
+        permanent: true,
+      },
+      {
+        source: '/blog/free-cancellation-reminder-travel-bookings-2026',
+        destination: '/features/cancellation-reminders',
+        permanent: true,
+      },
+      {
         source: '/blog/tripcase-alternative-2025',
         destination: '/blog/tripcase-shutdown-what-now',
         permanent: true,

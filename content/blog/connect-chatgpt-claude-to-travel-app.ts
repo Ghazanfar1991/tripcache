@@ -141,7 +141,7 @@ If your Pro plan ends, connected assistants stay listed but their requests are r
 
 Connecting takes three steps: copy the link, add it in Claude or ChatGPT, approve on your phone. After that, "when's my next flight" gets an answer from your actual booking instead of a guess.
 
-If your trips aren't in TripCache yet, start there: [download TripCache](/download), forward a few confirmations, then connect your assistant. For the broader picture of what AI can do with booked travel, read [AI travel organizer apps](/blog/ai-travel-organizer-app-2026).
+If your trips aren't in TripCache yet, start there: [download TripCache](/download), forward a few confirmations, then connect your assistant. For the broader picture of what AI can do with booked travel, read [AI travel organizer apps](/blog/ai-travel-organizer-app-2026). To see the same trips in Apple, Google or Outlook Calendar, [subscribe to a live trip calendar](/blog/sync-travel-itinerary-to-calendar), which is free.
 `
 
 export const faq: BlogFaq[] = [

@@ -93,7 +93,7 @@ Export a CSV or PDF expense report, filtered by dates and by business or persona
 
 One missed hotel or rental car deadline can erase a week of careful budgeting. Add cancellation reminders to refundable bookings so you can cancel in time if a meeting moves or a trip changes.
 
-Read the detailed workflow in our [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026).
+Read the detailed workflow in our [free cancellation reminder guide](/features/cancellation-reminders).
 
 ## Business Traveler Checklist
 

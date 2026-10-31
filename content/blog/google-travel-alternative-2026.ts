@@ -137,7 +137,7 @@ A common setup is a planner for places plus an organizer for bookings. A frequen
 7. Share a limited itinerary with the people who need it.
 8. Keep airline, hotel, rental, and ticket apps accessible for final status.
 
-For confirmation handling, follow the [email-to-itinerary review process](/blog/email-to-trip-automation). For travel files, use the [document organizer checklist](/blog/best-travel-document-organizer-app-2026).
+For confirmation handling, follow the [email-to-itinerary review process](/features/email-to-itinerary). For travel files, use the [document organizer checklist](/blog/best-travel-document-organizer-app-2026).
 
 ## Bottom Line
 

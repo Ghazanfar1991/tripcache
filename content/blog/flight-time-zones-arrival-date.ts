@@ -92,7 +92,9 @@ On a computer, [Google's Calendar instructions](https://support.google.com/calen
 3. Choose the departure location for the start and the arrival location for the end.
 4. Enter each local date and time from the booking, then save.
 
-After saving, reopen the event and compare the details with the airline confirmation. If you use an email importer, check the draft before accepting it; the [email-to-itinerary review guide](/blog/email-to-trip-automation) covers missing dates, duplicates, and schedule updates.
+After saving, reopen the event and compare the details with the airline confirmation. If you use an email importer, check the draft before accepting it; the [email-to-itinerary review guide](/features/email-to-itinerary) covers missing dates, duplicates, and schedule updates.
+
+If you'd rather not maintain flight events by hand, subscribe to a live trip calendar instead. TripCache's free [live calendar](/blog/sync-travel-itinerary-to-calendar) places each flight in its departure and arrival time zones and follows changes to the trip.
 
 ## 5. Use the Time Zone for the Travel Date
 

@@ -235,7 +235,7 @@ const relatedGuides = [
     title: "How to organize travel confirmation emails",
   },
   {
-    href: "/blog/free-cancellation-reminder-travel-bookings-2026",
+    href: "/features/cancellation-reminders",
     title: "Free cancellation reminder workflow",
   },
   {

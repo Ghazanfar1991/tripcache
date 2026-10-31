@@ -15,7 +15,6 @@ export const blogTopics: BlogTopic[] = [
     slugs: [
       "flight-time-zones-arrival-date",
       "travel-itinerary-template-2026",
-      "email-to-trip-automation",
       "travel-booking-organizer-app-2026",
       "trip-map-itinerary-planner-app-2026",
     ],
@@ -29,7 +28,6 @@ export const blogTopics: BlogTopic[] = [
       "hotel-cancellation-policies",
       "hotel-cancellation-reminder-app-2026",
       "rental-car-cancellation-reminder-app-2026",
-      "free-cancellation-reminder-travel-bookings-2026",
     ],
     resource: { href: "/tools/hotel-cancellation-deadline-calculator", label: "Use the free deadline calculator" },
   },
@@ -59,13 +57,14 @@ export const blogTopics: BlogTopic[] = [
   },
   {
     id: "assistants-and-devices",
-    title: "Ask Siri, ChatGPT or Claude about your trip",
-    description: "Get answers about flights, hotels and cars from your own bookings, by voice, in a chat, or on a foldable iPhone.",
+    title: "Ask Siri, ChatGPT or Claude, or sync your calendar",
+    description: "Get answers about flights, hotels and cars from your own bookings, by voice, in a chat, on a foldable iPhone, or in your calendar.",
     slugs: [
       "ask-siri-about-your-flight",
       "connect-chatgpt-claude-to-travel-app",
       "ai-travel-assistant-for-your-bookings",
       "iphone-duo-travel-apps",
+      "sync-travel-itinerary-to-calendar",
     ],
     resource: { href: "/pricing", label: "See what's free and what's in Pro" },
   },

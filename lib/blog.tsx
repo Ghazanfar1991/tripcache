@@ -2,7 +2,6 @@ import type { BlogFaq, BlogFrontmatter, BlogPost, BlogSummary } from "@/types/bl
 import { renderMarkdown } from "@/lib/markdown"
 
 import * as BestTravelApps from "@/content/blog/best-travel-apps-2025"
-import * as EmailToTripAutomation from "@/content/blog/email-to-trip-automation"
 import * as PrivacyAndSecurity from "@/content/blog/privacy-and-security"
 import * as TripcaseShutdown from "@/content/blog/tripcase-shutdown-what-now"
 import * as TripitComparison from "@/content/blog/tripit-vs-tripcache-comparison-2025"
@@ -11,7 +10,6 @@ import * as BusinessTravelManagement from "@/content/blog/business-travel-manage
 import * as TravelItineraryTemplate from "@/content/blog/travel-itinerary-template-2026"
 import * as FlightyComparison from "@/content/blog/flighty-vs-tripcache-2026"
 import * as GoogleTravelAlternative from "@/content/blog/google-travel-alternative-2026"
-import * as CancellationReminder from "@/content/blog/free-cancellation-reminder-travel-bookings-2026"
 import * as TravelBookingOrganizer from "@/content/blog/travel-booking-organizer-app-2026"
 import * as TravelDocumentOrganizer from "@/content/blog/best-travel-document-organizer-app-2026"
 import * as ConfirmationEmailOrganizer from "@/content/blog/organize-travel-confirmation-emails-2026"
@@ -31,10 +29,12 @@ import * as ConnectChatgptClaude from "@/content/blog/connect-chatgpt-claude-to-
 import * as AiTravelAssistantBookings from "@/content/blog/ai-travel-assistant-for-your-bookings"
 import * as AskSiriFlight from "@/content/blog/ask-siri-about-your-flight"
 import * as IphoneDuoTravelApps from "@/content/blog/iphone-duo-travel-apps"
+import * as SyncItineraryCalendar from "@/content/blog/sync-travel-itinerary-to-calendar"
 
 type BlogPostModule = { metadata: BlogFrontmatter; body: string; faq?: BlogFaq[] }
 
 const rawPosts: BlogPostModule[] = [
+  SyncItineraryCalendar,
   ConnectChatgptClaude,
   AiTravelAssistantBookings,
   AskSiriFlight,
@@ -54,7 +54,6 @@ const rawPosts: BlogPostModule[] = [
   TravelDocumentOrganizer,
   ConfirmationEmailOrganizer,
   BusinessTravelExpenseReporting,
-  CancellationReminder,
   AiTripPlanner,
   BusinessTravelManagement,
   TravelItineraryTemplate,
@@ -63,7 +62,6 @@ const rawPosts: BlogPostModule[] = [
   TripitComparison,
   TripcaseShutdown,
   BestTravelApps,
-  EmailToTripAutomation,
   PrivacyAndSecurity,
 ]
 
