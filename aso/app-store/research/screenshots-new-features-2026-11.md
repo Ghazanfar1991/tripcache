@@ -1,5 +1,7 @@
 # Screenshot refresh for the new features (2026-11-01)
 
+> **Superseded for captions:** see [screenshot-captions-v2-2026-11.md](screenshot-captions-v2-2026-11.md). It has the second-round evidence, app-first Duo captions, Play wording without "Free", and the final caption table.
+
 **Status:** recommendation plus finished files. Nothing has been uploaded.
 - The finished screenshots are in the app repo: `trip-cache-app/design-assets/store-screenshots-2026-11/` (README, contact sheet, build scripts).
 - This file holds the research behind the captions, the order and the keep/replace calls.
