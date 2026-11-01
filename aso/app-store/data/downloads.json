@@ -1,48 +1,20 @@
 {
   "source": "App Store Connect Sales and Trends Summary Sales Report",
-  "generatedAt": "2026-10-28T14:48:04.518Z",
+  "generatedAt": "2026-11-01T14:43:41.024Z",
   "appleId": "6758403056",
   "timezone": "America/Los_Angeles",
   "reportingLagDays": 1,
   "coveredDateRange": {
-    "startDate": "2026-09-30",
-    "endDate": "2026-10-27"
+    "startDate": "2026-10-03",
+    "endDate": "2026-10-30"
   },
-  "latestReportedDate": "2026-10-27",
+  "latestReportedDate": "2026-10-30",
   "totals28Days": {
-    "firstTimeDownloads": 22,
+    "firstTimeDownloads": 25,
     "redownloads": 4,
-    "updates": 58
+    "updates": 57
   },
   "daily": [
-    {
-      "date": "2026-09-24",
-      "reportAvailable": false,
-      "firstTimeDownloads": 0,
-      "redownloads": 0,
-      "updates": 0
-    },
-    {
-      "date": "2026-09-25",
-      "reportAvailable": true,
-      "firstTimeDownloads": 0,
-      "redownloads": 0,
-      "updates": 0
-    },
-    {
-      "date": "2026-09-26",
-      "reportAvailable": false,
-      "firstTimeDownloads": 0,
-      "redownloads": 0,
-      "updates": 0
-    },
-    {
-      "date": "2026-09-27",
-      "reportAvailable": true,
-      "firstTimeDownloads": 3,
-      "redownloads": 0,
-      "updates": 0
-    },
     {
       "date": "2026-09-28",
       "reportAvailable": true,
@@ -255,6 +227,34 @@
     },
     {
       "date": "2026-10-28",
+      "reportAvailable": true,
+      "firstTimeDownloads": 1,
+      "redownloads": 0,
+      "updates": 0
+    },
+    {
+      "date": "2026-10-29",
+      "reportAvailable": false,
+      "firstTimeDownloads": 0,
+      "redownloads": 0,
+      "updates": 0
+    },
+    {
+      "date": "2026-10-30",
+      "reportAvailable": true,
+      "firstTimeDownloads": 2,
+      "redownloads": 0,
+      "updates": 0
+    },
+    {
+      "date": "2026-10-31",
+      "reportAvailable": false,
+      "firstTimeDownloads": 0,
+      "redownloads": 0,
+      "updates": 0
+    },
+    {
+      "date": "2026-11-01",
       "reportAvailable": false,
       "firstTimeDownloads": 0,
       "redownloads": 0,
