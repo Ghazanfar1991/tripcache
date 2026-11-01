@@ -99,6 +99,12 @@ const allFeatures: Array<{ name: string; plan: Plan; description: string }> = [
     description:
       "Follow a flight in a Live Activity and the Dynamic Island on iPhone, in home-screen widgets on iPhone and Android, or in an ongoing notification on Android.",
   },
+  {
+    name: "Connect AI assistants",
+    plan: "Pro",
+    description:
+      "Add TripCache to Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes or OpenClaw with one link, then ask about your flights, trips and spending. You choose whether an assistant can add bookings.",
+  },
 ]
 
 const featuresSchema = {
@@ -207,8 +213,15 @@ export default function FeaturesIndexPage() {
                 Every TripCache feature, free or Pro
               </h2>
               <p className="max-w-[58ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
-                TripCache Basic is free and covers most of the app. TripCache Pro adds three things: booking-email
-                import, live flight-status alerts, and Live Activity and widgets.{" "}
+                TripCache Basic is free and covers most of the app. TripCache Pro adds booking-email import, live
+                flight-status alerts, Live Activity and widgets, and{" "}
+                <Link
+                  href="/ai-agents"
+                  className="font-semibold text-tc-violet underline decoration-tc-violet/30 underline-offset-4 transition-colors hover:decoration-tc-violet"
+                >
+                  connecting AI assistants
+                </Link>
+                .{" "}
                 <Link
                   href="/pricing"
                   className="font-semibold text-tc-violet underline decoration-tc-violet/30 underline-offset-4 transition-colors hover:decoration-tc-violet"

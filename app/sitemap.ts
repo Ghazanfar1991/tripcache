@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { AI_AGENT_GUIDES, agentGuidePath } from "@/lib/ai-agents"
 import { getBlogSummaries } from "@/lib/blog"
 import { seoLandingPages } from "@/lib/seo-page-data"
 import { SITE_URL } from "@/lib/seo-metadata"
@@ -83,6 +84,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestBlogUpdate,
     },
     ...seoUrls,
+    // 2026-11-02: AI agent connection guides, opened from Profile → AI agents in the app.
+    ...["/ai-agents", ...AI_AGENT_GUIDES.map((agent) => agentGuidePath(agent.id))].map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: changed("2026-11-02"),
+    })),
     ...blogUrls,
   ]
 }
