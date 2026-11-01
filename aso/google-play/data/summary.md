@@ -1,12 +1,12 @@
-# Google Play summary — 2026-11-01
+# Google Play summary — 2026-11-02
 
-Generated 2026-10-31T14:10:38.878Z by `npm run aso:feed`.
+Generated 2026-11-01T14:44:01.008Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
 - User installs: 16 · uninstalls 16 · installed audience 24
 - Latest report: 2026-10-26 (Play reports lag 3–7 days)
-- Top countries: US 7, GB 4, ID 4, BD 3, IN 3, IL 2, IT 2, PH 2
+- Top countries: US 7, GB 4, ID 3, IN 3, BD 2, IT 2, CA 2, AR 2
 
 ## Quality (store ranking factor)
 
@@ -15,7 +15,7 @@ Generated 2026-10-31T14:10:38.878Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 68 users
+- installProxy: 70 users
 - signUp: not instrumented
 - onboardingComplete: not instrumented
 - activation: not instrumented
@@ -25,13 +25,13 @@ Generated 2026-10-31T14:10:38.878Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 41 new users
+- (direct) / (none): 43 new users
 - google-play / organic: 24 new users
 - google / organic: 3 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$49 · active subscriptions 6 · active trials 0 · new customers (28d) 70
+- MRR A$49 · active subscriptions 6 · active trials 0 · new customers (28d) 72
 
 ## Data sources
 

@@ -1,6 +1,6 @@
-# App Store summary — 2026-11-01
+# App Store summary — 2026-11-02
 
-Generated 2026-10-31T14:10:38.878Z by `npm run aso:feed`.
+Generated 2026-11-01T14:44:01.008Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
@@ -14,7 +14,7 @@ Generated 2026-10-31T14:10:38.878Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 43 users
+- installProxy: 45 users
 - signUp: not instrumented
 - onboardingComplete: not instrumented
 - activation: not instrumented
@@ -24,11 +24,11 @@ Generated 2026-10-31T14:10:38.878Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 43 new users
+- (direct) / (none): 45 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$49 · active subscriptions 6 · active trials 0 · new customers (28d) 70
+- MRR A$49 · active subscriptions 6 · active trials 0 · new customers (28d) 72
 
 ## Data sources
 
