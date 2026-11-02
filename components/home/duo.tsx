@@ -20,7 +20,7 @@ const VIEWS: View[] = [
     id: "tent",
     label: "Fold and tent",
     caption: "Fold it, stand it up as a tent, and the cover screen follows your flight: time to landing, distance to go, the route.",
-    alt: "TripCache on iPhone Duo: open on the trips map, folded closed, then stood up as a tent with the cover screen showing a Sydney to London flight’s progress over southern China, 11 h 34 m until landing and 8,818 km to go.",
+    alt: "TripCache on iPhone Duo: open on the trips map, folded closed, then stood up as a tent with the cover screen showing a Sydney to London flight’s progress over southern China, 11 h 35 m until landing and 8,827 km to go.",
   },
   {
     id: "trips",

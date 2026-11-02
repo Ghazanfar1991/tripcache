@@ -381,6 +381,37 @@
   transform: translateY(-14px) scale(0.95);
 }
 
+/* Hero: an iPhone is tapped on the flight card, turns to landscape and shows En Route (9 s, once per pass). */
+.tc-er-phone {
+  animation: tc-er-turn 9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+.tc-er-portrait {
+  animation: tc-er-out 9s both;
+}
+.tc-er-landscape {
+  animation: tc-er-in 9s both;
+}
+.tc-er-tap {
+  animation: tc-er-tap 9s both;
+}
+@keyframes tc-er-turn {
+  0%, 24% { transform: rotate(0deg); }
+  38%, 100% { transform: rotate(-90deg); }
+}
+@keyframes tc-er-out {
+  0%, 28% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+@keyframes tc-er-in {
+  0%, 28% { opacity: 0; }
+  33%, 100% { opacity: 1; }
+}
+@keyframes tc-er-tap {
+  0%, 13% { opacity: 0; transform: scale(0.5); }
+  16% { opacity: 1; transform: scale(1); }
+  23%, 100% { opacity: 0; transform: scale(1.5); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tc-rise,
   .tc-reveal,
