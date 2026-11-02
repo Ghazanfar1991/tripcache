@@ -47,7 +47,7 @@ Most "AI travel assistant" apps help before you book: where to go, what to see, 
 - Where do I pick up the rental car?
 - How much have I spent so far?
 
-Those answers live in your bookings, not on the web. An assistant can only give them if it's connected to where your bookings are. For the difference in more depth, see [AI trip planner vs travel organizer](/blog/ai-trip-planner-2026).
+Those answers live in your bookings, not on the web. An assistant can only give them if it's connected to where your bookings are. For the difference in more depth, see [AI trip planner vs travel organizer](/blog/ai-trip-planner-2026). If you want both kinds in Claude, here are [the best Claude connectors for travel](/blog/best-claude-connectors-for-travel), from flight search to the trip you've already booked.
 
 ## How a connection works
 
@@ -130,6 +130,8 @@ Answers come from TripCache, so they're as good as the trip in TripCache. Bookin
 ## Conclusion
 
 An AI travel assistant that knows your bookings isn't a new app. It's the assistant you already use, connected to the place your trip lives. Claude and ChatGPT do this best today, with cards that show the answer at a glance. Grok, Perplexity and self-hosted agents work too, mostly in text.
+
+Coming from TripIt? It has no assistant connector; see [does TripIt work with Claude or ChatGPT?](/blog/does-tripit-work-with-claude-chatgpt)
 
 If you want the iPhone version without a subscription, [ask Siri about your flight](/blog/ask-siri-about-your-flight): it's free and works from the lock screen. To get started, [download TripCache](/download) and see [what Pro includes](/pricing).
 `
