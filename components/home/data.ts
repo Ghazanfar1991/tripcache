@@ -174,7 +174,7 @@ export const WHAT_IS_TRIPCACHE =
 
 export const GUIDES = [
   { href: "/blog/organize-travel-confirmation-emails-2026", label: "How to organize travel confirmation emails" },
-  { href: "/blog/free-cancellation-reminder-travel-bookings-2026", label: "Free cancellation reminder workflow" },
+  { href: "/features/cancellation-reminders", label: "Free cancellation reminder workflow" },
   { href: "/blog/best-travel-document-organizer-app-2026", label: "Best travel document organizer app" },
   { href: "/blog/business-travel-expense-reporting-app-2026", label: "Business travel expense reporting app" },
 ]

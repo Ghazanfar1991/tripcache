@@ -17,3 +17,5 @@ python3 aso/app-store/screenshots/sheet.py en-US      # contact sheet in build/
 **No iPad set.** TripCache ships iPhone-only (`TARGETED_DEVICE_FAMILY = 1`; App Store Connect lists builds 78–82 as `IPHONE` only). On iPad the App Store shows these iPhone screenshots, and the app runs in an iPhone-sized window. iPad screenshots would only apply if the app turns on tablet support with an iPad layout; then capture real iPad screens and add a 2064×2752 set.
 
 To change a caption or the order, edit `FRAMES` in `build.py`. Apple allows up to 10 per device size; keep the first three strongest because they show in search results.
+
+**2026-11 refresh (not uploaded):** new frames for AI assistants, Siri/Shortcuts, live calendar, plus a full iPhone Duo set and Play update, built in the app repo at `design-assets/store-screenshots-2026-11/` from this folder's fonts, backgrounds and layout. Reasoning: `../research/screenshots-new-features-2026-11.md`.

@@ -167,7 +167,7 @@ export function Siri() {
             </div>
 
             <p className="mt-10 border-t border-tc-line pt-5 text-[14.5px] leading-7 text-tc-mute">
-              <span className="font-semibold text-tc-ink-2">On Android,</span> TripCache adds app shortcuts, and Gemini support is coming.
+              <span className="font-semibold text-tc-ink-2">On Android,</span> touch and hold the TripCache icon for shortcuts to your next flight, current trip or a new expense. Gemini support is coming.
             </p>
           </div>
         </div>

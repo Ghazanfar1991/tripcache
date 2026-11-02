@@ -1,7 +1,8 @@
 "use client"
 
 import { useReducedMotion } from "framer-motion"
-import { ArrowUp, Check } from "lucide-react"
+import { ArrowRight, ArrowUp, Check } from "lucide-react"
+import Link from "next/link"
 import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import { AgentLogo, type AgentId } from "./agent-logos"
 import type { AgentVideo, AgentVideos } from "./agent-videos"
@@ -404,6 +405,14 @@ function AgentOrbit() {
                 </ol>
               ) : null}
               {item.note ? <p className={`text-[13px] leading-5 text-white/55 ${item.steps.length ? "mt-1" : "mt-3"}`}>{item.note}</p> : null}
+              <Link
+                href={`/ai-agents/${item.id}`}
+                tabIndex={on ? undefined : -1}
+                className="mt-3 inline-flex items-center gap-1.5 rounded-[8px] text-[13.5px] font-semibold text-[#c9b8ff] underline-offset-4 hover:text-white hover:underline"
+              >
+                {item.soon ? `Why ${item.name} isn’t ready yet` : `Full ${item.name} guide`}
+                <ArrowRight className="size-3.5" aria-hidden="true" />
+              </Link>
             </div>
           )
         })}
@@ -506,7 +515,11 @@ export function Assistants({ videos = {} }: { videos?: AgentVideos }) {
             </div>
             <p className="mt-5 max-w-[46ch] text-[14.5px] leading-7 text-tc-mute">
               Connecting an assistant is part of TripCache Pro. You choose whether it can add bookings, and you can disconnect it
-              any time in the app.
+              any time in the app.{" "}
+              <Link href="/ai-agents" className="font-semibold text-tc-violet underline decoration-tc-violet/30 underline-offset-4 hover:decoration-tc-violet">
+                See every AI agent guide
+              </Link>
+              .
             </p>
           </div>
         </div>

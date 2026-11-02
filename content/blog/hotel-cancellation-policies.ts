@@ -206,7 +206,7 @@ TripCache keeps the deadline from each hotel cancellation policy with the bookin
 
 With TripCache Pro, you can forward supported booking confirmations to your personal import address instead. The importer reads the free-cancellation deadline separately from other cancellation terms, and you review the details before saving.
 
-TripCache is on the [App Store](https://apps.apple.com/app/id6758403056) and [Google Play](https://play.google.com/store/apps/details?id=app.tripcache). For more on the workflow, see our [hotel cancellation reminder guide](/blog/hotel-cancellation-reminder-app-2026), the [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026) for cars, tours and tickets, and the [rental car cancellation reminder guide](/blog/rental-car-cancellation-reminder-app-2026).
+TripCache is on the [App Store](https://apps.apple.com/app/id6758403056) and [Google Play](https://play.google.com/store/apps/details?id=app.tripcache). For more on the workflow, see our [hotel cancellation reminder guide](/blog/hotel-cancellation-reminder-app-2026), the [free cancellation reminder guide](/features/cancellation-reminders) for cars, tours and tickets, and the [rental car cancellation reminder guide](/blog/rental-car-cancellation-reminder-app-2026).
 `
 
 export const faq: BlogFaq[] = [

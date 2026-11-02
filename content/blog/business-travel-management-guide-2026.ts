@@ -71,7 +71,7 @@ Do not place confidential client information in a consumer travel app unless com
 
 ### Save the Confirmation
 
-Keep flights, stays, rental cars, rail, meetings, parking, and event tickets under the same trip. If you use email import, review each draft against the original message. The [email-to-itinerary guide](/blog/email-to-trip-automation) explains a safe review workflow.
+Keep flights, stays, rental cars, rail, meetings, parking, and event tickets under the same trip. If you use email import, review each draft against the original message. The [email-to-itinerary guide](/features/email-to-itinerary) explains a safe review workflow.
 
 ### Record Flexible Booking Deadlines
 

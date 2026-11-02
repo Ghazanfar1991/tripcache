@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "See how an AI travel organizer turns booking emails, PDFs, flights, hotels, tickets, documents, reminders, maps, and expenses into one itinerary.",
   date: "2026-06-01",
-  updatedAt: "2026-08-26",
+  updatedAt: "2026-10-29",
   author: "TripCache Editorial Team",
   readTime: "11 min read",
   category: "Guide",
@@ -65,7 +65,7 @@ The core feature is email-to-itinerary automation. A traveler forwards a booking
 
 TripCache creates trip drafts so users can review details before saving them.
 
-TripIt documents the established confirmation-forwarding model on its official [how it works page](https://www.tripit.com/en-us/web/how-it-works). For a review-first workflow, see [how email-to-itinerary automation works](/blog/email-to-trip-automation).
+TripIt documents the established confirmation-forwarding model on its official [how it works page](https://www.tripit.com/en-us/web/how-it-works). For a review-first workflow, see [how email-to-itinerary automation works](/features/email-to-itinerary).
 
 ### 2. Handle PDFs and Attachments
 
@@ -160,6 +160,10 @@ Open the trip to see itinerary details, documents, map context, flight informati
 ### Step 6: Export Records
 
 After the trip, export a CSV report if you need reimbursement, tax records, client billing, or a personal travel budget review.
+
+### Optional: Ask Your AI Assistant
+
+With TripCache Pro you can [connect ChatGPT or Claude to your trips](/blog/connect-chatgpt-claude-to-travel-app) and ask about your next flight, hotel or rental car in a chat. See [which AI assistants can read your travel bookings](/blog/ai-travel-assistant-for-your-bookings) for Gemini, Grok, Perplexity and others.
 
 ## What Makes an AI Travel Organizer Trustworthy?
 

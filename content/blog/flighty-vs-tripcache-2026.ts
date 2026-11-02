@@ -8,7 +8,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Compare Flighty and TripCache for flight alerts, itinerary import, cancellation reminders, documents, receipts, expenses, platforms, and current pricing.",
   date: "2026-03-12",
-  updatedAt: "2026-10-05",
+  updatedAt: "2026-11-01",
   author: "TripCache Editorial Team",
   readTime: "9 min read",
   category: "Comparison",
@@ -94,7 +94,7 @@ Neither workflow removes the need to verify:
 - Schedule changes.
 - Booking reference.
 
-Keep the airline's official app or website accessible for final operational and booking information. Read [how email-to-itinerary automation works](/blog/email-to-trip-automation) for a safe review process.
+Keep the airline's official app or website accessible for final operational and booking information. Read [how email-to-itinerary automation works](/features/email-to-itinerary) for a safe review process.
 
 ## Pricing and Value
 
@@ -131,6 +131,8 @@ Before importing travel data, review both products' current privacy policies and
 - Can you export or delete the account?
 - Does the app support the devices you travel with?
 
+Both apps are built for the foldable iPhone; see [iPhone Duo travel apps](/blog/iphone-duo-travel-apps). TripCache also answers Siri for free: [ask Siri about your flight](/blog/ask-siri-about-your-flight).
+
 TripCache's current platform disclosures are available on its official [App Store listing](https://apps.apple.com/app/id6758403056) and [Google Play listing](https://play.google.com/store/apps/details?id=app.tripcache).
 
 ## Verdict
@@ -138,4 +140,6 @@ TripCache's current platform disclosures are available on its official [App Stor
 Flighty is the stronger specialist for deep flight and airport intelligence. TripCache is the broader choice for organizing confirmed travel around flights, stays, cars, tickets, deadlines, documents, receipts, and expenses.
 
 Choose the product that fits the hardest part of your trip. If both flight disruption and post-booking administration matter, using the two apps together can be a sensible setup.
+
+If you're here because App in the Air shut down, see [how TripCache covers App in the Air's jobs](/alternatives/app-in-the-air), including importing past flights by CSV.
 `

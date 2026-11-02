@@ -98,7 +98,7 @@ When organizing confirmation emails, duplicates can happen if you forward both t
 
 TripCache keeps you in control by using drafts rather than blindly adding everything.
 
-The complete review process, including common parser failure cases, is in [how email-to-itinerary automation works](/blog/email-to-trip-automation).
+The complete review process, including common parser failure cases, is in [how email-to-itinerary automation works](/features/email-to-itinerary).
 
 ## Why This Helps Business Travelers
 

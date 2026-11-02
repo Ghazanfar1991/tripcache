@@ -103,7 +103,7 @@ Common business categories include:
 
 Expense management is not only about tracking what you paid. It is also about avoiding costs you did not need to pay.
 
-Add reminders for refundable hotels, cars, tours, and tickets. See our [free cancellation reminder guide](/blog/free-cancellation-reminder-travel-bookings-2026) and [hotel cancellation reminder guide](/blog/hotel-cancellation-reminder-app-2026).
+Add reminders for refundable hotels, cars, tours, and tickets. See our [free cancellation reminder guide](/features/cancellation-reminders) and [hotel cancellation reminder guide](/blog/hotel-cancellation-reminder-app-2026).
 
 ## Who Needs This?
 
