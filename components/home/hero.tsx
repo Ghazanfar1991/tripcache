@@ -1,6 +1,6 @@
 import { Bloom } from "./category"
 import { StoreBadges } from "./store-badges"
-import { HeroScene } from "./hero-scene"
+import { HeroJourney } from "./hero-journey"
 
 export function Hero() {
   return (
@@ -30,7 +30,7 @@ export function Hero() {
         </div>
 
         <div className="tc-rise" style={{ animationDelay: "120ms" }}>
-          <HeroScene />
+          <HeroJourney />
         </div>
       </div>
     </section>
