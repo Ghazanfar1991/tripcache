@@ -6,8 +6,8 @@ import { HeroScene } from "./hero-scene"
 
 /*
  * The hero visual alternates between the inbox collage and En Route, the live flight view. On most screens an iPhone
- * (the owner-approved procedural frame, no Apple bezel art) is tapped on the flight card and turns to landscape, as the
- * app does. On an iPhone Duo the Duo's own fold-and-tent video plays instead. Safari on the Duo reports itself as an
+ * (the owner-approved procedural frame, no Apple bezel art) is tapped on the in-flight card (the app's dev Sydney to
+ * London demo, QF 1) and turns to landscape, as the app does. On an iPhone Duo the Duo's own fold-and-tent video plays instead. Safari on the Duo reports itself as an
  * iPhone, so the Duo is told apart by its display shape: its cover is 466 x 678 pt, while every other iPhone is about
  * 1 : 2.17. Under reduced motion only the collage shows.
  */
@@ -19,7 +19,7 @@ const DEVICE_H = 590
 const DEVICE_W = Math.round((DEVICE_H * 1322) / 2720)
 // The frame's screen opening, in frame pixels (1322 x 2720): 58, 49, 1206 x 2622, corner 166.
 const SCREEN = { left: 58 / 1322, top: 49 / 2720, width: 1206 / 1322, height: 2622 / 2720, radius: 166 / 1322 }
-// The Dynamic Island, in screen pixels (1206 x 2622).
+// The Dynamic Island, in screen pixels (1206 x 2622); simulator captures leave it out.
 const ISLAND = { left: 415 / 1206, top: 42 / 2622, width: 376 / 1206, height: 109 / 2622 }
 
 function isIphoneDuo() {
