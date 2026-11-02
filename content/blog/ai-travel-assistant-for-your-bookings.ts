@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes, OpenClaw and Muse compared: which can read your real bookings through TripCache and what each needs.",
   date: "2026-10-29",
-  updatedAt: "2026-10-29",
+  updatedAt: "2026-11-02",
   author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
@@ -29,7 +29,7 @@ export const metadata: BlogFrontmatter = {
 
 export const body = String.raw`# Which AI Assistants Can Read Your Travel Bookings?
 
-**Quick answer:** none of the big AI assistants can see your bookings on their own. They can when you connect a trip app that holds them. Today **Claude and ChatGPT** connect to TripCache and show answers as cards. **Grok, Perplexity, Hermes and OpenClaw** can connect as custom connectors. **Gemini**'s support is still limited, and **Meta's Muse** can't add connectors yet.
+**Quick answer:** none of the big AI assistants can see your bookings on their own. They can when you connect a trip app that holds them. Today **Claude and ChatGPT** connect to TripCache and show answers as cards. **Grok, Perplexity, Hermes and OpenClaw** can connect as custom connectors. **Gemini**'s support is still limited, and **Meta's Muse** has connectors but no way to add TripCache's link yet.
 
 An AI travel assistant is only as useful as what it can see. Ask a general assistant "when's my flight?" and it will guess, ask you to paste the confirmation, or search your email if you've given it that access. An assistant connected to your trip app answers from the itinerary itself: the flight you actually booked, the hotel you're actually staying at, the car you still have to collect.
 
@@ -61,18 +61,18 @@ The full walkthrough for the two most popular assistants is in [how to connect C
 
 ## Assistant by assistant
 
-We checked each assistant's own help pages on 29 October 2026. Plans and menus change, so if a step doesn't match, check the assistant's current help page.
+We checked each assistant's own help pages on 29 October 2026. Plans and menus change, so if a step doesn't match, check the assistant's current help page. Each name links to its TripCache setup guide, and the [AI agents page](/ai-agents) lists them all.
 
 | Assistant | Connects to TripCache? | Cards in chat | Plan notes |
 |---|---|---|---|
-| **Claude** | Yes, as a custom connector | Yes | Custom connectors on all plans; one on Free |
-| **ChatGPT** (and Dots) | Yes, as a custom MCP server with OAuth | Yes | Depends on plan; some need Developer mode |
-| **Gemini** | Limited | Text answers likely | Custom MCP support isn't on every account |
-| **Grok** | Yes, at grok.com/connectors | Text answers | Custom connectors need a paid plan |
-| **Perplexity** | Yes, as a remote connector | Text answers | Pro or Max |
-| **Hermes Agent** | Yes, as a remote HTTP MCP server | Text answers | Self-hosted |
-| **OpenClaw** | Yes, as a remote MCP server | Text answers | Self-hosted |
-| **Muse** (Meta) | Not yet | — | No third-party connectors yet |
+| **[Claude](/ai-agents/claude)** | Yes, as a custom connector | Yes | Custom connectors on all plans; one on Free |
+| **[ChatGPT](/ai-agents/chatgpt)** (and Dots) | Yes, as a custom MCP server with OAuth | Yes | Depends on plan; some need Developer mode |
+| **[Gemini](/ai-agents/gemini)** | Limited | Text answers likely | Custom MCP support isn't on every account |
+| **[Grok](/ai-agents/grok)** | Yes, at grok.com/connectors | Text answers | Custom connectors need a paid plan |
+| **[Perplexity](/ai-agents/perplexity)** | Yes, as a remote connector | Text answers | Pro or Max |
+| **[Hermes Agent](/ai-agents/hermes)** | Yes, as a remote HTTP MCP server | Text answers | Self-hosted |
+| **[OpenClaw](/ai-agents/openclaw)** | Yes, as a remote MCP server | Text answers | Self-hosted |
+| **[Muse](/ai-agents/muse)** (Meta) | Not yet | — | Has connectors, but no way to add a remote MCP link yet |
 
 ### Claude
 
@@ -86,23 +86,23 @@ Add TripCache as a custom MCP server and choose OAuth. OpenAI ties custom connec
 
 ### Gemini
 
-Google's consumer Gemini app has started offering custom connections to MCP servers, but not every account has the option yet, and Google hasn't published a full help page for it. If you have it, TripCache's link works the same way; expect some answers as plain text rather than cards. Gemini on Android phones is a separate question; TripCache's Android support for it is still being built.
+Google's consumer Gemini app has started offering custom connections to MCP servers, but not every account has the option yet, and Google hasn't published a full help page for it. If you have it, TripCache's link works the same way; expect some answers as plain text rather than cards. Gemini on Android phones is a separate question; TripCache's Android support for it is still being built. Full steps: [connect Gemini to TripCache](/ai-agents/gemini).
 
 ### Grok
 
-xAI's [connector docs](https://docs.x.ai/grok/connectors) say to open grok.com/connectors, choose **New Connector → Custom**, and enter the server link. Custom connectors are for paid Grok plans.
+xAI's [connector docs](https://docs.x.ai/grok/connectors) say to open grok.com/connectors, choose **New Connector → Custom**, and enter the server link. Custom connectors are for paid Grok plans. Full steps: [connect Grok to TripCache](/ai-agents/grok).
 
 ### Perplexity
 
-Perplexity lets Pro and Max subscribers add a custom remote connector from **Settings → Connectors**. Paste the TripCache link and choose OAuth sign-in.
+Perplexity lets Pro and Max subscribers add a custom remote connector from **Settings → Connectors**. Paste the TripCache link and choose OAuth sign-in. Full steps: [connect Perplexity to TripCache](/ai-agents/perplexity).
 
 ### Hermes Agent and OpenClaw
 
-Both run on your own computer or server. Add TripCache as a remote MCP server in their configuration. The first request opens TripCache sign-in; approve it on your phone.
+Both run on your own computer or server. Add TripCache as a remote MCP server in their configuration. The first request opens TripCache sign-in; approve it on your phone. Setup guides: [Hermes](/ai-agents/hermes) and [OpenClaw](/ai-agents/openclaw).
 
 ### Muse
 
-Meta's Muse can't add third-party connectors yet. Until it can, there's no way to connect it to TripCache or any other trip app.
+Meta's Muse has connectors for services on Meta's list, and it can build a custom connector from a service's API details. Meta doesn't describe a way to add a remote MCP server link with sign-in, which is how TripCache connects, so Muse can't reach your TripCache trips yet. See [Muse and TripCache](/ai-agents/muse).
 
 ## What to ask an AI travel assistant about your bookings
 
@@ -153,7 +153,7 @@ export const faq: BlogFaq[] = [
   {
     question: "Can Meta's Muse connect to TripCache?",
     answer:
-      "Not yet. Muse doesn't support third-party connectors, so it can't reach TripCache or other trip apps. TripCache already uses the open MCP standard, so it can work with Muse once Meta adds connector support.",
+      "Not yet. Muse has connectors, including custom ones built from a service's API details, but Meta doesn't describe a way to add a remote MCP server link like TripCache's. TripCache already uses the open MCP standard, so it can work with Muse once that's possible.",
   },
   {
     question: "Which AI assistant is best for managing a booked trip?",

@@ -9,7 +9,7 @@ export const metadata: BlogFrontmatter = {
   description:
     "Add TripCache to Claude or ChatGPT in three steps, approve on your phone, then ask about your flights, hotels and cars. Requires TripCache Pro.",
   date: "2026-10-29",
-  updatedAt: "2026-10-29",
+  updatedAt: "2026-11-02",
   author: "TripCache Editorial Team",
   readTime: "8 min read",
   category: "Guide",
@@ -40,7 +40,7 @@ This works because TripCache, the travel app that holds your bookings, runs a co
 
 - **TripCache Pro** on your account. Check [plans and prices](/pricing).
 - **The TripCache app on your phone**, signed in. You approve every new connection there.
-- **An AI assistant that accepts custom connectors.** Claude and ChatGPT both do, with plan limits set by Anthropic and OpenAI (covered below). For Gemini, Grok, Perplexity and self-hosted agents, see [which AI assistants can read your travel bookings](/blog/ai-travel-assistant-for-your-bookings).
+- **An AI assistant that accepts custom connectors.** Claude and ChatGPT both do, with plan limits set by Anthropic and OpenAI (covered below). For Gemini, Grok, Perplexity and self-hosted agents, see [which AI assistants can read your travel bookings](/blog/ai-travel-assistant-for-your-bookings), or pick yours from the [AI agent setup guides](/ai-agents).
 
 TripCache uses the Model Context Protocol (MCP), the open standard both assistants use for connectors. You don't need to know how it works. You only paste one link.
 
@@ -64,7 +64,7 @@ The link is the same for everyone. It doesn't contain your password or a token, 
 
 Anthropic's [custom connector guide](https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp) says custom connectors work on Free, Pro, Max, Team and Enterprise plans, with one custom connector on the free plan. On Team and Enterprise, an owner adds it for the organization first.
 
-In a chat, turn TripCache on from the **+** menu under **Connectors** if it isn't already.
+In a chat, turn TripCache on from the **+** menu under **Connectors** if it isn't already. The [Claude setup guide](/ai-agents/claude) shows every step in a 39-second video.
 
 ### ChatGPT
 
@@ -72,7 +72,7 @@ In a chat, turn TripCache on from the **+** menu under **Connectors** if it isn'
 2. Paste the TripCache link and choose **OAuth** for authentication.
 3. Continue to sign-in.
 
-OpenAI moves this setting between plans and menus. Some plans first need **Developer mode**, found under Settings → Apps → Advanced settings, and Business or Enterprise workspaces may need an admin to allow custom connectors. Dots, ChatGPT's always-on agents, use the same connectors, so they can use TripCache once it's added.
+OpenAI moves this setting between plans and menus. Some plans first need **Developer mode**, found under Settings → Apps → Advanced settings, and Business or Enterprise workspaces may need an admin to allow custom connectors. Dots, ChatGPT's always-on agents, use the same connectors, so they can use TripCache once it's added. The [ChatGPT setup guide](/ai-agents/chatgpt) walks through it in a 39-second video.
 
 ## Step 3: Approve the connection on your phone
 
