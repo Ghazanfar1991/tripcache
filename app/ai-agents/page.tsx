@@ -8,15 +8,16 @@ import { AgentGrid, ServerLinkCard } from "@/components/ai-agents/guide-parts"
 import { Footer } from "@/components/footer"
 import { StoreBadges } from "@/components/home/store-badges"
 import { Breadcrumbs, Card, Container, CtaBand, PageHero, Section, SitePage, buttonClass } from "@/components/site/kit"
-import { AI_AGENT_GUIDES, EXAMPLE_QUESTIONS, agentGuidePath } from "@/lib/ai-agents"
+import { FaqList } from "@/components/site/product-ui"
+import { AI_AGENT_GUIDES, EXAMPLE_QUESTIONS, INDEX_FAQS, agentGuidePath } from "@/lib/ai-agents"
 import { SITE_URL, createPageMetadata } from "@/lib/seo-metadata"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "TripCache AI Agents: Claude, ChatGPT and More",
+  title: "Travel MCP Server for Claude, ChatGPT & More",
   description:
-    "Connect TripCache to Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes or OpenClaw with one link, then ask about your flights, trips and spending.",
+    "Connect your TripCache trips to Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes or OpenClaw with one MCP link. Approve on your phone. Needs Pro.",
   path: "/ai-agents",
-  keywords: ["TripCache AI agents", "TripCache MCP", "TripCache ChatGPT", "TripCache Claude"],
+  keywords: ["travel MCP server", "trip MCP server", "travel itinerary MCP", "MCP travel app", "TripCache AI agents", "TripCache MCP"],
 })
 
 const HOW = [
@@ -47,6 +48,11 @@ const schema = {
         url: `${SITE_URL}${agentGuidePath(agent.id)}`,
       })),
     },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/ai-agents#faq`,
+      mainEntity: INDEX_FAQS.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
+    },
   ],
 }
 
@@ -64,8 +70,9 @@ export default function AiAgentsIndexPage() {
           title="Connect TripCache to your AI assistant"
           lede={
             <p>
-              Add one link to Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes or OpenClaw, then ask about your next flight, a
-              trip or what you&apos;ve spent. Pick your assistant for its own steps.
+              TripCache&apos;s travel MCP server puts your booked trips in Claude, ChatGPT, Gemini, Grok, Perplexity, Hermes or
+              OpenClaw. Add one link, then ask about your next flight, a trip or what you&apos;ve spent. Pick your assistant for
+              its own steps.
             </p>
           }
           aside={<ServerLinkCard />}
@@ -157,6 +164,20 @@ export default function AiAgentsIndexPage() {
                   See it on the home page
                 </Link>
               </div>
+            </div>
+          </Container>
+        </Section>
+
+        <Section tone="canvas" aria-labelledby="ai-agents-faq-heading">
+          <Container>
+            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+              <h2
+                id="ai-agents-faq-heading"
+                className="text-balance font-tc-display text-[clamp(28px,3.4vw,44px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink"
+              >
+                Questions about connecting AI assistants
+              </h2>
+              <FaqList faqs={INDEX_FAQS} />
             </div>
           </Container>
         </Section>

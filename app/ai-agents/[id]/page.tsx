@@ -11,6 +11,7 @@ import { AgentLogo } from "@/components/home/agent-logos"
 import { getAgentVideos } from "@/components/home/agent-videos"
 import { StoreBadges } from "@/components/home/store-badges"
 import { Breadcrumbs, Card, Container, CtaBand, PageHero, Pill, Section, SitePage, buttonClass } from "@/components/site/kit"
+import { FaqList } from "@/components/site/product-ui"
 import { AI_AGENT_GUIDES, EXAMPLE_QUESTIONS, READY_AGENT_GUIDES, getAiAgentGuide, type AiAgentGuide } from "@/lib/ai-agents"
 import { SITE_URL, createPageMetadata } from "@/lib/seo-metadata"
 
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return createPageMetadata({
     title: agent.metaTitle,
     description: agent.description,
-    keywords: [`TripCache ${agent.name}`, `${agent.name} MCP connector`, "TripCache AI agents"],
+    keywords: [...agent.keywords, "TripCache AI agents"],
     path: `/ai-agents/${agent.id}`,
   })
 }
@@ -77,6 +78,11 @@ function schemaFor(agent: AiAgentGuide, video?: { poster?: string; mp4?: string;
       embedUrl: url,
     })
   }
+  graph.push({
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: agent.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
+  })
   return { "@context": "https://schema.org", "@graph": graph }
 }
 
@@ -99,7 +105,7 @@ export default async function AiAgentGuidePage({ params }: { params: Promise<{ i
         />
         <PageHero
           breadcrumb={<Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "AI agents", href: "/ai-agents" }, { name: agent.name }]} />}
-          title={agent.soon ? `${agent.name} is coming to TripCache` : `Connect TripCache to ${agent.name}`}
+          title={agent.h1 ?? (agent.soon ? `${agent.name} is coming to TripCache` : `Connect TripCache to ${agent.name}`)}
           lede={
             <>
               <p className="mb-6 flex items-center gap-3 text-[15px] font-medium text-tc-ink-2">
@@ -129,11 +135,13 @@ export default async function AiAgentGuidePage({ params }: { params: Promise<{ i
                   <h2 className="font-tc-display text-[26px] font-semibold leading-snug tracking-[-0.015em] text-tc-ink sm:text-[30px]">
                     Why {agent.name} can&apos;t connect yet
                   </h2>
-                  <p className="mt-4 text-[16px] leading-7 text-tc-ink-2">{agent.note}</p>
+                  <p className="mt-4 text-[16px] leading-7 text-tc-ink-2">
+                    TripCache connects to assistants through a remote MCP server: a link you paste into the assistant, then sign in
+                    and approve on your phone. {agent.name} has connectors for services on Meta&apos;s list, and it can build a custom
+                    connector from a service&apos;s API details, but Meta doesn&apos;t describe a way to add a link like TripCache&apos;s.
+                  </p>
                   <p className="mt-4 text-[16px] leading-7 text-tc-mute">
-                    TripCache connects to assistants through a connector, a link you paste into the assistant (an MCP server).
-                    Meta hasn&apos;t opened {agent.name} to third-party connectors, so there&apos;s nowhere to paste it. When Meta adds
-                    them, this page will have the steps, and {agent.name} will show as ready in the app under Profile → AI agents.
+                    When it can, this page will have the steps, and {agent.name} will show as ready in the app under Profile → AI agents.
                   </p>
                 </div>
               </Card>
@@ -225,7 +233,21 @@ export default async function AiAgentGuidePage({ params }: { params: Promise<{ i
           </Section>
         )}
 
-        <Section tone={agent.soon ? "canvas" : "white"}>
+        <Section tone="white" aria-labelledby="ai-agent-faq-heading">
+          <Container>
+            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+              <h2
+                id="ai-agent-faq-heading"
+                className="text-balance font-tc-display text-[clamp(28px,3.4vw,44px)] font-semibold leading-[1.08] tracking-[-0.02em] text-tc-ink"
+              >
+                {agent.name} and TripCache: questions
+              </h2>
+              <FaqList faqs={agent.faqs} />
+            </div>
+          </Container>
+        </Section>
+
+        <Section tone="canvas">
           <Container>
             <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
               <div>
