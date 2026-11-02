@@ -30,10 +30,14 @@ import * as AiTravelAssistantBookings from "@/content/blog/ai-travel-assistant-f
 import * as AskSiriFlight from "@/content/blog/ask-siri-about-your-flight"
 import * as IphoneDuoTravelApps from "@/content/blog/iphone-duo-travel-apps"
 import * as SyncItineraryCalendar from "@/content/blog/sync-travel-itinerary-to-calendar"
+import * as TripitClaudeChatgpt from "@/content/blog/does-tripit-work-with-claude-chatgpt"
+import * as BestClaudeTravelConnectors from "@/content/blog/best-claude-connectors-for-travel"
 
 type BlogPostModule = { metadata: BlogFrontmatter; body: string; faq?: BlogFaq[] }
 
 const rawPosts: BlogPostModule[] = [
+  BestClaudeTravelConnectors,
+  TripitClaudeChatgpt,
   SyncItineraryCalendar,
   ConnectChatgptClaude,
   AiTravelAssistantBookings,
