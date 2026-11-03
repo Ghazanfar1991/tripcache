@@ -11,7 +11,23 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion"
-import { Armchair, BellRing, Check, FileText, Mail, Paperclip, Plane, Receipt, Send, Sparkles, Ticket } from "lucide-react"
+import {
+  Armchair,
+  BadgeCheck,
+  BellRing,
+  Check,
+  ChevronDown,
+  EllipsisVertical,
+  FileText,
+  Forward,
+  Mail,
+  Plane,
+  Receipt,
+  Reply,
+  Sparkles,
+  Star,
+  Ticket,
+} from "lucide-react"
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore, type RefObject } from "react"
 import { Bloom, CategoryGlyph } from "./category"
 import { CATEGORY, EMAILS, STEPS } from "./data"
@@ -47,13 +63,13 @@ const MOBILE: Layout = {
 
 /** What the scanner lifts out of the email, and where each value lands on the draft. */
 const TOKENS = [
-  { id: "flight", text: "PR 731", label: "Flight", value: "PR 731" },
-  { id: "from", text: "Bangkok (BKK)", label: "From", value: "BKK" },
-  { id: "to", text: "Manila (MNL)", label: "To", value: "MNL" },
-  { id: "date", text: "13 May 2026", label: "Date", value: "13 May" },
-  { id: "dep", text: "13:25", label: "Departs", value: "13:25" },
-  { id: "arr", text: "18:05", label: "Arrives", value: "18:05" },
-  { id: "ref", text: "DB4YDR", label: "Booking ref.", value: "DB4YDR" },
+  { id: "flight", text: "QF 43", label: "Flight", value: "QF 43" },
+  { id: "from", text: "Sydney (SYD)", label: "From", value: "SYD" },
+  { id: "to", text: "Melbourne (MEL)", label: "To", value: "MEL" },
+  { id: "date", text: "6 Oct 2026", label: "Date", value: "6 Oct" },
+  { id: "dep", text: "13:08", label: "Departs", value: "13:08" },
+  { id: "arr", text: "14:33", label: "Arrives", value: "14:33" },
+  { id: "ref", text: "QF7K2M", label: "Booking ref.", value: "QF7K2M" },
   { id: "seat", text: "14C", label: "Seat", value: "14C" },
 ] as const
 
@@ -163,33 +179,67 @@ function EmailCard({
 
   return (
     <div className="relative flex h-full flex-col overflow-hidden rounded-[24px] bg-white text-tc-ink shadow-[0_40px_80px_-40px_rgba(0,0,0,0.85)]">
-      <div className={`flex items-center gap-3 border-b border-tc-line ${layout.compact ? "px-4 py-3" : "px-6 py-4"}`}>
-        <span
-          className={`grid shrink-0 place-items-center rounded-full bg-tc-flight font-semibold text-white ${layout.compact ? "size-8 text-[12px]" : "size-10 text-[14px]"}`}
-        >
-          F
-        </span>
-        <div className="min-w-0 flex-1">
-          <p className={`truncate font-semibold ${layout.compact ? "text-[13px]" : "text-[14.5px]"}`}>Flight booking</p>
-          <p className="truncate text-[12px] text-tc-mute">to me · 9:41</p>
+      {/* Mail-client header: subject, then the sender row */}
+      <div className={`border-b border-tc-line ${layout.compact ? "px-4 pb-2.5 pt-3" : "px-6 pb-4 pt-5"}`}>
+        <div className="flex items-start gap-2">
+          <p className={`min-w-0 flex-1 font-tc-display font-semibold leading-tight ${layout.compact ? "text-[16px]" : "text-[21px]"}`}>
+            Your e-ticket receipt · QF 43
+          </p>
+          <span className="mt-0.5 shrink-0 rounded-[6px] bg-tc-mist px-1.5 py-0.5 text-[10.5px] font-semibold text-tc-mute">Inbox</span>
         </div>
-        <Paperclip className="size-4 shrink-0 text-tc-mute" aria-hidden="true" />
+        <div className={`flex items-center gap-3 ${layout.compact ? "mt-2.5" : "mt-4"}`}>
+          <span
+            className={`relative grid shrink-0 place-items-center overflow-hidden rounded-full border border-tc-line bg-white ${layout.compact ? "size-8" : "size-10"}`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element -- 2 KB airline mark from the app's own logo set (trip-cache-app/assets/airline-logos). */}
+            <img src="/airlines/QF-tail.png" alt="" width={46} height={60} className={layout.compact ? "h-[22px] w-auto" : "h-[27px] w-auto"} />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className={`flex items-center gap-1 truncate ${layout.compact ? "text-[12.5px]" : "text-[14px]"}`}>
+              <span className="font-semibold text-tc-ink">Qantas</span>
+              <BadgeCheck className="size-3.5 shrink-0 text-tc-flight" aria-hidden="true" />
+              {layout.compact ? null : <span className="truncate text-[12.5px] text-tc-mute">&lt;no-reply@qantas.com.au&gt;</span>}
+            </p>
+            <p className="flex items-center gap-0.5 text-[12px] text-tc-mute">
+              to me
+              <ChevronDown className="size-3" aria-hidden="true" />
+            </p>
+          </div>
+          <div className="flex shrink-0 items-center gap-2.5 text-tc-mute">
+            <span className="text-[12px] tabular-nums">9:41 AM</span>
+            {layout.compact ? null : (
+              <>
+                <Star className="size-4" aria-hidden="true" />
+                <Reply className="size-4" aria-hidden="true" />
+              </>
+            )}
+            <EllipsisVertical className="size-4" aria-hidden="true" />
+          </div>
+        </div>
       </div>
 
-      <div className={`relative flex-1 ${layout.compact ? "px-4 pt-3" : "px-6 pt-5"}`}>
-        <p className={`font-tc-display font-semibold leading-tight ${layout.compact ? "text-[17px]" : "text-[22px]"}`}>
-          Your e-ticket receipt · PR 731
-        </p>
-        <p className={`mt-3 text-tc-ink-2 ${layout.compact ? "text-[12.5px] leading-[1.75]" : "text-[15px] leading-[1.95]"}`}>
+      <div className={`relative flex-1 ${layout.compact ? "px-4 pt-2.5" : "px-6 pt-5"}`}>
+        {layout.compact ? null : (
+          <div className="flex items-center justify-between border-b border-tc-line pb-3">
+            {/* eslint-disable-next-line @next/next/no-img-element -- airline wordmark from the app's logo set */}
+            <img src="/airlines/QF.png" alt="Qantas" width={300} height={150} className="-my-3 h-12 w-auto" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-tc-mute">Booking confirmation</span>
+          </div>
+        )}
+        <p className={`text-tc-ink-2 ${layout.compact ? "text-[12.5px] leading-[1.75]" : "mt-3 text-[15px] leading-[1.95]"}`}>
           Thank you for booking. Your flight {tok(0)} from {tok(1)} to {tok(2)} departs on {tok(3)} at {tok(4)} and lands at{" "}
           {tok(5)}. Booking reference {tok(6)}. Seat: {tok(7)}.
         </p>
         {layout.compact ? null : (
-          <div aria-hidden="true" className="mt-5 flex flex-col gap-2">
-            {[88, 72, 80, 54].map((width, index) => (
-              <span key={index} className="h-2 rounded-full bg-tc-mist" style={{ width: `${width}%` }} />
-            ))}
-          </div>
+          <span className="mt-4 inline-flex items-center gap-2.5 rounded-[12px] border border-tc-line px-3 py-2">
+            <span className="grid size-8 place-items-center rounded-[8px] bg-[#fdecec] text-[#d92d20]">
+              <FileText className="size-4" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-[13px] font-semibold text-tc-ink">E-ticket_QF43.pdf</span>
+              <span className="block text-[11.5px] text-tc-mute">PDF · 214 KB</span>
+            </span>
+          </span>
         )}
         {/* Scanner beam */}
         <motion.span
@@ -214,7 +264,7 @@ function EmailCard({
           className={`inline-flex shrink-0 items-center gap-1.5 rounded-[10px] bg-tc-violet font-semibold text-white ${layout.compact ? "h-8 px-2.5 text-[12px]" : "h-9 px-3.5 text-[13.5px]"}`}
           style={{ boxShadow: sendGlow }}
         >
-          <Send className="size-3.5" aria-hidden="true" />
+          <Forward className="size-3.5" aria-hidden="true" />
           Send
         </motion.span>
       </div>
@@ -226,16 +276,16 @@ function EmailCard({
 function FiledStack({ compact }: { compact: boolean }) {
   return (
     <div className="flex h-full flex-col justify-center">
-      <p className={`font-tc-display font-semibold text-white ${compact ? "text-[18px]" : "text-[26px]"}`}>4 confirmations filed</p>
-      <p className="mt-1 text-[13px] text-white/60">Flight, hotel, car and tour, each reviewed once.</p>
+      <p className={`font-tc-display font-semibold text-white ${compact ? "text-[18px]" : "text-[26px]"}`}>{EMAILS.length} confirmations filed</p>
+      <p className="mt-1 text-[13px] text-white/60">Two flights, a hotel and two tours, each reviewed once.</p>
       <ul className={`relative mt-5 ${compact ? "h-[170px]" : "h-[300px]"}`}>
         {EMAILS.map((email, index) => (
           <motion.li
             key={email.subject}
             className={`absolute inset-x-0 flex items-center gap-3 rounded-[16px] bg-white ${compact ? "px-3 py-2" : "px-4 py-3.5"}`}
-            style={{ top: index * (compact ? 40 : 66), zIndex: 10 - index }}
+            style={{ top: index * (compact ? 32 : 56), zIndex: 10 - index }}
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0, rotate: [-1.5, 1, -0.6, 0.8][index] }}
+            animate={{ opacity: 1, y: 0, rotate: [-1.5, 1, -0.6, 0.8, -1][index] }}
             transition={{ duration: 0.55, ease: EASE, delay: index * 0.08 }}
           >
             <CategoryGlyph category={email.category} className={compact ? "size-7" : "size-9"} />
@@ -310,7 +360,7 @@ function Receiver({ progress, compact, iconRef }: { progress: MotionValue<number
               >
                 <CategoryGlyph category="flight" className="size-9" />
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[14px] font-semibold text-tc-ink">PR 731 · BKK → MNL</span>
+                  <span className="block truncate text-[14px] font-semibold text-tc-ink">QF 43 · SYD → MEL</span>
                   <span className="block truncate text-[12px] text-tc-mute">From “Your e-ticket receipt” · just now</span>
                 </span>
                 <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-tc-violet-soft px-2 py-1 text-[11px] font-semibold text-tc-violet">
@@ -392,13 +442,16 @@ function DraftPass({
           className={`relative overflow-hidden rounded-[28px] border border-[#e6e8f0] bg-[linear-gradient(135deg,#ffffff_45%,#eeeefe)] shadow-[0_40px_80px_-36px_rgba(0,0,0,0.9)] ${compact ? "p-4" : "p-6"}`}
         >
           <div className="flex items-center gap-3">
-            <span className={`grid shrink-0 place-items-center rounded-[16px] border-2 border-tc-violet bg-white text-tc-violet ${compact ? "size-11" : "size-14"}`}>
-              <Plane className={compact ? "size-5" : "size-6"} aria-hidden="true" />
+            <span
+              className={`grid shrink-0 place-items-center overflow-hidden rounded-[16px] border border-[#e6e8f0] bg-white shadow-[0_6px_14px_-8px_rgba(15,23,42,0.35)] ${compact ? "h-11 w-[72px]" : "h-14 w-[92px]"}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element -- airline logo from the app's logo set, as the in-app Drafts card shows it */}
+              <img src="/airlines/QF.png" alt="Qantas logo" width={300} height={150} className="h-full w-auto object-contain" />
             </span>
             <div className="min-w-0 flex-1">
-              <p className={`truncate font-bold text-tc-ink ${compact ? "text-[15px]" : "text-[19px]"}`}>Philippine Airlines</p>
+              <p className={`truncate font-bold text-tc-ink ${compact ? "text-[15px]" : "text-[19px]"}`}>Qantas</p>
               <p className="truncate text-[12.5px] text-tc-mute">
-                {slot("flight", "PR 731", "", "h-3 w-12")} · 1 flight
+                {slot("flight", "QF 43", "", "h-3 w-12")} · 1 flight
               </p>
             </div>
             <span className="shrink-0 rounded-full bg-[linear-gradient(135deg,#6f72f5,#4f46e5)] px-3 py-1.5 text-[12px] font-semibold text-white">
@@ -408,9 +461,9 @@ function DraftPass({
 
           <div className={`flex items-start justify-between ${compact ? "mt-4" : "mt-6"}`}>
             <div>
-              <p className={`font-bold leading-none text-tc-ink ${code}`}>{slot("from", "BKK", "", compact ? "h-7 w-16" : "h-9 w-20")}</p>
-              <p className={`mt-1.5 font-medium text-tc-mute ${time}`}>{slot("dep", "13:25", "", "h-3.5 w-10")}</p>
-              <p className={`text-tc-mute ${time}`}>{slot("date", "Wed, 13 May", "", "h-3.5 w-20")}</p>
+              <p className={`font-bold leading-none text-tc-ink ${code}`}>{slot("from", "SYD", "", compact ? "h-7 w-16" : "h-9 w-20")}</p>
+              <p className={`mt-1.5 font-medium text-tc-mute ${time}`}>{slot("dep", "13:08", "", "h-3.5 w-10")}</p>
+              <p className={`text-tc-mute ${time}`}>{slot("date", "Tue, 6 Oct", "", "h-3.5 w-20")}</p>
             </div>
             <div className="flex flex-1 flex-col items-center px-3 pt-3">
               <div className="flex w-full items-center gap-2">
@@ -421,23 +474,23 @@ function DraftPass({
               <p className="mt-1.5 text-[12px] text-tc-mute">Nonstop</p>
             </div>
             <div className="text-right">
-              <p className={`font-bold leading-none text-tc-ink ${code}`}>{slot("to", "MNL", "", compact ? "h-7 w-16" : "h-9 w-20")}</p>
-              <p className={`mt-1.5 font-medium text-tc-mute ${time}`}>{slot("arr", "18:05", "", "h-3.5 w-10")}</p>
-              <p className={`text-tc-mute ${time}`}>{has("date") ? "Wed, 13 May" : <span className="inline-block h-3.5 w-20 rounded-md bg-[#e6e8f0] align-middle" />}</p>
+              <p className={`font-bold leading-none text-tc-ink ${code}`}>{slot("to", "MEL", "", compact ? "h-7 w-16" : "h-9 w-20")}</p>
+              <p className={`mt-1.5 font-medium text-tc-mute ${time}`}>{slot("arr", "14:33", "", "h-3.5 w-10")}</p>
+              <p className={`text-tc-mute ${time}`}>{has("date") ? "Tue, 6 Oct" : <span className="inline-block h-3.5 w-20 rounded-md bg-[#e6e8f0] align-middle" />}</p>
             </div>
           </div>
 
           <div className={`flex flex-wrap items-center gap-2 ${compact ? "mt-4" : "mt-5"}`}>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e6e8f0] bg-white px-3 py-1.5 text-[13px] font-semibold text-tc-ink">
               <Ticket className="size-3.5 text-tc-mute" aria-hidden="true" />
-              PNR {slot("ref", "DB4YDR", "", "h-3 w-14")}
+              PNR {slot("ref", "QF7K2M", "", "h-3 w-14")}
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e6e8f0] bg-white px-3 py-1.5 text-[13px] font-semibold text-tc-ink">
               <Armchair className="size-3.5 text-tc-mute" aria-hidden="true" />
               Seat {slot("seat", "14C", "", "h-3 w-6")}
             </span>
           </div>
-          <p className="mt-3 truncate text-[12.5px] text-tc-mute">Fwd: Your e-ticket receipt · PR 731</p>
+          <p className="mt-3 truncate text-[12.5px] text-tc-mute">Fwd: Your e-ticket receipt · QF 43</p>
 
           <div
             className={`flex h-11 items-center justify-center gap-2 rounded-[14px] text-[14px] font-semibold text-white transition-colors duration-500 ${compact ? "mt-3" : "mt-4"} ${
@@ -445,7 +498,7 @@ function DraftPass({
             }`}
           >
             {saved ? <Check className="size-4" strokeWidth={3} aria-hidden="true" /> : null}
-            {saved ? "Saved to Trip to Manila" : `Review draft · ${filled}/${TOKENS.length} fields`}
+            {saved ? "Saved to Trip to Melbourne" : `Review draft · ${filled}/${TOKENS.length} fields`}
           </div>
         </div>
         <AnimatePresence>
@@ -471,12 +524,12 @@ function ItineraryRail({ compact, reduce }: { compact: boolean; reduce: boolean 
   return (
     <div className="flex h-full flex-col justify-center">
       <p className={`font-tc-script leading-[0.85] text-[#c4b5fd] ${compact ? "text-[28px]" : "text-[44px]"}`}>Trip to</p>
-      <p className={`font-tc-display font-semibold leading-none text-white ${compact ? "text-[28px]" : "text-[44px]"}`}>Manila</p>
-      <p className="mt-1.5 text-[13px] text-white/60">13 – 19 May 2026 · 4 bookings</p>
+      <p className={`font-tc-display font-semibold leading-none text-white ${compact ? "text-[28px]" : "text-[44px]"}`}>Melbourne</p>
+      <p className="mt-1.5 text-[13px] text-white/60">6 – 8 Oct 2026 · {EMAILS.length} bookings</p>
       <ol className={`relative ${compact ? "mt-3 pl-6" : "mt-6 pl-9"}`}>
         <motion.span
           aria-hidden="true"
-          className={`absolute top-2 w-[2px] origin-top rounded-full bg-[linear-gradient(to_bottom,#6366f1,#12b76a,#f59e0b,#d82d7e)] ${
+          className={`absolute top-2 w-[2px] origin-top rounded-full bg-[linear-gradient(to_bottom,#6366f1,#12b76a,#d82d7e,#6366f1)] ${
             compact ? "bottom-3 left-[9px]" : "bottom-4 left-[15px]"
           }`}
           initial={reduce ? false : { scaleY: 0 }}
@@ -488,7 +541,7 @@ function ItineraryRail({ compact, reduce }: { compact: boolean; reduce: boolean 
           return (
             <motion.li
               key={email.chip}
-              className={compact ? "relative py-1" : "relative py-1.5"}
+              className={compact ? "relative py-[3px]" : "relative py-1.5"}
               initial={reduce ? false : { opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.55, ease: EASE, delay: 0.15 + index * 0.12 }}
@@ -498,7 +551,7 @@ function ItineraryRail({ compact, reduce }: { compact: boolean; reduce: boolean 
                 className={`absolute top-1/2 -translate-y-1/2 rounded-full border-[3px] border-[#140f2a] ${compact ? "-left-[22px] size-3.5" : "-left-[30px] size-4"}`}
                 style={{ backgroundColor: tone.color, boxShadow: `0 0 12px ${tone.color}` }}
               />
-              <div className={`flex items-center gap-3 rounded-[14px] bg-white ${compact ? "px-2.5 py-1.5" : "px-3.5 py-3"}`}>
+              <div className={`flex items-center gap-3 rounded-[14px] bg-white ${compact ? "px-2.5 py-1" : "px-3.5 py-2.5"}`}>
                 <span className={`shrink-0 font-semibold tabular-nums text-tc-mute ${compact ? "w-11 text-[10.5px]" : "w-14 text-[12px]"}`}>
                   {email.date}
                   <span className="block text-tc-ink">{email.when}</span>
@@ -517,8 +570,8 @@ function ItineraryRail({ compact, reduce }: { compact: boolean; reduce: boolean 
 }
 
 const ATTACHMENTS = [
-  { icon: BellRing, color: "#f59e0b", soft: "#fff5d6", text: "#b54708", title: "Cancel by 11 May", meta: "Belmont Hotel · in 2 days" },
-  { icon: FileText, color: "#6366f1", soft: "#eef2ff", text: "#4f46e5", title: "Boarding pass", meta: "PR 731 · attached" },
+  { icon: BellRing, color: "#f59e0b", soft: "#fff5d6", text: "#b54708", title: "Cancel by 4 Oct", meta: "Crown Towers · in 2 days" },
+  { icon: FileText, color: "#6366f1", soft: "#eef2ff", text: "#4f46e5", title: "Boarding pass", meta: "QF 43 · attached" },
   { icon: Receipt, color: "#12b76a", soft: "#e8f8f0", text: "#067647", title: "12 receipts", meta: "A$623 spent · CSV ready" },
 ]
 
@@ -560,7 +613,7 @@ function KeptWithTrip({ compact, reduce }: { compact: boolean; reduce: boolean }
         animate={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{ duration: 0.8, ease: EASE }}
       >
-        <Image src="/app-ui-trip-detail.webp" alt="TripCache Trip to Melbourne itinerary with flight, hotel and activity counts" fill sizes="260px" className="object-contain" />
+        <Image src="/app-ui-trip-detail.webp" alt="TripCache Trip to Melbourne itinerary, 6 to 8 Oct 2026, with flight QF 43 Sydney to Melbourne in flight" fill sizes="260px" className="object-contain" />
       </motion.div>
       {ATTACHMENTS.map((item, index) => {
         const Icon = item.icon

@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo-metadata"
 export const metadata: Metadata = createPageMetadata({
   title: "Travel App Pricing",
   description:
-    "TripCache Basic is free, with cancellation and check-in reminders, documents, and CSV/PDF export. Pro adds email import and flight alerts from $5.99/month.",
+    "TripCache Basic is free. Pro adds email import, live flight alerts and ChatGPT or Claude access from $5.99/month, or yearly with a 14-day free trial.",
   path: "/pricing",
 })
 

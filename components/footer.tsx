@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram } from "lucide-react"
 
 const COPYRIGHT_YEAR = 2026
 
@@ -84,7 +83,11 @@ export function Footer({ description = DEFAULT_DESCRIPTION }: { description?: st
               rel="me noopener noreferrer"
               className="tc-press mt-5 inline-flex items-center gap-2 rounded-full text-[14px] text-tc-mute transition-colors hover:text-tc-ink"
             >
-              <Instagram className="size-[18px]" aria-hidden="true" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="size-[18px]" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
               Follow @tripcache on Instagram
             </a>
           </div>
