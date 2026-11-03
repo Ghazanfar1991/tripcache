@@ -1,97 +1,42 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-11-02T17:42:32.958Z",
+  "generatedAt": "2026-11-03T15:46:01.034Z",
   "sitemapUrls": 61,
-  "indexed": 36,
-  "notIndexed": 25,
+  "indexed": 52,
+  "notIndexed": 9,
   "byCoverageState": {
-    "Submitted and indexed": 36,
-    "URL is unknown to Google": 19,
-    "Discovered - currently not indexed": 6
+    "Submitted and indexed": 52,
+    "URL is unknown to Google": 6,
+    "Discovered - currently not indexed": 3
   },
   "issues": [
     {
-      "path": "/tools/flight-arrival-time-calculator",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
       "path": "/account-delete",
-      "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
-    },
-    {
-      "path": "/alternatives/app-in-the-air",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/ai-agents",
       "kind": "not-indexed",
       "detail": "URL is unknown to Google"
     },
     {
       "path": "/ai-agents/claude",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "kind": "rich-result:Videos",
+      "detail": "WARNING: Invalid datetime value for \"uploadDate\""
+    },
+    {
+      "path": "/ai-agents/claude",
+      "kind": "rich-result:Videos",
+      "detail": "WARNING: Datetime property \"uploadDate\" is missing a timezone"
     },
     {
       "path": "/ai-agents/chatgpt",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "kind": "rich-result:Videos",
+      "detail": "WARNING: Invalid datetime value for \"uploadDate\""
     },
     {
-      "path": "/ai-agents/gemini",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/ai-agents/grok",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "path": "/ai-agents/chatgpt",
+      "kind": "rich-result:Videos",
+      "detail": "WARNING: Datetime property \"uploadDate\" is missing a timezone"
     },
     {
       "path": "/ai-agents/perplexity",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/ai-agents/hermes",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/ai-agents/openclaw",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/ai-agents/muse",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/blog/best-claude-connectors-for-travel",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/blog/does-tripit-work-with-claude-chatgpt",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/blog/sync-travel-itinerary-to-calendar",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/blog/connect-chatgpt-claude-to-travel-app",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/blog/ai-travel-assistant-for-your-bookings",
       "kind": "not-indexed",
       "detail": "URL is unknown to Google"
     },
@@ -101,29 +46,24 @@
       "detail": "URL is unknown to Google"
     },
     {
-      "path": "/blog/iphone-duo-travel-apps",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
       "path": "/blog/travel-booking-organizer-app-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/ai-trip-planner-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/business-travel-management-guide-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/travel-itinerary-template-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/flighty-vs-tripcache-2026",
@@ -162,7 +102,7 @@
     {
       "path": "/account-delete",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -170,146 +110,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "crawledAs": null,
       "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:04:21.208Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:38:22.390Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/chatgpt",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:38:35.092Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/claude",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:38:28.741Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/gemini",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:38:41.447Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/grok",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:38:47.802Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/hermes",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:00.511Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/muse",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:13.200Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/openclaw",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:06.857Z",
       "indexedSince": null
     },
     {
@@ -330,43 +134,9 @@
       "indexedSince": null
     },
     {
-      "path": "/alternatives/app-in-the-air",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:38:16.031Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/ai-travel-assistant-for-your-bookings",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:44.982Z",
-      "indexedSince": null
-    },
-    {
       "path": "/blog/ai-trip-planner-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -374,10 +144,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/blog"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:31.055Z",
       "indexedSince": null
@@ -400,26 +168,9 @@
       "indexedSince": null
     },
     {
-      "path": "/blog/best-claude-connectors-for-travel",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:19.555Z",
-      "indexedSince": null
-    },
-    {
       "path": "/blog/business-travel-management-guide-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -427,44 +178,13 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/blog",
+        "/sitemap.xml"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:38.035Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/connect-chatgpt-claude-to-travel-app",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:38.626Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/does-tripit-work-with-claude-chatgpt",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:25.913Z",
       "indexedSince": null
     },
     {
@@ -506,43 +226,9 @@
       "indexedSince": null
     },
     {
-      "path": "/blog/iphone-duo-travel-apps",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:57.690Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/sync-travel-itinerary-to-calendar",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:32.286Z",
-      "indexedSince": null
-    },
-    {
       "path": "/blog/travel-booking-organizer-app-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -550,10 +236,8 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/sitemap.xml"
-      ],
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:05:50.124Z",
       "indexedSince": null
@@ -561,26 +245,6 @@
     {
       "path": "/blog/travel-itinerary-template-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/sitemap.xml",
-        "/blog"
-      ],
-      "richResults": null,
-      "firstSeenAt": "2026-10-04T17:06:44.475Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/tools/flight-arrival-time-calculator",
-      "verdict": "NEUTRAL",
       "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
@@ -592,7 +256,7 @@
       "crawledAs": null,
       "referringUrls": [],
       "richResults": null,
-      "firstSeenAt": "2026-10-05T16:38:43.041Z",
+      "firstSeenAt": "2026-10-04T17:06:44.475Z",
       "indexedSince": null
     },
     {
@@ -600,7 +264,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-02T07:39:37Z",
+      "lastCrawlTime": "2026-11-03T06:09:37Z",
       "googleCanonical": "https://trip-cache.com",
       "userCanonical": "https://trip-cache.com/",
       "robotsTxtState": "ALLOWED",
@@ -635,11 +299,247 @@
       "indexedSince": "2026-10-15T12:58:40.918Z"
     },
     {
+      "path": "/ai-agents",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:32:32Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents",
+      "userCanonical": "https://trip-cache.com/ai-agents",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/claude",
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:38:22.390Z",
+      "indexedSince": "2026-11-03T15:41:53.994Z"
+    },
+    {
+      "path": "/ai-agents/chatgpt",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:49:46Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/chatgpt",
+      "userCanonical": "https://trip-cache.com/ai-agents/chatgpt",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/claude",
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          },
+          {
+            "type": "Videos",
+            "issues": [
+              "WARNING: Invalid datetime value for \"uploadDate\"",
+              "WARNING: Datetime property \"uploadDate\" is missing a timezone"
+            ]
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:38:35.092Z",
+      "indexedSince": "2026-11-03T15:42:06.374Z"
+    },
+    {
+      "path": "/ai-agents/claude",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T10:03:53Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/claude",
+      "userCanonical": "https://trip-cache.com/ai-agents/claude",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          },
+          {
+            "type": "Videos",
+            "issues": [
+              "WARNING: Invalid datetime value for \"uploadDate\"",
+              "WARNING: Datetime property \"uploadDate\" is missing a timezone"
+            ]
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:38:28.741Z",
+      "indexedSince": "2026-11-03T15:42:00.148Z"
+    },
+    {
+      "path": "/ai-agents/gemini",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T09:28:40Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/gemini",
+      "userCanonical": "https://trip-cache.com/ai-agents/gemini",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/claude",
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:38:41.447Z",
+      "indexedSince": "2026-11-03T15:42:12.736Z"
+    },
+    {
+      "path": "/ai-agents/grok",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T09:08:02Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/grok",
+      "userCanonical": "https://trip-cache.com/ai-agents/grok",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/claude",
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:38:47.802Z",
+      "indexedSince": "2026-11-03T15:42:18.904Z"
+    },
+    {
+      "path": "/ai-agents/hermes",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:11:31Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/hermes",
+      "userCanonical": "https://trip-cache.com/ai-agents/hermes",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/claude",
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:00.511Z",
+      "indexedSince": "2026-11-03T15:42:31.299Z"
+    },
+    {
+      "path": "/ai-agents/muse",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:51:09Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/muse",
+      "userCanonical": "https://trip-cache.com/ai-agents/muse",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/openclaw",
+        "/ai-agents/hermes"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:13.200Z",
+      "indexedSince": "2026-11-03T15:42:43.839Z"
+    },
+    {
+      "path": "/ai-agents/openclaw",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:30:36Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/openclaw",
+      "userCanonical": "https://trip-cache.com/ai-agents/openclaw",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:06.857Z",
+      "indexedSince": "2026-11-03T15:42:37.609Z"
+    },
+    {
       "path": "/alternatives",
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-22T20:53:39Z",
+      "lastCrawlTime": "2026-10-29T13:25:17Z",
       "googleCanonical": "https://trip-cache.com/alternatives",
       "userCanonical": "https://trip-cache.com/alternatives",
       "robotsTxtState": "ALLOWED",
@@ -647,11 +547,39 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/ai-agents/claude",
         "/blog/flight-time-zones-arrival-date"
       ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:03:49.352Z",
       "indexedSince": "2026-10-04T17:03:49.352Z"
+    },
+    {
+      "path": "/alternatives/app-in-the-air",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T14:15:04Z",
+      "googleCanonical": "https://trip-cache.com/alternatives/app-in-the-air",
+      "userCanonical": "https://trip-cache.com/alternatives/app-in-the-air",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/alternatives"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:38:16.031Z",
+      "indexedSince": "2026-11-03T15:41:47.624Z"
     },
     {
       "path": "/alternatives/tripcase",
@@ -666,6 +594,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/ai-agents/claude",
         "/about"
       ],
       "richResults": {
@@ -685,7 +614,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-26T02:49:26Z",
+      "lastCrawlTime": "2026-10-31T20:39:36Z",
       "googleCanonical": "https://trip-cache.com/alternatives/tripit",
       "userCanonical": "https://trip-cache.com/alternatives/tripit",
       "robotsTxtState": "ALLOWED",
@@ -693,6 +622,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/ai-agents/claude",
         "/features/cancellation-reminders",
         "/sitemap.xml"
       ],
@@ -713,7 +643,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-23T01:16:15Z",
+      "lastCrawlTime": "2026-10-30T22:09:38Z",
       "googleCanonical": "https://trip-cache.com/blog",
       "userCanonical": "https://trip-cache.com/blog",
       "robotsTxtState": "ALLOWED",
@@ -727,6 +657,33 @@
       "richResults": null,
       "firstSeenAt": "2026-10-26T14:43:29.295Z",
       "indexedSince": "2026-10-26T14:43:29.295Z"
+    },
+    {
+      "path": "/blog/ai-travel-assistant-for-your-bookings",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:49:30Z",
+      "googleCanonical": "https://trip-cache.com/blog/ai-travel-assistant-for-your-bookings",
+      "userCanonical": "https://trip-cache.com/blog/ai-travel-assistant-for-your-bookings",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/hermes"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:44.982Z",
+      "indexedSince": "2026-11-03T15:43:15.210Z"
     },
     {
       "path": "/blog/ai-travel-organizer-app-2026",
@@ -746,6 +703,33 @@
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:05:18.270Z",
       "indexedSince": "2026-10-04T17:05:18.270Z"
+    },
+    {
+      "path": "/blog/best-claude-connectors-for-travel",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T08:13:37Z",
+      "googleCanonical": "https://trip-cache.com/blog/best-claude-connectors-for-travel",
+      "userCanonical": "https://trip-cache.com/blog/best-claude-connectors-for-travel",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog/connect-chatgpt-claude-to-travel-app"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:19.555Z",
+      "indexedSince": "2026-11-03T15:42:50.156Z"
     },
     {
       "path": "/blog/best-travel-apps-2025",
@@ -859,6 +843,60 @@
       "indexedSince": "2026-10-04T17:06:10.734Z"
     },
     {
+      "path": "/blog/connect-chatgpt-claude-to-travel-app",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T09:26:31Z",
+      "googleCanonical": "https://trip-cache.com/blog/connect-chatgpt-claude-to-travel-app",
+      "userCanonical": "https://trip-cache.com/blog/connect-chatgpt-claude-to-travel-app",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/ai-agents/hermes"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:38.626Z",
+      "indexedSince": "2026-11-03T15:43:08.969Z"
+    },
+    {
+      "path": "/blog/does-tripit-work-with-claude-chatgpt",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T09:45:16Z",
+      "googleCanonical": "https://trip-cache.com/blog/does-tripit-work-with-claude-chatgpt",
+      "userCanonical": "https://trip-cache.com/blog/does-tripit-work-with-claude-chatgpt",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog/connect-chatgpt-claude-to-travel-app"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:25.913Z",
+      "indexedSince": "2026-11-03T15:42:56.494Z"
+    },
+    {
       "path": "/blog/flight-time-zones-arrival-date",
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
@@ -871,6 +909,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/tools/layover-calculator",
         "/sitemap.xml"
       ],
       "richResults": {
@@ -965,6 +1004,33 @@
       "indexedSince": "2026-10-05T16:40:12.613Z"
     },
     {
+      "path": "/blog/iphone-duo-travel-apps",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T09:08:14Z",
+      "googleCanonical": "https://trip-cache.com/blog/iphone-duo-travel-apps",
+      "userCanonical": "https://trip-cache.com/blog/iphone-duo-travel-apps",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog/tripcase-shutdown-what-now"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:57.690Z",
+      "indexedSince": "2026-11-03T15:43:27.818Z"
+    },
+    {
       "path": "/blog/organize-travel-confirmation-emails-2026",
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
@@ -996,7 +1062,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-08-17T03:00:38Z",
+      "lastCrawlTime": "2026-11-03T08:38:44Z",
       "googleCanonical": "https://trip-cache.com/blog/privacy-and-security",
       "userCanonical": "https://trip-cache.com/blog/privacy-and-security",
       "robotsTxtState": "ALLOWED",
@@ -1006,7 +1072,15 @@
       "referringUrls": [
         "/sitemap.xml"
       ],
-      "richResults": null,
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
       "firstSeenAt": "2026-10-04T17:07:36.341Z",
       "indexedSince": "2026-10-04T17:07:36.341Z"
     },
@@ -1063,6 +1137,33 @@
       },
       "firstSeenAt": "2026-10-05T16:40:31.845Z",
       "indexedSince": "2026-10-06T14:39:11.307Z"
+    },
+    {
+      "path": "/blog/sync-travel-itinerary-to-calendar",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T10:04:37Z",
+      "googleCanonical": "https://trip-cache.com/blog/sync-travel-itinerary-to-calendar",
+      "userCanonical": "https://trip-cache.com/blog/sync-travel-itinerary-to-calendar",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog/connect-chatgpt-claude-to-travel-app"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-11-02T17:39:32.286Z",
+      "indexedSince": "2026-11-03T15:43:02.824Z"
     },
     {
       "path": "/blog/trip-expense-management-app-2026",
@@ -1204,7 +1305,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-29T08:25:22Z",
+      "lastCrawlTime": "2026-11-03T11:59:42Z",
       "googleCanonical": "https://trip-cache.com/features",
       "userCanonical": "https://trip-cache.com/features",
       "robotsTxtState": "ALLOWED",
@@ -1212,6 +1313,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/ai-agents/chatgpt",
         "/features/business-travel-expenses"
       ],
       "richResults": {
@@ -1258,7 +1360,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-28T15:58:09Z",
+      "lastCrawlTime": "2026-11-03T03:39:38Z",
       "googleCanonical": "https://trip-cache.com/features/cancellation-reminders",
       "userCanonical": "https://trip-cache.com/features/cancellation-reminders",
       "robotsTxtState": "ALLOWED",
@@ -1313,7 +1415,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-07T09:16:37Z",
+      "lastCrawlTime": "2026-11-03T08:04:09Z",
       "googleCanonical": "https://trip-cache.com/pricing",
       "userCanonical": "https://trip-cache.com/pricing",
       "robotsTxtState": "ALLOWED",
@@ -1372,6 +1474,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/alternatives/tripcase",
         "/ios/travel/tripcache-smart-trip-planner-42536873.html",
         "/blog/tripcase-shutdown-what-now"
       ],
@@ -1399,6 +1502,34 @@
       "indexedSince": "2026-10-05T16:38:30.337Z"
     },
     {
+      "path": "/tools/flight-arrival-time-calculator",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-03T10:54:03Z",
+      "googleCanonical": "https://trip-cache.com/tools/flight-arrival-time-calculator",
+      "userCanonical": "https://trip-cache.com/tools/flight-arrival-time-calculator",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog/iphone-duo-travel-apps",
+        "/"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-10-05T16:38:43.041Z",
+      "indexedSince": "2026-11-03T15:40:25.376Z"
+    },
+    {
       "path": "/tools/hotel-cancellation-deadline-calculator",
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
@@ -1411,6 +1542,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/features",
         "/blog/flight-time-zones-arrival-date",
         "/features/cancellation-reminders"
       ],
@@ -1458,7 +1590,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-05T07:55:34Z",
+      "lastCrawlTime": "2026-11-03T08:04:09Z",
       "googleCanonical": "https://trip-cache.com/tools/layover-calculator",
       "userCanonical": "https://trip-cache.com/tools/layover-calculator",
       "robotsTxtState": "ALLOWED",
@@ -1466,6 +1598,7 @@
       "indexingState": "INDEXING_ALLOWED",
       "crawledAs": "MOBILE",
       "referringUrls": [
+        "/ai-agents/gemini",
         "/features/email-to-itinerary"
       ],
       "richResults": {
