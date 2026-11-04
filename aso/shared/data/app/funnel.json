@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-03T15:46:56.142Z",
+  "generatedAt": "2026-11-04T16:00:23.292Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 121,
-      "activeUsers": 121,
+      "eventCount": 120,
+      "activeUsers": 120,
       "byPlatform": [
         {
           "dimensions": {
@@ -18,8 +18,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 73,
-            "activeUsers": 73
+            "eventCount": 76,
+            "activeUsers": 76
           }
         },
         {
@@ -28,8 +28,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 48,
-            "activeUsers": 48
+            "eventCount": 44,
+            "activeUsers": 44
           }
         }
       ]
@@ -50,10 +50,21 @@
         "onboarding_complete",
         "onboarding_completed"
       ],
-      "measured": false,
-      "eventCount": 0,
-      "activeUsers": 0,
-      "byPlatform": []
+      "measured": true,
+      "eventCount": 2,
+      "activeUsers": 2,
+      "byPlatform": [
+        {
+          "dimensions": {
+            "eventName": "onboarding_complete",
+            "platform": "Android"
+          },
+          "metrics": {
+            "eventCount": 2,
+            "activeUsers": 2
+          }
+        }
+      ]
     },
     {
       "id": "activation",
@@ -73,10 +84,21 @@
         "paywall_view",
         "paywall_opened"
       ],
-      "measured": false,
-      "eventCount": 0,
-      "activeUsers": 0,
-      "byPlatform": []
+      "measured": true,
+      "eventCount": 7,
+      "activeUsers": 2,
+      "byPlatform": [
+        {
+          "dimensions": {
+            "eventName": "paywall_view",
+            "platform": "Android"
+          },
+          "metrics": {
+            "eventCount": 7,
+            "activeUsers": 2
+          }
+        }
+      ]
     },
     {
       "id": "trialStart",
@@ -103,13 +125,13 @@
     }
   ],
   "measurableSteps": [
-    "installProxy"
+    "installProxy",
+    "onboardingComplete",
+    "paywallView"
   ],
   "missingInstrumentation": [
     "signUp",
-    "onboardingComplete",
     "activation",
-    "paywallView",
     "trialStart",
     "purchase"
   ],
