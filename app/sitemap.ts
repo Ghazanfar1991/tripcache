@@ -69,11 +69,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: `${baseUrl}/privacy`,
-      lastModified: changed("2026-08-29"),
+      lastModified: changed("2026-11-04"),
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: changed("2026-08-29"),
+      lastModified: changed("2026-11-04"),
     },
     {
       url: `${baseUrl}/account-delete`,
@@ -88,6 +88,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...["/ai-agents", ...AI_AGENT_GUIDES.map((agent) => agentGuidePath(agent.id))].map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: changed("2026-11-02"),
+    })),
+    // 2026-11-04: MCP server docs and support, linked from the assistant directory listings.
+    ...["/ai-agents/mcp", "/support"].map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: changed("2026-11-04"),
     })),
     ...blogUrls,
   ]
