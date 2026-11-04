@@ -5,7 +5,7 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js"
 import { createMockSupabase } from "@/lib/supabase-mock"
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://jvwnjqiypayicqfgvdyo.supabase.co"
+export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://jvwnjqiypayicqfgvdyo.supabase.co"
 const SUPABASE_PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_OToVgslOngmAoZyKnAY2Yw_r9PWXmC4"
 
 // Local testing only: NEXT_PUBLIC_SUPABASE_MOCK=1 swaps in an in-memory fake so the
