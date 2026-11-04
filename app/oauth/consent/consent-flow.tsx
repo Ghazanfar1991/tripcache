@@ -1082,11 +1082,11 @@ function ConnectedCard({ connection }: { connection: Connection }) {
             {allowDrafts ? <Check className="size-3.5" strokeWidth={3} aria-hidden="true" /> : <Lock className="size-3" aria-hidden="true" />}
           </span>
           <span className="text-[14px] leading-[21px] text-tc-ink">
-            {allowDrafts ? "Add plans and expenses as drafts you confirm in the app" : "Can't add or change anything"}
+            {allowDrafts ? "Add plans and expenses, and import bookings as drafts you confirm in the app" : "Can't add or change anything"}
           </span>
         </li>
       </ul>
-      <p className="mt-3 text-[12.5px] leading-5 text-tc-mute">Change or remove this any time in the app: Profile → Connected apps.</p>
+      <p className="mt-3 text-[12.5px] leading-5 text-tc-mute">Change or remove this any time in the app: Profile → AI agents.</p>
 
       <div className="mt-6 rounded-[16px] bg-tc-mist px-4 py-3.5">
         <div className="flex items-center gap-2 text-[13.5px] font-semibold text-tc-ink">
