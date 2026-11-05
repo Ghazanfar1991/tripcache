@@ -22,11 +22,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/support',
-        destination: '/about#support',
-        permanent: true,
-      },
-      {
         source: '/:path*',
         has: [
           {

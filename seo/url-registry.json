@@ -14,6 +14,10 @@
       "status": "live"
     },
     {
+      "path": "/ai-agents/mcp",
+      "status": "live"
+    },
+    {
       "path": "/ai-agents/claude",
       "status": "live"
     },
@@ -362,8 +366,7 @@
     },
     {
       "path": "/support",
-      "status": "redirected",
-      "redirectTo": "/about"
+      "status": "live"
     }
   ]
 }

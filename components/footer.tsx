@@ -45,7 +45,8 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "mailto:support@trip-cache.com", label: "Support" },
+      { href: "/support", label: "Support" },
+      { href: "/ai-agents/mcp", label: "MCP server" },
       { href: "/privacy", label: "Privacy" },
       { href: "/terms", label: "Terms" },
     ],

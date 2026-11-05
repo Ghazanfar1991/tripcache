@@ -49,7 +49,16 @@ const terms = [
     ],
   },
   {
-    title: "6. Liability",
+    title: "6. AI Assistant Connections",
+    body: [
+      "With TripCache Pro you can connect third-party AI assistants, such as ChatGPT, Claude or Meta Muse, to your account through TripCache's MCP server. You decide whether a connection may only read your trips or may also add plan items, expenses and booking drafts, and you can revoke it at any time in Profile → AI agents.",
+      "You are responsible for the requests you ask an assistant to make. Assistants can misread or misstate travel information, so check important details such as times, gates and amounts in TripCache or with your airline or provider.",
+      "The assistant is provided by its own company under its own terms and privacy policy. TripCache is not responsible for how an assistant uses information after it receives it.",
+      "Use of the MCP server is limited to your own account and is rate limited. Don't use it to scrape, overload or probe TripCache, or to access anyone else's data. We may suspend a connection that does.",
+    ],
+  },
+  {
+    title: "7. Liability",
     body: [
       "TripCache is provided “as is”. To the fullest extent permitted by law, we disclaim implied warranties and limit aggregate liability to the fees you paid during the preceding 12 months.",
     ],
@@ -63,7 +72,7 @@ export default function TermsPage() {
     <SitePage>
       <PageHero
         title="The rules that keep TripCache reliable for everyone."
-        lede={<p>Effective July 16, 2026. These Terms govern your access to TripCache apps, the website, and related services.</p>}
+        lede={<p>Effective November 4, 2026. These Terms govern your access to TripCache apps, the website, the MCP server for AI assistants, and related services.</p>}
       />
 
       <LegalLayout label="Terms of Service" contents={contents}>

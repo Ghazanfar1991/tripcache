@@ -1,6 +1,6 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-11-03T15:46:37.363Z",
+  "generatedAt": "2026-11-04T16:00:01.452Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
@@ -14,8 +14,8 @@
     "deviceInstalls": 22,
     "deviceUninstalls": 0
   },
-  "latestReportedDate": "2026-10-30",
-  "latestInstalledAudience": 25,
+  "latestReportedDate": "2026-10-31",
+  "latestInstalledAudience": 26,
   "daily": [
     {
       "date": "2026-08-01",
@@ -744,6 +744,14 @@
       "dailyDeviceInstalls": 2,
       "dailyDeviceUninstalls": 0,
       "activeDeviceInstalls": 25
+    },
+    {
+      "date": "2026-10-31",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 26
     }
   ],
   "countries": [

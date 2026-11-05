@@ -7,7 +7,7 @@ import { useCallback, useEffect, useId, useRef, useState, type FormEvent, type R
 import { AlertTriangle, Check, Globe, Loader2, Lock, Mail, Smartphone, Sparkles } from "lucide-react"
 import type { OAuthAuthorizationDetails, Session } from "@supabase/supabase-js"
 import { buttonClass, cx } from "@/components/site/kit"
-import { getBrowserSupabase } from "@/lib/supabase-browser"
+import { SUPABASE_URL, getBrowserSupabase } from "@/lib/supabase-browser"
 import {
   claimAppApproval,
   clearAppApproval,
@@ -24,7 +24,8 @@ const SCOPE_BOOKINGS_DRAFT = "bookings:draft"
 
 // Connecting AI assistants is a TripCache Pro feature (checked again by the MCP server on
 // every call). The app's /paywall route opens the Pro plans.
-const PRO_PAYWALL_URL = "tripcache:///paywall"
+/** Plans, on the website: the app's tripcache:// paywall link does nothing on a computer. */
+const PRO_PLANS_URL = "/pricing"
 
 // supabase-js puts the id straight into the request path, so only accept plain ids.
 const AUTHORIZATION_ID_PATTERN = /^[A-Za-z0-9_-]{6,128}$/
@@ -49,7 +50,15 @@ type View =
   | { name: "consent"; request: ConsentRequest }
   | { name: "redirecting"; host: string | null }
   | { name: "connected"; connection: Connection }
-  | { name: "pro-required"; clientName: string; returnUrl: string | null }
+  | {
+      name: "pro-required"
+      clientName: string
+      /** Where "Back" goes once the request is already denied. */
+      returnUrl: string | null
+      /** Set while the request is still open: "Back" denies it first, and another account can still approve it. */
+      deny?: () => Promise<string | null>
+      email?: string
+    }
   | { name: "error"; kind: ErrorKind; message?: string }
 
 /** A finished approval, shown on our own page before handing the browser to the agent. */
@@ -190,7 +199,8 @@ export function ConsentFlow() {
       }
       if (pro.kind === "free") {
         const clientName = ("client" in data && data.client?.name) || "this app"
-        setView({ name: "pro-required", clientName, returnUrl: await denyWithoutPro(data, authorizationId) })
+        // Not denied yet, so the user can still sign in with the account that has Pro.
+        setView({ name: "pro-required", clientName, returnUrl: null, deny: () => denyWithoutPro(data, authorizationId), email: current.user.email ?? "" })
         return
       }
       if ("redirect_url" in data && !("authorization_id" in data)) {
@@ -356,7 +366,7 @@ export function ConsentFlow() {
     case "connected":
       return <ConnectedCard connection={view.connection} />
     case "pro-required":
-      return <ProRequiredCard clientName={view.clientName} returnUrl={view.returnUrl} />
+      return <ProRequiredCard clientName={view.clientName} returnUrl={view.returnUrl} deny={view.deny} email={view.email} />
     case "error":
       return <ErrorCard kind={view.kind} message={view.message} />
   }
@@ -482,9 +492,18 @@ function SignInCard({
     })
   }
 
-  const signInWithProvider = (provider: "google") =>
+  const appleOnWeb = useAppleOnWeb()
+
+  const signInWithProvider = (provider: "google" | "apple") =>
     withBusy(provider, async () => {
-      const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.href } })
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider,
+        options: {
+          redirectTo: window.location.href,
+          // Always show Google's account chooser, so a different account can be picked after "Use a different account".
+          ...(provider === "google" ? { queryParams: { prompt: "select_account" } } : {}),
+        },
+      })
       if (error) throw error
       // Real Supabase navigates away here; keep the spinner until it does.
       await new Promise((resolve) => setTimeout(resolve, 4000))
@@ -501,12 +520,16 @@ function SignInCard({
   const onSendCode = (event: FormEvent) => {
     event.preventDefault()
     withBusy("send", async () => {
-      const { error } = await supabase.auth.signInWithOtp({ email: email.trim(), options: { shouldCreateUser: false } })
+      // The email can carry a link as well as the code; the link signs in on this page too.
+      const { error } = await supabase.auth.signInWithOtp({
+        email: email.trim(),
+        options: { shouldCreateUser: false, emailRedirectTo: window.location.href },
+      })
       if (error) {
         throw new Error(/signups? not allowed|not found/i.test(error.message) ? "There's no TripCache account with that email." : error.message)
       }
       setCodeSent(true)
-      setInfo(`We sent a code to ${email.trim()}.`)
+      setInfo(`We emailed ${email.trim()}. Enter the code from the email, or open its sign-in link in this browser.`)
     })
   }
 
@@ -564,6 +587,9 @@ function SignInCard({
             className={fieldClass}
             data-testid="app-approval-email"
           />
+          <span className="text-[12.5px] leading-5 text-tc-mute">
+            Signed up with Apple and hid your email? Your TripCache email is in the app under Profile.
+          </span>
         </label>
         {error && errorAt === "app" ? <Notice>{error}</Notice> : null}
         <button type="submit" disabled={disabled} className={cx(buttonClass("primary", "lg"), "w-full disabled:opacity-60")} data-testid="app-approval-send">
@@ -578,7 +604,13 @@ function SignInCard({
         <span className="h-px flex-1 bg-tc-line" />
       </div>
 
-      {/* Apple sign-in isn't set up for the web, so only Google is offered here. */}
+      {/* Apple shows only once Supabase has the web Services ID and secret (see useAppleOnWeb). */}
+      {appleOnWeb ? (
+        <button type="button" disabled={disabled} onClick={() => signInWithProvider("apple")} className={cx(buttonClass("secondary", "lg"), "mb-3 w-full disabled:opacity-60")} data-testid="apple-sign-in">
+          {busy === "apple" ? <Loader2 className="size-[18px] animate-spin" aria-hidden="true" /> : <AppleLogo />}
+          Continue with Apple
+        </button>
+      ) : null}
       <button type="button" disabled={disabled} onClick={() => signInWithProvider("google")} className={cx(buttonClass("secondary", "lg"), "mb-4 w-full disabled:opacity-60")}>
         {busy === "google" ? <Loader2 className="size-[18px] animate-spin" aria-hidden="true" /> : <GoogleLogo />}
         Continue with Google
@@ -1082,11 +1114,11 @@ function ConnectedCard({ connection }: { connection: Connection }) {
             {allowDrafts ? <Check className="size-3.5" strokeWidth={3} aria-hidden="true" /> : <Lock className="size-3" aria-hidden="true" />}
           </span>
           <span className="text-[14px] leading-[21px] text-tc-ink">
-            {allowDrafts ? "Add plans and expenses as drafts you confirm in the app" : "Can't add or change anything"}
+            {allowDrafts ? "Add plans and expenses, and import bookings as drafts you confirm in the app" : "Can't add or change anything"}
           </span>
         </li>
       </ul>
-      <p className="mt-3 text-[12.5px] leading-5 text-tc-mute">Change or remove this any time in the app: Profile → Connected apps.</p>
+      <p className="mt-3 text-[12.5px] leading-5 text-tc-mute">Change or remove this any time in the app: Profile → AI agents.</p>
 
       <div className="mt-6 rounded-[16px] bg-tc-mist px-4 py-3.5">
         <div className="flex items-center gap-2 text-[13.5px] font-semibold text-tc-ink">
@@ -1129,7 +1161,32 @@ function RedirectingCard({ host }: { host: string | null }) {
 }
 
 /** Free account: the request was denied; point to Pro in the app. */
-function ProRequiredCard({ clientName, returnUrl }: { clientName: string; returnUrl: string | null }) {
+function ProRequiredCard({
+  clientName,
+  returnUrl,
+  deny,
+  email,
+}: {
+  clientName: string
+  returnUrl: string | null
+  deny?: () => Promise<string | null>
+  email?: string
+}) {
+  const [busy, setBusy] = useState<"back" | "switch" | null>(null)
+
+  const goBack = async () => {
+    setBusy("back")
+    const url = deny ? await deny().catch(() => null) : returnUrl
+    if (url) window.location.assign(url)
+    else setBusy(null)
+  }
+
+  // The request stays open, so signing in with another account brings back the sign-in options.
+  const switchAccount = async () => {
+    setBusy("switch")
+    await getBrowserSupabase().auth.signOut({ scope: "local" })
+  }
+
   return (
     <Shell>
       <div className="flex flex-col items-start gap-4" data-testid="pro-required">
@@ -1138,16 +1195,31 @@ function ProRequiredCard({ clientName, returnUrl }: { clientName: string; return
         </span>
         <Title>Connecting AI assistants is a TripCache Pro feature</Title>
         <p className="text-[15px] leading-6 text-tc-ink-2">
-          With Pro, {clientName} can read your trips and live flight status and add plans for you. Upgrade in the TripCache app,
-          then connect again. Nothing was connected this time.
+          {email ? (
+            <>
+              <strong className="font-semibold text-tc-ink">{email}</strong> doesn&apos;t have TripCache Pro.{" "}
+            </>
+          ) : null}
+          With Pro, {clientName} can read your trips and live flight status and add plans for you. Get Pro in the TripCache app
+          on your phone (Profile → Pro), then connect again. Nothing was connected this time.
         </p>
-        <a href={PRO_PAYWALL_URL} className={cx(buttonClass("primary", "lg"), "w-full")} data-testid="open-pro">
+        <a href={PRO_PLANS_URL} target="_blank" rel="noopener" className={cx(buttonClass("primary", "lg"), "w-full")} data-testid="open-pro">
           <Sparkles className="size-[18px]" aria-hidden="true" />
-          Open TripCache Pro
+          See TripCache Pro
         </a>
-        <p className="text-[12.5px] leading-5 text-tc-mute">On a computer? Open TripCache on your phone and go to Profile → Pro.</p>
-        {returnUrl ? (
-          <button type="button" onClick={() => window.location.assign(returnUrl)} className={cx(buttonClass("secondary", "lg"), "w-full")}>
+        {deny ? (
+          <button
+            type="button"
+            onClick={switchAccount}
+            disabled={busy !== null}
+            className={cx(buttonClass("secondary", "lg"), "w-full")}
+            data-testid="switch-account"
+          >
+            Use a different TripCache account
+          </button>
+        ) : null}
+        {deny || returnUrl ? (
+          <button type="button" onClick={goBack} disabled={busy !== null} className={cx(buttonClass("secondary", "lg"), "w-full")}>
             Back to {clientName}
           </button>
         ) : (
@@ -1201,6 +1273,35 @@ function ErrorCard({ kind, message }: { kind: ErrorKind; message?: string }) {
 /* ------------------------------------------------------------------ */
 /* Provider marks                                                      */
 /* ------------------------------------------------------------------ */
+
+/**
+ * Whether Apple sign-in works on the web. The app signs in with Apple natively;
+ * the web flow also needs an Apple Services ID and secret in Supabase, and until
+ * then /authorize answers 400 "missing OAuth secret" instead of redirecting.
+ */
+function useAppleOnWeb() {
+  const [available, setAvailable] = useState(false)
+  useEffect(() => {
+    let active = true
+    fetch(`${SUPABASE_URL}/auth/v1/authorize?provider=apple&redirect_to=${encodeURIComponent(window.location.origin)}`, { redirect: "manual" })
+      .then((response) => {
+        if (active) setAvailable(response.type === "opaqueredirect" || (response.status >= 300 && response.status < 400))
+      })
+      .catch(() => undefined)
+    return () => {
+      active = false
+    }
+  }, [])
+  return available
+}
+
+function AppleLogo() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-[18px]" aria-hidden="true" fill="currentColor">
+      <path d="M16.37 12.62c-.02-2.37 1.94-3.51 2.03-3.57-1.1-1.62-2.82-1.84-3.44-1.86-1.46-.15-2.86.86-3.6.86-.75 0-1.89-.84-3.11-.82-1.6.02-3.07.93-3.89 2.36-1.66 2.88-.42 7.14 1.19 9.48.79 1.14 1.73 2.43 2.96 2.38 1.19-.05 1.64-.77 3.08-.77 1.43 0 1.84.77 3.1.75 1.28-.02 2.09-1.16 2.87-2.31.9-1.32 1.27-2.6 1.29-2.67-.03-.01-2.47-.95-2.5-3.77zM14.02 5.67c.65-.79 1.09-1.89.97-2.99-.94.04-2.08.63-2.75 1.41-.6.7-1.13 1.82-.99 2.89 1.05.08 2.12-.53 2.77-1.31z" />
+    </svg>
+  )
+}
 
 function GoogleLogo() {
   return (

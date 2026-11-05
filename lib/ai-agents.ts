@@ -6,7 +6,9 @@ import type { AgentId } from "@/components/home/agent-logos"
  * word for word from that catalog (checked 2026-11-02). Change them there first, then here.
  */
 
-export const MCP_SERVER_URL = "https://jvwnjqiypayicqfgvdyo.supabase.co/functions/v1/mcp"
+/** On our own domain: the Cloudflare Worker trip-cache-mcp-proxy (trip-cache-app cloudflare/mcp-proxy) forwards it to the
+ * Supabase function. The old https://jvwnjqiypayicqfgvdyo.supabase.co/functions/v1/mcp link keeps working for existing connections. */
+export const MCP_SERVER_URL = "https://trip-cache.com/mcp"
 
 export type AiAgentGuide = {
   id: AgentId
