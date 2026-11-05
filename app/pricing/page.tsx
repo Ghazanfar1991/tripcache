@@ -1,7 +1,7 @@
 import "../secondary.css"
 
 import Link from "next/link"
-import { ArrowRight, Check, MailCheck, Plane, ShieldCheck, Smartphone } from "lucide-react"
+import { ArrowRight, Bot, Check, MailCheck, Plane, ShieldCheck, Smartphone } from "lucide-react"
 
 import { Footer } from "@/components/footer"
 import { GetStartedModal } from "@/components/get-started-modal"
@@ -10,6 +10,7 @@ import { Breadcrumbs, Card, Container, CtaBand, PageHero, Section, SitePage, but
 import { FaqList, IconTile, PlanTable, type PlanRow } from "@/components/site/product-ui"
 
 const basicFeatures = [
+  "Unlimited trips and bookings",
   "Cancellation-deadline reminders",
   "Check-in reminders and a check-in shortcut",
   "Manual trips: flights, stays, cars, trains, events, and more",
@@ -18,15 +19,19 @@ const basicFeatures = [
   "Expenses in 153 currencies, with category budgets",
   "CSV and PDF export, including travel history and a Visa / Immigration Summary",
   "Trip map, travel history, CSV import, and offline access",
-  "Add trips to your phone's calendar and share a trip-card image",
+  "Live calendar feed for your calendar app, and trip-card image sharing",
+  "Siri, Shortcuts and Spotlight on iPhone",
 ]
 
 const proFeatures = [
   "Everything in Basic",
+  "Connect Claude, ChatGPT or another AI assistant: it reads your trips and adds plans, with your OK",
   "Booking-email import with a monthly allowance: forward supported confirmations and review each draft",
+  "PDF, ticket and screenshot import in the app",
   "Free-cancellation deadlines read from imported confirmations",
-  "Live flight-status alerts on supported flights: delays and gate, terminal, and baggage-belt changes",
-  "Live Activity and Dynamic Island on iPhone; home-screen widgets on iPhone and Android",
+  "Flight-number autofill for airports and times",
+  "Live flight tracking and alerts on supported flights: gate, terminal, delay, take-off, landing and baggage belt",
+  "Live Activity and Dynamic Island on iPhone; flight progress in notifications and widgets on Android",
 ]
 
 const plans = [
@@ -46,7 +51,7 @@ const plans = [
     name: "Pro Monthly",
     price: "$5.99",
     cadence: "/month",
-    description: "For travelers who want booking emails turned into trips and live flight alerts on travel day.",
+    description: "For travelers who want booking emails turned into trips, live flight alerts and an AI assistant that knows their plans.",
     label: "Flexible billing",
     badge: null,
     highlight: false,
@@ -58,46 +63,55 @@ const plans = [
     name: "Pro Yearly",
     price: "$49.99",
     cadence: "/year",
-    description: "The same Pro features at the lowest price, for travelers who use TripCache all year.",
-    label: "Best value",
+    description: "Every Pro feature at the lowest price. Try it free for 14 days before you pay anything.",
+    label: "14-day free trial",
     badge: "Save 30%",
     highlight: true,
     features: proFeatures,
-    meta: "$49.99 on Google Play and $50.00 on the App Store: about $4.17 a month, 30% less than monthly billing.",
-    cta: "Choose yearly",
+    meta: "14 days free, then $49.99 a year on Google Play or $50.00 on the App Store: about $4.17 a month. Cancel before the trial ends and you won't be charged.",
+    cta: "Start 14-day free trial",
   },
 ]
 
 const reasons = [
   {
+    title: "Ask your AI assistant",
+    copy: "Connect Claude, ChatGPT or another assistant to TripCache. Ask what's next on your trip or have it add a plan; you choose its access and approve the connection in the app.",
+    icon: Bot,
+    tile: "bg-[#fce7f2] text-[#c12570]",
+    bloom: "#d82d7e",
+  },
+  {
     title: "Skip the retyping",
-    copy: "Forward supported confirmations, including attached PDFs and screenshots, and review a structured draft. The importer also picks up free-cancellation deadlines.",
+    copy: "Forward supported confirmations, or add a PDF, ticket or screenshot in the app, and review a structured draft. The importer also picks up free-cancellation deadlines.",
     icon: MailCheck,
     tile: "bg-tc-violet-soft text-tc-violet",
     bloom: "#8b5cf6",
   },
   {
     title: "Know when a flight changes",
-    copy: "Get alerts for departures, arrivals, delays, and gate, terminal, and baggage-belt changes on supported flights. The airline remains the final source.",
+    copy: "Get alerts for take-off, landing, delays, and gate, terminal, and baggage-belt changes on supported flights, and type a flight number to fill in airports and times. The airline remains the final source.",
     icon: Plane,
     tile: "bg-[#eef2ff] text-[#4f46e5]",
     bloom: "#6366f1",
   },
   {
     title: "See the flight at a glance",
-    copy: "Follow flight progress in a Live Activity and the Dynamic Island on iPhone, or in a home-screen widget on iPhone and Android.",
+    copy: "Follow flight progress in a Live Activity and the Dynamic Island on iPhone, or in your notifications and a home-screen widget on Android.",
     icon: Smartphone,
     tile: "bg-tc-violet-soft text-tc-violet",
-    bloom: "#d82d7e",
+    bloom: "#12b76a",
   },
 ]
 
 const PRICE_SUMMARY =
-  "TripCache Basic is free. TripCache Pro costs $5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store (US, October 2026)."
+  "TripCache Basic is free. TripCache Pro costs $5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store, and the yearly plan starts with a 14-day free trial (US prices, November 2026)."
 
 /** Basic vs Pro. `true` renders a check ("Included"), `false` a dash ("Not included"); strings show as written. */
 const comparisonRows: PlanRow[] = [
   { label: "Price", basic: "Free", pro: "$5.99 a month, or $49.99 a year (Google Play) / $50.00 a year (App Store)" },
+  { label: "Free trial", basic: "Not needed", pro: "14 days on Pro Yearly" },
+  { label: "Unlimited trips and bookings", basic: true, pro: true },
   { label: "Trips with flights, stays, rental cars, trains, buses, parking, events, restaurants, tours and meetings", basic: true, pro: true },
   { label: "Cancellation-deadline reminders (7 days, 2 days, 1 day or on the day)", basic: true, pro: true },
   { label: "Check-in reminders (48 and 24 hours before departure) and check-in shortcut", basic: true, pro: true },
@@ -108,23 +122,37 @@ const comparisonRows: PlanRow[] = [
   { label: "CSV and PDF export, including Travel History and a Visa / Immigration Summary", basic: true, pro: true },
   { label: "CSV import of past flights", basic: true, pro: true },
   { label: "Trip map, travel history and offline access", basic: true, pro: true },
-  { label: "Add to calendar and trip-card image sharing", basic: true, pro: true },
+  { label: "Live calendar feed, add to calendar and trip-card image sharing", basic: true, pro: true },
+  { label: "Siri, Shortcuts and Spotlight (iPhone)", basic: true, pro: true },
+  { label: "AI assistant connection (Claude, ChatGPT and others)", basic: false, pro: true },
   { label: "Booking-email import (forwarded confirmations, PDFs and screenshots)", basic: false, pro: "Included, with a monthly allowance" },
+  { label: "PDF, ticket and screenshot import in the app", basic: false, pro: true },
   { label: "Free-cancellation deadlines read from imported confirmations", basic: false, pro: true },
-  { label: "Live flight-status alerts on supported flights", basic: false, pro: true },
-  { label: "Live Activity, Dynamic Island and home-screen widgets", basic: false, pro: true },
+  { label: "Flight-number autofill", basic: false, pro: true },
+  { label: "Live flight tracking and alerts on supported flights", basic: false, pro: true },
+  { label: "Live Activity, Dynamic Island, Android flight-progress notifications and widgets", basic: false, pro: true },
 ]
 
 const pricingFaqs = [
   {
     question: "Is TripCache free?",
     answer:
-      "Yes. TripCache Basic is free and includes cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses in 153 currencies, CSV and PDF export, CSV import of past flights, the trip map, travel history and offline access. Download it free for iPhone (iOS 16.4 or later) or Android (7.0 or later).",
+      "Yes. TripCache Basic is free and includes unlimited trips, cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses in 153 currencies, CSV and PDF export, CSV import of past flights, the trip map, travel history and offline access. Download it free for iPhone (iOS 16.4 or later) or Android (7.0 or later).",
   },
   {
     question: "What does TripCache Pro add?",
     answer:
-      "Pro adds three things: booking-email import with a monthly allowance, live flight-status alerts on supported flights, and Live Activity, Dynamic Island and home-screen widgets. It costs $5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store (US prices, October 2026).",
+      "Pro connects TripCache to AI assistants such as Claude and ChatGPT, turns forwarded booking emails, PDFs, tickets and screenshots into trips (with a monthly allowance), fills in flights from the flight number, and adds live flight tracking and alerts on supported flights with Live Activity, Dynamic Island, notifications and widgets. It costs $5.99 a month, or $49.99 a year on Google Play and $50.00 on the App Store, and the yearly plan starts with a 14-day free trial (US prices, November 2026).",
+  },
+  {
+    question: "Is there a free trial of TripCache Pro?",
+    answer:
+      "Yes. Pro Yearly starts with a 14-day free trial, so you can use every Pro feature before you pay. If you cancel in your App Store or Google Play subscriptions before the trial ends, you aren't charged; otherwise the yearly price is billed when it ends. Trial eligibility follows Apple and Google rules, usually once per account. Pro Monthly has no trial.",
+  },
+  {
+    question: "Can I use TripCache with ChatGPT or Claude?",
+    answer:
+      "Yes, with Pro. Add TripCache as a connector in Claude, ChatGPT or another assistant that supports connectors, then approve the connection in the TripCache app and choose what it can do. The assistant can read your trips and add plans; you can disconnect it at any time in the app.",
   },
   {
     question: "Is email import free?",
@@ -152,7 +180,7 @@ export default function PricingPage() {
         "@id": "https://trip-cache.com/pricing#webpage",
         name: "TripCache Pricing",
         url: "https://trip-cache.com/pricing",
-        description: `${PRICE_SUMMARY} Basic includes cancellation-deadline and check-in reminders, the document vault, expenses, and CSV and PDF export. Pro adds booking-email import, live flight-status alerts on supported flights, and Live Activity and widgets.`,
+        description: `${PRICE_SUMMARY} Basic includes unlimited trips, cancellation-deadline and check-in reminders, the document vault, expenses, and CSV and PDF export. Pro adds AI assistant access (Claude, ChatGPT), booking-email and screenshot import, flight-number autofill, and live flight alerts with Live Activity and widgets.`,
         mainEntity: { "@id": "https://trip-cache.com/#app" },
         isPartOf: { "@id": "https://trip-cache.com/#website" },
         breadcrumb: { "@id": "https://trip-cache.com/pricing#breadcrumb" },
@@ -193,14 +221,14 @@ export default function PricingPage() {
           title="Start free. Pay for the post-booking work you want automated."
           lede={
             <p>
-              {PRICE_SUMMARY} Basic includes cancellation-deadline and check-in reminders, the document vault,
-              expenses, and CSV or PDF export. Pro adds booking-email import, live flight-status alerts on supported
-              flights, and Live Activity and widgets.
+              {PRICE_SUMMARY} Basic includes unlimited trips, cancellation-deadline and check-in reminders, the
+              document vault, expenses, and CSV or PDF export. Pro adds AI assistant access, booking-email and
+              screenshot import, and live flight alerts with Live Activity and widgets.
             </p>
           }
         >
           <ul className="flex flex-wrap justify-center gap-2.5">
-            {["Free cancellation reminders", "Cancel Pro anytime", "Upgrade in the app"].map((item) => (
+            {["Basic is free forever", "14-day free trial on Pro Yearly", "Cancel Pro anytime"].map((item) => (
               <li
                 key={item}
                 className="inline-flex items-center gap-2 rounded-full border border-tc-line bg-white/80 py-1.5 pl-2 pr-3.5 text-[13.5px] font-medium text-tc-ink-2"
@@ -302,7 +330,8 @@ export default function PricingPage() {
             <div className="mx-auto mt-9 max-w-[70ch] space-y-2 text-center text-[13.5px] leading-6 text-tc-mute">
               <p className="tabular-nums">
                 Yearly savings: 12 months at $5.99 is $71.88. Pro Yearly is $49.99 on Google Play and $50.00 on the App
-                Store, about 30% less. US store prices as of October 2026.
+                Store, about 30% less, after a 14-day free trial. Trial eligibility follows App Store and Google Play
+                rules. US store prices as of November 2026.
               </p>
               <p>Reminder delivery depends on your device&apos;s notification permissions and settings.</p>
             </div>
@@ -313,15 +342,15 @@ export default function PricingPage() {
           <Container>
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
               <h2 className="text-balance font-tc-display text-[clamp(34px,4.4vw,56px)] font-semibold leading-[1.04] tracking-[-0.02em] text-tc-ink">
-                Pro imports your bookings and watches your flights.
+                Pro imports your bookings, watches your flights and connects your AI.
               </h2>
               <p className="max-w-[50ch] text-pretty text-[17px] leading-8 text-tc-ink-2 sm:text-[18px]">
-                Reminders, documents, expenses, and exports are already free. Pro adds the parts that save the most time:
-                turning booking emails into trips and following flights on the day.
+                Trips, reminders, documents, expenses, and exports are already free. Pro adds the parts that save the most
+                time: turning bookings into trips, following flights on the day, and letting your AI assistant help.
               </p>
             </div>
 
-            <div className="mt-14 grid gap-5 md:grid-cols-3">
+            <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {reasons.map((reason) => (
                 <Card key={reason.title} as="article" bloom={reason.bloom} className="h-full">
                   <div className="p-6 sm:p-8">
@@ -346,12 +375,13 @@ export default function PricingPage() {
               TripCache Basic vs Pro
             </h2>
             <p className="mx-auto mt-4 max-w-[60ch] text-pretty text-center text-[17px] leading-8 text-tc-ink-2">
-              Pro gates three things: booking-email import, live flight-status alerts, and Live Activity and widgets.
-              Everything else is in Basic, and storage limits are the same on both plans.
+              Pro adds AI assistant access, booking import from emails, PDFs and screenshots, flight-number autofill, and
+              live flight alerts with Live Activity and widgets. Everything else is in Basic, and storage limits are the
+              same on both plans.
             </p>
             <PlanTable
               rows={comparisonRows}
-              caption="Features included in TripCache Basic (free) and TripCache Pro, with US prices as of October 2026"
+              caption="Features included in TripCache Basic (free) and TripCache Pro, with US prices as of November 2026"
               basicLabel="Basic (free)"
               className="mt-10"
             />
@@ -369,8 +399,8 @@ export default function PricingPage() {
                   TripCache pricing questions
                 </h2>
                 <p className="mt-5 max-w-[46ch] text-pretty text-[17px] leading-8 text-tc-ink-2">
-                  Not sure whether Pro fits your travel workflow? Ask about email import, live flight alerts, or moving
-                  your routine from TripCase.
+                  Not sure whether Pro fits your travel workflow? Start the 14-day trial on Pro Yearly, or ask us about
+                  email import, live flight alerts, or connecting your AI assistant.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 min-[480px]:flex-row">
                   <Link href="mailto:support@trip-cache.com?subject=TripCache%20pricing%20question" className={buttonClass("secondary", "lg")}>

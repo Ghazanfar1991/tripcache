@@ -117,3 +117,12 @@ Claims to avoid: that assistants can book or pay; that Siri answers without the 
 | Android AppFunctions / Gemini | `getNextFlight`, `getFlightGate`, `getUpcomingTrips`, `openTrip`, `addExpense` on API 36+. Gemini only calls AppFunctions for apps in Google's Early Access Program; TripCache is not in it. | — | **Don't claim Gemini works.** |
 
 Supersedes the 2026-10-05 row "ICS feed has no UI … not found" and the 2026-10-29 note that the ICS subscription isn't live.
+
+## 2026-11-04: Pro list from the 1.5.0 paywall, 14-day yearly trial
+
+Source: `trip-cache-app` at `a136e4a` (2 Nov 2026). The app paywall copy (`components/paywall/paywallHero.ts`) is the reference for what Pro includes. Where this section disagrees with sections 1–6, this section wins; the 2026-10-29 and 2026-11-01 sections above still hold for connector, Siri, calendar and Android details.
+
+- **Pro, new since 2026-10-05:** connecting AI assistants (Claude, ChatGPT and other connector-capable assistants) through the TripCache MCP connector. The user approves the connection in the app and chooses its access; the assistant reads trips and adds plans. Also Pro: in-app PDF, ticket and screenshot import (not only by forwarding) and **flight-number autofill** of airports and times. This replaces "no flight-number auto-lookup" in section 1 and the "Flight-number auto-fill" item in section 6.
+- **Basic (free), new:** unlimited trips and bookings; a **live calendar feed** that calendar apps subscribe to (see the 2026-11-01 section for scope and release status); Siri, Shortcuts and Spotlight on iOS.
+- **Free trial:** the owner confirmed on 2026-11-04 that Pro Yearly carries a 14-day free trial. The app shows a trial only when the store product has one (`lib/paywallPlans.ts`, `usePaywallStore.ts` eligibility check), so word it as "14-day free trial on Pro Yearly" and note that Apple and Google set eligibility. Pro Monthly has no trial. This replaces "guaranteed free trial" in section 6 for the yearly plan only.
+- Still true: email import has a monthly allowance; flight data coverage varies; no named-provider guarantees.

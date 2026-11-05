@@ -119,10 +119,10 @@ export function DeadlineCountdown() {
           <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#fec84b]">Free cancellation</span>
         </div>
         <div className="mt-3.5 flex flex-col gap-1.5">
-          <FlapText value="BELMONT HOTEL" width={16} run={seen} tone="#ffffff" />
-          <FlapText value="CANCEL BY 11 MAY" width={16} run={seen} delay={220} tone="#fec84b" />
+          <FlapText value="CROWN TOWERS" width={16} run={seen} tone="#ffffff" />
+          <FlapText value="CANCEL BY 4 OCT" width={16} run={seen} delay={220} tone="#fec84b" />
         </div>
-        <p className="sr-only">Belmont Hotel. Free cancellation until 11 May. Time left: {Math.floor(left / 86400)} days {Math.floor((left % 86400) / 3600)} hours.</p>
+        <p className="sr-only">Crown Towers Melbourne. Free cancellation until 4 Oct. Time left: {Math.floor(left / 86400)} days {Math.floor((left % 86400) / 3600)} hours.</p>
         <div className="mt-5 grid grid-cols-4 gap-2.5 sm:gap-4">
           {parts.map(([label, value]) => {
             const digits = pad(value)
@@ -157,8 +157,8 @@ export function DeadlineCountdown() {
 
 const DOCUMENTS = [
   { icon: FileText, title: "Passport", meta: "Standard document · PIN protected" },
-  { icon: Ticket, title: "Flight ticket", meta: "SYD → BKK · Trip to Bangkok" },
-  { icon: BedDouble, title: "Hotel voucher", meta: "Belmont Hotel · Trip to Manila" },
+  { icon: Ticket, title: "Flight ticket", meta: "SYD → MEL · Trip to Melbourne" },
+  { icon: BedDouble, title: "Hotel voucher", meta: "Crown Towers · Trip to Melbourne" },
 ]
 
 export function PinVault() {
@@ -249,11 +249,11 @@ export function LiveActivityCard() {
   const planeX = useTransform(eased, [0.1, 0.9], [LINE.start + 8, LINE.end - 30], { clamp: true })
   const activePath = useTransform(planeX, (x) => `M0 22 L34 22 C 60 22, 70 ${LINE.y}, 98 ${LINE.y} L ${x} ${LINE.y}`)
   const restPath = useTransform(planeX, (x) => `M ${x} ${LINE.y} L 300 ${LINE.y}`)
-  const remaining = useTransform(planeX, [LINE.start + 8, LINE.end - 30], [124, 31])
+  const remaining = useTransform(planeX, [LINE.start + 8, LINE.end - 30], [80, 12])
   const remainingText = useTransform(remaining, formatRemaining)
-  // The lock-screen clock is always arrival (7:55 PM, Sydney) minus the countdown, so the two agree.
+  // The lock-screen clock is always arrival (2:33 PM, Melbourne) minus the countdown, so the two agree.
   const clockText = useTransform(remaining, (minutes) => {
-    const at = 19 * 60 + 55 - Math.round(minutes)
+    const at = 14 * 60 + 33 - Math.round(minutes)
     return `${((Math.floor(at / 60) + 11) % 12) + 1}:${pad(at % 60)}`
   })
 
@@ -261,8 +261,8 @@ export function LiveActivityCard() {
     <div ref={ref} className="flex flex-col gap-4">
       {/* Lock-screen clock, so the widget sits where it lives */}
       <div aria-hidden="true" className="text-center text-white">
-        <p className="text-[14px] font-medium text-white/70">Tuesday 19 May</p>
-        <motion.p className="text-[64px] font-light leading-none tracking-[-0.03em] tabular-nums sm:text-[76px]">{reduce ? "6:31" : clockText}</motion.p>
+        <p className="text-[14px] font-medium text-white/70">Tuesday 6 October</p>
+        <motion.p className="text-[64px] font-light leading-none tracking-[-0.03em] tabular-nums sm:text-[76px]">{reduce ? "1:48" : clockText}</motion.p>
       </div>
       {/* Dynamic Island, compact */}
       <div className="mx-auto flex h-[40px] w-[236px] items-center justify-between rounded-full bg-black pl-2 pr-1.5 shadow-[0_14px_30px_-16px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
@@ -270,7 +270,7 @@ export function LiveActivityCard() {
           <span className="grid size-6 place-items-center rounded-full bg-tc-live text-black">
             <Plane className="size-3.5 rotate-45 fill-black" aria-hidden="true" />
           </span>
-          <motion.span className="text-[14px] font-bold tabular-nums text-tc-live">{reduce ? "1h 24m" : remainingText}</motion.span>
+          <motion.span className="text-[14px] font-bold tabular-nums text-tc-live">{reduce ? "0h 45m" : remainingText}</motion.span>
         </span>
         <span className="rounded-full bg-tc-live-gate px-2.5 py-[3px] text-[12.5px] font-bold text-black">B7</span>
       </div>
@@ -279,19 +279,19 @@ export function LiveActivityCard() {
       <div className="rounded-[28px] bg-[linear-gradient(to_bottom,#151517,#0d0d0f)] px-[18px] pb-3.5 pt-3 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
         <div className="flex items-center justify-between text-[12px] font-medium text-[#8f8f94]">
           <span className="flex items-center gap-1.5">
-            <span className="grid h-[18px] w-[22px] place-items-center rounded-[5px] bg-[#0f3d2a] text-[8.5px] font-bold text-tc-live">PR</span>
-            PR 211
+            <span className="grid h-[18px] w-[22px] place-items-center rounded-[5px] bg-[#0f3d2a] text-[8.5px] font-bold text-tc-live">QF</span>
+            QF 43
           </span>
           <span>On Time</span>
         </div>
         <div className="mt-1.5 flex items-start justify-between">
           <div>
-            <p className="text-[19px] font-bold leading-6 text-white">MNL</p>
-            <p className="text-[17px] font-bold leading-6 text-tc-live tabular-nums">8:30 AM</p>
+            <p className="text-[19px] font-bold leading-6 text-white">SYD</p>
+            <p className="text-[17px] font-bold leading-6 text-tc-live tabular-nums">1:08 PM</p>
           </div>
           <div className="text-right">
-            <p className="text-[19px] font-bold leading-6 text-white">SYD</p>
-            <p className="text-[17px] font-bold leading-6 text-tc-live tabular-nums">7:55 PM</p>
+            <p className="text-[19px] font-bold leading-6 text-white">MEL</p>
+            <p className="text-[17px] font-bold leading-6 text-tc-live tabular-nums">2:33 PM</p>
           </div>
         </div>
         <div className="flex justify-between text-[11px] font-medium text-tc-live">
@@ -320,14 +320,14 @@ export function LiveActivityCard() {
           )}
         </svg>
         <div className="relative mt-1 text-center">
-          <motion.p className="text-[20px] font-bold leading-6 tabular-nums text-tc-live">{reduce ? "1h 24m" : remainingText}</motion.p>
+          <motion.p className="text-[20px] font-bold leading-6 tabular-nums text-tc-live">{reduce ? "0h 45m" : remainingText}</motion.p>
           <p className="text-[9.5px] font-medium uppercase tracking-[0.1em] text-[#8f8f94]">Until gate arrival</p>
           <span className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-tc-live-gate px-2.5 py-1 text-[12.5px] font-bold text-black">
             B7
           </span>
         </div>
       </div>
-      <p className="sr-only">Example Live Activity: flight PR 211 from Manila 8:30 AM to Sydney 7:55 PM, on time, counting down to gate arrival at gate B7.</p>
+      <p className="sr-only">Example Live Activity: flight QF 43 from Sydney 1:08 PM to Melbourne 2:33 PM on 6 October, on time, counting down to gate arrival at gate B7.</p>
     </div>
   )
 }
@@ -337,14 +337,13 @@ export function LiveActivityCard() {
 /* ------------------------------------------------------------------ */
 
 const STOPS = [
-  { x: 71.3, y: 138.5, label: "Bangkok", note: "Fly out · 13 May", dx: 14, dy: 22, anchor: "start", color: "#6366f1" },
-  { x: 375.3, y: 124.8, label: "Manila", note: "Belmont Hotel · 2 nights", dx: -16, dy: 26, anchor: "end", color: "#12b76a" },
-  { x: 419.7, y: 194.8, label: "Cebu", note: "Island tour · 16 May", dx: -14, dy: 2, anchor: "end", color: "#d82d7e" },
-  { x: 444.8, y: 247.8, label: "Davao", note: "Rental car · 18 May", dx: -14, dy: 8, anchor: "end", color: "#f59e0b" },
+  { x: 366.3, y: 107.6, label: "Sydney", note: "QF 43 · 6 Oct", dx: 14, dy: -14, anchor: "start", color: "#6366f1" },
+  { x: 178.8, y: 255.4, label: "Melbourne", note: "Crown Towers · 2 nights", dx: -16, dy: -26, anchor: "end", color: "#12b76a" },
 ] as const
 
-const FLIGHT_ARC = "M71.3 138.5 Q 223 18 375.3 124.8"
-const ONWARD = "M375.3 124.8 Q 418 140 419.7 194.8 Q 432 226 444.8 247.8"
+const FLIGHT_ARC = "M366.3 107.6 Q 236 92 178.8 255.4"
+/** Return flight QF 448 on 8 Oct, drawn as a dotted line under the outbound arc. */
+const ONWARD = "M178.8 255.4 Q 300 238 366.3 107.6"
 
 export function RouteMap() {
   const ref = useRef<SVGSVGElement>(null)
@@ -358,7 +357,7 @@ export function RouteMap() {
       viewBox={`0 0 ${MAP_VIEWBOX.width} ${MAP_VIEWBOX.height}`}
       className="h-auto w-full overflow-visible"
       role="img"
-      aria-label="Example trip map: fly from Bangkok to Manila, then on to Cebu and Davao"
+      aria-label="Example trip map: fly from Sydney to Melbourne on QF 43 and back on QF 448"
     >
       <defs>
         <radialGradient id="tc-map-feather" cx="50%" cy="50%" r="62%">
@@ -370,8 +369,8 @@ export function RouteMap() {
         </mask>
         <mask id="tc-map-reveal">
           <motion.circle
-            cx={71.3}
-            cy={138.5}
+            cx={366.3}
+            cy={107.6}
             fill="white"
             initial={{ r: reduce ? 620 : 0 }}
             animate={{ r: draw ? 620 : 0 }}
@@ -468,21 +467,16 @@ export function RouteMap() {
 
 type Spend = { color: string; amount: number }
 const DAYS: { day: string; spend: Spend[] }[] = [
-  { day: "13", spend: [{ color: "#6366f1", amount: 412 }, { color: "#12b76a", amount: 96 }] },
-  { day: "14", spend: [{ color: "#f59e0b", amount: 58 }] },
-  { day: "15", spend: [{ color: "#d82d7e", amount: 22 }, { color: "#9ca0a4", amount: 35 }] },
-  { day: "16", spend: [] },
-  { day: "17", spend: [] },
-  { day: "18", spend: [] },
-  { day: "19", spend: [] },
+  { day: "6", spend: [{ color: "#6366f1", amount: 189 }, { color: "#12b76a", amount: 254 }] },
+  { day: "7", spend: [{ color: "#d82d7e", amount: 79 }, { color: "#d82d7e", amount: 64 }, { color: "#9ca0a4", amount: 37 }] },
+  { day: "8", spend: [] },
 ]
-const MAX = 520
+const MAX = 460
 const CHART = 140
-const AVERAGE = 89
+const AVERAGE = 208
 const LEGEND = [
   ["Flight", "#6366f1"],
   ["Hotel", "#12b76a"],
-  ["Car", "#f59e0b"],
   ["Activity", "#d82d7e"],
   ["Other", "#9ca0a4"],
 ] as const
@@ -490,10 +484,10 @@ const LEGEND = [
 export function SpendBars() {
   const reduce = useReducedMotion()
   return (
-    <div role="img" aria-label="Daily spending for the sample trip: A$508 on 13 May (flight and hotel), A$58 on 14 May (car), A$57 on 15 May (tour and food); 16 to 19 May are still ahead.">
+    <div role="img" aria-label="Daily spending for the sample trip to Melbourne: A$443 on 6 Oct (flight and hotel), A$180 on 7 Oct (river cruise, food tour and food); 8 Oct is still ahead.">
       <div className="relative flex h-[150px] items-end gap-2.5 sm:gap-3">
         <span aria-hidden="true" className="absolute inset-x-0 border-t border-dashed border-tc-violet/40" style={{ bottom: `${(AVERAGE / MAX) * CHART}px` }}>
-          <span className="absolute -top-5 right-0 text-[11px] font-medium text-tc-violet">avg A$89/day</span>
+          <span className="absolute -top-5 right-0 text-[11px] font-medium text-tc-violet">avg A$208/day</span>
         </span>
         {DAYS.map((entry, index) =>
           entry.spend.length ? (
@@ -539,11 +533,11 @@ export function SpendBars() {
 }
 
 const CSV_ROWS = [
-  ["13 May", "Flight", "PR 731", "412.00"],
-  ["13 May", "Hotel", "Belmont Hotel", "96.00"],
-  ["14 May", "Car", "Rental · 1 day", "58.00"],
-  ["15 May", "Activity", "Walking tour", "22.00"],
-  ["15 May", "Food", "Receipt 12", "35.00"],
+  ["6 Oct", "Flight", "QF 43", "189.00"],
+  ["6 Oct", "Hotel", "Crown Towers", "254.00"],
+  ["7 Oct", "Activity", "Yarra River cruise", "79.00"],
+  ["7 Oct", "Activity", "Laneways food tour", "64.00"],
+  ["7 Oct", "Food", "Receipt 12", "37.00"],
 ]
 
 export function CsvPreview() {
@@ -551,7 +545,7 @@ export function CsvPreview() {
   return (
     <div className="overflow-hidden rounded-[20px] border border-tc-line bg-white shadow-[0_20px_40px_-30px_rgba(45,27,87,0.5)]">
       <div className="flex items-center justify-between border-b border-tc-line bg-tc-mist px-4 py-3">
-        <span className="text-[13px] font-semibold text-tc-ink">trip-to-manila.csv</span>
+        <span className="text-[13px] font-semibold text-tc-ink">trip-to-melbourne.csv</span>
         <span className="rounded-full bg-tc-violet-soft px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.06em] text-tc-violet">Free</span>
       </div>
       <table className="w-full text-[12.5px] tabular-nums sm:text-[13px]">

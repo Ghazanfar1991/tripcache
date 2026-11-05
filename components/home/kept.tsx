@@ -92,7 +92,7 @@ export function Kept() {
             text="Track costs as you go in any of 153 currencies, and keep receipts as trip documents."
           >
             <div className="mb-8">
-              <p className="text-[14px] font-semibold text-tc-ink-2">Trip to Manila · 7 days</p>
+              <p className="text-[14px] font-semibold text-tc-ink-2">Trip to Melbourne · 3 days</p>
               <p className="mt-1 font-tc-display text-[clamp(56px,6.4vw,80px)] font-light leading-none tracking-[-0.03em] tabular-nums text-tc-ink">
                 A$1,500
               </p>

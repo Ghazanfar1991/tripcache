@@ -72,7 +72,7 @@ const websiteSchema = {
 }
 
 const proFeatureSummary =
-  "Pro adds booking-email import with a monthly allowance, live flight-status alerts on supported flights, and Live Activity, Dynamic Island and widgets."
+  "Pro adds AI assistant access (Claude, ChatGPT and other connector-capable assistants), booking import from forwarded emails, PDFs, tickets and screenshots with a monthly allowance, flight-number autofill, live flight tracking and alerts on supported flights, and Live Activity, Dynamic Island, notifications and widgets."
 
 const mobileApplicationSchema = {
   "@context": "https://schema.org",
@@ -85,10 +85,11 @@ const mobileApplicationSchema = {
   url: SITE_URL,
   image: `${SITE_URL}/app-icon-violet-indigo.webp`,
   description:
-    "TripCache is a post-booking travel organizer for iPhone and Android. The free Basic plan includes cancellation-deadline and check-in reminders, boarding-pass scanning, a document vault, expenses and CSV or PDF export. TripCache Pro adds booking-email import and live flight-status alerts on supported flights.",
+    "TripCache is a post-booking travel organizer for iPhone and Android. The free Basic plan includes cancellation-deadline and check-in reminders, boarding-pass scanning, a document vault, expenses and CSV or PDF export. TripCache Pro adds AI assistant access for Claude and ChatGPT, booking-email and screenshot import, flight-number autofill and live flight-status alerts on supported flights; Pro Yearly starts with a 14-day free trial.",
   downloadUrl: [IOS_STORE_URL, ANDROID_STORE_URL],
   inLanguage: "en",
   featureList: [
+    "Unlimited trips and bookings (Basic, free)",
     "Trips with flights, stays, rental cars, trains, buses, parking, events, restaurants, tours and meetings (Basic, free)",
     "Cancellation-deadline reminders 7 days, 2 days or 1 day before, or on the day (Basic, free)",
     "Check-in reminders 48 and 24 hours before departure, with a check-in shortcut (Basic, free)",
@@ -99,11 +100,15 @@ const mobileApplicationSchema = {
     "CSV import of past flights (Basic, free)",
     "Trip map and travel history (Basic, free)",
     "Offline access to trips and cached documents (Basic, free)",
-    "Add flights and trips to the phone's calendar (Basic, free)",
+    "Live calendar feed and adding flights and trips to the phone's calendar (Basic, free)",
+    "Siri, Shortcuts and Spotlight on iPhone (Basic, free)",
     "Trip-card and flight-card image sharing (Basic, free)",
+    "Connect Claude, ChatGPT or another AI assistant to read trips and add plans, with your approval (Pro)",
     "Booking-email import with a monthly allowance (Pro)",
-    "Live flight-status alerts on supported flights (Pro)",
-    "Live Activity, Dynamic Island and home-screen widgets (Pro)",
+    "PDF, ticket and screenshot import in the app (Pro)",
+    "Flight-number autofill of airports and times (Pro)",
+    "Live flight tracking and alerts on supported flights (Pro)",
+    "Live Activity, Dynamic Island, Android flight-progress notifications and home-screen widgets (Pro)",
   ],
   provider: { "@id": `${SITE_URL}/#organization` },
   publisher: { "@id": `${SITE_URL}/#organization` },
@@ -112,7 +117,7 @@ const mobileApplicationSchema = {
       "@type": "Offer",
       name: "TripCache Basic",
       description:
-        "Free plan: cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses in 153 currencies, CSV and PDF export, CSV import, trip map, travel history and offline access. Storage limits are the same on every plan.",
+        "Free plan: unlimited trips, cancellation-deadline and check-in reminders, boarding-pass scanning, the document vault, expenses in 153 currencies, CSV and PDF export, CSV import, live calendar feed, trip map, travel history and offline access. Storage limits are the same on every plan.",
       price: "0",
       priceCurrency: "USD",
       url: PRICING_URL,
@@ -135,31 +140,49 @@ const mobileApplicationSchema = {
     {
       "@type": "Offer",
       name: "TripCache Pro Yearly (Google Play)",
-      description: `Yearly subscription bought through Google Play. ${proFeatureSummary}`,
+      description: `Yearly subscription bought through Google Play, starting with a 14-day free trial for eligible new subscribers. ${proFeatureSummary}`,
       price: "49.99",
       priceCurrency: "USD",
       eligibleRegion: US_REGION,
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "49.99",
-        priceCurrency: "USD",
-        billingDuration: "P1Y",
-      },
+      priceSpecification: [
+        {
+          "@type": "UnitPriceSpecification",
+          name: "14-day free trial",
+          price: "0",
+          priceCurrency: "USD",
+          billingDuration: "P14D",
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          price: "49.99",
+          priceCurrency: "USD",
+          billingDuration: "P1Y",
+        },
+      ],
       url: ANDROID_STORE_URL,
     },
     {
       "@type": "Offer",
       name: "TripCache Pro Yearly (App Store)",
-      description: `Yearly subscription bought through the App Store. ${proFeatureSummary}`,
+      description: `Yearly subscription bought through the App Store, starting with a 14-day free trial for eligible new subscribers. ${proFeatureSummary}`,
       price: "50.00",
       priceCurrency: "USD",
       eligibleRegion: US_REGION,
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "50.00",
-        priceCurrency: "USD",
-        billingDuration: "P1Y",
-      },
+      priceSpecification: [
+        {
+          "@type": "UnitPriceSpecification",
+          name: "14-day free trial",
+          price: "0",
+          priceCurrency: "USD",
+          billingDuration: "P14D",
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          price: "50.00",
+          priceCurrency: "USD",
+          billingDuration: "P1Y",
+        },
+      ],
       url: IOS_STORE_URL,
     },
   ],

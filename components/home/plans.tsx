@@ -7,19 +7,20 @@ import { useState } from "react"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/** Plan facts follow seo/research/app-feature-inventory.md: Pro gates email import, live alerts, Live Activity/widgets and the AI assistant connector. */
+/** Plan facts follow seo/research/app-feature-inventory.md and the app paywall (components/paywall/paywallHero.ts). */
 const BASIC = [
-  "Manual trips, boarding-pass scanning and the document vault",
+  "Unlimited trips, boarding-pass scanning and the document vault",
   "Cancellation-deadline and check-in reminders",
   "Expenses in 153 currencies, with budgets",
-  "CSV and PDF export, CSV import, trip map and offline access",
+  "CSV and PDF export, live calendar feed, trip map and offline access",
 ]
 const PRO = [
   "Everything in Basic",
-  "Booking-email import with draft review (monthly allowance)",
-  "Live flight-status alerts on supported flights",
+  "Connect Claude, ChatGPT or another AI assistant",
+  "Booking import from emails, PDFs and screenshots (monthly allowance)",
+  "Flight-number autofill",
+  "Live flight alerts on supported flights",
   "Live Activity, Dynamic Island and widgets",
-  "Connect AI assistants such as Claude and ChatGPT",
 ]
 
 export function Plans() {
@@ -109,12 +110,12 @@ export function Plans() {
                       exit={{ opacity: 0, scale: 0.8 }}
                       transition={{ duration: 0.3, ease: EASE }}
                     >
-                      Save 30%
+                      14 days free · save 30%
                     </motion.span>
                   ) : null}
                 </AnimatePresence>
               </div>
-              <p className="relative mt-1 text-[15px] text-[#e4dcff]">Add email import and live flight alerts.</p>
+              <p className="relative mt-1 text-[15px] text-[#e4dcff]">Email import, live flight alerts and your AI assistant.</p>
               <div className="relative mt-8 flex items-baseline gap-2">
                 <span className="relative inline-flex h-[62px] overflow-hidden font-tc-display text-[60px] font-semibold leading-none tracking-[-0.02em] tabular-nums">
                   <AnimatePresence initial={false} mode="popLayout">
@@ -133,7 +134,7 @@ export function Plans() {
               </div>
               <p className="relative mt-2 text-[14px] text-[#e4dcff]">
                 {yearly
-                  ? "$49.99 on Google Play, $50.00 on the App Store: about $4.17 a month, 30% less than monthly."
+                  ? "14-day free trial, then $49.99 on Google Play or $50.00 on the App Store: about $4.17 a month, 30% less than monthly."
                   : "$71.88 over 12 months. Cancel anytime in your App Store or Google Play subscriptions."}
               </p>
               <ul className="relative mt-8 grid gap-3.5 sm:grid-cols-2">
@@ -165,7 +166,7 @@ export function Plans() {
         </div>
 
         <p className="mx-auto mt-8 max-w-[70ch] text-center text-[13.5px] leading-6 text-tc-mute">
-          US prices as of October 2026; your store may show local pricing. You upgrade to Pro inside the mobile app.
+          US prices as of November 2026; your store may show local pricing. You upgrade to Pro inside the mobile app.
           Storage limits are the same on both plans.
         </p>
       </div>

@@ -11,7 +11,7 @@ export const CATEGORY: Record<Category, { label: string; plural: string; color: 
   activity: { label: "Activity", plural: "Activities", color: "#d82d7e", soft: "#fce7f2", text: "#c12570" },
 }
 
-/** Sample confirmation emails for the signature section. Illustrative, not real bookings. */
+/** Sample confirmation emails for the signature section: the Trip to Melbourne shown in /app-ui-trip-detail.webp. Illustrative, not real bookings. */
 export const EMAILS: {
   category: Category
   from: string
@@ -24,43 +24,53 @@ export const EMAILS: {
 }[] = [
   {
     category: "flight",
-    from: "Flight booking",
-    subject: "Your e-ticket receipt · PR 731",
-    detail: "Bangkok → Manila · 13 May, 1:25 pm",
+    from: "Qantas",
+    subject: "Your e-ticket receipt · QF 43",
+    detail: "Sydney → Melbourne · 6 Oct, 1:08 pm",
     time: "9:41",
-    chip: "PR 731 · BKK → MNL",
-    when: "13:25",
-    date: "13 May",
+    chip: "QF 43 · SYD → MEL",
+    when: "13:08",
+    date: "6 Oct",
   },
   {
     category: "hotel",
-    from: "Belmont Hotel Manila",
+    from: "Crown Towers Melbourne",
     subject: "Reservation confirmed",
-    detail: "13–14 May · free cancellation until 11 May",
+    detail: "6–8 Oct · free cancellation until 4 Oct",
     time: "Yesterday",
-    chip: "Belmont Hotel · 1 night",
+    chip: "Crown Towers · 2 nights",
     when: "15:00",
-    date: "13 May",
-  },
-  {
-    category: "car",
-    from: "Car rental",
-    subject: "Your rental voucher is ready",
-    detail: "Pick-up 14 May, 9:00 am · Pasay",
-    time: "Mon",
-    chip: "Rental car · Pasay",
-    when: "09:00",
-    date: "14 May",
+    date: "6 Oct",
   },
   {
     category: "activity",
     from: "Tour tickets",
-    subject: "2 tickets: Intramuros walking tour",
-    detail: "15 May, 10:30 am · meet at Fort Santiago",
-    time: "Sun",
-    chip: "Walking tour · 2 tickets",
+    subject: "2 tickets: Yarra River cruise",
+    detail: "7 Oct, 10:30 am · Southbank Promenade",
+    time: "Mon",
+    chip: "Yarra River cruise · 2 tickets",
     when: "10:30",
-    date: "15 May",
+    date: "7 Oct",
+  },
+  {
+    category: "activity",
+    from: "Tour tickets",
+    subject: "Booked: Laneways food tour",
+    detail: "7 Oct, 6:00 pm · meet at Degraves St",
+    time: "Sun",
+    chip: "Laneways food tour",
+    when: "18:00",
+    date: "7 Oct",
+  },
+  {
+    category: "flight",
+    from: "Qantas",
+    subject: "Your e-ticket receipt · QF 448",
+    detail: "Melbourne → Sydney · 8 Oct, 5:00 pm",
+    time: "Sat",
+    chip: "QF 448 · MEL → SYD",
+    when: "17:00",
+    date: "8 Oct",
   },
 ]
 
@@ -118,9 +128,9 @@ export const HERO_TRIPS: {
   },
   {
     city: "Melbourne",
-    dates: "8 – 11 Mar 2026",
-    counts: { flight: 2, hotel: 1, car: 1, activity: 1 },
-    next: { category: "flight", title: "QF 43 · Sydney → Melbourne", meta: "8 Mar · 16:30" },
+    dates: "6 – 8 Oct 2026",
+    counts: { flight: 2, hotel: 1, car: 0, activity: 2 },
+    next: { category: "flight", title: "QF 43 · Sydney → Melbourne", meta: "6 Oct · 13:08" },
   },
 ]
 
