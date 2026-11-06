@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-04T16:00:23.292Z",
+  "generatedAt": "2026-11-06T15:37:46.321Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 120,
-      "activeUsers": 120,
+      "eventCount": 146,
+      "activeUsers": 146,
       "byPlatform": [
         {
           "dimensions": {
@@ -18,8 +18,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 76,
-            "activeUsers": 76
+            "eventCount": 101,
+            "activeUsers": 101
           }
         },
         {
@@ -28,8 +28,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 44,
-            "activeUsers": 44
+            "eventCount": 45,
+            "activeUsers": 45
           }
         }
       ]
@@ -51,8 +51,8 @@
         "onboarding_completed"
       ],
       "measured": true,
-      "eventCount": 2,
-      "activeUsers": 2,
+      "eventCount": 13,
+      "activeUsers": 13,
       "byPlatform": [
         {
           "dimensions": {
@@ -60,8 +60,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 2,
-            "activeUsers": 2
+            "eventCount": 13,
+            "activeUsers": 13
           }
         }
       ]
@@ -73,10 +73,31 @@
         "import_completed",
         "draft_approved"
       ],
-      "measured": false,
-      "eventCount": 0,
-      "activeUsers": 0,
-      "byPlatform": []
+      "measured": true,
+      "eventCount": 5,
+      "activeUsers": 4,
+      "byPlatform": [
+        {
+          "dimensions": {
+            "eventName": "trip_created",
+            "platform": "iOS"
+          },
+          "metrics": {
+            "eventCount": 3,
+            "activeUsers": 2
+          }
+        },
+        {
+          "dimensions": {
+            "eventName": "trip_created",
+            "platform": "Android"
+          },
+          "metrics": {
+            "eventCount": 2,
+            "activeUsers": 2
+          }
+        }
+      ]
     },
     {
       "id": "paywallView",
@@ -85,8 +106,8 @@
         "paywall_opened"
       ],
       "measured": true,
-      "eventCount": 7,
-      "activeUsers": 2,
+      "eventCount": 46,
+      "activeUsers": 8,
       "byPlatform": [
         {
           "dimensions": {
@@ -94,7 +115,17 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 7,
+            "eventCount": 32,
+            "activeUsers": 6
+          }
+        },
+        {
+          "dimensions": {
+            "eventName": "paywall_view",
+            "platform": "iOS"
+          },
+          "metrics": {
+            "eventCount": 14,
             "activeUsers": 2
           }
         }
@@ -127,11 +158,11 @@
   "measurableSteps": [
     "installProxy",
     "onboardingComplete",
+    "activation",
     "paywallView"
   ],
   "missingInstrumentation": [
     "signUp",
-    "activation",
     "trialStart",
     "purchase"
   ],

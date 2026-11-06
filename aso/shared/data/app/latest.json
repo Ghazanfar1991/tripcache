@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-04T16:00:23.292Z",
+  "generatedAt": "2026-11-06T15:37:46.321Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,8 +10,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 1424,
-        "activeUsers": 53
+        "eventCount": 1770,
+        "activeUsers": 54
       }
     },
     {
@@ -20,8 +20,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 662,
-        "activeUsers": 50
+        "eventCount": 917,
+        "activeUsers": 64
       }
     },
     {
@@ -30,8 +30,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 625,
-        "activeUsers": 36
+        "eventCount": 907,
+        "activeUsers": 38
       }
     },
     {
@@ -40,8 +40,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 608,
-        "activeUsers": 56
+        "eventCount": 714,
+        "activeUsers": 71
       }
     },
     {
@@ -50,8 +50,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 213,
-        "activeUsers": 75
+        "eventCount": 292,
+        "activeUsers": 100
       }
     },
     {
@@ -60,18 +60,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 191,
-        "activeUsers": 53
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "notification_receive",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 88,
-        "activeUsers": 7
+        "eventCount": 225,
+        "activeUsers": 54
       }
     },
     {
@@ -80,8 +70,38 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 76,
-        "activeUsers": 76
+        "eventCount": 101,
+        "activeUsers": 101
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "notification_receive",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 89,
+        "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_clear_data",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 56,
+        "activeUsers": 6
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "first_open",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 45,
+        "activeUsers": 45
       }
     },
     {
@@ -96,12 +116,32 @@
     },
     {
       "dimensions": {
-        "eventName": "first_open",
+        "eventName": "paywall_view",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 32,
+        "activeUsers": 6
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "paywall_close",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 29,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_update",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 44,
-        "activeUsers": 44
+        "eventCount": 22,
+        "activeUsers": 15
       }
     },
     {
@@ -111,17 +151,7 @@
       },
       "metrics": {
         "eventCount": 21,
-        "activeUsers": 18
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_update",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 19,
-        "activeUsers": 12
+        "activeUsers": 19
       }
     },
     {
@@ -136,6 +166,46 @@
     },
     {
       "dimensions": {
+        "eventName": "paywall_close",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 14,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "paywall_view",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 14,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "onboarding_complete",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 13,
+        "activeUsers": 13
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "activation_nudge_scheduled",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 8,
+        "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
         "eventName": "notification_open",
         "platform": "Android"
       },
@@ -146,12 +216,12 @@
     },
     {
       "dimensions": {
-        "eventName": "paywall_view",
+        "eventName": "app_exception",
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 7,
-        "activeUsers": 2
+        "eventCount": 6,
+        "activeUsers": 6
       }
     },
     {
@@ -176,16 +246,6 @@
     },
     {
       "dimensions": {
-        "eventName": "paywall_close",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 5,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "os_update",
         "platform": "Android"
       },
@@ -196,7 +256,27 @@
     },
     {
       "dimensions": {
-        "eventName": "activation_nudge_scheduled",
+        "eventName": "trip_created",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 3,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "paywall_purchase",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "pro_prompt_tap",
         "platform": "Android"
       },
       "metrics": {
@@ -206,32 +286,12 @@
     },
     {
       "dimensions": {
-        "eventName": "onboarding_complete",
+        "eventName": "trip_created",
         "platform": "Android"
       },
       "metrics": {
         "eventCount": 2,
         "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_clear_data",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "app_exception",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 1,
-        "activeUsers": 1
       }
     },
     {
@@ -246,8 +306,8 @@
     },
     {
       "dimensions": {
-        "eventName": "paywall_purchase",
-        "platform": "Android"
+        "eventName": "pro_prompt_tap",
+        "platform": "iOS"
       },
       "metrics": {
         "eventCount": 1,
@@ -261,7 +321,7 @@
       },
       "metrics": {
         "eventCount": 0,
-        "activeUsers": 40
+        "activeUsers": 43
       }
     }
   ],
@@ -273,8 +333,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 213,
-        "activeUsers": 25
+        "eventCount": 292,
+        "activeUsers": 27
       }
     },
     {
@@ -284,8 +344,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 202,
-        "activeUsers": 28
+        "eventCount": 273,
+        "activeUsers": 37
       }
     },
     {
@@ -295,8 +355,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 104,
-        "activeUsers": 11
+        "eventCount": 152,
+        "activeUsers": 14
       }
     },
     {
@@ -306,8 +366,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 92,
-        "activeUsers": 10
+        "eventCount": 116,
+        "activeUsers": 12
       }
     },
     {
@@ -317,8 +377,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 78,
-        "activeUsers": 15
+        "eventCount": 115,
+        "activeUsers": 18
       }
     },
     {
@@ -328,8 +388,19 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 66,
-        "activeUsers": 15
+        "eventCount": 99,
+        "activeUsers": 18
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "Drafts",
+        "unifiedScreenClass": "Drafts",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 85,
+        "activeUsers": 18
       }
     },
     {
@@ -339,8 +410,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 65,
-        "activeUsers": 17
+        "eventCount": 80,
+        "activeUsers": 22
       }
     },
     {
@@ -350,8 +421,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 60,
-        "activeUsers": 15
+        "eventCount": 79,
+        "activeUsers": 21
       }
     },
     {
@@ -361,52 +432,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 55,
-        "activeUsers": 16
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Drafts",
-        "unifiedScreenClass": "Drafts",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 49,
-        "activeUsers": 15
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Onboarding",
-        "unifiedScreenClass": "Onboarding",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 43,
-        "activeUsers": 43
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "FlightDetail",
-        "unifiedScreenClass": "FlightDetail",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 40,
-        "activeUsers": 8
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "FlightDetail",
-        "unifiedScreenClass": "FlightDetail",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 39,
-        "activeUsers": 7
+        "eventCount": 75,
+        "activeUsers": 22
       }
     },
     {
@@ -416,8 +443,30 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 35,
-        "activeUsers": 6
+        "eventCount": 62,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "Onboarding",
+        "unifiedScreenClass": "Onboarding",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 59,
+        "activeUsers": 55
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "FlightDetail",
+        "unifiedScreenClass": "FlightDetail",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 54,
+        "activeUsers": 10
       }
     },
     {
@@ -427,8 +476,19 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 33,
-        "activeUsers": 20
+        "eventCount": 52,
+        "activeUsers": 32
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "FlightDetail",
+        "unifiedScreenClass": "FlightDetail",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 49,
+        "activeUsers": 7
       }
     },
     {
@@ -444,24 +504,13 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "SignIn",
-        "unifiedScreenClass": "SignIn",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 15,
-        "activeUsers": 12
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "SignUp",
-        "unifiedScreenClass": "SignUp",
+        "unifiedScreenName": "Paywall",
+        "unifiedScreenClass": "Paywall",
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 14,
-        "activeUsers": 11
+        "eventCount": 26,
+        "activeUsers": 3
       }
     },
     {
@@ -471,19 +520,52 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 13,
-        "activeUsers": 5
+        "eventCount": 25,
+        "activeUsers": 6
       }
     },
     {
       "dimensions": {
         "unifiedScreenName": "SignUp",
         "unifiedScreenClass": "SignUp",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 18,
+        "activeUsers": 15
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "SignIn",
+        "unifiedScreenClass": "SignIn",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 13,
+        "activeUsers": 11
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "Paywall",
+        "unifiedScreenClass": "Paywall",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 12,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "DraftReview",
+        "unifiedScreenClass": "DraftReview",
         "platform": "iOS"
       },
       "metrics": {
         "eventCount": 11,
-        "activeUsers": 10
+        "activeUsers": 2
       }
     },
     {
@@ -493,19 +575,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 10,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "Paywall",
-        "unifiedScreenClass": "Paywall",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 6,
-        "activeUsers": 1
+        "eventCount": 11,
+        "activeUsers": 4
       }
     },
     {
@@ -515,8 +586,19 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 5,
-        "activeUsers": 5
+        "eventCount": 10,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "SignUp",
+        "unifiedScreenClass": "SignUp",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 10,
+        "activeUsers": 9
       }
     },
     {
@@ -526,8 +608,19 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 4,
-        "activeUsers": 3
+        "eventCount": 7,
+        "activeUsers": 5
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "DraftReview",
+        "unifiedScreenClass": "DraftReview",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 3,
+        "activeUsers": 1
       }
     },
     {
@@ -543,8 +636,8 @@
     },
     {
       "dimensions": {
-        "unifiedScreenName": "DraftReview",
-        "unifiedScreenClass": "DraftReview",
+        "unifiedScreenName": "(not set)",
+        "unifiedScreenClass": "MainActivity",
         "platform": "Android"
       },
       "metrics": {
@@ -562,6 +655,17 @@
         "eventCount": 1,
         "activeUsers": 1
       }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "ResetPassword",
+        "unifiedScreenClass": "ResetPassword",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 1,
+        "activeUsers": 1
+      }
     }
   ],
   "acquisition": [
@@ -571,8 +675,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "newUsers": 47,
-        "activeUsers": 50
+        "newUsers": 70,
+        "activeUsers": 73
       }
     },
     {
@@ -581,8 +685,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "newUsers": 44,
-        "activeUsers": 53
+        "newUsers": 45,
+        "activeUsers": 54
       }
     },
     {
@@ -591,8 +695,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "newUsers": 24,
-        "activeUsers": 24
+        "newUsers": 26,
+        "activeUsers": 27
       }
     },
     {

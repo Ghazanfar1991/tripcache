@@ -1,20 +1,20 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-11-04T15:59:27.087Z",
+  "generatedAt": "2026-11-06T15:36:50.782Z",
   "sitemapUrls": 63,
-  "indexed": 52,
-  "notIndexed": 11,
+  "indexed": 54,
+  "notIndexed": 9,
   "byCoverageState": {
-    "Submitted and indexed": 52,
+    "Submitted and indexed": 54,
+    "URL is unknown to Google": 2,
     "Discovered - currently not indexed": 6,
-    "URL is unknown to Google": 4,
     "Not found (404)": 1
   },
   "issues": [
     {
       "path": "/account-delete",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/ai-agents/claude",
@@ -38,11 +38,6 @@
     },
     {
       "path": "/ai-agents/perplexity",
-      "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/ai-agents/mcp",
       "kind": "not-indexed",
       "detail": "Discovered - currently not indexed"
     },
@@ -74,20 +69,15 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/travel-itinerary-template-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
-    },
-    {
-      "path": "/blog/flighty-vs-tripcache-2026",
-      "kind": "not-indexed",
       "detail": "Discovered - currently not indexed"
     },
     {
-      "path": "/blog/google-travel-alternative-2026",
+      "path": "/blog/flighty-vs-tripcache-2026",
       "kind": "not-indexed",
       "detail": "Discovered - currently not indexed"
     }
@@ -118,7 +108,7 @@
     {
       "path": "/account-delete",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -126,14 +116,14 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "crawledAs": null,
       "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:04:21.208Z",
       "indexedSince": null
     },
     {
-      "path": "/ai-agents/mcp",
+      "path": "/ai-agents/perplexity",
       "verdict": "NEUTRAL",
       "coverageState": "Discovered - currently not indexed",
       "indexed": false,
@@ -145,25 +135,9 @@
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
       "referringUrls": [
-        "/sitemap.xml"
+        "/ai-agents/openclaw",
+        "/"
       ],
-      "richResults": null,
-      "firstSeenAt": "2026-11-04T15:56:04.577Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/ai-agents/perplexity",
-      "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-11-02T17:38:54.158Z",
       "indexedSince": null
@@ -209,7 +183,7 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -217,8 +191,11 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/blog",
+        "/sitemap.xml"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:38.035Z",
       "indexedSince": null
@@ -243,25 +220,6 @@
       "indexedSince": null
     },
     {
-      "path": "/blog/google-travel-alternative-2026",
-      "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/blog"
-      ],
-      "richResults": null,
-      "firstSeenAt": "2026-10-04T17:06:57.179Z",
-      "indexedSince": null
-    },
-    {
       "path": "/blog/travel-booking-organizer-app-2026",
       "verdict": "NEUTRAL",
       "coverageState": "URL is unknown to Google",
@@ -281,7 +239,7 @@
     {
       "path": "/blog/travel-itinerary-template-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -289,8 +247,11 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/sitemap.xml",
+        "/blog"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:44.475Z",
       "indexedSince": null
@@ -319,7 +280,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T06:09:37Z",
+      "lastCrawlTime": "2026-11-06T02:19:02Z",
       "googleCanonical": "https://trip-cache.com",
       "userCanonical": "https://trip-cache.com/",
       "robotsTxtState": "ALLOWED",
@@ -386,7 +347,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T08:49:46Z",
+      "lastCrawlTime": "2026-11-06T09:36:30Z",
       "googleCanonical": "https://trip-cache.com/ai-agents/chatgpt",
       "userCanonical": "https://trip-cache.com/ai-agents/chatgpt",
       "robotsTxtState": "ALLOWED",
@@ -421,7 +382,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T10:03:53Z",
+      "lastCrawlTime": "2026-11-06T15:14:00Z",
       "googleCanonical": "https://trip-cache.com/ai-agents/claude",
       "userCanonical": "https://trip-cache.com/ai-agents/claude",
       "robotsTxtState": "ALLOWED",
@@ -455,7 +416,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T09:28:40Z",
+      "lastCrawlTime": "2026-11-06T13:43:11Z",
       "googleCanonical": "https://trip-cache.com/ai-agents/gemini",
       "userCanonical": "https://trip-cache.com/ai-agents/gemini",
       "robotsTxtState": "ALLOWED",
@@ -511,7 +472,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T08:11:31Z",
+      "lastCrawlTime": "2026-11-06T14:58:11Z",
       "googleCanonical": "https://trip-cache.com/ai-agents/hermes",
       "userCanonical": "https://trip-cache.com/ai-agents/hermes",
       "robotsTxtState": "ALLOWED",
@@ -533,6 +494,25 @@
       },
       "firstSeenAt": "2026-11-02T17:39:00.511Z",
       "indexedSince": "2026-11-03T15:42:31.299Z"
+    },
+    {
+      "path": "/ai-agents/mcp",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-04T16:34:35Z",
+      "googleCanonical": "https://trip-cache.com/ai-agents/mcp",
+      "userCanonical": "https://trip-cache.com/ai-agents/mcp",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/sitemap.xml"
+      ],
+      "richResults": null,
+      "firstSeenAt": "2026-11-04T15:56:04.577Z",
+      "indexedSince": "2026-11-06T15:33:18.363Z"
     },
     {
       "path": "/ai-agents/muse",
@@ -594,7 +574,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-29T13:25:17Z",
+      "lastCrawlTime": "2026-11-05T05:04:30Z",
       "googleCanonical": "https://trip-cache.com/alternatives",
       "userCanonical": "https://trip-cache.com/alternatives",
       "robotsTxtState": "ALLOWED",
@@ -698,7 +678,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-30T22:09:38Z",
+      "lastCrawlTime": "2026-11-04T19:04:42Z",
       "googleCanonical": "https://trip-cache.com/blog",
       "userCanonical": "https://trip-cache.com/blog",
       "robotsTxtState": "ALLOWED",
@@ -791,7 +771,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-01T04:09:39Z",
+      "lastCrawlTime": "2026-11-06T12:06:31Z",
       "googleCanonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "userCanonical": "https://trip-cache.com/blog/best-travel-apps-2025",
       "robotsTxtState": "ALLOWED",
@@ -874,7 +854,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-28T09:00:09Z",
+      "lastCrawlTime": "2026-11-06T03:46:30Z",
       "googleCanonical": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
       "userCanonical": "https://trip-cache.com/blog/business-travel-expense-reporting-app-2026",
       "robotsTxtState": "ALLOWED",
@@ -978,6 +958,33 @@
       },
       "firstSeenAt": "2026-10-05T16:40:25.458Z",
       "indexedSince": "2026-10-19T15:12:02.765Z"
+    },
+    {
+      "path": "/blog/google-travel-alternative-2026",
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "indexed": true,
+      "lastCrawlTime": "2026-11-06T05:39:01Z",
+      "googleCanonical": "https://trip-cache.com/blog/google-travel-alternative-2026",
+      "userCanonical": "https://trip-cache.com/blog/google-travel-alternative-2026",
+      "robotsTxtState": "ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "indexingState": "INDEXING_ALLOWED",
+      "crawledAs": "MOBILE",
+      "referringUrls": [
+        "/blog"
+      ],
+      "richResults": {
+        "verdict": "PASS",
+        "items": [
+          {
+            "type": "Breadcrumbs",
+            "issues": []
+          }
+        ]
+      },
+      "firstSeenAt": "2026-10-04T17:06:57.179Z",
+      "indexedSince": "2026-11-06T15:36:25.236Z"
     },
     {
       "path": "/blog/hotel-cancellation-policies",
@@ -1225,7 +1232,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-20T17:15:46Z",
+      "lastCrawlTime": "2026-11-04T20:19:49Z",
       "googleCanonical": "https://trip-cache.com/blog/trip-expense-management-app-2026",
       "userCanonical": "https://trip-cache.com/blog/trip-expense-management-app-2026",
       "robotsTxtState": "ALLOWED",
@@ -1280,7 +1287,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-04T14:04:30Z",
+      "lastCrawlTime": "2026-11-05T11:55:58Z",
       "googleCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "userCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "robotsTxtState": "ALLOWED",
@@ -1335,7 +1342,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-30T18:24:36Z",
+      "lastCrawlTime": "2026-11-06T03:09:00Z",
       "googleCanonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "userCanonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "robotsTxtState": "ALLOWED",
@@ -1415,7 +1422,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T03:39:38Z",
+      "lastCrawlTime": "2026-11-06T11:29:01Z",
       "googleCanonical": "https://trip-cache.com/features/cancellation-reminders",
       "userCanonical": "https://trip-cache.com/features/cancellation-reminders",
       "robotsTxtState": "ALLOWED",
@@ -1499,7 +1506,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-29T05:49:44Z",
+      "lastCrawlTime": "2026-11-06T07:44:03Z",
       "googleCanonical": "https://trip-cache.com/privacy",
       "userCanonical": "https://trip-cache.com/privacy",
       "robotsTxtState": "ALLOWED",
@@ -1542,7 +1549,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-02T15:09:36Z",
+      "lastCrawlTime": "2026-11-06T12:44:01Z",
       "googleCanonical": "https://trip-cache.com/tools",
       "userCanonical": "https://trip-cache.com/tools",
       "robotsTxtState": "ALLOWED",
@@ -1589,7 +1596,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-02T05:10:37Z",
+      "lastCrawlTime": "2026-11-04T21:34:48Z",
       "googleCanonical": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "userCanonical": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "robotsTxtState": "ALLOWED",
@@ -1618,7 +1625,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-01T11:39:37Z",
+      "lastCrawlTime": "2026-11-06T07:06:30Z",
       "googleCanonical": "https://trip-cache.com/tools/jet-lag-calculator",
       "userCanonical": "https://trip-cache.com/tools/jet-lag-calculator",
       "robotsTxtState": "ALLOWED",

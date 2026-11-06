@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T15:59:27.135Z",
+  "generatedAt": "2026-11-06T15:36:50.829Z",
   "propertyId": "514130776",
   "webStreamId": "15446445587",
   "measurementId": "G-JP6JKPVPVY",
@@ -14,8 +14,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 31,
-        "activeUsers": 22
+        "eventCount": 33,
+        "activeUsers": 24
       }
     },
     {
@@ -24,8 +24,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 24,
-        "activeUsers": 20
+        "eventCount": 26,
+        "activeUsers": 21
       }
     },
     {
@@ -34,8 +34,8 @@
         "platform": "web"
       },
       "metrics": {
-        "eventCount": 8,
-        "activeUsers": 7
+        "eventCount": 10,
+        "activeUsers": 8
       }
     },
     {
@@ -52,22 +52,22 @@
   "landingPages": [
     {
       "dimensions": {
-        "landingPage": "/blog/how-to-find-your-travel-history"
+        "landingPage": "/"
       },
       "metrics": {
-        "sessions": 89,
-        "activeUsers": 87,
-        "engagementRate": 0.550561797752809
+        "sessions": 83,
+        "activeUsers": 54,
+        "engagementRate": 0.5903614457831325
       }
     },
     {
       "dimensions": {
-        "landingPage": "/"
+        "landingPage": "/blog/how-to-find-your-travel-history"
       },
       "metrics": {
-        "sessions": 78,
-        "activeUsers": 52,
-        "engagementRate": 0.6025641025641025
+        "sessions": 79,
+        "activeUsers": 77,
+        "engagementRate": 0.6075949367088608
       }
     },
     {
@@ -75,9 +75,9 @@
         "landingPage": "/blog/tripcase-shutdown-what-now"
       },
       "metrics": {
-        "sessions": 67,
+        "sessions": 68,
         "activeUsers": 53,
-        "engagementRate": 0.5074626865671642
+        "engagementRate": 0.4852941176470588
       }
     },
     {
@@ -85,19 +85,9 @@
         "landingPage": "/blog/best-travel-apps-2025"
       },
       "metrics": {
-        "sessions": 27,
-        "activeUsers": 21,
-        "engagementRate": 0.18518518518518517
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "(not set)"
-      },
-      "metrics": {
-        "sessions": 23,
-        "activeUsers": 15,
-        "engagementRate": 0
+        "sessions": 29,
+        "activeUsers": 23,
+        "engagementRate": 0.20689655172413793
       }
     },
     {
@@ -105,9 +95,19 @@
         "landingPage": "/tools/jet-lag-calculator"
       },
       "metrics": {
-        "sessions": 23,
-        "activeUsers": 21,
-        "engagementRate": 0.7391304347826086
+        "sessions": 26,
+        "activeUsers": 24,
+        "engagementRate": 0.7307692307692307
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "(not set)"
+      },
+      "metrics": {
+        "sessions": 24,
+        "activeUsers": 15,
+        "engagementRate": 0
       }
     },
     {
@@ -115,19 +115,9 @@
         "landingPage": "/blog/hotel-cancellation-policies"
       },
       "metrics": {
-        "sessions": 22,
-        "activeUsers": 22,
-        "engagementRate": 0.09090909090909091
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/flight-time-zones-arrival-date"
-      },
-      "metrics": {
-        "sessions": 16,
-        "activeUsers": 16,
-        "engagementRate": 0.125
+        "sessions": 23,
+        "activeUsers": 23,
+        "engagementRate": 0.08695652173913043
       }
     },
     {
@@ -135,9 +125,9 @@
         "landingPage": "/tools/layover-calculator"
       },
       "metrics": {
-        "sessions": 16,
-        "activeUsers": 15,
-        "engagementRate": 0.6875
+        "sessions": 21,
+        "activeUsers": 20,
+        "engagementRate": 0.6190476190476191
       }
     },
     {
@@ -145,9 +135,9 @@
         "landingPage": "/blog/best-tripit-alternatives-2026"
       },
       "metrics": {
-        "sessions": 15,
-        "activeUsers": 15,
-        "engagementRate": 0.4666666666666667
+        "sessions": 19,
+        "activeUsers": 19,
+        "engagementRate": 0.42105263157894735
       }
     },
     {
@@ -155,9 +145,9 @@
         "landingPage": "/oauth/consent"
       },
       "metrics": {
-        "sessions": 14,
-        "activeUsers": 3,
-        "engagementRate": 0.7142857142857143
+        "sessions": 18,
+        "activeUsers": 4,
+        "engagementRate": 0.7777777777777778
       }
     },
     {
@@ -172,11 +162,21 @@
     },
     {
       "dimensions": {
-        "landingPage": "/blog/travel-itinerary-template-2026"
+        "landingPage": "/blog/flight-time-zones-arrival-date"
       },
       "metrics": {
         "sessions": 12,
         "activeUsers": 12,
+        "engagementRate": 0.16666666666666666
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/travel-itinerary-template-2026"
+      },
+      "metrics": {
+        "sessions": 11,
+        "activeUsers": 11,
         "engagementRate": 0
       }
     },
@@ -195,8 +195,38 @@
         "landingPage": "/blog/organize-travel-confirmation-emails-2026"
       },
       "metrics": {
+        "sessions": 8,
+        "activeUsers": 8,
+        "engagementRate": 0.25
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/ai-agents/claude"
+      },
+      "metrics": {
         "sessions": 6,
-        "activeUsers": 6,
+        "activeUsers": 5,
+        "engagementRate": 0.5
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/ai-travel-organizer-app-2026"
+      },
+      "metrics": {
+        "sessions": 6,
+        "activeUsers": 4,
+        "engagementRate": 0.3333333333333333
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/iphone-duo-travel-apps"
+      },
+      "metrics": {
+        "sessions": 6,
+        "activeUsers": 5,
         "engagementRate": 0.3333333333333333
       }
     },
@@ -207,27 +237,7 @@
       "metrics": {
         "sessions": 6,
         "activeUsers": 6,
-        "engagementRate": 0.8333333333333334
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/ai-travel-organizer-app-2026"
-      },
-      "metrics": {
-        "sessions": 5,
-        "activeUsers": 3,
-        "engagementRate": 0.4
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/save-travel-documents-offline"
-      },
-      "metrics": {
-        "sessions": 5,
-        "activeUsers": 5,
-        "engagementRate": 0.4
+        "engagementRate": 0.6666666666666666
       }
     },
     {
@@ -242,22 +252,12 @@
     },
     {
       "dimensions": {
-        "landingPage": ""
-      },
-      "metrics": {
-        "sessions": 4,
-        "activeUsers": 2,
-        "engagementRate": 0
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/ai-agents/claude"
+        "landingPage": "/blog/best-claude-connectors-for-travel"
       },
       "metrics": {
         "sessions": 4,
         "activeUsers": 4,
-        "engagementRate": 0.5
+        "engagementRate": 0.25
       }
     },
     {
@@ -267,6 +267,46 @@
       "metrics": {
         "sessions": 4,
         "activeUsers": 4,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/save-travel-documents-offline"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 4,
+        "engagementRate": 0.5
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/tools/flight-arrival-time-calculator"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 3,
+        "engagementRate": 0.5
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/tools/travel-checklist"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 4,
+        "engagementRate": 0.5
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": ""
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 1,
         "engagementRate": 0
       }
     },
@@ -293,16 +333,6 @@
     {
       "dimensions": {
         "landingPage": "/blog/business-travel-expense-reporting-app-2026"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 2,
-        "engagementRate": 0.3333333333333333
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/iphone-duo-travel-apps"
       },
       "metrics": {
         "sessions": 3,
@@ -352,27 +382,7 @@
     },
     {
       "dimensions": {
-        "landingPage": "/tools/travel-checklist"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 3,
-        "engagementRate": 0.3333333333333333
-      }
-    },
-    {
-      "dimensions": {
         "landingPage": "/about"
-      },
-      "metrics": {
-        "sessions": 2,
-        "activeUsers": 2,
-        "engagementRate": 0
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/blog/best-claude-connectors-for-travel"
       },
       "metrics": {
         "sessions": 2,
@@ -412,6 +422,26 @@
     },
     {
       "dimensions": {
+        "landingPage": "/blog/privacy-and-security"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
+        "landingPage": "/blog/trip-expense-management-app-2026"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagementRate": 0
+      }
+    },
+    {
+      "dimensions": {
         "landingPage": "/blog/trip-map-itinerary-planner-app-2026"
       },
       "metrics": {
@@ -432,17 +462,17 @@
     },
     {
       "dimensions": {
-        "landingPage": "/tools/flight-arrival-time-calculator"
+        "landingPage": "/account-delete"
       },
       "metrics": {
-        "sessions": 2,
-        "activeUsers": 2,
-        "engagementRate": 0.5
+        "sessions": 1,
+        "activeUsers": 1,
+        "engagementRate": 0
       }
     },
     {
       "dimensions": {
-        "landingPage": "/account-delete"
+        "landingPage": "/ai-agents/grok"
       },
       "metrics": {
         "sessions": 1,
@@ -456,7 +486,7 @@
       },
       "metrics": {
         "sessions": 1,
-        "activeUsers": 0,
+        "activeUsers": 1,
         "engagementRate": 0
       }
     },
@@ -582,16 +612,6 @@
     },
     {
       "dimensions": {
-        "landingPage": "/blog/trip-expense-management-app-2026"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1,
-        "engagementRate": 0
-      }
-    },
-    {
-      "dimensions": {
         "landingPage": "/features/business-travel-expenses"
       },
       "metrics": {
@@ -608,16 +628,6 @@
         "sessions": 1,
         "activeUsers": 1,
         "engagementRate": 0
-      }
-    },
-    {
-      "dimensions": {
-        "landingPage": "/features/email-to-itinerary"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1,
-        "engagementRate": 1
       }
     },
     {
@@ -679,8 +689,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 53,
-        "activeUsers": 51
+        "sessions": 49,
+        "activeUsers": 47
       }
     },
     {
@@ -701,8 +711,8 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 35,
-        "activeUsers": 18
+        "sessions": 37,
+        "activeUsers": 20
       }
     },
     {
@@ -712,7 +722,7 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 28,
+        "sessions": 30,
         "activeUsers": 22
       }
     },
@@ -723,19 +733,19 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 21,
-        "activeUsers": 19
+        "sessions": 24,
+        "activeUsers": 22
       }
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history",
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/tools/layover-calculator",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 19,
-        "activeUsers": 19
+        "sessions": 18,
+        "activeUsers": 17
       }
     },
     {
@@ -751,13 +761,24 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "(not set)",
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history",
         "platform": "web"
       },
       "metrics": {
         "sessions": 17,
-        "activeUsers": 13
+        "activeUsers": 17
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 17,
+        "activeUsers": 5
       }
     },
     {
@@ -773,35 +794,13 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "bing / organic",
-        "landingPagePlusQueryString": "/blog/tripcase-shutdown-what-now",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 16,
-        "activeUsers": 5
-      }
-    },
-    {
-      "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/tools/layover-calculator",
+        "landingPagePlusQueryString": "(not set)",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 14,
-        "activeUsers": 13
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/flight-time-zones-arrival-date",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 13,
-        "activeUsers": 13
+        "sessions": 15,
+        "activeUsers": 11
       }
     },
     {
@@ -811,14 +810,36 @@
         "platform": "web"
       },
       "metrics": {
-        "sessions": 12,
-        "activeUsers": 12
+        "sessions": 11,
+        "activeUsers": 11
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 11,
+        "activeUsers": 11
       }
     },
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 10,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/flight-time-zones-arrival-date",
         "platform": "web"
       },
       "metrics": {
@@ -839,24 +860,24 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 8,
+        "activeUsers": 8
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "bing / organic",
         "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 9,
-        "activeUsers": 9
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 9,
-        "activeUsers": 9
+        "sessions": 8,
+        "activeUsers": 8
       }
     },
     {
@@ -873,12 +894,23 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/best-tripit-alternatives-2026",
+        "landingPagePlusQueryString": "/blog/iphone-duo-travel-apps",
         "platform": "web"
       },
       "metrics": {
-        "sessions": 6,
-        "activeUsers": 6
+        "sessions": 5,
+        "activeUsers": 4
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 5,
+        "activeUsers": 5
       }
     },
     {
@@ -906,6 +938,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/ai-agents/claude",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/google-travel-alternative-2026",
         "platform": "web"
       },
@@ -927,6 +970,17 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 4,
+        "activeUsers": 4
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
         "platform": "web"
@@ -934,17 +988,6 @@
       "metrics": {
         "sessions": 4,
         "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/blog/save-travel-documents-offline",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 4,
-        "activeUsers": 4
       }
     },
     {
@@ -983,29 +1026,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/ai-agents/claude",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 3
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/iphone-duo-travel-apps",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 3,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/organize-travel-confirmation-emails-2026",
+        "landingPagePlusQueryString": "/blog/best-claude-connectors-for-travel",
         "platform": "web"
       },
       "metrics": {
@@ -1048,8 +1069,8 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "bing / organic",
-        "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/tools/layover-calculator",
         "platform": "web"
       },
       "metrics": {
@@ -1082,12 +1103,45 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/save-travel-documents-offline",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/shared/1d2f1692855c4368a675e8335de01fc6",
         "platform": "web"
       },
       "metrics": {
         "sessions": 3,
         "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/tools/flight-arrival-time-calculator",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/tools/travel-checklist",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 3,
+        "activeUsers": 3
       }
     },
     {
@@ -1126,7 +1180,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/best-claude-connectors-for-travel",
+        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -1159,7 +1213,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/tools/jet-lag-calculator",
+        "landingPagePlusQueryString": "/blog/privacy-and-security",
         "platform": "web"
       },
       "metrics": {
@@ -1170,7 +1224,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/tools/layover-calculator",
+        "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -1180,13 +1234,35 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "",
+        "sessionSourceMedium": "(direct) / (none)",
+        "landingPagePlusQueryString": "/tools/jet-lag-calculator",
         "platform": "web"
       },
       "metrics": {
         "sessions": 2,
         "activeUsers": 2
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "chatgpt.com / ai-assistant",
+        "landingPagePlusQueryString": "(not set)",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "claude.ai / ai-assistant",
+        "landingPagePlusQueryString": "(not set)",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 1
       }
     },
     {
@@ -1225,6 +1301,17 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 2,
+        "activeUsers": 0
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/blog",
         "platform": "web"
       },
@@ -1246,13 +1333,13 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/tools/travel-checklist",
+        "sessionSourceMedium": "vercel.com / referral",
+        "landingPagePlusQueryString": "/",
         "platform": "web"
       },
       "metrics": {
         "sessions": 2,
-        "activeUsers": 2
+        "activeUsers": 1
       }
     },
     {
@@ -1274,7 +1361,7 @@
       },
       "metrics": {
         "sessions": 1,
-        "activeUsers": 0
+        "activeUsers": 1
       }
     },
     {
@@ -1325,17 +1412,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/ai-travel-assistant-for-your-bookings",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/ai-travel-organizer-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -1434,28 +1510,6 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history?hl=ar-001",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history?hl=en-CA",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/rental-car-cancellation-reminder-app-2026",
         "platform": "web"
       },
@@ -1490,17 +1544,6 @@
       "dimensions": {
         "sessionSourceMedium": "(direct) / (none)",
         "landingPagePlusQueryString": "/blog/travel-booking-organizer-app-2026",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "(direct) / (none)",
-        "landingPagePlusQueryString": "/blog/trip-expense-management-app-2026",
         "platform": "web"
       },
       "metrics": {
@@ -1665,7 +1708,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history",
+        "landingPagePlusQueryString": "",
         "platform": "web"
       },
       "metrics": {
@@ -1676,7 +1719,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "(not set)",
-        "landingPagePlusQueryString": "/oauth/consent?authorization_id=2msk3jlj3sg3avf6a7oyghzvw2kyihpm",
+        "landingPagePlusQueryString": "/ai-agents/grok",
         "platform": "web"
       },
       "metrics": {
@@ -1699,6 +1742,17 @@
       "dimensions": {
         "sessionSourceMedium": "api.microsoft.ai / referral",
         "landingPagePlusQueryString": "/blog/hotel-cancellation-policies",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "bing / organic",
+        "landingPagePlusQueryString": "(not set)",
         "platform": "web"
       },
       "metrics": {
@@ -1742,23 +1796,12 @@
     {
       "dimensions": {
         "sessionSourceMedium": "chatgpt.com / ai-assistant",
-        "landingPagePlusQueryString": "",
+        "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
         "platform": "web"
       },
       "metrics": {
         "sessions": 1,
-        "activeUsers": 0
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "chatgpt.com / ai-assistant",
-        "landingPagePlusQueryString": "(not set)",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 0
+        "activeUsers": 1
       }
     },
     {
@@ -1797,7 +1840,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "chatgpt.com / ai-assistant",
-        "landingPagePlusQueryString": "/oauth/consent?authorization_id=thqzxi3ibumfbizgabneefzqc7xu4z6j",
+        "landingPagePlusQueryString": "/oauth/consent?authorization_id=dkorlq3zopxjjmj6bj6xokws74swuflr",
         "platform": "web"
       },
       "metrics": {
@@ -1807,8 +1850,30 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "claude.ai / ai-assistant",
-        "landingPagePlusQueryString": "(not set)",
+        "sessionSourceMedium": "chatgpt.com / ai-assistant",
+        "landingPagePlusQueryString": "/oauth/consent?authorization_id=kb7c323bc4js5qcil7a6m7zokxhsvzzh",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "chatgpt.com / ai-assistant",
+        "landingPagePlusQueryString": "/oauth/consent?authorization_id=q4mfw2tqfmyq3lfc2vlwvydcl7ddngp6",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "chatgpt.com / ai-assistant",
+        "landingPagePlusQueryString": "/oauth/consent?authorization_id=thqzxi3ibumfbizgabneefzqc7xu4z6j",
         "platform": "web"
       },
       "metrics": {
@@ -1929,18 +1994,29 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "",
+        "landingPagePlusQueryString": "/ai-agents/claude",
         "platform": "web"
       },
       "metrics": {
         "sessions": 1,
-        "activeUsers": 0
+        "activeUsers": 1
       }
     },
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
         "landingPagePlusQueryString": "/alternatives",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
+        "sessionSourceMedium": "google / organic",
+        "landingPagePlusQueryString": "/blog/best-claude-connectors-for-travel",
         "platform": "web"
       },
       "metrics": {
@@ -1962,7 +2038,7 @@
     {
       "dimensions": {
         "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/features/email-to-itinerary",
+        "landingPagePlusQueryString": "/blog/iphone-duo-travel-apps",
         "platform": "web"
       },
       "metrics": {
@@ -2027,17 +2103,6 @@
     },
     {
       "dimensions": {
-        "sessionSourceMedium": "google / organic",
-        "landingPagePlusQueryString": "/tools/flight-arrival-time-calculator",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
         "sessionSourceMedium": "m.facebook.com / referral",
         "landingPagePlusQueryString": "/?fbclid=IwZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAR55puwhTlJj2hwjrlRJc8UT0mNOpK_bDy7jH32AE5HR5EosJlcUiiegYR4Fbw_aem_ebcIWHtm4GLQebSGKs6XwQ",
         "platform": "web"
@@ -2060,30 +2125,19 @@
     },
     {
       "dimensions": {
+        "sessionSourceMedium": "platform.openai.com / referral",
+        "landingPagePlusQueryString": "/oauth/consent?authorization_id=oplh46udlu4stcq6u75rjmtzuypwh33i",
+        "platform": "web"
+      },
+      "metrics": {
+        "sessions": 1,
+        "activeUsers": 1
+      }
+    },
+    {
+      "dimensions": {
         "sessionSourceMedium": "reengage / email",
         "landingPagePlusQueryString": "(not set)",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "vercel.com / referral",
-        "landingPagePlusQueryString": "/",
-        "platform": "web"
-      },
-      "metrics": {
-        "sessions": 1,
-        "activeUsers": 1
-      }
-    },
-    {
-      "dimensions": {
-        "sessionSourceMedium": "yahoo / organic",
-        "landingPagePlusQueryString": "/blog/how-to-find-your-travel-history",
         "platform": "web"
       },
       "metrics": {
@@ -2095,16 +2149,27 @@
   "storeIntent": {
     "measurable": true,
     "status": "MEASURED",
-    "landingUsers": 414,
-    "landingSessions": 528,
-    "storeIntentUsers": 39,
-    "storeIntentEvents": 55,
-    "rate": 0.09420289855072464,
+    "landingUsers": 430,
+    "landingSessions": 554,
+    "storeIntentUsers": 42,
+    "storeIntentEvents": 59,
+    "rate": 0.09767441860465116,
     "eventNames": [
       "app_store_click",
       "play_store_click"
     ],
     "byPage": [
+      {
+        "dimensions": {
+          "eventName": "app_store_click",
+          "pagePathPlusQueryString": "/",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 16,
+          "activeUsers": 14
+        }
+      },
       {
         "dimensions": {
           "eventName": "play_store_click",
@@ -2118,24 +2183,24 @@
       },
       {
         "dimensions": {
-          "eventName": "app_store_click",
-          "pagePathPlusQueryString": "/",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 13,
-          "activeUsers": 12
-        }
-      },
-      {
-        "dimensions": {
           "eventName": "play_store_click",
           "pagePathPlusQueryString": "/blog/tripcase-shutdown-what-now",
           "platform": "web"
         },
         "metrics": {
-          "eventCount": 6,
-          "activeUsers": 4
+          "eventCount": 5,
+          "activeUsers": 3
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/blog/best-travel-document-organizer-app-2026",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 4,
+          "activeUsers": 3
         }
       },
       {
@@ -2174,29 +2239,29 @@
       {
         "dimensions": {
           "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/blog/best-travel-document-organizer-app-2026",
+          "pagePathPlusQueryString": "/blog/best-travel-apps-2025",
           "platform": "web"
         },
         "metrics": {
           "eventCount": 2,
-          "activeUsers": 1
+          "activeUsers": 2
+        }
+      },
+      {
+        "dimensions": {
+          "eventName": "play_store_click",
+          "pagePathPlusQueryString": "/blog/best-tripit-alternatives-2026",
+          "platform": "web"
+        },
+        "metrics": {
+          "eventCount": 2,
+          "activeUsers": 2
         }
       },
       {
         "dimensions": {
           "eventName": "app_store_click",
           "pagePathPlusQueryString": "/blog/ai-travel-organizer-app-2026",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "eventName": "app_store_click",
-          "pagePathPlusQueryString": "/blog/tripit-vs-tripcache-comparison-2025",
           "platform": "web"
         },
         "metrics": {
@@ -2240,28 +2305,6 @@
       {
         "dimensions": {
           "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/blog/best-travel-apps-2025",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/blog/best-tripit-alternatives-2026",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "eventName": "play_store_click",
           "pagePathPlusQueryString": "/blog/hotel-cancellation-reminder-app-2026",
           "platform": "web"
         },
@@ -2274,17 +2317,6 @@
         "dimensions": {
           "eventName": "play_store_click",
           "pagePathPlusQueryString": "/blog/how-to-find-your-travel-history",
-          "platform": "web"
-        },
-        "metrics": {
-          "eventCount": 1,
-          "activeUsers": 1
-        }
-      },
-      {
-        "dimensions": {
-          "eventName": "play_store_click",
-          "pagePathPlusQueryString": "/blog/how-to-find-your-travel-history?hl=ar-001",
           "platform": "web"
         },
         "metrics": {
@@ -2320,8 +2352,8 @@
   "aiAssistantReferrals": {
     "measurable": true,
     "status": "MEASURED",
-    "sessions": 24,
-    "activeUsers": 21,
+    "sessions": 30,
+    "activeUsers": 27,
     "landingPages": [
       {
         "dimensions": {
@@ -2332,6 +2364,28 @@
         "metrics": {
           "sessions": 5,
           "activeUsers": 5
+        }
+      },
+      {
+        "dimensions": {
+          "sessionSourceMedium": "chatgpt.com / ai-assistant",
+          "landingPagePlusQueryString": "(not set)",
+          "platform": "web"
+        },
+        "metrics": {
+          "sessions": 2,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "sessionSourceMedium": "claude.ai / ai-assistant",
+          "landingPagePlusQueryString": "(not set)",
+          "platform": "web"
+        },
+        "metrics": {
+          "sessions": 2,
+          "activeUsers": 1
         }
       },
       {
@@ -2359,23 +2413,12 @@
       {
         "dimensions": {
           "sessionSourceMedium": "chatgpt.com / ai-assistant",
-          "landingPagePlusQueryString": "",
+          "landingPagePlusQueryString": "/blog/best-travel-apps-2025",
           "platform": "web"
         },
         "metrics": {
           "sessions": 1,
-          "activeUsers": 0
-        }
-      },
-      {
-        "dimensions": {
-          "sessionSourceMedium": "chatgpt.com / ai-assistant",
-          "landingPagePlusQueryString": "(not set)",
-          "platform": "web"
-        },
-        "metrics": {
-          "sessions": 1,
-          "activeUsers": 0
+          "activeUsers": 1
         }
       },
       {
@@ -2414,7 +2457,7 @@
       {
         "dimensions": {
           "sessionSourceMedium": "chatgpt.com / ai-assistant",
-          "landingPagePlusQueryString": "/oauth/consent?authorization_id=thqzxi3ibumfbizgabneefzqc7xu4z6j",
+          "landingPagePlusQueryString": "/oauth/consent?authorization_id=dkorlq3zopxjjmj6bj6xokws74swuflr",
           "platform": "web"
         },
         "metrics": {
@@ -2424,8 +2467,30 @@
       },
       {
         "dimensions": {
-          "sessionSourceMedium": "claude.ai / ai-assistant",
-          "landingPagePlusQueryString": "(not set)",
+          "sessionSourceMedium": "chatgpt.com / ai-assistant",
+          "landingPagePlusQueryString": "/oauth/consent?authorization_id=kb7c323bc4js5qcil7a6m7zokxhsvzzh",
+          "platform": "web"
+        },
+        "metrics": {
+          "sessions": 1,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "sessionSourceMedium": "chatgpt.com / ai-assistant",
+          "landingPagePlusQueryString": "/oauth/consent?authorization_id=q4mfw2tqfmyq3lfc2vlwvydcl7ddngp6",
+          "platform": "web"
+        },
+        "metrics": {
+          "sessions": 1,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "sessionSourceMedium": "chatgpt.com / ai-assistant",
+          "landingPagePlusQueryString": "/oauth/consent?authorization_id=thqzxi3ibumfbizgabneefzqc7xu4z6j",
           "platform": "web"
         },
         "metrics": {
@@ -2514,6 +2579,17 @@
         "dimensions": {
           "sessionSourceMedium": "openai / organic",
           "landingPagePlusQueryString": "/",
+          "platform": "web"
+        },
+        "metrics": {
+          "sessions": 1,
+          "activeUsers": 1
+        }
+      },
+      {
+        "dimensions": {
+          "sessionSourceMedium": "platform.openai.com / referral",
+          "landingPagePlusQueryString": "/oauth/consent?authorization_id=oplh46udlu4stcq6u75rjmtzuypwh33i",
           "platform": "web"
         },
         "metrics": {

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-04T16:00:01.500Z",
+  "generatedAt": "2026-11-06T15:37:26.711Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-08-07",
-    "endDate": "2026-11-05"
+    "startDate": "2026-08-09",
+    "endDate": "2026-11-07"
   },
   "charts": {
     "mrr": {
@@ -1272,6 +1272,10 @@
                 "id": "win_back_offer"
               },
               {
+                "display_name": "Retention offer",
+                "id": "retention_offer"
+              },
+              {
                 "display_name": "Unspecified offer",
                 "id": "unspecified_offer"
               }
@@ -1335,6 +1339,22 @@
             "id": "external_subscriber_attributes",
             "object": "chart_filter_option",
             "options": []
+          },
+          {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_filter_option",
+            "options": [
+              {
+                "display_name": "New Paywall",
+                "id": "pw68dfc0aa98594b35"
+              },
+              {
+                "display_name": "Trip Cache Paywall",
+                "id": "pw97ff310eddaf4ed3"
+              }
+            ]
           },
           {
             "display_name": "Audience",
@@ -1686,6 +1706,12 @@
             "object": "chart_segment_option"
           },
           {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_segment_option"
+          },
+          {
             "display_name": "Placement",
             "group_display_name": "default",
             "id": "placement_id",
@@ -1757,7 +1783,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1793836800,
+        "end_date": 1794009600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1776,10 +1802,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786060800,
+        "start_date": 1786233600,
         "summary": {
           "average": {
-            "MRR": 22.2
+            "MRR": 23.02
           }
         },
         "unsupported_params": null,
@@ -1787,18 +1813,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1786060800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
-          {
-            "cohort": 1786147200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1786233600,
             "incomplete": false,
@@ -2323,12 +2337,24 @@
           },
           {
             "cohort": 1793750400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 49.15
           },
           {
             "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 0,
+            "value": 49.15
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 49.15
+          },
+          {
+            "cohort": 1794009600,
             "incomplete": true,
             "measure": 0,
             "value": 49.15
@@ -3648,6 +3674,10 @@
                 "id": "win_back_offer"
               },
               {
+                "display_name": "Retention offer",
+                "id": "retention_offer"
+              },
+              {
                 "display_name": "Unspecified offer",
                 "id": "unspecified_offer"
               }
@@ -3711,6 +3741,22 @@
             "id": "external_subscriber_attributes",
             "object": "chart_filter_option",
             "options": []
+          },
+          {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_filter_option",
+            "options": [
+              {
+                "display_name": "New Paywall",
+                "id": "pw68dfc0aa98594b35"
+              },
+              {
+                "display_name": "Trip Cache Paywall",
+                "id": "pw97ff310eddaf4ed3"
+              }
+            ]
           },
           {
             "display_name": "Audience",
@@ -4058,6 +4104,12 @@
             "object": "chart_segment_option"
           },
           {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_segment_option"
+          },
+          {
             "display_name": "Placement",
             "group_display_name": "default",
             "id": "placement_id",
@@ -4145,7 +4197,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1793836800,
+        "end_date": 1794009600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4180,7 +4232,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786060800,
+        "start_date": 1786233600,
         "summary": {
           "average": {
             "Ad Impressions": 0,
@@ -4198,42 +4250,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1786060800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1786060800,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1786060800,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
-          {
-            "cohort": 1786147200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1786147200,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1786147200,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1786233600,
             "incomplete": false,
@@ -5802,36 +5818,72 @@
           },
           {
             "cohort": 1793750400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1793750400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1793750400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
           {
             "cohort": 1793836800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1793836800,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7107,6 +7159,10 @@
                 "id": "win_back_offer"
               },
               {
+                "display_name": "Retention offer",
+                "id": "retention_offer"
+              },
+              {
                 "display_name": "Unspecified offer",
                 "id": "unspecified_offer"
               }
@@ -7170,6 +7226,22 @@
             "id": "external_subscriber_attributes",
             "object": "chart_filter_option",
             "options": []
+          },
+          {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_filter_option",
+            "options": [
+              {
+                "display_name": "New Paywall",
+                "id": "pw68dfc0aa98594b35"
+              },
+              {
+                "display_name": "Trip Cache Paywall",
+                "id": "pw97ff310eddaf4ed3"
+              }
+            ]
           },
           {
             "display_name": "Audience",
@@ -7521,6 +7593,12 @@
             "object": "chart_segment_option"
           },
           {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_segment_option"
+          },
+          {
             "display_name": "Placement",
             "group_display_name": "default",
             "id": "placement_id",
@@ -7571,7 +7649,7 @@
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1793836800,
+        "end_date": 1794009600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7590,27 +7668,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786060800,
+        "start_date": 1786233600,
         "summary": {
           "average": {
-            "Actives": 2.49
+            "Actives": 2.6
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1786060800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
-          {
-            "cohort": 1786147200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
           {
             "cohort": 1786233600,
             "incomplete": false,
@@ -8135,12 +8201,24 @@
           },
           {
             "cohort": 1793750400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 6
           },
           {
             "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 0,
+            "value": 6
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 6
+          },
+          {
+            "cohort": 1794009600,
             "incomplete": true,
             "measure": 0,
             "value": 6
@@ -9384,6 +9462,10 @@
                 "id": "win_back_offer"
               },
               {
+                "display_name": "Retention offer",
+                "id": "retention_offer"
+              },
+              {
                 "display_name": "Unspecified offer",
                 "id": "unspecified_offer"
               }
@@ -9447,6 +9529,22 @@
             "id": "external_subscriber_attributes",
             "object": "chart_filter_option",
             "options": []
+          },
+          {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_filter_option",
+            "options": [
+              {
+                "display_name": "New Paywall",
+                "id": "pw68dfc0aa98594b35"
+              },
+              {
+                "display_name": "Trip Cache Paywall",
+                "id": "pw97ff310eddaf4ed3"
+              }
+            ]
           },
           {
             "display_name": "Audience",
@@ -9798,6 +9896,12 @@
             "object": "chart_segment_option"
           },
           {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_segment_option"
+          },
+          {
             "display_name": "Placement",
             "group_display_name": "default",
             "id": "placement_id",
@@ -9842,7 +9946,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1793836800,
+        "end_date": 1794009600,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9861,7 +9965,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786060800,
+        "start_date": 1786233600,
         "summary": {
           "average": {
             "Active Trials": 0.07
@@ -9870,18 +9974,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1786060800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1786147200,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1786233600,
             "incomplete": false,
@@ -10406,12 +10498,24 @@
           },
           {
             "cohort": 1793750400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
             "incomplete": true,
             "measure": 0,
             "value": 0
@@ -11711,6 +11815,10 @@
                 "id": "win_back_offer"
               },
               {
+                "display_name": "Retention offer",
+                "id": "retention_offer"
+              },
+              {
                 "display_name": "Unspecified offer",
                 "id": "unspecified_offer"
               }
@@ -11774,6 +11882,22 @@
             "id": "external_subscriber_attributes",
             "object": "chart_filter_option",
             "options": []
+          },
+          {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_filter_option",
+            "options": [
+              {
+                "display_name": "New Paywall",
+                "id": "pw68dfc0aa98594b35"
+              },
+              {
+                "display_name": "Trip Cache Paywall",
+                "id": "pw97ff310eddaf4ed3"
+              }
+            ]
           },
           {
             "display_name": "Audience",
@@ -12121,6 +12245,12 @@
             "object": "chart_segment_option"
           },
           {
+            "display_name": "Paywall",
+            "group_display_name": "default",
+            "id": "paywall_id",
+            "object": "chart_segment_option"
+          },
+          {
             "display_name": "Placement",
             "group_display_name": "default",
             "id": "placement_id",
@@ -12166,6 +12296,12 @@
             "display_name": "Targeting rule",
             "group_display_name": "default",
             "id": "targeting_rule_id",
+            "object": "chart_segment_option"
+          },
+          {
+            "display_name": "Workflow",
+            "group_display_name": "default",
+            "id": "workflow_id",
             "object": "chart_segment_option"
           }
         ],
