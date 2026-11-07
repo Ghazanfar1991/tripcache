@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-11-06T15:29:58.170Z",
+  "generatedAt": "2026-11-07T14:31:55.307Z",
   "period": {
-    "startDate": "2026-10-08",
-    "endDate": "2026-11-04"
+    "startDate": "2026-10-09",
+    "endDate": "2026-11-05"
   },
   "devices": [
     {
       "device": "MOBILE",
-      "clicks": 106,
-      "impressions": 7781,
-      "ctr": 0.013622927644261663,
-      "position": 7.2560082251638605
+      "clicks": 113,
+      "impressions": 8492,
+      "ctr": 0.013306641544983514,
+      "position": 7.254474799811588
     },
     {
       "device": "DESKTOP",
-      "clicks": 93,
-      "impressions": 14611,
-      "ctr": 0.00636506741496133,
-      "position": 8.220929436725754
+      "clicks": 96,
+      "impressions": 15735,
+      "ctr": 0.006101048617731172,
+      "position": 8.208706704798221
     },
     {
       "device": "TABLET",
-      "clicks": 4,
-      "impressions": 183,
-      "ctr": 0.02185792349726776,
-      "position": 7.80327868852459
+      "clicks": 5,
+      "impressions": 197,
+      "ctr": 0.025380710659898477,
+      "position": 7.802030456852792
     }
   ]
 }
