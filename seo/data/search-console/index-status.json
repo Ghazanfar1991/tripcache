@@ -1,14 +1,14 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-11-07T14:38:28.698Z",
+  "generatedAt": "2026-11-08T14:46:42.811Z",
   "sitemapUrls": 63,
   "indexed": 54,
   "notIndexed": 9,
   "byCoverageState": {
     "Submitted and indexed": 54,
-    "Discovered - currently not indexed": 5,
-    "URL is unknown to Google": 3,
-    "Not found (404)": 1
+    "Discovered - currently not indexed": 7,
+    "Not found (404)": 1,
+    "URL is unknown to Google": 1
   },
   "issues": [
     {
@@ -39,7 +39,7 @@
     {
       "path": "/ai-agents/perplexity",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/support",
@@ -79,7 +79,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     }
   ],
   "sitemaps": [
@@ -125,7 +125,7 @@
     {
       "path": "/ai-agents/perplexity",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -133,8 +133,11 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/ai-agents/openclaw",
+        "/"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-11-02T17:38:54.158Z",
       "indexedSince": null
@@ -197,7 +200,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -205,8 +208,10 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/sitemap.xml"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:50.827Z",
       "indexedSince": null
@@ -672,7 +677,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-04T19:04:42Z",
+      "lastCrawlTime": "2026-11-07T02:05:10Z",
       "googleCanonical": "https://trip-cache.com/blog",
       "userCanonical": "https://trip-cache.com/blog",
       "robotsTxtState": "ALLOWED",
@@ -985,7 +990,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-30T20:54:37Z",
+      "lastCrawlTime": "2026-11-06T18:09:01Z",
       "googleCanonical": "https://trip-cache.com/blog/hotel-cancellation-policies",
       "userCanonical": "https://trip-cache.com/blog/hotel-cancellation-policies",
       "robotsTxtState": "ALLOWED",
