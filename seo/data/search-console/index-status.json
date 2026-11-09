@@ -1,6 +1,6 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-11-08T14:46:42.811Z",
+  "generatedAt": "2026-11-09T18:07:28.117Z",
   "sitemapUrls": 63,
   "indexed": 54,
   "notIndexed": 9,
@@ -54,7 +54,7 @@
     {
       "path": "/blog/ask-siri-about-your-flight",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/travel-booking-organizer-app-2026",
@@ -69,7 +69,7 @@
     {
       "path": "/blog/business-travel-management-guide-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/blog/travel-itinerary-template-2026",
@@ -164,25 +164,6 @@
     {
       "path": "/blog/ask-siri-about-your-flight",
       "verdict": "NEUTRAL",
-      "coverageState": "Discovered - currently not indexed",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
-      "referringUrls": [
-        "/blog/connect-chatgpt-claude-to-travel-app"
-      ],
-      "richResults": null,
-      "firstSeenAt": "2026-11-02T17:39:51.342Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/business-travel-management-guide-2026",
-      "verdict": "NEUTRAL",
       "coverageState": "URL is unknown to Google",
       "indexed": false,
       "lastCrawlTime": null,
@@ -193,6 +174,26 @@
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "crawledAs": null,
       "referringUrls": [],
+      "richResults": null,
+      "firstSeenAt": "2026-11-02T17:39:51.342Z",
+      "indexedSince": null
+    },
+    {
+      "path": "/blog/business-travel-management-guide-2026",
+      "verdict": "NEUTRAL",
+      "coverageState": "Discovered - currently not indexed",
+      "indexed": false,
+      "lastCrawlTime": null,
+      "googleCanonical": null,
+      "userCanonical": null,
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/blog",
+        "/sitemap.xml"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:06:38.035Z",
       "indexedSince": null
@@ -797,7 +798,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-31T10:39:37Z",
+      "lastCrawlTime": "2026-11-06T19:58:24Z",
       "googleCanonical": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "userCanonical": "https://trip-cache.com/blog/best-travel-document-organizer-app-2026",
       "robotsTxtState": "ALLOWED",
@@ -1096,7 +1097,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-28T16:41:32Z",
+      "lastCrawlTime": "2026-11-06T16:29:00Z",
       "googleCanonical": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "userCanonical": "https://trip-cache.com/blog/organize-travel-confirmation-emails-2026",
       "robotsTxtState": "ALLOWED",
@@ -1286,7 +1287,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-06T20:14:01Z",
+      "lastCrawlTime": "2026-11-09T08:04:09Z",
       "googleCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "userCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "robotsTxtState": "ALLOWED",
@@ -1394,7 +1395,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-10-27T07:46:57Z",
+      "lastCrawlTime": "2026-11-09T03:02:04Z",
       "googleCanonical": "https://trip-cache.com/features/business-travel-expenses",
       "userCanonical": "https://trip-cache.com/features/business-travel-expenses",
       "robotsTxtState": "ALLOWED",

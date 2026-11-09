@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-08T14:47:10.492Z",
+  "generatedAt": "2026-11-09T18:08:06.803Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-08-11",
-    "endDate": "2026-11-09"
+    "startDate": "2026-08-12",
+    "endDate": "2026-11-10"
   },
   "charts": {
     "mrr": {
@@ -1783,7 +1783,7 @@
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1794182400,
+        "end_date": 1794268800,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1802,10 +1802,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786406400,
+        "start_date": 1786492800,
         "summary": {
           "average": {
-            "MRR": 23.85
+            "MRR": 24.45
           }
         },
         "unsupported_params": null,
@@ -1813,12 +1813,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1786406400,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1786492800,
             "incomplete": false,
@@ -2349,7 +2343,7 @@
           },
           {
             "cohort": 1794096000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 49.15
           },
@@ -2357,7 +2351,13 @@
             "cohort": 1794182400,
             "incomplete": true,
             "measure": 0,
-            "value": 49.15
+            "value": 57.39
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 57.39
           }
         ],
         "yaxis": "$",
@@ -4197,7 +4197,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1794182400,
+        "end_date": 1794268800,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4232,17 +4232,17 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786406400,
+        "start_date": 1786492800,
         "summary": {
           "average": {
             "Ad Impressions": 0,
-            "Revenue": 1.97,
-            "Transactions": 0.07
+            "Revenue": 2.06,
+            "Transactions": 0.08
           },
           "total": {
             "Ad Impressions": 0,
-            "Revenue": 178.87,
-            "Transactions": 6
+            "Revenue": 187.1,
+            "Transactions": 7
           }
         },
         "unsupported_params": null,
@@ -4250,24 +4250,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1786406400,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1786406400,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1786406400,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1786492800,
             "incomplete": false,
@@ -5854,19 +5836,19 @@
           },
           {
             "cohort": 1794096000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1794096000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1794096000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -5874,16 +5856,34 @@
             "cohort": 1794182400,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 8.23
           },
           {
             "cohort": 1794182400,
             "incomplete": true,
             "measure": 1,
-            "value": 0
+            "value": 1
           },
           {
             "cohort": 1794182400,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -7645,11 +7645,11 @@
       },
       "data": {
         "category": "actives",
-        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nSubscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions are counted as active between their start date and their refund date.\n\nWhen filtering or segmenting by Renewal Cycle, Active Subscriptions uses the cycle each subscription was in on that date. For example, when a subscription renews from Cycle 1 into Cycle 2, it moves to Cycle 2 on the renewal date; before that it counts in Cycle 1.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
+        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nSubscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions remain active until paid access ends, which is usually when the refund is processed but can differ if access continues for the rest of the billing period.\n\nWhen filtering or segmenting by Renewal Cycle, Active Subscriptions uses the cycle each subscription was in on that date. For example, when a subscription renews from Cycle 1 into Cycle 2, it moves to Cycle 2 on the renewal date; before that it counts in Cycle 1.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1794182400,
+        "end_date": 1794268800,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7668,21 +7668,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786406400,
+        "start_date": 1786492800,
         "summary": {
           "average": {
-            "Actives": 2.71
+            "Actives": 2.79
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1786406400,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
           {
             "cohort": 1786492800,
             "incomplete": false,
@@ -8213,7 +8207,7 @@
           },
           {
             "cohort": 1794096000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 6
           },
@@ -8221,7 +8215,13 @@
             "cohort": 1794182400,
             "incomplete": true,
             "measure": 0,
-            "value": 6
+            "value": 7
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 7
           }
         ],
         "yaxis": "#",
@@ -9946,7 +9946,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1794182400,
+        "end_date": 1794268800,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9965,21 +9965,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1786406400,
+        "start_date": 1786492800,
         "summary": {
           "average": {
-            "Active Trials": 0.07
+            "Active Trials": 0.09
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1786406400,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1786492800,
             "incomplete": false,
@@ -10510,7 +10504,7 @@
           },
           {
             "cohort": 1794096000,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
@@ -10518,7 +10512,13 @@
             "cohort": 1794182400,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 1
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 1
           }
         ],
         "yaxis": "#",
@@ -12461,11 +12461,11 @@
         "values": [
           {
             "measure": 0,
-            "value": 6
+            "value": 7
           },
           {
             "measure": 1,
-            "value": 5
+            "value": 6
           },
           {
             "measure": 2,
@@ -12477,11 +12477,11 @@
           },
           {
             "measure": 4,
-            "value": 83.33
+            "value": 85.71
           },
           {
             "measure": 5,
-            "value": 16.67
+            "value": 14.29
           },
           {
             "measure": 6,

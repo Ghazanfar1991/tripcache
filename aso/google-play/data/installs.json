@@ -1,6 +1,6 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-11-08T14:47:10.453Z",
+  "generatedAt": "2026-11-09T18:08:06.757Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
@@ -10,22 +10,14 @@
     "installs_app.tripcache_202608_country.csv"
   ],
   "totals28Days": {
-    "userInstalls": 20,
+    "userInstalls": 23,
     "userUninstalls": 15,
-    "deviceInstalls": 21,
+    "deviceInstalls": 23,
     "deviceUninstalls": 0
   },
-  "latestReportedDate": "2026-11-04",
-  "latestInstalledAudience": 29,
+  "latestReportedDate": "2026-11-05",
+  "latestInstalledAudience": 32,
   "daily": [
-    {
-      "date": "2026-08-05",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 1,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 14
-    },
     {
       "date": "2026-08-06",
       "dailyUserInstalls": 0,
@@ -753,6 +745,14 @@
       "dailyDeviceInstalls": 0,
       "dailyDeviceUninstalls": 0,
       "activeDeviceInstalls": 29
+    },
+    {
+      "date": "2026-11-05",
+      "dailyUserInstalls": 3,
+      "dailyUserUninstalls": 1,
+      "dailyDeviceInstalls": 2,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 32
     }
   ],
   "countries": [
@@ -782,14 +782,19 @@
       "dailyUserUninstalls": 3
     },
     {
+      "country": "IT",
+      "dailyUserInstalls": 3,
+      "dailyUserUninstalls": 2
+    },
+    {
+      "country": "SE",
+      "dailyUserInstalls": 3,
+      "dailyUserUninstalls": 2
+    },
+    {
       "country": "BD",
       "dailyUserInstalls": 2,
       "dailyUserUninstalls": 1
-    },
-    {
-      "country": "IT",
-      "dailyUserInstalls": 2,
-      "dailyUserUninstalls": 2
     },
     {
       "country": "CA",
@@ -863,11 +868,6 @@
     },
     {
       "country": "UY",
-      "dailyUserInstalls": 1,
-      "dailyUserUninstalls": 1
-    },
-    {
-      "country": "SE",
       "dailyUserInstalls": 1,
       "dailyUserUninstalls": 1
     },
