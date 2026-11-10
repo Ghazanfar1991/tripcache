@@ -1,6 +1,6 @@
-# Google Play summary — 2026-11-10
+# Google Play summary — 2026-11-11
 
-Generated 2026-11-09T18:08:26.211Z by `npm run aso:feed`.
+Generated 2026-11-10T16:05:56.046Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
@@ -15,7 +15,7 @@ Generated 2026-11-09T18:08:26.211Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 107 users
+- installProxy: 106 users
 - signUp: not instrumented
 - onboardingComplete: 14 users
 - activation: 3 users
@@ -27,15 +27,15 @@ Generated 2026-11-09T18:08:26.211Z by `npm run aso:feed`.
 
 - (direct) / (none): 76 new users
 - google-play / organic: 26 new users
-- google / organic: 5 new users
+- google / organic: 4 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$57 · active subscriptions 7 · active trials 1 · new customers (28d) 84
+- MRR A$57 · active subscriptions 7 · active trials 1 · new customers (28d) 85
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 26 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-08.
+- app-store-connect: **SUCCESS** (fresh) — 25 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-09.
 - google-play: **SUCCESS** (fresh) — 23 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
