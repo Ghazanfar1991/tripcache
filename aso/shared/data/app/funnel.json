@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-10T16:05:54.556Z",
+  "generatedAt": "2026-11-11T15:55:39.851Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 152,
-      "activeUsers": 152,
+      "eventCount": 154,
+      "activeUsers": 154,
       "byPlatform": [
         {
           "dimensions": {
@@ -18,8 +18,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 106,
-            "activeUsers": 106
+            "eventCount": 108,
+            "activeUsers": 108
           }
         },
         {
@@ -51,8 +51,8 @@
         "onboarding_completed"
       ],
       "measured": true,
-      "eventCount": 19,
-      "activeUsers": 19,
+      "eventCount": 20,
+      "activeUsers": 20,
       "byPlatform": [
         {
           "dimensions": {
@@ -70,8 +70,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 5,
-            "activeUsers": 5
+            "eventCount": 6,
+            "activeUsers": 6
           }
         }
       ]
@@ -84,9 +84,19 @@
         "draft_approved"
       ],
       "measured": true,
-      "eventCount": 6,
-      "activeUsers": 5,
+      "eventCount": 8,
+      "activeUsers": 6,
       "byPlatform": [
+        {
+          "dimensions": {
+            "eventName": "trip_created",
+            "platform": "iOS"
+          },
+          "metrics": {
+            "eventCount": 5,
+            "activeUsers": 3
+          }
+        },
         {
           "dimensions": {
             "eventName": "trip_created",
@@ -95,16 +105,6 @@
           "metrics": {
             "eventCount": 3,
             "activeUsers": 3
-          }
-        },
-        {
-          "dimensions": {
-            "eventName": "trip_created",
-            "platform": "iOS"
-          },
-          "metrics": {
-            "eventCount": 3,
-            "activeUsers": 2
           }
         }
       ]
@@ -116,8 +116,8 @@
         "paywall_opened"
       ],
       "measured": true,
-      "eventCount": 60,
-      "activeUsers": 9,
+      "eventCount": 62,
+      "activeUsers": 10,
       "byPlatform": [
         {
           "dimensions": {
@@ -135,8 +135,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 18,
-            "activeUsers": 2
+            "eventCount": 20,
+            "activeUsers": 3
           }
         }
       ]

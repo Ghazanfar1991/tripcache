@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-11-10T16:05:56.001Z",
+  "generatedAt": "2026-11-11T15:55:41.238Z",
   "sources": [
     {
       "id": "app-store-connect",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-10T16:05:35.876Z",
+      "latestSyncTime": "2026-11-11T15:55:23.909Z",
       "generatedLocalSnapshot": "aso/app-store/data/downloads.json",
-      "note": "25 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-09.",
-      "checkedAt": "2026-11-10T16:05:35.881Z"
+      "note": "27 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-10.",
+      "checkedAt": "2026-11-11T15:55:23.911Z"
     },
     {
       "id": "google-play",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-10T16:05:36.806Z",
+      "latestSyncTime": "2026-11-11T15:55:24.748Z",
       "generatedLocalSnapshot": "aso/google-play/data/installs.json",
-      "note": "23 official Play user installs in the latest 28 reported days.",
-      "checkedAt": "2026-11-10T16:05:36.815Z"
+      "note": "24 official Play user installs in the latest 28 reported days.",
+      "checkedAt": "2026-11-11T15:55:24.755Z"
     },
     {
       "id": "revenuecat",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-10T16:05:36.846Z",
+      "latestSyncTime": "2026-11-11T15:55:24.781Z",
       "generatedLocalSnapshot": "aso/shared/data/revenue/latest.json",
       "note": "Automated through RevenueCat API v2 with charts/metrics read-only access.",
-      "checkedAt": "2026-11-10T16:05:48.171Z"
+      "checkedAt": "2026-11-11T15:55:35.678Z"
     },
     {
       "id": "firebase-crashlytics",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-10T16:05:48.647Z",
+      "latestSyncTime": "2026-11-11T15:55:36.133Z",
       "note": "Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.",
       "generatedLocalSnapshot": "aso/shared/data/app/quality.json",
-      "checkedAt": "2026-11-10T16:05:54.524Z"
+      "checkedAt": "2026-11-11T15:55:39.814Z"
     },
     {
       "id": "ga4-app",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-10T16:05:54.556Z",
+      "latestSyncTime": "2026-11-11T15:55:39.851Z",
       "note": "GA4 in-app events, screens, acquisition and funnel.",
-      "checkedAt": "2026-11-10T16:05:56.001Z"
+      "checkedAt": "2026-11-11T15:55:41.238Z"
     }
   ]
 }

@@ -1,11 +1,11 @@
-# Google Play summary — 2026-11-11
+# Google Play summary — 2026-11-12
 
-Generated 2026-11-10T16:05:56.046Z by `npm run aso:feed`.
+Generated 2026-11-11T15:55:41.273Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
-- User installs: 23 · uninstalls 15 · installed audience 32
-- Latest report: 2026-11-05 (Play reports lag 3–7 days)
+- User installs: 24 · uninstalls 15 · installed audience 32
+- Latest report: 2026-11-06 (Play reports lag 3–7 days)
 - Top countries: US 8, GB 5, AU 4, ID 3, IN 3, IT 3, SE 3, BD 2
 
 ## Quality (store ranking factor)
@@ -15,7 +15,7 @@ Generated 2026-11-10T16:05:56.046Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 106 users
+- installProxy: 108 users
 - signUp: not instrumented
 - onboardingComplete: 14 users
 - activation: 3 users
@@ -25,18 +25,18 @@ Generated 2026-11-10T16:05:56.046Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 76 new users
+- (direct) / (none): 77 new users
 - google-play / organic: 26 new users
-- google / organic: 4 new users
+- google / organic: 5 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$57 · active subscriptions 7 · active trials 1 · new customers (28d) 85
+- MRR A$57 · active subscriptions 7 · active trials 1 · new customers (28d) 84
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 25 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-09.
-- google-play: **SUCCESS** (fresh) — 23 official Play user installs in the latest 28 reported days.
+- app-store-connect: **SUCCESS** (fresh) — 27 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-10.
+- google-play: **SUCCESS** (fresh) — 24 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
