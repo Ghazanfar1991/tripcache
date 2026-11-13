@@ -1,11 +1,11 @@
-# App Store summary — 2026-11-13
+# App Store summary — 2026-11-14
 
-Generated 2026-11-12T16:35:52.611Z by `npm run aso:feed`.
+Generated 2026-11-13T15:57:14.584Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
-- First-time downloads: 31 · redownloads 5 · updates 81
-- Latest report: 2026-11-11
+- First-time downloads: 30 · redownloads 5 · updates 80
+- Latest report: 2026-11-12
 
 ## Quality (store ranking factor)
 
@@ -14,27 +14,27 @@ Generated 2026-11-12T16:35:52.611Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 47 users
+- installProxy: 46 users
 - signUp: not instrumented
-- onboardingComplete: 7 users
+- onboardingComplete: 8 users
 - activation: 5 users
-- paywallView: 5 users
+- paywallView: 6 users
 - trialStart: not instrumented
 - purchase: not instrumented
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 44 new users
+- (direct) / (none): 43 new users
 - Apple / search: 3 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$57 · active subscriptions 7 · active trials 1 · new customers (28d) 85
+- MRR A$57 · active subscriptions 7 · active trials 1 · new customers (28d) 80
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 31 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-11.
-- google-play: **SUCCESS** (fresh) — 27 official Play user installs in the latest 28 reported days.
+- app-store-connect: **SUCCESS** (fresh) — 30 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-12.
+- google-play: **SUCCESS** (fresh) — 26 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
