@@ -1,54 +1,54 @@
 {
-  "generatedAt": "2026-11-13T15:56:31.108Z",
+  "generatedAt": "2026-11-14T14:46:36.407Z",
   "sources": [
     {
       "id": "search-console",
       "status": "SUCCESS",
       "freshness": "fresh",
       "reportingLagDays": 3,
-      "latestSyncTime": "2026-11-13T15:48:12.874Z",
+      "latestSyncTime": "2026-11-14T14:39:40.353Z",
       "coveredDateRange": {
-        "startDate": "2026-10-15",
-        "endDate": "2026-11-11"
+        "startDate": "2026-10-16",
+        "endDate": "2026-11-12"
       },
       "history": {
         "site": {
-          "rows": 359,
+          "rows": 360,
           "from": "2025-11-17",
-          "to": "2026-11-10"
+          "to": "2026-11-11"
         },
         "pages": {
-          "rows": 4763,
+          "rows": 4816,
           "from": "2025-11-19",
-          "to": "2026-11-10"
+          "to": "2026-11-11"
         }
       },
       "note": "Search Console API via the repository-scoped short-lived Google token.",
-      "checkedAt": "2026-11-13T15:48:13.351Z"
+      "checkedAt": "2026-11-14T14:39:41.290Z"
     },
     {
       "id": "index-status",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-13T15:55:17.614Z",
+      "latestSyncTime": "2026-11-14T14:46:21.293Z",
       "note": "54/63 sitemap URLs indexed.",
-      "checkedAt": "2026-11-13T15:55:17.621Z"
+      "checkedAt": "2026-11-14T14:46:21.300Z"
     },
     {
       "id": "ga4-web",
-      "status": "CONNECTOR_FAILURE",
-      "freshness": "stale",
-      "latestSyncTime": "2026-11-12T16:34:56.957Z",
-      "note": "HTTP 502 for https://analyticsdata.googleapis.com/v1beta/properties/514130776:runReport: {\"raw\":\"<!DOCTYPE html>\\n<html lang=en>\\n  <meta charset=utf-8>\\n  <meta name=viewport content=\\\"initial-scale=1, minimum-scale=1, width=device-width\\\">\\n  <title>Error 502 (Server Error)!!1</title>\\n  <style>\\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205",
-      "checkedAt": "2026-11-13T15:56:17.779Z"
+      "status": "SUCCESS",
+      "freshness": "fresh",
+      "latestSyncTime": "2026-11-14T14:46:21.328Z",
+      "note": "Store intent 8.6% (41/478 users, 28 days).",
+      "checkedAt": "2026-11-14T14:46:22.420Z"
     },
     {
       "id": "site-health",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-13T15:56:31.105Z",
+      "latestSyncTime": "2026-11-14T14:46:36.404Z",
       "note": "63 sitemap URLs verified; 0 warnings.",
-      "checkedAt": "2026-11-13T15:56:31.108Z"
+      "checkedAt": "2026-11-14T14:46:36.407Z"
     }
   ]
 }
