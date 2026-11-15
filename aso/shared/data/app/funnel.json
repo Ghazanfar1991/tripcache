@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-14T14:47:16.569Z",
+  "generatedAt": "2026-11-15T15:15:49.774Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 145,
-      "activeUsers": 145,
+      "eventCount": 140,
+      "activeUsers": 140,
       "byPlatform": [
         {
           "dimensions": {
@@ -18,8 +18,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 99,
-            "activeUsers": 99
+            "eventCount": 93,
+            "activeUsers": 93
           }
         },
         {
@@ -28,8 +28,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 46,
-            "activeUsers": 46
+            "eventCount": 47,
+            "activeUsers": 47
           }
         }
       ]
@@ -51,8 +51,8 @@
         "onboarding_completed"
       ],
       "measured": true,
-      "eventCount": 22,
-      "activeUsers": 22,
+      "eventCount": 24,
+      "activeUsers": 24,
       "byPlatform": [
         {
           "dimensions": {
@@ -70,8 +70,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 8,
-            "activeUsers": 8
+            "eventCount": 10,
+            "activeUsers": 10
           }
         }
       ]
@@ -84,8 +84,8 @@
         "draft_approved"
       ],
       "measured": true,
-      "eventCount": 15,
-      "activeUsers": 8,
+      "eventCount": 18,
+      "activeUsers": 10,
       "byPlatform": [
         {
           "dimensions": {
@@ -93,8 +93,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 12,
-            "activeUsers": 5
+            "eventCount": 15,
+            "activeUsers": 7
           }
         },
         {
@@ -116,8 +116,8 @@
         "paywall_opened"
       ],
       "measured": true,
-      "eventCount": 66,
-      "activeUsers": 13,
+      "eventCount": 67,
+      "activeUsers": 14,
       "byPlatform": [
         {
           "dimensions": {
@@ -135,8 +135,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 24,
-            "activeUsers": 6
+            "eventCount": 25,
+            "activeUsers": 7
           }
         }
       ]

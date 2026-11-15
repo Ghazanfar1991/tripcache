@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-14T14:47:16.569Z",
+  "generatedAt": "2026-11-15T15:15:49.774Z",
   "propertyId": "514130776",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "events": [
@@ -10,8 +10,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 2103,
-        "activeUsers": 56
+        "eventCount": 2179,
+        "activeUsers": 57
       }
     },
     {
@@ -20,8 +20,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 1289,
-        "activeUsers": 42
+        "eventCount": 1359,
+        "activeUsers": 43
       }
     },
     {
@@ -30,8 +30,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 1041,
-        "activeUsers": 68
+        "eventCount": 1016,
+        "activeUsers": 66
       }
     },
     {
@@ -40,8 +40,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 742,
-        "activeUsers": 70
+        "eventCount": 750,
+        "activeUsers": 68
       }
     },
     {
@@ -50,8 +50,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 302,
-        "activeUsers": 103
+        "eventCount": 305,
+        "activeUsers": 98
       }
     },
     {
@@ -60,8 +60,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 230,
-        "activeUsers": 56
+        "eventCount": 235,
+        "activeUsers": 57
       }
     },
     {
@@ -70,8 +70,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 99,
-        "activeUsers": 99
+        "eventCount": 93,
+        "activeUsers": 93
       }
     },
     {
@@ -100,8 +100,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 46,
-        "activeUsers": 46
+        "eventCount": 47,
+        "activeUsers": 47
       }
     },
     {
@@ -136,22 +136,12 @@
     },
     {
       "dimensions": {
-        "eventName": "app_update",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 25,
-        "activeUsers": 17
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "paywall_view",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 24,
-        "activeUsers": 6
+        "eventCount": 25,
+        "activeUsers": 7
       }
     },
     {
@@ -160,8 +150,18 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 21,
-        "activeUsers": 18
+        "eventCount": 24,
+        "activeUsers": 20
+      }
+    },
+    {
+      "dimensions": {
+        "eventName": "app_update",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 24,
+        "activeUsers": 16
       }
     },
     {
@@ -170,8 +170,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 21,
-        "activeUsers": 5
+        "eventCount": 22,
+        "activeUsers": 6
       }
     },
     {
@@ -186,6 +186,16 @@
     },
     {
       "dimensions": {
+        "eventName": "trip_created",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 15,
+        "activeUsers": 7
+      }
+    },
+    {
+      "dimensions": {
         "eventName": "onboarding_complete",
         "platform": "Android"
       },
@@ -196,12 +206,12 @@
     },
     {
       "dimensions": {
-        "eventName": "trip_created",
+        "eventName": "onboarding_complete",
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 12,
-        "activeUsers": 5
+        "eventCount": 10,
+        "activeUsers": 10
       }
     },
     {
@@ -222,16 +232,6 @@
       "metrics": {
         "eventCount": 8,
         "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
-        "eventName": "onboarding_complete",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 8,
-        "activeUsers": 8
       }
     },
     {
@@ -306,6 +306,16 @@
     },
     {
       "dimensions": {
+        "eventName": "pro_prompt_dismiss",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 3,
+        "activeUsers": 3
+      }
+    },
+    {
+      "dimensions": {
         "eventName": "pro_prompt_tap",
         "platform": "Android"
       },
@@ -346,16 +356,6 @@
     },
     {
       "dimensions": {
-        "eventName": "pro_prompt_dismiss",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 2,
-        "activeUsers": 2
-      }
-    },
-    {
-      "dimensions": {
         "eventName": "demo_exit_signup",
         "platform": "iOS"
       },
@@ -381,7 +381,7 @@
       },
       "metrics": {
         "eventCount": 0,
-        "activeUsers": 39
+        "activeUsers": 40
       }
     },
     {
@@ -403,8 +403,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 379,
-        "activeUsers": 27
+        "eventCount": 399,
+        "activeUsers": 28
       }
     },
     {
@@ -414,8 +414,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 306,
-        "activeUsers": 31
+        "eventCount": 299,
+        "activeUsers": 30
       }
     },
     {
@@ -425,8 +425,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 250,
-        "activeUsers": 11
+        "eventCount": 268,
+        "activeUsers": 13
       }
     },
     {
@@ -436,8 +436,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 150,
-        "activeUsers": 7
+        "eventCount": 159,
+        "activeUsers": 8
       }
     },
     {
@@ -447,8 +447,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 140,
-        "activeUsers": 17
+        "eventCount": 147,
+        "activeUsers": 19
       }
     },
     {
@@ -458,18 +458,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 131,
-        "activeUsers": 16
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "TripHistory",
-        "unifiedScreenClass": "TripHistory",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "eventCount": 111,
+        "eventCount": 136,
         "activeUsers": 17
       }
     },
@@ -480,8 +469,30 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 110,
-        "activeUsers": 9
+        "eventCount": 116,
+        "activeUsers": 10
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "TripHistory",
+        "unifiedScreenClass": "TripHistory",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "eventCount": 116,
+        "activeUsers": 19
+      }
+    },
+    {
+      "dimensions": {
+        "unifiedScreenName": "FlightDetail",
+        "unifiedScreenClass": "FlightDetail",
+        "platform": "Android"
+      },
+      "metrics": {
+        "eventCount": 80,
+        "activeUsers": 5
       }
     },
     {
@@ -491,8 +502,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 85,
-        "activeUsers": 17
+        "eventCount": 76,
+        "activeUsers": 15
       }
     },
     {
@@ -502,7 +513,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 75,
+        "eventCount": 74,
         "activeUsers": 10
       }
     },
@@ -513,19 +524,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 73,
-        "activeUsers": 16
-      }
-    },
-    {
-      "dimensions": {
-        "unifiedScreenName": "FlightDetail",
-        "unifiedScreenClass": "FlightDetail",
-        "platform": "Android"
-      },
-      "metrics": {
-        "eventCount": 71,
-        "activeUsers": 5
+        "eventCount": 66,
+        "activeUsers": 15
       }
     },
     {
@@ -535,8 +535,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 69,
-        "activeUsers": 18
+        "eventCount": 62,
+        "activeUsers": 16
       }
     },
     {
@@ -546,8 +546,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 65,
-        "activeUsers": 59
+        "eventCount": 62,
+        "activeUsers": 56
       }
     },
     {
@@ -557,8 +557,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 53,
-        "activeUsers": 32
+        "eventCount": 48,
+        "activeUsers": 29
       }
     },
     {
@@ -568,7 +568,7 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 39,
+        "eventCount": 40,
         "activeUsers": 5
       }
     },
@@ -579,8 +579,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 34,
-        "activeUsers": 33
+        "eventCount": 35,
+        "activeUsers": 34
       }
     },
     {
@@ -612,8 +612,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 22,
-        "activeUsers": 6
+        "eventCount": 23,
+        "activeUsers": 7
       }
     },
     {
@@ -623,8 +623,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 19,
-        "activeUsers": 11
+        "eventCount": 22,
+        "activeUsers": 13
       }
     },
     {
@@ -634,8 +634,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 18,
-        "activeUsers": 16
+        "eventCount": 17,
+        "activeUsers": 15
       }
     },
     {
@@ -645,8 +645,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 15,
-        "activeUsers": 10
+        "eventCount": 17,
+        "activeUsers": 12
       }
     },
     {
@@ -667,8 +667,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 12,
-        "activeUsers": 12
+        "eventCount": 11,
+        "activeUsers": 11
       }
     },
     {
@@ -678,7 +678,7 @@
         "platform": "Android"
       },
       "metrics": {
-        "eventCount": 12,
+        "eventCount": 10,
         "activeUsers": 5
       }
     },
@@ -689,8 +689,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "eventCount": 7,
-        "activeUsers": 5
+        "eventCount": 8,
+        "activeUsers": 6
       }
     },
     {
@@ -756,8 +756,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "newUsers": 77,
-        "activeUsers": 82
+        "newUsers": 71,
+        "activeUsers": 76
       }
     },
     {
@@ -766,8 +766,8 @@
         "platform": "iOS"
       },
       "metrics": {
-        "newUsers": 43,
-        "activeUsers": 53
+        "newUsers": 44,
+        "activeUsers": 54
       }
     },
     {
@@ -777,7 +777,7 @@
       },
       "metrics": {
         "newUsers": 17,
-        "activeUsers": 20
+        "activeUsers": 21
       }
     },
     {
