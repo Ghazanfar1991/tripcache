@@ -1,6 +1,6 @@
 {
   "source": "Firebase Crashlytics dashboard and BigQuery export",
-  "generatedAt": "2026-11-15T15:15:45.517Z",
+  "generatedAt": "2026-11-16T17:49:18.578Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -50,15 +50,15 @@
     {
       "platform": "ANDROID",
       "table": "app_tripcache_ANDROID",
-      "fatalOrAnrEvents": 53,
-      "impactedInstallations": 15,
+      "fatalOrAnrEvents": 56,
+      "impactedInstallations": 17,
       "fatalOrAnrIssues": 4,
       "topIssues": [
         {
           "issueId": "951757a123c3bbe9542453cf8634abd8",
           "errorType": "FATAL",
-          "events": 45,
-          "impactedInstallations": 7
+          "events": 48,
+          "impactedInstallations": 9
         },
         {
           "issueId": "faab73ef600b81ad35a1eb9b283d6b76",
