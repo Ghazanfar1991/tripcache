@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T17:49:22.938Z",
+  "generatedAt": "2026-11-17T17:22:40.480Z",
   "cohorts": [
     {
       "dimensions": {
@@ -7,8 +7,8 @@
         "platform": "web"
       },
       "metrics": {
-        "activeUsers": 475,
-        "sessions": 476
+        "activeUsers": 480,
+        "sessions": 481
       }
     },
     {
@@ -17,8 +17,8 @@
         "platform": "Android"
       },
       "metrics": {
-        "activeUsers": 91,
-        "sessions": 89
+        "activeUsers": 94,
+        "sessions": 92
       }
     },
     {
@@ -37,18 +37,8 @@
         "platform": "web"
       },
       "metrics": {
-        "activeUsers": 36,
-        "sessions": 89
-      }
-    },
-    {
-      "dimensions": {
-        "newVsReturning": "returning",
-        "platform": "iOS"
-      },
-      "metrics": {
-        "activeUsers": 26,
-        "sessions": 180
+        "activeUsers": 38,
+        "sessions": 90
       }
     },
     {
@@ -58,7 +48,17 @@
       },
       "metrics": {
         "activeUsers": 25,
-        "sessions": 210
+        "sessions": 218
+      }
+    },
+    {
+      "dimensions": {
+        "newVsReturning": "returning",
+        "platform": "iOS"
+      },
+      "metrics": {
+        "activeUsers": 25,
+        "sessions": 185
       }
     },
     {
@@ -88,7 +88,7 @@
       },
       "metrics": {
         "activeUsers": 0,
-        "sessions": 29
+        "sessions": 30
       }
     }
   ]

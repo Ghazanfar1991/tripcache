@@ -1,6 +1,6 @@
-# Google Play summary — 2026-11-17
+# Google Play summary — 2026-11-18
 
-Generated 2026-11-16T17:49:23.584Z by `npm run aso:feed`.
+Generated 2026-11-17T17:22:41.771Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
@@ -15,7 +15,7 @@ Generated 2026-11-16T17:49:23.584Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 92 users
+- installProxy: 95 users
 - signUp: not instrumented
 - onboardingComplete: 14 users
 - activation: 3 users
@@ -26,17 +26,24 @@ Generated 2026-11-16T17:49:23.584Z by `npm run aso:feed`.
 ## Where new users come from (GA4 first-user source)
 
 - (direct) / (none): 71 new users
-- google-play / organic: 16 new users
-- google / organic: 5 new users
+- google-play / organic: 18 new users
+- google / organic: 6 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$48 · active subscriptions 6 · active trials 1 · new customers (28d) 77
+- MRR A$48 · active subscriptions 6 · active trials 1 · new customers (28d) 79
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 32 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-15.
-- google-play: **SUCCESS** (fresh) — 25 official Play user installs in the latest 28 reported days.
+- app-store-connect: **CONNECTOR_FAILURE** (stale) — HTTP 500 fetching App Store report for 2026-10-14: {
+	"errors": [{
+		"status": "500",
+		"code": "UNEXPECTED_ERROR",
+		"title": "An unexpected error occurred.",
+		"detail": "An unexpected error occurred on the server side. If this issue continues, contact us at https://developer.apple.com/contact/."
+	}]
+}
+- google-play: **SUCCESS** (stale) — Play export fetched successfully, but the latest reported date (2026-11-09) is 8 days old; treat install totals as stale.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
