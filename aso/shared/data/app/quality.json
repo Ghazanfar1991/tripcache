@@ -1,6 +1,6 @@
 {
   "source": "Firebase Crashlytics dashboard and BigQuery export",
-  "generatedAt": "2026-11-17T17:22:34.445Z",
+  "generatedAt": "2026-11-18T16:58:00.803Z",
   "officialDashboardBaseline": {
     "period": {
       "startDate": "2026-07-19",
@@ -67,13 +67,13 @@
           "impactedInstallations": 6
         },
         {
-          "issueId": "f4e23ef0af3b92e13a709b01f249ecfd",
+          "issueId": "77ff1260158bc72b21e24873621a5563",
           "errorType": "FATAL",
           "events": 1,
           "impactedInstallations": 1
         },
         {
-          "issueId": "77ff1260158bc72b21e24873621a5563",
+          "issueId": "f4e23ef0af3b92e13a709b01f249ecfd",
           "errorType": "FATAL",
           "events": 1,
           "impactedInstallations": 1

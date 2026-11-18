@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-11-17T17:22:41.731Z",
+  "generatedAt": "2026-11-18T16:58:06.003Z",
   "sources": [
     {
       "id": "app-store-connect",
-      "status": "CONNECTOR_FAILURE",
-      "freshness": "stale",
-      "latestSyncTime": "2026-11-16T17:49:05.938Z",
+      "status": "SUCCESS",
+      "freshness": "fresh",
+      "latestSyncTime": "2026-11-18T16:57:48.510Z",
       "generatedLocalSnapshot": "aso/app-store/data/downloads.json",
-      "note": "HTTP 500 fetching App Store report for 2026-10-14: {\r\n\t\"errors\": [{\r\n\t\t\"status\": \"500\",\r\n\t\t\"code\": \"UNEXPECTED_ERROR\",\r\n\t\t\"title\": \"An unexpected error occurred.\",\r\n\t\t\"detail\": \"An unexpected error occurred on the server side. If this issue continues, contact us at https://developer.apple.com/contact/.\"\r\n\t}]\r\n}",
-      "checkedAt": "2026-11-17T17:22:19.000Z"
+      "note": "33 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-17.",
+      "checkedAt": "2026-11-18T16:57:48.512Z"
     },
     {
       "id": "google-play",
       "status": "SUCCESS",
-      "freshness": "stale",
-      "latestSyncTime": "2026-11-17T17:22:19.819Z",
+      "freshness": "fresh",
+      "latestSyncTime": "2026-11-18T16:57:49.353Z",
       "generatedLocalSnapshot": "aso/google-play/data/installs.json",
-      "note": "Play export fetched successfully, but the latest reported date (2026-11-09) is 8 days old; treat install totals as stale.",
-      "checkedAt": "2026-11-17T17:22:19.826Z"
+      "note": "25 official Play user installs in the latest 28 reported days.",
+      "checkedAt": "2026-11-18T16:57:49.361Z"
     },
     {
       "id": "revenuecat",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-17T17:22:19.855Z",
+      "latestSyncTime": "2026-11-18T16:57:49.390Z",
       "generatedLocalSnapshot": "aso/shared/data/revenue/latest.json",
       "note": "Automated through RevenueCat API v2 with charts/metrics read-only access.",
-      "checkedAt": "2026-11-17T17:22:34.024Z"
+      "checkedAt": "2026-11-18T16:58:00.365Z"
     },
     {
       "id": "firebase-crashlytics",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-17T17:22:34.445Z",
+      "latestSyncTime": "2026-11-18T16:58:00.803Z",
       "note": "Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.",
       "generatedLocalSnapshot": "aso/shared/data/app/quality.json",
-      "checkedAt": "2026-11-17T17:22:40.450Z"
+      "checkedAt": "2026-11-18T16:58:05.444Z"
     },
     {
       "id": "ga4-app",
       "status": "SUCCESS",
       "freshness": "fresh",
-      "latestSyncTime": "2026-11-17T17:22:40.480Z",
+      "latestSyncTime": "2026-11-18T16:58:05.474Z",
       "note": "GA4 in-app events, screens, acquisition and funnel.",
-      "checkedAt": "2026-11-17T17:22:41.731Z"
+      "checkedAt": "2026-11-18T16:58:06.003Z"
     }
   ]
 }
