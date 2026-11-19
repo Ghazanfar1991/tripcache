@@ -1,6 +1,6 @@
-# App Store summary — 2026-11-19
+# App Store summary — 2026-11-20
 
-Generated 2026-11-18T16:58:06.047Z by `npm run aso:feed`.
+Generated 2026-11-19T17:05:13.141Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
@@ -14,7 +14,7 @@ Generated 2026-11-18T16:58:06.047Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 50 users
+- installProxy: 48 users
 - signUp: not instrumented
 - onboardingComplete: 13 users
 - activation: 10 users
@@ -24,7 +24,7 @@ Generated 2026-11-18T16:58:06.047Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 47 new users
+- (direct) / (none): 45 new users
 - Apple / search: 3 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
@@ -34,7 +34,7 @@ Generated 2026-11-18T16:58:06.047Z by `npm run aso:feed`.
 ## Data sources
 
 - app-store-connect: **SUCCESS** (fresh) — 33 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-17.
-- google-play: **SUCCESS** (fresh) — 25 official Play user installs in the latest 28 reported days.
+- google-play: **SUCCESS** (fresh) — 27 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
