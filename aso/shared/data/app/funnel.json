@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-19T17:05:12.482Z",
+  "generatedAt": "2026-11-20T16:39:19.620Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 139,
-      "activeUsers": 139,
+      "eventCount": 126,
+      "activeUsers": 126,
       "byPlatform": [
         {
           "dimensions": {
@@ -18,8 +18,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 91,
-            "activeUsers": 91
+            "eventCount": 78,
+            "activeUsers": 78
           }
         },
         {
@@ -51,8 +51,8 @@
         "onboarding_completed"
       ],
       "measured": true,
-      "eventCount": 27,
-      "activeUsers": 27,
+      "eventCount": 28,
+      "activeUsers": 28,
       "byPlatform": [
         {
           "dimensions": {
@@ -70,8 +70,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 13,
-            "activeUsers": 13
+            "eventCount": 14,
+            "activeUsers": 14
           }
         }
       ]
@@ -84,8 +84,8 @@
         "draft_approved"
       ],
       "measured": true,
-      "eventCount": 22,
-      "activeUsers": 13,
+      "eventCount": 23,
+      "activeUsers": 14,
       "byPlatform": [
         {
           "dimensions": {
@@ -93,8 +93,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 19,
-            "activeUsers": 10
+            "eventCount": 20,
+            "activeUsers": 11
           }
         },
         {
@@ -116,8 +116,8 @@
         "paywall_opened"
       ],
       "measured": true,
-      "eventCount": 71,
-      "activeUsers": 16,
+      "eventCount": 72,
+      "activeUsers": 17,
       "byPlatform": [
         {
           "dimensions": {
@@ -135,8 +135,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 29,
-            "activeUsers": 9
+            "eventCount": 30,
+            "activeUsers": 10
           }
         }
       ]

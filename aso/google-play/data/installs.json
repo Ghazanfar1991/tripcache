@@ -1,6 +1,6 @@
 {
   "source": "Google Play Console Cloud Storage statistics export",
-  "generatedAt": "2026-11-19T17:04:54.610Z",
+  "generatedAt": "2026-11-20T16:38:59.342Z",
   "packageName": "app.tripcache",
   "reportingLagDays": "3-7",
   "filesProcessed": [
@@ -10,30 +10,14 @@
     "installs_app.tripcache_202608_country.csv"
   ],
   "totals28Days": {
-    "userInstalls": 27,
-    "userUninstalls": 17,
-    "deviceInstalls": 29,
+    "userInstalls": 25,
+    "userUninstalls": 16,
+    "deviceInstalls": 26,
     "deviceUninstalls": 0
   },
-  "latestReportedDate": "2026-11-14",
-  "latestInstalledAudience": 32,
+  "latestReportedDate": "2026-11-16",
+  "latestInstalledAudience": 35,
   "daily": [
-    {
-      "date": "2026-08-15",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 16
-    },
-    {
-      "date": "2026-08-16",
-      "dailyUserInstalls": 0,
-      "dailyUserUninstalls": 0,
-      "dailyDeviceInstalls": 0,
-      "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 15
-    },
     {
       "date": "2026-08-17",
       "dailyUserInstalls": 0,
@@ -736,7 +720,7 @@
       "dailyUserUninstalls": 1,
       "dailyDeviceInstalls": 2,
       "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 29
+      "activeDeviceInstalls": 30
     },
     {
       "date": "2026-11-13",
@@ -744,7 +728,7 @@
       "dailyUserUninstalls": 0,
       "dailyDeviceInstalls": 0,
       "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 31
+      "activeDeviceInstalls": 32
     },
     {
       "date": "2026-11-14",
@@ -752,7 +736,23 @@
       "dailyUserUninstalls": 1,
       "dailyDeviceInstalls": 3,
       "dailyDeviceUninstalls": 0,
-      "activeDeviceInstalls": 32
+      "activeDeviceInstalls": 31
+    },
+    {
+      "date": "2026-11-15",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 34
+    },
+    {
+      "date": "2026-11-16",
+      "dailyUserInstalls": 0,
+      "dailyUserUninstalls": 0,
+      "dailyDeviceInstalls": 0,
+      "dailyDeviceUninstalls": 0,
+      "activeDeviceInstalls": 35
     }
   ],
   "countries": [
