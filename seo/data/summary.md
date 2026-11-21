@@ -1,33 +1,33 @@
-# TripCache SEO summary — 2026-11-21
+# TripCache SEO summary — 2026-11-22
 
-Generated 2026-11-20T16:38:38.734Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-10-22 → 2026-11-18.
+Generated 2026-11-21T15:56:07.308Z by `npm run seo:feed`. Search Console data lags 3 days; period 2026-10-23 → 2026-11-19.
 
 ## Data sources
 
 - search-console: **SUCCESS** (fresh) — Search Console API via the repository-scoped short-lived Google token.
 - index-status: **SUCCESS** (fresh) — 54/63 sitemap URLs indexed.
-- ga4-web: **SUCCESS** (fresh) — Store intent 7.3% (45/617 users, 28 days).
+- ga4-web: **SUCCESS** (fresh) — Store intent 7.5% (48/644 users, 28 days).
 - site-health: **SUCCESS** (fresh) — 63 sitemap URLs verified; 0 warnings.
 
 ## Google Search, last 28 days
 
 | Clicks | Impressions | CTR | Avg position |
 | ---: | ---: | ---: | ---: |
-| 385 (+203%) | 64515 (+404%) | 0.6% | 7.5 |
+| 405 (+209%) | 67988 (+424%) | 0.6% | 7.4 |
 
 Change is versus the previous 28 days.
 
 ## Indexing
 
-54/63 sitemap URLs indexed (checked 2026-11-20).
+54/63 sitemap URLs indexed (checked 2026-11-21).
 
 - `/account-delete` — Discovered - currently not indexed (never crawled)
 - `/ai-agents/perplexity` — Discovered - currently not indexed (never crawled)
 - `/blog/ai-trip-planner-2026` — Discovered - currently not indexed (never crawled)
 - `/blog/ask-siri-about-your-flight` — Discovered - currently not indexed (never crawled)
 - `/blog/business-travel-management-guide-2026` — Discovered - currently not indexed (never crawled)
-- `/blog/flighty-vs-tripcache-2026` — URL is unknown to Google (never crawled)
-- `/blog/travel-booking-organizer-app-2026` — Discovered - currently not indexed (never crawled)
+- `/blog/flighty-vs-tripcache-2026` — Discovered - currently not indexed (never crawled)
+- `/blog/travel-booking-organizer-app-2026` — URL is unknown to Google (never crawled)
 - `/blog/travel-itinerary-template-2026` — Discovered - currently not indexed (never crawled)
 - `/support` — Not found (404) (last crawl 2026-05-26)
 
@@ -43,48 +43,48 @@ Other Search Console issues (structured data, canonicals, fetch, robots, sitemap
 
 | Page | Clicks | Impr | CTR | Pos | Store-click users |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| `/blog/how-to-find-your-travel-history` | 92 | 10792 | 0.9% | 8.3 | 5 |
-| `/tools/layover-calculator` | 59 | 6494 | 0.9% | 4.7 | 1 |
-| `/tools/jet-lag-calculator` | 48 | 3798 | 1.3% | 6.6 | 0 |
-| `/blog/tripcase-shutdown-what-now` | 43 | 3341 | 1.3% | 5.9 | 3 |
-| `/tools/flight-arrival-time-calculator` | 41 | 15358 | 0.3% | 6.6 | 1 |
-| `/` | 27 | 935 | 2.9% | 13.6 | 20 |
-| `/blog/best-tripit-alternatives-2026` | 11 | 1322 | 0.8% | 11.7 | 2 |
-| `/blog/best-claude-connectors-for-travel` | 9 | 231 | 3.9% | 5.4 | 0 |
-| `/blog/best-travel-document-organizer-app-2026` | 7 | 678 | 1.0% | 7.8 | 4 |
-| `/blog/organize-travel-confirmation-emails-2026` | 5 | 287 | 1.7% | 7.2 | 1 |
-| `/blog/flight-time-zones-arrival-date` | 4 | 1527 | 0.3% | 7.4 | 0 |
-| `/tools/hotel-cancellation-deadline-calculator` | 4 | 444 | 0.9% | 5.8 | 1 |
-| `/blog/does-tripit-work-with-claude-chatgpt` | 3 | 117 | 2.6% | 4.5 | 0 |
-| `/blog/iphone-duo-travel-apps` | 3 | 106 | 2.8% | 6.4 | 0 |
-| `/blog/wanderlog-vs-tripit` | 3 | 2601 | 0.1% | 10.3 | 0 |
-| `/tools/travel-checklist` | 3 | 131 | 2.3% | 7.4 | 1 |
-| `/ai-agents` | 2 | 70 | 2.9% | 6.3 | 0 |
-| `/ai-agents/claude` | 2 | 127 | 1.6% | 6.4 | 0 |
-| `/blog/best-travel-apps-2025` | 2 | 9446 | 0.0% | 9.7 | 1 |
-| `/blog/hotel-cancellation-policies` | 2 | 5337 | 0.0% | 8.8 | 0 |
+| `/blog/how-to-find-your-travel-history` | 102 | 11274 | 0.9% | 8.2 | 5 |
+| `/tools/layover-calculator` | 67 | 6995 | 1.0% | 4.7 | 2 |
+| `/tools/jet-lag-calculator` | 50 | 3964 | 1.3% | 6.6 | 0 |
+| `/tools/flight-arrival-time-calculator` | 43 | 16787 | 0.3% | 6.6 | 2 |
+| `/blog/tripcase-shutdown-what-now` | 41 | 3365 | 1.2% | 6.0 | 3 |
+| `/` | 27 | 927 | 2.9% | 13.6 | 20 |
+| `/blog/best-tripit-alternatives-2026` | 11 | 1341 | 0.8% | 11.8 | 2 |
+| `/blog/best-claude-connectors-for-travel` | 10 | 243 | 4.1% | 5.3 | 0 |
+| `/blog/best-travel-document-organizer-app-2026` | 6 | 697 | 0.9% | 7.6 | 5 |
+| `/blog/organize-travel-confirmation-emails-2026` | 5 | 284 | 1.8% | 7.3 | 1 |
+| `/blog/flight-time-zones-arrival-date` | 4 | 1581 | 0.3% | 7.4 | 0 |
+| `/tools/hotel-cancellation-deadline-calculator` | 4 | 463 | 0.9% | 5.8 | 1 |
+| `/ai-agents/claude` | 3 | 140 | 2.1% | 6.2 | 0 |
+| `/blog/does-tripit-work-with-claude-chatgpt` | 3 | 118 | 2.5% | 4.5 | 0 |
+| `/blog/iphone-duo-travel-apps` | 3 | 118 | 2.5% | 6.3 | 0 |
+| `/blog/wanderlog-vs-tripit` | 3 | 2761 | 0.1% | 10.3 | 0 |
+| `/tools/travel-checklist` | 3 | 136 | 2.2% | 7.3 | 1 |
+| `/ai-agents` | 2 | 74 | 2.7% | 6.3 | 0 |
+| `/blog/best-travel-apps-2025` | 2 | 9514 | 0.0% | 9.7 | 1 |
+| `/blog/hotel-cancellation-policies` | 2 | 5754 | 0.0% | 8.8 | 0 |
 
-Website store intent: 7.3% of 617 visitors clicked an App Store/Play link (GA4, 28 days).
+Website store intent: 7.5% of 644 visitors clicked an App Store/Play link (GA4, 28 days).
 
 ## Quick wins (position 4–20, weak CTR)
 
 | Query | Page | Impr | CTR | Pos |
 | --- | --- | ---: | ---: | ---: |
-| i94 travel history | `/blog/how-to-find-your-travel-history` | 2025 | 0.3% | 7.3 |
-| endless travel plans alternatives | `/blog/best-travel-apps-2025` | 1282 | 0.0% | 6.7 |
-| tripcase | `/blog/tripcase-shutdown-what-now` | 857 | 1.2% | 5.5 |
-| wanderlog vs tripit | `/blog/wanderlog-vs-tripit` | 769 | 0.0% | 7.3 |
-| wanderlog pro cost | `/blog/wanderlog-vs-tripit` | 763 | 0.0% | 8.5 |
-| travel history | `/blog/how-to-find-your-travel-history` | 518 | 0.2% | 15.2 |
-| wanderlog cost | `/blog/wanderlog-vs-tripit` | 472 | 0.0% | 9.7 |
+| i94 travel history | `/blog/how-to-find-your-travel-history` | 2089 | 0.3% | 7.3 |
+| endless travel plans alternatives | `/blog/best-travel-apps-2025` | 1287 | 0.0% | 6.7 |
+| wanderlog vs tripit | `/blog/wanderlog-vs-tripit` | 913 | 0.0% | 7.7 |
+| tripcase | `/blog/tripcase-shutdown-what-now` | 874 | 1.0% | 5.6 |
+| wanderlog pro cost | `/blog/wanderlog-vs-tripit` | 774 | 0.0% | 8.5 |
+| travel history | `/blog/how-to-find-your-travel-history` | 527 | 0.2% | 15.2 |
 | vacation-planner.app alternatives | `/blog/best-travel-apps-2025` | 467 | 0.0% | 6.2 |
+| wanderlog cost | `/blog/wanderlog-vs-tripit` | 462 | 0.0% | 9.6 |
 | tripbase alternatives | `/blog/tripcase-shutdown-what-now` | 432 | 0.0% | 5.6 |
-| a flight departs for beijing (aest) at 19:30 and takes 11 hours and 45 minutes. what time is it expected to arrive? | `/tools/flight-arrival-time-calculator` | 369 | 0.0% | 7.1 |
-| tripit alternatives | `/blog/best-tripit-alternatives-2026` | 350 | 0.3% | 12.2 |
-| tripexpert alternatives | `/blog/best-travel-apps-2025` | 309 | 0.0% | 4.4 |
-| i-94 travel history | `/blog/how-to-find-your-travel-history` | 282 | 0.0% | 8.8 |
-| tripcase app | `/blog/tripcase-shutdown-what-now` | 250 | 1.2% | 8.3 |
-| jet lag recovery calculator | `/tools/jet-lag-calculator` | 207 | 1.0% | 9.8 |
+| a flight departs for beijing (aest) at 19:30 and takes 11 hours and 45 minutes. what time is it expected to arrive? | `/tools/flight-arrival-time-calculator` | 387 | 0.0% | 7.0 |
+| tripit alternatives | `/blog/best-tripit-alternatives-2026` | 348 | 0.3% | 12.7 |
+| tripexpert alternatives | `/blog/best-travel-apps-2025` | 314 | 0.0% | 4.4 |
+| i-94 travel history | `/blog/how-to-find-your-travel-history` | 289 | 0.0% | 8.7 |
+| tripcase app | `/blog/tripcase-shutdown-what-now` | 250 | 1.2% | 8.4 |
+| jet lag recovery calculator | `/tools/jet-lag-calculator` | 209 | 1.0% | 9.7 |
 
 ## Target keywords (seo/keywords.csv: the 30 largest P1 keywords)
 
@@ -111,7 +111,7 @@ Website store intent: 7.3% of 617 visitors clicked an App Store/Play link (GA4, 
 | google docs itinerary template | `NEW:/templates/travel-itinerary-google-docs` | 1300 | 0 | not ranking |
 | travel itinerary template google sheets | `NEW:/templates/travel-itinerary-google-sheets` | 1300 | 0 | not ranking |
 | free travel itinerary template | `/blog/travel-itinerary-template-2026` | 1300 | 0 | not ranking |
-| tripcase | `/blog/tripcase-shutdown-what-now` | 1300 | 971 | 9.3 |
+| tripcase | `/blog/tripcase-shutdown-what-now` | 1300 | 993 | 9.6 |
 | best trip planning app | `/blog/best-travel-apps-2025` | 1000 | 7 | 66.3 |
 | hotel cancellation policy | `/blog/hotel-cancellation-policies` | 1000 | 0 | not ranking |
 | itinerary template free | `/blog/travel-itinerary-template-2026` | 1000 | 0 | not ranking |
@@ -188,4 +188,4 @@ Website store intent: 7.3% of 617 visitors clicked an App Store/Play link (GA4, 
 
 ## Site health
 
-PASS — 0 failures, 0 warnings (https://trip-cache.com, 2026-11-20).
+PASS — 0 failures, 0 warnings (https://trip-cache.com, 2026-11-21).

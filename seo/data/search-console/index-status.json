@@ -1,6 +1,6 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-11-20T16:38:24.796Z",
+  "generatedAt": "2026-11-21T15:55:54.735Z",
   "sitemapUrls": 63,
   "indexed": 54,
   "notIndexed": 9,
@@ -59,7 +59,7 @@
     {
       "path": "/blog/travel-booking-organizer-app-2026",
       "kind": "not-indexed",
-      "detail": "Discovered - currently not indexed"
+      "detail": "URL is unknown to Google"
     },
     {
       "path": "/blog/ai-trip-planner-2026",
@@ -79,7 +79,7 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     }
   ],
   "sitemaps": [
@@ -203,23 +203,6 @@
     {
       "path": "/blog/flighty-vs-tripcache-2026",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
-      "indexed": false,
-      "lastCrawlTime": null,
-      "googleCanonical": null,
-      "userCanonical": null,
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
-      "richResults": null,
-      "firstSeenAt": "2026-11-12T16:34:24.991Z",
-      "indexedSince": null
-    },
-    {
-      "path": "/blog/travel-booking-organizer-app-2026",
-      "verdict": "NEUTRAL",
       "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
@@ -232,6 +215,23 @@
       "referringUrls": [
         "/sitemap.xml"
       ],
+      "richResults": null,
+      "firstSeenAt": "2026-11-12T16:34:24.991Z",
+      "indexedSince": null
+    },
+    {
+      "path": "/blog/travel-booking-organizer-app-2026",
+      "verdict": "NEUTRAL",
+      "coverageState": "URL is unknown to Google",
+      "indexed": false,
+      "lastCrawlTime": null,
+      "googleCanonical": null,
+      "userCanonical": null,
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "crawledAs": null,
+      "referringUrls": [],
       "richResults": null,
       "firstSeenAt": "2026-10-04T17:05:50.124Z",
       "indexedSince": null
@@ -280,7 +280,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-17T03:24:34Z",
+      "lastCrawlTime": "2026-11-21T02:50:15Z",
       "googleCanonical": "https://trip-cache.com",
       "userCanonical": "https://trip-cache.com/",
       "robotsTxtState": "ALLOWED",
@@ -319,7 +319,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-03T08:32:32Z",
+      "lastCrawlTime": "2026-11-20T19:07:25Z",
       "googleCanonical": "https://trip-cache.com/ai-agents",
       "userCanonical": "https://trip-cache.com/ai-agents",
       "robotsTxtState": "ALLOWED",
@@ -382,7 +382,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-06T15:14:00Z",
+      "lastCrawlTime": "2026-11-21T04:05:14Z",
       "googleCanonical": "https://trip-cache.com/ai-agents/claude",
       "userCanonical": "https://trip-cache.com/ai-agents/claude",
       "robotsTxtState": "ALLOWED",
@@ -1287,7 +1287,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-09T08:04:09Z",
+      "lastCrawlTime": "2026-11-16T03:27:25Z",
       "googleCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "userCanonical": "https://trip-cache.com/blog/tripcase-shutdown-what-now",
       "robotsTxtState": "ALLOWED",
@@ -1395,7 +1395,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-09T03:02:04Z",
+      "lastCrawlTime": "2026-11-20T11:43:51Z",
       "googleCanonical": "https://trip-cache.com/features/business-travel-expenses",
       "userCanonical": "https://trip-cache.com/features/business-travel-expenses",
       "robotsTxtState": "ALLOWED",
@@ -1596,7 +1596,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-13T03:01:34Z",
+      "lastCrawlTime": "2026-11-21T14:58:02Z",
       "googleCanonical": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "userCanonical": "https://trip-cache.com/tools/hotel-cancellation-deadline-calculator",
       "robotsTxtState": "ALLOWED",
