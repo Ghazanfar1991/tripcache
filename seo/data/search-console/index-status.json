@@ -1,13 +1,12 @@
 {
   "source": "Search Console URL Inspection API",
-  "generatedAt": "2026-11-22T15:55:08.378Z",
+  "generatedAt": "2026-11-23T19:47:38.503Z",
   "sitemapUrls": 63,
   "indexed": 54,
   "notIndexed": 9,
   "byCoverageState": {
     "Submitted and indexed": 54,
-    "Discovered - currently not indexed": 8,
-    "URL is unknown to Google": 1
+    "Discovered - currently not indexed": 9
   },
   "issues": [
     {
@@ -38,7 +37,7 @@
     {
       "path": "/ai-agents/perplexity",
       "kind": "not-indexed",
-      "detail": "URL is unknown to Google"
+      "detail": "Discovered - currently not indexed"
     },
     {
       "path": "/support",
@@ -119,7 +118,7 @@
     {
       "path": "/ai-agents/perplexity",
       "verdict": "NEUTRAL",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "indexed": false,
       "lastCrawlTime": null,
       "googleCanonical": null,
@@ -127,8 +126,11 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
-      "crawledAs": null,
-      "referringUrls": [],
+      "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "referringUrls": [
+        "/ai-agents/openclaw",
+        "/"
+      ],
       "richResults": null,
       "firstSeenAt": "2026-11-02T17:38:54.158Z",
       "indexedSince": null
@@ -293,7 +295,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-11T17:34:19Z",
+      "lastCrawlTime": "2026-11-23T16:01:56Z",
       "googleCanonical": "https://trip-cache.com/about",
       "userCanonical": "https://trip-cache.com/about",
       "robotsTxtState": "ALLOWED",
@@ -465,7 +467,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-16T12:10:25Z",
+      "lastCrawlTime": "2026-11-23T12:03:08Z",
       "googleCanonical": "https://trip-cache.com/ai-agents/hermes",
       "userCanonical": "https://trip-cache.com/ai-agents/hermes",
       "robotsTxtState": "ALLOWED",
@@ -567,7 +569,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-06T18:43:13Z",
+      "lastCrawlTime": "2026-11-23T06:01:53Z",
       "googleCanonical": "https://trip-cache.com/alternatives",
       "userCanonical": "https://trip-cache.com/alternatives",
       "robotsTxtState": "ALLOWED",
@@ -642,7 +644,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-11T16:56:48Z",
+      "lastCrawlTime": "2026-11-23T09:46:53Z",
       "googleCanonical": "https://trip-cache.com/alternatives/tripit",
       "userCanonical": "https://trip-cache.com/alternatives/tripit",
       "robotsTxtState": "ALLOWED",
@@ -1335,7 +1337,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-06T03:09:00Z",
+      "lastCrawlTime": "2026-11-23T18:31:54Z",
       "googleCanonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "userCanonical": "https://trip-cache.com/blog/wanderlog-vs-tripit",
       "robotsTxtState": "ALLOWED",
@@ -1561,7 +1563,7 @@
       "verdict": "PASS",
       "coverageState": "Submitted and indexed",
       "indexed": true,
-      "lastCrawlTime": "2026-11-16T15:32:16Z",
+      "lastCrawlTime": "2026-11-23T04:46:52Z",
       "googleCanonical": "https://trip-cache.com/tools/flight-arrival-time-calculator",
       "userCanonical": "https://trip-cache.com/tools/flight-arrival-time-calculator",
       "robotsTxtState": "ALLOWED",

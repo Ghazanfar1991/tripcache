@@ -1,6 +1,6 @@
-# Google Play summary — 2026-11-23
+# Google Play summary — 2026-11-24
 
-Generated 2026-11-22T15:56:06.334Z by `npm run aso:feed`.
+Generated 2026-11-23T19:48:34.695Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
@@ -26,16 +26,16 @@ Generated 2026-11-22T15:56:06.334Z by `npm run aso:feed`.
 ## Where new users come from (GA4 first-user source)
 
 - (direct) / (none): 50 new users
-- google-play / organic: 19 new users
-- google / organic: 6 new users
+- google-play / organic: 20 new users
+- google / organic: 5 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$48 · active subscriptions 6 · active trials 1 · new customers (28d) 71
+- MRR A$48 · active subscriptions 6 · active trials 0 · new customers (28d) 72
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 32 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-21.
+- app-store-connect: **SUCCESS** (fresh) — 31 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-22.
 - google-play: **SUCCESS** (fresh) — 27 official Play user installs in the latest 28 reported days.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
