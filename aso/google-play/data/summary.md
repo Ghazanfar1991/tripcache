@@ -1,6 +1,6 @@
-# Google Play summary — 2026-11-24
+# Google Play summary — 2026-11-25
 
-Generated 2026-11-23T19:48:34.695Z by `npm run aso:feed`.
+Generated 2026-11-24T19:22:11.997Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
@@ -11,11 +11,11 @@ Generated 2026-11-23T19:48:34.695Z by `npm run aso:feed`.
 ## Quality (store ranking factor)
 
 - Crash-free users: 89.29% (dashboard baseline 2026-07-19–2026-08-17)
-- Automated 30 days: 44 fatal/ANR events on 15 installs across 3 issues
+- Automated 30 days: 29 fatal/ANR events on 13 installs across 3 issues
 
 ## In-app funnel (GA4)
 
-- installProxy: 75 users
+- installProxy: 74 users
 - signUp: not instrumented
 - onboardingComplete: 14 users
 - activation: 3 users
@@ -25,13 +25,13 @@ Generated 2026-11-23T19:48:34.695Z by `npm run aso:feed`.
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 50 new users
-- google-play / organic: 20 new users
+- (direct) / (none): 51 new users
+- google-play / organic: 18 new users
 - google / organic: 5 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$48 · active subscriptions 6 · active trials 0 · new customers (28d) 72
+- MRR A$48 · active subscriptions 6 · active trials 0 · new customers (28d) 71
 
 ## Data sources
 

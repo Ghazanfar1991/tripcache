@@ -1,6 +1,6 @@
-# App Store summary — 2026-11-24
+# App Store summary — 2026-11-25
 
-Generated 2026-11-23T19:48:34.694Z by `npm run aso:feed`.
+Generated 2026-11-24T19:22:11.996Z by `npm run aso:feed`.
 
 ## Downloads, last 28 reported days (App Store Connect)
 
@@ -10,26 +10,26 @@ Generated 2026-11-23T19:48:34.694Z by `npm run aso:feed`.
 ## Quality (store ranking factor)
 
 - Crash-free users: 100.00% (dashboard baseline 2026-07-19–2026-08-17)
-- Automated 30 days: 4 fatal/ANR events on 3 installs across 2 issues
+- Automated 30 days: 3 fatal/ANR events on 2 installs across 1 issues
 
 ## In-app funnel (GA4)
 
-- installProxy: 43 users
+- installProxy: 42 users
 - signUp: not instrumented
-- onboardingComplete: 16 users
-- activation: 12 users
-- paywallView: 11 users
+- onboardingComplete: 17 users
+- activation: 13 users
+- paywallView: 12 users
 - trialStart: not instrumented
 - purchase: not instrumented
 
 ## Where new users come from (GA4 first-user source)
 
-- (direct) / (none): 40 new users
+- (direct) / (none): 39 new users
 - Apple / search: 3 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$48 · active subscriptions 6 · active trials 0 · new customers (28d) 72
+- MRR A$48 · active subscriptions 6 · active trials 0 · new customers (28d) 71
 
 ## Data sources
 
