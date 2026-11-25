@@ -1,6 +1,6 @@
 {
   "source": "GA4 Data API",
-  "generatedAt": "2026-11-24T19:22:11.400Z",
+  "generatedAt": "2026-11-25T18:26:57.315Z",
   "reportingWindow": "28daysAgo through 3daysAgo",
   "steps": [
     {
@@ -9,8 +9,8 @@
         "first_open"
       ],
       "measured": true,
-      "eventCount": 116,
-      "activeUsers": 116,
+      "eventCount": 115,
+      "activeUsers": 115,
       "byPlatform": [
         {
           "dimensions": {
@@ -18,8 +18,8 @@
             "platform": "Android"
           },
           "metrics": {
-            "eventCount": 74,
-            "activeUsers": 74
+            "eventCount": 73,
+            "activeUsers": 73
           }
         },
         {
@@ -51,8 +51,8 @@
         "onboarding_completed"
       ],
       "measured": true,
-      "eventCount": 31,
-      "activeUsers": 31,
+      "eventCount": 32,
+      "activeUsers": 32,
       "byPlatform": [
         {
           "dimensions": {
@@ -60,8 +60,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 17,
-            "activeUsers": 17
+            "eventCount": 18,
+            "activeUsers": 18
           }
         },
         {
@@ -116,8 +116,8 @@
         "paywall_opened"
       ],
       "measured": true,
-      "eventCount": 75,
-      "activeUsers": 19,
+      "eventCount": 77,
+      "activeUsers": 20,
       "byPlatform": [
         {
           "dimensions": {
@@ -135,8 +135,8 @@
             "platform": "iOS"
           },
           "metrics": {
-            "eventCount": 33,
-            "activeUsers": 12
+            "eventCount": 35,
+            "activeUsers": 13
           }
         }
       ]

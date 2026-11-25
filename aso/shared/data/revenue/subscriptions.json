@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-24T19:21:52.777Z",
+  "generatedAt": "2026-11-25T18:26:29.571Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-08-27",
-    "endDate": "2026-11-25"
+    "startDate": "2026-08-28",
+    "endDate": "2026-11-26"
   },
   "charts": {
     "mrr": {
@@ -1779,11 +1779,11 @@
       },
       "data": {
         "category": "revenue",
-        "description": "Monthly Recurring Revenue, or MRR, is a way of normalizing the scale of your business to better understand your velocity or size. It doesn't map directly to revenue, but it is a useful standardization.\n\nMRR is computed by \"normalizing\" subscriptions to a 1-month period. For example, a subscription that is $8 per month, will contribute $8 to MRR while it is active. An annual subscription that costs $120 per year will contribute $10 dollars per month to MRR for 12 months. This normalizing of all durations to a 1 month period makes it easier to compare different subscriptions of different durations together.\n\nWhen filtering or segmenting by Renewal Cycle, MRR uses the cycle each subscription was in on that date. For example, when a subscription renews from Cycle 1 into Cycle 2, its MRR moves to Cycle 2 on the renewal date; its earlier MRR remains in Cycle 1.\n\nMRR is an important measure because it not only captures the size of your subscriber base, but translates that into a real velocity metric for your business. MRR and ARR are considered the standard velocity metrics for subscription software companies.",
+        "description": "Monthly Recurring Revenue, or MRR, is a way of normalizing the scale of your business to better understand your velocity or size. It doesn't map directly to revenue, but it is a useful standardization.\n\nMRR is computed by \"normalizing\" subscriptions to a 1-month period. For example, a subscription that is $8 per month, will contribute $8 to MRR while it is active. An annual subscription that costs $120 per year will contribute $10 dollars per month to MRR for 12 months. This normalizing of all durations to a 1 month period makes it easier to compare different subscriptions of different durations together.\n\nFamily Sharing access and promotional store subscriptions are excluded. Auto-renew status does not affect MRR while paid access remains active.\n\nWhen filtering or segmenting by Renewal Cycle, MRR uses the cycle each subscription was in on that date. For example, when a subscription renews from Cycle 1 into Cycle 2, its MRR moves to Cycle 2 on the renewal date; its earlier MRR remains in Cycle 1.\n\nMRR is an important measure because it not only captures the size of your subscriber base, but translates that into a real velocity metric for your business. MRR and ARR are considered the standard velocity metrics for subscription software companies.",
         "display_name": "MRR",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/monthly-recurring-revenue-mrr-chart",
-        "end_date": 1795564800,
+        "end_date": 1795651200,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1802,10 +1802,10 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787788800,
+        "start_date": 1787875200,
         "summary": {
           "average": {
-            "MRR": 30.97
+            "MRR": 31.38
           }
         },
         "unsupported_params": null,
@@ -1813,12 +1813,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1787788800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 11.49
-          },
           {
             "cohort": 1787875200,
             "incomplete": false,
@@ -2349,12 +2343,18 @@
           },
           {
             "cohort": 1795478400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 48.8
           },
           {
             "cohort": 1795564800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 48.8
+          },
+          {
+            "cohort": 1795651200,
             "incomplete": true,
             "measure": 0,
             "value": 48.8
@@ -4209,7 +4209,7 @@
         "display_name": "Revenue",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/revenue-chart",
-        "end_date": 1795564800,
+        "end_date": 1795651200,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -4224,7 +4224,7 @@
           {
             "chartable": false,
             "decimal_precision": 0,
-            "description": "The count of revenue-generating purchase transactions in the period. Refunds do not reduce this count.",
+            "description": "The count of paid subscription and one-time purchase transactions in the period. Ad revenue is excluded, and refunds do not reduce this count.",
             "display_name": "Transactions",
             "tabulable": true,
             "unit": "#"
@@ -4236,7 +4236,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787788800,
+        "start_date": 1787875200,
         "summary": {
           "average": {
             "Revenue": 2.06,
@@ -4252,18 +4252,6 @@
           "revenue_type": "revenue"
         },
         "values": [
-          {
-            "cohort": 1787788800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1787788800,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
           {
             "cohort": 1787875200,
             "incomplete": false,
@@ -5322,13 +5310,13 @@
           },
           {
             "cohort": 1795478400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1795478400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
@@ -5340,6 +5328,18 @@
           },
           {
             "cohort": 1795564800,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
             "incomplete": true,
             "measure": 1,
             "value": 0
@@ -7101,11 +7101,11 @@
       },
       "data": {
         "category": "actives",
-        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nSubscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions remain active until paid access ends, which is usually when the refund is processed but can differ if access continues for the rest of the billing period.\n\nWhen filtering or segmenting by Renewal Cycle, Active Subscriptions uses the cycle each subscription was in on that date. For example, when a subscription renews from Cycle 1 into Cycle 2, it moves to Cycle 2 on the renewal date; before that it counts in Cycle 1.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
+        "description": "Active Subscriptions shows the number of paid subscriptions granting access at the end of each period charted. Billing-retry periods remain active while access continues.\n\nFamily Sharing access and promotional store subscriptions are excluded because the customer did not make a payment.\n\nSubscriptions that have auto-renew disabled are still counted in Active Subscriptions. Refunded subscriptions remain active until paid access ends, which is usually when the refund is processed but can differ if access continues for the rest of the billing period.\n\nWhen filtering or segmenting by Renewal Cycle, Active Subscriptions uses the cycle each subscription was in on that date. For example, when a subscription renews from Cycle 1 into Cycle 2, it moves to Cycle 2 on the renewal date; before that it counts in Cycle 1.\n\nActive subscriptions is important as a measure of the number of individual, recurring relationships you are currently serving and is a proxy for the size of the business.",
         "display_name": "Active Subscriptions",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-subscriptions-chart",
-        "end_date": 1795564800,
+        "end_date": 1795651200,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -7124,21 +7124,15 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787788800,
+        "start_date": 1787875200,
         "summary": {
           "average": {
-            "Actives": 3.66
+            "Actives": 3.71
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1787788800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
           {
             "cohort": 1787875200,
             "incomplete": false,
@@ -7669,12 +7663,18 @@
           },
           {
             "cohort": 1795478400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 6
           },
           {
             "cohort": 1795564800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 6
+          },
+          {
+            "cohort": 1795651200,
             "incomplete": true,
             "measure": 0,
             "value": 6
@@ -9402,7 +9402,7 @@
         "display_name": "Active Trials",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/active-trials-chart",
-        "end_date": 1795564800,
+        "end_date": 1795651200,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -9421,7 +9421,7 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787788800,
+        "start_date": 1787875200,
         "summary": {
           "average": {
             "Active Trials": 0.22
@@ -9430,12 +9430,6 @@
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
-          {
-            "cohort": 1787788800,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
           {
             "cohort": 1787875200,
             "incomplete": false,
@@ -9966,12 +9960,18 @@
           },
           {
             "cohort": 1795478400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 0
           },
           {
             "cohort": 1795564800,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
             "incomplete": true,
             "measure": 0,
             "value": 0
@@ -11843,7 +11843,7 @@
       },
       "data": {
         "category": "actives",
-        "description": "The Subscription Status chart breaks down Active Subscriptions, Active Trials, MRR, ARR, or Subscription Revenue by the current status of the underlying subscription that currently grants access and contributes to that measure.\n\nA subscription will have a status of Billing Issue if it's currently in a grace period or a billing retry where access remains active. Billing retries where access has ended are not included in the chart. Set to Cancel includes subscriptions that will not renew, will pause, or require price-increase consent. Set to Renew includes subscriptions that will renew, change products, or have already renewed. Other states are shown as Unknown.\n\nEach measure can then be filtered or segmented by values like Product Duration, Expiration Month, and more to understand how the portion Set to Cancel or in a Billing Issue state is affected by these dimensions.\n\nWhen filtering or segmenting by Renewal Cycle, the chart uses the cycle from each subscription's latest current event.",
+        "description": "The Subscription Status chart breaks down Active Subscriptions, Active Trials, MRR, ARR, or Subscription Revenue by the current status of the underlying subscription that currently grants access and contributes to that measure.\n\nA subscription will have a status of Billing Issue if it's currently in a grace period or a billing retry where access remains active. Billing retries where access has ended are not included in the chart. Set to Cancel includes subscriptions that will not renew, will pause, or require price-increase consent. Set to Renew includes subscriptions that will renew, change products, or have already renewed. Other states are shown as Unknown.\n\nActive Trials counts trials. Trials do not contribute to Active Subscriptions, MRR, or ARR.\n\nEach measure can then be filtered or segmented by values like Product Duration, Expiration Month, and more to understand how the portion Set to Cancel or in a Billing Issue state is affected by these dimensions.\n\nWhen filtering or segmenting by Renewal Cycle, the chart uses the cycle from each subscription's latest current event.",
         "display_name": "Subscription Status",
         "display_type": "conversion",
         "documentation_link": "dashboard-and-metrics/charts/subscription-status-chart",
