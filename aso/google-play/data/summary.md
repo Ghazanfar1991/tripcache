@@ -1,6 +1,6 @@
-# Google Play summary — 2026-11-26
+# Google Play summary — 2026-11-27
 
-Generated 2026-11-25T18:26:57.956Z by `npm run aso:feed`.
+Generated 2026-11-26T18:07:31.183Z by `npm run aso:feed`.
 
 ## Installs, last 28 reported days (Play Console)
 
@@ -15,7 +15,7 @@ Generated 2026-11-25T18:26:57.956Z by `npm run aso:feed`.
 
 ## In-app funnel (GA4)
 
-- installProxy: 73 users
+- installProxy: 72 users
 - signUp: not instrumented
 - onboardingComplete: 14 users
 - activation: 3 users
@@ -27,16 +27,16 @@ Generated 2026-11-25T18:26:57.956Z by `npm run aso:feed`.
 
 - (direct) / (none): 50 new users
 - google-play / organic: 18 new users
-- google / organic: 5 new users
+- google / organic: 4 new users
 
 ## Revenue (RevenueCat, AUD, both platforms combined)
 
-- MRR A$48.72 · active subscriptions 6 · active trials 0 · new customers (28d) 69
+- MRR A$48.72 · active subscriptions 6 · active trials 0 · new customers (28d) 67
 
 ## Data sources
 
-- app-store-connect: **SUCCESS** (fresh) — 32 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-24.
-- google-play: **SUCCESS** (fresh) — 27 official Play user installs in the latest 28 reported days.
+- app-store-connect: **SUCCESS** (fresh) — 32 official App Store first-time downloads in the latest 28 reported days; latest report 2026-11-25.
+- google-play: **SUCCESS** (stale) — Play export fetched successfully, but the latest reported date (2026-11-18) is 8 days old; treat install totals as stale.
 - revenuecat: **SUCCESS** (fresh) — Automated through RevenueCat API v2 with charts/metrics read-only access.
 - firebase-crashlytics: **SUCCESS** (fresh) — Automated raw fatal/ANR event collection from the Firebase Crashlytics BigQuery export; official dashboard baseline retained for crash-free percentages.
 - ga4-app: **SUCCESS** (fresh) — GA4 in-app events, screens, acquisition and funnel.
