@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-26T18:07:10.271Z",
+  "generatedAt": "2026-11-27T17:52:22.488Z",
   "currency": "AUD",
   "reportingWindow": {
-    "startDate": "2026-08-29",
-    "endDate": "2026-11-27"
+    "startDate": "2026-08-30",
+    "endDate": "2026-11-28"
   },
   "charts": {
     "churn": {
@@ -1758,11 +1758,11 @@
       },
       "data": {
         "category": "actives",
-        "description": "Churn is the percentage of paid subscriptions that were lost during a given period.\n\nActives measures paid subscriptions granting access at the beginning of a given period. Churned Actives measures net paid-access losses during the period; billing recoveries, other access restorations, and subscriptions resuming after a pause reduce this count and can make it negative. Unlike Active Subscriptions Movement, this measure includes subscriptions replaced during product changes.\n\nWhen filtering or segmenting by Renewal Cycle, each subscription counts in the cycle it was in on that date. A renewal moves it into the next cycle and is not churn. A subscription that loses access and recovers into the next cycle counts as churned in its old cycle, and its recovery reduces Churned Actives in the new one. Each cycle's losses are compared with its subscriptions at the start of the period, so products shorter than the chart's resolution can show rates above 100%.\n\nA stable or declining churn rate indicates a healthy, growing business. However, keep in mind that churn can be relatively high for mobile apps when compared to web SaaS products.",
+        "description": "Churn is the percentage of paid subscriptions that were lost during a given period.\n\nActives measures paid subscriptions granting access at the beginning of a given period. Churned Actives measures net paid-access losses during the period; billing recoveries, other access restorations, and subscriptions resuming after a pause reduce this count and can make it negative. Unlike Active Subscriptions Movement, this measure includes subscriptions replaced during product changes.\n\nChurned Actives is split into Involuntary and Voluntary Churned Actives. Involuntary Churned Actives are paid-access losses caused by billing issues, net of billing recoveries. Voluntary Churned Actives are all other paid-access losses, including cancellations, pauses, prepaid subscription expirations, and product changes, net of other access restorations and resumed pauses. Both measures can be negative.\n\nWhen filtering or segmenting by Renewal Cycle, each subscription counts in the cycle it was in on that date. A renewal moves it into the next cycle and is not churn. A subscription that loses access and recovers into the next cycle counts as churned in its old cycle, and its recovery reduces Churned Actives in the new one. Each cycle's losses are compared with its subscriptions at the start of the period, so products shorter than the chart's resolution can show rates above 100%.\n\nA stable or declining churn rate indicates a healthy, growing business. However, keep in mind that churn can be relatively high for mobile apps when compared to web SaaS products.",
         "display_name": "Churn",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/churn-chart",
-        "end_date": 1795737600,
+        "end_date": 1795824000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -1777,8 +1777,24 @@
           {
             "chartable": false,
             "decimal_precision": 0,
-            "description": "The net number of paid subscriptions that stopped granting access during the period, after subtracting billing recoveries, other access restorations, and subscriptions resuming after a pause. This includes subscriptions replaced during product changes.",
+            "description": "The net number of paid subscriptions that stopped granting access during the period, the sum of the churn measures that split it. Billing recoveries, other access restorations, and subscriptions resuming after a pause reduce this count. This includes subscriptions replaced during product changes.",
             "display_name": "Churned Actives",
+            "tabulable": true,
+            "unit": "#"
+          },
+          {
+            "chartable": false,
+            "decimal_precision": 0,
+            "description": "Net paid-access losses not caused by billing issues, including cancellations, pauses, prepaid subscription expirations, and product changes. Other access restorations and resumed pauses reduce this count, which can be negative.",
+            "display_name": "Voluntary Churned Actives",
+            "tabulable": true,
+            "unit": "#"
+          },
+          {
+            "chartable": false,
+            "decimal_precision": 0,
+            "description": "Net paid-access losses caused by billing issues. Billing recoveries reduce this count, which can be negative. A billing issue that does not remove paid access is not churn.",
+            "display_name": "Involuntary Churned Actives",
             "tabulable": true,
             "unit": "#"
           },
@@ -1789,6 +1805,22 @@
             "display_name": "Churn Rate",
             "tabulable": true,
             "unit": "%"
+          },
+          {
+            "chartable": false,
+            "decimal_precision": 1,
+            "description": null,
+            "display_name": "Voluntary Churn Rate",
+            "tabulable": true,
+            "unit": "%"
+          },
+          {
+            "chartable": false,
+            "decimal_precision": 1,
+            "description": null,
+            "display_name": "Involuntary Churn Rate",
+            "tabulable": true,
+            "unit": "%"
           }
         ],
         "object": "chart_data",
@@ -1797,36 +1829,22 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787961600,
+        "start_date": 1788048000,
         "summary": {
           "average": {
-            "Actives": 3.71,
-            "Churn Rate": 0.59,
-            "Churned Actives": 0.02
+            "Actives": 3.77,
+            "Churn Rate": 0.58,
+            "Churned Actives": 0.02,
+            "Involuntary Churn Rate": 0,
+            "Involuntary Churned Actives": 0,
+            "Voluntary Churn Rate": 0.58,
+            "Voluntary Churned Actives": 0.02
           }
         },
         "unsupported_params": null,
         "user_selectors": {},
         "values": [
           {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 1
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
-          {
             "cohort": 1788048000,
             "incomplete": false,
             "measure": 0,
@@ -1842,6 +1860,30 @@
             "cohort": 1788048000,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788048000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788048000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788048000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788048000,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -1863,6 +1905,30 @@
             "value": 0
           },
           {
+            "cohort": 1788134400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788134400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788134400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788134400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1788220800,
             "incomplete": false,
             "measure": 0,
@@ -1878,6 +1944,30 @@
             "cohort": 1788220800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788220800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788220800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788220800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788220800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -1899,6 +1989,30 @@
             "value": 0
           },
           {
+            "cohort": 1788307200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788307200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788307200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788307200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1788393600,
             "incomplete": false,
             "measure": 0,
@@ -1914,6 +2028,30 @@
             "cohort": 1788393600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788393600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788393600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788393600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788393600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -1935,6 +2073,30 @@
             "value": 0
           },
           {
+            "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788480000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1788566400,
             "incomplete": false,
             "measure": 0,
@@ -1950,6 +2112,30 @@
             "cohort": 1788566400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788566400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -1971,6 +2157,30 @@
             "value": 0
           },
           {
+            "cohort": 1788652800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788652800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788652800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788652800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1788739200,
             "incomplete": false,
             "measure": 0,
@@ -1986,6 +2196,30 @@
             "cohort": 1788739200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788739200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788739200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788739200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788739200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2007,6 +2241,30 @@
             "value": 0
           },
           {
+            "cohort": 1788825600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788825600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788825600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788825600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1788912000,
             "incomplete": false,
             "measure": 0,
@@ -2025,6 +2283,30 @@
             "value": 0
           },
           {
+            "cohort": 1788912000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788912000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788912000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788912000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1788998400,
             "incomplete": false,
             "measure": 0,
@@ -2040,6 +2322,30 @@
             "cohort": 1788998400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1788998400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1788998400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1788998400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1788998400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2061,6 +2367,30 @@
             "value": 0
           },
           {
+            "cohort": 1789084800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789084800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789084800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789084800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1789171200,
             "incomplete": false,
             "measure": 0,
@@ -2076,6 +2406,30 @@
             "cohort": 1789171200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1789171200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789171200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789171200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789171200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2097,6 +2451,30 @@
             "value": 0
           },
           {
+            "cohort": 1789257600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789257600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789257600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789257600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1789344000,
             "incomplete": false,
             "measure": 0,
@@ -2112,6 +2490,30 @@
             "cohort": 1789344000,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1789344000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789344000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789344000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789344000,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2133,6 +2535,30 @@
             "value": 0
           },
           {
+            "cohort": 1789430400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789430400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789430400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789430400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1789516800,
             "incomplete": false,
             "measure": 0,
@@ -2148,6 +2574,30 @@
             "cohort": 1789516800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1789516800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789516800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789516800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789516800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2169,6 +2619,30 @@
             "value": 0
           },
           {
+            "cohort": 1789603200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789603200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789603200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789603200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1789689600,
             "incomplete": false,
             "measure": 0,
@@ -2184,6 +2658,30 @@
             "cohort": 1789689600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1789689600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789689600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789689600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789689600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2205,6 +2703,30 @@
             "value": 0
           },
           {
+            "cohort": 1789776000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789776000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789776000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789776000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1789862400,
             "incomplete": false,
             "measure": 0,
@@ -2220,6 +2742,30 @@
             "cohort": 1789862400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1789862400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789862400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789862400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789862400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2241,6 +2787,30 @@
             "value": 0
           },
           {
+            "cohort": 1789948800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1789948800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1789948800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1789948800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790035200,
             "incomplete": false,
             "measure": 0,
@@ -2256,6 +2826,30 @@
             "cohort": 1790035200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790035200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2277,6 +2871,30 @@
             "value": 0
           },
           {
+            "cohort": 1790121600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790121600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790208000,
             "incomplete": false,
             "measure": 0,
@@ -2295,6 +2913,30 @@
             "value": 0
           },
           {
+            "cohort": 1790208000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790208000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790208000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790208000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790294400,
             "incomplete": false,
             "measure": 0,
@@ -2313,6 +2955,30 @@
             "value": 0
           },
           {
+            "cohort": 1790294400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790294400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790294400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790294400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790380800,
             "incomplete": false,
             "measure": 0,
@@ -2328,6 +2994,30 @@
             "cohort": 1790380800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790380800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790380800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790380800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790380800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2349,6 +3039,30 @@
             "value": 0
           },
           {
+            "cohort": 1790467200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790467200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790467200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790467200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790553600,
             "incomplete": false,
             "measure": 0,
@@ -2364,6 +3078,30 @@
             "cohort": 1790553600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790553600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790553600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790553600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790553600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2385,6 +3123,30 @@
             "value": 0
           },
           {
+            "cohort": 1790640000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790640000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790726400,
             "incomplete": false,
             "measure": 0,
@@ -2400,6 +3162,30 @@
             "cohort": 1790726400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790726400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790726400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790726400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790726400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2421,6 +3207,30 @@
             "value": 0
           },
           {
+            "cohort": 1790812800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790812800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790812800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790812800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1790899200,
             "incomplete": false,
             "measure": 0,
@@ -2436,6 +3246,30 @@
             "cohort": 1790899200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1790899200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790899200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790899200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790899200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2457,6 +3291,30 @@
             "value": 0
           },
           {
+            "cohort": 1790985600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1790985600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1790985600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1790985600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1791072000,
             "incomplete": false,
             "measure": 0,
@@ -2472,6 +3330,30 @@
             "cohort": 1791072000,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1791072000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791072000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791072000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791072000,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2493,6 +3375,30 @@
             "value": 0
           },
           {
+            "cohort": 1791158400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791158400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1791244800,
             "incomplete": false,
             "measure": 0,
@@ -2508,6 +3414,30 @@
             "cohort": 1791244800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1791244800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791244800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791244800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791244800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2529,6 +3459,30 @@
             "value": 0
           },
           {
+            "cohort": 1791331200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791331200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791331200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791331200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1791417600,
             "incomplete": false,
             "measure": 0,
@@ -2544,6 +3498,30 @@
             "cohort": 1791417600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1791417600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791417600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791417600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791417600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2565,6 +3543,30 @@
             "value": 0
           },
           {
+            "cohort": 1791504000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791504000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791504000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791504000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1791590400,
             "incomplete": false,
             "measure": 0,
@@ -2580,6 +3582,30 @@
             "cohort": 1791590400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1791590400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791590400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791590400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791590400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2601,6 +3627,30 @@
             "value": 0
           },
           {
+            "cohort": 1791676800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791676800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791676800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791676800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1791763200,
             "incomplete": false,
             "measure": 0,
@@ -2616,6 +3666,30 @@
             "cohort": 1791763200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1791763200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791763200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791763200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791763200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2637,6 +3711,30 @@
             "value": 0
           },
           {
+            "cohort": 1791849600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791849600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791849600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791849600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1791936000,
             "incomplete": false,
             "measure": 0,
@@ -2655,6 +3753,30 @@
             "value": 0
           },
           {
+            "cohort": 1791936000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1791936000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1791936000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1791936000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792022400,
             "incomplete": false,
             "measure": 0,
@@ -2673,6 +3795,30 @@
             "value": 0
           },
           {
+            "cohort": 1792022400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792022400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792022400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792022400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792108800,
             "incomplete": false,
             "measure": 0,
@@ -2688,6 +3834,30 @@
             "cohort": 1792108800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1792108800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792108800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792108800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792108800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2709,6 +3879,30 @@
             "value": 0
           },
           {
+            "cohort": 1792195200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792195200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792195200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792195200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792281600,
             "incomplete": false,
             "measure": 0,
@@ -2724,6 +3918,30 @@
             "cohort": 1792281600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1792281600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792281600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792281600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792281600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2745,6 +3963,30 @@
             "value": 0
           },
           {
+            "cohort": 1792368000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792368000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792368000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792368000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792454400,
             "incomplete": false,
             "measure": 0,
@@ -2760,6 +4002,30 @@
             "cohort": 1792454400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1792454400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792454400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792454400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792454400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2781,6 +4047,30 @@
             "value": 0
           },
           {
+            "cohort": 1792540800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792540800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792540800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792540800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792627200,
             "incomplete": false,
             "measure": 0,
@@ -2796,6 +4086,30 @@
             "cohort": 1792627200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1792627200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792627200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792627200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792627200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2817,6 +4131,30 @@
             "value": 0
           },
           {
+            "cohort": 1792713600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792713600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792713600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792713600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792800000,
             "incomplete": false,
             "measure": 0,
@@ -2832,6 +4170,30 @@
             "cohort": 1792800000,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1792800000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792800000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792800000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792800000,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2850,9 +4212,33 @@
             "cohort": 1792886400,
             "incomplete": false,
             "measure": 2,
+            "value": 1
+          },
+          {
+            "cohort": 1792886400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792886400,
+            "incomplete": false,
+            "measure": 4,
             "value": 25
           },
           {
+            "cohort": 1792886400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 25
+          },
+          {
+            "cohort": 1792886400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1792972800,
             "incomplete": false,
             "measure": 0,
@@ -2868,6 +4254,30 @@
             "cohort": 1792972800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1792972800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1792972800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1792972800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1792972800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2889,6 +4299,30 @@
             "value": 0
           },
           {
+            "cohort": 1793059200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793059200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793059200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793059200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1793145600,
             "incomplete": false,
             "measure": 0,
@@ -2904,6 +4338,30 @@
             "cohort": 1793145600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793145600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2925,6 +4383,30 @@
             "value": 0
           },
           {
+            "cohort": 1793232000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793232000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793232000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793232000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1793318400,
             "incomplete": false,
             "measure": 0,
@@ -2943,6 +4425,30 @@
             "value": 0
           },
           {
+            "cohort": 1793318400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793318400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1793404800,
             "incomplete": false,
             "measure": 0,
@@ -2958,6 +4464,30 @@
             "cohort": 1793404800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793404800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793404800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793404800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793404800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -2979,6 +4509,30 @@
             "value": 0
           },
           {
+            "cohort": 1793491200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793491200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793491200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793491200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1793577600,
             "incomplete": false,
             "measure": 0,
@@ -2994,6 +4548,30 @@
             "cohort": 1793577600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793577600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793577600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793577600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793577600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3015,6 +4593,30 @@
             "value": 0
           },
           {
+            "cohort": 1793664000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793664000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793664000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793664000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1793750400,
             "incomplete": false,
             "measure": 0,
@@ -3030,6 +4632,30 @@
             "cohort": 1793750400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793750400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793750400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793750400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793750400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3051,6 +4677,30 @@
             "value": 0
           },
           {
+            "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793836800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1793923200,
             "incomplete": false,
             "measure": 0,
@@ -3066,6 +4716,30 @@
             "cohort": 1793923200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1793923200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3087,6 +4761,30 @@
             "value": 0
           },
           {
+            "cohort": 1794009600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794009600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794096000,
             "incomplete": false,
             "measure": 0,
@@ -3105,6 +4803,30 @@
             "value": 0
           },
           {
+            "cohort": 1794096000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794096000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794096000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794096000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794182400,
             "incomplete": false,
             "measure": 0,
@@ -3123,6 +4845,30 @@
             "value": 0
           },
           {
+            "cohort": 1794182400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794182400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794182400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794182400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794268800,
             "incomplete": false,
             "measure": 0,
@@ -3138,6 +4884,30 @@
             "cohort": 1794268800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794268800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3159,6 +4929,30 @@
             "value": 0
           },
           {
+            "cohort": 1794355200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794355200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794355200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794355200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794441600,
             "incomplete": false,
             "measure": 0,
@@ -3174,6 +4968,30 @@
             "cohort": 1794441600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794441600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794441600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794441600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794441600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3195,6 +5013,30 @@
             "value": 0
           },
           {
+            "cohort": 1794528000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794528000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794528000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794528000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794614400,
             "incomplete": false,
             "measure": 0,
@@ -3210,6 +5052,30 @@
             "cohort": 1794614400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794614400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794614400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794614400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794614400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3228,9 +5094,33 @@
             "cohort": 1794700800,
             "incomplete": false,
             "measure": 2,
+            "value": 1
+          },
+          {
+            "cohort": 1794700800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794700800,
+            "incomplete": false,
+            "measure": 4,
             "value": 14.29
           },
           {
+            "cohort": 1794700800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 14.29
+          },
+          {
+            "cohort": 1794700800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794787200,
             "incomplete": false,
             "measure": 0,
@@ -3246,6 +5136,30 @@
             "cohort": 1794787200,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794787200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794787200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794787200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794787200,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3267,6 +5181,30 @@
             "value": 0
           },
           {
+            "cohort": 1794873600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794873600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794873600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794873600,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1794960000,
             "incomplete": false,
             "measure": 0,
@@ -3282,6 +5220,30 @@
             "cohort": 1794960000,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1794960000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1794960000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1794960000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1794960000,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3303,6 +5265,30 @@
             "value": 0
           },
           {
+            "cohort": 1795046400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795046400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795046400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795046400,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1795132800,
             "incomplete": false,
             "measure": 0,
@@ -3318,6 +5304,30 @@
             "cohort": 1795132800,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795132800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795132800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795132800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795132800,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3339,6 +5349,30 @@
             "value": 0
           },
           {
+            "cohort": 1795219200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795219200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795219200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795219200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1795305600,
             "incomplete": false,
             "measure": 0,
@@ -3354,6 +5388,30 @@
             "cohort": 1795305600,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795305600,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795305600,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795305600,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795305600,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3375,6 +5433,30 @@
             "value": 0
           },
           {
+            "cohort": 1795392000,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795392000,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795392000,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795392000,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1795478400,
             "incomplete": false,
             "measure": 0,
@@ -3390,6 +5472,30 @@
             "cohort": 1795478400,
             "incomplete": false,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795478400,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795478400,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795478400,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795478400,
+            "incomplete": false,
+            "measure": 6,
             "value": 0
           },
           {
@@ -3411,19 +5517,85 @@
             "value": 0
           },
           {
+            "cohort": 1795564800,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795564800,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795564800,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795564800,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
             "cohort": 1795651200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 6
           },
           {
             "cohort": 1795651200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1795651200,
+            "incomplete": false,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": false,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": false,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": false,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": false,
+            "measure": 6,
+            "value": 0
+          },
+          {
+            "cohort": 1795737600,
+            "incomplete": true,
+            "measure": 0,
+            "value": 6
+          },
+          {
+            "cohort": 1795737600,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1795737600,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -3431,19 +5603,67 @@
           {
             "cohort": 1795737600,
             "incomplete": true,
-            "measure": 0,
-            "value": 6
-          },
-          {
-            "cohort": 1795737600,
-            "incomplete": true,
-            "measure": 1,
+            "measure": 3,
             "value": 0
           },
           {
             "cohort": 1795737600,
             "incomplete": true,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795737600,
+            "incomplete": true,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795737600,
+            "incomplete": true,
+            "measure": 6,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 6
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
             "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 3,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 4,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 5,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 6,
             "value": 0
           }
         ],
@@ -5118,7 +7338,7 @@
         "display_name": "Initial Conversion",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/initial-conversion-chart",
-        "end_date": 1795737600,
+        "end_date": 1795824000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -5155,17 +7375,17 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787961600,
+        "start_date": 1788048000,
         "summary": {
           "average": {
-            "Conversion Rate (7 days)": 4.85,
+            "Conversion Rate (7 days)": 4.79,
             "Initial Conversions (7 days)": 0.09,
-            "New Customers": 1.81
+            "New Customers": 1.84
           },
           "total": {
-            "Conversion Rate (7 days)": 4.85,
+            "Conversion Rate (7 days)": 4.79,
             "Initial Conversions (7 days)": 8,
-            "New Customers": 165
+            "New Customers": 167
           }
         },
         "unsupported_params": null,
@@ -5173,24 +7393,6 @@
           "conversion_timeframe": "7_days"
         },
         "values": [
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1788048000,
             "incomplete": false,
@@ -6657,13 +8859,13 @@
           },
           {
             "cohort": 1795046400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1795046400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -6777,7 +8979,7 @@
           },
           {
             "cohort": 1795651200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 1
           },
@@ -6797,7 +8999,7 @@
             "cohort": 1795737600,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 2
           },
           {
             "cohort": 1795737600,
@@ -6807,6 +9009,24 @@
           },
           {
             "cohort": 1795737600,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -8483,7 +10703,7 @@
         "display_name": "Conversion to Paying",
         "display_type": "default",
         "documentation_link": "dashboard-and-metrics/charts/conversion-to-paying-chart",
-        "end_date": 1795737600,
+        "end_date": 1795824000,
         "filtering_allowed": true,
         "last_computed_at": null,
         "measures": [
@@ -8520,16 +10740,16 @@
         "segmenting_allowed": true,
         "segments": null,
         "segments_limit": null,
-        "start_date": 1787961600,
+        "start_date": 1788048000,
         "summary": {
           "average": {
-            "Conversion Rate (7 days)": 4.24,
-            "New Customers": 1.81,
+            "Conversion Rate (7 days)": 4.19,
+            "New Customers": 1.84,
             "Paying Customers (7 days)": 0.08
           },
           "total": {
-            "Conversion Rate (7 days)": 4.24,
-            "New Customers": 165,
+            "Conversion Rate (7 days)": 4.19,
+            "New Customers": 167,
             "Paying Customers (7 days)": 7
           }
         },
@@ -8538,24 +10758,6 @@
           "conversion_timeframe": "7_days"
         },
         "values": [
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 1,
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": false,
-            "measure": 2,
-            "value": 0
-          },
           {
             "cohort": 1788048000,
             "incomplete": false,
@@ -10022,13 +12224,13 @@
           },
           {
             "cohort": 1795046400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 1,
             "value": 0
           },
           {
             "cohort": 1795046400,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 2,
             "value": 0
           },
@@ -10142,7 +12344,7 @@
           },
           {
             "cohort": 1795651200,
-            "incomplete": true,
+            "incomplete": false,
             "measure": 0,
             "value": 1
           },
@@ -10162,7 +12364,7 @@
             "cohort": 1795737600,
             "incomplete": true,
             "measure": 0,
-            "value": 0
+            "value": 2
           },
           {
             "cohort": 1795737600,
@@ -10172,6 +12374,24 @@
           },
           {
             "cohort": 1795737600,
+            "incomplete": true,
+            "measure": 2,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
+            "incomplete": true,
+            "measure": 1,
+            "value": 0
+          },
+          {
+            "cohort": 1795824000,
             "incomplete": true,
             "measure": 2,
             "value": 0
@@ -11956,49 +14176,6 @@
             "value": "Incomplete"
           },
           {
-            "cohort": 1787961600,
-            "period": 0,
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "period": 1,
-            "scale": "absolute",
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "period": 2,
-            "scale": "relative",
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "period": 3,
-            "scale": "absolute",
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "period": 4,
-            "scale": "relative",
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": true,
-            "period": 5,
-            "scale": "absolute",
-            "value": 0
-          },
-          {
-            "cohort": 1787961600,
-            "incomplete": true,
-            "period": 6,
-            "scale": "relative",
-            "value": 0
-          },
-          {
             "cohort": 1788048000,
             "period": 0,
             "value": 0
@@ -13178,15 +15355,27 @@
           },
           {
             "cohort": 1790380800,
-            "incomplete": true,
             "period": 3,
             "scale": "absolute",
             "value": 0
           },
           {
             "cohort": 1790380800,
-            "incomplete": true,
             "period": 4,
+            "scale": "relative",
+            "value": 0
+          },
+          {
+            "cohort": 1790380800,
+            "incomplete": true,
+            "period": 5,
+            "scale": "absolute",
+            "value": 0
+          },
+          {
+            "cohort": 1790380800,
+            "incomplete": true,
+            "period": 6,
             "scale": "relative",
             "value": 0
           },
@@ -14096,15 +16285,27 @@
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
             "period": 1,
             "scale": "absolute",
             "value": 0
           },
           {
             "cohort": 1792972800,
-            "incomplete": true,
             "period": 2,
+            "scale": "relative",
+            "value": 0
+          },
+          {
+            "cohort": 1792972800,
+            "incomplete": true,
+            "period": 3,
+            "scale": "absolute",
+            "value": 0
+          },
+          {
+            "cohort": 1792972800,
+            "incomplete": true,
+            "period": 4,
             "scale": "relative",
             "value": 0
           },
@@ -14680,12 +16881,31 @@
           },
           {
             "cohort": 1795651200,
+            "period": 0,
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": true,
+            "period": 1,
+            "scale": "absolute",
+            "value": 0
+          },
+          {
+            "cohort": 1795651200,
+            "incomplete": true,
+            "period": 2,
+            "scale": "relative",
+            "value": 0
+          },
+          {
+            "cohort": 1795737600,
             "incomplete": true,
             "period": 0,
             "value": 0
           },
           {
-            "cohort": 1795737600,
+            "cohort": 1795824000,
             "incomplete": true,
             "period": 0,
             "value": 0
